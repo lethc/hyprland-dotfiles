@@ -1,0 +1,14 @@
+/* #ui */
+.LH { color: #AAC5A0; }
+.LH, .D>.LH { background: #151515; }
+* { color: #FF6696; }
+.LH { border: /*!DPI*/ 1px  #FF6696; }
+
+/* #omni */
+
+#bar{background:#000000;border-color:#666;}#list{background:#151515;}
+#input{background:#151515;border-color:#171717;box-shadow:0 0 1.5px #ccc;color:#ccc;}
+#toolbar{color:#666;opacity:0.6667;}.button:hover{background:#000;color:#999;}
+.item{border-color:#333;}.item:hover{background-color:#7f2f48;}
+.p{border-color:#6A3A48;}.item.s{background-color:#6A3A48
+;}

@@ -1,0 +1,3 @@
+# ignore user specific 
+nvim/vscode-java-test
+nvim/java-debug
