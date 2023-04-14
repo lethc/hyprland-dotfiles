@@ -10,7 +10,7 @@ configuration {
     display-drun:               " Apps";
     display-run:                " Run";
     display-filebrowser:        " Files";
-    /* display-window:             " Windows"; */
+    display-window:             " Windows";
     display-emoji:              " Emoji";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
@@ -62,7 +62,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               10px;
+    border-radius:               16px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */
