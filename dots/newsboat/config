@@ -26,6 +26,14 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
+# notification
+notify-format "newsbeuter: finished reload, %f unread feeds (%n unread articles total)"
+notify-program "notify-send"
+notify-always no
+notify-screen no
+notify-xterm yes
+notify-beep no
+
 
 highlight all "---.*---" default
 highlight feedlist ".*(0/0))" black
