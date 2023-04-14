@@ -42,7 +42,8 @@ yay -S ruby
 
 # Ranger dependencies
 
-- python-pillow
+- python-pillow (kitty support)
+- ranger-sixel-git (Sixel support on terminals like foot) `set preview_images_method sixel`   
 - ranger_devicons-git
 
 # Hyprland dependencies
