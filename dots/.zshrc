@@ -79,6 +79,7 @@ alias md="gh-md-toc" #https://github.com/jonathanpoelen/gh-md-toc
 alias vim="nvim"
 alias vi="nvim"
 alias youtube="firefox http://127.0.0.1:9010/ &> /dev/null &"
+alias dots="cd ~/.config/hypr/dots/"
 # alias gtt='/home/luis501/Downloads/Git/GTT/gtt'
 
 
