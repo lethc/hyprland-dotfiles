@@ -3,6 +3,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export BROWSER=qutebrowser
 export LANG="en_GB.UTF-8"
+# export NODE_OPTIONS=--openssl-legacy-provider
 
 # Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -184,16 +185,16 @@ export PATH="$PATH:/home/lummyn/.dotnet/tools"
 export PATH="$PATH:/opt/lampp/bin"
 
 # -- NVIM 9.0 allows multiple configs --, but it break something in my current config
-# alias nvim-chad="NVIM_APPNAME=NvChad nvim"
-# function nvims() {
-#   items=("default" "NvChad")
-#   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim config >> " --height=~50% --layout=reverse --border --exit-0)
-#   if [[ -z $config ]]; then
-#     echo "Nothing selected"
-#     return 0
-#   elif [[ $config == "default" ]]; then
-#     config=""
-#   fi
-#   NVIM_APPNAME=$config nvim $@
-# }
-# bindkey -s ^a "nvims\n"
+alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+function nvims() {
+  items=("default" "NvChad")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim config >> " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+bindkey -s ^a "nvims\n"
