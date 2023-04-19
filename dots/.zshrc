@@ -186,8 +186,9 @@ export PATH="$PATH:/opt/lampp/bin"
 
 # -- NVIM 9.0 allows multiple configs --, but it break something in my current config
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 function nvims() {
-  items=("default" "NvChad")
+  items=("default" "NvChad" "AstroNvim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim config >> " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
