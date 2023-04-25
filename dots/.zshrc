@@ -182,9 +182,9 @@ export PATH_TO_FX=path/to/javafx-sdk-20/lib
 # export PATH=/home/lummyn/Modules/javafx-sdk-20/lib/:$PATH
 # Add .NET Core SDK tools
 export PATH="$PATH:/home/lummyn/.dotnet/tools"
-export PATH="$PATH:/opt/lampp/bin"
+# export PATH="$PATH:/opt/lampp/bin"
 
-# -- NVIM 9.0 allows multiple configs --, but it break something in my current config
+# -- NVIM 9.0 allows multiple configs --
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 function nvims() {
