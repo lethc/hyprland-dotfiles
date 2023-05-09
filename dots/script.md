@@ -49,7 +49,7 @@ yay -S ruby
 # Hyprland dependencies
 
 ```bash
-hyprland wofi dunst jq eww-wayland swayidle swaylock-effects-git swaylockd sway-audio-idle-inhibit-git bc pamixer light-git papirus-icon-theme playerctl cava kitty xdg-desktop-portal-hyprland-git grim slurp wl-clipboard socat swappy cliphist hyprpicker-git nm-connection-editor dictd wl-clip-persist-git blueberry swww-git
+hyprland wofi dunst jq eww-wayland swayidle swaylock-effects-git swaylockd sway-audio-idle-inhibit-git bc pamixer light-git papirus-icon-theme playerctl cava kitty xdg-desktop-portal-hyprland-git grim slurp wl-clipboard socat swappy cliphist hyprpicker-git nm-connection-editor dictd wl-clip-persist-git blueberry swww-git acpi
 #Replace xdg-desktop-portal-wlr for xdg-desktop-portal-hyprland-git
 
 ```
