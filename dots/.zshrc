@@ -3,6 +3,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export BROWSER=qutebrowser
 export LANG="en_GB.UTF-8"
+# export TMUX_TMPDIR=~/.tmux/tmp
 # export NODE_OPTIONS=--openssl-legacy-provider
 
 # Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
@@ -64,13 +65,15 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
-alias cat='bat'
-alias rr='ranger'
+alias cat='bat --theme Catppuccin-mocha'
+alias bat='bat --theme Catppuccin-mocha'
+# alias rr='ranger'
 alias tu='tmux'
 alias update='yay -Syu'
 alias cl='clear'
 alias pj='cd /home/lummyn/Documents/projects'
-alias copy='pwd && pwd | xclip -sel clipboard'
+# alias copy='pwd && pwd | xclip -sel clipboard'
+alias copy='pwd && pwd | wl-copy'
 alias grep="grep --color=always"
 alias code='sgpt --code'
 alias hey='sgpt'
@@ -81,6 +84,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias youtube="firefox http://127.0.0.1:9010/ &> /dev/null &"
 alias dots="cd ~/.config/hypr/dots/"
+alias rr="joshuto"
 # alias gtt='/home/luis501/Downloads/Git/GTT/gtt'
 
 
@@ -172,23 +176,24 @@ bindkey "^[[1;3D" backward-word
 . "$HOME/.cargo/env"
 
 export PATH="$HOME/.local/bin":$PATH
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 export PATH=/home/lummyn/.local/bin:$PATH
 export PATH=/opt/android-sdk/platform-tools:$PATH
 export PATH=/opt/idea-IC-223.8214.52/bin/:$PATH
 # export PATH=/opt/apache-maven-3.8.7/bin:$PATH
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 export PATH_TO_FX=path/to/javafx-sdk-20/lib
 # export PATH=/home/lummyn/Modules/javafx-sdk-20/lib/:$PATH
 # Add .NET Core SDK tools
 export PATH="$PATH:/home/lummyn/.dotnet/tools"
 # export PATH="$PATH:/opt/lampp/bin"
+export PATH="$PATH:/opt/mssql-tools/bin"
 
 # -- NVIM 9.0 allows multiple configs --
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+alias nvim-cosmic="NVIM_APPNAME=CosmicNvim nvim"
+
 function nvims() {
-  items=("default" "NvChad" "AstroNvim")
+  items=("default" "NvChad" "AstroNvim" "CosmicNvim" )
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim config >> " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
@@ -199,3 +204,4 @@ function nvims() {
   NVIM_APPNAME=$config nvim $@
 }
 bindkey -s ^a "nvims\n"
+source ~/powerlevel10k/powerlevel10k.zsh-theme

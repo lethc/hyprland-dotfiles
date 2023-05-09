@@ -49,7 +49,7 @@ yay -S ruby
 # Hyprland dependencies
 
 ```bash
-hyprland wofi dunst jq eww-wayland swayidle swaylock-effects-git swaylockd sway-audio-idle-inhibit-git bc pamixer light-git papirus-icon-theme playerctl cava kitty xdg-desktop-portal-wlr grim slurp wl-clipboard socat swappy cliphist hyprpicker-git nm-connection-editor dictd wl-clip-persist-git blueberry swww-git
+hyprland wofi dunst jq eww-wayland swayidle swaylock-effects-git swaylockd sway-audio-idle-inhibit-git bc pamixer light-git papirus-icon-theme playerctl cava kitty xdg-desktop-portal-hyprland-git grim slurp wl-clipboard socat swappy cliphist hyprpicker-git nm-connection-editor dictd wl-clip-persist-git blueberry swww-git
 #Replace xdg-desktop-portal-wlr for xdg-desktop-portal-hyprland-git
 
 ```
@@ -69,7 +69,9 @@ sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/
 # Firefox style
 
 ```bash
+
 #Go to settings>help>More troubleshooting information>Profile Directory
+#Note: Starting with Firefox 69 you have to enable toolkit.legacyUserProfileCustomizations.stylesheets in about:config.
 cd  /home/lummyn/.mozilla/firefox/nm8tgizz.default-release
 cp -r ~/Git/dotfiles/chrome .
 
@@ -102,6 +104,11 @@ pacman -Syu sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
 yay -S sddm-theme-corners-git
 #/usr/share/sddm/themes/corners/
 yay -S sxiv
+configuration
+#if you haven't already, make sure to change the current theme that SDDM is using. on Arch, create a config file in /etc/sddm.conf.d/ with the following contents:
+
+[Theme]
+Current=corners
 
 ```
 
@@ -134,5 +141,25 @@ git clone https://github.com/iamcco/markdown-preview.nvim.git
 cd markdown-preview.nvim
 yarn install
 yarn build
+
+```
+
+# bat theme
+```bash
+
+    Clone this repository. https://github.com/catppuccin/bat
+    First create a theme folder in bat's configuration directory by running:
+
+    mkdir -p "$(bat --config-dir)/themes"
+
+    Copy all the .tmTheme files from the cloned folder to bat's theme folder:
+
+    cp *.tmTheme "$(bat --config-dir)/themes"
+
+    Rebuild bat's cache:
+
+    bat cache --build
+
+    Run bat --list-themes and check if all the 4 theme flavours are present in the list.
 
 ```

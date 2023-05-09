@@ -1,0 +1,112 @@
+simplified_ui false 
+default_shell "zsh"
+
+default_layout "compact"
+//plugin location="zellij:compact-bar"
+scroll_buffer_size 10000
+
+copy_command "wl-copy"                    // wayland
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
+
+ui {
+    pane_frames {
+        hide_session_name false 
+    }
+}
+
+auto_layout true
+
+keybinds {
+    // keybinds are divided into modes
+    normal {
+        // bind instructions can include one or more keys (both keys will be bound separately)
+        // bind keys can include one or more actions (all actions will be performed with no sequential guarantees)
+        bind "Ctrl g" { SwitchToMode "locked"; }
+        bind "Ctrl p" { SwitchToMode "pane"; }
+        bind "Alt n" { NewPane; }
+        bind "Ctrl l" "Alt Left" { MoveFocusOrTab "Left"; }
+    }
+    pane {
+        bind "h" "Left" { MoveFocus "Left"; }
+        bind "l" "Right" { MoveFocus "Right"; }
+        bind "j" "Down" { MoveFocus "Down"; }
+        bind "k" "Up" { MoveFocus "Up"; }
+        bind "p" { SwitchFocus; }
+    }
+    move {
+        bind "Esc" { SwitchToMode "Pane"; }
+        bind "n" "Tab" { MovePane; }
+        bind "p" { MovePaneBackwards; }
+        bind "h" "Left" { MovePane "Left"; }
+        bind "j" "Down" { MovePane "Down"; }
+        bind "k" "Up" { MovePane "Up"; }
+        bind "l" "Right" { MovePane "Right"; }
+    }
+    locked {
+        bind "Ctrl g" { SwitchToMode "normal"; }
+    }
+    search {
+        bind "e" { EditScrollback; SwitchToMode "Normal"; }
+        bind "Ctrl s" { SwitchToMode "Normal"; }
+        bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
+        bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
+        bind "j" "Down" { ScrollDown; }
+        bind "k" "Up" { ScrollUp; }
+        bind "Ctrl f" "PageDown" "Right" "l" { PageScrollDown; }
+        bind "Ctrl b" "PageUp" "Left" "h" { PageScrollUp; }
+        bind "d" { HalfPageScrollDown; }
+        bind "u" { HalfPageScrollUp; }
+        bind "n" { Search "down"; }
+        bind "N" { Search "up"; }
+        bind "c" { SearchToggleOption "CaseSensitivity"; }
+        bind "w" { SearchToggleOption "Wrap"; }
+        bind "o" { SearchToggleOption "WholeWord"; }
+  }
+  tab {
+        bind "I" { SwitchToMode "RenameTab"; TabNameInput 0; }
+        bind "i" { SwitchToMode "Normal"; }
+        bind "E" { SwitchToMode "RenameTab"; }
+        bind "U" { UndoRenameTab; }
+        bind "h" "Left" "Up" { GoToPreviousTab; }
+        bind "l" "Right" "Down" { GoToNextTab; }
+        bind "j" { SwitchToMode "Pane"; }
+        bind "k" { SwitchToMode "Pane"; }
+        bind "n" { NewTab; }
+        bind "x" { CloseTab; }
+        bind "s" { ToggleActiveSyncTab; }
+        bind "1" { GoToTab 1; }
+        bind "2" { GoToTab 2; }
+        bind "3" { GoToTab 3; }
+        bind "4" { GoToTab 4; }
+        bind "5" { GoToTab 5; }
+        bind "6" { GoToTab 6; }
+        bind "7" { GoToTab 7; }
+        bind "8" { GoToTab 8; }
+        bind "9" { GoToTab 9; }
+        bind "Tab" { ToggleTab; }
+  }
+
+}
+
+
+themes {
+    nord {
+        fg "#D8DEE9"
+        bg "#2E3440"
+        black "#3B4252"
+        red "#BF616A"
+        green "#A3BE8C"
+        yellow "#EBCB8B"
+        blue "#81A1C1"
+        magenta "#B48EAD"
+        cyan "#88C0D0"
+        white "#E5E9F0"
+        orange "#D08770"
+    }
+}
+theme "nord"

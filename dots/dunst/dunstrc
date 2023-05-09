@@ -240,7 +240,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 10
+    corner_radius = 18
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -302,7 +302,7 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#0B0508"   
+    background = "#181825"   
     foreground = 	"#F1F0F5" 
     frame_color = 	"#f5c2e7"
     timeout = 3
@@ -313,18 +313,18 @@
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#0B0508" 
+    background = "#181825" 
     foreground = 	"#F1F0F5" 
     frame_color = 	"#cba6f7"
     timeout = 5
-    highlight =   "#B50229"
+    highlight =   "#F38BA8"
     script=/home/lummyn/.config/dunst/scripts/notification-sound
     # script = ~/.scripts/dunst/sound-normal.sh
     # Icon for notifications with normal urgency, uncomment to enable
     # default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#0B0508"
+    background = "#181825"
     foreground = 	"#E97193" 
     frame_color = 	"#f38ba8" 
     timeout = 10
