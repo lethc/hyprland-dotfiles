@@ -76,12 +76,13 @@ alias pj='cd /home/lummyn/Documents/projects'
 alias copy='pwd && pwd | wl-copy'
 alias grep="grep --color=always"
 alias code='sgpt --code'
-alias hey='sgpt'
+alias maid='sgpt'
 alias jukit_kitty="kitty --listen-on=unix:@"$(date +%s%N)" -o allow_remote_control=yes"
 alias nsxiv="nsxiv-rifle"
 alias md="gh-md-toc" #https://github.com/jonathanpoelen/gh-md-toc
-alias vim="nvim"
-alias vi="nvim"
+alias vim="~/.scripts/reset"
+alias nvim="~/.scripts/reset"
+alias vi="~/.scripts/reset"
 alias youtube="firefox http://127.0.0.1:9010/ &> /dev/null &"
 alias dots="cd ~/.config/hypr/dots/"
 alias rr="joshuto"
@@ -186,6 +187,8 @@ export PATH_TO_FX=path/to/javafx-sdk-20/lib
 export PATH="$PATH:/home/lummyn/.dotnet/tools"
 # export PATH="$PATH:/opt/lampp/bin"
 export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH=~/bin:$PATH
+export PATH=~/.luarocks/bin:$PATH
 
 # -- NVIM 9.0 allows multiple configs --
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"

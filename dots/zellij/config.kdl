@@ -109,4 +109,5 @@ themes {
         orange "#D08770"
     }
 }
-theme "nord"
+//theme "nord"
+theme "catppuccin-mocha"
