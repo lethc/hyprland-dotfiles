@@ -4,12 +4,12 @@ status=$(nmcli g | grep -oE "disconnected")
 essid=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d: -f2)
 
 if [ $status ] ; then
-    icon="睊"
+    icon="󰤭"
     text=""
     col="#575268"
 
 else
-    icon=" "
+    icon="󰤟"
     text="${essid}"
     col="#a1bdce"
 fi

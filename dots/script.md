@@ -20,14 +20,16 @@
 # Nvim dependencies
 
 ```bash
+yay -S jdk-lts
+yay -S jdk-lts-doc
+
 sudo npm install neovim
 sudo npm install -g npm@9.6.2
 sudo npm i -g ls_emmet
 pip install pynvim
+
 yay -S python-black
 yay -S prettier stylua
-yay -S jdk-lts
-yay -S jdk-lts-doc
 yay -S google-java-format
 yay -S ripgrep
 yay -S fd
@@ -163,3 +165,10 @@ yarn build
     Run bat --list-themes and check if all the 4 theme flavours are present in the list.
 
 ```
+
+## Other utilities
+
+yay -S rofi-lbonn-wayland-git
+yay -S rofi-emoji           
+yay -S megacmd
+

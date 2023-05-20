@@ -20,16 +20,16 @@ get_icon() {
 
 	if [[ "$status" == "on" ]]; then
 		if [[ "$current" -eq "0" ]]; then
-			echo "ﱝ"
+			echo "󰝟"
 		elif [[ ("$current" -ge "0") && ("$current" -le "30") ]]; then
-			echo "奄"
+			echo "󰕿 "
 		elif [[ ("$current" -ge "30") && ("$current" -le "60") ]]; then
-			echo "奔"
+			echo "󰖀"
 		elif [[ ("$current" -ge "60") && ("$current" -le "100") ]]; then
-			echo "墳"
+			echo "󰕾"
 		fi
 	else
-		echo "ﱝ"
+		echo "󰝟"
 	fi
 }
 

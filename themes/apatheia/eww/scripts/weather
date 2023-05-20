@@ -81,22 +81,22 @@ get_weather_data() {
     			weather_hex="#adadff"
     		    ;;
     		09d)
-    			weather_icon=" "
+    			weather_icon="󰉁 "
     			weather_quote="It's rainy, it's a great day! \nGet some ramen and watch as the rain falls..."
     			weather_hex="#6b95ff"
     		    ;;
     		09n)
-    			weather_icon=" "
+    			weather_icon="󰉁 "
     			weather_quote=" It's gonna rain tonight it seems \nMake sure your clothes aren't still outside..."
     			weather_hex="#6b95ff"
     		    ;;
     		10d)
-    			weather_icon=" "
+    			weather_icon="󰉁 "
     			weather_quote="It's rainy, it's a great day! \nGet some ramen and watch as the rain falls..."
     			weather_hex="#6b95ff"
     		    ;;
     		10n)
-    			weather_icon=" "
+    			weather_icon="󰉁 "
     			weather_quote=" It's gonna rain tonight it seems \nMake sure your clothes aren't still outside..."
     			weather_hex="#6b95ff"
     		    ;;

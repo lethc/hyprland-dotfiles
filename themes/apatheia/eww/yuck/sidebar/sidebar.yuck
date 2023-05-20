@@ -116,7 +116,7 @@
       :halign "center"
       :valign "center"
       :tooltip "edit Config"
-    :onclick "kitty vim ~/.config/hypr/hyprland.conf &" "﨣")))
+    :onclick "kitty vim ~/.config/hypr/hyprland.conf &" "󰔤")))
 
 (defpoll uptime :interval "1m" "uptime -p | sed -e 's/up //;s/ hours,/h/;s/ minutes/m/'")
 (defpoll packages :interval "5m" `pacman -Q | wc -l`)
@@ -159,7 +159,7 @@
         :valign "center"
         :halign "start"
         :vexpand "true"
-      :text " : ${packages}")
+      :text "󰏓  : ${packages}")
       (label
         :class "kernal"
         :valign "center"

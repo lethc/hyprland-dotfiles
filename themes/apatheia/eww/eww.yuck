@@ -9,7 +9,7 @@
 
 ;; Variables
 (defpoll clock_time :interval "5s" "date '+\%H:\%M'")
-;;
+;;󰇙
 (defpoll clock_date :interval "1h" "date '+%b %d, %Y'")
 (defpoll calendar_day :interval "2h" "date '+%d'")
 (defpoll calendar_year :interval "2h" "date '+%Y'")
@@ -76,7 +76,7 @@
           :space-evenly "true"
           (button
             :class "app-button"
-          :onclick "hyprctl dispatch togglefloating 1" "")
+          :onclick "hyprctl dispatch togglefloating 1" "󰄶")
           (button
             :class "app-button"
           :onclick "hyprctl dispatch fullscreen 1" "")
@@ -134,7 +134,7 @@
       (button
         :onclick "scripts/pop audio_ctl"
         :class "volume_icon"
-      "墳"))))
+      "󰕾"))))
 
 (defwidget wifi []
   (eventbox
@@ -216,7 +216,7 @@
     (button
       :onclick "if ${EWW_CMD} state | grep 'rightside: false' ; then ${EWW_CMD} update rightside=true ; else ${EWW_CMD} update rightside=false ; fi"
       (label
-      :text ""))))
+      :text "󰍩"))))
 
 (defwidget sep []
   (box
@@ -454,7 +454,7 @@
         :value {EWW_BATTERY["BAT0"].capacity}
         :class "sys_bat"
         :thickness 9
-        (label :text ""
+        (label :text "󰂄"
           :class "sys_icon_bat"
           :limit-width 2
         :wrap false))
@@ -495,7 +495,7 @@
         :class "sys_mem"
         :thickness 9
         (label
-          :text ""
+          :text "󰍛"
           :class "sys_icon_mem"
           :limit-width 2
           :wrap false
