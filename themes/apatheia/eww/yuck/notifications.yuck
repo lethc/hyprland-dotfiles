@@ -67,11 +67,11 @@
                 (button
                     :class "notification-action"
                     :tooltip "Pause/Resume Notifications"
-                    :onclick "dunstctl set-paused toggle" "")
+                    :onclick "dunstctl set-paused toggle" "󰂛")
                 (button
                     :class "notification-action"
                     :tooltip "Dismiss All"
-                    :onclick "pkill dunst && hyprctl dispatch exec dunst && dunstctl history > /tmp/dunst-history.json" "")))
+                    :onclick "pkill dunst && hyprctl dispatch exec dunst && dunstctl history > /tmp/dunst-history.json" "󰎟")))
         (scroll
             :vscroll "true"
             :hscroll "false"

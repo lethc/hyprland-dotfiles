@@ -1,21 +1,24 @@
-$background-bar: rgba(30, 30, 46, 0.9);
-// $background-bar: rgba(21, 21, 21, 0.9);
-$background: rgba(30, 30, 46, 1);
-$widget-background: rgba(24, 24, 37, 1);
-// $widget-background: rgba(30, 30, 30, 1);
+$background-bar: rgba(45, 53, 59, 0.9);
+$background: rgba(45, 53, 59, 1);
+$widget-background: rgba(35, 42, 46, 1);
 $shadow: rgba(0, 0, 0, 0.3);
 $grey: rgba(105, 101, 124, 0.7);
+//Catppuccin
+// $widget-background: rgba(30, 30, 30, 1);
+// $background-bar: rgba(21, 21, 21, 0.9);
+// $background: rgba(30, 30, 46, 1);
+// $widget-background: rgba(24, 24, 37, 1);
 
 $black:     #282A36;
-$red:     #f38ba8; // #F37F97;
-$green:   #a6e3a1; // #AAC5A0;
-$yellow:  #f9e2af; // #f6d6b3;
-$orange:  #f9e2af; // #f2c798;
-$blue:    #89b4fa; // #BAB4D9; //#8897F4;
-$purple:  #f5c2e7; // #DFA7E7;
-$purple2: #957fb8; // #C574DD;
-$teal:    #94e2d5; // #72B69C;
-$white:   #cdd6f4; // #FDFDFD;
+$red:     #F37F97;  // #f38ba8; // 
+$green:   #AAC5A0;  // #a6e3a1; // 
+$yellow:  #f6d6b3;  // #f9e2af; // 
+$orange:  #f2c798;  // #f9e2af; // 
+$blue:    #7FBBB3;  // #89b4fa; // 
+$purple:  #DFA7E7;  // #f5c2e7; // 
+$purple2: #C574DD;  // #957fb8; // 
+$teal:    #72B69C;  // #94e2d5; // 
+$white:   #D3C6AA;  // #cdd6f4; // 
 
 $primary:   #eacded; // #F37F97;
 $secondary: #71e9c2; // #F37F97;

@@ -49,3 +49,23 @@
 	border-radius: 16px;
     // margin: 30px 50px 15px 0px;
   }
+
+
+.side_sys_disk {
+  color: $primary;
+    background-color: #0f0f17;
+  border-radius: 10px;
+}
+.side_sys_icon_disk {
+    color: $primary;
+}
+.side_sys_disk_box {
+	border-radius: 16px;
+    // margin: 30px 50px 15px 0px;
+  }
+.label-mem {
+  padding-left: 5px;
+}
+.label-bat {
+  padding-right: 5px;
+}

@@ -4,7 +4,7 @@ Created by saimoom **/
 .bar_class { 
     background-color: $background-bar;
     border-radius: 12px;
-    margin: 8px 10px 5px 10px;
+    margin: 5px 10px 5px 10px;
     padding: 3px;
     box-shadow: 0 6px 5px 2px $shadow;
 }
@@ -16,7 +16,7 @@ Created by saimoom **/
 //     // margin: 10px 15px 15px 15px;
 //     margin: 0px 0px 0px 0px;
 //     // padding: 4px;
-//     padding: 0px;
+//     padding: 4px;
 //     box-shadow: 0 6px 5px 2px $shadow;
 // }
 
@@ -82,7 +82,7 @@ tooltip label {
 .membar {
     color: $red;
     background-color: $widget-background;
-    border-radius: 10px;
+    border-radius: 16px;
 }
 
 .batbar {
@@ -241,7 +241,7 @@ tooltip label {
 
 // Calendar
 .cal {
-    background-color: $background;
+    background-color: $widget-background;
     font-family: JetBrainsMono Nerd Font;
     font-size: 22px;
     font-weight: normal;
@@ -287,7 +287,7 @@ calendar.highlight {
 }
 
 calendar:indeterminate {
-    color: $black;
+    color: $background;
 }
 
 
@@ -699,4 +699,48 @@ scale trough {
     font-size: 36px;
     color: $white;
     margin: 0px 0px 0px 20px;
+}
+.right_modules {
+}
+.box-right1 {
+  background-color: $widget-background;
+  border-radius: 9px;
+  padding-right: 13px;
+  padding-left: 13px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.box-right2 {
+  background-color: $widget-background;
+  border-radius: 9px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.box-left {
+  background-color: $widget-background;
+  border-radius: 10px;
+  padding-right: 5px;
+  padding-left: 20px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.box-center {
+  background-color: $widget-background;
+  border-radius: 10px;
+  padding-right: 5px;
+  padding-left: 12px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.box-left-launcher {
+  background-color: $widget-background;
+  border-radius: 10px;
+  padding-right: 8px;
+  padding-left: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
