@@ -41,7 +41,7 @@
     :class "launcher_module"
     :orientation "h"
     (button
-      :onclick "~/.config/hypr/scripts/exec_wofi application_launcher"
+      :onclick "~/.config/hypr/scripts/exec_rofi"
       (image
         :class "launcher-icon"
         ;:path "assets/blossom.png"

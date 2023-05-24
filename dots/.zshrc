@@ -3,6 +3,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export BROWSER=qutebrowser
 export LANG="en_GB.UTF-8"
+source ~/.ai_api_key
+export PATH=$PATH:$XDG_CONFIG_HOME
 # export TMUX_TMPDIR=~/.tmux/tmp
 # export NODE_OPTIONS=--openssl-legacy-provider
 

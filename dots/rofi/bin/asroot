@@ -4,7 +4,7 @@
 
 # Import Current Theme
 DIR="$HOME/.config/hypr/themes_"
-STYLE="simple"
+STYLE="easy"
 RASI="$DIR/$STYLE/rofi/asroot.rasi"
 
 # rofi sudo askpass helper

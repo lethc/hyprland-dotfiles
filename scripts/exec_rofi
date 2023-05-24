@@ -1,2 +1,2 @@
 #!/bin/sh
-rofi -show file-browser-extended
+rofi -show drun -theme ~/.config/rofi/themes/easy/rofi/launcher.rasi

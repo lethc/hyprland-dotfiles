@@ -302,33 +302,33 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#181825"   
-    foreground = 	"#F1F0F5" 
-    frame_color = 	"#f5c2e7"
+    background = "#232A2E"   
+    foreground = 	"#D3C6AA" 
+    frame_color = 	"#7FBBB3"
     timeout = 3
-    highlight = "#AAC5A0"
+    highlight = "#8a9a7b"
     # script = ~/.scripts/dunst/sound-normal.sh
     script=/home/lummyn/.config/dunst/scripts/notification-sound
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#181825" 
-    foreground = 	"#F1F0F5" 
-    frame_color = 	"#cba6f7"
+    background = "#232A2E" 
+    foreground = 	"#D3C6AA" 
+    frame_color = 	"#7FBBB3"
     timeout = 5
-    highlight =   "#F38BA8"
+    highlight =   "#E27D7E"
     script=/home/lummyn/.config/dunst/scripts/notification-sound
     # script = ~/.scripts/dunst/sound-normal.sh
     # Icon for notifications with normal urgency, uncomment to enable
     # default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#181825"
-    foreground = 	"#E97193" 
-    frame_color = 	"#f38ba8" 
+    background = "#232A2E"
+    foreground = 	"#ff5d62" 
+    frame_color = 	"#E27D7E" 
     timeout = 10
-    highlight = "#E97193"
+    highlight = "#E27D7E"
     script=/home/lummyn/.config/dunst/scripts/notification-sound
     # script = ~/.scripts/dunst/sound-critical.sh
     # Icon for notifications with critical urgency, uncomment to enable

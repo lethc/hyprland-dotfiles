@@ -7,11 +7,11 @@ configuration {
 	modi:                       "drun,run,filebrowser,emoji";
 	/* modi:                       "drun,run,filebrowser,window,emoji"; */
     show-icons:                 true;
-    display-drun:               " Apps";
-    display-run:                " Run";
-    display-filebrowser:        " Files";
-    display-window:             " Windows";
-    display-emoji:              " Emoji";
+    display-drun:               "   Apps";
+    display-run:                "   Run";
+    display-filebrowser:        "   Files";
+    display-window:             "   Windows";
+    display-emoji:              "   Emoji";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
