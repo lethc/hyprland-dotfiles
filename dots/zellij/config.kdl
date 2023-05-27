@@ -27,11 +27,12 @@ keybinds {
         // bind instructions can include one or more keys (both keys will be bound separately)
         // bind keys can include one or more actions (all actions will be performed with no sequential guarantees)
         unbind "Ctrl h"
+        unbind "Ctrl l"
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Ctrl p" { SwitchToMode "pane"; }
         bind "Ctrl s" { SwitchToMode "move"; }
         bind "Alt n" { NewPane; }
-        bind "Ctrl l" "Alt Left" { MoveFocusOrTab "Left"; }
+        bind "Alt Left" { MoveFocusOrTab "Left"; }
     }
     pane {
         bind "h" "Left" { MoveFocus "Left"; }
