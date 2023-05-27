@@ -26,8 +26,10 @@ keybinds {
     normal {
         // bind instructions can include one or more keys (both keys will be bound separately)
         // bind keys can include one or more actions (all actions will be performed with no sequential guarantees)
+        unbind "Ctrl h"
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Ctrl p" { SwitchToMode "pane"; }
+        bind "Ctrl s" { SwitchToMode "move"; }
         bind "Alt n" { NewPane; }
         bind "Ctrl l" "Alt Left" { MoveFocusOrTab "Left"; }
     }
@@ -37,6 +39,7 @@ keybinds {
         bind "j" "Down" { MoveFocus "Down"; }
         bind "k" "Up" { MoveFocus "Up"; }
         bind "p" { SwitchFocus; }
+        bind "q" { CloseFocus; }
     }
     move {
         bind "Esc" { SwitchToMode "Pane"; }
