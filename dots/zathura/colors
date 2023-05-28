@@ -1,46 +1,46 @@
 # Base
-set default-fg 			        "#d9e0ee"
+set default-fg 			        "#D3C6AA"
 set default-bg 			        "#0"
 
 # Completion
-set completion-bg		        "#302d41"
-set completion-fg		        "#d9e0ee"
-set completion-highlight-bg	    "#575268"
-set completion-highlight-fg	    "#d9e0ee"
-set completion-group-bg	        "#302d41"
-set completion-group-fg		    "#96cdfb"
+set completion-bg		        "#2D353B"
+set completion-fg		        "#D3C6AA"
+set completion-highlight-bg	    "#313B41"
+set completion-highlight-fg	    "#D3C6AA"
+set completion-group-bg	        "#2D353B"
+set completion-group-fg		    "#7FBBB3"
 
 # Statusbar
-set statusbar-fg		        "#d9e0ee"
-set statusbar-bg		        "#302d41"
+set statusbar-fg		        "#D3C6AA"
+set statusbar-bg		        "#2D353B"
 
 # Notification
-set notification-bg		        "#302d41"
-set notification-fg		        "#d9e0ee"
-set notification-error-bg	    "#302d41"
-set notification-error-fg	    "#f28fad"
-set notification-warning-bg	    "#302d41"
+set notification-bg		        "#2D353B"
+set notification-fg		        "#D3C6AA"
+set notification-error-bg	    "#2D353B"
+set notification-error-fg	    "#F37F97"
+set notification-warning-bg	    "#2D353B"
 set notification-warning-fg	    "#fae3b0"
 
 # Inputbar
-set inputbar-fg			        "#d9e0ee"
-set inputbar-bg 		        "#302d41"
+set inputbar-fg			        "#D3C6AA"
+set inputbar-bg 		        "#2D353B"
 
 # Recolor
-set recolor-lightcolor		    "#1e1d2f"
-set recolor-darkcolor		    "#d9e0ee"
+set recolor-lightcolor		    "#1E2326"
+set recolor-darkcolor		    "#D3C6AA"
 
 # Index
-set index-fg			        "#d9e0ee"
-set index-bg			        "#1e1d2f"
-set index-active-fg		        "#d9e0ee"
-set index-active-bg		        "#302d41"
+set index-fg			        "#D3C6AA"
+set index-bg			        "#1E2326"
+set index-active-fg		        "#D3C6AA"
+set index-active-bg		        "#2D353B"
 
 # Loading
-set render-loading-bg		    "#1e1d2f"
-set render-loading-fg		    "#d9e0ee"
+set render-loading-bg		    "#1E2326"
+set render-loading-fg		    "#D3C6AA"
 
 # Highlight
-set highlight-color		        "#575268"
+set highlight-color		        "#313B41"
 set highlight-fg                "#f5c2e7"
 set highlight-active-color	    "#f5c2e7"

@@ -192,6 +192,7 @@ export PATH="$PATH:/home/lummyn/.dotnet/tools"
 export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH=~/bin:$PATH
 export PATH=~/.luarocks/bin:$PATH
+export PATH=~/go/bin:$PATH
 
 # -- NVIM 9.0 allows multiple configs --
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
