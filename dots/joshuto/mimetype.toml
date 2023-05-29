@@ -6,6 +6,7 @@ audio_default	= [
 
 image_default	= [
 	{ command = "qimgv", args = [ "--" ], fork = true, silent = true },
+	{ command = "nsxiv-rifle", args = [ "--" ], fork = true, silent = true },
 	{ command = "krita", args = [ "--" ], fork = true, silent = true },
 	{ command = "exiftool", confirm_exit = true },
 	{ command = "eog", args = [ "--" ], fork = true, silent = true },
@@ -21,17 +22,19 @@ video_default	= [
 ]
 
 text_default	= [
+	{ command = "nvim" },
 	{ command = "micro" },
 	{ command = "gedit", fork = true, silent = true },
 	{ command = "bat", args = [ "--paging=always " ] },
 ]
 
 reader_default	= [
+	{ command = "zathura", fork = true, silent = true },
 	{ command = "evince", fork = true, silent = true },
 ]
 
 libreoffice_default	= [
-	{ command = "libreoffice", fork = true, silent = true },
+	{ command = "wps", fork = true, silent = true },
 ]
 
 [extension]
@@ -127,6 +130,7 @@ vim.inherit	= "text_default"
 xml.inherit	= "text_default"
 yaml.inherit	= "text_default"
 yml.inherit	= "text_default"
+uml.inherit = "text_default"
 
 # archive formats
 7z.app_list	= [
