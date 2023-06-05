@@ -1,4 +1,6 @@
 simplified_ui false 
+pane_frames false
+//zellij options --no-pane-frames
 default_shell "zsh"
 
 default_layout "compact"
@@ -37,6 +39,7 @@ keybinds {
         bind "Alt n" { NewPane; }
         bind "Alt Left" { MoveFocusOrTab "Left"; }
         bind "Ctrl b" { SwitchToMode "tab"; }
+        bind "Ctrl q" { Detach; }
     }
     pane {
         bind "i" { SwitchToMode "normal"; }

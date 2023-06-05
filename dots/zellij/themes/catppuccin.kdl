@@ -39,9 +39,13 @@ themes {
         orange 245 169 127
     }
     catppuccin-mocha {
-        fg 205 214 244
+        //fg 205 214 244
+        fg 211 198 170
         bg 88 91 112
-        black 24 24 37
+        //bg 30 35 38
+        //black 24 24 37
+        black 30 35 38
+        //black 35 42 46
         red 243 139 168
         green 166 227 161
         yellow 249 226 175
