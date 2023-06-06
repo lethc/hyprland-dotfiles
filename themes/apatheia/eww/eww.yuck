@@ -193,7 +193,7 @@
 
 (defwidget clock_module []
   (eventbox
-    :onhover "${EWW_CMD} update time_rev=true"
+    :onhover "${EWW_CMD} update time_rev=false" ;; set true to use the onhover function
     :onhoverlost "${EWW_CMD} update time_rev=false"
     (box
       :class "module"
@@ -203,6 +203,11 @@
       (label
         :text clock_time
       :class "clock_time_class" )
+      ;;Button added to display the date together the time 
+      (button
+          :class "clock_date_class"
+        :onclick "scripts/pop calendar" clock_date)
+      ;;
       (revealer :transition "slideleft"
         :reveal time_rev
         :duration "350ms"

@@ -98,7 +98,7 @@
       :halign "center"
       :valign "center"
       :tooltip "Reboot"
-    :onclick "kitty reboot &" "")
+    :onclick "kitty reboot &" "󱞲")
     (button
       :class "exit"
       :halign "center"
