@@ -196,12 +196,12 @@ export PATH=~/go/bin:$PATH
 
 # -- NVIM 9.0 allows multiple configs --
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
-alias nvim-lvim="NVIM_APPNAME=lvim nvim"
+alias nvim-new="NVIM_APPNAME=new nvim"
 alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
-alias nvim-cosmic="NVIM_APPNAME=CosmicNvim nvim"
+alias nvim-2="NVIM_APPNAME=nvim2 nvim"
 
 function nvims() {
-  items=("default" "NvChad" "AstroNvim" "CosmicNvim" "lvim")
+  items=("default" "NvChad" "AstroNvim" "nvim2" "new")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim config >> " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
