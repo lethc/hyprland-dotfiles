@@ -1,44 +1,45 @@
 # Base
-set default-fg 			        "#D3C6AA"
-set default-bg 			        "#0"
+set default-fg 			        "#DADADA"
+# set default-bg 			        "#0"
+set default-bg 			        "#0F1416"
 
 # Completion
-set completion-bg		        "#2D353B"
-set completion-fg		        "#D3C6AA"
-set completion-highlight-bg	    "#313B41"
-set completion-highlight-fg	    "#D3C6AA"
-set completion-group-bg	        "#2D353B"
-set completion-group-fg		    "#7FBBB3"
+set completion-bg		        "#141B1E"
+set completion-fg		        "#DADADA"
+set completion-highlight-bg	    "#242e32"
+set completion-highlight-fg	    "#DADADA"
+set completion-group-bg	        "#141B1E"
+set completion-group-fg		    "#71BAF2"
 
 # Statusbar
-set statusbar-fg		        "#D3C6AA"
-set statusbar-bg		        "#2D353B"
+set statusbar-fg		        "#DADADA"
+set statusbar-bg		        "#141B1E"
 
 # Notification
-set notification-bg		        "#2D353B"
-set notification-fg		        "#D3C6AA"
-set notification-error-bg	    "#2D353B"
-set notification-error-fg	    "#F37F97"
-set notification-warning-bg	    "#2D353B"
-set notification-warning-fg	    "#fae3b0"
+set notification-bg		        "#141B1E"
+set notification-fg		        "#DADADA"
+set notification-error-bg	    "#141B1E"
+set notification-error-fg	    "#EF7E7E"
+set notification-warning-bg	    "#141B1E"
+set notification-warning-fg	    "#F4D67A"
 
 # Inputbar
-set inputbar-fg			        "#D3C6AA"
-set inputbar-bg 		        "#2D353B"
+set inputbar-fg			        "#DADADA"
+set inputbar-bg 		        "#141B1E"
 
 # Recolor
 set recolor-lightcolor		    "#1E2326"
-set recolor-darkcolor		    "#D3C6AA"
+set recolor-darkcolor		    "#DADADA"
 
 # Index
-set index-fg			        "#D3C6AA"
+set index-fg			        "#DADADA"
 set index-bg			        "#1E2326"
-set index-active-fg		        "#D3C6AA"
-set index-active-bg		        "#2D353B"
+set index-active-fg		        "#DADADA"
+set index-active-bg		        "#141B1E"
 
 # Loading
 set render-loading-bg		    "#1E2326"
-set render-loading-fg		    "#D3C6AA"
+set render-loading-fg		    "#DADADA"
 
 # Highlight
 set highlight-color		        "#313B41"
