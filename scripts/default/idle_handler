@@ -13,6 +13,13 @@ swayidle -w \
   timeout 1800 "$lockcmd & $screenOff" \
     resume "$screenOn"
 
+###Here another config
+# lockcmd2="pidof swaylock || swaylock --image ~/Pictures/tracks.jpg --clock --indicator --line-color cdd6f4ff --text-color cdd6f4ff --inside-color 1e1e2eff --ring-color 313244ff --line-ver-color cdd6f4ff --text-ver-color cdd6f4ff --inside-ver-color 1e1e2eff --ring-ver-color 313244ff --line-clear-color cdd6f4ff --text-clear-color cdd6f4ff --inside-clear-color 1e1e2eff --ring-clear-color 313244ff --line-clear-color cdd6f4ff --text-wrong-color 313244ff --inside-wrong-color f38ba8ff --ring-wrong-color 313244ff --key-hl-color cba6f7ff"
+#
+# swayidle -w timeout 900 $lockcmd2 before-sleep $lockcmd2 &
+# swayidle -w timeout 450 'systemctl suspend'
+###
+
 # bat=$(ls /sys/class/power_supply | grep -m 1 "BAT")
 #
 # sway-audio-idle-inhibit & 
