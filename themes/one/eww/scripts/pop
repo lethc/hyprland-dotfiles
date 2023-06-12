@@ -1,5 +1,5 @@
 #!/bin/bash
-EWW_BIN="/usr/bin/eww -c $HOME/.config/hypr/themes/apatheia/eww"
+EWW_BIN="/usr/bin/eww -c $HOME/.config/hypr/themes/one/eww"
 
 # select widget for focused monitor
 focusmon=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .id')

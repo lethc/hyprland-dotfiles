@@ -1,4 +1,4 @@
-(defpoll curr_clips :interval "5s" "~/.config/hypr/themes/apatheia/eww/scripts/curr-clips")
+(defpoll curr_clips :interval "5s" "~/.config/hypr/themes/one/eww/scripts/curr-clips")
 
 (defwidget clipboard []
     (box

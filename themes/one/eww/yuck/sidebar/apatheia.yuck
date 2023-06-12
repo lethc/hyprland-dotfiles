@@ -1,6 +1,6 @@
 ;; pull a new quote every hour
-(defpoll apatheia_quote :interval "1h" "python ~/.config/hypr/themes/apatheia/scripts/Apatheia/main.py | head -1")
-(defpoll apatheia_author :interval "1h" "python ~/.config/hypr/themes/apatheia/scripts/Apatheia/main.py | tail -1")
+(defpoll apatheia_quote :interval "1h" "python ~/.config/hypr/themes/one/scripts/Apatheia/main.py | head -1")
+(defpoll apatheia_author :interval "1h" "python ~/.config/hypr/themes/one/scripts/Apatheia/main.py | tail -1")
 
 ;; Apatheia Quote
 (defwidget apatheia []

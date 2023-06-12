@@ -25,7 +25,7 @@
 
 ; https://github.com/elkowar/eww/issues/382#issuecomment-1281693594
 
-(defvar eww "eww -c $HOME/.config/hypr/themes/apatheia/eww/bar")
+(defvar eww "eww -c $HOME/.config/hypr/themes/one/eww/bar")
 
 (defvar vol_reveal false)
 (defvar br_reveal false)
@@ -45,7 +45,7 @@
       (image
         :class "launcher-icon"
         ;:path "assets/blossom.png"
-        :path  "/home/lummyn/.config/hypr/themes/apatheia/eww/images/arch.png"
+        :path  "/home/lummyn/.config/hypr/themes/one/eww/images/arch.png"
       :image-width 28))
   ))
 
