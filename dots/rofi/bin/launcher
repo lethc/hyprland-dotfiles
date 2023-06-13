@@ -10,3 +10,7 @@ RASI="$DIR/$STYLE/rofi/launcher.rasi"
 rofi \
     -show drun \
 	-theme ${RASI}
+
+    # -show-icons \
+  # -drun-icon-theme "adwaita"\
+    # -drun-icon-theme WhiteSur-grey-dark\

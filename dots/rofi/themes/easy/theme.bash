@@ -30,7 +30,7 @@ light_value='0.05'
 dark_value='0.45'
 
 # Rofi
-rofi_icon='Colloid-dark'
+rofi_icon='adwaita'
 
 # Terminal
 terminal_font_name='JetBrainsMono Nerd Font'
