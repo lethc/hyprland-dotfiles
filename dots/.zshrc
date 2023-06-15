@@ -3,7 +3,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export BROWSER=qutebrowser
 export LANG="en_GB.UTF-8"
-source ~/.ai_api_key
 export PATH=$PATH:$XDG_CONFIG_HOME
 # export TMUX_TMPDIR=~/.tmux/tmp
 # export NODE_OPTIONS=--openssl-legacy-provider
@@ -83,13 +82,13 @@ alias maid='bard-rs -p ./'
 alias jukit_kitty="kitty --listen-on=unix:@"$(date +%s%N)" -o allow_remote_control=yes"
 alias nsxiv="nsxiv-rifle"
 alias md="gh-md-toc" #https://github.com/jonathanpoelen/gh-md-toc
-alias vim="~/.scripts/reset"
-alias nvim="~/.scripts/reset"
-alias vi="~/.scripts/reset"
+alias vim="nvim"
+alias vi="nvim"
 alias youtube="firefox http://127.0.0.1:9010/ &> /dev/null &"
 alias dots="cd ~/.config/hypr/dots/"
 alias rr="joshuto"
 # alias gtt='/home/luis501/Downloads/Git/GTT/gtt'
+alias manual="tldr"
 
 
 
