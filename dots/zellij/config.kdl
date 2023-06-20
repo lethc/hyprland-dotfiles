@@ -43,6 +43,7 @@ keybinds {
         bind "Ctrl q" { Detach; }
     }
     pane {
+        bind "Ctrl b" { SwitchToMode "tab"; }
         bind "i" { SwitchToMode "normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
@@ -52,6 +53,7 @@ keybinds {
         bind "q" { CloseFocus; }
     }
     move {
+        bind "Ctrl b" { SwitchToMode "tab"; }
         bind "Esc" { SwitchToMode "Pane"; }
         bind "n" "Tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
@@ -62,6 +64,9 @@ keybinds {
     }
     locked {
         bind "Ctrl g" { SwitchToMode "normal"; }
+    }
+    scroll {
+        bind "i" { SwitchToMode "Normal"; }
     }
     search {
         bind "i" { EditScrollback; SwitchToMode "Normal"; }
@@ -81,6 +86,7 @@ keybinds {
         bind "o" { SearchToggleOption "WholeWord"; }
   }
   tab {
+        bind "Ctrl b" { SwitchToMode "tab"; }
         bind "I" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "i" { SwitchToMode "Normal"; }
         bind "E" { SwitchToMode "RenameTab"; }
