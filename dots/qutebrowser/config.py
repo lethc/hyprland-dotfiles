@@ -1,9 +1,20 @@
 
 # config.bind('<Ctrl+/>', 'hint links spawn --detach mpv {hint-url}')
 import setproctitle
+# import dracula.draw
 setproctitle.setproctitle("qutebrowser")
 
+config.source('themes/qute-city-lights/city-lights-theme.py')
+
 config.load_autoconfig(True)
+
+# dracula.draw.blood(c, {
+#     'spacing': {
+#         'vertical': 6,
+#         'horizontal': 8
+#     }
+# })
+
 # Bindings
 config.bind("gi", "hint inputs")
 config.bind("<f12>", "inspector")
@@ -45,6 +56,8 @@ c.aliases = {
     "yt": "open http://127.0.0.1:9010",
     "bw": "open https://vault.bitwarden.com/#/login",
 }
+
+# c.colors.webpage.darkmode.enabled=True
 
 # Always restore open sites when qutebrowser is reopened.
 c.auto_save.session = True
