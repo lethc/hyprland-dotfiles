@@ -1,11 +1,13 @@
 auto-reload yes
+openbrowser-and-mark-jumps-to-next-unread yes
+confirm-exit yes
 
 color background          default default
 color listnormal          default default
-color listfocus           black   yellow dim
+color listfocus           black   blue dim
 color listnormal_unread   default default bold
-color listfocus_unread    black   yellow underline
-color info                default red
+color listfocus_unread    black   blue underline
+color info                default black
 color article             default default
 
 bind-key j down
@@ -27,12 +29,12 @@ bind-key U show-urls
 bind-key x pb-delete
 
 # notification
-notify-format "newsbeuter: finished reload, %f unread feeds (%n unread articles total)"
-notify-program "notify-send"
-notify-always no
+notify-program ""
+notify-always true
 notify-screen no
 notify-xterm yes
-notify-beep no
+notify-format "%d new articles (%n unread articles, %f unread feeds)"
+notify-beep yes
 
 
 highlight all "---.*---" default
