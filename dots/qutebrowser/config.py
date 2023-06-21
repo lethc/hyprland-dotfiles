@@ -54,6 +54,9 @@ c.aliases = {
     "nicehash": "spawn --userscript nicehash",
     "pass": "spawn -d pass -c",
     "yt": "open http://127.0.0.1:9010",
+    "yt-wl": "open http://127.0.0.1:9010/https://www.youtube.com/playlists/Watch%20Later",
+    "yt-rl": "open http://127.0.0.1:9010/https://www.youtube.com/playlists/Remember%20Linux",
+    "yt-l": "open http://127.0.0.1:9010/https://www.youtube.com/playlists/Learning",
     "bw": "open https://vault.bitwarden.com/#/login",
 }
 
