@@ -58,6 +58,8 @@ c.aliases = {
     "yt-rl": "open http://127.0.0.1:9010/https://www.youtube.com/playlists/Remember%20Linux",
     "yt-l": "open http://127.0.0.1:9010/https://www.youtube.com/playlists/Learning",
     "bw": "open https://vault.bitwarden.com/#/login",
+    "rup": "open https://www.reddit.com/r/unixporn/",
+    "rnv": "open https://www.reddit.com/r/neovim/",
 }
 
 # c.colors.webpage.darkmode.enabled=True
