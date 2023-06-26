@@ -26,9 +26,9 @@ method = "natural" 	# lexical, mtime, natural
 
 [preview]
 max_preview_size = 2097152 # 2MB
-preview_script = "~/.config/joshuto/preview_file.sh"
-# preview_shown_hook_script = "~/.config/joshuto/kitty/on_preview_shown.sh"
-# preview_removed_hook_script = "~/.config/joshuto/kitty/on_preview_removed.sh"
+# preview_script = "~/.config/joshuto/preview_file.sh"
+preview_shown_hook_script = "~/.config/joshuto/on_preview_shown.sh"
+preview_removed_hook_script = "~/.config/joshuto/on_preview_removed.sh"
 
 [tab]
 # inherit, home, root
