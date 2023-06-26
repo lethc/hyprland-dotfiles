@@ -72,7 +72,6 @@ alias bat='bat'
 # alias rr='ranger'
 alias tu='tmux'
 alias update='yay -Syu'
-alias cl='clear'
 alias pj='cd /home/lummyn/Documents/projects'
 # alias copy='pwd && pwd | xclip -sel clipboard'
 alias copy='pwd && pwd | wl-copy'
@@ -88,10 +87,25 @@ alias py="python"
 alias youtube="qutebrowser http://127.0.0.1:9010/"
 # alias youtube="firefox http://127.0.0.1:9010/ &> /dev/null &"
 alias dots="cd ~/.config/hypr/dots/"
-alias rr="joshuto"
-# alias gtt='/home/luis501/Downloads/Git/GTT/gtt'
+alias rr="ranger"
+alias mn="minase"
+# alias gtt='~/Downloads/Git/GTT/gtt'
 alias manual="tldr"
+# cl() {
+#   cd $@ && lsd --group-dirs=first;
+# }
+# function cd {
+#  builtin cd "$@" && ls -F
+# }
 
+function cd {
+  builtin cd "$@" && ls -F
+  if [[ ! "$PWD" == "$HOME" ]]; then
+    if [[ -n $(find . -type f -name "*.png" -o -name "*.jpg" -o -name "*.jpeg") ]]; then
+      lsix
+    fi
+  fi
+}
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
