@@ -34,14 +34,33 @@ keybinds {
         unbind "Alt k"
         unbind "Alt j"
         unbind "Ctrl t"
-        bind "Ctrl g" { SwitchToMode "locked"; }
+        unbind "Ctrl g"
+        bind "Ctrl d" { SwitchToMode "locked"; }
         bind "Ctrl p" { SwitchToMode "pane"; }
-        bind "Ctrl l" { SwitchToMode "move"; }
-        bind "Alt n" { NewPane; }
-        bind "Alt Left" { MoveFocusOrTab "Left"; }
+        bind "Ctrl o" { SwitchToMode "move"; }
+        bind "Ctrl n" { SwitchToMode "resize"; }
+        //bind "Ctrl o"  { SwitchToMode "session"; }
         bind "Ctrl b" { SwitchToMode "tab"; }
-        bind "Ctrl w" { Detach; }
         bind "Ctrl q" { Quit; }
+        bind "Ctrl w" { Detach; }
+        bind "Alt n" { NewPane; }
+        bind "Alt q" { CloseFocus; }
+        bind "Alt a" "Left" { MoveFocus "Left"; }
+        bind "Alt d" "Right" { MoveFocus "Right"; }
+        bind "Alt s" "Down" { MoveFocus "Down"; }
+        bind "Alt w" "Up" { MoveFocus "Up"; }
+        bind "Alt t" { NewTab; }
+        bind "Alt f" { ToggleFocusFullscreen; }
+        bind "Alt 1" { GoToTab 1; }
+        bind "Alt 2" { GoToTab 2; }
+        bind "Alt 3" { GoToTab 3; }
+        bind "Alt 4" { GoToTab 4; }
+        bind "Alt 5" { GoToTab 5; }
+        bind "Alt 6" { GoToTab 6; }
+        bind "Alt 7" { GoToTab 7; }
+        bind "Alt 8" { GoToTab 8; }
+        bind "Alt 9" { GoToTab 9; }
+        bind "Alt b" { ToggleTab; }
     }
     pane {
         bind "Ctrl b" { SwitchToMode "tab"; }
@@ -66,10 +85,13 @@ keybinds {
         bind "l" "Right" { MovePane "Right"; }
     }
     locked {
-        bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Ctrl d" { SwitchToMode "normal"; }
     }
     scroll {
         bind "i" { SwitchToMode "Normal"; }
+    }
+    session {
+        bind "d" { Detach; }
     }
     search {
         bind "i" { EditScrollback; SwitchToMode "Normal"; }
@@ -101,15 +123,15 @@ keybinds {
         bind "n" { NewTab; }
         bind "q" { CloseTab; }
         bind "s" { ToggleActiveSyncTab; }
-        bind "1" { GoToTab 1; }
-        bind "2" { GoToTab 2; }
-        bind "3" { GoToTab 3; }
-        bind "4" { GoToTab 4; }
-        bind "5" { GoToTab 5; }
-        bind "6" { GoToTab 6; }
-        bind "7" { GoToTab 7; }
-        bind "8" { GoToTab 8; }
-        bind "9" { GoToTab 9; }
+        bind "Alt 1" { GoToTab 1; }
+        bind "Alt 2" { GoToTab 2; }
+        bind "Alt 3" { GoToTab 3; }
+        bind "Alt 4" { GoToTab 4; }
+        bind "Alt 5" { GoToTab 5; }
+        bind "Alt 6" { GoToTab 6; }
+        bind "Alt 7" { GoToTab 7; }
+        bind "Alt 8" { GoToTab 8; }
+        bind "Alt 9" { GoToTab 9; }
         bind "Tab" { ToggleTab; }
   }
 
