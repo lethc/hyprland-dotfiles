@@ -208,6 +208,7 @@ export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH=~/bin:$PATH
 export PATH=~/.luarocks/bin:$PATH
 export PATH=~/go/bin:$PATH
+export PATH="$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" #Biber requires this PATH to execute
 
 # -- NVIM 9.0 allows multiple configs --
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
