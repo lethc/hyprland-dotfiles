@@ -8,4 +8,4 @@ passwd="password"
 
 mega-cmd $user $passwd
 sync /home/Home/Sync /Obsidian-Vault
-backup -d /home/Home/Sync
+backup -d /home/Home/Sync /Obsidian-Vault
