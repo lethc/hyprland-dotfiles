@@ -1,66 +1,31 @@
+###### Export Variables ######
 # Fix the Java Problem
+PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export BROWSER=qutebrowser
 export LANG="en_GB.UTF-8"
 export PATH=$PATH:$XDG_CONFIG_HOME
-# export TMUX_TMPDIR=~/.tmux/tmp
-# export NODE_OPTIONS=--openssl-legacy-provider
+export PATH="$HOME/.local/bin":$PATH
+export PATH=/home/lummyn/.local/bin:$PATH
+export PATH=/opt/android-sdk/platform-tools:$PATH
+export PATH=/opt/idea-IC-223.8214.52/bin/:$PATH
+# export PATH=/opt/apache-maven-3.8.7/bin:$PATH
+export PATH_TO_FX=path/to/javafx-sdk-20/lib
+# export PATH=/home/lummyn/Modules/javafx-sdk-20/lib/:$PATH
+# Add .NET Core SDK tools
+export PATH="$PATH:/home/lummyn/.dotnet/tools"
+# export PATH="$PATH:/opt/lampp/bin"
+export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH=~/bin:$PATH
+export PATH=~/.luarocks/bin:$PATH
+export PATH=~/go/bin:$PATH
+export PATH="$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" #Biber requires this PATH to execute
+#rust Set UP
+. "$HOME/.cargo/env"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# Set up the prompt
-
-autoload -Uz promptinit
-promptinit
-prompt adam1
-
-setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-#bindkey -e
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -v
-
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
-
-# Use modern completion system
-autoload -Uz compinit
-compinit
-
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
-
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-# Manual configuration
-
-PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-
-# Manual aliases
+ ######  Aliases  ######
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
@@ -85,19 +50,60 @@ alias vim="nvim"
 alias vi="nvim"
 alias py="python"
 alias youtube="qutebrowser http://127.0.0.1:9010/"
+alias yt="youtube-tui"
 # alias youtube="firefox http://127.0.0.1:9010/ &> /dev/null &"
 alias dots="cd ~/.config/hypr/dots/"
 alias rr="ranger"
 alias mn="minase"
 # alias gtt='~/Downloads/Git/GTT/gtt'
 alias manual="tldr"
-# cl() {
-#   cd $@ && lsd --group-dirs=first;
-# }
+
+###### Plugins  ######
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
+source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+##### Configurations  #######
+# Use VIM keybindings even if our EDITOR is set to EMACS
+bindkey -v
+# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+# zsh-autosuggestions 
+bindkey 'Ñ' autosuggest-accept
+setopt histignorealldups sharehistory
+#Use modern completion system
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+
+##### Functions  ########
+function mkt(){
+	mkdir {nmap,content,exploits,scripts}
+}
+## cd with ls and lsix to display images in terminal
 # function cd {
 #  builtin cd "$@" && ls -F
 # }
-
 function cd {
   builtin cd "$@" && ls -F
   if [[ ! "$PWD" == "$HOME" ]]; then
@@ -105,24 +111,6 @@ function cd {
       lsix
     fi
   fi
-}
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Plugins 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
-source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
-# zsh-autosuggestions configuration
-bindkey 'Ñ' autosuggest-accept
-
-
-# Functions
-function mkt(){
-	mkdir {nmap,content,exploits,scripts}
 }
 
 # Extract nmap information
@@ -136,7 +124,6 @@ function extractPorts(){
 	echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
 	cat extractPorts.tmp; rm extractPorts.tmp
 }
-
 # Set 'man' colors
 function man() {
     env \
@@ -149,10 +136,8 @@ function man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     man "$@"
 }
-
 # fzf improvement
 function fzf-lovely(){
-
 	if [ "$1" = "h" ]; then
 		fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
  	                echo {} is a binary file ||
@@ -172,45 +157,12 @@ function fzf-lovely(){
 	                          cat {}) 2> /dev/null | head -500'
 	fi
 }
-
+#Delete permanently
 function rmk(){
 	scrub -p dod $1
 	shred -zun 10 -v $1
 }
-
-# Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
-(( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
-
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
-
-bindkey "^[[H" beginning-of-line  
-bindkey "^[[F" end-of-line
-bindkey "^[[3~" delete-char 
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
-
-#rust Set UP
-#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$HOME/.cargo/env"
-
-export PATH="$HOME/.local/bin":$PATH
-export PATH=/home/lummyn/.local/bin:$PATH
-export PATH=/opt/android-sdk/platform-tools:$PATH
-export PATH=/opt/idea-IC-223.8214.52/bin/:$PATH
-# export PATH=/opt/apache-maven-3.8.7/bin:$PATH
-export PATH_TO_FX=path/to/javafx-sdk-20/lib
-# export PATH=/home/lummyn/Modules/javafx-sdk-20/lib/:$PATH
-# Add .NET Core SDK tools
-export PATH="$PATH:/home/lummyn/.dotnet/tools"
-# export PATH="$PATH:/opt/lampp/bin"
-export PATH="$PATH:/opt/mssql-tools/bin"
-export PATH=~/bin:$PATH
-export PATH=~/.luarocks/bin:$PATH
-export PATH=~/go/bin:$PATH
-export PATH="$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" #Biber requires this PATH to execute
-
-# -- NVIM 9.0 allows multiple configs --
+#Multiple NVIM Configurations
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 alias nvim-new="NVIM_APPNAME=new nvim"
 alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
@@ -230,4 +182,5 @@ function nvims() {
   NVIM_APPNAME=$config nvim $@
 }
 bindkey -s ^a "nvims\n"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+eval "$(starship init zsh)"
