@@ -1,0 +1,237 @@
+# #Tuck "new line" inside the ($all) variable
+# format = """($all
+# )$character"""
+#
+# # No new line between shell prompts
+# add_newline = false
+#
+# # No line-break between shell prompts
+# [line_break]
+# disabled = true# # ~/.config/starship.toml
+#
+format = """\
+[](fg:#0F1416)\
+$username\
+[](fg:#0F1416 bg:#141B1E)\
+$directory\
+[](fg:#141B1E bg:#232A2E)\
+$git_branch\
+$git_status\
+[](fg:#232A2E bg:#404749)\
+$all\
+$cmd_duration\
+$jobs\
+$battery\
+$time\
+$character"""
+# [](fg:#404749 bg:#404749)\
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+[line_break]
+disabled = true
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "fg:#67B0E8 bg:#0F1416"
+style_root = "fg:#67B0E8 bg:#0F1416"
+format = '[󱗆 ]($style)' # $user
+
+[directory]
+style = "fg:#E5C76B bg:#141B1E"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"~" = " ~"
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "🎜 "
+"Pictures" = " "
+"Videos" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+[git_branch]
+symbol = ""
+style = "fg:#8CCF7E bg:#232A2E"
+format = '[ $symbol $branch(:$remote_branch) ]($style)'
+
+[git_status]
+style = "fg:#8CCF7E bg:#232A2E"
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+deleted = "x"
+format = '[$all_status$ahead_behind ]($style)'
+
+[sudo]
+symbol = ' '
+style = "fg:#DF7778 bg:#404749"
+disabled = true
+format='[ $symbol]($style)'
+
+[aws]
+symbol = " "
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[conda]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[dart]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[c]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[docker_context]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol $context]($style) $path '
+
+[elixir]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[elm]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[golang]
+symbol = "󰟓"
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[haskell]
+symbol = "λ"
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[java]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[julia]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[lua]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[nim]
+symbol = "󰆥"
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[nix_shell]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[nodejs]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[perl]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[php]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[python]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[ruby]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[rust]
+symbol = ""
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[swift]
+symbol = "󰛥"
+style = "fg:#9DCCF0 bg:#404749"
+format = '[ $symbol ($version )]($style)'
+
+[package]
+symbol = "󰏗"
+style = "fg:#9DCCF0 bg:#404749"
+format = "[ $symbol $version]($style)"
+disabled = true
+
+
+[cmd_duration]
+min_time = 1
+style = "fg:#f9e2af bg:#404749"
+format = "[ $duration]($style)"
+disabled = true
+
+[jobs]
+symbol = "󰙒"
+style = "fg:#f9e2af bg:#404749"
+format = "[ $symbol]($style)"
+
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+unknown_symbol = "󰁽 "
+empty_symbol = "󰂎 "
+format = "[ $symbol$percentage ]($style bg:#404749)"
+disabled = true
+
+[[battery.display]]
+threshold = 15
+style = "bold fg:#67B0E8"
+
+[[battery.display]]
+threshold = 50
+style = "fg:#f9e2af"
+
+[[battery.display]]
+threshold = 101
+style = "bold #8CCF7E"
+
+# Prompt: optional param 1
+[time]
+disabled = true
+time_format = "%R"
+style = "bg:#3b4363"
+format = '[](fg:#404749 $style)[ 󰁫 $time ](fg:#94e2d5 $style)'
+
+# Last param in the first line/row
+# fg:#3b4363 if time enabled
+[character]
+success_symbol = "[ ](fg:#404749)"
+error_symbol = "[ ](fg:#404749)"
