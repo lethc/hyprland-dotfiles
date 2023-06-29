@@ -6,7 +6,7 @@ sudo pacman -S konsole dolphin firefox qutebrowser discover foot man-db mpv yt-d
 sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts 
 sudo pacman -S nodejs npm python-pip python-pipx
 pacman -Syu pipewire-alsa pipewire-jack pipewire-pulse alsa-utils gvfs-mtp
-yay -S ranger-git noto-fonts-emoji-apple lsix nodejs-readability-cli selectdefaultapplication-git
+yay -S ranger-git noto-fonts-emoji-apple lsix nodejs-readability-cli selectdefaultapplication-git apple-fonts
 sudo pacman -S ttf-jetbrains-mono-nerd zsh
 #Enable Wireplumber
 sudo pacman -Syu wireplumber
