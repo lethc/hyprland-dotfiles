@@ -2,7 +2,7 @@
 
 ## ArchLinux
 ```bash
-sudo pacman -S konsole dolphin firefox qutebrowser discover foot man-db mpv yt-dlp zellij newsboat btop gitui packagekit-qt5 flatpak fwupd
+sudo pacman -S konsole dolphin firefox qutebrowser discover foot man-db mpv yt-dlp zellij newsboat btop gitui packagekit-qt5 flatpak fwupd ark
 sudo pacman -S noto-fonts-cjk noto-fonts-emoji noto-fonts 
 sudo pacman -S nodejs npm python-pip python-pipx
 pacman -Syu pipewire-alsa pipewire-jack pipewire-pulse alsa-utils gvfs-mtp
