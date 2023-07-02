@@ -135,7 +135,7 @@
         :onclick "scripts/pop system"
         :class "iconbat"
         :tooltip "battery on ${EWW_BATTERY["BAT0"].capacity}%"
-      "󰂎"))
+      "󱧥"))
     ))
 
 (defwidget mem []
@@ -294,9 +294,13 @@
     :space-evenly false
     :halign "start"
     :class "left_modules"
-    (box-left-launcher)
+    ;; (box-left-launcher)
+    ;;
+    (launcher)
     (sep)
-    (box-left)
+    ;; (box-left)
+    ;;
+    (workspaces)
   ))
 (defwidget center []
   (box
@@ -304,8 +308,10 @@
     :space-evenly false
     :halign "center"
     :class "center_modules"
-    ; (appnames)
-    (box-center)
+    ;(appnames)
+    ;; (box-center)
+    ;;
+    (clock_module)
     ))
 (defwidget right []
   (box
@@ -313,10 +319,20 @@
     :space-evenly false
     :halign "end"
     :class "right_modules"
-    (box-right1)
+    ;; (box-right1)
+    ;;
+    (bright)
+    (volume)
+    (wifi)
+    ;;
     (sep)
-    (box-right2)
-    ;(sep2)
+    ;; (box-right2)
+    ;;
+    (bat)
+    (label-bat)
+    (mem)
+    (label-mem)
+    (sep2)
     ;(notif_button)
   ))
 

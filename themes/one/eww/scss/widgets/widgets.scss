@@ -5,7 +5,7 @@ Created by saimoom **/
     background-color: $background-bar;
     border-radius: 12px;
     margin: 5px 10px 5px 10px;
-    padding: 3px;
+    padding: 2px;
     box-shadow: 0 6px 5px 2px $shadow;
 }
 
@@ -57,12 +57,12 @@ tooltip label {
 .clock_time_class,
 .clock_minute_class {
     // font-size: 28;
-    font-size: 25;
+    font-size: 23;
 }
 
 .clock_date_class {
     // font-size: 24;
-    font-size: 20;
+    font-size: 18;
     margin: 0px 20px -4px -1px;
     color: $white;
 }
