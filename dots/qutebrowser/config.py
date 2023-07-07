@@ -231,11 +231,12 @@ c.url.default_page = "about:blank"
 # else than a URL was entered to be opened. Other search engines can be
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
-c.url.searchengines = {'DEFAULT': 'http://localhost:8888?q={}'}
-# c.url.searchengines = {"DEFAULT": "https://www.google.fi/search?q={}"}
+# c.url.searchengines = {'DEFAULT': 'http://localhost:8888?q={}'}
+c.url.searchengines = {"DEFAULT": "https://www.google.fi/search?q={}"}
 
 # The page(s) to open at the start.
-c.url.start_pages = "http://127.0.0.1:8888/search"
+# c.url.start_pages = "http://127.0.0.1:8888/search"
+c.url.start_pages = "https://www.google.com"
 
 # The format to use for the window title. The following placeholders are
 # defined:
