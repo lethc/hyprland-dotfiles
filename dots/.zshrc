@@ -57,6 +57,7 @@ alias rr="ranger"
 alias mn="minase"
 # alias gtt='~/Downloads/Git/GTT/gtt'
 alias manual="tldr"
+alias news="newsboat"
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
