@@ -44,6 +44,7 @@ keybinds {
         bind "Ctrl q" { Quit; }
         bind "Ctrl w" { Detach; }
         bind "Alt n" { NewPane; }
+        bind "Alt m" { NewPane "Down"; }
         bind "Alt q" { CloseFocus; }
         bind "Alt a" "Left" { MoveFocus "Left"; }
         bind "Alt d" "Right" { MoveFocus "Right"; }
