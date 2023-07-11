@@ -45,6 +45,22 @@ config.unbind("ZZ")
 config.unbind("<ctrl+q>")
 config.bind("<ctrl+q>", "wq")
 
+# History
+config.set("completion.web_history.max_items", 0)
+config.set("completion.cmd_history_max_items", 0)
+# Privacy
+config.set("content.private_browsing", True)
+config.set("content.webgl", False, "*")
+config.set("content.canvas_reading", False)
+config.set("content.geolocation", False)
+# config.set("content.webrtc_ip_handling_policy", "default-public-interface-only")
+config.set("content.webrtc_ip_handling_policy", "disable-non-proxied-udp")
+# config.set("timezone", "America/Los_Angeles")
+# c.spellcheck.languages = ["en-GB", "es-ES"]
+
+c.content.javascript.can_open_tabs_automatically = False
+c.content.javascript.enabled = True
+
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
 c.aliases = {
@@ -132,7 +148,7 @@ c.downloads.location.prompt = False
 
 # The editor (and arguments) to use for the `open-editor` command. `{}`
 # gets replaced by the filename of the file to be edited.
-c.editor.command = ["termite", "-e", "vim '{}'"]
+c.editor.command = ["foot", "-e", "vim '{}'"]
 
 monospace = "12px 'Bok MonteCarlo'"
 
