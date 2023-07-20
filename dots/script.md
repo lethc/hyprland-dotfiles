@@ -68,7 +68,7 @@ sudo wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/
 ```bash
 yay -S  eww-wayland swaylock-effects-git sway-audio-idle-inhibit-git light-git cava cliphist hyprpicker-git wl-clip-persist-git swww 
 
-sudo pacman -S kitty hyprland xdg-desktop-portal-hyprland wofi dunst jq swayidle bc pamixer papirus-icon-theme playerctl grim slurp wl-clipboard socat swappy nm-connection-editor dictd blueberry acpi **swaylock**
+sudo pacman -S kitty hyprland xdg-desktop-portal-hyprland wofi dunst jq swayidle bc pamixer papirus-icon-theme playerctl grim grimblast slurp wl-clipboard socat swappy nm-connection-editor dictd blueberry acpi **swaylock**
 pacman -S xdg-desktop-portal-gtk
 
 # rust local
