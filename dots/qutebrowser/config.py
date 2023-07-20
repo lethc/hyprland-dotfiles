@@ -49,7 +49,7 @@ config.bind("<ctrl+q>", "wq")
 config.set("completion.web_history.max_items", 0)
 config.set("completion.cmd_history_max_items", 0)
 # Privacy
-config.set("content.private_browsing", True)
+config.set("content.private_browsing", False)
 config.set("content.webgl", False, "*")
 config.set("content.canvas_reading", False)
 config.set("content.geolocation", False)
