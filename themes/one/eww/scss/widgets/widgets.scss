@@ -241,7 +241,7 @@ tooltip label {
 
 // Calendar
 .cal {
-    background-color: $widget-background;
+    background-color: $background;
     font-family: JetBrainsMono Nerd Font;
     font-size: 22px;
     font-weight: normal;
@@ -287,7 +287,7 @@ calendar.highlight {
 }
 
 calendar:indeterminate {
-    color: $background;
+    color: $black;
 }
 
 
