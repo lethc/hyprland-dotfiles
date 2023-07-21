@@ -206,7 +206,7 @@
   :geometry
   (geometry
     :x "20"
-    :y "65px"
+    :y "55px"
     :anchor "top right"
     :width "290px"
   :height "120px")
@@ -258,7 +258,7 @@
   :monitor 0
   :geometry (geometry
     :x "20"
-    :y "65px"
+    :y "55px"
     :anchor "top center"
     :width "270px"
   :height "60px")
