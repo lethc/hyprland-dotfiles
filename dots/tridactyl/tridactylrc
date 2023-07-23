@@ -1,0 +1,38 @@
+" General Settings
+set auconcreatecontainer true
+set searchurls.searchx http://localhost:8888/search?q=
+set searchengine searchx
+
+" Unbinds
+unbind r
+
+" Binds
+bind J tabnext
+bind K tabprev
+bind gC tabduplicate
+bind <Space>m composite hint -Jpipe a href | shellescape | !s mpv --really-quiet
+bind go open https://www.google.com
+bind yt open http://127.0.0.1:9010 
+bind Yt open https://www.youtube.com/
+bind rd open https://www.reddit.com/
+bind ym open https://music.youtube.com
+bind gb open https://bard.google.com/
+bind gi open https://github.com/
+
+" Isolate Facebook in its own container
+set auconcreatecontainer true
+autocontain -s facebook\.com facebook
+autocontain -s youtube\.com google
+autocontain -s google\.com google
+autocontain -s github\.(io|com) work
+autocontain -s reddit\.com work
+" autocontain -s google\.(co\.uk|com) work
+
+" Aliases
+"command os open https://www.youtube.com
+alias rd open https://www.reddit.com/
+alias Yt open https://www.youtube.com/
+alias yt open http://127.0.0.1:9010
+alias ym open https://music.youtube.com/
+alias gb open https://bard.google.com/
+alias gi open https://github.com/
