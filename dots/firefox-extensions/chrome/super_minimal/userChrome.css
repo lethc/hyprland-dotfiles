@@ -34,20 +34,20 @@
 	padding: 0 !important;
 }
 .tabbrowser-tab * {
-	/* margin:0 !important; */
-	/* border-radius: 0 !important; */
-	/* font-family: var(--tab-font-family) !important; */
-	display: none !important;
+	margin:0 !important;
+	border-radius: 0 !important;
+	font-family: var(--tab-font-family) !important;
+	/* display: none !important; */
 }
 .tabbrowser-tab {
-	/* font-size: var(--tab-font-size) !important; */
-	/* height: var(--tab-height); */
-	/* min-height: 0 !important; */
-	display: none !important;
+	font-size: var(--tab-font-size) !important;
+	height: var(--tab-height);
+	min-height: 0 !important;
+	/* display: none !important; */
 }
 .tabbrowser-tab[fadein]:not([pinned]) {
-	/* max-width: var(--max-tab-width) !important; */
-	display: none !important;
+	max-width: var(--max-tab-width) !important;
+	/* display: none !important; */
 }
 .tab-close-button, .new-tab-button, #firefox-view-button, #scrollbutton-up, .tab-secondary-label {
 	display: none !important;
