@@ -145,12 +145,12 @@ themes {
         bg "#585b70"
         black "#0f1416"
         red "#f38ba8"
-        green "#8ccf7e"
+        green "#f38ba8"
         yellow "#e5c76b"
         blue "#89b4fa"
         magenta "#f5c2e7"
         cyan "#89dceb"
-        white "#cdd6f4"
+        white "#C1C0D4"
         orange "#fab387"
     }
 }
