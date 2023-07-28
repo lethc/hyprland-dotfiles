@@ -23,6 +23,10 @@ bind gi open https://github.com/
 set auconcreatecontainer true
 autocontain -s facebook\.com facebook
 autocontain -s youtube\.com google
+autocontain -s chat.openai\.com google
+autocontain -s auth0.openai\.com google
+autocontain -s twitter\.com wor
+autocontain -s x\.com work
 autocontain -s google\.com google
 autocontain -s github\.(io|com) work
 autocontain -s reddit\.com work
