@@ -23,15 +23,15 @@ bind gi open https://github.com/
 set auconcreatecontainer true
 autocontain -s twitter\.com work
 autocontain -s x\.com work
-autocontain -s notion\.so work
 autocontain -s github\.(io|com) work
-autocontain -s reddit\.com work
+autocontain -s chat.openai\.com work
+autocontain -s auth0.openai\.com work
 " autocontain -s google\.(co\.uk|com) work
 autocontain -s facebook\.com facebook
-autocontain -s youtube\.com google
-autocontain -s chat.openai\.com google
-autocontain -s auth0.openai\.com google
-autocontain -s google\.com google
+autocontain -s youtube\.com personal
+autocontain -s google\.com personal
+autocontain -s reddit\.com personal
+autocontain -s notion\.so personal
 
 " Aliases
 "command os open https://www.youtube.com
