@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/yt-local
+cd ~/env/yt-local
 echo "Creating env"
 python -m venv env
 echo "Activating env"

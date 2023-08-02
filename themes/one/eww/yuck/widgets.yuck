@@ -9,7 +9,7 @@
       (image
         :class "launcher-icon"
         ;:path "assets/blossom.png"
-        :path  "/home/lummyn/.config/hypr/themes/one/eww/images/arch.png"
+        :path  "images/arch.png"
       :image-width 28))
   ))
 
