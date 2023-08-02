@@ -69,6 +69,7 @@ sudo su
 echo "setting theme"
 echo "[Theme]" > /etc/sddm.conf.d/config 
 echo "Current=corners" >> /etc/sddm.conf.d/config 
+sed -i 's/    passwordMaskDelay: 1000$/    passwordMaskDelay: 0/' /usr/share/sddm/themes/corners/components/PasswordPanel.qml
 exit
 
 echo "theme setted correctly"
