@@ -1,0 +1,83 @@
+#!/bin/bash
+# Install yay to Aur
+echo "######################################"
+echo "####  1.  Enable the AUR helper   ####"
+echo "######################################"
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+echo "#######################################"
+echo "## 2. Installing Pacman Applications ##"
+echo "#######################################"
+
+yay -S nodejs npm python-pip python-pipx rustup fzf
+yay -S ranger-git noto-fonts-emoji-apple lsix nodejs-readability-cli selectdefaultapplication-git apple-fonts biber rofi-lbonn-wayland-git rofi-emoji megacmd firefox-tridactyl firefox-tridactyl-native-bin searxng-git firefox-developer-edition
+ 
+echo "#############################################"
+echo "#####   Installation nvim dependencies  #####"
+echo "#############################################"
+
+sudo npm install neovim
+sudo npm install -g npm@9.6.2
+yay -S install pynvim python-black prettier stylua ripgrep fd gzip  wl-clipboard cliphist unzip deno composer yarn go
+yay -S jdk-lts
+yay -S jdk-lts-doc
+yay -S google-java-format-git
+yay -S python-rpcq
+yay -S rar 
+yay -S xampp
+yay -S ruby
+
+echo "###################################"
+echo "##  Installing ZSH Applications  ##"
+echo "###################################" 
+
+echo "Change shell root"
+sudo usermod --shell /usr/bin/zsh root
+echo "Change shell user"
+sudo usermod --shell /usr/bin/zsh Lummyn
+
+yay -S zsh-syntax-highlighting zsh-autosuggestions lsd bat starship
+yay -S zsh-autocomplete-git zsh-sudo-git zsh-vi-mode
+
+
+echo "########################################"
+echo "##  Installing Hyprland dependencies  ##"
+echo "########################################" 
+yay -S kitty hyprland xdg-desktop-portal-hyprland wofi dunst jq swayidle bc pamixer papirus-icon-theme playerctl grim grimblast slurp wl-clipboard socat swappy nm-connection-editor dictd blueberry acpi swaylock xdg-desktop-portal-gtk nwg-look
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+yay -S  eww-wayland swaylock-effects-git sway-audio-idle-inhibit-git light-git cava cliphist hyprpicker-git wl-clip-persist-git 
+yay -S swww 
+yay -S firefox-tridactyl
+
+echo "########################################"
+echo "############ SDDM Theme  ###############"
+echo "########################################" 
+yay -S sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2 nsxiv
+yay -S sddm-theme-corners-git
+
+echo "creating sddm.conf.d"
+sudo mkdir /etc/sddm.conf.d/
+
+echo "creating sddm.conf.d/config"
+sudo touch /etc/sddm.conf.d/config 
+
+echo "To be root to edit the follow file"
+sudo su
+echo "setting theme"
+echo "[Theme]" > /etc/sddm.conf.d/config 
+echo "Current=corners" >> /etc/sddm.conf.d/config 
+exit
+
+echo "theme setted correctly"
+
+echo "Installing FZF"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+
+echo "######################################"
+echo "#####   Installation completed   #####"
+echo "######################################"
