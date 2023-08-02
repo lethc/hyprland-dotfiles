@@ -44,7 +44,7 @@ alias grep="grep --color=always"
 # alias code='sgpt --code'
 alias maid='bard-rs -p ./'
 alias jukit_kitty="kitty --listen-on=unix:@"$(date +%s%N)" -o allow_remote_control=yes"
-alias nsxiv="nsxiv-rifle"
+# alias nsxiv="nsxiv-rifle"
 alias md="gh-md-toc" #https://github.com/jonathanpoelen/gh-md-toc
 alias vim="nvim"
 alias vi="nvim"
