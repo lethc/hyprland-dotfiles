@@ -31,6 +31,7 @@ autocontain -s facebook\.com facebook
 autocontain -s youtube\.com personal
 autocontain -s google\.com personal
 autocontain -s reddit\.com personal
+autocontain -s anilist\.co personal
 autocontain -s notion\.so personal
 
 " Aliases
