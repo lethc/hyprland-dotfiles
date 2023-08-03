@@ -10,6 +10,14 @@ git clone https://git.sr.ht/~heckyel/yt-local ~/env/yt-local
 cp "${HOME}/.config/hypr/dots/.scripts/.megabot" ~/Sync/
 cp "${HOME}/.config/hypr/dots/.scripts/rofi-files" ~/.local/bin/
 
+# Python Debug in neovim
+mkdir ~/env/.virtualenvs
+cd ~/env/.virtualenvs
+python -m venv debugpy
+debugpy/bin/python -m pip install debugpy
+# Rust, C and C++ debuger 
+yay -S codelldb
+
 echo "###################################"
 echo "########  Create Symlinks  ########"
 echo "###################################" 
