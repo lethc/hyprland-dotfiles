@@ -8,6 +8,7 @@ git clone https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim
 git clone https://github.com/lethc/hyprland-dotfiles.git ~/.config/hypr
 git clone https://git.sr.ht/~heckyel/yt-local ~/env/yt-local
 cp "${HOME}/.config/hypr/dots/.scripts/.megabot" ~/Sync/
+cp "${HOME}/.config/hypr/dots/.scripts/rofi-files" ~/.local/bin/
 
 echo "###################################"
 echo "########  Create Symlinks  ########"
