@@ -33,6 +33,7 @@ autocontain -s google\.com personal
 autocontain -s reddit\.com personal
 autocontain -s anilist\.co personal
 autocontain -s notion\.so personal
+autocontain -s mega\.io personal
 
 " Aliases
 "command os open https://www.youtube.com
