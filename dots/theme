@@ -64,6 +64,8 @@ ln -sf "${HOME}/.config/hypr/dots/.scripts" "${HOME}"
 echo ".scripts linked"
 ln -sf "${HOME}/.config/hypr/dots/tridactyl" "${HOME}/.config"
 echo "tridactyl linked"
+ ln -sf "${HOME}/.config/hypr/dots/.scripts/linkhandler" "${HOME}/.local/bin/"
+echo "linkhandler mpv newsboat linked"
 
 echo "theme setted correctly"
 
