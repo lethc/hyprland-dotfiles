@@ -69,6 +69,8 @@ echo "linkhandler mpv newsboat linked"
 echo "Insert password for the notes script"
 sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/notes" /usr/bin/
 echo "notes linked"
+sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/random_wallpaper" /usr/bin/
+echo "random_wallpaper linked"
 
 echo "theme setted correctly"
 
