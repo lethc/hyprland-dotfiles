@@ -1,0 +1,49 @@
+#!/bin/bash
+
+DIR="$HOME/.config/rofi/themes/"
+STYLE="easy"
+RASI="$DIR/${STYLE}/rofi/launcher.rasi"
+HISTORY_FILE="$HOME/.rofi_history.txt"
+MAX_HISTORY=2
+
+# Function to update history
+update_history() {
+    local file_path="$1"
+    local history=()
+
+    # Read existing history
+    if [ -f "$HISTORY_FILE" ]; then
+        readarray -t history < "$HISTORY_FILE"
+    fi
+
+    # Remove the selected file if it exists
+    history=($(printf "%s\n" "${history[@]}" | grep -Fxv "$file_path"))
+
+    # Add the new file to history
+    history=("$file_path" "${history[@]}")
+
+    # Limit history size
+    history=("${history[@]:0:$MAX_HISTORY}")
+
+    # Write history back to file
+    printf "%s\n" "${history[@]}" > "$HISTORY_FILE"
+}
+
+# Read history and construct Rofi input
+history_input=""
+if [ -f "$HISTORY_FILE" ]; then
+    history_input=$(cat "$HISTORY_FILE")
+fi
+
+# Search for files in the current directory
+current_dir_files=$(fd)
+
+title="rofi-files"
+rofi_command="rofi -dmenu -theme $RASI -i -p $title"
+rofi_input=$(printf "%s\n%s\n" "$history_input" "$current_dir_files")
+selected_file=$(echo -e "$rofi_input" | $rofi_command)
+
+if [ $? -eq 0 ] && [ -n "$selected_file" ]; then
+    xdg-open "$selected_file"
+    update_history "$selected_file"
+fi

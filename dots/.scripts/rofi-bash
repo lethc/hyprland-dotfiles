@@ -1,0 +1,16 @@
+#!/bin/bash
+
+DIR="$HOME/.config/rofi/themes/"
+STYLE="easy"
+RASI="$DIR/${STYLE}/rofi/launcher.rasi"
+
+files=$(fd)
+
+title="rofi-files"
+rofi_command="rofi -dmenu -theme $RASI -i -p $title"
+rofi_input=$(printf "%s\n" "${files[@]}")
+selected_file=$(echo -e "$rofi_input" | $rofi_command)
+
+if [ $? -eq 0 ] && [ -n "$selected_file" ]; then
+    xdg-open "$selected_file"
+fi
