@@ -23,54 +23,80 @@ echo "########  Create Symlinks  ########"
 echo "###################################" 
 ln -sf "${HOME}/.config/hypr/dots/foot" "${HOME}/.config"
 echo "foot linked"
+
 ln -sf "${HOME}/.config/hypr/dots/kitty" "${HOME}/.config"
 echo "kitty linked"
+
 ln -sf "${HOME}/.config/hypr/dots/gitui" "${HOME}/.config"
 echo "Gitui linked"
+
 ln -sf "${HOME}/.config/hypr/dots/dunst" "${HOME}/.config"
 echo "dunst linked"
+
 ln -sf "${HOME}/.config/hypr/dots/mpv" "${HOME}/.config"
 echo "mpv linked"
+
 ln -sf "${HOME}/.config/hypr/dots/newsboat" "${HOME}/.config"
 echo "newsboat linked"
+
 rm -r ~/.config/ranger/
 ln -sf "${HOME}/.config/hypr/dots/ranger" "${HOME}/.config"
 echo "ranger linked"
+
+rm -r ~/.config/qutebrowser/
+ln -sf "${HOME}/.config/hypr/dots/qutebrowser" "${HOME}/.config"
+echo "qutebrowser linked"
+
 ln -sf "${HOME}/.config/hypr/dots/zathura" "${HOME}/.config"
 echo "zathura linked"
+
 ln -sf "${HOME}/.config/hypr/dots/wofi" "${HOME}/.config"
 echo "wofi linked"
+
 ln -sf "${HOME}/.config/hypr/dots/rofi" "${HOME}/.config"
 echo "rofi linked"
+
 ln -sf "${HOME}/.config/hypr/dots/zellij" "${HOME}/.config"
 echo "zellij linked"
+
 ln -sf "${HOME}/.config/hypr/dots/starship.toml" "${HOME}/.config"
 echo "starship linked"
+
 mkdir "${HOME}/.themes"
 cp -r "${HOME}/.config/hypr/dots/gtk/Everforest-Dark-BL" "${HOME}/.themes"
 echo "GTK3 theme copied"
+
 rm -r ~/.config/gtk-4.0/
 ln -sf "${HOME}/.config/hypr/dots/gtk/gtk-4.0" "${HOME}/.config"
 echo "GTK4 theme linked"
+
 ln -sf "${HOME}/.config/hypr/dots/.zshrc" "${HOME}"
 echo ".zshrc linked"
+
 ln -sf "${HOME}/.config/hypr/dots/.gitignore" "${HOME}"
 echo ".gitignore linked"
+
 ln -sf "${HOME}/.config/hypr/dots/.gitconfig" "${HOME}"
 echo ".gitconfig linked"
+
 ln -sf "${HOME}/.config/hypr/dots/.inputrc" "${HOME}"
 echo ".inputrc linked"
+
 ln -sf "${HOME}/.config/hypr/dots/.scripts" "${HOME}"
 echo ".scripts linked"
+
 ln -sf "${HOME}/.config/hypr/dots/tridactyl" "${HOME}/.config"
 echo "tridactyl linked"
+
 ln -sf "${HOME}/.config/hypr/dots/.scripts/linkhandler" "${HOME}/.local/bin/"
 echo "linkhandler mpv newsboat linked"
+
 echo "Insert password for the notes script"
 sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/notes" /usr/bin/
+
 echo "notes linked"
 sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/random_wallpaper" /usr/bin/
 echo "random_wallpaper linked"
 
-echo "theme setted correctly"
+echo "theme completed"
 
