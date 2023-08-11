@@ -32,7 +32,8 @@
           (scale
             :value volume_percent
             :orientation "h"
-            :onchange "amixer -D pulse sset Master {}%"
+            ;:onchange "amixer -D pulse sset Master {}%"
+            :onchange "pamixer --set-volume {}"
             :tooltip "volume on ${volume_percent}%"
             :max 100
           :min 0))))
@@ -67,7 +68,8 @@
             :value mic_percent
             :orientation "h"
             :tooltip "mic on ${mic_percent}%"
-            :onchange "amixer -D pulse sset Capture {}%"
+            ;:onchange "amixer -D pulse sset Capture {}%"
+            :onchange "pamixer --source 20302 --set-volume {}"
             :max 100
           :min 0))))))
 
