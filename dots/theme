@@ -82,6 +82,9 @@ echo ".gitconfig linked"
 ln -sf "${HOME}/.config/hypr/dots/.inputrc" "${HOME}"
 echo ".inputrc linked"
 
+ln -sf "${HOME}/.config/hypr/dots/fcitx5" "${HOME}/.config"
+echo "fcitx5 linked"
+
 ln -sf "${HOME}/.config/hypr/dots/.scripts" "${HOME}"
 echo ".scripts linked"
 
