@@ -1,0 +1,35 @@
+[Groups/0]
+# Group Name
+Name="Group 1"
+# Layout
+Default Layout=es
+# Default Input Method
+DefaultIM=hangul
+
+[Groups/0/Items/0]
+# Name
+Name=keyboard-es
+# Layout
+Layout=
+
+[Groups/0/Items/1]
+# Name
+Name=hangul
+# Layout
+Layout=
+
+[Groups/0/Items/2]
+# Name
+Name=mozc
+# Layout
+Layout=
+
+[Groups/0/Items/3]
+# Name
+Name=pinyin
+# Layout
+Layout=
+
+[GroupOrder]
+0="Group 1"
+
