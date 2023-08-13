@@ -101,5 +101,10 @@ echo "notes linked"
 sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/random_wallpaper" /usr/bin/
 echo "random_wallpaper linked"
 
+echo "cursor qt applications"
+mkdir -p "${HOME}/.icons/default"
+touch "${HOME}/.icons/default/index.theme"
+echo "qt cursor config created"
+
 echo "theme completed"
 
