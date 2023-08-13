@@ -1,0 +1,25 @@
+[Added Associations]
+image/png=nsxiv.desktop;
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
+text/markdown=kitty-open.desktop;
+text/plain=kitty-open.desktop;
+
+[Default Applications]
+x-scheme-handler/mailspring=Mailspring.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+image/svg+xml=nsxiv.desktop
+image/x-portable-anymap=nsxiv.desktop
+image/png=nsxiv.desktop
+image/webp=nsxiv.desktop
+image/bmp=nsxiv.desktop
+image/x-xpixmap=nsxiv.desktop
+image/x-tga=nsxiv.desktop
+image/gif=nsxiv.desktop
+image/jxl=nsxiv.desktop
+image/jp2=nsxiv.desktop
+image/heif=nsxiv.desktop
+image/avif=nsxiv.desktop
+image/jpeg=nsxiv.desktop
+image/tiff=nsxiv.desktop
+application/x-shellscript=kitty-open.desktop
+text/markdown=kitty-open.desktop
