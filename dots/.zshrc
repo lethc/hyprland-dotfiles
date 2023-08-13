@@ -103,17 +103,17 @@ function mkt(){
 	mkdir {nmap,content,exploits,scripts}
 }
 ## cd with ls and lsix to display images in terminal
-# function cd {
-#  builtin cd "$@" && ls -F
-# }
 function cd {
-  builtin cd "$@" && ls -F
-  if [[ ! "$PWD" == "$HOME" ]]; then
-    if [[ -n $(find . -type f -name "*.png" -o -name "*.jpg" -o -name "*.jpeg") ]]; then
-      lsix
-    fi
-  fi
+ builtin cd "$@" && ls -F
 }
+#function cd {
+#  builtin cd "$@" && ls -F
+#  if [[ ! "$PWD" == "$HOME" ]]; then
+#    if [[ -n $(find . -type f -name "*.png" -o -name "*.jpg" -o -name "*.jpeg") ]]; then
+#      lsix
+#    fi
+#  fi
+#}
 
 # Extract nmap information
 function extractPorts(){
