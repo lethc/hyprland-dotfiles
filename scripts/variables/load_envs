@@ -31,7 +31,7 @@ function exportBackground(){
     # load the background variables
     background_image=$(head -1 $temp_folder/background)
 
-    [ -z $background_image ] && background_image="~/.config/hypr/themes/one/wallpapers/Planet.png"
+    [ -z $background_image ] && background_image="~/.config/hypr/themes/one/wallpapers/linux_archlinux.png"
 
     export BACKGROUND_IMAGE=$background_image
 }
