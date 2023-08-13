@@ -20,7 +20,7 @@ echo "#############################################"
 
 sudo npm install neovim
 sudo npm install -g npm@9.6.2
-yay -S install pynvim python-black prettier stylua ripgrep fd gzip  wl-clipboard cliphist unzip deno composer yarn go python-pynvim
+yay -S python-black prettier stylua ripgrep fd gzip  wl-clipboard cliphist unzip deno composer yarn go python-pynvim
 yay -S jdk-lts
 yay -S jdk-lts-doc
 yay -S google-java-format-git
@@ -50,7 +50,6 @@ yay -S kitty hyprland xdg-desktop-portal-hyprland wofi dunst jq swayidle bc pami
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 yay -S  eww-wayland swaylock-effects-git sway-audio-idle-inhibit-git light-git cava cliphist hyprpicker-git wl-clip-persist-git 
 yay -S swww 
-yay -S firefox-tridactyl
 
 echo "########################################"
 echo "############ SDDM Theme  ###############"
@@ -62,16 +61,13 @@ echo "creating sddm.conf.d"
 sudo mkdir /etc/sddm.conf.d/
 
 echo "creating sddm.conf.d/config"
-sudo touch /etc/sddm.conf.d/config 
+touch config ~/Desktop/config
+echo "[Theme]" > ~/Desktop/config 
+echo "Current=corners" >> ~/Desktop/config
+sudo mv ~/Desktop/config /etc/sddm.conf.d/
 
-echo "To be root to edit the follow file"
-sudo su
 echo "setting theme"
-echo "[Theme]" > /etc/sddm.conf.d/config 
-echo "Current=corners" >> /etc/sddm.conf.d/config 
-sed -i 's/    passwordMaskDelay: 1000$/    passwordMaskDelay: 0/' /usr/share/sddm/themes/corners/components/PasswordPanel.qml
-exit
-
+sudo sed -i 's/    passwordMaskDelay: 1000$/    passwordMaskDelay: 0/' /usr/share/sddm/themes/corners/components/PasswordPanel.qml
 echo "theme setted correctly"
 
 echo "Installing FZF"
