@@ -24,6 +24,8 @@ set auconcreatecontainer true
 autocontain -s twitter\.com work
 autocontain -s x\.com work
 autocontain -s github\.(io|com) work
+autocontain -s leetcode\.com work
+autocontain -s exercism\.org work
 autocontain -s chat.openai\.com work
 autocontain -s auth0.openai\.com work
 " autocontain -s google\.(co\.uk|com) work
