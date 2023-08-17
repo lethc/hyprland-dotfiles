@@ -86,7 +86,7 @@ tooltip label {
 }
 
 .batbar {
-    color: $green;
+    color: $teal;
     background-color: $widget-background;
     border-radius: 10px;
 }
@@ -97,13 +97,13 @@ tooltip label {
 }
 
 .volbar trough highlight {
-    background-image: linear-gradient(to right, $teal 30%, $green 50%, $teal 100% *50);
+    background-image: linear-gradient(to right, $teal 30%, $teal 50%, $teal 100% *50);
     border-radius: 10px;
 }
 
 .volume_icon {
     font-size: 24;
-    color: $teal;
+    color: $yellow;
     margin: 0px 10px 0px 5px;
 }
 
@@ -112,13 +112,13 @@ tooltip label {
     font-family: JetBrainsMono Nerd Font;
     font-size: 18;
     font-weight: bold;
-    color: $purple;
+    color: $yellow;
     margin: 0px 0px 0px 5px;
 }
 
 .module-wif {
     font-size: 24;
-    color: $purple;
+    color: $yellow;
     margin: 0px 15px 0px 5px;
 }
 
@@ -139,7 +139,7 @@ tooltip label {
 }
 
 .iconbat {
-    color: $green;
+    color: $teal;
 }
 
 .iconbat,
@@ -235,7 +235,7 @@ tooltip label {
 .088,
 .099,
 .01010 {
-    color: $blue;
+    color: $red;
 }
 
 
@@ -263,26 +263,26 @@ tooltip label {
 }
 
 calender {
-    color: $red;
+    color: $blue;
 }
 
 calendar:selected {
-    color: $red;
+    color: $blue;
 }
 
 calendar.header {
     font-family: JetBrainsMono Nerd Font;
-    color: $purple;
+    color: $orange;
     font-weight: bold;
 }
 
 calendar.button {
-    color: $purple;
+    color: $orange;
     font-weight: bold;
 }
 
 calendar.highlight {
-    color: $red;
+    color: $red2;
     font-weight: bold;
 }
 
@@ -324,25 +324,25 @@ calendar:indeterminate {
 }
 
 .sys_bat {
-    color: $green;
+    color: $teal;
     background-color: $widget-background;
     border-radius: 10px;
 }
 
 .sys_mem {
-    color: $orange;
+    color: $red;
     background-color: $widget-background;
     border-radius: 10px;
 }
 
 .sys_icon_bat,
 .sys_text_bat {
-    color: $green;
+    color: $teal;
 }
 
 .sys_icon_mem,
 .sys_text_mem {
-    color: $orange;
+    color: $red;
 }
 
 .sys_bat_box {
@@ -376,7 +376,7 @@ calendar:indeterminate {
 }
 
 .color-var1 {
-    color: $green;
+    color: $teal;
 }
 
 .color-var2 {
@@ -577,18 +577,18 @@ scale trough {
 }
 
 .poweroff {
-    background-color: $red;
-    color: $widget-background;
+    background-color: $background-bar;
+    color: $white;
 }
 
 .reboot {
-    background-color: $green;
-    color: $widget-background;
+    background-color: $background-bar;
+    color: $white;
 }
 
 .exit {
-    background-color: $yellow;
-    color: $widget-background;
+    background-color: $background-bar;
+    color: $white;
 }
 
 .firmware {
@@ -671,7 +671,7 @@ scale trough {
     font-family: "Inter Nerd Font";
     font-size: 14px;
     font-weight: bold;
-    color: $orange;
+    color: $red;
 }
 
 .notification-summary {
