@@ -160,16 +160,16 @@ keybinds {
 themes {
     freedom {
         fg "#DADADA"
-        bg "#141B1E"
-        black "#141B1E"
-        red "#E57474"
-        green "#67CBE7"
-        yellow "#E5C76B"
-        blue "#67B0E8"
-        magenta "#C47FD5"
-        cyan "#67CBE7"
-        white "#BDC3C2"
-        orange "#E5C76B"
+        bg "#1A1113"
+        black "#1A1113"
+        red "#FF6363"
+        green "#E64747"
+        yellow "#EFA554"
+        blue "#9B6BDF"
+        magenta "#E64747"
+        cyan "#75D7EC"
+        white "#c1c0d4"
+        orange "#FFD86E"
     }
 }
 theme "freedom"
