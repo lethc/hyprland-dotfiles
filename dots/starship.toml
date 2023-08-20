@@ -10,21 +10,21 @@
 # disabled = true# # ~/.config/starship.toml
 #
 format = """\
-[](fg:#211113)\
+[](fg:#1c1113)\
 $username\
-[](fg:#211113 bg:#271517)\
+[](fg:#1c1113 bg:#271517)\
 $directory\
 [](fg:#271517 bg:#31191b)\
 $git_branch\
 $git_status\
-[](fg:#31191b bg:#514B5D)\
+[](fg:#31191b bg:#4d1718)\
 $all\
 $cmd_duration\
 $jobs\
 $battery\
 $time\
 $character"""
-# [](fg:#514B5D bg:#514B5D)\
+# [](fg:#4d1718 bg:#4d1718)\
 
 # Disable the blank line at the start of the prompt
 add_newline = true
@@ -35,8 +35,8 @@ disabled = true
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "fg:#FF6363 bg:#211113"
-style_root = "fg:#FF6363 bg:#211113"
+style_user = "fg:#FF6363 bg:#1c1113"
+style_root = "fg:#FF6363 bg:#1c1113"
 format = '[󱗆 ]($style)' # $user
 
 [directory]
@@ -75,131 +75,131 @@ format = '[$all_status$ahead_behind ]($style)'
 
 [sudo]
 symbol = ' '
-style = "fg:#DF7778 bg:#514B5D"
+style = "fg:#DF7778 bg:#4d1718"
 disabled = true
 format='[ $symbol]($style)'
 
 [aws]
 symbol = " "
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [conda]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [dart]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [c]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [docker_context]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol $context]($style) $path '
 
 [elixir]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [elm]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [golang]
 symbol = "󰟓"
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [haskell]
 symbol = "λ"
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [java]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [julia]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [lua]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [nim]
 symbol = "󰆥"
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [nix_shell]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [nodejs]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [perl]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [php]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [python]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [ruby]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [rust]
 symbol = ""
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [swift]
 symbol = "󰛥"
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = '[ $symbol ($version )]($style)'
 
 [package]
 symbol = "󰏗"
-style = "fg:#75D7EC bg:#514B5D"
+style = "fg:#75D7EC bg:#4d1718"
 format = "[ $symbol $version]($style)"
 disabled = true
 
 
 [cmd_duration]
 min_time = 1
-style = "fg:#FFD86E bg:#514B5D"
+style = "fg:#FFD86E bg:#4d1718"
 format = "[ $duration]($style)"
 disabled = true
 
 [jobs]
 symbol = "󰙒"
-style = "fg:#FFD86E bg:#514B5D"
+style = "fg:#FFD86E bg:#4d1718"
 format = "[ $symbol]($style)"
 
 [battery]
@@ -208,7 +208,7 @@ charging_symbol = "󰂄 "
 discharging_symbol = "󰂃 "
 unknown_symbol = "󰁽 "
 empty_symbol = "󰂎 "
-format = "[ $symbol$percentage ]($style bg:#514B5D)"
+format = "[ $symbol$percentage ]($style bg:#4d1718)"
 disabled = true
 
 [[battery.display]]
@@ -228,10 +228,10 @@ style = "bold #42E66C"
 disabled = true
 time_format = "%R"
 style = "bg:#3b4363"
-format = '[](fg:#514B5D $style)[ 󰁫 $time ](fg:#94e2d5 $style)'
+format = '[](fg:#4d1718 $style)[ 󰁫 $time ](fg:#94e2d5 $style)'
 
 # Last param in the first line/row
 # fg:#3b4363 if time enabled
 [character]
-success_symbol = "[ ](fg:#514B5D)"
-error_symbol = "[ ](fg:#514B5D)"
+success_symbol = "[ ](fg:#4d1718)"
+error_symbol = "[ ](fg:#4d1718)"
