@@ -4,6 +4,9 @@ set searchurls.searchx http://localhost:8888/search?q=
 set searchengine searchx
 set smoothscroll true
 
+bind j scrollline 5
+bind k scrollline -5
+
 " Unbinds
 unbind r
 
