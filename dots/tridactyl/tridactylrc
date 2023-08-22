@@ -2,6 +2,7 @@
 set auconcreatecontainer true
 set searchurls.searchx http://localhost:8888/search?q=
 set searchengine searchx
+set smoothscroll true
 
 " Unbinds
 unbind r
