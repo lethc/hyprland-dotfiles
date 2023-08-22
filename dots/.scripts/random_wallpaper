@@ -1,16 +1,19 @@
 #!/bin/bash
 
 # Variable of Wallpapers Directory
-walldir=$HOME/Pictures/wallpapers/
+hypr=$HOME/.config/hypr
+wallpaper_folder=$hypr/themes/one/wallpapers
 
 # Go to Wallpaper Directory
-cd $walldir
+cd $wallpaper_folder
 
 # Create a variable to store the output.
 randomImage=""
 
 # Run the command.
 randomImage=$(shuf -n 1 -e *.jpg *.png *.jpeg)
+
+$hypr/scripts/variables/set_env background "$wallpaper_folder/$randomImage"
 
 # Change wallpaper
 swww img $randomImage
