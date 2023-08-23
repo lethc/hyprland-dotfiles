@@ -147,7 +147,9 @@ function fzf-lovely(){
 	                  highlight -O ansi -l {} ||
 	                  coderay {} ||
 	                  rougify {} ||
-	                  cat {}) 2> /dev/null | head -500'
+	                  cat {}) 2> /dev/null | head -500' | while read -r file; do
+                          nvim "$file"
+                    done
 
 	else
 	        fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
@@ -156,7 +158,9 @@ function fzf-lovely(){
 	                          highlight -O ansi -l {} ||
 	                          coderay {} ||
 	                          rougify {} ||
-	                          cat {}) 2> /dev/null | head -500'
+	                          cat {}) 2> /dev/null | head -500' | while read -r file; do
+                              nvim "$file"
+                         done
 	fi
 }
 #Delete permanently
