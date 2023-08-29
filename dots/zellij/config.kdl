@@ -62,6 +62,12 @@ keybinds {
         bind "Alt 8" { GoToTab 8; }
         bind "Alt 9" { GoToTab 9; }
         bind "Alt b" { ToggleTab; }
+
+        bind "Alt e" {
+                LaunchOrFocusPlugin "zellij:strider" {
+                    floating true
+                }
+        }
     }
     pane {
         bind "Ctrl b" { SwitchToMode "tab"; }
@@ -72,6 +78,8 @@ keybinds {
         bind "k" "Up" { MoveFocus "Up"; }
         bind "p" { SwitchFocus; }
         bind "q" { CloseFocus; }
+        //c to rename a pain
+        //bind "r" { ToggleFloatingPanes; }
         //bind "a" { FocusNextPane; }
         //bind "a" { FocusPreviousPane; }
     }
