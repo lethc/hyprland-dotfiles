@@ -40,6 +40,9 @@ autocontain -s reddit\.com personal
 autocontain -s anilist\.co personal
 autocontain -s notion\.so personal
 autocontain -s mega\.io personal
+autocontain -s microsoft\.com work
+autocontain -s microsoftonline\.com work
+autocontain -s live\.com work
 
 " Aliases
 "command os open https://www.youtube.com
