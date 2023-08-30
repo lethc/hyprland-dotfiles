@@ -39,17 +39,17 @@ keybinds {
         bind "Ctrl p" { SwitchToMode "pane"; }
         bind "Ctrl o" { SwitchToMode "move"; }
         bind "Ctrl n" { SwitchToMode "resize"; }
-        //bind "Ctrl o"  { SwitchToMode "session"; }
+        bind "Ctrl e"  { SwitchToMode "session"; }
         bind "Ctrl b" { SwitchToMode "tab"; }
         bind "Ctrl q" { Quit; }
         bind "Ctrl w" { Detach; }
         bind "Alt n" { NewPane; }
         bind "Alt m" { NewPane "Down"; }
         bind "Alt q" { CloseFocus; }
-        bind "Alt a" "Left"  "Alt h" { MoveFocus "Left"; }
-        bind "Alt d" "Right" "Alt l"{ MoveFocus "Right"; }
-        bind "Alt s" "Down" "Alt j" {MoveFocus "Down"; }
-        bind "Alt w" "Up" "Alt k" { MoveFocus "Up"; }
+        bind "Alt a" "Alt h" { MoveFocus "Left"; }
+        bind "Alt d" "Alt l"{ MoveFocus "Right"; }
+        bind "Alt s" "Alt j" {MoveFocus "Down"; }
+        bind "Alt w" "Alt k" { MoveFocus "Up"; }
         bind "Alt t" { NewTab; }
         bind "Alt f" { ToggleFocusFullscreen; }
         bind "Alt 1" { GoToTab 1; }
