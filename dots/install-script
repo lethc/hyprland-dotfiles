@@ -20,7 +20,7 @@ echo "#############################################"
 
 sudo npm install neovim
 sudo npm install -g npm@9.6.2
-yay -S python-black prettier stylua ripgrep fd gzip  wl-clipboard cliphist unzip deno composer yarn go python-pynvim
+yay -S python-black prettier stylua ripgrep fd gzip  wl-clipboard cliphist unzip deno composer yarn go python-pynvim shfmt
 yay -S jdk-lts
 yay -S jdk-lts-doc
 yay -S google-java-format-git
