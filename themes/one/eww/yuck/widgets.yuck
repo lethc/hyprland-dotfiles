@@ -336,12 +336,12 @@
     (sep)
     ;; (box-right2)
     ;;
-    (bat)
-    (label-bat)
     (mem)
     (label-mem)
+    (bat)
+    (label-bat)
     (sep2)
-    ;(notif_button)
+    (notif_button)
   ))
 
 (defwidget bar_layout []
