@@ -73,18 +73,18 @@
             :max 100
           :min 0))))))
 
-  (defwindow audio_ctl0
-    :stacking "fg"
-    :focusable "false"
-    :screen 1
-    :monitor 0
-    :geometry (geometry
-      :x "20"
-      :y "7%"
-      :anchor "top right"
-      :width "280px"
-    :height "60px")
-    (audio))
+(defwindow audio_ctl0
+  :stacking "fg"
+  :focusable "false"
+  :screen 1
+  :monitor 0
+  :geometry (geometry
+    :x "20"
+    :y "7%"
+    :anchor "top right"
+    :width "280px"
+  :height "60px")
+  (audio))
 
 (defwindow audio_ctl1
   :stacking "fg"
