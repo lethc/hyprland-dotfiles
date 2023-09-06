@@ -159,7 +159,7 @@
           :tooltip "using ${EWW_RAM.used_mem_perc}% ram"
           :show_truncated false
           :wrap false
-        "󰈸"))))
+        "󰈸")))) ;
   )
 
 (defwidget clock_module []
