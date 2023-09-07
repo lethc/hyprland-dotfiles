@@ -133,7 +133,7 @@
       (circular-progress
         :value {EWW_BATTERY["BAT0"].capacity}
         :class "batbar"
-        :thickness 5
+        :thickness 4
         (button
           :onclick "scripts/pop system"
           :class "iconbat"
@@ -188,14 +188,19 @@
         :onclick "scripts/pop calendar" clock_date)))))
 
 (defwidget notif_button []
-  (box
-    :class "notif_button"
-    :space-evenly "false"
-    :orientation "h"
-    (button
-      :onclick "if ${EWW_CMD} state | grep 'rightside: false' ; then ${EWW_CMD} update rightside=true ; else ${EWW_CMD} update rightside=false ; fi"
-      (label
-      :text "󰍩"))))
+  (eventbox
+    :cursor "pointer"
+    (box
+      :class "notif_button"
+      :vexpand "false"
+      :hexpand "false"
+      ;; :space-evenly "false"
+      ;; :orientation "h"
+      (button
+        :onclick "if ${EWW_CMD} state | grep 'rightside: false' ; then ${EWW_CMD} update rightside=true ; else ${EWW_CMD} update rightside=false ; fi"
+        (label
+        :text "󰍩"))))
+  )
 
 (defwidget sep []
   (box
