@@ -372,7 +372,7 @@
         (scroll
           :class "onotify-content"
           :valign "fill"
-          :style "min-height: 632px;"
+          :style "min-height: 600px;"
           (box
             :halign "fill"
             :class "osettings-scroll-bg"
@@ -437,7 +437,7 @@
     :y "55px"
     :anchor "top right"
     :width "450px"
-    :height "632px")
+    :height "600px")
   (notification)
 )  
 
