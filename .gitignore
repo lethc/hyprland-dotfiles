@@ -4,5 +4,7 @@ dots/newsboat/urls
 dots/qutebrowser/bookmarks/
 dots/qutebrowser/quickmarks
 scripts/variables/temp/background
-themes/one/eww/scripts/cache/
+themes/one/eww/scripts/cache/dunst-history.json
+themes/one/eww/scripts/cache/dunst-lock-info 
+themes/one/eww/scripts/cache/dunst-toggle.lock
 dots/ranger/plugins/__pycache__/
