@@ -21,6 +21,16 @@
 (defvar control_reveal false)
 (defvar wifi_rev false)
 (defvar time_rev false)
+(defvar rev_ontf false)
+
+;; Dynamimc Animation
+;; (defvar rev_ontf false)
+;; (defvar anim_open_ontf true)
+(defvar rev_dash false)
+
+; Listeners
+;(deflisten notifications "scripts/notifications")
+(deflisten notification "scripts/notifications")
 
 ;; Music Variables
 (defpoll song		    :interval "5s"  "scripts/music title")

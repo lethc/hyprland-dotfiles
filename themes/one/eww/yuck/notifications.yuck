@@ -4,10 +4,10 @@
     :geometry (geometry :x "0px"
                         :y "0px"
                         :width "1px"
-                        :height "98%"
-                        :anchor "bottom right")
+                        ;:height "98%"
+                        :anchor "top left")
     :stacking "fg"
-    :monitor "0"
+    :monitor 0
 (notif-panel))
 
 (defwindow notifications1

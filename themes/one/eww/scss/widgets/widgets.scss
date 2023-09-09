@@ -323,6 +323,68 @@ calendar:indeterminate {
     border-radius: 25px;
 }
 
+// .notification {
+//     all: unset;
+//     background-color: red;
+//     padding: 20px 25px 20px 17px;
+//     margin: 0px 15px 0px 15px;
+//     border-radius: 12px;
+//     border-width: 2px;
+//     border-style: solid;
+//     border-color: $primary;
+// }
+
+// .notification-header {
+//     all: unset;
+//     background-color: $widget-background;
+//     padding: 20px 25px 20px 17px;
+//     margin: 20px 15px 10px 15px;
+//     border-radius: 12px;
+//     border-width: 2px;
+//     border-style: solid;
+//     border-color: $primary;
+// }
+//
+// .notification-icon {
+//     color: $white;
+//     font-size: 36px;
+//     margin: 0px 20px 0px 10px;
+// }
+//
+// .notification-appname {
+//     font-family: "Inter Nerd Font";
+//     font-size: 14px;
+//     font-weight: bold;
+//     color: $red;
+// }
+//
+// .notification-summary {
+//     font-family: "Inter Nerd Font";
+//     font-size: 18px;
+//     font-weight: bold;
+//     color: $white;
+// }
+//
+// .notification-body {
+//     font-family: "Inter Nerd Font";
+//     font-size: 14px;
+//     color: $white;
+// }
+//
+// .notification-label {
+//     font-family: "Mononoki Nerd Font";
+//     font-size: 30px;
+//     color: $blue;
+//     margin: 0px 50px 0px 0px;
+// }
+//
+// .notification-action {
+//     font-family: "Mononoki Nerd Font";
+//     font-size: 36px;
+//     color: $white;
+//     margin: 0px 0px 0px 20px;
+// }
+
 .sys_bat {
     color: $teal;
     background-color: $widget-background;
@@ -639,67 +701,6 @@ scale trough {
     color: $primary;
 }
 
-.notification {
-    all: unset;
-    background-color: $widget-background;
-    padding: 20px 25px 20px 17px;
-    margin: 0px 15px 0px 15px;
-    border-radius: 12px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: $primary;
-}
-
-.notification-header {
-    all: unset;
-    background-color: $widget-background;
-    padding: 20px 25px 20px 17px;
-    margin: 20px 15px 10px 15px;
-    border-radius: 12px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: $primary;
-}
-
-.notification-icon {
-    color: $white;
-    font-size: 36px;
-    margin: 0px 20px 0px 10px;
-}
-
-.notification-appname {
-    font-family: "Inter Nerd Font";
-    font-size: 14px;
-    font-weight: bold;
-    color: $red;
-}
-
-.notification-summary {
-    font-family: "Inter Nerd Font";
-    font-size: 18px;
-    font-weight: bold;
-    color: $white;
-}
-
-.notification-body {
-    font-family: "Inter Nerd Font";
-    font-size: 14px;
-    color: $white;
-}
-
-.notification-label {
-    font-family: "Mononoki Nerd Font";
-    font-size: 30px;
-    color: $blue;
-    margin: 0px 50px 0px 0px;
-}
-
-.notification-action {
-    font-family: "Mononoki Nerd Font";
-    font-size: 36px;
-    color: $white;
-    margin: 0px 0px 0px 20px;
-}
 .right_modules {
 }
 .box-right1 {
@@ -744,3 +745,134 @@ scale trough {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+
+/* Notification Widget */
+
+.sys_win2 {
+    background-color: $background;
+    border-radius: 25px;
+}
+
+.sys_sepa {
+    color: $white;
+    font-size: 18;
+    margin: 10px 50px 5px 50px;
+}
+
+.onotify-content {
+    // padding-top: 13px;
+    margin-top: 8px;
+    // margin-right: 8px;
+    // margin-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    font-family: Torus;
+    color: red;
+    background-color: $background-bar;
+    // border-top-left-radius: 53px;
+    border-radius: 25px;
+}
+
+.osettings-scroll-bg {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.osettings-section-icon {
+    margin-top: 23px;
+    margin-bottom: 9px;
+    color: $primary;
+    font-family: 'Material Symbols Rounded';
+    font-size: 15pt;
+    min-width: 35px;
+    min-height: 35px;
+    background-color: $widget-background;
+    border-radius: 12px;
+}
+
+.osettings-section {
+    margin-top: 23px;
+    margin-bottom: 9px;
+    margin-right: 0px;
+    color: $primary;
+    font-family: Torus;
+    font-size: 13pt;
+}
+
+.osettings-tag-material {
+    color: $white;
+    background-color: $grey;
+    font-size: 10pt;
+    font-family: 'Material Symbols Rounded';
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 9999px;
+    // min-width: 25px;
+    margin-top: 23px;
+}
+
+.notification {
+  // @include rounding;
+  border-radius: 12px;
+  font-size: 12pt;
+  font-family: 'Torus';
+  background-color: $widget-background;
+  // border-bottom: 3px solid $colorbg;
+  padding: .9rem;
+  // padding: 30px 25px 20px 17px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+    // all: unset;
+    // background-color: red;
+    // margin: 0px 15px 0px 15px;
+    // border-radius: 12px;
+    // border-width: 2px;
+    // border-style: solid;
+    // border-color: $primary;
+
+  // box {
+  //    margin-bottom: .5rem;
+  // }
+
+  label {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    border: 3px solid $grey;
+  }
+
+  .appname {
+    font-size: 13pt;
+    color: $red;
+    font-weight: bold;
+  }
+
+  .summary {
+    font-size: 13pt;
+    color: $yellow;
+    font-weight: bold;
+  }
+
+  .body {
+    color: $primary;
+    margin-top: 25px;
+    //margin-bottom: 25px;
+  }
+}
+
+
+/* Dashboard */
+// .dash-window {
+//   background-color: transparent;
+// }
+//
+// .dash {
+//   min-height: 50px;
+//   min-width: 50px;
+//   background-color: $colorbarbg;
+//   border-radius: 15px;
+//   padding: 20px;
+//   margin: 5px;
+// }

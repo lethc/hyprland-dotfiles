@@ -197,9 +197,13 @@
       ;; :space-evenly "false"
       ;; :orientation "h"
       (button
-        :onclick "if ${EWW_CMD} state | grep 'rightside: false' ; then ${EWW_CMD} update rightside=true ; else ${EWW_CMD} update rightside=false ; fi"
+          ;; :onclick "if ${EWW_CMD} state | grep 'rightside: false' ; then ${EWW_CMD} update rightside=true ; else ${EWW_CMD} update rightside=false ; fi"
+          :onclick "scripts/pop notification"
         (label
-        :text "󰍩"))))
+          :text "󰍩")
+        )
+      )
+    )
   )
 
 (defwidget sep []

@@ -6,7 +6,7 @@ focusmon=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .id')
 # console parameter + display id 
 WIDGET="$1${focusmon}"
 
-popable_widgets=( "system" "audio_ctl" "calendar" )
+popable_widgets=( "system" "audio_ctl" "calendar" "notification")
 
 # Open widgets
 if ${EWW_BIN} windows | grep ^$WIDGET$ ; then

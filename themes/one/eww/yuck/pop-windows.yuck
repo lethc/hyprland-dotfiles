@@ -292,3 +292,186 @@
     :width "270px"
   :height "60px")
   (cal))
+
+;;Notification Widget
+(defwidget notification []
+  (box
+    :class "sys_win2"
+    :orientation "v"
+    :space-evenly "false"
+    ;; :style "
+    ;; ${anim_open_ontf ? 'transition: 200ms cubic-bezier(0.05, 0.7, 0.1, 1);' : 'transition: 150ms cubic-bezier(0.3, 0, 0.8, 0.15);'}
+    ;; ${rev_ontf ? '' : 'margin-right: -533px;'}
+    ;; "
+    ;; :hexpand "false"
+    ;; :vexpand "false"
+    ;; :spacing 0
+    (label
+      :text "Hello world, This a my widget"
+      :class "sys_sepa"
+      :halign "center"
+    )
+    (eventbox
+      (box
+        :orientation "v"
+        :space-evenly false
+        ;:class ""
+        (scroll
+          :class "onotify-content"
+          :valign "fill"
+          :style "min-height: 632px;"
+          (box
+            :halign "fill"
+            :class "osettings-scroll-bg"
+            :space-evenly false
+            :spacing 20
+            :orientation "v"
+            (box
+              :space-evenly false :orientation "v"
+              (box ;centerbox
+                (box
+                  :orientation "h"
+                  :space-evenly false
+                  :spacing 10
+                  (label
+                    :halign "start"
+                    :class "osettings-section-icon"
+                    :text "󰂟"
+                  )
+                  (label
+                    :halign "start"
+                    :class "osettings-section"
+                    :text "Notifications"
+                  )
+                )
+                ;(box)
+                (box
+                  :orientation "h" :space-evenly false
+                  :halign "end" :spacing 1
+                  :style "margin-left: 2px;"
+                  (button :valign "center" :yalign 0.1
+                    :class "osettings-tag-material"
+                    :tooltip "Refresh"
+                    :onclick "dunstctl history > $XDG_CACHE_HOME/dunst-history.json &"
+                    "󰑐"
+                  )
+                  (button :valign "center" :yalign 0.5
+                    :class "osettings-tag-material"
+                    :tooltip "Pause/Resume Notifications"
+                    :onclick "scripts/notifications toggle && eww update notifications='$(scripts/notifications --once)' &"
+                    ;{notif_icons.paused ? "" : "Pause"}
+                    ""
+                  )
+
+                  (button :valign "center" :yalign 0.5
+                    :class "osettings-tag-material"
+                    :tooltip "Clear Notifications"
+                    :onclick "scripts/notifications clear &"
+                    ""
+                  )
+                )
+              )
+              (box
+                :orientation "v"
+                :orientation "v"
+                :space-evenly false
+                (for i in notification
+                  (eventbox
+                    :onclick "dunstctl history-pop ${i.id} && dunstctl action 0 && dunstctl close"
+                    (box
+                      :class "notification"
+                      :orientation "v" :space-evenly false
+                      :width 300
+                      (centerbox
+                        :space-evenly false
+                        (label
+                          :xalign 0
+                          :wrap true
+                          :class "summary"
+                          :text {i.summary}
+                        )
+                        (label)
+                        (label
+                          :xalign 1
+                          :wrap true
+                          :class "appname"
+                          :text {i.appname}
+                        )
+                      )
+                      (label
+                        :xalign 0
+                        :wrap true
+                        :class "body"
+                        :text {i.body}
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+)
+
+(defwindow notification0
+  :stacking "fg"
+  :focusable "false"
+  :screen 1
+  :monitor 0
+  :geometry 
+  (geometry 
+    :x "10"
+    :y "55px"
+    :anchor "top right"
+    :width "450px"
+    :height "632px")
+  (notification)
+)  
+
+;; Dashboard Widgets
+;; (defwidget dashboard-contents
+;;   (box
+;;     :class "dash-window"
+;;     :orientation "v"
+;;     :space-evenly false
+;;     (eventbox
+;;       :onclick "scripts/toggle-dash.sh &"
+;;       :onmiddleclick "scripts/toggle-dash.sh &"
+;;       :onrightclick "scripts/toggle-dash.sh &"
+;;     )
+;;     (box
+;;       :orientation "v"
+;;       :space-evenly false
+;;       (box ; Description
+;;         :orientation "v"
+;;         :space-evenly false
+;;         :class "dash"
+;;         :halign "start"
+;;         ;; :style "
+;;         ;; ${anim_open_dash ? dash_curve_in : dash_curve_out}
+;;         ;; ${rev_dash ? '' : 'margin-left: -1100px; margin-right: 1100px;'}
+;;         ;; "
+;;         (label :angle 0 :xalign 0 :class "dash-title" :text "Classic dashboard")
+;;         (label :angle 0 :xalign 0 :class "dash-subtitle" :text "That kinda useless random widget porn.")
+;;       ) 
+;;       (box)
+;;     )
+;;   )
+;; )
+;;
+;; (defwindow dashboard
+;;   :focusable true
+;;   :windowtype "normal"
+;;   :wm-ignore true
+;;   :geometry (geometry
+;;     :x 0
+;;     :y 0
+;;     :anchor "center center"
+;;   )
+;;   :monitor 0
+;;   (dashboard-contents)
+;; )
+;;

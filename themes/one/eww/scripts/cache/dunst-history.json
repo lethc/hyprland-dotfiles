@@ -1,0 +1,237 @@
+{
+	"type" : "aa{sv}",
+	"data" : [
+		[
+			{
+				"body" : {
+					"type" : "s",
+					"data" : "While stock lasts"
+				},
+				"message" : {
+					"type" : "s",
+					"data" : "<b>❗ Now 15% discount!</b>\n<span size=\"small\">While stock lasts</span>"
+				},
+				"summary" : {
+					"type" : "s",
+					"data" : "❗ Now 15% discount!"
+				},
+				"appname" : {
+					"type" : "s",
+					"data" : "Firefox"
+				},
+				"category" : {
+					"type" : "s",
+					"data" : ""
+				},
+				"default_action_name" : {
+					"type" : "s",
+					"data" : "default"
+				},
+				"icon_path" : {
+					"type" : "s",
+					"data" : ""
+				},
+				"id" : {
+					"type" : "i",
+					"data" : 18
+				},
+				"timestamp" : {
+					"type" : "x",
+					"data" : 2283327624
+				},
+				"timeout" : {
+					"type" : "x",
+					"data" : 5000000
+				},
+				"progress" : {
+					"type" : "i",
+					"data" : -1
+				}
+			},
+			{
+				"body" : {
+					"type" : "s",
+					"data" : "Buy now, only while stock lasts"
+				},
+				"message" : {
+					"type" : "s",
+					"data" : "<b>Vacuum cleaner is back</b>\n<span size=\"small\">Buy now, only while stock lasts</span>"
+				},
+				"summary" : {
+					"type" : "s",
+					"data" : "Vacuum cleaner is back"
+				},
+				"appname" : {
+					"type" : "s",
+					"data" : "Firefox"
+				},
+				"category" : {
+					"type" : "s",
+					"data" : ""
+				},
+				"default_action_name" : {
+					"type" : "s",
+					"data" : "default"
+				},
+				"icon_path" : {
+					"type" : "s",
+					"data" : ""
+				},
+				"id" : {
+					"type" : "i",
+					"data" : 17
+				},
+				"timestamp" : {
+					"type" : "x",
+					"data" : 907747542
+				},
+				"timeout" : {
+					"type" : "x",
+					"data" : 5000000
+				},
+				"progress" : {
+					"type" : "i",
+					"data" : -1
+				}
+			},
+			{
+				"body" : {
+					"type" : "s",
+					"data" : "Protein bar is waiting for you"
+				},
+				"message" : {
+					"type" : "s",
+					"data" : "<b>Something is still in your cart..</b>\n<span size=\"small\">Protein bar is waiting for you</span>"
+				},
+				"summary" : {
+					"type" : "s",
+					"data" : "Something is still in your cart.."
+				},
+				"appname" : {
+					"type" : "s",
+					"data" : "Firefox"
+				},
+				"category" : {
+					"type" : "s",
+					"data" : ""
+				},
+				"default_action_name" : {
+					"type" : "s",
+					"data" : "default"
+				},
+				"icon_path" : {
+					"type" : "s",
+					"data" : ""
+				},
+				"id" : {
+					"type" : "i",
+					"data" : 16
+				},
+				"timestamp" : {
+					"type" : "x",
+					"data" : 901883741
+				},
+				"timeout" : {
+					"type" : "x",
+					"data" : 5000000
+				},
+				"progress" : {
+					"type" : "i",
+					"data" : -1
+				}
+			},
+			{
+				"body" : {
+					"type" : "s",
+					"data" : "Discounts up to 90%"
+				},
+				"message" : {
+					"type" : "s",
+					"data" : "<b>❗ SUPER SALE ❗ only here</b>\n<span size=\"small\">Discounts up to 90%</span>"
+				},
+				"summary" : {
+					"type" : "s",
+					"data" : "❗ SUPER SALE ❗ only here"
+				},
+				"appname" : {
+					"type" : "s",
+					"data" : "Firefox"
+				},
+				"category" : {
+					"type" : "s",
+					"data" : ""
+				},
+				"default_action_name" : {
+					"type" : "s",
+					"data" : "default"
+				},
+				"icon_path" : {
+					"type" : "s",
+					"data" : ""
+				},
+				"id" : {
+					"type" : "i",
+					"data" : 15
+				},
+				"timestamp" : {
+					"type" : "x",
+					"data" : 898606038
+				},
+				"timeout" : {
+					"type" : "x",
+					"data" : 5000000
+				},
+				"progress" : {
+					"type" : "i",
+					"data" : -1
+				}
+			},
+			{
+				"body" : {
+					"type" : "s",
+					"data" : "While stock lasts"
+				},
+				"message" : {
+					"type" : "s",
+					"data" : "<b>❗ Now 15% discount!</b>\n<span size=\"small\">While stock lasts</span>"
+				},
+				"summary" : {
+					"type" : "s",
+					"data" : "❗ Now 15% discount!"
+				},
+				"appname" : {
+					"type" : "s",
+					"data" : "Firefox"
+				},
+				"category" : {
+					"type" : "s",
+					"data" : ""
+				},
+				"default_action_name" : {
+					"type" : "s",
+					"data" : "default"
+				},
+				"icon_path" : {
+					"type" : "s",
+					"data" : ""
+				},
+				"id" : {
+					"type" : "i",
+					"data" : 14
+				},
+				"timestamp" : {
+					"type" : "x",
+					"data" : 891491788
+				},
+				"timeout" : {
+					"type" : "x",
+					"data" : 5000000
+				},
+				"progress" : {
+					"type" : "i",
+					"data" : -1
+				}
+			}
+		]
+	]
+}
