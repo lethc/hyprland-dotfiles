@@ -752,6 +752,9 @@ scale trough {
     background-color: $background;
     border-radius: 25px;
 }
+.box-notif {
+    margin: 0px 20px 0px 20px;
+}
 
 .sys_sepa {
     color: $white;
@@ -786,7 +789,7 @@ scale trough {
     font-size: 15pt;
     min-width: 35px;
     min-height: 35px;
-    background-color: $widget-background;
+    background-color: transparent;
     border-radius: 12px;
 }
 
@@ -801,8 +804,8 @@ scale trough {
 
 .osettings-tag-material {
     color: $white;
-    background-color: $grey;
-    font-size: 10pt;
+    background-color: transparent;
+    font-size: 15pt;
     font-family: 'Material Symbols Rounded';
     font-weight: 500;
     padding: 3px 8px;
