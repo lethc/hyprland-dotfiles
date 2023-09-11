@@ -27,10 +27,28 @@
 ;; (defvar rev_ontf false)
 ;; (defvar anim_open_ontf true)
 (defvar rev_dash false)
+(defvar anim_open_dash true)
 
 ; Listeners
 ;(deflisten notifications "scripts/notifications")
 (deflisten notification "scripts/notifications")
+(deflisten memory "scripts/memory2")
+
+; Time
+(defpoll time :interval "5s" `date +'{"date": "%d/%m", "hour": "%H", "minute": "%M", "monthname": "%B", "day": "%A", "year": "%Y"}'`)
+(defpoll day_only :interval "5s" "date '+%e' | sed 's/ //g'")
+(defpoll time12 :interval "10s" `date '+%l:%M %^P' | sed 's/am/AM/g' | sed 's/pm/PM/g'`)
+
+;Data
+(defpoll username :interval "5m" :initial "username" `whoami`)
+(defvar username_default "username")
+(defpoll hostname :interval "5m" :initial "distro" `uname -n`)
+(defpoll kernel :interval "5m" `uname -r`)
+;; (defpoll uptime :interval "1m" "uptime -p | sed -e 's/up //;s/ hours,/h/;s/ minutes/m/'")
+(defvar quote_content `["haha pointers hee hee i love pointe-\\\nProcess Vaxry exited with signal SIGSEGV", "I have a hentai anal gif playing in my base", "Amazing XXXmas. Cute femboy was fucked\\\nin the ass under the Christmas tree", "baaaaaaaaaaaa", "...so Nvidia, fuck you"]`)
+(defvar quote_author `["- vaxry", "- vaxry", "- Hyprland community, 2022", "-vaxer", "- Linus Torvalds"]`)
+(defvar FILE_BROWSER "nautilus")
+(defvar EWW_PATH "$HOME/.config/hypr/themes/one/eww/")
 
 ;; Music Variables
 (defpoll song		    :interval "5s"  "scripts/music title")

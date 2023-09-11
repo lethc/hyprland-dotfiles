@@ -867,15 +867,229 @@ scale trough {
 
 
 /* Dashboard */
-// .dash-window {
-//   background-color: transparent;
-// }
-//
-// .dash {
-//   min-height: 50px;
-//   min-width: 50px;
-//   background-color: $colorbarbg;
-//   border-radius: 15px;
-//   padding: 20px;
-//   margin: 5px;
-// }
+
+@function tint($color, $percentage) {
+  @return mix(rgb(245, 250, 255), $color, $percentage);
+}
+
+.dash-window {
+  background-color: transparent;
+}
+
+.dash-title {
+  color: $blue;
+  font-size: 18pt;
+}
+
+.dash-subtitle {
+  color: $white;
+  font-size: 13pt;
+}
+
+.dash {
+  min-height: 50px;
+  min-width: 50px;
+  background-color: $widget-background;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 5px;
+}
+
+.dash-tile {
+  min-width: 800px;
+}
+
+.dash-input {
+  padding-left: 15px;
+  padding-right: 15px;
+  min-width: 860px;
+  margin: -5px;
+  background-color: #302525;
+  border: 2px solid tint($background, 10%);
+  border-radius: 10px;
+  color: $primary;
+  font-size: 15pt;
+  caret-color: $white;
+
+  selection {
+    background-color: rgba(154, 152, 152, 0.5);
+  }
+}
+
+.dash-input-icon {
+  padding-left: 15px;
+  padding-right: 15px;
+  min-width: 30px;
+  margin: -5px;
+  margin-left: 15px;
+  background-color: #302525;
+  border: 2px solid tint($background, 10%);
+  border-radius: 10px;
+  color: $white;
+  font-size: 19pt;
+}
+
+
+.dash-button {
+  border-radius: 15px;
+}
+
+.dash-profile {
+  min-width: 300px;
+  min-height: 228px;
+}
+
+.dash-user-pic {
+  margin: 20px;
+  min-width: 150px;
+  min-height: 150px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 1500px;
+  background-position: center;
+}
+
+.dash-fetch {
+  color: $primary;
+  font-size: 15pt;
+}
+
+.dash-fetch-icon {
+  color: $white;
+  font-size: 16pt;
+  margin: 3px;
+  font-family: Material Symbols Rounded;
+}
+
+.dash-quote-content {
+  margin: 2px;
+  color: $white;
+  font-size: 14pt;
+}
+
+.dash-quote-author {
+  margin: 2px;
+  color: $white;
+  font-size: 12pt;
+}
+
+
+.dash-clock-text-area {
+  min-width: 200px;
+}
+
+.dash-clock-circle-area {
+  // margin-left: 10px;
+}
+
+.dash-clock-circle {
+  background-color: $red;
+}
+
+.dash-clock-inner {
+  padding: 36px;
+}
+
+.dash-clock-circle-minute {
+  margin: 10px;
+  background-color: $orange;
+}
+
+.dash-time {
+  color: $primary;
+  font-size: 35pt;
+}
+
+.dash-date {
+  color: $primary;
+  font-size: 18pt;
+}
+
+.dash-dir-area {
+  min-width: 198px;
+}
+
+.dash-button {
+  border-radius: 15px;
+}
+
+.dash-button:hover {
+  background-color: tint($grey, 10%);
+}
+
+.dash-button:focus {
+  background-color: tint($grey, 10%);
+}
+
+.dash-button:active {
+  background-color: tint($grey, 20%);
+}
+
+.dash-dir {
+  font-size: 15pt;
+  padding: 10px;
+  padding-left: 15px;
+}
+
+.dash-resources {
+  min-width: 198px;
+  min-height: 122px;
+}
+
+.dash-resource-icon {
+  font-size: 99pt;
+}Icon
+
+.dash-resource-inner {
+  padding: 30px;
+}
+
+.dash-resource-text {
+  font-size: 15pt;
+  margin: 3px;
+}
+
+.dash-resource-title {
+  font-size: 15pt;
+}
+
+.dash-resource-tile {
+  // background-color: tint($colorbarbg, 20%);
+  border-radius: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 11px;
+  // padding: 15px;
+}
+
+.icon {
+  font-family: Material Symbols Rounded;
+  // padding-left: 4px;
+  // padding-right: 4px;
+}
+
+.dash-icon {
+  font-size: 24pt;
+  font-weight: bold;
+  font-family: Material Symbols Rounded;
+}
+
+.clrt {
+  color: $primary;
+}
+
+.clr1 {
+  color: $secondary;
+}
+
+.clr2 {
+  color: $tertiary;
+}
+
+.clr3 {
+  color: $red;
+}
+
+.clr4 {
+  color: $primary;
+}
