@@ -468,8 +468,8 @@
         ${anim_open_dash ? dash_curve_in : dash_curve_out}
         ${rev_dash ? '' : 'margin-left: -1100px; margin-right: 1100px;'}
         "
-        (label :angle 0 :xalign 0 :class "dash-title" :text "Classic dashboard")
-        (label :angle 0 :xalign 0 :class "dash-subtitle" :text "That kinda useless random widget porn.")
+        (label :angle 0 :xalign 0 :class "dash-title" :text "VO")
+        (label :angle 0 :xalign 0 :class "dash-subtitle" :text " They also see something beyond that hell. Maybe it's hope. Maybe it's another Hell.\\n I don't know which it is. The only people who do know... are the ones who keep moving forward.")
       )
       (box
         :orientation "h"
@@ -548,13 +548,69 @@
                 :orientation "v"
                 :space-evenly false
                 :class "dash"
-                :height 124
+                :height 130
                 :style "
                 ${anim_open_dash ? dash_curve_in : dash_curve_out}
                 ${rev_dash ? '' : 'margin-bottom: -1000px; margin-top: 1000px;'}
                 "
-                (label :xalign 0 :class "dash-quote-content clr3" :text "${quote_content[3]}")
-                (label :xalign 1 :class "dash-quote-author clr4" :text "${quote_author[3]}")
+                ;; (label :xalign 0 :class "dash-quote-content clr3" :text "${quote_content[3]}")
+                ;; (label :xalign 1 :class "dash-quote-author clr4" :text "${quote_author[3]}")
+                (box
+                  :orientation "h"
+                  :space-evenly true
+                  (button
+                    :class "dash-dir dash-button"
+                    :onclick "scripts/dashactivate '${FILE_BROWSER} ~/Downloads' &"
+                    :onrightclick "eww -c ${EWW_PATH} close dashboard0 2>/dev/null && foot sh -c 'cd ~/Downloads; $SHELL' &"
+                    (box
+                      :orientation "h"
+                      :space-evenly false
+                      :class "clrt"
+                      (label :xalign 10 :text "󰉍 " :class "icon")
+                      (label :xalign 0 :text "downloads")
+                    )
+                  )
+                  (button
+                    :class "dash-dir dash-button"
+                    :onclick "scripts/dashactivate '${FILE_BROWSER} ~/.config/hypr' &"
+                    :onrightclick "eww -c ${EWW_PATH} close dashboard0 2>/dev/null && foot sh -c 'cd ~/.config/hypr; $SHELL' &"
+                    (box
+                      :orientation "h"
+                      :space-evenly false
+                      :class "clrt"
+                      (label :xalign 0 :text "󱧼 " :class "icon")
+                      (label :xalign 0 :text "configuration")
+                    )
+                  )
+                )
+                (box
+                  :orientation "h"
+                  :space-evenly true
+                  (button
+                    :class "dash-dir dash-button"
+                    :onclick "scripts/dashactivate '${FILE_BROWSER} ~/workspace' &"
+                    :onrightclick "eww -c ${EWW_PATH} close dashboard0 2>/dev/null && foot sh -c 'cd ~/workspace; $SHELL' &"
+                    (box
+                      :orientation "h"
+                      :space-evenly false
+                      :class "clrt"
+                      (label :xalign 10 :text " " :class "icon")
+                      (label :xalign 0 :text "workspace")
+                    )
+                  )
+                  (button
+                    :class "dash-dir dash-button"
+                    :onclick "scripts/dashactivate '${FILE_BROWSER} ~/.config/nvim/' &"
+                    :onrightclick "eww -c ${EWW_PATH} close dashboard0 2>/dev/null && foot sh -c 'cd ~/.config/nvim; $SHELL' &"
+                    (box
+                      :orientation "h"
+                      :space-evenly false
+                      :class "clrt"
+                      (label :xalign 10 :text " " :class "icon")
+                      (label :xalign 0 :text "nvim Configuration")
+                    )
+                  )
+                )
               )
             )
             (box ; Col 2
@@ -648,18 +704,18 @@
                     (label :xalign 0 :text "documents")
                   )
                 )
-                (button
-                  :class "dash-dir dash-button"
-                  :onclick "scripts/dashactivate '${FILE_BROWSER} ~/Downloads' &"
-                  :onrightclick "eww -c ${EWW_PATH} close dashboard0 2>/dev/null && foot sh -c 'cd ~/Downloads; $SHELL' &"
-                  (box
-                    :orientation "h"
-                    :space-evenly false
-                    :class "clrt"
-                    (label :xalign 0 :text "󰉍 " :class "icon")
-                    (label :xalign 0 :text "downloads")
-                  )
-                )
+                ;; (button
+                ;;   :class "dash-dir dash-button"
+                ;;   :onclick "scripts/dashactivate '${FILE_BROWSER} ~/Downloads' &"
+                ;;   :onrightclick "eww -c ${EWW_PATH} close dashboard0 2>/dev/null && foot sh -c 'cd ~/Downloads; $SHELL' &"
+                ;;   (box
+                ;;     :orientation "h"
+                ;;     :space-evenly false
+                ;;     :class "clrt"
+                ;;     (label :xalign 0 :text "󰉍 " :class "icon")
+                ;;     (label :xalign 0 :text "downloads")
+                ;;   )
+                ;; )
                 (button
                   :class "dash-dir dash-button"
                   :onclick "scripts/dashactivate '${FILE_BROWSER} ~/Pictures' &"
@@ -682,6 +738,18 @@
                     :class "clrt"
                     (label :xalign 0 :text "󱧺 " :class "icon")
                     (label :xalign 0 :text "videos")
+                  )
+                )
+                (button
+                  :class "dash-dir dash-button"
+                  :onclick "scripts/dashactivate '${FILE_BROWSER} ~/Music' &"
+                  :onrightclick "eww -c ${EWW_PATH} close dashboard0 2>/dev/null && foot sh -c 'cd ~/Music; $SHELL' &"
+                  (box
+                    :orientation "h"
+                    :space-evenly false
+                    :class "clrt"
+                    (label :xalign 0 :text "󱍙 " :class "icon")
+                    (label :xalign 0 :text "music")
                   )
                 )
               )
