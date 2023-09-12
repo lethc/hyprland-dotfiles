@@ -740,11 +740,41 @@
             ${anim_open_dash ? dash_curve_in : dash_curve_out}
             ${rev_dash ? '' : 'margin-right: -100px; margin-left: 100px;'}
             "
-            (button :onclick "scripts/dashactivate '~/.config/hypr/scripts/default/lock' &" :class "dash clr4 dash-icon dash-button"          (label :class "icon" :text "󰌾") )
-            (button :onclick "scripts/dashactivate 'systemctl suspend' &" :class "dash clr3 dash-icon dash-button"             (label :class "icon" :text "") )
-            (button :onclick "scripts/dashactivate 'loginctl terminate-user $USER' &" :class "dash clr2 dash-icon dash-button" (label :class "icon" :text "󰍃") )
-            (button :onclick "scripts/dashactivate 'systemctl reboot' &" :class "dash clr1 dash-icon dash-button"              (label :class "icon" :text "") )
-            (button :onclick "scripts/dashactivate 'systemctl poweroff' &" :class "dash clr0 dash-icon dash-button"            (label :class "icon" :text "⏻") )
+            (button 
+              :onclick "scripts/dashactivate '~/.config/hypr/scripts/default/lock' &" 
+              :class "dash clr4 dash-icon dash-button"          
+              :tooltip "Lock Screen"
+              (label 
+                :class "icon" 
+                :text "󰌾") )
+            (button 
+              :onclick "scripts/dashactivate 'systemctl suspend' &" 
+              :class "dash clr3 dash-icon dash-button"             
+              :tooltip "Suspend"
+              (label 
+                :class "icon" 
+                :text "") )
+            (button 
+              :onclick "scripts/dashactivate 'loginctl terminate-user $USER' &" 
+              :class "dash clr2 dash-icon dash-button" 
+              :tooltip "Log-out"
+              (label 
+                :class "icon" 
+                :text "󰍃") )
+            (button 
+              :onclick "scripts/dashactivate 'systemctl reboot' &" 
+              :class "dash clr1 dash-icon dash-button"              
+              :tooltip "Reboot"
+              (label 
+                :class "icon" 
+                :text "") )
+            (button 
+              :onclick "scripts/dashactivate 'systemctl poweroff' &" 
+              :class "dash clr0 dash-icon dash-button"            
+              :tooltip "Turn-off"
+              (label 
+                :class "icon" 
+                :text "⏻") )
           )
         )
       )
