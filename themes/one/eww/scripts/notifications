@@ -3,7 +3,7 @@
 tmp=scripts/cache/dunst-history.json
 lock="scripts/cache/dunst-toggle.lock"
 lockinfo="scripts/cache/dunst-lock-info"
-cd ~/.config/eww
+cd ~/.config/hypr/themes/one/eww/
 
 touch $lockinfo
 
