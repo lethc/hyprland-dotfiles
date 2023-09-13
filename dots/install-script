@@ -45,7 +45,7 @@ yay -S zsh-autocomplete-git zsh-sudo-git zsh-vi-mode
 echo "########################################"
 echo "##  Installing Hyprland dependencies  ##"
 echo "########################################" 
-yay -S kitty hyprland xdg-desktop-portal-hyprland wofi dunst jq swayidle bc pamixer papirus-icon-theme playerctl grim grimblast slurp wl-clipboard socat swappy nm-connection-editor dictd blueberry acpi swaylock xdg-desktop-portal-gtk nwg-look
+yay -S kitty hyprland xdg-desktop-portal-hyprland wofi dunst jq gojq swayidle bc pamixer papirus-icon-theme playerctl grim grimblast slurp wl-clipboard socat swappy nm-connection-editor dictd blueberry acpi swaylock xdg-desktop-portal-gtk nwg-look
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 yay -S  eww-wayland swaylock-effects-git sway-audio-idle-inhibit-git light-git cava cliphist hyprpicker-git wl-clip-persist-git 
