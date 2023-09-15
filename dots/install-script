@@ -77,7 +77,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "######################################"
 echo "###### Installing frequent apps ######"
 echo "######################################"
-yay -S gtt-bin youtube-tui w3m lynx httrack vlc obsidian tori-bin python-pytube
+yay -S gtt-bin youtube-tui w3m lynx httrack vlc obsidian tori-bin python-pytube sioyek
 pipx install wisdom-tree
 cargo install bard-rs
 

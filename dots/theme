@@ -50,6 +50,9 @@ echo "qutebrowser linked"
 ln -sf "${HOME}/.config/hypr/dots/zathura" "${HOME}/.config"
 echo "zathura linked"
 
+ln -sf "${HOME}/.config/hypr/dots/sioyek" "${HOME}/.config"
+echo "sioyek linked"
+
 ln -sf "${HOME}/.config/hypr/dots/wofi" "${HOME}/.config"
 echo "wofi linked"
 
