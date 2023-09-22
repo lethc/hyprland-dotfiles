@@ -168,6 +168,15 @@ function rmk(){
 	scrub -p dod $1
 	shred -zun 10 -v $1
 }
+function ya() {
+    tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+    yazi --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
 #Multiple NVIM Configurations
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 alias nvim-new="NVIM_APPNAME=new nvim"

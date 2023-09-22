@@ -94,6 +94,12 @@ echo ".scripts linked"
 ln -sf "${HOME}/.config/hypr/dots/tridactyl" "${HOME}/.config"
 echo "tridactyl linked"
 
+ln -sf "${HOME}/.config/hypr/dots/imv" "${HOME}/.config"
+echo "imv linked"
+
+ln -sf "${HOME}/.config/hypr/dots/yazi" "${HOME}/.config"
+echo "yazi linked"
+
 ln -sf "${HOME}/.config/hypr/dots/.scripts/linkhandler" "${HOME}/.local/bin/"
 echo "linkhandler mpv newsboat linked"
 
