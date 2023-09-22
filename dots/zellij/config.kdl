@@ -79,7 +79,6 @@ keybinds {
         bind "p" { SwitchFocus; }
         bind "q" { CloseFocus; }
         //c to rename a pain
-        //bind "r" { ToggleFloatingPanes; }
         //bind "a" { FocusNextPane; }
         //bind "a" { FocusPreviousPane; }
     }
@@ -103,6 +102,7 @@ keybinds {
         bind "Alt m" { NewPane "Down"; }
         bind "Alt t" { NewTab; }
         bind "Alt f" { ToggleFocusFullscreen; }
+        bind "Alt p" { ToggleFloatingPanes; }
         bind "Alt 1" { GoToTab 1; }
         bind "Alt 2" { GoToTab 2; }
         bind "Alt 3" { GoToTab 3; }
