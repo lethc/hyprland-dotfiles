@@ -4,7 +4,7 @@ inactive  = { fg = "#c9c7cd", bg = "#22191B" }
 max_width = 1
 
 [status]
-primary	  = { normal = "#FF6363", select = "#9B6BDF", unset = "#FFD86E" }
+primary	  = { normal = "#FF6363", select = "#9B6BDF", unset = "#FCA57E" }
 secondary = { normal = "#1A1113", select = "#131314", unset = "#131314" }
 tertiary  = { normal = "#3e3e43", select = "#3e3e43", unset = "#3e3e43" }
 body      = { normal = "#22191B", select = "#22191B", unset = "#22191B" }
@@ -16,7 +16,7 @@ danger    = { normal = "#FA7F94", select = "#FA7F94", unset = "#FA7F94" }
 separator = { opening = "", closing = "" }
 
 [progress]
-gauge = { fg = "#FFD86E", bg = "#22191B" }
+gauge = { fg = "#FCA57E", bg = "#22191B" }
 label = { fg = "#FFFFFF", bold = true }
 
 [selection]
