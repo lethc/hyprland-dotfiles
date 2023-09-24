@@ -4,7 +4,7 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,filebrowser,emoji";
+	modi:                       "drun,run,filebrowser";
 	/* modi:                       "drun,run,filebrowser,window,emoji"; */
     show-icons:                 true;
     icon-theme:                  "WhiteSur-dark";
