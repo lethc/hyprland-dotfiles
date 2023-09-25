@@ -15,30 +15,36 @@ cache_dir  = ""
 
 [opener]
 folder = [
-	{ exec = 'open -R "$@"', display_name = "Reveal in Finder" },
+	{ exec = 'nautilus "$@"', display_name = "Reveal in Finder" },
 	{ exec = '$EDITOR "$@"' },
 ]
 archive = [
-	{ exec = 'unar "$1"', display_name = "Extract here" },
+	{ exec = 'unrar "$1"', display_name = "Extract here" },
 ]
 text = [
 	{ exec = '$EDITOR "$@"', block = true },
 ]
 image = [
 	{ exec = 'imv-dir "$@"', display_name = "Open" },
+	{ exec = 'firefox "$@"', display_name = "Open with Firefox" },
 	{ exec = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show EXIF" },
 ]
 video = [
-	{ exec = 'mpv "$@"' },
+	{ exec = 'mpv "$@"', display_name = "Open with MPV" },
 	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show media info" },
 ]
 audio = [
-	{ exec = 'mpv "$@"' },
+	{ exec = 'mpv --no-video "$@"', display_name = "Open with MPV" },
 	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show media info" },
 ]
 fallback = [
 	{ exec = 'open "$@"', display_name = "Open" },
 	{ exec = 'open -R "$@"', display_name = "Reveal in Finder" },
+	{ exec = 'wps "$@"', display_name = "Open in WPS" },
+]
+
+document = [
+	{ exec = 'sioyek "$@"', display_name = "Open with sioyek" },
 ]
 
 [open]
@@ -61,6 +67,8 @@ rules = [
 	{ mime = "application/x-bzip2", use = "archive" },
 	{ mime = "application/x-7z-compressed", use = "archive" },
 	{ mime = "application/x-rar", use = "archive" },
+  
+  { mime = "application/pdf", use = "document" },
 
 	{ mime = "*", use = "fallback" },
 ]
