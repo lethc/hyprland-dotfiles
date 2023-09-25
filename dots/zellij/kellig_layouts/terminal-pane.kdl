@@ -1,0 +1,17 @@
+layout {
+  pane split_direction="vertical" {
+    pane size="70%" command="nvim" 
+    pane
+  }
+  pane size=1 borderless=true {
+    plugin location="zellij:compact-bar"
+  }
+}
+// Horizontal split
+//layout {
+//  pane size="70%" command="nvim" 
+//  pane
+//  pane size=1 borderless=true {
+//    plugin location="zellij:compact-bar"
+//  }
+//}

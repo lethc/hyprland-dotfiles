@@ -1,8 +1,5 @@
 layout {
-  pane split_direction="vertical" {
-    pane size="70%" command="nvim" 
-    pane
-  }
+  pane size="70%" command="yazi" 
   pane size=1 borderless=true {
     plugin location="zellij:compact-bar"
   }
