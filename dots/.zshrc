@@ -34,7 +34,6 @@ alias ls='lsd --group-dirs=first'
 # alias cat='bat --theme Catppuccin-mocha'
 alias cat='bat'
 alias bat='bat'
-# alias rr='ranger'
 alias tu='tmux'
 alias update='yay -Syu'
 alias pj='cd /home/lummyn/Documents/projects'
@@ -54,7 +53,6 @@ alias youtube="qutebrowser http://127.0.0.1:9010/"
 alias yt="youtube-tui"
 # alias youtube="firefox http://127.0.0.1:9010/ &> /dev/null &"
 alias dots="cd ~/.config/hypr/dots/"
-alias rr="ranger"
 alias mn="minase"
 # alias gtt='~/Downloads/Git/GTT/gtt'
 alias manual="tldr"
@@ -169,7 +167,7 @@ function rmk(){
 	scrub -p dod $1
 	shred -zun 10 -v $1
 }
-function ya() {
+function rr() {
     tmp="$(mktemp -t "yazi-cwd.XXXXX")"
     yazi --cwd-file="$tmp"
     if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
