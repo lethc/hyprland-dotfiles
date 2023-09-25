@@ -1,2 +1,3 @@
 #!/bin/bash
-foot -D "${HOME}/Sync" nvim
+# foot -D "${HOME}/Sync" nvim
+foot -D "${HOME}/Sync" yazi
