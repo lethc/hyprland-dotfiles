@@ -118,5 +118,8 @@ mkdir -p "${HOME}/.icons/default"
 touch "${HOME}/.icons/default/index.theme"
 echo "qt cursor config created"
 
+ln -sf "${HOME}/.config/hypr/dots/md2anki" "${HOME}/.config"
+echo "md2anki linked"
+
 echo "theme completed"
 
