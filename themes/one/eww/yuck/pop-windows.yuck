@@ -469,7 +469,7 @@
         ${rev_dash ? '' : 'margin-left: -1100px; margin-right: 1100px;'}
         "
         (label :angle 0 :xalign 0 :class "dash-title" :text "VO")
-        (label :angle 0 :xalign 0 :class "dash-subtitle" :text " They also see something beyond that hell. Maybe it's hope. Maybe it's another Hell.\\n I don't know which it is. The only people who do know... are the ones who keep moving forward.")
+        (label :angle 0 :xalign 0 :class "dash-subtitle" :text " They also see something beyond that hell. Maybe it's hope. Maybe it's another Hell.\\n I don't know which it is. The only people who do know... are the ones who keep moving forward.\\n \\n \"Eren Yeager\"")
       )
       (box
         :orientation "h"
