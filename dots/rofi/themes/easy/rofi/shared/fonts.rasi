@@ -3,5 +3,5 @@
 /* Text Font */
 
 * {
-    font: "Iosevka 10";
+    font: "Roboto Regular 11";
 }
