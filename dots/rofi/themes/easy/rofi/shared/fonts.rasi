@@ -3,5 +3,5 @@
 /* Text Font */
 
 * {
-    font: "Roboto Regular 11";
+    font: "SF Compact Rounded Regular 11";
 }
