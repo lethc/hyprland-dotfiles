@@ -31,8 +31,8 @@ keybinds {
         // bind keys can include one or more actions (all actions will be performed with no sequential guarantees)
         unbind "Ctrl h"
         unbind "Ctrl l"
-        //unbind "Alt k"
-        //unbind "Alt j"
+        unbind "Alt k"
+        unbind "Alt j"
         unbind "Ctrl t"
         unbind "Ctrl g"
         bind "Ctrl d" { SwitchToMode "locked"; }
@@ -48,8 +48,8 @@ keybinds {
         bind "Alt q" { CloseFocus; }
         bind "Alt a" "Alt h" { MoveFocus "Left"; }
         bind "Alt d" "Alt l"{ MoveFocus "Right"; }
-        bind "Alt s" "Alt j" {MoveFocus "Down"; }
-        bind "Alt w" "Alt k" { MoveFocus "Up"; }
+        bind "Alt s" {MoveFocus "Down"; }
+        bind "Alt w" { MoveFocus "Up"; }
         bind "Alt t" { NewTab; }
         bind "Alt f" { ToggleFocusFullscreen; }
         bind "Alt 1" { GoToTab 1; }
