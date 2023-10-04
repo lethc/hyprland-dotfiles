@@ -19,7 +19,8 @@ folder = [
 	{ exec = '$EDITOR "$@"' },
 ]
 archive = [
-	{ exec = 'unrar "$1"', display_name = "Extract here" },
+	{ exec = 'unrar "$1"', display_name = "Extract here unrar" },
+	{ exec = 'unzip "$1"', display_name = "Extract here zip" },
 ]
 text = [
 	{ exec = '$EDITOR "$@"', block = true },
