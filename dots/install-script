@@ -12,7 +12,7 @@ echo "## 2. Installing Pacman Applications ##"
 echo "#######################################"
 
 yay -S --noconfirm nodejs npm python-pip python-pipx rustup fzf
-yay -S --noconfirm ranger-git noto-fonts-emoji-apple lsix nodejs-readability-cli selectdefaultapplication-git apple-fonts rofi-lbonn-wayland-git rofi-emoji megacmd firefox-tridactyl firefox-tridactyl-native-bin searxng-git firefox-developer-edition ncdu dust duf baobab iftop whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git texlive-latex biber texlive-binextra neovide-git yazi-bin
+yay -S --noconfirm ranger-git noto-fonts-emoji-apple lsix nodejs-readability-cli selectdefaultapplication-git apple-fonts rofi-lbonn-wayland-git rofi-emoji megacmd firefox-tridactyl firefox-tridactyl-native-bin searxng-git firefox-developer-edition ncdu dust duf baobab iftop whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git texlive-latex biber texlive-binextra neovide-git yazi-bin smile
  
 echo "#############################################"
 echo "#####   Installation nvim dependencies  #####"
