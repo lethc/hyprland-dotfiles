@@ -1,5 +1,5 @@
 simplified_ui false 
-pane_frames false
+pane_frames false // Pane names preview
 //zellij options --no-pane-frames
 default_shell "zsh"
 
@@ -63,10 +63,17 @@ keybinds {
         bind "Alt 9" { GoToTab 9; }
         bind "Alt b" { ToggleTab; }
 
+        //bind "Alt e" {
+        //        LaunchOrFocusPlugin "zellij:strider" {
+        //            floating true
+        //        }
+        //}
         bind "Alt e" {
-                LaunchOrFocusPlugin "zellij:strider" {
+                LaunchOrFocusPlugin "zellij:session-manager" {
                     floating true
-                }
+                    move_to_focused_tab true
+                };
+                SwitchToMode "Normal"
         }
     }
     pane {
@@ -78,7 +85,8 @@ keybinds {
         bind "k" "Up" { MoveFocus "Up"; }
         bind "p" { SwitchFocus; }
         bind "q" { CloseFocus; }
-        //c to rename a pain
+        bind "r" { SwitchToMode "RenamePane"; }
+        //c to rename a pane and z to show pane_frames
         //bind "a" { FocusNextPane; }
         //bind "a" { FocusPreviousPane; }
     }
@@ -119,6 +127,13 @@ keybinds {
     }
     session {
         bind "d" { Detach; }
+        bind "w" {
+                LaunchOrFocusPlugin "zellij:session-manager" {
+                    floating true
+                    move_to_focused_tab true
+                };
+                SwitchToMode "Normal"
+        }
     }
     search {
         bind "i" { EditScrollback; SwitchToMode "Normal"; }
@@ -168,7 +183,7 @@ keybinds {
 themes {
     freedom {
         fg "#DADADA"
-        bg "#1A1113"
+        bg "#281E22"
         black "#1A1113"
         red "#FF6363"
         green "#E64747"
