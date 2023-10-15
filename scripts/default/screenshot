@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
 # grim -g "$(slurp)" - | wl-copy
-grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
-# grim -g "0,0 2048x1280" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
+# grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
+
+temp_screenshot="/tmp/screenshot.png"
+# /tmp/$(date +%Y-%m-%d_%H-%m-%s).png
+
+grimblast --notify --freeze copysave area $temp_screenshot && swappy -f $temp_screenshot 
