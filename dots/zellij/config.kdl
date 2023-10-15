@@ -110,7 +110,7 @@ keybinds {
         bind "Alt m" { NewPane "Down"; }
         bind "Alt t" { NewTab; }
         bind "Alt f" { ToggleFocusFullscreen; }
-        bind "Alt p" { ToggleFloatingPanes; }
+        //bind "Alt p" { ToggleFloatingPanes; }
         bind "Alt 1" { GoToTab 1; }
         bind "Alt 2" { GoToTab 2; }
         bind "Alt 3" { GoToTab 3; }
