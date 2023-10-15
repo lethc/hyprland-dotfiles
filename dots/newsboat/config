@@ -29,7 +29,8 @@ bind-key U show-urls
 bind-key x pb-delete
 
 # notification
-notify-program ""
+#notify-program "notify-send"
+notify-program "~/.scripts/noti.sh"
 notify-always true
 notify-screen no
 notify-xterm yes
