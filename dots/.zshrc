@@ -58,6 +58,10 @@ alias mn="minase"
 alias manual="tldr"
 alias news="newsboat"
 alias wallpaper="~/.scripts/random_wallpaper.sh"
+alias z-rust="zellij -l ~/.config/zellij/kellig_layouts/rust-zellij.kdl"
+alias z-layout="zellij -l ~/.config/zellij/kellig_layouts/yazi-zellij.kdl"
+alias zz="zellij"
+alias za="zellij a"
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
@@ -100,6 +104,10 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 ##### Functions  ########
 function mkt(){
 	mkdir {nmap,content,exploits,scripts}
+}
+function zl(){
+ fzf_session=$(zellij list-sessions | grep -v "HOME" | fzf --prompt="Select Zellij session: ")
+  zellij attach $fzf_session
 }
 ## cd with ls and lsix to display images in terminal
 function cd {
