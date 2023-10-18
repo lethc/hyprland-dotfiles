@@ -57,6 +57,7 @@ alias mn="minase"
 # alias gtt='~/Downloads/Git/GTT/gtt'
 alias manual="tldr"
 alias news="newsboat"
+alias nws="newsboat"
 alias wallpaper="~/.scripts/random_wallpaper.sh"
 alias z-rust="zellij -l ~/.config/zellij/kellig_layouts/rust-zellij.kdl"
 alias z-layout="zellij -l ~/.config/zellij/kellig_layouts/yazi-zellij.kdl"
