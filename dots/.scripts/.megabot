@@ -6,6 +6,8 @@
 user="username"
 passwd="password"
 
+mega-cmd-server
+sleep 5
 mega-login $user $passwd
 sleep 15
 mega-sync "${HOME}/Sync" /Obsidian-Vault
