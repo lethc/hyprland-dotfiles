@@ -25,28 +25,33 @@ bind gi open https://github.com/
 
 " Isolate Facebook in its own container
 set auconcreatecontainer true
-autocontain -s twitter\.com work
-autocontain -s x\.com work
-autocontain -s github\.(io|com) work
-autocontain -s leetcode\.com work
-autocontain -s exercism\.org work
-autocontain -s chat.openai\.com work
-autocontain -s auth0.openai\.com work
-" autocontain -s google\.(co\.uk|com) work
-autocontain -s facebook\.com facebook
-autocontain -s youtube\.com personal
-autocontain -s google\.com personal
-autocontain -s reddit\.com personal
-autocontain -s anilist\.co personal
-autocontain -s notion\.so personal
-autocontain -s mega\.io personal
-autocontain -s microsoft\.com work
-autocontain -s microsoftonline\.com work
-autocontain -s live\.com work
+autocontain -s facebook\.com Facebook
+autocontain -s youtube\.com Google
+autocontain -s google\.com Google
+autocontain -s microsoft\.com Work
+autocontain -s microsoftonline\.com Work
+autocontain -s live\.com Work
+autocontain -s twitter\.com Work
+autocontain -s x\.com Work
+autocontain -s github\.(io|com) Work
+autocontain -s leetcode\.com Work
+autocontain -s exercism\.org Work
+autocontain -s chat.openai\.com Work
+autocontain -s auth0.openai\.com Work
+" autocontain -s google\.(co\.uk|com) Work
+autocontain -s skiff\.com Home
+autocontain -s proton\.me Home
+autocontain -s protonvpn\.com Home
+autocontain -s reddit\.com Home
+autocontain -s anilist\.co Home
+autocontain -s notion\.so Home
+autocontain -s mega\.io Home
+autocontain -s mega\.nz Home
 
 " Aliases
 "command os open https://www.youtube.com
 alias rd open https://www.reddit.com/
+alias sk open https://app.skiff.com/
 alias Yt open https://www.youtube.com/
 alias yt open http://127.0.0.1:9010
 alias ym open https://music.youtube.com/
