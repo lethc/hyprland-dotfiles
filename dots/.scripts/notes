@@ -1,3 +1,4 @@
 #!/bin/bash
-# foot -D "${HOME}/Sync" nvim
-foot --title=Fella -D "${HOME}/Sync" zellij -s HOME -l ~/.config/zellij/kellig_layouts/yazi-zellij.kdl
+
+# foot --title=Fella -D "${HOME}/Sync" zellij -s HOME -l ~/.config/zellij/kellig_layouts/yazi-zellij.kdl
+kitty --title=Fella -d "${HOME}/Sync" zellij -s HOME -l ~/.config/zellij/kellig_layouts/yazi-zellij.kdl 
