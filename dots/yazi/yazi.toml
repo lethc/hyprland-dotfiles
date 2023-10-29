@@ -15,37 +15,37 @@ cache_dir  = ""
 
 [opener]
 folder = [
-	{ exec = 'nautilus "$@"', display_name = "Reveal in Finder" },
+	{ exec = 'nautilus "$@"', desc = "Reveal in Finder" },
 	{ exec = '$EDITOR "$@"' },
 ]
 archive = [
-	{ exec = 'unrar "$1"', display_name = "Extract here unrar" },
-	{ exec = 'unzip "$1"', display_name = "Extract here zip" },
+	{ exec = 'unrar "$1"', desc = "Extract here unrar" },
+	{ exec = 'unzip "$1"', desc = "Extract here zip" },
 ]
 text = [
 	{ exec = '$EDITOR "$@"', block = true },
 ]
 image = [
-	{ exec = 'imv-dir "$@"', display_name = "Open" },
-	{ exec = 'firefox "$@"', display_name = "Open with Firefox" },
-	{ exec = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show EXIF" },
+	{ exec = 'imv-dir "$@"', desc = "Open" },
+	{ exec = 'firefox "$@"', desc = "Open with Firefox" },
+	{ exec = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF" },
 ]
 video = [
-	{ exec = 'mpv "$@"', display_name = "Open with MPV" },
-	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show media info" },
+	{ exec = 'mpv "$@"', desc = "Open with MPV" },
+	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
 ]
 audio = [
-	{ exec = 'mpv --no-video "$@"', display_name = "Open with MPV" },
-	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, display_name = "Show media info" },
+	{ exec = 'mpv --no-video "$@"', desc = "Open with MPV" },
+	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
 ]
 fallback = [
-	{ exec = 'open "$@"', display_name = "Open" },
-	{ exec = 'open -R "$@"', display_name = "Reveal in Finder" },
-	{ exec = 'wps "$@"', display_name = "Open in WPS" },
+	{ exec = 'open "$@"', desc = "Open" },
+	{ exec = 'open -R "$@"', desc = "Reveal in Finder" },
+	{ exec = 'wps "$@"', desc = "Open in WPS" },
 ]
 
 document = [
-	{ exec = 'sioyek "$@"', display_name = "Open with sioyek" },
+	{ exec = 'sioyek "$@"', desc = "Open with sioyek" },
 ]
 
 [open]

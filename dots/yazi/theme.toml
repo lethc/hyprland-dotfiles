@@ -1,34 +1,88 @@
-[tab]
-active    = { fg = "#1A1113", bg = "#FF6363" }
-inactive  = { fg = "#c9c7cd", bg = "#22191B" }
-max_width = 1
+[manager]
+cwd = { fg = "#E356A7" }
+
+# Hovered
+hovered = { fg = "#1A1113", bg = "#FF6363" }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword = { fg = "#EFA554", italic = true }
+find_position = { fg = "#f5bde6", bg = "reset", italic = true }
+
+# Marker
+marker_selected = { fg = "#42E66C", bg = "#42E66C" }
+marker_copied = { fg = "#EFA554", bg = "#EFA554" }
+marker_cut = { fg = "#FA7F94", bg = "#FA7F94" }
+
+# Tab
+tab_active = { fg = "#1A1113", bg = "#FF6363" }
+tab_inactive = { fg = "#cad3f5", bg = "#281E22" }
+tab_width = 1
+
+# Border
+border_symbol = "│"
+border_style = { fg = "#75D7EC" }
+
+# Highlighting
+# syntect_theme = "~/.config/bat/themes/Catppuccin-macchiato.tmTheme"
 
 [status]
-primary	  = { normal = "#FF6363", select = "#9B6BDF", unset = "#FCA57E" }
-secondary = { normal = "#1A1113", select = "#131314", unset = "#131314" }
-tertiary  = { normal = "#3e3e43", select = "#3e3e43", unset = "#3e3e43" }
-body      = { normal = "#22191B", select = "#22191B", unset = "#22191B" }
-emphasis  = { normal = "#c9c7cd", select = "#c9c7cd", unset = "#c9c7cd" }
-info      = { normal = "#75D7EC", select = "#75D7EC", unset = "#75D7EC" }
-success   = { normal = "#42E66C", select = "#42E66C", unset = "#42E66C" }
-warning   = { normal = "#EFA554", select = "#EFA554", unset = "#EFA554" }
-danger    = { normal = "#FA7F94", select = "#FA7F94", unset = "#FA7F94" }
-separator = { opening = "", closing = "" }
+separator_open = ""
+separator_close = ""
+separator_style = { fg = "#281E22", bg = "#281E22" }
 
-[progress]
-gauge = { fg = "#FCA57E", bg = "#22191B" }
-label = { fg = "#FFFFFF", bold = true }
+# Mode
+mode_normal = { fg = "#1A1113", bg = "#FF6363", bold = true }
+mode_select = { fg = "#1A1113", bg = "#42E66C", bold = true }
+mode_unset = { fg = "#1A1113", bg = "#f0c6c6", bold = true }
 
-[selection]
-hovered = { fg = "#1A1113", bg = "#FF6363" }
+# Progress
+progress_label = { fg = "#ffffff", bold = true }
+progress_normal = { fg = "#FF6363", bg = "#281E22" }
+progress_error = { fg = "#FA7F94", bg = "#281E22" }
 
-[marker]
-selecting = { fg = "#42E66C", bg = "#42E66C" }
-selected  = { fg = "#EFA554", bg = "#EFA554" }
+# Permissions
+permissions_t = { fg = "#FF6363" }
+permissions_r = { fg = "#EFA554" }
+permissions_w = { fg = "#FA7F94" }
+permissions_x = { fg = "#42E66C" }
+permissions_s = { fg = "#75D7EC" }
 
-[preview]
-hovered       = { underline = true }
-syntect_theme = "~/.config/bat/themes/Catppuccin-macchiato.tmTheme"
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border = { fg = "#FF6363" }
+title = {}
+value = {}
+selected = { reversed = true }
+
+[select]
+border = { fg = "#FF6363" }
+active = { fg = "#f5bde6" }
+inactive = {}
+
+[tasks]
+border = { fg = "#FF6363" }
+title = {}
+hovered = { underline = true }
+
+[which]
+mask = { bg = "#281E22" }
+cand = { fg = "#75D7EC" }
+rest = { fg = "#c9c7cd" }
+desc = { fg = "#FCA57E" }
+separator = "  "
+separator_style = { fg = "#5b6078" }
+
+[help]
+on = { fg = "#FCA57E" }
+exec = { fg = "#75D7EC" }
+desc = { fg = "#939ab7" }
+hovered = { bg = "#5b6078", bold = true }
+footer = { fg = "#494d64", bg = "#c9c7cd" }
 
 [filetype]
 
