@@ -194,6 +194,19 @@ themes {
         white "#c1c0d4"
         orange "#FFD86E"
     }
+    dark_freedom {
+        fg "#b2b5b3"
+        bg "#DADADA" //#171717
+        black "#171717"
+        red "#e55f86"
+        green "#00D787"
+        yellow "#EBFF71"
+        blue "#51a4e7"
+        magenta "#9077e7"
+        cyan "#51e6e6"
+        white "#e7e7e7"
+        orange "#EFA554"
+  }
 }
-theme "freedom"
+theme "dark_freedom"
 //theme "catppuccin-mocha"
