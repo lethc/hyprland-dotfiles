@@ -4,43 +4,41 @@
    height="40"
    version="1.1"
    viewBox="0 0 40 40"
-   id="svg17087"
-   sodipodi:docname="check-symbolic@2.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   id="svg4"
+   sodipodi:docname="checkbox-mixed-symbolic@2.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs17091" />
+     id="defs8" />
   <sodipodi:namedview
-     id="namedview17089"
+     id="namedview6"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:showpageshadow="2"
+     inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="true"
-     inkscape:zoom="9.835"
-     inkscape:cx="-16.624301"
-     inkscape:cy="15.302491"
+     showgrid="false"
+     inkscape:zoom="10.547676"
+     inkscape:cx="0"
+     inkscape:cy="19.29335"
      inkscape:window-width="1920"
-     inkscape:window-height="1012"
+     inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg17087">
+     inkscape:current-layer="svg4"
+     width="20px">
     <inkscape:grid
        type="xygrid"
-       id="grid17464"
-       originx="0"
-       originy="0" />
+       id="grid825" />
   </sodipodi:namedview>
   <path
-     d="M 31.1796,9.1602 34,12 16,30 6,20 8.8204,17.1796 16,24.3398 Z"
-     id="path17085"
-     sodipodi:nodetypes="ccccccc"
+     id="path2"
+     d="m 11,20 h 18 c 0.554,0 1,0.446 1,1 0,0.554 -0.446,1 -1,1 H 11 c -0.554,0 -1,-0.446 -1,-1 0,-0.554 0.446,-1 1,-1 z"
+     sodipodi:nodetypes="sssssss"
      style="stroke-width:2" />
 </svg>

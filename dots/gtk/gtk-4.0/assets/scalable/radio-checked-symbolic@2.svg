@@ -4,37 +4,40 @@
    height="40"
    version="1.1"
    viewBox="0 0 40 40"
-   id="svg18041"
-   sodipodi:docname="dot-symbolic@2.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   id="svg4"
+   sodipodi:docname="radio-checked-symbolic@2.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs18045" />
+     id="defs8" />
   <sodipodi:namedview
-     id="namedview18043"
+     id="namedview6"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:showpageshadow="2"
+     inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="9.8333333"
-     inkscape:cx="-17.288136"
-     inkscape:cy="12.050847"
+     inkscape:zoom="3.7291666"
+     inkscape:cx="-8.3128492"
+     inkscape:cy="25.877095"
      inkscape:window-width="1920"
-     inkscape:window-height="1012"
+     inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg18041" />
+     inkscape:current-layer="svg4">
+    <inkscape:grid
+       type="xygrid"
+       id="grid825" />
+  </sodipodi:namedview>
   <path
-     d="m 20,14 c 3.312,0 6,2.688 6,6 0,3.312 -2.688,6 -6,6 -3.312,0 -6,-2.688 -6,-6 0,-3.312 2.688,-6 6,-6 z"
-     id="path18039"
+     id="path2"
+     d="m 20,16 c 2.209138,0 4,1.790862 4,4 0,2.209138 -1.790862,4 -4,4 -2.209138,0 -4,-1.790862 -4,-4 0,-2.209138 1.790862,-4 4,-4 z"
      sodipodi:nodetypes="sssss"
      style="stroke-width:2" />
 </svg>
