@@ -22,7 +22,7 @@ configuration {
 @import                          "shared/fonts.rasi"
 
 * {
-    border-colour:               var(selected);
+    border-colour:               var(border);
     handle-colour:               var(selected);
     background-colour:           var(background);
     foreground-colour:           var(foreground);
@@ -62,7 +62,7 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      2px solid;
+    border:                      1px solid;
     border-radius:               16px;
     border-color:                @border-colour;
     cursor:                      "default";

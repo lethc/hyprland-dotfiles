@@ -72,7 +72,7 @@ const colors = {
     wallpaper_fg: 'white',
     hypr_active_border: 'rgba(3f3f3fFF)',
     hypr_inactive_border: 'rgba(3f3f3fDD)',
-    accent: '$blue',
+    accent: '$green',
     accent_fg: '#141414',
     widget_bg: '$fg_color',
     widget_opacity: 94,

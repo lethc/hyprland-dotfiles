@@ -112,7 +112,7 @@ $float: $spacing * 0.7;
 
         .battery {
             &.low { color: $red; }
-            &.charged, &.charging { color: $green; }
+            &.charged, &.charging { color: $teal; }
         }
     }
 
@@ -151,7 +151,7 @@ $float: $spacing * 0.7;
 
         .medium { @include color($yellow) }
         .low { @include color($red) }
-        .charging { @include color($green) }
+        .charging { @include color($teal) }
         &:active { @include color($accent_fg) }
     }
 
