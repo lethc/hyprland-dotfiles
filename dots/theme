@@ -21,6 +21,10 @@ yay -S codelldb
 echo "###################################"
 echo "########  Create Symlinks  ########"
 echo "###################################" 
+
+ln -sf "${HOME}/.config/hypr/dots/ags" "${HOME}/.config"
+echo "Ags linked" 
+
 ln -sf "${HOME}/.config/hypr/dots/foot" "${HOME}/.config"
 echo "foot linked"
 
