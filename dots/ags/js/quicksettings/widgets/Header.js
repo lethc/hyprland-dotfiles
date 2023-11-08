@@ -57,11 +57,11 @@ export default () => Widget.Box({
                                 label.label = `uptime: ${uptime.value}`;
                             }]],
                         }),
-                        Widget.Button({
-                            valign: 'center',
-                            onClicked: () => Lockscreen.lockscreen(),
-                            child: Widget.Icon(icons.lock),
-                        }),
+                        // Widget.Button({
+                        //     valign: 'center',
+                        //     onClicked: () => Lockscreen.lockscreen(),
+                        //     child: Widget.Icon(icons.lock),
+                        // }),
                         Widget.Button({
                             valign: 'center',
                             onClicked: () => PowerMenu.action('shutdown'),
