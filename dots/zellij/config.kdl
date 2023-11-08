@@ -196,7 +196,7 @@ themes {
     }
     dark_freedom {
         fg "#b2b5b3"
-        bg "#DADADA" //#171717
+        bg "#242424" //#171717
         black "#171717"
         red "#e55f86"
         green "#00D787"
