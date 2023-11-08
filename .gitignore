@@ -11,4 +11,3 @@ themes/one/eww/scripts/cache/dunst-toggle.lock
 dots/ranger/plugins/__pycache__/
 dots/md2anki/*
 !dots/md2anki/md2anki.config.ini
-/dots/.scripts/notes
