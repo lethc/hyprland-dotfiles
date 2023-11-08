@@ -1,0 +1,18 @@
+#!/bin/bash
+
+first_run=true
+
+while true; do
+  if [ $first_run = true ]; then
+    # Execute this just once
+    kitty --title=Fella -d "${HOME}/Sync" zellij -s HOME -l ~/.config/zellij/kellig_layouts/yazi-zellij.kdl 
+    sed -i '3s/first_run=true/first_run=false/' $0
+    break
+  else
+    # Then execute this forever
+    kitty --title=Fella -d "${HOME}/Sync" zellij a HOME
+    break
+  fi
+
+  sleep 1
+done
