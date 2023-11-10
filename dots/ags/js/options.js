@@ -38,7 +38,7 @@ export default {
             'qalculate-gtk',
             'org.gnome.Nautilus',
             // 'org.gnome.Calendar',
-            'obsidian',
+            // 'obsidian',
             // 'transmission-gtk',
             // 'caprine',
             // 'discord',
