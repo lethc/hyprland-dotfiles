@@ -1,6 +1,6 @@
+import Variable from 'resource:///com/github/Aylur/ags/variable.js';
 import GLib from 'gi://GLib';
 import options from './options.js';
-import { Variable } from './imports.js';
 
 const intval = options.systemFetchInterval;
 
@@ -21,7 +21,7 @@ export const distro = GLib.get_os_info('ID');
 export const distroIcon = (() => {
     switch (distro) {
         case 'fedora': return '';
-        case 'arch': return ''; //󱗆
+        case 'arch': return '';
         case 'nixos': return '';
         case 'debian': return '';
         case 'opensuse-tumbleweed': return '';
@@ -31,7 +31,7 @@ export const distroIcon = (() => {
     }
 })();
 
-/** @type {function([string, string]): number} */
+/** @type {function([string, string] | string[]): number} */
 const divide = ([total, free]) => Number.parseInt(free) / Number.parseInt(total);
 
 export const cpu = Variable(0, {

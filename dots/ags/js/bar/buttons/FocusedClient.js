@@ -1,16 +1,20 @@
+import Widget from 'resource:///com/github/Aylur/ags/widget.js';
+import Hyprland from 'resource:///com/github/Aylur/ags/service/hyprland.js';
+import * as Utils from 'resource:///com/github/Aylur/ags/utils.js';
 import PanelButton from '../PanelButton.js';
-import { Hyprland, Utils, Widget } from '../../imports.js';
 import options from '../../options.js';
 import { substitute } from '../../utils.js';
-import Separator from '../../misc/Separator.js';
-const { icons, titles } = options.substitutions;
 
 export const ClientLabel = () => Widget.Label({
-    binds: [['label', Hyprland.active.client, 'class', c => substitute(titles, c)]],
+    binds: [['label', Hyprland.active.client, 'class', c => {
+        const { titles } = options.substitutions;
+        return substitute(titles, c);
+    }]],
 });
 
 export const ClientIcon = () => Widget.Icon({
     connections: [[Hyprland.active.client, self => {
+        const { icons } = options.substitutions;
         const { client } = Hyprland.active;
 
         const classIcon = substitute(icons, client.class) + '-symbolic';
@@ -25,26 +29,15 @@ export const ClientIcon = () => Widget.Icon({
         if (hasTitleIcon)
             self.icon = titleIcon;
 
-        self.visible = hasTitleIcon || hasClassIcon;
+        self.visible = !!(hasTitleIcon || hasClassIcon);
     }]],
 });
-
-
-const SeparatorDot = (service, condition) => Separator({
-    orientation: 'vertical',
-    valign: 'center',
-    connections: service && [[service, dot => {
-        dot.visible = condition(service);
-    }]],
-});
-
 
 export default () => PanelButton({
-    className: 'focused-client',
+    class_name: 'focused-client',
     content: Widget.Box({
         children: [
             ClientIcon(),
-            SeparatorDot(),
             ClientLabel(),
         ],
         binds: [['tooltip-text', Hyprland.active, 'client', c => c.title]],

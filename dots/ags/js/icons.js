@@ -79,7 +79,7 @@ export default {
             track: '󰓦',
             playlist: '󰑐',
         },
-        playing: ' 󰏦 ',
+        playing: '󰏦',
         paused: '󰐍',
         stopped: '󰐍',
         prev: '󰒮',
