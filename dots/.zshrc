@@ -22,7 +22,7 @@ export PATH=~/.luarocks/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH="$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" #Biber requires this PATH to execute
 #rust Set UP
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
  ######  Aliases  ######

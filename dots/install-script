@@ -12,16 +12,27 @@ echo "## 2. Installing Pacman Applications ##"
 echo "#######################################"
 
 yay -S --noconfirm nodejs npm python-pip python-pipx rustup fzf
-yay -S --noconfirm ranger-git ttf-apple-emoji lsix nodejs-readability-cli selectdefaultapplication-git apple-fonts rofi-lbonn-wayland-git rofi-emoji megacmd firefox-tridactyl firefox-tridactyl-native-bin searxng-git firefox-developer-edition ncdu dust duf baobab iftop whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git texlive-latex biber texlive-binextra neovide-git yazi smile code-minimap
+yay -S --noconfirm ranger-git lsix nodejs-readability-cli selectdefaultapplication-git megacmd 
+yay -S --noconfirm apple-fonts 
+# yay -S --noconfirm ttf-apple-emoji
+yay -S --noconfirm rofi-lbonn-wayland-git rofi-emoji
+yay -S --noconfirm searxng-git #issues
+yay -S --noconfirm firefox-tridactyl firefox-tridactyl-native-bin firefox-developer-edition 
+yay -S --noconfirm ncdu dust duf baobab iftop neovide-git yazi smile code-minimap
+yay -S --noconfirm whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git 
+yay -S --noconfirm texlive-latex biber texlive-binextra 
  
 echo "#############################################"
 echo "#####   Installation nvim dependencies  #####"
 echo "#############################################"
 
-sudo npm install neovim
-sudo npm install -g npm@9.6.2
+#sudo npm install neovim
+npm install neovim
+#sudo npm install -g npm@9.6.2
 yay -S --noconfirm python-black prettier prettierd stylua ripgrep fd gzip  wl-clipboard cliphist unzip deno composer yarn go python-pynvim shfmt
-yay -S --noconfirm jdk-lts jdk-lts-doc google-java-format-git python-rpcq rar  xampp ruby
+yay -S --noconfirm jdk-lts jdk-lts-doc 
+yay -S --noconfirm google-java-format-git rar xampp ruby
+# yay -S --noconfirm #python-rpcq
 
 echo "###################################"
 echo "##  Installing ZSH Applications  ##"
@@ -38,10 +49,17 @@ yay -S --noconfirm zsh-syntax-highlighting zsh-autosuggestions lsd bat starship 
 echo "########################################"
 echo "##  Installing Hyprland dependencies  ##"
 echo "########################################" 
-yay -S --noconfirm kitty hyprland xdg-desktop-portal-hyprland wofi dunst jq gojq swayidle bc pamixer papirus-icon-theme playerctl grim grimblast slurp wl-clipboard socat swappy nm-connection-editor dictd blueberry acpi xdg-desktop-portal-gtk nwg-look
+yay -S --noconfirm kitty hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+yay -S --noconfirm wofi dunst jq gojq swayidle bc pamixer grim grimblast
+yay -S --noconfirm papirus-icon-theme playerctl 
+yay -S --noconfirm slurp wl-clipboard socat swappy nm-connection-editor dictd blueberry acpi nwg-look
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-yay -S --noconfirm eww-wayland swaylock-effects-git sway-audio-idle-inhibit-git light-git cava cliphist hyprpicker-git wl-clip-persist-git 
+# No eww anymore
+#yay -S --noconfirm eww-wayland 
+yay -S --noconfirm aylurs-gtk-shell
+yay -S --noconfirm swaylock-effects-git sway-audio-idle-inhibit-git wl-clip-persist-git
+yay -S --noconfirm light-git cava cliphist hyprpicker-git
 yay -S --noconfirm swww 
 
 echo "########################################"
