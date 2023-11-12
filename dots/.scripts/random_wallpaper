@@ -2,7 +2,7 @@
 
 # Variable of Wallpapers Directory
 hypr=$HOME/.config/hypr
-wallpaper_folder=$hypr/themes/one/wallpapers_evil
+wallpaper_folder=$hypr/themes/one/Wallpapers
 
 # Go to Wallpaper Directory
 cd $wallpaper_folder

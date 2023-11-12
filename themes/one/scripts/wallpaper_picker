@@ -1,7 +1,7 @@
 #!/bin/sh
 
 hypr=$HOME/.config/hypr
-wallpaper_folder=$hypr/themes/one/wallpapers_evil
+wallpaper_folder=$hypr/themes/one/Wallpapers
 
 wallpaper_location="$(ls $wallpaper_folder | rofi -dmenu -theme ~/.config/rofi/themes/easy/rofi/launcher.rasi)"
 
