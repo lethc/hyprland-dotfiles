@@ -57,7 +57,7 @@ yay -S --noconfirm slurp wl-clipboard socat swappy nm-connection-editor dictd bl
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # No eww anymore
 #yay -S --noconfirm eww-wayland 
-yay -S --noconfirm aylurs-gtk-shell
+yay -S --noconfirm aylurs-gtk-shell-git
 yay -S --noconfirm swaylock-effects-git sway-audio-idle-inhibit-git wl-clip-persist-git
 yay -S --noconfirm light-git cava cliphist hyprpicker-git
 yay -S --noconfirm swww 
