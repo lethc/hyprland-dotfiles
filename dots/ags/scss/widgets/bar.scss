@@ -152,7 +152,7 @@ $bar-spacing: $spacing / 2;
 
         .medium { @include color($yellow) }
         .low { @include color($red) }
-        .charging { @include color($green) }
+        .charging { @include color($teal) }
         &:active { @include color($accent-fg) }
     }
 

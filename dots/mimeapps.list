@@ -39,3 +39,6 @@ x-scheme-handler/mailto=Mailspring.desktop;
 x-scheme-handler/unknown=naver-whale.desktop
 x-scheme-handler/clickup=ClickUp.desktop
 x-scheme-handler/figma=figma-linux.desktop
+x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
+x-scheme-handler/magnet=freedownloadmanager_magnet_up.desktop
+application/x-bittorrent=freedownloadmanager_torrent.desktop
