@@ -9,17 +9,15 @@ import Overview from './overview/Overview.js';
 import PowerMenu from './powermenu/PowerMenu.js';
 import QuickSettings from './quicksettings/QuickSettings.js';
 import ScreenCorners from './screencorner/ScreenCorners.js';
-import SettingsDialog from './settings/SettingsDialog.js';
 import TopBar from './bar/TopBar.js';
 import Verification from './powermenu/Verification.js';
-import options from './options.js';
+import About from './about/about.js';
 import { init } from './settings/setup.js';
 import { forMonitors } from './utils.js';
-
-init();
+import options from './options.js';
 
 const windows = () => [
-    // forMonitors(Desktop),
+    forMonitors(Desktop),
     forMonitors(FloatingDock),
     forMonitors(Lockscreen),
     forMonitors(Notifications),
@@ -31,11 +29,12 @@ const windows = () => [
     Overview(),
     PowerMenu(),
     QuickSettings(),
-    SettingsDialog(),
     Verification(),
+    About(),
 ];
 
 export default {
+    onConfigParsed: init,
     windows: windows().flat(1),
     maxStreamVolume: 1.05,
     cacheNotificationActions: true,

@@ -18,6 +18,7 @@ import ScreenRecord from './buttons/ScreenRecord.js';
 import BatteryBar from './buttons/BatteryBar.js';
 import SubMenu from './buttons/SubMenu.js';
 import Recorder from '../services/screenrecord.js';
+// import Taskbar from './buttons/Taskbar.js';
 import options from '../options.js';
 
 const submenuItems = Variable(1);
@@ -99,7 +100,7 @@ const End = () => Widget.Box({
 export default monitor => Widget.Window({
     name: `bar${monitor}`,
     class_name: 'transparent',
-    exclusive: true,
+    exclusivity: 'exclusive',
     monitor,
     binds: [['anchor', options.bar.position, 'value', pos => ([
         pos, 'left', 'right',

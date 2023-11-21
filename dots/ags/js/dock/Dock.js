@@ -1,13 +1,12 @@
 import App from 'resource:///com/github/Aylur/ags/app.js';
 import Hyprland from 'resource:///com/github/Aylur/ags/service/hyprland.js';
 import Applications from 'resource:///com/github/Aylur/ags/service/applications.js';
-import * as Utils from 'resource:///com/github/Aylur/ags/utils.js';
 import Widget from 'resource:///com/github/Aylur/ags/widget.js';
 import icons from '../icons.js';
 import options from '../options.js';
 import { launchApp, range } from '../utils.js';
 
-const focus = ({ address }) => Utils.execAsync(`hyprctl dispatch focuswindow address:${address}`);
+const focus = ({ address }) => Hyprland.sendMessage(`dispatch focuswindow address:${address}`);
 
 /** @param {import('types/widgets/button').ButtonProps & { icon: string, pinned?: boolean }} o */
 const AppButton = ({ icon, pinned = false, ...rest }) => {
@@ -27,7 +26,7 @@ const AppButton = ({ icon, pinned = false, ...rest }) => {
             child: Widget.Overlay({
                 child: Widget.Icon({
                     icon,
-                    binds: [['size', options.dock.iconSize]],
+                    binds: [['size', options.desktop.dock.icon_size]],
                 }),
                 pass_through: true,
                 overlays: pinned ? [indicators] : [],
@@ -40,7 +39,7 @@ const AppButton = ({ icon, pinned = false, ...rest }) => {
 
 const Taskbar = () => Widget.Box({
     binds: [['children', Hyprland, 'clients', c => c.map(client => {
-        for (const appName of options.dock.pinnedApps.value) {
+        for (const appName of options.desktop.dock.pinned_apps.value) {
             if (client.class.toLowerCase().includes(appName.toLowerCase()))
                 return null;
         }
@@ -61,7 +60,7 @@ const Taskbar = () => Widget.Box({
 const PinnedApps = () => Widget.Box({
     class_name: 'pins',
     homogeneous: true,
-    binds: [['children', options.dock.pinnedApps, 'value', v => v
+    binds: [['children', options.desktop.dock.pinned_apps, 'value', v => v
         .map(term => ({ app: Applications.query(term)?.[0], term }))
         .filter(({ app }) => app)
         .map(({ app, term = true }) => AppButton({

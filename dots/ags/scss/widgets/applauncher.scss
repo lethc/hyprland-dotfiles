@@ -18,7 +18,6 @@ window#applauncher .window-content {
 
     scrolledwindow {
         @include scrollable;
-        // padding: $popover_padding;
         min-width: $applauncher-width;
         min-height: $applauncher-height;
     }

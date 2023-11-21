@@ -101,7 +101,7 @@ $bar-spacing: $spacing / 2;
 
     .focused-client > box > box,
     .quicksettings > box {
-        @include spacing(1, $bar-spacing);
+        @include spacing(1, if($bar-spacing == 0, $padding / 2, $bar-spacing));
     }
 
     /* stylelint-disable-next-line selector-not-notation */
@@ -110,7 +110,7 @@ $bar-spacing: $spacing / 2;
 
         .battery {
             &.low { color: $red; }
-            &.charged, &.charging { color: $green; }
+            &.charged, &.charging { color: $teal; }
         }
     }
 
@@ -175,10 +175,10 @@ $bar-spacing: $spacing / 2;
 
             .indicator {
                 font-size: 0;
-                min-width: 6px;
-                min-height: 6px;
+                min-width: 8px;
+                min-height: 8px;
                 border-radius: $radii*0.6;
-                border: $border;
+                box-shadow: inset 0 0 0 $border-width $border-color;
                 margin: 0 $padding/2;
                 transition: $transition/2;
                 background-color: transparentize($fg-color, 0.8);
@@ -189,8 +189,8 @@ $bar-spacing: $spacing / 2;
 
             &.occupied .indicator {
                 background-color: transparentize($fg-color, 0.2);
-                min-width: 8px;
-                min-height: 8px;
+                min-width: 10px;
+                min-height: 10px;
             }
 
             &:hover .indicator {
@@ -203,7 +203,7 @@ $bar-spacing: $spacing / 2;
 
             &.active .indicator {
                 min-width: 24px;
-                min-height: 12px;
+                min-height: 16px;
             }
         }
     }
