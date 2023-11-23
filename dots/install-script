@@ -11,7 +11,7 @@ echo "#######################################"
 echo "## 2. Installing Pacman Applications ##"
 echo "#######################################"
 
-yay -S --noconfirm nodejs npm python-pip python-pipx rustup fzf
+yay -S --noconfirm nodejs npm python-pip python-pipx rustup fzf wget
 yay -S --noconfirm ranger-git lsix nodejs-readability-cli selectdefaultapplication-git megacmd 
 yay -S --noconfirm apple-fonts 
 # yay -S --noconfirm ttf-apple-emoji
