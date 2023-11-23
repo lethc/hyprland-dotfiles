@@ -115,6 +115,7 @@ keymap = [
 	{ on = [ "g", "t" ],       exec = "cd /tmp",          desc = "Go to the temporary directory" },
 	{ on = [ "g", "<Space>" ], exec = "cd --interactive", desc = "Go to a directory interactively" },
 	{ on = [ "g", "v" ],       exec = "cd ~/Sync",   desc = "Go to Vault" },
+	{ on = [ "g", "p" ],       exec = "cd ~/Pictures",   desc = "Go to Pictures" },
 	{ on = [ "g", "s" ],       exec = "cd ~/Music/save_me",   desc = "Save me" },
 	{ on = [ "g", "b" ],       exec = "cd ~/Sync/Books",   desc = "Go to the Book Directory" },
 

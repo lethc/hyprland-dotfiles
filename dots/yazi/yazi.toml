@@ -15,8 +15,10 @@ cache_dir  = ""
 
 [opener]
 folder = [
-	{ exec = 'nautilus "$@"', desc = "Reveal in Finder" },
-	{ exec = '$EDITOR "$@"' },
+	{ exec = 'nautilus "$@"', desc = "Nautilus" },
+	{ exec = 'dolphin "$@"', desc = "Dolphin" },
+	{ exec = 'neovide "$@"', desc = "Neovide" },
+	{ exec = '$EDITOR "$@"', desc = "Neovim" },
 ]
 archive = [
 	{ exec = 'unrar "$1"', desc = "Extract here unrar" },
@@ -24,20 +26,24 @@ archive = [
 ]
 text = [
 	{ exec = '$EDITOR "$@"', block = true },
+	{ exec = 'neovide "$@"', block = true },
+	{ exec = 'code "$@"', block = true },
 ]
 image = [
-	{ exec = 'loupe "$@"', desc = "Open" },
-	{ exec = 'imv-dir "$@"', desc = "Open" },
+	{ exec = 'loupe "$@"', desc = "Open with Loupe" },
+	{ exec = 'imv-dir "$@"', desc = "Open with img-dir" },
 	{ exec = 'firefox "$@"', desc = "Open with Firefox" },
-	{ exec = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF" },
+	# { exec = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF" },
 ]
 video = [
 	{ exec = 'mpv "$@"', desc = "Open with MPV" },
-	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
+	{ exec = 'vlc "$@"', desc = "Open with VLC" },
+	# { exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
 ]
 audio = [
+	{ exec = 'amberol "$@"', desc = "Open with amberol" },
 	{ exec = 'mpv --no-video "$@"', desc = "Open with MPV" },
-	{ exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
+	# { exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
 ]
 fallback = [
 	{ exec = 'open "$@"', desc = "Open" },
@@ -47,6 +53,7 @@ fallback = [
 
 document = [
 	{ exec = 'sioyek "$@"', desc = "Open with sioyek" },
+	{ exec = 'zathura "$@"', desc = "Open with Zathura" },
 ]
 
 [open]
