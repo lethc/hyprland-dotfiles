@@ -109,15 +109,17 @@ keymap = [
 	{ on = [ "w" ], exec = "tasks_show", desc = "Show the tasks manager" },
 
 	# Goto
-	{ on = [ "g", "h" ],       exec = "cd ~",             desc = "Go to the home directory" },
-	{ on = [ "g", "c" ],       exec = "cd ~/.config",     desc = "Go to the config directory" },
-	{ on = [ "g", "d" ],       exec = "cd ~/Downloads",   desc = "Go to the downloads directory" },
-	{ on = [ "g", "t" ],       exec = "cd /tmp",          desc = "Go to the temporary directory" },
-	{ on = [ "g", "<Space>" ], exec = "cd --interactive", desc = "Go to a directory interactively" },
-	{ on = [ "g", "v" ],       exec = "cd ~/Sync",   desc = "Go to Vault" },
+	{ on = [ "g", "d" ],       exec = "cd ~/Documents",   desc = "Go to Documents" },
+	{ on = [ "g", "o" ],       exec = "cd ~/Downloads",   desc = "Go to Downloads" },
 	{ on = [ "g", "p" ],       exec = "cd ~/Pictures",   desc = "Go to Pictures" },
-	{ on = [ "g", "s" ],       exec = "cd ~/Music/save_me",   desc = "Save me" },
-	{ on = [ "g", "b" ],       exec = "cd ~/Sync/Books",   desc = "Go to the Book Directory" },
+	{ on = [ "g", "v" ],       exec = "cd ~/Videos",   desc = "Go to Videos" },
+	{ on = [ "g", "m" ],       exec = "cd ~/Music",   desc = "Go to Music" },
+	{ on = [ "g", "e" ],       exec = "cd ~",             desc = "Go ~/" },
+	{ on = [ "g", "c" ],       exec = "cd ~/.config",     desc = "Go to Config" },
+	{ on = [ "g", "t" ],       exec = "cd /tmp",          desc = "Go to tmp" },
+	{ on = [ "g", "<Space>" ], exec = "cd --interactive", desc = "Go to Anywhere" },
+	{ on = [ "g", "h" ],       exec = "cd ~/Home",   desc = "Go to Sync" },
+	{ on = [ "g", "b" ],       exec = "cd ~/Home/Books",   desc = "Go to the Book Directory" },
 
 	# Help
 	{ on = [ "~" ], exec = "help", desc = "Open help" },
