@@ -7,7 +7,7 @@ mkdir ~/Sync
 # git clone https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim
 # git clone https://github.com/lethc/hyprland-dotfiles.git ~/.config/hypr
 git clone https://git.sr.ht/~heckyel/yt-local ~/env/yt-local
-cp "${HOME}/.config/hypr/dots/.scripts/.megabot" ~/Sync/
+# cp "${HOME}/.config/hypr/dots/.scripts/.megabot" ~/Sync/
 cp "${HOME}/.config/hypr/dots/.scripts/rofi-finder" ~/.local/bin/
 
 # Python Debug in neovim
@@ -130,6 +130,9 @@ echo "qt cursor config created"
 
 ln -sf "${HOME}/.config/hypr/dots/md2anki" "${HOME}/.config"
 echo "md2anki linked"
+
+ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/fzj" "${HOME}/.local/bin/"
+echo "FZJ linked"
 
 echo "theme completed"
 
