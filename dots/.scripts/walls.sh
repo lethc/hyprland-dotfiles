@@ -1,7 +1,9 @@
 #!/bin/bash
 
-wall="$HOME/.config/hypr/themes/one/wallpapers/"
-cd $wall
+source $HOME/.config/hypr/scripts/variables/wall_directory
+
+wallpaper_folder=$WALL_DIRECTORY
+cd $wallpaper_folder
 
 echo "Enter start page number:"
 read page

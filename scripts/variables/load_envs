@@ -2,6 +2,10 @@
 
 # use this script with `source path/to/this/script` to load the environment variables for use in your script 
 
+source $HOME/.config/hypr/scripts/variables/wall_directory
+
+wallpaper_default=$WALL_DIRECTORY_DEFAULT
+
 temp_folder=~/.config/hypr/scripts/variables/temp
 
 # sets the PRIMARY_MONITOR_ID environment variable
@@ -31,7 +35,8 @@ function exportBackground(){
     # load the background variables
     background_image=$(head -1 $temp_folder/background)
 
-    [ -z $background_image ] && background_image="~/.config/hypr/themes/one/wallpapers/linux_archlinux.png"
+    [ -z $background_image ] && background_image="$wallpaper_default/linux_archlinux.png"
+
 
     export BACKGROUND_IMAGE=$background_image
 }
