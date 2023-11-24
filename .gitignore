@@ -11,4 +11,5 @@ dots/md2anki/*
 !dots/md2anki/md2anki.config.ini
 # !assets/Wallpapers/linux_archlinux.png
 assets/Wallpapers/
+assets/Wallpapers2/
 # dots/.scripts/notes
