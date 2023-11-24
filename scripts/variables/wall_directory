@@ -1,6 +1,6 @@
 #!/bin/bash
 
-hypr=$HOME/.config/hypr/
+hypr=$HOME/.config/hypr
 
 export WALL_DIRECTORY=$hypr/assets/Wallpapers
 
