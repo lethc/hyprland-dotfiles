@@ -9,7 +9,7 @@ export default [
         name: 'Kitty Dark',
         icon: '󰄛 ',
         // 'desktop.wallpaper.img': WP + 'kittybl.jpeg',
-        'theme.accent.accent': '$teal',
+        'theme.accent.accent': '$green',
         // "applauncher.width": 450,
         // "applauncher.height": 400,
         // "applauncher.icon_size": 45,
