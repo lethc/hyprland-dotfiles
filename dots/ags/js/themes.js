@@ -7,9 +7,9 @@ import { Theme, WP, lightColors } from './settings/theme.js';
 export default [
     Theme({
         name: 'Kitty Dark',
-        icon: '󰄛',
+        icon: '󰄛 ',
         // 'desktop.wallpaper.img': WP + 'kittybl.jpeg',
-        // 'theme.accent.accent': '$green',
+        'theme.accent.accent': '$teal',
         // "applauncher.width": 450,
         // "applauncher.height": 400,
         // "applauncher.icon_size": 45,
@@ -19,7 +19,7 @@ export default [
     }),
     Theme({
         name: 'Kitty Light',
-        icon: '󰄛',
+        icon: '󰄛 ',
         'desktop.wallpaper.img': WP + 'kitty.jpeg',
         ...lightColors,
         'theme.widget.bg': '$accent',
@@ -27,7 +27,7 @@ export default [
     }),
     Theme({
         name: 'Leaves',
-        icon: '󰌪',
+        icon: '󰌪 ',
         'desktop.wallpaper.img': WP + 'leaves.jpg',
         'theme.accent.accent': '$green',
         'theme.accent.gradient': 'to right, $accent, darken($accent, 14%)',
@@ -39,7 +39,7 @@ export default [
     }),
     Theme({
         name: 'Ivory',
-        icon: '󰟆',
+        icon: '󰟆 ',
         ...lightColors,
         'desktop.wallpaper.img': WP + 'ivory.png',
         'desktop.wallpaper.fg': '$bg_color',
@@ -56,7 +56,7 @@ export default [
     }),
     Theme({
         name: 'Space',
-        icon: '',
+        icon: ' ',
         'desktop.wallpaper.img': WP + 'space.jpg',
         'spacing': 11,
         'padding': 10,

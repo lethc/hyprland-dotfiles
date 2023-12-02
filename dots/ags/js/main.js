@@ -30,7 +30,7 @@ const windows = () => [
     PowerMenu(),
     QuickSettings(),
     Verification(),
-    About(),
+    // About(),
 ];
 
 export default {

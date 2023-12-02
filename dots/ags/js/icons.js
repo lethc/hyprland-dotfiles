@@ -80,7 +80,7 @@ export default {
             track: '󰓦',
             playlist: '󰑐',
         },
-        playing: '󰏦',
+        playing: ' 󰏦 ',
         paused: '󰐍',
         stopped: '󰐍',
         prev: '󰒮',
@@ -101,9 +101,9 @@ export default {
         },
     },
     system: {
-        cpu: 'org.gnome.SystemMonitor-symbolic',
-        ram: 'drive-harddisk-solidstate-symbolic',
-        temp: 'temperature-symbolic',
+        cpu: 'cpu-symbolic',
+        ram: 'ram-symbolic',
+        temp: 'temp-symbolic',
     },
     dialog: {
         Search: '',
