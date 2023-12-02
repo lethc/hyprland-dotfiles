@@ -26,8 +26,8 @@ export function init() {
         reloadScss();
         hyprlandInit();
         setupHyprland();
-        wallpaper();
-        showAbout();
+        // wallpaper();
+        // showAbout();
     });
 }
 
