@@ -68,7 +68,7 @@ export default {
         }),
 
         accent: {
-            accent: Option('$blue', {
+            accent: Option('$green', {
                 'category': 'Theme',
                 'title': 'Accent Color',
                 'scss': 'accent',
