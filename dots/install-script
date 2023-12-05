@@ -11,16 +11,20 @@ echo "#######################################"
 echo "## 2. Installing Pacman Applications ##"
 echo "#######################################"
 
-yay -S --noconfirm nodejs npm python-pip python-pipx rustup fzf wget
-yay -S --noconfirm ranger-git lsix nodejs-readability-cli selectdefaultapplication-git megacmd 
-yay -S --noconfirm apple-fonts 
-# yay -S --noconfirm ttf-apple-emoji
-yay -S --noconfirm rofi-lbonn-wayland-git rofi-emoji
-yay -S --noconfirm searxng-git #issues
-yay -S --noconfirm firefox-tridactyl firefox-tridactyl-native-bin firefox-developer-edition 
-yay -S --noconfirm ncdu dust duf baobab iftop neovide-git yazi smile code-minimap
-yay -S --noconfirm whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git 
-yay -S --noconfirm texlive-latex biber texlive-binextra 
+yay -S   nodejs npm python-pip python-pipx rustup fzf wget
+yay -S   ranger-git lsix nodejs-readability-cli selectdefaultapplication-git 
+#yay -S   megacmd
+yay -S   apple-fonts 
+# yay -S   ttf-apple-emoji
+yay -S   rofi-lbonn-wayland-git
+#yay -S   rofi-emoji
+#issues with
+yay -S   searxng-git 
+yay -S   firefox-tridactyl firefox-tridactyl-native-bin firefox-developer-edition 
+yay -S   ncdu dust duf baobab iftop yazi smile code-minimap
+yay -S   neovide-git
+yay -S   whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git 
+yay -S   texlive-latex biber texlive-binextra 
  
 echo "#############################################"
 echo "#####   Installation nvim dependencies  #####"
@@ -29,10 +33,12 @@ echo "#############################################"
 #sudo npm install neovim
 npm install neovim
 #sudo npm install -g npm@9.6.2
-yay -S --noconfirm python-black prettier prettierd stylua ripgrep fd gzip  wl-clipboard cliphist unzip deno composer yarn go python-pynvim shfmt
-yay -S --noconfirm jdk-lts jdk-lts-doc 
-yay -S --noconfirm google-java-format-git rar xampp ruby
-# yay -S --noconfirm #python-rpcq
+yay -S   python-black prettier prettierd stylua ripgrep fd gzip  wl-clipboard cliphist unzip deno composer yarn go python-pynvim shfmt
+yay -S   jdk-lts jdk-lts-doc 
+yay -S   rar xampp ruby
+# issues
+yay -S   google-java-format-git
+# yay -S   #python-rpcq
 
 echo "###################################"
 echo "##  Installing ZSH Applications  ##"
@@ -43,30 +49,31 @@ sudo usermod --shell /usr/bin/zsh root
 echo "Change shell user"
 sudo usermod --shell /usr/bin/zsh Lummyn
 
-yay -S --noconfirm zsh-syntax-highlighting zsh-autosuggestions lsd bat starship zsh-autocomplete-git zsh-sudo-git zsh-vi-mode
-
+yay -S   zsh-syntax-highlighting zsh-autosuggestions lsd bat starship zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git
 
 echo "########################################"
 echo "##  Installing Hyprland dependencies  ##"
 echo "########################################" 
-yay -S --noconfirm kitty hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
-yay -S --noconfirm wofi dunst jq gojq swayidle bc pamixer grim grimblast
-yay -S --noconfirm papirus-icon-theme playerctl 
-yay -S --noconfirm slurp wl-clipboard socat swappy nm-connection-editor dictd blueberry acpi nwg-look
+yay -S   kitty hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+yay -S   wofi dunst jq gojq-bin swayidle bc pamixer grim grimblast
+yay -S   papirus-icon-theme playerctl 
+yay -S   slurp wl-clipboard socat swappy nm-connection-editor blueberry acpi 
+yay -S   nwg-look-bin
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # No eww anymore
-#yay -S --noconfirm eww-wayland 
-yay -S --noconfirm aylurs-gtk-shell-git inotify-tools
-yay -S --noconfirm swaylock-effects-git sway-audio-idle-inhibit-git wl-clip-persist-git
-yay -S --noconfirm light-git cava cliphist hyprpicker-git
-yay -S --noconfirm swww 
+#yay -S   eww-wayland 
+yay -S   aylurs-gtk-shell-git
+yay -S   inotify-tools
+yay -S   swaylock-effects-git sway-audio-idle-inhibit-git wl-clip-persist-git
+yay -S   light-git cava cliphist hyprpicker-git
+yay -S   swww-git
 
 echo "########################################"
 echo "############ SDDM Theme  ###############"
 echo "########################################" 
-yay -S --noconfirm sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2 nsxiv imv
-yay -S --noconfirm sddm-theme-corners-git
+yay -S   sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2 nsxiv imv
+yay -S   sddm-theme-corners-git
 
 echo "creating sddm.conf.d"
 sudo mkdir /etc/sddm.conf.d/
@@ -88,9 +95,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "######################################"
 echo "###### Installing frequent apps ######"
 echo "######################################"
-yay -S --noconfirm gtt-bin youtube-tui-git w3m lynx httrack vlc obsidian tori-bin python-pytube sioyek amberol
+yay -S   gtt-bin youtube-tui-git w3m lynx httrack vlc obsidian tori-bin python-pytube sioyek amberol
 pipx install wisdom-tree
-cargo install bard-rs
+# cargo install bard-rs
 
 echo "######################################"
 echo "#####   Installation completed   #####"
