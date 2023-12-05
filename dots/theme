@@ -3,7 +3,7 @@ echo "######################################"
 echo "#######   Clonning repos  ############"
 echo "######################################"
 
-mkdir ~/Sync
+mkdir ~/Home
 # git clone https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim
 # git clone https://github.com/lethc/hyprland-dotfiles.git ~/.config/hypr
 git clone https://git.sr.ht/~heckyel/yt-local ~/env/yt-local
