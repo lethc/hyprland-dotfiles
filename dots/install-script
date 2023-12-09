@@ -11,20 +11,20 @@ echo "#######################################"
 echo "## 2. Installing Pacman Applications ##"
 echo "#######################################"
 
-yay -S   nodejs npm python-pip python-pipx rustup fzf wget
-yay -S   ranger-git lsix nodejs-readability-cli selectdefaultapplication-git 
+yay -S  nodejs npm python-pip python-pipx rustup fzf wget
+yay -S  ranger-git lsix nodejs-readability-cli selectdefaultapplication-git 
 #yay -S   megacmd
 yay -S   apple-fonts 
 # yay -S   ttf-apple-emoji
 yay -S   rofi-lbonn-wayland-git
 #yay -S   rofi-emoji
 #issues with
-yay -S   searxng-git 
-yay -S   firefox-tridactyl firefox-tridactyl-native-bin firefox-developer-edition 
-yay -S   ncdu dust duf baobab iftop yazi smile code-minimap
-yay -S   neovide-git
-yay -S   whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git 
-yay -S   texlive-latex biber texlive-binextra 
+yay -S  searxng-git 
+yay -S  firefox-tridactyl firefox-tridactyl-native-bin firefox-developer-edition 
+yay -S  ncdu dust duf baobab iftop yazi smile code-minimap
+yay -S  neovide-git
+yay -S  whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git 
+yay -S  texlive-latex biber texlive-binextra 
  
 echo "#############################################"
 echo "#####   Installation nvim dependencies  #####"
@@ -33,11 +33,11 @@ echo "#############################################"
 #sudo npm install neovim
 npm install neovim
 #sudo npm install -g npm@9.6.2
-yay -S   python-black prettier prettierd stylua ripgrep fd gzip  wl-clipboard cliphist unzip deno composer yarn go python-pynvim shfmt
-yay -S   jdk-lts jdk-lts-doc 
-yay -S   rar xampp ruby
+yay -S  python-black prettier prettierd stylua ripgrep fd gzip  wl-clipboard cliphist unzip deno composer yarn go python-pynvim shfmt
+yay -S  jdk-lts jdk-lts-doc 
+yay -S  rar xampp ruby
 # issues
-yay -S   google-java-format-git
+yay -S  google-java-format-git
 # yay -S   #python-rpcq
 
 echo "###################################"
@@ -54,26 +54,26 @@ yay -S   zsh-syntax-highlighting zsh-autosuggestions lsd bat starship zsh-autoco
 echo "########################################"
 echo "##  Installing Hyprland dependencies  ##"
 echo "########################################" 
-yay -S   kitty hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
-yay -S   wofi dunst jq gojq-bin swayidle bc pamixer grim grimblast
-yay -S   papirus-icon-theme playerctl 
-yay -S   slurp wl-clipboard socat swappy nm-connection-editor blueberry acpi 
-yay -S   nwg-look-bin
+yay -S  kitty hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+yay -S  wofi dunst jq gojq-bin swayidle bc pamixer grim grimblast
+yay -S  papirus-icon-theme playerctl 
+yay -S  slurp wl-clipboard socat swappy nm-connection-editor blueberry acpi 
+yay -S  nwg-look-bin
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # No eww anymore
 #yay -S   eww-wayland 
-yay -S   aylurs-gtk-shell
-yay -S   inotify-tools
-yay -S   swaylock-effects-git sway-audio-idle-inhibit-git wl-clip-persist-git
-yay -S   light-git cava cliphist hyprpicker-git
-yay -S   swww-git
+yay -S  aylurs-gtk-shell
+yay -S  inotify-tools
+yay -S  swaylock-effects-git sway-audio-idle-inhibit-git wl-clip-persist-git
+yay -S  light-git cava cliphist hyprpicker-git
+yay -S  swww-git
 
 echo "########################################"
 echo "############ SDDM Theme  ###############"
 echo "########################################" 
-yay -S   sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2 nsxiv imv
-yay -S   sddm-theme-corners-git
+yay -S  sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2 nsxiv imv
+yay -S  sddm-theme-corners-git
 
 echo "creating sddm.conf.d"
 sudo mkdir /etc/sddm.conf.d/
@@ -95,7 +95,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo "######################################"
 echo "###### Installing frequent apps ######"
 echo "######################################"
-yay -S   gtt-bin youtube-tui-git w3m lynx httrack vlc obsidian tori-bin python-pytube sioyek amberol
+yay -S  gtt-bin youtube-tui-git w3m lynx httrack vlc obsidian tori-bin python-pytube sioyek amberol anki kooha
 pipx install wisdom-tree
 # cargo install bard-rs
 
