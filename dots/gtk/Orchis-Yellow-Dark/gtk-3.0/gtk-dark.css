@@ -3740,7 +3740,7 @@ infobar.action > revealer > box *:link, infobar.action:backdrop > revealer > box
 }
 
 infobar.action:hover > revealer > box, infobar.question:hover > revealer > box {
-  background-color: #fbb814;
+  background-color: #FFA557;
 }
 
 infobar.warning > revealer > box, infobar.warning:backdrop > revealer > box {
@@ -3757,7 +3757,7 @@ infobar.warning > revealer > box *:link, infobar.warning:backdrop > revealer > b
 }
 
 infobar.warning:hover > revealer > box {
-  background-color: #fbb814;
+  background-color: #FFA557;
 }
 
 infobar.error > revealer > box, infobar.error:backdrop > revealer > box {
