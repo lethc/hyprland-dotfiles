@@ -71,7 +71,7 @@ echo "starship linked"
 
 mkdir "${HOME}/.themes"
 cp -r "${HOME}/.config/hypr/dots/gtk/Everforest-Dark-BL" "${HOME}/.themes"
-cp -r "${HOME}/.config/hypr/dots/gtk/Orchis-Teal-Dark" "${HOME}/.themes"
+cp -r "${HOME}/.config/hypr/dots/gtk/Orchis-Yellow-Dark" "${HOME}/.themes"
 echo "GTK3 theme copied"
 
 rm -r ~/.config/gtk-4.0/
