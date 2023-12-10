@@ -194,7 +194,7 @@ themes {
         white "#c1c0d4"
         orange "#FFD86E"
     }
-    dark_freedom {
+    neo_freedom {
         fg "#b2b5b3"
         bg "#242424" //#171717
         black "#171717"
@@ -207,6 +207,19 @@ themes {
         white "#e7e7e7"
         orange "#EFA554"
   }
+  no_clown_freedom {
+      fg "#E1E1E1"
+      bg "#242424" //#171717
+      black "#171717"
+      red "#b46958"
+      green "#90A959"
+      yellow "#F4BF75"
+      blue "#BAD7FF"
+      magenta "#AA759F"
+      cyan "#88afa2"
+      white "#E1E1E1"
+      orange "#FFA557"
+  }
 }
-theme "dark_freedom"
+theme "no_clown_freedom"
 //theme "catppuccin-mocha"

@@ -6,13 +6,13 @@ hovered = { fg = "#171717", bg = "#b2b5b3" }
 preview_hovered = { underline = true }
 
 # Find
-find_keyword = { fg = "#EBFF71", italic = true }
+find_keyword = { fg = "#F4BF75", italic = true }
 find_position = { fg = "#51a4e7", bg = "reset", italic = true }
 
 # Marker
-marker_selected = { fg = "#00D787", bg = "#00D787" }
-marker_copied = { fg = "#EBFF71", bg = "#EBFF71" }
-marker_cut = { fg = "#e55f86", bg = "#e55f86" }
+marker_selected = { fg = "#90A959", bg = "#90A959" }
+marker_copied = { fg = "#F4BF75", bg = "#F4BF75" }
+marker_cut = { fg = "#b46958", bg = "#b46958" }
 
 # Tab
 tab_active = { fg = "#171717", bg = "#b2b5b3" }
@@ -21,7 +21,7 @@ tab_width = 1
 
 # Border
 border_symbol = "│"
-border_style = { fg = "#51e6e6" }
+border_style = { fg = "#88afa2" }
 
 # Highlighting
 # syntect_theme = "~/.config/bat/themes/Catppuccin-macchiato.tmTheme"
@@ -33,20 +33,20 @@ separator_style = { fg = "#313234", bg = "#313234" }
 
 # Mode
 mode_normal = { fg = "#171717", bg = "#b2b5b3", bold = true }
-mode_select = { fg = "#171717", bg = "#00D787", bold = true }
+mode_select = { fg = "#171717", bg = "#90A959", bold = true }
 mode_unset = { fg = "#171717", bg = "#f0c6c6", bold = true }
 
 # Progress
 progress_label = { fg = "#ffffff", bold = true }
 progress_normal = { fg = "#b2b5b3", bg = "#313234" }
-progress_error = { fg = "#e55f86", bg = "#313234" }
+progress_error = { fg = "#b46958", bg = "#313234" }
 
 # Permissions
 permissions_t = { fg = "#b2b5b3" }
-permissions_r = { fg = "#EBFF71" }
-permissions_w = { fg = "#e55f86" }
-permissions_x = { fg = "#00D787" }
-permissions_s = { fg = "#51e6e6" }
+permissions_r = { fg = "#F4BF75" }
+permissions_w = { fg = "#b46958" }
+permissions_x = { fg = "#90A959" }
+permissions_s = { fg = "#88afa2" }
 
 # : }}}
 
@@ -71,7 +71,7 @@ hovered = { underline = true }
 
 [which]
 mask = { bg = "#313234" }
-cand = { fg = "#51e6e6" }
+cand = { fg = "#88afa2" }
 rest = { fg = "#e7e7e7" }
 desc = { fg = "#FCA57E" }
 separator = "  "
@@ -79,7 +79,7 @@ separator_style = { fg = "#5b6078" }
 
 [help]
 on = { fg = "#FCA57E" }
-exec = { fg = "#51e6e6" }
+exec = { fg = "#88afa2" }
 desc = { fg = "#939ab7" }
 hovered = { bg = "#5b6078", bold = true }
 footer = { fg = "#494d64", bg = "#e7e7e7" }
@@ -88,11 +88,11 @@ footer = { fg = "#494d64", bg = "#e7e7e7" }
 
 rules = [
 	# Images
-	{ mime = "image/*", fg = "#51e6e6" },
+	{ mime = "image/*", fg = "#88afa2" },
 
 	# Videos
-	{ mime = "video/*", fg = "#EBFF71" },
-	{ mime = "audio/*", fg = "#EBFF71" },
+	{ mime = "video/*", fg = "#F4BF75" },
+	{ mime = "audio/*", fg = "#F4BF75" },
 
 	# Archives
 	{ mime = "application/zip", fg = "#9077e7" },

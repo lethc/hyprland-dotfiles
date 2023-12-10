@@ -29,15 +29,25 @@ export default {
         'unit': '',
     }),
 
+    // color: {
+    //     red: Option('#e55f86', { 'scss': 'red' }),
+    //     green: Option('#00D787', { 'scss': 'green' }),
+    //     yellow: Option('#EBFF71', { 'scss': 'yellow' }),
+    //     blue: Option('#51a4e7', { 'scss': 'blue' }),
+    //     // blue: Option('#00D787', { 'scss': 'blue' }),
+    //     magenta: Option('#9077e7', { 'scss': 'magenta' }),
+    //     teal: Option('#51e6e6', { 'scss': 'teal' }),
+    //     orange: Option('#E79E64', { 'scss': 'orange' }),
+    // },
     color: {
-        red: Option('#e55f86', { 'scss': 'red' }),
-        green: Option('#00D787', { 'scss': 'green' }),
-        yellow: Option('#EBFF71', { 'scss': 'yellow' }),
-        blue: Option('#51a4e7', { 'scss': 'blue' }),
+        red: Option('#b46958', { 'scss': 'red' }),
+        green: Option('#90A959', { 'scss': 'green' }),
+        yellow: Option('#F4BF75', { 'scss': 'yellow' }),
+        blue: Option('#BAD7FF', { 'scss': 'blue' }),
         // blue: Option('#00D787', { 'scss': 'blue' }),
-        magenta: Option('#9077e7', { 'scss': 'magenta' }),
-        teal: Option('#51e6e6', { 'scss': 'teal' }),
-        orange: Option('#E79E64', { 'scss': 'orange' }),
+        magenta: Option('#AA759F', { 'scss': 'magenta' }),
+        teal: Option('#88afa2', { 'scss': 'teal' }),
+        orange: Option('#FFA557', { 'scss': 'orange' }),
     },
 
     theme: {
@@ -68,7 +78,7 @@ export default {
         }),
 
         accent: {
-            accent: Option('$green', {
+            accent: Option('$yellow', {
                 'category': 'Theme',
                 'title': 'Accent Color',
                 'scss': 'accent',
