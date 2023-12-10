@@ -150,7 +150,7 @@ $bar-spacing: $spacing / 2;
             }
         }
 
-        .medium { @include color($yellow) }
+        .medium { @include color($orange) }
         .low { @include color($red) }
         .charging { @include color($teal) }
         &:active { @include color($accent-fg) }
