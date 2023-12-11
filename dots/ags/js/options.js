@@ -233,6 +233,8 @@ export default {
               'neovide',
               'qalculate-gtk',
               'org.gnome.Nautilus',
+              'com.github.xournalpp.xournalpp',
+              'org.pwmt.zathura',
             ], { 'scss': 'exclude' }),
         },
     },
