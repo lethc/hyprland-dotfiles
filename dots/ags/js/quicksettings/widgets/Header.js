@@ -2,7 +2,7 @@ import Widget from 'resource:///com/github/Aylur/ags/widget.js';
 import Battery from 'resource:///com/github/Aylur/ags/service/battery.js';
 import icons from '../../icons.js';
 import PowerMenu from '../../services/powermenu.js';
-import Lockscreen from '../../services/lockscreen.js';
+// import Lockscreen from '../../services/lockscreen.js';
 import Avatar from '../../misc/Avatar.js';
 import { uptime } from '../../variables.js';
 import options from '../../options.js';
