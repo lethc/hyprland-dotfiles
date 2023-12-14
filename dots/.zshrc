@@ -47,7 +47,7 @@ alias jukit_kitty="kitty --listen-on=unix:@"$(date +%s%N)" -o allow_remote_contr
 # alias nsxiv="nsxiv-rifle"
 alias sxiv="nsxiv"
 alias md="gh-md-toc" #https://github.com/jonathanpoelen/gh-md-toc
-alias vim="nvim"
+# alias vim="nvim"
 alias vi="nvim"
 alias py="python"
 alias youtube="qutebrowser http://127.0.0.1:9010/"
