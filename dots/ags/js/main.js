@@ -17,19 +17,19 @@ import { forMonitors } from './utils.js';
 import options from './options.js';
 
 const windows = () => [
-    forMonitors(Desktop),
+    forMonitors(Desktop), // A Desktop Clock on top of the wallpaper and the right click's pop-up
     forMonitors(FloatingDock),
-    forMonitors(Lockscreen),
-    forMonitors(Notifications),
+    // forMonitors(Lockscreen),
+    forMonitors(Notifications), // Notification pop-ups
     forMonitors(OSD),
-    forMonitors(ScreenCorners),
+    forMonitors(ScreenCorners), // The rounded corners around the screen
     forMonitors(TopBar),
     Applauncher(),
-    Dashboard(),
-    Overview(),
-    PowerMenu(),
-    QuickSettings(),
-    Verification(),
+    Dashboard(), // The Notification Panel
+    Overview(), // Show all the workspaces by pressing the button on the left
+    PowerMenu(), // Show Power options by pressing the button on the right
+    QuickSettings(), // Show a small menu by pressing the wifi icon
+    Verification(), // Show a Verification menu by pressing the Power button in the QuickSettings
     // About(),
 ];
 
