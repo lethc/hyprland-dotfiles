@@ -48,7 +48,7 @@ export default () => {
             children: [
                 Indicator(),
                 Widget.Box({ child: revaler }),
-                LevelBar(),
+                // LevelBar(),
             ],
         }),
     });
