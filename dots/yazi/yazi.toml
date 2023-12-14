@@ -28,6 +28,7 @@ archive = [
 text = [
 	{ exec = '$EDITOR "$@"', block = true },
 	{ exec = 'neovide "$@"', block = true },
+	{ exec = 'vim "$@"', block = true },
 	{ exec = 'code "$@"', block = true },
 	{ exec = 'sh "$@"', block = true },
 ]
