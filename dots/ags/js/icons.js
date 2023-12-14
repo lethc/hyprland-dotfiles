@@ -36,7 +36,8 @@ export default {
         },
     },
     apps: {
-        apps: 'view-app-grid-symbolic',
+        // apps: 'view-app-grid-symbolic',
+        apps: 'list-remove-all-symbolic',
         search: 'folder-saved-search-symbolic',
     },
     battery: {
