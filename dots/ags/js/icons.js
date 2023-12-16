@@ -37,7 +37,7 @@ export default {
     },
     apps: {
         // apps: 'view-app-grid-symbolic',
-        apps: 'list-remove-all-symbolic',
+        apps: 'search-symbolic',
         search: 'folder-saved-search-symbolic',
     },
     battery: {
