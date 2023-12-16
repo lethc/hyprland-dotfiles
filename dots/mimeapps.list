@@ -1,7 +1,7 @@
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;sioyek.desktop;
 image/gif=mpv.desktop;
-image/jpeg=imv-dir.desktop;
+image/jpeg=imv-dir.desktop;org.gnome.Loupe.desktop;
 inode/directory=org.gnome.Nautilus.desktop;org.kde.dolphin.desktop;
 text/markdown=kitty-open.desktop;
 text/plain=kitty-open.desktop;
@@ -18,9 +18,9 @@ image/bmp=nsxiv.desktop
 image/gif=mpv.desktop
 image/heif=nsxiv.desktop
 image/jp2=nsxiv.desktop
-image/jpeg=imv-dir.desktop
+image/jpeg=org.gnome.Loupe.desktop
 image/jxl=nsxiv.desktop
-image/png=imv-dir.desktop
+image/png=org.gnome.Loupe.desktop
 image/svg+xml=nsxiv.desktop
 image/tiff=nsxiv.desktop
 image/webp=nsxiv.desktop
@@ -42,3 +42,4 @@ x-scheme-handler/figma=figma-linux.desktop
 x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
 x-scheme-handler/magnet=freedownloadmanager_magnet_up.desktop
 application/x-bittorrent=freedownloadmanager_torrent.desktop
+
