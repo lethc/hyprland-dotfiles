@@ -22,8 +22,9 @@ const SysTrayItem = item => PanelButton({
     },
 
     // @ts-expect-error popup_at_widget missing from types?
-    on_primary_click: btn => item.menu?.popup_at_widget(
-        btn, Gdk.Gravity.SOUTH, Gdk.Gravity.NORTH, null),
+    // on_primary_click: btn => item.menu?.popup_at_widget(
+    //     btn, Gdk.Gravity.SOUTH, Gdk.Gravity.NORTH, null),
+    on_primary_click: (_, event) => item.activate(event),
 
     // @ts-expect-error popup_at_widget missing from types?
     on_secondary_click: btn => item.menu?.popup_at_widget(
