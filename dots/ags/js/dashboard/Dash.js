@@ -7,7 +7,7 @@ import options from '../options.js';
 export default () => PopupWindow({
     name: 'dash',
     connections: [[options.bar.position, self => {
-        self.anchor = ['center', options.bar.position.value];
+        self.anchor = [options.bar.position.value];
         if (options.bar.position.value === 'top')
             self.transition = 'slide_down';
 
