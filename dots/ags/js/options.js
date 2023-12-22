@@ -296,7 +296,7 @@ export default {
             ['org.gnome.Snapshot', 'Camera'],
             ['io.github.seadve.Kooha', 'Capture Video'],
             ['org.telegram.desktop', 'Telegram'],
-            ['', 'Firefox'],
+            ['', 'Desktop'],
             ['foot', 'Term'],
             ['org.gnome.Nautilus', 'Files'],
             ['libreoffice-writer', 'Writer'],
