@@ -14,8 +14,6 @@ export default [
         // "applauncher.height": 400,
         // "applauncher.icon_size": 45,
         // "desktop.clock.enable": false,
-        // "desktop.wallpaper.img": "/home/Lummyn/.config/ags/assets/kittybl.jpeg",
-        // "desktop.avatar": "/home/Lummyn/Pictures/Profiles/monster.png",
     }),
     Theme({
         name: 'Kitty Light',
