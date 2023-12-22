@@ -297,7 +297,7 @@ export default {
             ['io.github.seadve.Kooha', 'Capture Video'],
             ['org.telegram.desktop', 'Telegram'],
             ['', 'Firefox'],
-            ['foot', 'Terminal'],
+            ['foot', 'Term'],
             ['org.gnome.Nautilus', 'Files'],
             ['libreoffice-writer', 'Writer'],
             ['', 'Desktop'],
