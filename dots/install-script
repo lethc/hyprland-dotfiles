@@ -64,6 +64,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # No eww anymore
 #yay -S   eww-wayland 
 yay -S  aylurs-gtk-shell
+yay -S  wf-recorder wayshot
 yay -S  inotify-tools
 yay -S  swaylock-effects-git sway-audio-idle-inhibit-git wl-clip-persist-git
 yay -S  light-git cava cliphist hyprpicker-git
