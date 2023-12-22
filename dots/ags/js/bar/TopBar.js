@@ -58,8 +58,8 @@ const Start = () => Widget.Box({
         SeparatorDot(),
         FocusedClient(),
         Widget.Box({ hexpand: true }),
-        NotificationIndicator(),
-        SeparatorDot(Notifications, n => n.notifications.length > 0 || n.dnd),
+        MediaIndicator(),
+        SeparatorDot(Mpris, m => m.players.length > 0),
     ],
 });
 
@@ -73,15 +73,15 @@ const Center = () => Widget.Box({
 const End = () => Widget.Box({
     class_name: 'end',
     children: [
-        SeparatorDot(Mpris, m => m.players.length > 0),
-        MediaIndicator(),
+        SeparatorDot(Notifications, n => n.notifications.length > 0 || n.dnd),
+        NotificationIndicator(),
         Widget.Box({ hexpand: true }),
 
         SubMenu({
             items: submenuItems,
             children: [
                 SysTray(),
-                ColorPicker(),
+                // ColorPicker(),
             ],
         }),
 
