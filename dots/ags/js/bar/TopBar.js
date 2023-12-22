@@ -78,14 +78,15 @@ const End = () => Widget.Box({
         NotificationIndicator(),
         Widget.Box({ hexpand: true }),
 
-        SubMenu({
-            items: submenuItems,
-            children: [
-                SysTray(),
-                // ColorPicker(),
-            ],
-        }),
+        // SubMenu({
+        //     items: submenuItems,
+        //     children: [
+        //         SysTray(),
+        //         // ColorPicker(),
+        //     ],
+        // }),
 
+        SysTray(),
         SeparatorDot(),
         ScreenRecord(),
         WeatherBox(),
