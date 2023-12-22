@@ -15,7 +15,7 @@ export default () => PopupWindow({
             self.transition = 'slide_left';
     }]],
     child: Widget.Box({
-    css: 'min-height: 38em; min-width: 10em; margin-left: 1em',
+    css: 'min-height: 34em; min-width: 10em; margin-left: 1em',
         children: [
             NotificationColumn(),
             // Widget.Separator({ orientation: 1 }),
