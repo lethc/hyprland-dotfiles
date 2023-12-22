@@ -34,8 +34,19 @@
     }
 }
 
-window#dashboard .window-content {
-    @include floating-widget;
+window#notPanel .window-content {
+
+    // @include floating-widget;
+    @if $drop-shadow {
+        box-shadow: 0 0 5px 0 $shadow;
+    }
+
+    margin: max($spacing, 8px);
+    border: $border-width solid $popover-border-color;
+    background-color: $bg-color;
+    color: $fg-color;
+    border-radius: $popover-radius;
+    padding: $popover-padding;
 
     .notifications {
         min-width: $notifications-width;
@@ -43,6 +54,8 @@ window#dashboard .window-content {
         .header {
             margin-bottom: $spacing;
             margin-right: $spacing;
+            // font-weight: bold;
+            // font-style: italic;
 
             > label { margin-left: $radii / 2; }
 
@@ -103,6 +116,7 @@ window#dashboard .window-content {
 
     .calendar {
         @include calendar;
+        // padding-left: 200px;
     }
 
     .circular-progress-box {

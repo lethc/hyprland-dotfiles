@@ -1,5 +1,7 @@
 import Applauncher from './applauncher/Applauncher.js';
 import Dashboard from './dashboard/Dashboard.js';
+import Dash from './dashboard/Dash.js';
+import NotPanel from './dashboard/NotPanel.js';
 import Desktop from './desktop/Desktop.js';
 import FloatingDock from './dock/FloatingDock.js';
 import Lockscreen from './lockscreen/Lockscreen.js';
@@ -26,6 +28,8 @@ const windows = () => [
     forMonitors(TopBar),
     Applauncher(),
     Dashboard(), // The Notification Panel
+    Dash(),
+    NotPanel(),
     Overview(), // Show all the workspaces by pressing the button on the left
     PowerMenu(), // Show Power options by pressing the button on the right
     QuickSettings(), // Show a small menu by pressing the wifi icon
@@ -40,6 +44,8 @@ export default {
     cacheNotificationActions: true,
     closeWindowDelay: {
         'quicksettings': options.transition.value,
+        'dash': options.transition.value,
         'dashboard': options.transition.value,
+        'notPanel': options.transition.value,
     },
 };

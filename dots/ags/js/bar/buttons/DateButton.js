@@ -4,7 +4,7 @@ import PanelButton from '../PanelButton.js';
 
 export default ({ format = '%H:%M 󰧟 %e %a %b' } = {}) => PanelButton({
     class_name: 'dashboard panel-button',
-    on_clicked: () => App.toggleWindow('dashboard'),
-    window: 'dashboard',
+    on_clicked: () => App.toggleWindow('dash'),
+    window: 'dash',
     content: Clock({ format }),
 });

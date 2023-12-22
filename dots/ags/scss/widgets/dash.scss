@@ -30,11 +30,11 @@
             color: transparentize($fg-color, 0.9);
         }
         font-size: 1.1em;
-        padding: .2em;
+        padding: .1em;
     }
 }
 
-window#dashboard .window-content {
+window#dash .window-content {
     @include floating-widget;
 
     .notifications {

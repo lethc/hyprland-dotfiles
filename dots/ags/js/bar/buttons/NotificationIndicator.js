@@ -12,7 +12,7 @@ import HoverRevealer from '../../misc/HoverRevealer.js';
 export default ({ direction = 'left' } = {}) => HoverRevealer({
     class_name: 'notifications panel-button',
     eventboxConnections: [
-        ['button-press-event', () => App.openWindow('dashboard')],
+        ['button-press-event', () => App.openWindow('notPanel')],
         [Notifications, box => box.visible =
             Notifications.notifications.length > 0 || Notifications.dnd],
     ],

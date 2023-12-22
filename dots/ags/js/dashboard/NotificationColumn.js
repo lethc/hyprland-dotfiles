@@ -20,7 +20,7 @@ const ClearButton = () => Widget.Button({
 const Header = () => Widget.Box({
     class_name: 'header',
     children: [
-        Widget.Label({ label: 'Notifications', hexpand: true, xalign: 0 }),
+        Widget.Label({ label: 'Notifications', hexpand: true, xalign: 0, css: 'font-weight: bold;' }),
         ClearButton(),
     ],
 });
