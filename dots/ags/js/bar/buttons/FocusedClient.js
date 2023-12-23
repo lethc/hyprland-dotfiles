@@ -1,6 +1,8 @@
 import Widget from 'resource:///com/github/Aylur/ags/widget.js';
 import Hyprland from 'resource:///com/github/Aylur/ags/service/hyprland.js';
 import * as Utils from 'resource:///com/github/Aylur/ags/utils.js';
+import { exec, execAsync } from 'resource:///com/github/Aylur/ags/utils.js';
+import App from 'resource:///com/github/Aylur/ags/app.js';
 import PanelButton from '../PanelButton.js';
 import options from '../../options.js';
 import { substitute } from '../../utils.js';
@@ -35,6 +37,8 @@ export const ClientIcon = () => Widget.Icon({
 
 export default () => PanelButton({
     class_name: 'focused-client',
+    // onClicked: () => execAsync(`hyprctl dispatch togglefloating 1`),
+    // onClicked: () => App.openWindow('dash'),
     content: Widget.Box({
         children: [
             ClientIcon(),

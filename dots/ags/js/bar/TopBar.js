@@ -5,6 +5,7 @@ import Notifications from 'resource:///com/github/Aylur/ags/service/notification
 import Mpris from 'resource:///com/github/Aylur/ags/service/mpris.js';
 import Battery from 'resource:///com/github/Aylur/ags/service/battery.js';
 import OverviewButton from './buttons/OverviewButton.js';
+import ButtonsTopBar from './buttons/ButtonsTopBar.js';
 import Workspaces from './buttons/Workspaces.js';
 import FocusedClient from './buttons/FocusedClient.js';
 import MediaIndicator from './buttons/MediaIndicator.js';
@@ -55,27 +56,29 @@ const Start = () => Widget.Box({
     children: [
         OverviewButton(),
         SeparatorDot(),
-        Workspaces(),
+        DateButton(),
         SeparatorDot(),
-        FocusedClient(),
-        Widget.Box({ hexpand: true }),
-        MediaIndicator(),
+        WeatherBox(),
         SeparatorDot(Mpris, m => m.players.length > 0),
+        MediaIndicator(),
+        Widget.Box({ hexpand: true }),
+        FocusedClient(),
+        SeparatorDot(),
     ],
 });
 
 const Center = () => Widget.Box({
     class_name: 'center',
     children: [
-        DateButton(),
+        Workspaces(),
     ],
 });
 
 const End = () => Widget.Box({
     class_name: 'end',
     children: [
-        SeparatorDot(Notifications, n => n.notifications.length > 0 || n.dnd),
-        NotificationIndicator(),
+        SeparatorDot(),
+        ButtonsTopBar(),
         Widget.Box({ hexpand: true }),
 
         // SubMenu({
@@ -86,10 +89,17 @@ const End = () => Widget.Box({
         //     ],
         // }),
 
-        SysTray(),
-        SeparatorDot(),
+        NotificationIndicator(),
+        SeparatorDot(Notifications, n => n.notifications.length > 0 || n.dnd),
+        SubMenu({
+            items: submenuItems,
+            children: [
+                SysTray(),
+                // ColorPicker(),
+            ],
+        }),
+        // SysTray(),
         ScreenRecord(),
-        WeatherBox(),
         SeparatorDot(Recorder, r => r.recording),
         SystemIndicators(),
         SeparatorDot(Battery, b => b.available),

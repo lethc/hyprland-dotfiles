@@ -92,6 +92,20 @@ $bar-spacing: $spacing / 2;
         &:hover label { color: $accent; }
         &:active label, &.active label { color: $accent-fg; }
     }
+    .button-bar {
+        button { color: transparentize($accent-fg, 0.3); }
+        .mainButton {
+        min-width: 23px;
+        padding-left: 1px;
+        // padding-right: 1px;
+        label { color: $fg-color; }
+        &:hover label  { color: transparentize($fg-color, 0.3); }
+        &:active label, &.active label { color: $accent-fg; }
+            .button-icon {
+                font-size: 1.15rem;
+            }
+        }
+    }
 
     .powermenu, .recorder {
         image { color: transparentize($red, 0.3); }
@@ -118,6 +132,17 @@ $bar-spacing: $spacing / 2;
         &.spotify image { color: $green; }
         &.firefox image { color: $orange; }
         &.mpv image { color: $magenta; }
+    }
+
+    .weather-container {
+      .weather-icon {
+        font-size: 1.15rem;
+      }
+    }
+
+    .weather-additional-info {
+      margin-right: $bar-spacing;
+        font-size: 1.15rem;
     }
 
     .notifications {
