@@ -5,6 +5,7 @@ import { exec, execAsync } from 'resource:///com/github/Aylur/ags/utils.js';
 
 const floatingButton = Widget.Button({
     class_name: 'mainButton',
+    tooltip_text: 'Floating Window',
     onClicked: () => execAsync(`hyprctl dispatch togglefloating 1`),
     child: Widget.Label({
       class_name: "button-icon",
@@ -14,6 +15,7 @@ const floatingButton = Widget.Button({
 
 const fullscreenButton = Widget.Button({
     class_name: 'mainButton',
+    tooltip_text: 'Maximise Window',
     onClicked: () => execAsync(`hyprctl dispatch fullscreen 1`),
     child: Widget.Label({
       class_name: "button-icon",
@@ -23,6 +25,7 @@ const fullscreenButton = Widget.Button({
 
 const closeButton = Widget.Button({
     class_name: 'mainButton',
+    tooltip_text: 'Close Window',
     onClicked: () => execAsync(`hyprctl dispatch killactive 1`),
     child: Widget.Label({
       class_name: "button-icon",
