@@ -120,6 +120,9 @@ echo "random_wallpaper linked"
 sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/file_manager.sh" /usr/bin/
 echo "file_manager linked"
 
+ln -sf "${HOME}/.config/hypr/dots/dunst/scripts/notification-sound" /usr/bin/
+echo "notification-sound"
+
 ln -sf "${HOME}/.config/hypr/dots/mimeapps.list" "${HOME}/.config"
 echo "mimeapps linked"
 
