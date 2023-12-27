@@ -42,6 +42,7 @@ const Popups = parent => {
         Utils.timeout(10, () => {
             parent.reveal_child = true;
         });
+        Utils.execAsync('notification-sound');
     };
 
     return Widget.Box({
