@@ -66,6 +66,10 @@ export default {
         noisy: 'preferences-system-notifications-symbolic',
         silent: 'notifications-disabled-symbolic',
     },
+    toggle: {
+        off: 'draw-triangle4',
+        on: 'window-maximize-symbolic',
+    },
     trash: {
         full: 'user-trash-full-symbolic',
         empty: 'user-trash-symbolic',

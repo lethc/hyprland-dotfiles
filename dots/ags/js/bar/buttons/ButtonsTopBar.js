@@ -2,6 +2,9 @@ import App from 'resource:///com/github/Aylur/ags/app.js';
 import PanelButton from '../PanelButton.js';
 import Widget from 'resource:///com/github/Aylur/ags/widget.js';
 import { exec, execAsync } from 'resource:///com/github/Aylur/ags/utils.js';
+import HoverRevealer from '../../misc/HoverRevealer.js';
+import Notifications from 'resource:///com/github/Aylur/ags/service/notifications.js';
+import icons from '../../icons.js';
 
 const floatingButton = Widget.Button({
     class_name: 'mainButton',
@@ -36,7 +39,19 @@ const buttonBox = Widget.Box({
     children: [ floatingButton, fullscreenButton, closeButton ],
 })
 
-export default () => Widget.Box({
+// export default () => Widget.Box({
+//     class_name: 'button-bar panel-button',
+//     child: buttonBox
+// });
+
+export default ({ direction = 'right' } = {}) => HoverRevealer({
     class_name: 'button-bar panel-button',
+    direction,
+    indicator: Widget.Icon({
+        binds: [['icon', Notifications, 'dnd', dnd => dnd
+            ? icons.toggle.on
+            : icons.toggle.on,
+        ]],
+    }),
     child: buttonBox
 });
