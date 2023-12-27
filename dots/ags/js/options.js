@@ -241,7 +241,7 @@ export default {
 
     notifications: {
         black_list: Option(['Spotify'], { 'note': 'app-name | entry' }),
-        position: Option(['top'], { 'note': 'anchor' }),
+        position: Option(['top','right'], { 'note': 'anchor' }),
         width: Option(450),
     },
 
@@ -275,14 +275,40 @@ export default {
     brightnessctlKBD: 'asus::kbd_backlight',
     substitutions: {
         icons: [
+            ['', 'preferences-desktop-display'],
             ['transmission-gtk', 'transmission'],
             ['blueberry.py', 'bluetooth'],
             ['Caprine', 'facebook-messenger'],
             // ['firefox', 'firefox'],
-            // ['Terminal', 'org.gnome.Terminal-symbolic'],
-            ['', 'preferences-desktop-display'],
+            ['foot', 'org.gnome.Terminal'],
+            ['kitty', 'org.gnome.Terminal'],
+            ['org.kde.konsole', 'org.gnome.Terminal'],
+
+            ['Google-chrome', 'google-chrome'],
+            ['Naver-whale', 'web-browser'],
+
+            ['neovide', 'gedit'],
+            ['com.github.xournalpp.xournalpp', 'text-editor'],
+            ['org.pwmt.zathura', 'accessories-dictionary'],
+            ['sioyek', 'accessories-dictionary'],
+            ['koodo-reader', 'accessories-dictionary'],
+
+            ['nwg-look', 'org.gnome.Settings'],
+            ['qt5ct', 'org.gnome.Settings'],
+            ['kdesystemsettings', 'org.gnome.Settings'],
+            ['org.fcitx.fcitx5-config-qt', 'org.gnome.Settings'],
+
+            ['qalculate-gtk', 'gnome-calculator'],
+            ['protonvpn', 'org.gnome.Settings-network'],
+            ['zoom', 'system-users'],
+            ['org.telegram.desktop', 'system-users'],
+            ['anki', 'help-browser'],
+            ['com.obsproject.Studio', 'multimedia-audio-player'],
+            ['org.kde.plasma-systemmonitor', 'utilities-system-monitor'],
+            ['nm-connection-editor', 'org.gnome.Settings-network'],
         ],
         titles: [
+            ['', 'Desktop'],
             ['com.github.Aylur.ags', 'AGS'],
             ['transmission-gtk', 'Transmission'],
             ['com.obsproject.Studio', 'OBS'],
@@ -300,7 +326,24 @@ export default {
             ['foot', 'Term'],
             ['org.gnome.Nautilus', 'Files'],
             ['libreoffice-writer', 'Writer'],
-            ['', 'Desktop'],
+            ['org.gnome.SoundRecorder', 'Sound Recorder'],
+            ['com.github.xournalpp.xournalpp', 'Xournal++'],
+            ['org.pwmt.zathura', 'Zathura'],
+            ['kdesystemsettings', 'Kde Settings'],
+            ['qalculate-gtk', 'Calculator'],
+            ['zoom', 'Zoom'],
+            ['protonvpn', 'ProtonVPN'],
+            ['org.gnome.clocks', 'Clocks'],
+            ['anki', 'Anki'],
+            ['io.gitlab.zehkira.Monophony', 'Monophony'],
+            ['org.gnome.baobab', 'Disk Usage'],
+            ['org.kde.plasma-systemmonitor', 'System Monitor'],
+            ['org.kde.konsole', 'konsole'],
+            ['org.fcitx.fcitx5-config-qt', 'Fcitx5'],
+            ['org.gnome.Loupe', 'Image Viewer'],
+            ['nm-connection-editor', 'Network Configuration'],
+
+
         ],
     },
 };
