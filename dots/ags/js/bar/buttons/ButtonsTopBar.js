@@ -36,22 +36,23 @@ const closeButton = Widget.Button({
   })
 })
 const buttonBox = Widget.Box({
-    children: [ floatingButton, fullscreenButton, closeButton ],
+    // children: [ floatingButton, fullscreenButton, closeButton ],
+    children: [ closeButton, fullscreenButton, floatingButton ],
 })
 
-// export default () => Widget.Box({
-//     class_name: 'button-bar panel-button',
-//     child: buttonBox
-// });
-
-export default ({ direction = 'right' } = {}) => HoverRevealer({
+export default () => Widget.Box({
     class_name: 'button-bar panel-button',
-    direction,
-    indicator: Widget.Icon({
-        binds: [['icon', Notifications, 'dnd', dnd => dnd
-            ? icons.toggle.on
-            : icons.toggle.on,
-        ]],
-    }),
     child: buttonBox
 });
+
+// export default ({ direction = 'right' } = {}) => HoverRevealer({
+//     class_name: 'button-bar panel-button',
+//     direction,
+//     indicator: Widget.Icon({
+//         binds: [['icon', Notifications, 'dnd', dnd => dnd
+//             ? icons.toggle.on
+//             : icons.toggle.on,
+//         ]],
+//     }),
+//     child: buttonBox
+// });

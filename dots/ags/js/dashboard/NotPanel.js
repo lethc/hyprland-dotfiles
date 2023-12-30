@@ -7,12 +7,12 @@ import options from '../options.js';
 export default () => PopupWindow({
     name: 'notPanel',
     connections: [[options.bar.position, self => {
-        self.anchor = ['right',options.bar.position.value];
+        self.anchor = ['left',options.bar.position.value];
         if (options.bar.position.value === 'top')
-            self.transition = 'slide_left';
+            self.transition = 'slide_right';
 
         if (options.bar.position.value === 'bottom')
-            self.transition = 'slide_left';
+            self.transition = 'slide_right';
     }]],
     child: Widget.Box({
     css: 'min-height: 34em; min-width: 10em; margin-left: 1em',

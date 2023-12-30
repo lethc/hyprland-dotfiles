@@ -54,15 +54,13 @@ const SeparatorDot = (service, condition) => {
 const Start = () => Widget.Box({
     class_name: 'start',
     children: [
-        OverviewButton(),
         SeparatorDot(),
-        DateButton(),
-        SeparatorDot(),
-        WeatherBox(),
-        SeparatorDot(Mpris, m => m.players.length > 0),
-        MediaIndicator(),
-        Widget.Box({ hexpand: true }),
+        ButtonsTopBar(),
         FocusedClient(),
+        SeparatorDot(Notifications, n => n.notifications.length > 0 || n.dnd),
+        NotificationIndicator(),
+        Widget.Box({ hexpand: true }),
+        PowerMenu(),
         SeparatorDot(),
     ],
 });
@@ -77,8 +75,8 @@ const Center = () => Widget.Box({
 const End = () => Widget.Box({
     class_name: 'end',
     children: [
-        SeparatorDot(),
-        ButtonsTopBar(),
+        SeparatorDot(Mpris, m => m.players.length > 0),
+        MediaIndicator(),
         Widget.Box({ hexpand: true }),
 
         // SubMenu({
@@ -89,8 +87,6 @@ const End = () => Widget.Box({
         //     ],
         // }),
 
-        NotificationIndicator(),
-        SeparatorDot(Notifications, n => n.notifications.length > 0 || n.dnd),
         SubMenu({
             items: submenuItems,
             children: [
@@ -101,11 +97,15 @@ const End = () => Widget.Box({
         // SysTray(),
         ScreenRecord(),
         SeparatorDot(Recorder, r => r.recording),
-        SystemIndicators(),
-        SeparatorDot(Battery, b => b.available),
         BatteryBar(),
+        SeparatorDot(Battery, b => b.available),
+        WeatherBox(),
         SeparatorDot(),
-        PowerMenu(),
+        SystemIndicators(),
+        SeparatorDot(),
+        DateButton(),
+        SeparatorDot(),
+        OverviewButton(),
     ],
 });
 

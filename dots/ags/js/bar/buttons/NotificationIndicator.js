@@ -9,7 +9,7 @@ import HoverRevealer from '../../misc/HoverRevealer.js';
  * @param {Object} o
  * @param {import('../../misc/HoverRevealer').HoverRevealProps['direction']=} o.direction
  */
-export default ({ direction = 'left' } = {}) => HoverRevealer({
+export default ({ direction = 'right' } = {}) => HoverRevealer({
     class_name: 'notifications panel-button',
     eventboxConnections: [
         ['button-press-event', () => App.openWindow('notPanel')],
