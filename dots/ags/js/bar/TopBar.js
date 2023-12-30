@@ -54,7 +54,6 @@ const SeparatorDot = (service, condition) => {
 const Start = () => Widget.Box({
     class_name: 'start',
     children: [
-        SeparatorDot(),
         ButtonsTopBar(),
         FocusedClient(),
         SeparatorDot(Notifications, n => n.notifications.length > 0 || n.dnd),
