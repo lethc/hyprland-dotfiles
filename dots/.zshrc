@@ -194,7 +194,7 @@ alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 alias nvim-new="NVIM_APPNAME=new nvim"
 alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 alias nvim-2="NVIM_APPNAME=nvim2 nvim"
-alias NormalNvim="NVIM_APPNAME=NormalNvim nvim"
+alias nnvim="NVIM_APPNAME=NormalNvim nvim"
 alias lvimIDE="NVIM_APPNAME=lvim nvim"
 alias lazy="NVIM_APPNAME=lazy nvim"
 
