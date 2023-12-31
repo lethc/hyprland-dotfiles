@@ -341,8 +341,7 @@ export default {
             ['org.fcitx.fcitx5-config-qt', 'Fcitx5'],
             ['org.gnome.Loupe', 'Image Viewer'],
             ['nm-connection-editor', 'Network Configuration'],
-
-
+            ['it.mijorus.smile', 'Smile'],
         ],
     },
 };
