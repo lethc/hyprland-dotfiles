@@ -280,9 +280,9 @@ export default {
             ['blueberry.py', 'bluetooth'],
             ['Caprine', 'facebook-messenger'],
             // ['firefox', 'firefox'],
-            ['foot', 'org.gnome.Terminal'],
-            ['kitty', 'org.gnome.Terminal'],
-            ['org.kde.konsole', 'org.gnome.Terminal'],
+            ['foot', 'utilities-terminal'],
+            ['kitty', 'utilities-terminal'],
+            ['org.kde.konsole', 'utilities-terminal'],
 
             ['Google-chrome', 'google-chrome'],
             ['Naver-whale', 'web-browser'],
