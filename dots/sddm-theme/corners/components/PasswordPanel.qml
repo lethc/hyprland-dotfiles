@@ -1,52 +1,60 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 
 TextField {
     id: passwordField
 
     focus: true
     selectByMouse: true
-    placeholderText: config.PasswordFieldBgText
-    echoMode: TextInput.Password
+    echoMode: config.HidePassword === "true" ? TextInput.Password : TextInput.Normal
     passwordCharacter: "•"
-    passwordMaskDelay: 0
-    selectionColor: config.TextFieldTextColor
     
-    renderType: Text.NativeRendering
-    font.family: config.Font
-    font.pointSize: config.GeneralFontSize
-    font.bold: true
-    color: config.TextFieldTextColor
-    horizontalAlignment: TextInput.AlignHCenter
-    
-    background: Rectangle {
-        id: passFieldBg
-
-        color: config.TextFieldColor
-        border.color: config.TextFieldHighlightColor
-        border.width: 0
-        radius: config.CornerRadius
+    font {
+        family: config.FontFamily
+        pointSize: config.FontSize
+        bold: true
     }
+
+    placeholderText: config.PassPlaceholderText
+    horizontalAlignment: TextInput.AlignHCenter
+
+    color: config.InputTextColor
+    selectionColor: config.InputTextColor
+    renderType: Text.NativeRendering
 
     states: [
         State {
             name: "focused"
             when: passwordField.activeFocus
+
             PropertyChanges {
                 target: passFieldBg
-                color: Qt.darker(config.TextFieldColor, 1.2)
-                border.width: config.TextFieldHighlightWidth
+                color: Qt.darker(config.InputColor, 1.2)
+                border.width: config.InputBorderWidth
             }
         },
         State {
             name: "hovered"
             when: passwordField.hovered
+
             PropertyChanges {
                 target: passFieldBg
-                color: Qt.darker(config.TextFieldColor, 1.2)
+                color: Qt.darker(config.InputColor, 1.2)
             }
         }
     ]
+
+    background: Rectangle {
+        id: passFieldBg
+
+        border {
+            color: config.InputBorderColor
+            width: 0
+        }
+
+        color: config.InputColor
+        radius: config.Radius
+    }
 
     transitions: Transition {
         PropertyAnimation {
