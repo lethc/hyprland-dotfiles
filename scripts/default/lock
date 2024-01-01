@@ -4,19 +4,19 @@ pidof swaylock || swaylock \
 --indicator \
 --clock \
 --inside-wrong-color f38ba8  \
---ring-wrong-color 11111b  \
---inside-clear-color a6e3a1 \
---ring-clear-color 11111b \
---inside-ver-color 89b4fa \
---ring-ver-color 11111b \
---text-color  f5c2e7 \
+--ring-wrong-color 171717  \
+--inside-clear-color 90A959 \
+--ring-clear-color 171717 \
+--inside-ver-color BAD7FF \
+--ring-ver-color 171717 \
+--text-color  F4BF75 \
 --indicator-radius 80 \
 --indicator-thickness 5 \
 --effect-blur 10x7 \
 --effect-vignette 0.2:0.2 \
---ring-color 11111b \
---key-hl-color f5c2e7 \
---line-color 313244 \
---inside-color 0011111b \
+--ring-color 171717 \
+--key-hl-color F4BF75 \
+--line-color 737373 \
+--inside-color 00171717 \
 --separator-color 00000000 \
 --fade-in 0.1 &
