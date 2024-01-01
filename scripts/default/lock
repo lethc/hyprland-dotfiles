@@ -3,11 +3,11 @@ pidof swaylock || swaylock \
 --screenshots \
 --indicator \
 --clock \
---inside-wrong-color f38ba8  \
+--inside-wrong-color b46958  \
 --ring-wrong-color 171717  \
---inside-clear-color 90A959 \
+--inside-clear-color BAD7FF \
 --ring-clear-color 171717 \
---inside-ver-color BAD7FF \
+--inside-ver-color 90A959 \
 --ring-ver-color 171717 \
 --text-color  F4BF75 \
 --indicator-radius 80 \
