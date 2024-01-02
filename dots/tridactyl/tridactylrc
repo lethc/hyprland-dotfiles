@@ -38,6 +38,8 @@ autocontain -s leetcode\.com Work
 autocontain -s exercism\.org Work
 autocontain -s chat.openai\.com Work
 autocontain -s auth0.openai\.com Work
+autocontain -s labs.openai\.com Work
+autocontain -s openai\.com Work
 " autocontain -s google\.(co\.uk|com) Work
 autocontain -s skiff\.com Home
 autocontain -s proton\.me Home
