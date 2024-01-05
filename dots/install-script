@@ -11,7 +11,7 @@ echo "#######################################"
 echo "## 2. Installing Pacman Applications ##"
 echo "#######################################"
 
-yay -S  nodejs npm python-pip python-pipx rustup fzf wget
+yay -S  nodejs npm python-pip python-pipx rustup fzf wget vdhcoapp-bin
 yay -S  ranger-git lsix nodejs-readability-cli selectdefaultapplication-git 
 #yay -S   megacmd
 yay -S   apple-fonts 
