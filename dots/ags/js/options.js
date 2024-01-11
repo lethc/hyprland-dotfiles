@@ -19,7 +19,7 @@ export default {
     list: getOptions,
 
     spacing: Option(6),
-    padding: Option(8),
+    padding: Option(6),
     radii: Option(9),
 
     popover_padding_multiplier: Option(1.4, {
