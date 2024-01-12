@@ -139,4 +139,15 @@ echo "FZJ linked"
 # sudo ln -sf "${HOME}/.config/hypr/dots/sddm-theme/corners" /usr/share/sddm/themes
 # echo "SDDM theme linked"
 
+# echo "ICONS" | sleep 2
+# cd /tmp/
+# git clone https://github.com/4e6anenk0/Rowaita-icon-theme.git     
+# cd Rowaita-icon-theme
+# cp -r Rowaita-Ubuntu-Dark/ ~/.icons/
+
+echo "Changing papirus Icon Colour"
+
+yay -S papirus-folders-git
+papirus-folders -C orange --theme Papirus-Dark 
+
 echo "theme completed"
