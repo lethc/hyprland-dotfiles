@@ -5,7 +5,6 @@ echo "######################################"
 
 mkdir ~/Home
 # git clone https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim
-# git clone https://github.com/lethc/hyprland-dotfiles.git ~/.config/hypr
 git clone https://git.sr.ht/~heckyel/yt-local ~/env/yt-local
 # cp "${HOME}/.config/hypr/dots/.scripts/.megabot" ~/Sync/
 cp "${HOME}/.config/hypr/dots/.scripts/rofi-finder" ~/.local/bin/
@@ -120,7 +119,7 @@ echo "random_wallpaper linked"
 sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/file_manager.sh" /usr/bin/
 echo "file_manager linked"
 
-ln -sf "${HOME}/.config/hypr/dots/dunst/scripts/notification-sound" /usr/bin/
+sudo ln -sf "${HOME}/.config/hypr/dots/dunst/scripts/notification-sound" /usr/bin/
 echo "notification-sound"
 
 ln -sf "${HOME}/.config/hypr/dots/mimeapps.list" "${HOME}/.config"
@@ -137,5 +136,7 @@ echo "md2anki linked"
 ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/fzj" "${HOME}/.local/bin/"
 echo "FZJ linked"
 
-echo "theme completed"
+# sudo ln -sf "${HOME}/.config/hypr/dots/sddm-theme/corners" /usr/share/sddm/themes
+# echo "SDDM theme linked"
 
+echo "theme completed"
