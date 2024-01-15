@@ -63,6 +63,7 @@ echo "#####################################"
 echo "##  Installing Pacman Applications ##"
 echo "#####################################"
 
+yay -S xwaylandvideobridge
 yay -S fzf wget vdhcoapp-bin
 yay -S  ranger-git lsix nodejs-readability-cli selectdefaultapplication-git 
 #yay -S megacmd
