@@ -106,10 +106,10 @@ export default {
         },
     },
     system: {
-        cpu: 'org.gnome.SystemMonitor-symbolic',
-        ram: 'nvidia-ram-symbolic',
-        // ram: 'ram-symbolic',
-        // cpu: 'cpu-symbolic',
+        // cpu: 'org.gnome.SystemMonitor-symbolic',
+        // ram: 'nvidia-ram-symbolic',
+        ram: 'ram-symbolic',
+        cpu: 'cpu-symbolic',
         temp: 'temp-symbolic',
     },
     dialog: {
