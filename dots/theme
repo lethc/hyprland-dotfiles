@@ -4,7 +4,6 @@ echo "#######   Clonning repos  ############"
 echo "######################################"
 
 mkdir ~/Home
-# git clone https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim
 git clone https://git.sr.ht/~heckyel/yt-local ~/env/yt-local
 # cp "${HOME}/.config/hypr/dots/.scripts/.megabot" ~/Sync/
 cp "${HOME}/.config/hypr/dots/.scripts/rofi-finder" ~/.local/bin/
