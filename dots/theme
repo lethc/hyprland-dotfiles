@@ -135,8 +135,8 @@ echo "md2anki linked"
 ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/fzj" "${HOME}/.local/bin/"
 echo "FZJ linked"
 
-# sudo ln -sf "${HOME}/.config/hypr/dots/sddm-theme/corners" /usr/share/sddm/themes
-# echo "SDDM theme linked"
+sudo cp -r "${HOME}/.config/hypr/dots/sddm-theme/corners" /usr/share/sddm/themes
+echo "SDDM theme linked"
 
 # echo "ICONS" | sleep 2
 # cd /tmp/

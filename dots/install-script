@@ -111,7 +111,7 @@ echo "########################################"
 echo "############ SDDM Theme  ###############"
 echo "########################################" 
 yay -S  sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2 nsxiv imv
-yay -S  sddm-theme-corners-git
+# yay -S  sddm-theme-corners-git
 
 echo "creating sddm.conf.d"
 sudo mkdir /etc/sddm.conf.d/
