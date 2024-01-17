@@ -42,7 +42,7 @@ keybinds {
         bind "Ctrl e"  { SwitchToMode "session"; }
         bind "Ctrl b" { SwitchToMode "tab"; }
         bind "Ctrl q" { Quit; }
-        bind "Ctrl w" { Detach; }
+        //bind "Ctrl w" { Detach; }
         bind "Alt n" { NewPane; }
         bind "Alt m" { NewPane "Down"; }
         bind "Alt q" { CloseFocus; }
@@ -126,7 +126,7 @@ keybinds {
         bind "i" { SwitchToMode "Normal"; }
     }
     session {
-        bind "d" { Detach; }
+        bind "e" { Detach; }
         bind "w" {
                 LaunchOrFocusPlugin "zellij:session-manager" {
                     floating true
