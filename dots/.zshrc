@@ -70,7 +70,7 @@ alias zl="fzj"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
 source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
-# source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 ##### Configurations  #######
@@ -83,6 +83,14 @@ function vi-yank-xclip {
 }
 zle -N vi-yank-xclip
 bindkey -M vicmd 'y' vi-yank-xclip
+## ZSH-AUTOCOMPLETE options
+# Make Tab and ShiftTab cycle completions on the command line
+bindkey '\t' menu-select "$terminfo[kcbt]" menu-select
+bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
+# # Don't show completions if the current word matches a pattern
+# zstyle ':autocomplete:*' ignored-input '..##'
+# Wait with autocompletion until typing stops for a certain amount of seconds
+# zstyle ':autocomplete:*' delay 0.2  # seconds (float)
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
