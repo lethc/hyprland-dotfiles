@@ -118,6 +118,13 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# FZF colourscheme
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+--color=fg:#C4C4C4,hl:#ff9e64 \
+--color=fg+:#C4C4C4,hl+:#ff9e64 \
+--color=info:#90A959,prompt:#BAD7FF,pointer:#BAD7FF \
+--color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+
 
 ##### Functions  ########
 function mkt(){
