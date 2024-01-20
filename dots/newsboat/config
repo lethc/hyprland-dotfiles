@@ -4,9 +4,9 @@ confirm-exit yes
 
 color background          default default
 color listnormal          default default
-color listfocus           black   blue dim
+color listfocus           black   yellow dim
 color listnormal_unread   default default bold
-color listfocus_unread    black   blue underline
+color listfocus_unread    black   yellow underline
 color info                default black
 color article             default default
 
