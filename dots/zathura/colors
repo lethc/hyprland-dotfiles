@@ -1,45 +1,45 @@
 # Base
-set default-fg 			        "#DADADA"
+set default-fg 			        "#EEEEEE"
 # set default-bg 			        "#0"
 set default-bg 			        "#171717"
 
 # Completion
 set completion-bg		        "#242424"
-set completion-fg		        "#DADADA"
-set completion-highlight-bg	    "#00D787"
-set completion-highlight-fg	    "#DADADA"
+set completion-fg		        "#EEEEEE"
+set completion-highlight-bg	    "#F4BF75"
+set completion-highlight-fg	    "#EEEEEE"
 set completion-group-bg	        "#242424"
-set completion-group-fg		    "#FF6363"
+set completion-group-fg		    "#b46958"
 
 # Statusbar
-set statusbar-fg		        "#DADADA"
+set statusbar-fg		        "#EEEEEE"
 set statusbar-bg		        "#242424"
 
 # Notification
 set notification-bg		        "#242424"
-set notification-fg		        "#DADADA"
+set notification-fg		        "#EEEEEE"
 set notification-error-bg	    "#242424"
-set notification-error-fg	    "#EF7E7E"
+set notification-error-fg	    "#b46958"
 set notification-warning-bg	    "#242424"
 # Inputbar
-set inputbar-fg			        "#DADADA"
+set inputbar-fg			        "#EEEEEE"
 set inputbar-bg 		        "#242424"
 
 # Recolor
 set recolor-lightcolor		    "#212121"
-set recolor-darkcolor		    "#DADADA"
+set recolor-darkcolor		    "#EEEEEE"
 
 # Index
-set index-fg			        "#DADADA"
+set index-fg			        "#EEEEEE"
 set index-bg			        "#212121"
-set index-active-fg		        "#DADADA"
+set index-active-fg		        "#EEEEEE"
 set index-active-bg		        "#242424"
 
 # Loading
 set render-loading-bg		    "#212121"
-set render-loading-fg		    "#DADADA"
+set render-loading-fg		    "#EEEEEE"
 
 # Highlight
 set highlight-color		        "#313B41"
-set highlight-fg                "#f5c2e7"
-set highlight-active-color	    "#f5c2e7"
+set highlight-fg                "#AA759F"
+set highlight-active-color	    "#AA759F"
