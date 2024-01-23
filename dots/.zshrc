@@ -3,7 +3,7 @@
 PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
-export BROWSER=qutebrowser
+# export BROWSER=qutebrowser
 export LANG="en_GB.UTF-8"
 export PATH=$PATH:$XDG_CONFIG_HOME
 export PATH="$HOME/.local/bin":$PATH
@@ -66,6 +66,7 @@ alias z-layout="zellij -l ~/.config/zellij/kellig_layouts/yazi-zellij.kdl"
 alias zz="zellij"
 alias za="zellij a"
 alias zl="fzj"
+alias gi="gitui"
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
