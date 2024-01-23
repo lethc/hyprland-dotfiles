@@ -67,6 +67,7 @@ alias zz="zellij"
 alias za="zellij a"
 alias zl="fzj"
 alias gi="gitui"
+alias p="ping -c3 google.com"
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
