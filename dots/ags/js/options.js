@@ -232,6 +232,7 @@ export default {
             icon_size: Option(56),
             pinned_apps: Option([
               'firefox',
+              'floorp',
               'org.gnome.clocks',
               'foot',
               'sioyek',
