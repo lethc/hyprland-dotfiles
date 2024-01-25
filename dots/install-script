@@ -104,6 +104,7 @@ yay -S  w3m lynx httrack
 yay -S  vlc obsidian 
 yay -S  tori-bin python-pytube 
 yay -S  sioyek amberol anki kooha
+yay -S  resources
 pipx install wisdom-tree
 # cargo install bard-rs
 
