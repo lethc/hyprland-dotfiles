@@ -48,6 +48,7 @@ export async function setupHyprland() {
     const bar_pos = options.bar.position.value;
     const inactive_border = options.hypr.inactive_border.value;
     const accent = getColor(options.theme.accent.accent.value);
+    const active_border = getColor(options.theme.hypr.active_border.value);
 
     const batch = [];
 
@@ -63,8 +64,8 @@ export async function setupHyprland() {
         `general:border_size ${border_width}`,
         `general:gaps_out ${wm_gaps}`,
         `general:gaps_in ${Math.floor(wm_gaps / 2)}`,
-        // `general:col.active_border rgba(${accent}ff)`,
-        `general:col.active_border rgba(3f3f3fFF)`,
+        `general:col.active_border rgba(${active_border}ff)`,
+        // `general:col.active_border rgba(3f3f3fFF)`,
         `general:col.inactive_border ${inactive_border}`,
         `decoration:rounding ${radii}`,
         `decoration:drop_shadow ${drop_shadow ? 'yes' : 'no'}`,
