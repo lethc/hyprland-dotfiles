@@ -9,6 +9,10 @@ bind k scrollline -5
 
 " Unbinds
 unbind r
+unbind <C-e>
+unbind <A-j>
+unbind <A-k>
+unbind <C-f>
 
 " Binds
 bind J tabnext
