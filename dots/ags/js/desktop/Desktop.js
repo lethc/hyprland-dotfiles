@@ -47,10 +47,10 @@ const Desktop = () => Widget.EventBox({
             box.hpack = hpack; box.vpack = vpack;
             box.setCss(`margin: ${Number(offset)}px;`);
         }]],
-        children: [
-            DesktopClock(),
-            Clock({ format: '%B %e. %A', class_name: 'date' }),
-        ],
+        // children: [
+        //     DesktopClock(),
+        //     Clock({ format: '%B %e. %A', class_name: 'date' }),
+        // ],
     }),
 });
 
