@@ -22,6 +22,9 @@ export PATH=~/.luarocks/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH="$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" #Biber requires this PATH to execute
 export BAT_THEME="Catppuccin-mocha"
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git"' 
+export FZF_CTRL_T_COMMAND='rg --files --hidden -g "!.git"'
+
 #rust Set UP
 # . "$HOME/.cargo/env"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -50,6 +53,8 @@ alias sxiv="nsxiv"
 alias md="gh-md-toc" #https://github.com/jonathanpoelen/gh-md-toc
 # alias vim="nvim"
 alias vi="nvim"
+alias nn="nvim"
+alias n="nvim"
 alias py="python"
 alias youtube="qutebrowser http://127.0.0.1:9010/"
 alias yt="youtube-tui"
@@ -178,7 +183,7 @@ function man() {
 # fzf improvement
 function fzf-lovely(){
 	if [ "$1" = "h" ]; then
-		fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
+		rg --files --hidden -g "!.git" | fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
  	                echo {} is a binary file ||
 	                 (bat --style=numbers --color=always {} ||
 	                  highlight -O ansi -l {} ||
@@ -189,15 +194,15 @@ function fzf-lovely(){
                     done
 
 	else
-	        fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
-	                         echo {} is a binary file ||
-	                         (bat --style=numbers --color=always {} ||
-	                          highlight -O ansi -l {} ||
-	                          coderay {} ||
-	                          rougify {} ||
-	                          cat {}) 2> /dev/null | head -500' | while read -r file; do
-                              nvim "$file"
-                         done
+	        rg --files --hidden -g "!.git" | fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
+                 echo {} is a binary file ||
+                 (bat --style=numbers --color=always {} ||
+                  highlight -O ansi -l {} ||
+                  coderay {} ||
+                  rougify {} ||
+                  cat {}) 2> /dev/null | head -500' | while read -r file; do
+                    nvim "$file"
+               done
 	fi
 }
 #Delete permanently
