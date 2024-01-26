@@ -1,0 +1,4 @@
+#!/bin/bash
+
+neovide | sleep 1
+hyprctl dispatch movetoworkspace special:editor
