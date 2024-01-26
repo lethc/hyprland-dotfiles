@@ -128,12 +128,12 @@ export default {
     },
 
     hypr: {
-        active_border: Option('rgba(3f3f3ff)', {
+        active_border: Option('rgba(3f3f3fFF)', {
             'category': 'Border',
             'title': 'Border on Active Windows',
             'scss': 'exclude',
         }),
-        inactive_border: Option('rgba(171717ff)', {
+        inactive_border: Option('rgba(171717FF)', {
             'category': 'Border',
             'title': 'Border on Inactive Windows',
             'scss': 'exclude',
