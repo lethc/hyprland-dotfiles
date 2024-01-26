@@ -121,6 +121,9 @@ echo "file_manager linked"
 sudo ln -sf "${HOME}/.config/hypr/dots/dunst/scripts/notification-sound" /usr/bin/
 echo "notification-sound"
 
+sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/neovide_special" /usr/bin/
+echo "neovide linked"
+
 ln -sf "${HOME}/.config/hypr/dots/mimeapps.list" "${HOME}/.config"
 echo "mimeapps linked"
 
