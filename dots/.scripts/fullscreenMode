@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $(hyprctl -j activewindow | jq -r '.fullscreenMode') == 1 && $(hyprctl -j activewindow | jq -r '.fullscreen') == true ]]; then
+  hyprctl dispatch fullscreen 1; hyprctl dispatch fullscreen 0;
+elif [[ $(hyprctl -j activewindow | jq -r '.fullscreenMode') == 0 && $(hyprctl -j activewindow | jq -r '.fullscreen') == true ]]; then
+  hyprctl dispatch fullscreen 0; hyprctl dispatch fullscreen 1
+elif [[ $(hyprctl -j activewindow | jq -r '.floating') == true ]]; then 
+  hyprctl dispatch togglefloating; hyprctl dispatch fullscreen 0;
+else
+  hyprctl dispatch fullscreen 0
+fi
