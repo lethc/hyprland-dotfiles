@@ -45,8 +45,8 @@ alias pj='cd /home/lummyn/Documents/projects'
 alias copy='pwd && pwd | wl-copy'
 alias grep="grep --color=always"
 # alias code='sgpt --code'
-# alias maid='bard-rs -p ./'
-alias maid='bard-cli'
+alias maid='tgpt'
+# alias maid='bard-cli'
 alias jukit_kitty="kitty --listen-on=unix:@"$(date +%s%N)" -o allow_remote_control=yes"
 # alias nsxiv="nsxiv-rifle"
 alias sxiv="nsxiv"
