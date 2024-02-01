@@ -35,9 +35,18 @@ const closeButton = Widget.Button({
       label: '',
   })
 })
+const fullWindow = Widget.Button({
+    class_name: 'mainButton',
+    tooltip_text: 'Maximise Full Window',
+    onClicked: () => execAsync(`hyprctl dispatch fullscreen 0`),
+    child: Widget.Label({
+      class_name: "button-icon",
+      label: '',
+  })
+})
 const buttonBox = Widget.Box({
     // children: [ floatingButton, fullscreenButton, closeButton ],
-    children: [ closeButton, fullscreenButton, floatingButton ],
+    children: [ closeButton, fullscreenButton, floatingButton, fullWindow ],
 })
 
 // export default () => Widget.Box({
