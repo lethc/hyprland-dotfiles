@@ -115,8 +115,8 @@ echo "Insert password for the wallpaper script"
 sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/random_wallpaper" /usr/bin/
 echo "random_wallpaper linked"
 
-sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/fullscreenMode" /usr/bin/
-echo "fullscreenMode linked"
+sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/fullscreen_window" /usr/bin/
+echo "fullscreen_window linked"
 
 sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/quit_window" /usr/bin/
 echo "quit_window linked"
