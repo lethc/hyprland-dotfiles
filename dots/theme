@@ -6,7 +6,6 @@ echo "######################################"
 mkdir ~/Home
 git clone https://git.sr.ht/~heckyel/yt-local ~/env/yt-local
 # cp "${HOME}/.config/hypr/dots/.scripts/.megabot" ~/Sync/
-cp "${HOME}/.config/hypr/dots/.scripts/rofi-finder" ~/.local/bin/
 
 # Python Debug in neovim
 mkdir ~/env/.virtualenvs
@@ -107,29 +106,6 @@ mkdir ~/.local/bin
 ln -sf "${HOME}/.config/hypr/dots/.scripts/linkhandler" "${HOME}/.local/bin/"
 echo "linkhandler mpv newsboat linked"
 
-# sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/notes" /usr/bin/
-#
-# echo "notes linked"
-
-echo "Insert password for the wallpaper script"
-sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/random_wallpaper" /usr/bin/
-echo "random_wallpaper linked"
-
-sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/fullscreen_window" /usr/bin/
-echo "fullscreen_window linked"
-
-sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/quit_window" /usr/bin/
-echo "quit_window linked"
-
-sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/file_manager.sh" /usr/bin/
-echo "file_manager linked"
-
-sudo ln -sf "${HOME}/.config/hypr/dots/dunst/scripts/notification-sound" /usr/bin/
-echo "notification-sound"
-
-sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/neovide_special" /usr/bin/
-echo "neovide linked"
-
 ln -sf "${HOME}/.config/hypr/dots/mimeapps.list" "${HOME}/.config"
 echo "mimeapps linked"
 
@@ -146,6 +122,11 @@ echo "FZJ linked"
 
 ln -sf "${HOME}/.config/hypr/dots/bat" "${HOME}/.config"
 echo "bat theme"
+
+echo "Insert password for link scripts"
+
+sudo ln -sf "${HOME}/.config/hypr/dots/dunst/scripts/notification-sound" /usr/bin/
+echo "notification-sound linked"
 
 sudo cp -r "${HOME}/.config/hypr/dots/sddm-theme/corners" /usr/share/sddm/themes
 echo "SDDM theme linked"
