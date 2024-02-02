@@ -1,0 +1,22 @@
+#!/bin/bash
+
+file=~/.config/hypr/dots/ags/js/main.js
+line='// forMonitors(TopBar),'
+
+if grep -q "$line" "$file"; then
+    # Line is present, uncomment it
+    sed -i "s|$line|forMonitors(TopBar),|" "$file"
+    echo "Line uncommented."
+    ags -q
+    ags &> /dev/null &
+    echo "Ags restarted"
+elif [ $? -eq 1 ]; then
+    # Line is present, comment it
+    sed -i "s|forMonitors(TopBar),|$line|" "$file"
+    echo "Line commented."
+    ags -q
+    ags &> /dev/null &
+    echo "Ags restarted"
+else
+    echo "An error occurred while running grep."
+fi
