@@ -83,7 +83,7 @@ yay -S  firefox-tridactyl firefox-tridactyl-native-bin
 yay -S  ncdu dust duf baobab iftop yazi smile code-minimap
 yay -S  neovide-git
 yay -S  whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git 
-yay -S  texlive-latex biber texlive-binextra 
+yay -S  texlive-latex biber texlive-binextra texlive-langspanish texlive-latexextra
  
 # No eww anymore
 #yay -S   eww-wayland 
