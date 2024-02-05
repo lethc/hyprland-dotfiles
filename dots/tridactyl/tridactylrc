@@ -33,6 +33,7 @@ autocontain -s facebook\.com Facebook
 autocontain -s youtube\.com Google
 autocontain -s google\.com Google
 autocontain -s microsoft\.com Work
+autocontain -s office\.com Work
 autocontain -s microsoftonline\.com Work
 autocontain -s live\.com Work
 autocontain -s twitter\.com Work
