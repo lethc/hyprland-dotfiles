@@ -139,6 +139,12 @@ symbol = ""
 style = "fg:#51e6e6 bg:#242424"
 format = '[ $symbol ($version )]($style)'
 
+[dotnet]
+symbol = ""
+style = "fg:#51e6e6 bg:#242424"
+# heuristic = false
+format = '[ $symbol ($version )( $tfm )]($style)'
+
 [nim]
 symbol = "󰆥"
 style = "fg:#51e6e6 bg:#242424"
