@@ -241,6 +241,7 @@ export default {
               'org.gnome.Nautilus',
               'com.github.xournalpp.xournalpp',
               'org.pwmt.zathura',
+              'Morgen',
             ], { 'scss': 'exclude' }),
         },
     },
