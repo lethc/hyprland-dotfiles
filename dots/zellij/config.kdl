@@ -165,6 +165,13 @@ keybinds {
         bind "n" { NewTab; }
         bind "q" { CloseTab; }
         bind "s" { ToggleActiveSyncTab; }
+        bind "t" {  
+          NewTab {
+             cwd "~/"
+             //name ""
+             //layout "/path/to/my/layout.kdl"
+          }
+        }
         bind "Alt 1" { GoToTab 1; }
         bind "Alt 2" { GoToTab 2; }
         bind "Alt 3" { GoToTab 3; }
