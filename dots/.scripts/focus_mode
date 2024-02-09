@@ -9,14 +9,20 @@ if grep -q "$line" "$file"; then
     echo "Line uncommented."
     ags -q
     ags &> /dev/null &
-    echo "Ags restarted"
+    # echo "Ags restarted"
+    hyprctl dispatch fullscreen 0 #bcz Hyprland cannot update the size of the screen automatically
+    # sleep 1
+    hyprctl dispatch fullscreen 0
 elif [ $? -eq 1 ]; then
     # Line is present, comment it
     sed -i "s|forMonitors(TopBar),|$line|" "$file"
     echo "Line commented."
     ags -q
     ags &> /dev/null &
-    echo "Ags restarted"
+    # echo "Ags restarted"
+    hyprctl dispatch fullscreen 0
+    # sleep 1
+    hyprctl dispatch fullscreen 0
 else
     echo "An error occurred while running grep."
 fi
