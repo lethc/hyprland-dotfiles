@@ -1,7 +1,7 @@
 " General Settings
 set auconcreatecontainer true
-set searchurls.searchx http://localhost:8888/search?q=
-set searchengine searchx
+" set searchurls.searchx http://localhost:8888/search?q=
+set searchengine brave
 set smoothscroll true
 
 bind j scrollline 5
