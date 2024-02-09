@@ -26,7 +26,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git"'
 export FZF_CTRL_T_COMMAND='rg --files --hidden -g "!.git"'
 
 #rust Set UP
-# . "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
  ######  Aliases  ######
