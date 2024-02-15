@@ -147,9 +147,9 @@ function mkt(){
 # }
 
 ## cd with ls and lsix to display images in terminal
-function cd {
- builtin cd "$@" && ls -F
-}
+# function cd {
+#  builtin cd "$@" && ls -F
+# }
 #function cd {
 #  builtin cd "$@" && ls -F
 #  if [[ ! "$PWD" == "$HOME" ]]; then
@@ -251,3 +251,15 @@ eval "$(starship init zsh)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Zoxide
+# eval "$(zoxide init zsh)"
+# eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --no-cmd zsh)"
+
+function cd {
+  __zoxide_z "$@" && ls -F
+}
+function cdi {
+  __zoxide_zi "$@" && ls -F
+}
