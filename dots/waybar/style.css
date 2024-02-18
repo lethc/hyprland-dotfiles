@@ -1,0 +1,260 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: SF Pro Rounded Regular;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #151515; /* Reduced opacity background */ 
+}
+
+.modules-right {
+  /* background-color: #151515; */
+  border-radius: 5px 0px 0px 5px;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#custom-launcher {
+  font-size: 20px;
+  color: #F4BF75;
+  padding-right: 10px;
+  background-color: #151515;
+}
+
+/* #cpu, */
+/* #memory */
+/* #temperature{ */
+/*   font-size: 15px; */
+/*   margin-top: 5px; */
+/*   margin-bottom: 5px; */
+/*   background-color: #2B2B2B; */
+/* } */
+/**/
+/* #cpu { */
+/*   color: #F4BF75; */
+/*   padding: 0px 10px 0px 12px; */
+/*   border-radius: 5px 0px 0px 5px; */
+/* } */
+/**/
+/* #memory { */
+/*   color: #90A959; */
+/*   padding: 0px 10px 0px 0px; */
+/* } */
+/**/
+/* #temperature { */
+/*   color: #BAD7FF; */
+/*   padding: 0px 12px 0px 0px; */
+/*   border-radius: 0px 5px 5px 0px; */
+/* } */
+
+#cpu,
+#memory,
+#disk,
+#temperature {
+  /* font-size: 16px; */
+  /* background: #2B2B2B; */
+  background: #151515;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#cpu {
+  color: #E1E1E1;
+  padding: 0px 10px 0px 12px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#memory {
+  color: #E1E1E1;
+  padding: 0px 10px 0px 0px;
+}
+
+#temperature {
+  color: #E1E1E1;
+  padding: 0px 5px 0px 0px;
+}
+
+#disk {
+  color: #E1E1E1;
+  padding: 0px 12px 0px 0px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+#custom-window-name {
+  color: #E1E1E1;
+  margin-right: 10px;
+  background-color: #151515;
+}
+
+#custom-pacman-update-icon {
+  background-color: #E1E1E1;
+  color: #181926;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#custom-pacman-update {
+  color: #8bd5ca;
+  margin: 5px 10px 5px 0px;
+}
+
+#workspaces button:nth-child(1) label {
+  color: #7580F4;
+  margin: 0px 8px;
+  background-color: #151515;
+}
+
+#workspaces button:nth-child(2) label {
+  color: #97A0F8;
+  margin: 0px 8px;
+  background-color: #151515;
+}
+
+#workspaces button:nth-child(3) label {
+  color: #B1B8FA;
+  margin: 0px 8px;
+  background-color: #151515;
+}
+
+#workspaces button:nth-child(4) label {
+  color: #BAD7FF;
+  margin: 0px 8px;
+  background-color: #151515;
+}
+
+#workspaces button:nth-child(5) label {
+  color: #A2B5C1;
+  margin: 0px 8px;
+  background-color: #151515;
+}
+
+#workspaces button:nth-child(6) label {
+  color: #88afa2;
+  margin: 0px 8px;
+  background-color: #151515;
+}
+
+#workspaces button:nth-child(7) label {
+  color: #ACCFC0;
+  margin: 0px 8px;
+  background-color: #151515;
+}
+
+#workspaces button:nth-child(8) label {
+  color: #BFD1D9;
+  margin: 0px 8px;
+  background-color: #151515;
+}
+
+#workspaces button:nth-child(9) label {
+  color: #CBE3FF;
+  margin: 0px 8px;
+  background-color: #151515;
+}
+#workspaces button:nth-child(10) label {
+  color: #E1E1E1;
+  margin: 0px 8px;
+  background-color: #151515;
+}
+
+#battery {
+  color: #88afa2;
+  /* margin: 0px 10px 0px 0px; */
+}
+
+#pulseaudio,
+#backlight {
+  /* font-size: 15px; */
+  /* background-color: #2B2B2B; */
+  background-color: #151515;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#backlight {
+  color: #E1E1E1;
+  padding: 0px 10px 0px 10px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#pulseaudio {
+  color: #E1E1E1;
+  padding: 0px 10px 0px 0px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+#custom-right-arr {
+  color: #BAD7FF;
+  background-color: #151515;
+}
+
+#custom-pacman {
+  color: #E1E1E1;
+  background-color: #151515;
+}
+
+#network {
+  color: #E1E1E1;
+  margin-right: 10px;
+  background-color: #151515;
+}
+#custom-notifications {
+  color: #F4BF75;
+  margin-right: 10px;
+  background-color: #151515;
+}
+#custom-arrow {
+  font-size: 11px;
+}
+
+#custom-dot {
+  color: #353535;
+  padding-right: 10px;
+  background-color: #151515;
+}
+
+#custom-dot-alt {
+  color: #a5adcb;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#custom-clock-icon {
+  color: #cad3f5;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#custom-filler {
+  color: #353535;
+  padding-left: 0px;
+  padding-right: 9px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#custom-filler2 {
+  color: #353535;
+  padding-left: 3px;
+  padding-right: 9px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#clock {
+  padding-left: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
+
