@@ -19,8 +19,11 @@ echo "###################################"
 echo "########  Create Symlinks  ########"
 echo "###################################" 
 
-ln -sf "${HOME}/.config/hypr/dots/ags" "${HOME}/.config"
-echo "Ags linked" 
+# ln -sf "${HOME}/.config/hypr/dots/ags" "${HOME}/.config"
+# echo "Ags linked" 
+
+ln -sf "${HOME}/.config/hypr/dots/waybar" "${HOME}/.config"
+echo "Waybar linked" 
 
 ln -sf "${HOME}/.config/hypr/dots/foot" "${HOME}/.config"
 echo "foot linked"
@@ -33,6 +36,9 @@ echo "Gitui linked"
 
 ln -sf "${HOME}/.config/hypr/dots/dunst" "${HOME}/.config"
 echo "dunst linked"
+
+ln -sf "${HOME}/.config/hypr/dots/swaync" "${HOME}/.config"
+echo "swaync linked"
 
 ln -sf "${HOME}/.config/hypr/dots/mpv" "${HOME}/.config"
 echo "mpv linked"
