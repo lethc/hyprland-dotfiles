@@ -32,7 +32,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 15x65
+    offset = 10x15
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -54,10 +54,10 @@
     progress_bar_frame_width = 0
 
     # Set the minimum width for the progress bar
-    progress_bar_min_width = 250
+    progress_bar_min_width = 450
 
     # Set the maximum width for the progress bar
-    progress_bar_max_width = 300
+    progress_bar_max_width = 500
 
 
     # Show how many messages are currently hidden (because of
@@ -240,7 +240,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 15
+    corner_radius = 10
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
