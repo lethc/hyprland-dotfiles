@@ -1,0 +1,15 @@
+#!/bin/bash
+
+PROGRAM_NAME="waybar"
+
+if pgrep "$PROGRAM_NAME"; then
+  pkill -f "$PROGRAM_NAME"
+  echo "'$PROGRAM_NAME' stop successfully!"
+
+elif [ $? -eq 1 ]; then
+  "$PROGRAM_NAME" &
+  echo "'$PROGRAM_NAME' started successfully."
+
+else
+    echo "An error occurred while running grep."
+fi
