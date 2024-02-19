@@ -54,7 +54,7 @@ window#waybar {
 #memory,
 #disk,
 #temperature {
-  /* font-size: 16px; */
+  font-size: 15px;
   /* background: #2B2B2B; */
   background: #151515;
   margin-top: 5px;
@@ -170,7 +170,7 @@ window#waybar {
 
 #pulseaudio,
 #backlight {
-  /* font-size: 15px; */
+  font-size: 15px;
   /* background-color: #2B2B2B; */
   background-color: #151515;
   margin-top: 5px;
