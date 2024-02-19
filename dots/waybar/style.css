@@ -105,60 +105,60 @@ window#waybar {
 }
 
 #workspaces button:nth-child(1) label {
-  color: #7580F4;
+  color: #EE923A;
   margin: 0px 8px;
   background-color: #151515;
 }
 
 #workspaces button:nth-child(2) label {
-  color: #97A0F8;
+  color: #F4B469;
   margin: 0px 8px;
   background-color: #151515;
 }
 
 #workspaces button:nth-child(3) label {
-  color: #B1B8FA;
+  color: #F4BF75;
   margin: 0px 8px;
   background-color: #151515;
 }
 
 #workspaces button:nth-child(4) label {
-  color: #BAD7FF;
+  color: #F8D497; 
   margin: 0px 8px;
   background-color: #151515;
 }
 
 #workspaces button:nth-child(5) label {
-  color: #A2B5C1;
+  color: #FADCAA;
   margin: 0px 8px;
   background-color: #151515;
 }
 
 #workspaces button:nth-child(6) label {
-  color: #88afa2;
+  color: #FAE2B1;
   margin: 0px 8px;
   background-color: #151515;
 }
 
 #workspaces button:nth-child(7) label {
-  color: #ACCFC0;
+  color: #FBE7BF;
   margin: 0px 8px;
   background-color: #151515;
 }
 
 #workspaces button:nth-child(8) label {
-  color: #BFD1D9;
+  color: #FBEBC4;
   margin: 0px 8px;
   background-color: #151515;
 }
 
 #workspaces button:nth-child(9) label {
-  color: #CBE3FF;
+  color: #FCEFCF;
   margin: 0px 8px;
   background-color: #151515;
 }
 #workspaces button:nth-child(10) label {
-  color: #E1E1E1;
+  color: #533314;
   margin: 0px 8px;
   background-color: #151515;
 }
