@@ -7,7 +7,7 @@ configuration {
 	modi:                       "drun,run,filebrowser";
 	/* modi:                       "drun,run,filebrowser,window,emoji"; */
     show-icons:                 true;
-    icon-theme:                  "WhiteSur-dark";
+    icon-theme:                  "Papirus-Dark";
     display-drun:               "󱓞   Apps";
     display-run:                "   Run";
     display-filebrowser:        "   Files";
