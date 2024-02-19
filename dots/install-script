@@ -87,9 +87,11 @@ yay -S  texlive-latex biber texlive-binextra texlive-langspanish texlive-latexex
  
 # No eww anymore
 #yay -S   eww-wayland 
-yay -S  aylurs-gtk-shell
+# yay -S  aylurs-gtk-shell
+# yay -S  inotify-tools
+yay -S  waybar
+yay -S  swaync
 yay -S  wf-recorder 
-yay -S  inotify-tools
 yay -S  swaylock-effects-git sway-audio-idle-inhibit-git 
 yay -S  wl-clip-persist-git
 yay -S  wayshot
@@ -105,6 +107,7 @@ yay -S  vlc obsidian
 yay -S  tori-bin python-pytube 
 yay -S  sioyek amberol anki kooha
 yay -S  resources
+yay -S  morgen-bin
 pipx install wisdom-tree
 # cargo install bard-rs
 
