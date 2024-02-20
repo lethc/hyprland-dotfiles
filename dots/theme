@@ -137,6 +137,9 @@ echo "notification-sound linked"
 sudo cp -r "${HOME}/.config/hypr/dots/sddm-theme/corners" /usr/share/sddm/themes
 echo "SDDM theme linked"
 
+ln -sf "${HOME}/.config/hypr/dots/.scripts/bemenu-theming" "${HOME}/.local/bin/"
+echo "Bemenu Theme linked"
+
 # echo "ICONS" | sleep 2
 # cd /tmp/
 # git clone https://github.com/4e6anenk0/Rowaita-icon-theme.git     
