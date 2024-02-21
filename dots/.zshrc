@@ -75,6 +75,7 @@ alias za="zellij a"
 alias zl="fzj"
 alias gi="gitui"
 alias p="ping -c3 google.com"
+alias ff="fzf-lovely"
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
@@ -263,3 +264,23 @@ function cd {
 function cdi {
   __zoxide_zi "$@" && ls -F
 }
+
+export BEMENU_OPTS="
+  --tb '#F4BF75'\
+  --tf '#151515'\
+  --fb '#151515'\
+  --ff '#E1E1E1'\
+  --nb '#151515'\
+  --nf '#E1E1E1'\
+  --hb '#151515'\
+  --hf '#EE923A'\
+  --nf '#E1E1E1'\
+  --af '#E1E1E1'\
+  --ab '#151515'\ 
+  -H 32\ 
+  -m 500\
+  --fn 'SF Pro Rounded Regular 12'\
+  --hp 8\
+  --ch 16\
+  --cw 2|
+"
