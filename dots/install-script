@@ -57,11 +57,16 @@ echo "########################################"
 echo "##  Installing Hyprland dependencies  ##"
 echo "########################################" 
 
-yay -S  kitty hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk
+yay -S  kitty hyprland-git xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk
 yay -S  wofi dunst jq gojq-bin swayidle bc pamixer grim grimblast
 yay -S  papirus-icon-theme playerctl 
 yay -S  slurp socat swappy nm-connection-editor blueberry acpi 
 yay -S  nwg-look-bin
+
+# Adding plugins
+hyprpm update
+hyprpm add https://github.com/DreamMaoMao/hycov
+hyprpm enable hycov
 
 echo "#####################################"
 echo "##  Installing Pacman Applications ##"
