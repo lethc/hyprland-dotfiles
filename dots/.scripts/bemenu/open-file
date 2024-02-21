@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# search root
+root_path="$HOME"
+
+# scripts path
+scripts_path="$HOME/.local/bin"
+
+# bemenu theming
+. "$scripts_path/bemenu-theming"
+
+prompt="Folder"
+
+file_path=$(find "$root_path" -maxdepth 5 -type d \( ! -regex '.*/\..*' \) | \
+            sed 's|^'$root_path/'||' | sort | \
+            bemenu -i --prompt="$prompt" "$@")
+if [[ -n $file_path ]]; then
+
+    if [[ "$file_path" == "/" ]]; then
+        search_path="$root_path"
+    else
+        search_path="$root_path/$file_path"
+    fi
+
+    total=$(find "$search_path" -maxdepth 1 -type f | wc -l)
+    
+    if [[ $total -eq 0 ]]; then
+        bemenu --prompt="No files here!" --no-sort --no-lines --auto-select
+    else
+        file_name=$(find "$search_path" -maxdepth 1 -type f | \
+                    awk -F'/' '{print $NF}' | \
+                    bemenu --prompt="File:" "$@")
+        if [[ -n $file_name ]]; then
+            xdg-open "$search_path/$file_name"
+        fi
+    fi
+fi
+
+exit 0
