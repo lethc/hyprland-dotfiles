@@ -102,6 +102,7 @@ yay -S  wl-clip-persist-git
 yay -S  wayshot
 yay -S  light-git cliphist hyprpicker-git
 yay -S  swww
+yay -S  vimv
 
 echo "######################################"
 echo "###### Installing frequent apps ######"
