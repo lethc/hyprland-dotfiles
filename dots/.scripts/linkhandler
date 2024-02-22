@@ -21,5 +21,5 @@ case "$url" in
   *mp3|*flac|*opus|*mp3?source*) 
     qndl "$url" 'curl -LO' >/dev/null 2>&1 ;;
   *)
-    readable -o /tmp/x.html -s ~/.config/newsboat/style.css "$url" >/dev/null 2>&1 && setsid -f "$BROWSER" /tmp/x.html >/dev/null 2>&1
+    readable -o /tmp/x.html -s ~/.config/newsboat/style.css "$url" >/dev/null 2>&1 && setsid -f "$BROWSER2" /tmp/x.html >/dev/null 2>&1
 esac

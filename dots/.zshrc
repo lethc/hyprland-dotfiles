@@ -3,7 +3,9 @@
 PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
-# export BROWSER=qutebrowser
+export BROWSER=floorp
+export BROWSER2=qutebrowser
+export TERMINAL=foot
 export LANG="en_GB.UTF-8"
 export PATH=$PATH:$XDG_CONFIG_HOME
 export PATH="$HOME/.local/bin":$PATH
@@ -284,3 +286,5 @@ export BEMENU_OPTS="
   --ch 16\
   --cw 2|
 "
+
+source /home/Lummyn/.config/broot/launcher/bash/br
