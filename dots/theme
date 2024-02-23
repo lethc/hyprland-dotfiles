@@ -137,6 +137,15 @@ echo "notification-sound linked"
 sudo cp -r "${HOME}/.config/hypr/dots/sddm-theme/corners" /usr/share/sddm/themes
 echo "SDDM theme linked"
 
+sudo ln -sf "${HOME}/.config/hypr/dots/bookmenu/bookmenu" /usr/bin/
+echo "Bookmenu linked"
+
+sudo ln -sf "${HOME}/.config/hypr/dots/bookmenu/documentation/bookmenu.1" /usr/share/man/man1 
+echo "Bookmenu manual linked"
+
+ln -sf "${HOME}/.config/hypr/dots/bookmenu/config/bookmenu/" "${HOME}/.config"
+echo "Bookmenu configuration linked"
+
 ln -sf "${HOME}/.config/hypr/dots/.scripts/bemenu-theming" "${HOME}/.local/bin/"
 echo "Bemenu Theme linked"
 
