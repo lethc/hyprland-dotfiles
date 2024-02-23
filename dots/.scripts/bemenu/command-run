@@ -5,4 +5,4 @@
 
 prompt="-p Run:"
 
-bemenu-run $prompt
+bemenu-run -i $prompt "$@"
