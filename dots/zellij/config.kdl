@@ -26,7 +26,7 @@ auto_layout true
 keybinds {
     // keybinds are divided into modes
     //unbind "Ctrl t" // unbind in all modes
-    normal {
+   normal {
         // bind instructions can include one or more keys (both keys will be bound separately)
         // bind keys can include one or more actions (all actions will be performed with no sequential guarantees)
         unbind "Ctrl h"
@@ -75,8 +75,8 @@ keybinds {
                 };
                 SwitchToMode "Normal"
         }
-    }
-    pane {
+   }
+   pane {
         bind "Ctrl b" { SwitchToMode "tab"; }
         bind "i" { SwitchToMode "normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
@@ -89,8 +89,8 @@ keybinds {
         //c to rename a pane and z to show pane_frames
         //bind "a" { FocusNextPane; }
         //bind "a" { FocusPreviousPane; }
-    }
-    move {
+   }
+   move {
         bind "Ctrl b" { SwitchToMode "tab"; }
         bind "Esc" { SwitchToMode "Pane"; }
         bind "n" "Tab" { MovePane; }
@@ -99,8 +99,8 @@ keybinds {
         bind "j" "Down" { MovePane "Down"; }
         bind "k" "Up" { MovePane "Up"; }
         bind "l" "Right" { MovePane "Right"; }
-    }
-    locked {
+   }
+   locked {
         bind "Ctrl d" { SwitchToMode "normal"; }
         bind "Alt a" "Left" { MoveFocus "Left"; }
         bind "Alt d" "Right" { MoveFocus "Right"; }
@@ -121,11 +121,11 @@ keybinds {
         bind "Alt 8" { GoToTab 8; }
         bind "Alt 9" { GoToTab 9; }
         bind "Alt b" { ToggleTab; }
-    }
-    scroll {
+   }
+   scroll {
         bind "i" { SwitchToMode "Normal"; }
-    }
-    session {
+   }
+   session {
         bind "e" { Detach; }
         bind "w" {
                 LaunchOrFocusPlugin "zellij:session-manager" {
@@ -134,8 +134,8 @@ keybinds {
                 };
                 SwitchToMode "Normal"
         }
-    }
-    search {
+   }
+   search {
         bind "i" { EditScrollback; SwitchToMode "Normal"; }
         bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
@@ -151,8 +151,8 @@ keybinds {
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "w" { SearchToggleOption "Wrap"; }
         bind "o" { SearchToggleOption "WholeWord"; }
-  }
-  tab {
+   }
+   tab {
         bind "Ctrl b" { SwitchToMode "tab"; }
         bind "I" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "i" { SwitchToMode "Normal"; }
@@ -182,8 +182,7 @@ keybinds {
         bind "Alt 8" { GoToTab 8; }
         bind "Alt 9" { GoToTab 9; }
         bind "Tab" { ToggleTab; }
-  }
-
+   }
 }
 
 
