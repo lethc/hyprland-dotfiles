@@ -87,6 +87,7 @@ keybinds {
         bind "q" { CloseFocus; }
         bind "r" { SwitchToMode "RenamePane"; }
         //c to rename a pane and z to show pane_frames
+        //e Embed a floating pane
         //bind "a" { FocusNextPane; }
         //bind "a" { FocusPreviousPane; }
    }
