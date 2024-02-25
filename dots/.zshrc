@@ -210,6 +210,10 @@ function fzf-lovely(){
                done
 	fi
 }
+function fcd() {
+  local selected_dir
+  selected_dir=$(find . -type d -print 2>/dev/null | fzf +m) && cd "$selected_dir"
+}
 #Delete permanently
 function rmk(){
 	scrub -p dod $1
