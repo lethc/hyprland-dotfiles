@@ -40,8 +40,9 @@ keybinds {
         bind "Ctrl p" { SwitchToMode "pane"; }
         bind "Ctrl o" { SwitchToMode "move"; }
         bind "Ctrl n" { SwitchToMode "resize"; }
-        bind "Ctrl e"  { SwitchToMode "session"; }
-        bind "Ctrl b" { SwitchToMode "tab"; }
+        bind "Ctrl w"  { SwitchToMode "session"; }
+        bind "Ctrl s"  { SwitchToMode "scroll"; }
+        bind "Ctrl a" { SwitchToMode "tab"; }
         bind "Ctrl q" { Quit; }
         //bind "Ctrl w" { Detach; }
         bind "Alt n" { NewPane; }
