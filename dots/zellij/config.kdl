@@ -35,8 +35,8 @@ keybinds {
         //unbind "Alt k"
         //unbind "Alt j"
         unbind "Ctrl t"
-        unbind "Ctrl g"
-        bind "Ctrl d" { SwitchToMode "locked"; }
+        //unbind "Ctrl g"
+        bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Ctrl p" { SwitchToMode "pane"; }
         bind "Ctrl o" { SwitchToMode "move"; }
         bind "Ctrl n" { SwitchToMode "resize"; }
@@ -104,7 +104,7 @@ keybinds {
         bind "l" "Right" { MovePane "Right"; }
    }
    locked {
-        bind "Ctrl d" { SwitchToMode "normal"; }
+        bind "Ctrl g" { SwitchToMode "normal"; }
         bind "Alt a" "Left" { MoveFocus "Left"; }
         bind "Alt d" "Right" { MoveFocus "Right"; }
         bind "Alt s" "Down" { MoveFocus "Down"; }
