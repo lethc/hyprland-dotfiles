@@ -11,7 +11,7 @@ zprofile:~/.config/zsh/.zprofile
 gitconf:~/.gitconfig
 shprofile:~/.profile
 vimrc:~/.config/vim/vimrc
-nvim:~/.config/nvim/init.vim
+nvim:~/.config/nvim/init.lua
 broot:~/.config/broot/conf.toml
 dunst:~/.config/dunst/dunstrc
 swaync:~/.config/swaync/config.json
