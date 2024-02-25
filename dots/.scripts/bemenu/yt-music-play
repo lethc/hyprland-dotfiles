@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# bemenu theming
+. $HOME/.local/bin/bemenu-theming
+
+searchVar=$(printf "" | bemenu -p "Insert link of Song: ")
+
+~/.config/hypr/dots/.scripts/bemenu/yt-music play "$searchVar"
