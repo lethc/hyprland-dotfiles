@@ -62,6 +62,9 @@
     "on-click" : "",
   },
   "hyprland/workspaces": {
+    //"persistent-workspaces": {
+    //    "*": 10,
+    //},
     "all-outputs": true,
     "active-only": false,
     "on-click": "activate",
