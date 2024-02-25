@@ -240,7 +240,7 @@ search_play() {
 	#run this if u r starting the script first time like this
 	#call this by "script-name" "search_play" [ search_query | youtube_id by prefixing with ID:<youtube_id> | youtube url ]
 	[ -z "$1" ] && query=$(: | menu "Yt-music [Search]:" "" "60") || query="$1"
-	[ -z "$query" ] && notify-send "Err.. Search query empty" -u critical -h "string:x-canonical-private-synchronous:${0##*/}" && exit 1
+	[ -z "$query" ] && notify-send "Err.. Search query empty" -u low -h "string:x-canonical-private-synchronous:${0##*/}" && exit 1
 
 	#storing context
 	printf '{"client":{"clientName":"WEB_REMIX","clientVersion":"1.20231010.05.00"}}' >"$logdir/context"
