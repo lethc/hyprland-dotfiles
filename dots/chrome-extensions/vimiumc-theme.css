@@ -44,11 +44,11 @@ https://github.com/dermoumi/vimium-snow
 
 /* hints matching chars */
 .MC {
-  color: #e78284;
+  color: #F4BF75;
 }
 
 .D .MC {
-  color: #e78284;
+  color: #F4BF75;
 }
 
 /* bottom hud */
@@ -323,11 +323,11 @@ body:after {
 }
 
 .item .top .title match {
-  color: #e78284;
+  color: #F4BF75;
 }
 
 .has-dark .item .top .title match {
-  color: #e78284;
+  color: #F4BF75;
 }
 
 .item .top .title:empty::after {
@@ -351,11 +351,11 @@ body:after {
 }
 
 .item .bottom a match {
-  color: #ea999c;
+  color: #b46958;
 }
 
 .has-dark .item .bottom a match {
-  color: #ea999c;
+  color: #b46958;
 }
 
 /* #find */
