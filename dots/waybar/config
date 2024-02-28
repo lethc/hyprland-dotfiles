@@ -8,9 +8,10 @@
   "spacing": 0,
 
   "modules-left": [
-    "custom/separator",
-    "custom/separator",
-    "custom/notifications",
+    "custom/button-close",
+    "custom/button-max",
+    "custom/button-float",
+    "custom/button-full",
     "custom/filler",
     "cpu",
     "memory",
@@ -19,6 +20,7 @@
     "custom/filler",
     "custom/separator",
     "custom/separator",
+    "custom/notifications",
     "custom/arrow",
     "tray"
     //"custom/filler",
@@ -106,9 +108,31 @@
   "custom/clock-icon": {
     "format": ""
   },
+  "custom/button-close": {
+    "format": "  ",
+    "tooltip": false,
+    "format-alt": "<b>{:%a %d %b}</b>",
+    "on-click": "hyprctl dispatch killactive 1"
+  },
+  "custom/button-max": {
+    "format": "  ",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch fullscreen 1"
+  },
+  "custom/button-full": {
+    "format": "  ",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch fullscreen 0"
+  },
+  "custom/button-float": {
+    "format": " 󰄶 ",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch togglefloating 1"
+  },
 
   "clock": {
     //"format": "<b>{:%I:%M %p }</b>",
+    "format": "<b>{:%I:%M - %a %d %b }</b>",
     "format-alt": "<b>{:%a %d %b}</b>",
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
   },

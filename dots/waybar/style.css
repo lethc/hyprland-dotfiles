@@ -60,6 +60,15 @@ window#waybar {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+#custom-button-close,
+#custom-button-max,
+#custom-button-float,
+#custom-button-full {
+  font-size: 15px;
+  color: #E1E1E1;
+  padding-right: 5px;
+  background-color: #151515;
+}
 
 #cpu {
   color: #E1E1E1;
