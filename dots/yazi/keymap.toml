@@ -134,6 +134,11 @@ on   = [ "<C-c>" ]
 exec = 'shell "$SHELL" --block --confirm'
 desc = "Open shell here"
 
+[[manager.prepend_keymap]]
+on   = [ "l" ]
+exec = "plugin --sync smart-enter"
+desc = "Enter the child directory, or open the file"
+
 [tasks]
 
 keymap = [
