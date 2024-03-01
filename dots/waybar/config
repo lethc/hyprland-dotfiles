@@ -8,11 +8,9 @@
   "spacing": 0,
 
   "modules-left": [
-    "custom/button-close",
-    "custom/button-max",
-    "custom/button-float",
-    "custom/button-full",
-    "custom/filler",
+    "custom/launcher",
+    "custom/dot",
+    "custom/separator",
     "cpu",
     "memory",
     "temperature",
@@ -23,10 +21,6 @@
     "custom/notifications",
     "custom/arrow",
     "tray"
-    //"custom/filler",
-    //"custom/playerctl",
-    //"custom/filler"
-    //"custom/pacman"
   ],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
@@ -41,8 +35,7 @@
     "network",
     "custom/dot",
     "clock",
-    "custom/dot",
-    "custom/launcher"
+    "custom/separator"
   ], 
   "custom/playerctl": {
       "format": "[<span foreground='#90A959'>  </span> <span>{}</span> ]",
@@ -132,7 +125,7 @@
 
   "clock": {
     //"format": "<b>{:%I:%M %p }</b>",
-    "format": "<b>{:%H:%M - %a %d %b }</b>",
+    "format": "<b>{:%a %d %b  %H:%M  }</b>",
     "format-alt": "<b>{:%a %d %b}</b>",
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
   },
@@ -208,7 +201,7 @@
     "format": "  "
   },
   "custom/launcher": {
-    "format": " 󰣇",
+    "format": " 󱗆",
     "tooltip": false
   },
   "custom/separator": {
