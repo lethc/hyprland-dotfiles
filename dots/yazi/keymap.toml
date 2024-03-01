@@ -50,8 +50,8 @@ keymap = [
 	{ on = [ "P" ],         exec = "paste --force",          desc = "Paste the files (overwrite if the destination exists)" },
 	{ on = [ "k" ],         exec = "paste --follow",         desc = "Paste the files (follow the symlinks)" },
 	{ on = [ "K" ],         exec = "paste --follow --force", desc = "Paste the files (overwrite + follow)" },
-  { on = [ "-" ],         exec = "link",                   desc = "Symlinks the absolute path of files" },
-  { on = [ "_" ],         exec = "link --relative",        desc = "Symlinks the relative path of files" },
+    { on = [ "-" ],         exec = "link",                   desc = "Symlinks the absolute path of files" },
+    { on = [ "_" ],         exec = "link --relative",        desc = "Symlinks the relative path of files" },
 	{ on = [ "d" ],         exec = "remove",                 desc = "Move the files to the trash" },
 	{ on = [ "D" ],         exec = "remove --permanently",   desc = "Permanently delete the files" },
 	{ on = [ "a" ],         exec = "create",                 desc = "Create a file or directory (ends with / for directories)" },
@@ -128,6 +128,11 @@ keymap = [
 	# Help
 	{ on = [ "~" ], exec = "help", desc = "Open help" },
 ]
+
+[[manager.prepend_keymap]]
+on   = [ "<C-c>" ]
+exec = 'shell "$SHELL" --block --confirm'
+desc = "Open shell here"
 
 [tasks]
 
