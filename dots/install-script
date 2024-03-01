@@ -103,6 +103,7 @@ yay -S  wayshot
 yay -S  light-git cliphist hyprpicker-git
 yay -S  swww
 yay -S  vimv
+yay -S  gcolor3
 
 echo "######################################"
 echo "###### Installing frequent apps ######"
