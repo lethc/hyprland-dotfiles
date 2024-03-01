@@ -220,12 +220,12 @@ function rmk(){
 	shred -zun 10 -v $1
 }
 function rr() {
-    tmp="$(mktemp -t "yazi-cwd.XXXXX")"
-    yazi --cwd-file="$tmp"
-    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-        cd -- "$cwd"
-    fi
-    rm -f -- "$tmp"
+	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
 }
 
 #Multiple NVIM Configurations
@@ -260,13 +260,13 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Zoxide
-# eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"
 # eval "$(zoxide init --cmd cd zsh)"
-eval "$(zoxide init --no-cmd zsh)"
+# eval "$(zoxide init --no-cmd zsh)" #Uncomment this and comment (zoxide init zsh) to use cd
 
-function cd {
-  __zoxide_z "$@" && ls -F
-}
+# function cd {
+#   __zoxide_z "$@" && ls -F
+# }
 function cdi {
   __zoxide_zi "$@" && ls -F
 }
