@@ -21,7 +21,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ### JAVASCRIPT RELATED
 yay -S  nodejs npm 
 # yay -S  bun
-curl -fsSL https://bun.sh/install | bash
+# curl -fsSL https://bun.sh/install | bash
 
 ### PYTHON RELATED
 yay -S  python-pip python-pipx
@@ -92,7 +92,9 @@ yay -S  texlive-latex biber texlive-binextra texlive-langspanish texlive-latexex
  
 # No eww anymore
 #yay -S   eww-wayland 
-# yay -S  aylurs-gtk-shell
+yay -S  aylurs-gtk-shell
+yay -S  bun-bin
+yay -S  dart-sass
 # yay -S  inotify-tools
 yay -S  waybar
 yay -S  swaync

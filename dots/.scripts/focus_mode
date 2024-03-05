@@ -1,28 +1,33 @@
 #!/bin/bash
 
-file=~/.config/hypr/dots/ags/js/main.js
-line='// forMonitors(TopBar),'
+file=~/.config/ags/main.ts
+file2=~/.config/ags/options.ts
+line='// ...forMonitors(Bar),'
+line2='spacing: opt(6),'
 
 if grep -q "$line" "$file"; then
     # Line is present, uncomment it
-    sed -i "s|$line|forMonitors(TopBar),|" "$file"
+    sed -i "s|$line|...forMonitors(Bar),|" "$file"
     echo "Line uncommented."
     ags -q
     ags &> /dev/null &
-    # echo "Ags restarted"
     hyprctl dispatch fullscreen 0 #bcz Hyprland cannot update the size of the screen automatically
     # sleep 1
     hyprctl dispatch fullscreen 0
 elif [ $? -eq 1 ]; then
     # Line is present, comment it
-    sed -i "s|forMonitors(TopBar),|$line|" "$file"
+    sed -i "s|...forMonitors(Bar),|$line|" "$file"
     echo "Line commented."
     ags -q
     ags &> /dev/null &
-    # echo "Ags restarted"
     hyprctl dispatch fullscreen 0
-    # sleep 1
     hyprctl dispatch fullscreen 0
+
+    sleep 2
+  hyprctl keyword general:border_size 2
+  hyprctl keyword general:gaps_in 1
+  hyprctl keyword general:gaps_out 3
+  hyprctl keyword decoration:rounding 0
 else
     echo "An error occurred while running grep."
 fi
