@@ -150,9 +150,9 @@ function mkt(){
 # }
 
 ## cd with ls and lsix to display images in terminal
-# function cd {
-#  builtin cd "$@" && ls -F
-# }
+function cd {
+ builtin cd "$@" && ls -F
+}
 #function cd {
 #  builtin cd "$@" && ls -F
 #  if [[ ! "$PWD" == "$HOME" ]]; then
