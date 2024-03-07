@@ -33,7 +33,7 @@
 #navigator-toolbox:not(:hover) {
   --is-bar-visible: hidden;
   opacity: 0 !important;
-  height: 1.5px;
+  height: 1.8px;
   transition: height 200ms ease-in-out, opacity 175ms ease-in-out;
 }
 
