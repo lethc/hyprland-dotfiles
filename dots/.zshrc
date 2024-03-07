@@ -3,7 +3,7 @@
 PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
-export BROWSER=naver-whale-stable
+export BROWSER=firefox
 export BROWSER2=qutebrowser
 export TERMINAL=foot
 export LANG="en_GB.UTF-8"
