@@ -1,11 +1,24 @@
 " General Settings
 set auconcreatecontainer true
 " set searchurls.searchx http://localhost:8888/search?q=
-set searchengine brave
+set searchengine google
 set smoothscroll true
 
-bind j scrollline 5
-bind k scrollline -5
+bind j scrollline 2
+bind k scrollline -2
+
+bind a           current_url bmark
+bind A bmark
+
+" search
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+bind ,<Space> nohlsearch
+
+bindurl google(\.[a-zA-Z0-9]+){1,2}/search <space>f hint -Jc #top_nav a, #search a, .card-section a, a.fl, #pnnext, #pnprev
+bindurl google(\.[a-zA-Z0-9]+){1,2}/search <space>F hint -Jbc #top_nav a, #search a, .card-section a, a.fl, #pnnext, #pnprev
 
 " Unbinds
 unbind r
