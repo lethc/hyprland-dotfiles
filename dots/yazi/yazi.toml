@@ -16,47 +16,47 @@ cache_dir  = ""
 
 [opener]
 folder = [
-	{ exec = 'nautilus "$@"', desc = "Nautilus" },
-	{ exec = 'dolphin "$@"', desc = "Dolphin" },
-	{ exec = 'neovide "$@"', desc = "Neovide" },
-	{ exec = '$EDITOR "$@"', desc = "Neovim" },
+	{ run = 'nautilus "$@"', desc = "Nautilus" },
+	{ run = 'dolphin "$@"', desc = "Dolphin" },
+	{ run = 'neovide "$@"', desc = "Neovide" },
+	{ run = '$EDITOR "$@"', desc = "Neovim" },
 ]
 archive = [
-	{ exec = 'unrar "$1"', desc = "Extract here unrar" },
-	{ exec = 'unzip "$1"', desc = "Extract here zip" },
+	{ run = 'unrar "$1"', desc = "Extract here unrar" },
+	{ run = 'unzip "$1"', desc = "Extract here zip" },
 ]
 text = [
-	{ exec = '$EDITOR "$@"', block = true },
-	{ exec = 'neovide "$@"', block = true },
-	{ exec = 'vim "$@"', block = true },
-	{ exec = 'code "$@"', block = true },
-	{ exec = 'sh "$@"', block = true },
+	{ run = '$EDITOR "$@"', block = true },
+	{ run = 'neovide "$@"', block = true },
+	{ run = 'vim "$@"', block = true },
+	{ run = 'code "$@"', block = true },
+	{ run = 'sh "$@"', block = true },
 ]
 image = [
-	{ exec = 'loupe "$@"', desc = "Open with Loupe" },
-	{ exec = 'imv-dir "$@"', desc = "Open with img-dir" },
-	{ exec = 'firefox "$@"', desc = "Open with Firefox" },
-	# { exec = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF" },
+	{ run = 'loupe "$@"', desc = "Open with Loupe" },
+	{ run = 'imv-dir "$@"', desc = "Open with img-dir" },
+	{ run = 'firefox "$@"', desc = "Open with Firefox" },
+	# { run = '''exiftool "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show EXIF" },
 ]
 video = [
-	{ exec = 'mpv "$@"', desc = "Open with MPV" },
-	{ exec = 'vlc "$@"', desc = "Open with VLC" },
-	# { exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
+	{ run = 'mpv "$@"', desc = "Open with MPV" },
+	{ run = 'vlc "$@"', desc = "Open with VLC" },
+	# { run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
 ]
 audio = [
-	{ exec = 'amberol "$@"', desc = "Open with amberol" },
-	{ exec = 'mpv --no-video "$@"', desc = "Open with MPV" },
-	# { exec = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
+	{ run = 'amberol "$@"', desc = "Open with amberol" },
+	{ run = 'mpv --no-video "$@"', desc = "Open with MPV" },
+	# { run = '''mediainfo "$1"; echo "Press enter to exit"; read''', block = true, desc = "Show media info" },
 ]
 fallback = [
-	{ exec = 'open "$@"', desc = "Open" },
-	{ exec = 'open -R "$@"', desc = "Reveal in Finder" },
-	{ exec = 'wps "$@"', desc = "Open in WPS" },
+	{ run = 'open "$@"', desc = "Open" },
+	{ run = 'open -R "$@"', desc = "Reveal in Finder" },
+	{ run = 'wps "$@"', desc = "Open in WPS" },
 ]
 
 document = [
-	{ exec = 'sioyek "$@"', desc = "Open with sioyek" },
-	{ exec = 'zathura "$@"', desc = "Open with Zathura" },
+	{ run = 'sioyek "$@"', desc = "Open with sioyek" },
+	{ run = 'zathura "$@"', desc = "Open with Zathura" },
 ]
 
 [open]
