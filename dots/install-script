@@ -119,6 +119,11 @@ yay -S  sioyek amberol anki kooha
 yay -S  resources
 yay -S  morgen-bin
 pipx install wisdom-tree
+
+# Install nice clipboard manager
+# https://github.com/savedra1/clipse?tab=readme-ov-file#installation
+go install github.com/savedra1/clipse@v0.0.6 
+
 # cargo install bard-rs
 
 echo "########################################"
