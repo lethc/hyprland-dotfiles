@@ -102,7 +102,7 @@ yay -S  wf-recorder
 yay -S  swaylock-effects-git sway-audio-idle-inhibit-git 
 yay -S  wl-clip-persist-git
 yay -S  wayshot
-yay -S  light-git cliphist hyprpicker-git
+yay -S  cliphist hyprpicker-git
 yay -S  swww
 yay -S  vimv
 yay -S  gcolor3
