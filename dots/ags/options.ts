@@ -142,7 +142,7 @@ const options = mkOptions(OPTIONS, {
         iconSize: opt(55),
         width: opt(0),
         margin: opt(80),
-        maxItem: opt(6),
+        maxItem: opt(5),
         favorites: opt([
             [
                 "firefox",
