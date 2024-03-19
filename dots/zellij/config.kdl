@@ -36,11 +36,12 @@ keybinds {
         //unbind "Alt j"
         unbind "Ctrl t"
         unbind "Ctrl b"
+        unbind "Ctrl n"
         //unbind "Ctrl g"
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Ctrl p" { SwitchToMode "pane"; }
         bind "Ctrl o" { SwitchToMode "move"; }
-        bind "Ctrl n" { SwitchToMode "resize"; }
+        bind "Ctrl ." { SwitchToMode "resize"; }
         bind "Ctrl w"  { SwitchToMode "session"; }
         bind "Ctrl s"  { SwitchToMode "scroll"; }
         bind "Ctrl a" { SwitchToMode "tab"; }
