@@ -20,14 +20,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="13.28002"
-     inkscape:cx="161.55849"
-     inkscape:cy="51.543596"
-     inkscape:window-width="1336"
-     inkscape:window-height="690"
+     inkscape:zoom="4.6951961"
+     inkscape:cx="43.129189"
+     inkscape:cy="492.20521"
+     inkscape:window-width="1340"
+     inkscape:window-height="709"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg434" />
   <defs
      id="defs4">
@@ -1132,7 +1132,8 @@
      id="titlebar-normal"
      d="m223.93 399.69v32h32v-32z"
      fill="#333"
-     opacity=".8" />
+     opacity=".8"
+     style="opacity:1" />
   <use
      id="titlebar-focused"
      transform="translate(1.4175e-6 -45)"
@@ -3937,7 +3938,8 @@
      d="m118 481h48v48h-48z"
      fill="#0f0f0f"
      fill-rule="evenodd"
-     opacity=".65" />
+     opacity=".65"
+     style="opacity:1" />
   <g
      id="menu-normal-left"
      transform="matrix(1.6667 0 0 1 -85.767 -222.75)">
@@ -3946,7 +3948,8 @@
        fill="#0f0f0f"
        fill-rule="evenodd"
        opacity=".65"
-       id="path232" />
+       id="path232"
+       style="opacity:1" />
   </g>
   <g
      id="menu-normal-topleft"
@@ -3956,7 +3959,8 @@
        fill="#0f0f0f"
        fill-rule="evenodd"
        opacity=".65"
-       id="path233" />
+       id="path233"
+       style="opacity:1" />
   </g>
   <g
      id="menu-normal-top"
@@ -3966,7 +3970,8 @@
        fill="#0f0f0f"
        fill-rule="evenodd"
        opacity=".65"
-       id="path234" />
+       id="path234"
+       style="opacity:1" />
   </g>
   <g
      id="menu-normal-topright"
@@ -3976,7 +3981,8 @@
        fill="#0f0f0f"
        fill-rule="evenodd"
        opacity=".65"
-       id="path235" />
+       id="path235"
+       style="opacity:1" />
   </g>
   <g
      id="menu-normal-right"
@@ -3986,7 +3992,8 @@
        fill="#0f0f0f"
        fill-rule="evenodd"
        opacity=".65"
-       id="path236" />
+       id="path236"
+       style="opacity:0.97523116" />
   </g>
   <g
      id="menu-normal-bottomright"
@@ -3996,7 +4003,8 @@
        fill="#0f0f0f"
        fill-rule="evenodd"
        opacity=".65"
-       id="path237" />
+       id="path237"
+       style="opacity:1" />
   </g>
   <g
      id="menu-normal-bottom"
@@ -4006,7 +4014,8 @@
        fill="#0f0f0f"
        fill-rule="evenodd"
        opacity=".65"
-       id="path238" />
+       id="path238"
+       style="opacity:1" />
   </g>
   <g
      id="menu-normal-bottomleft"
@@ -4016,7 +4025,8 @@
        fill="#0f0f0f"
        fill-rule="evenodd"
        opacity=".65"
-       id="path239" />
+       id="path239"
+       style="opacity:1" />
   </g>
   <g
      id="menu-shadow-top"
@@ -4031,7 +4041,8 @@
          fill="#0f0f0f"
          opacity=".65"
          stroke-width="1.2903"
-         id="path240" />
+         id="path240"
+         style="opacity:1" />
     </g>
     <g
        id="shadow-top"
@@ -4061,7 +4072,8 @@
          fill="#0f0f0f"
          opacity=".65"
          stroke-width="1.2909"
-         id="path241" />
+         id="path241"
+         style="opacity:1" />
     </g>
     <g
        id="shadow-left"
@@ -4091,7 +4103,8 @@
          fill="#0f0f0f"
          opacity=".65"
          stroke-width="1.291"
-         id="path242" />
+         id="path242"
+         style="opacity:1" />
     </g>
     <g
        id="shadow-bottom"
@@ -4176,7 +4189,7 @@
          opacity=".65"
          solid-color="#000000"
          stroke-width="1.6667"
-         style="isolation:auto;mix-blend-mode:normal"
+         style="isolation:auto;mix-blend-mode:normal;opacity:1"
          id="path244" />
     </g>
   </g>
@@ -4205,7 +4218,7 @@
          opacity=".65"
          solid-color="#000000"
          stroke-width="1.6667"
-         style="isolation:auto;mix-blend-mode:normal"
+         style="isolation:auto;mix-blend-mode:normal;opacity:1"
          id="path246" />
     </g>
   </g>
@@ -4498,7 +4511,8 @@
      d="m371.77 578.05h48v48h-48z"
      fill="#1a1a1a"
      fill-rule="evenodd"
-     opacity=".8" />
+     opacity=".8"
+     style="opacity:1" />
   <g
      id="tooltip-normal-left"
      transform="translate(249.52 -125.7)">
@@ -4507,7 +4521,8 @@
        fill="#1a1a1a"
        fill-rule="evenodd"
        opacity=".8"
-       id="path253" />
+       id="path253"
+       style="opacity:1" />
   </g>
   <g
      id="tooltip-normal-topleft"
@@ -4517,7 +4532,8 @@
        fill="#1a1a1a"
        fill-rule="evenodd"
        opacity=".8"
-       id="path254" />
+       id="path254"
+       style="opacity:1" />
   </g>
   <g
      id="tooltip-normal-top"
@@ -4527,7 +4543,8 @@
        fill="#1a1a1a"
        fill-rule="evenodd"
        opacity=".8"
-       id="path255" />
+       id="path255"
+       style="opacity:1" />
   </g>
   <g
      id="tooltip-normal-topright"
@@ -4537,7 +4554,8 @@
        fill="#1a1a1a"
        fill-rule="evenodd"
        opacity=".8"
-       id="path256" />
+       id="path256"
+       style="opacity:1" />
   </g>
   <g
      id="tooltip-normal-right"
@@ -4547,7 +4565,8 @@
        fill="#1a1a1a"
        fill-rule="evenodd"
        opacity=".8"
-       id="path257" />
+       id="path257"
+       style="opacity:1" />
   </g>
   <g
      id="tooltip-normal-bottomright"
@@ -4557,7 +4576,8 @@
        fill="#1a1a1a"
        fill-rule="evenodd"
        opacity=".8"
-       id="path258" />
+       id="path258"
+       style="opacity:1" />
   </g>
   <g
      id="tooltip-normal-bottom"
@@ -4567,7 +4587,8 @@
        fill="#1a1a1a"
        fill-rule="evenodd"
        opacity=".8"
-       id="path259" />
+       id="path259"
+       style="opacity:1" />
   </g>
   <g
      id="tooltip-normal-bottomleft"
@@ -4577,7 +4598,8 @@
        fill="#1a1a1a"
        fill-rule="evenodd"
        opacity=".8"
-       id="path260" />
+       id="path260"
+       style="opacity:1" />
   </g>
   <g
      id="tooltip-shadow-top"
@@ -4591,7 +4613,8 @@
          d="m190.36 252.46h50v10.5h-50z"
          fill="#1a1a1a"
          opacity=".8"
-         id="path261" />
+         id="path261"
+         style="opacity:1" />
     </g>
     <g
        transform="matrix(0,-1,-1,0,369.75,1167.5)"
@@ -4635,7 +4658,7 @@
          image-rendering="auto"
          opacity=".8"
          solid-color="#000000"
-         style="isolation:auto;mix-blend-mode:normal"
+         style="isolation:auto;mix-blend-mode:normal;opacity:1"
          id="path263" />
     </g>
   </g>
@@ -4651,7 +4674,8 @@
          d="m246.98 259v50l-10.5 1e-5v-50z"
          fill="#1a1a1a"
          opacity=".8"
-         id="path264" />
+         id="path264"
+         style="opacity:1" />
     </g>
     <g
        transform="matrix(1,0,0,-1,-171.25,1190.5)"
@@ -4679,7 +4703,8 @@
          d="m182.98 259v50l10.5 1e-5v-50z"
          fill="#1a1a1a"
          opacity=".8"
-         id="path265" />
+         id="path265"
+         style="opacity:1" />
     </g>
     <g
        transform="rotate(180,173.38,595.23)"
@@ -4707,7 +4732,8 @@
          d="m190.01 252.09h50v10.5h-50z"
          fill="#1a1a1a"
          opacity=".8"
-         id="path267" />
+         id="path267"
+         style="opacity:1" />
     </g>
     <g
        transform="rotate(90,-139.85,509.6)"
@@ -4785,7 +4811,7 @@
          image-rendering="auto"
          opacity=".8"
          solid-color="#000000"
-         style="isolation:auto;mix-blend-mode:normal"
+         style="isolation:auto;mix-blend-mode:normal;opacity:1"
          id="path270" />
     </g>
   </g>
@@ -4817,7 +4843,7 @@
          image-rendering="auto"
          opacity=".8"
          solid-color="#000000"
-         style="isolation:auto;mix-blend-mode:normal"
+         style="isolation:auto;mix-blend-mode:normal;opacity:1"
          id="path272" />
     </g>
   </g>
@@ -4849,7 +4875,7 @@
          image-rendering="auto"
          opacity=".8"
          solid-color="#000000"
-         style="isolation:auto;mix-blend-mode:normal"
+         style="isolation:auto;mix-blend-mode:normal;opacity:1"
          id="path274" />
     </g>
   </g>
