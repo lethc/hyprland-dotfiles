@@ -147,7 +147,7 @@ const options = mkOptions(OPTIONS, {
             [
                 "firefox",
                 "naver-whale",
-                "org.gnome.Nautilus",
+                "org.kde.dolphin",
                 "obsidian",
                 "com.github.xournalpp.xournalpp",
             ],
