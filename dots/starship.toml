@@ -36,7 +36,7 @@ disabled = true
 [username]
 show_always = true
 style_user = "fg:#b2b5b3 bg:#0B0406"
-style_root = "fg:#b2b5b3 bg:#0B0406"
+style_root = "fg:#b46958 bg:#0B0406"
 format = '[󱗆 ]($style)' # $user
 
 [directory]
