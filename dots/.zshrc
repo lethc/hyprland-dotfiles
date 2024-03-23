@@ -150,9 +150,9 @@ function mkt(){
 # }
 
 ## cd with ls and lsix to display images in terminal
-function cd {
- builtin cd "$@" && ls -F
-}
+# function cd {
+#  builtin cd "$@" && ls -F
+# }
 #function cd {
 #  builtin cd "$@" && ls -F
 #  if [[ ! "$PWD" == "$HOME" ]]; then
@@ -219,11 +219,12 @@ function rmk(){
 	scrub -p dod $1
 	shred -zun 10 -v $1
 }
+# builtin cd to avoid a collision between zoxide cd and yazi autocd
 function rr() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
 	yazi "$@" --cwd-file="$tmp"
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
+		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
 }
@@ -265,13 +266,13 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Zoxide
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 # eval "$(zoxide init --cmd cd zsh)"
-# eval "$(zoxide init --no-cmd zsh)" #Uncomment this and comment (zoxide init zsh) to use cd
+eval "$(zoxide init --no-cmd zsh)" #Uncomment this and comment (zoxide init zsh) to use cd. BTW uncomment the cd function bellow too
 
-# function cd {
-#   __zoxide_z "$@" && ls -F
-# }
+function cd {
+  __zoxide_z "$@" && ls -F
+}
 function cdi {
   __zoxide_zi "$@" && ls -F
 }
