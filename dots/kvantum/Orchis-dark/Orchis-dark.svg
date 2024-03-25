@@ -4511,7 +4511,7 @@
      d="m371.77 578.05h48v48h-48z"
      fill="#1a1a1a"
      fill-rule="evenodd"
-     opacity=".8"
+     opacity="1"
      style="opacity:1" />
   <g
      id="tooltip-normal-left"
@@ -4520,7 +4520,7 @@
        d="m116.26 703.75h6v48h-6z"
        fill="#1a1a1a"
        fill-rule="evenodd"
-       opacity=".8"
+       opacity="1"
        id="path253"
        style="opacity:1" />
   </g>
@@ -4531,7 +4531,7 @@
        d="m122.26 698.75c-3.3229 1e-3 -5.9977 2.6768-5.9977 6h6z"
        fill="#1a1a1a"
        fill-rule="evenodd"
-       opacity=".8"
+       opacity="1"
        id="path254"
        style="opacity:1" />
   </g>
@@ -4542,7 +4542,7 @@
        d="m116.26 703.75h6v48h-6z"
        fill="#1a1a1a"
        fill-rule="evenodd"
-       opacity=".8"
+       opacity="1"
        id="path255"
        style="opacity:1" />
   </g>
@@ -4553,7 +4553,7 @@
        d="m122.26 698.75c-3.3229 1e-3 -5.9977 2.6768-5.9977 6h6z"
        fill="#1a1a1a"
        fill-rule="evenodd"
-       opacity=".8"
+       opacity="1"
        id="path256"
        style="opacity:1" />
   </g>
@@ -4564,7 +4564,7 @@
        d="m116.26 703.75h6v48h-6z"
        fill="#1a1a1a"
        fill-rule="evenodd"
-       opacity=".8"
+       opacity="1"
        id="path257"
        style="opacity:1" />
   </g>
@@ -4575,7 +4575,7 @@
        d="m122.26 698.75c-3.3229 1e-3 -5.9977 2.6768-5.9977 6h6z"
        fill="#1a1a1a"
        fill-rule="evenodd"
-       opacity=".8"
+       opacity="1"
        id="path258"
        style="opacity:1" />
   </g>
@@ -4586,7 +4586,7 @@
        d="m116.26 703.75h6v48h-6z"
        fill="#1a1a1a"
        fill-rule="evenodd"
-       opacity=".8"
+       opacity="1"
        id="path259"
        style="opacity:1" />
   </g>
@@ -4597,7 +4597,7 @@
        d="m122.26 698.75c-3.3229 1e-3 -5.9977 2.6768-5.9977 6h6z"
        fill="#1a1a1a"
        fill-rule="evenodd"
-       opacity=".8"
+       opacity="1"
        id="path260"
        style="opacity:1" />
   </g>
@@ -4612,7 +4612,7 @@
       <path
          d="m190.36 252.46h50v10.5h-50z"
          fill="#1a1a1a"
-         opacity=".8"
+         opacity="1"
          id="path261"
          style="opacity:1" />
     </g>
@@ -4656,7 +4656,7 @@
          color-rendering="auto"
          fill="#1a1a1a"
          image-rendering="auto"
-         opacity=".8"
+         opacity="1"
          solid-color="#000000"
          style="isolation:auto;mix-blend-mode:normal;opacity:1"
          id="path263" />
@@ -4673,7 +4673,7 @@
       <path
          d="m246.98 259v50l-10.5 1e-5v-50z"
          fill="#1a1a1a"
-         opacity=".8"
+         opacity="1"
          id="path264"
          style="opacity:1" />
     </g>
@@ -4702,7 +4702,7 @@
       <path
          d="m182.98 259v50l10.5 1e-5v-50z"
          fill="#1a1a1a"
-         opacity=".8"
+         opacity="1"
          id="path265"
          style="opacity:1" />
     </g>
@@ -4731,7 +4731,7 @@
       <path
          d="m190.01 252.09h50v10.5h-50z"
          fill="#1a1a1a"
-         opacity=".8"
+         opacity="1"
          id="path267"
          style="opacity:1" />
     </g>
@@ -4809,7 +4809,7 @@
          color-rendering="auto"
          fill="#1a1a1a"
          image-rendering="auto"
-         opacity=".8"
+         opacity="1"
          solid-color="#000000"
          style="isolation:auto;mix-blend-mode:normal;opacity:1"
          id="path270" />
@@ -4841,7 +4841,7 @@
          color-rendering="auto"
          fill="#1a1a1a"
          image-rendering="auto"
-         opacity=".8"
+         opacity="1"
          solid-color="#000000"
          style="isolation:auto;mix-blend-mode:normal;opacity:1"
          id="path272" />
@@ -4873,7 +4873,7 @@
          color-rendering="auto"
          fill="#1a1a1a"
          image-rendering="auto"
-         opacity=".8"
+         opacity="1"
          solid-color="#000000"
          style="isolation:auto;mix-blend-mode:normal;opacity:1"
          id="path274" />
