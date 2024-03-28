@@ -42,7 +42,7 @@ keybinds {
         bind "Ctrl p" { SwitchToMode "pane"; }
         bind "Ctrl o" { SwitchToMode "move"; }
         bind "Ctrl ." { SwitchToMode "resize"; }
-        bind "Ctrl w"  { SwitchToMode "session"; }
+        bind "Ctrl x"  { SwitchToMode "session"; }
         bind "Ctrl s"  { SwitchToMode "scroll"; }
         bind "Ctrl a" { SwitchToMode "tab"; }
         bind "Ctrl q" { Quit; }
