@@ -316,4 +316,4 @@ export BEMENU_OPTS="
   --cw 2|
 "
 
-source /home/Lummyn/.config/broot/launcher/bash/br
+# source /home/Lummyn/.config/broot/launcher/bash/br
