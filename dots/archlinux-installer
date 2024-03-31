@@ -118,7 +118,7 @@ arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 echo "######################################################"
 echo "## Installing display server, DE and audio services ##"
 echo "######################################################"
-arch-chroot /mnt pacman -S xorg-server xorg-xinit xterm pipewire-alsa pipewire-jack pipewire-pulse alsa-utils gvfs-mtp sddm plasma plasma-desktop plasma-wayland-session
+arch-chroot /mnt pacman -S xorg-server xorg-xinit xterm pipewire-alsa pipewire-jack pipewire-pulse alsa-utils gvfs-mtp sddm plasma plasma-desktop
 
 # Install desktop environment
 echo "######################################"
