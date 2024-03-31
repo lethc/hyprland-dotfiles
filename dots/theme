@@ -19,8 +19,8 @@ echo "###################################"
 echo "########  Create Symlinks  ########"
 echo "###################################" 
 
-# ln -sf "${HOME}/.config/hypr/dots/ags" "${HOME}/.config"
-# echo "Ags linked" 
+ln -sf "${HOME}/.config/hypr/dots/ags" "${HOME}/.config"
+echo "Ags linked" 
 
 ln -sf "${HOME}/.config/hypr/dots/waybar" "${HOME}/.config"
 echo "Waybar linked" 
