@@ -11,6 +11,7 @@ echo "###############################################"
 echo "#####   Installing Programming Languages  #####"
 echo "###############################################"
 
+yay -S dotnet
 # yay -S go ruby
 yay -S  jdk-lts jdk-lts-doc 
 ###HERE
