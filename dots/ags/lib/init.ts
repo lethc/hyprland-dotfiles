@@ -17,7 +17,7 @@ export async function init() {
         notifications()
         hyprland()
         css()
-        swww()
+        // swww()
     } catch (error) {
         logError(error)
     }
