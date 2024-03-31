@@ -72,7 +72,7 @@ echo "#####################################"
 echo "##  Installing Pacman Applications ##"
 echo "#####################################"
 
-yay -S fzf wget vdhcoapp-bin
+yay -S fzf wget vdhcoapp-bin github-cli
 yay -S  lsix nodejs-readability-cli selectdefaultapplication-git 
 #yay -S megacmd
 # yay -S ranger-git
