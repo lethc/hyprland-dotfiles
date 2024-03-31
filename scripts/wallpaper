@@ -9,7 +9,7 @@ function load_wp(){
 
 #perform cleanup and exit
 if ! swww query; then
-    swww init
+    swww-daemon --format xrgb &
 fi
 
 load_wp
