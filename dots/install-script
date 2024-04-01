@@ -65,7 +65,7 @@ echo "########################################"
 echo "##  Installing Hyprland dependencies  ##"
 echo "########################################" 
 
-yay -S  kitty hyprland-git xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk
+yay -S  kitty hyprland-git xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk hyprlock-git hypridle-git
 yay -S  wofi dunst jq gojq-bin swayidle bc pamixer grim grimblast
 yay -S  papirus-icon-theme playerctl 
 yay -S  slurp socat swappy nm-connection-editor blueberry acpi 
