@@ -8,6 +8,13 @@ cd yay
 makepkg -si
 
 echo "###############################################"
+echo "#########   Installing KDE packages   #########"
+echo "###############################################"
+
+# Install these if open with in dolphin no longer detects any programs for opening
+yay -S kservice5 kdbusaddons5 kfilemetadata5 kconfig5 kcoreaddons5 kcrash5 kguiaddons5 ki18n5 kitemviews5 kwidgetsaddons5 kwindowsystem5
+
+echo "###############################################"
 echo "#####   Installing Programming Languages  #####"
 echo "###############################################"
 
