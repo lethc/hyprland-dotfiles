@@ -111,7 +111,7 @@ yay -S  gcolor3
 echo "######################################"
 echo "###### Installing frequent apps ######"
 echo "######################################"
-yay -S  foot-git foot-terminfo-git zoxide bemenu-wayland
+yay -S  foot-git foot-terminfo-git zoxide bemenu-wayland ueberzugpp
 yay -S  gtt-bin youtube-tui-git 
 yay -S  w3m lynx httrack 
 yay -S  vlc obsidian 
