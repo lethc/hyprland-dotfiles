@@ -65,7 +65,7 @@ echo "########################################"
 echo "##  Installing Hyprland dependencies  ##"
 echo "########################################" 
 
-yay -S  kitty hyprland-git xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk hyprlock-git hypridle-git
+yay -S  kitty hyprland-git xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk hyprlock-git hypridle-git hyprpicker-git
 yay -S  wofi dunst jq gojq-bin swayidle bc pamixer grim grimblast
 yay -S  papirus-icon-theme playerctl 
 yay -S  slurp socat swappy nm-connection-editor blueberry acpi 
@@ -110,7 +110,7 @@ yay -S  wf-recorder
 yay -S  swaylock-effects-git sway-audio-idle-inhibit-git 
 yay -S  wl-clip-persist-git
 yay -S  wayshot
-yay -S  cliphist hyprpicker-git
+yay -S  cliphist
 yay -S  swww
 yay -S  vimv
 yay -S  gcolor3
