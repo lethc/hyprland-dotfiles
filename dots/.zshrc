@@ -24,14 +24,14 @@ export PATH=~/.luarocks/bin:$PATH
 export PATH=~/go/bin:$PATH
 export PATH="$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" #Biber requires this PATH to execute
 export BAT_THEME="Catppuccin-mocha"
-export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git"' 
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git"'
 export FZF_CTRL_T_COMMAND='rg --files --hidden -g "!.git"'
 
 #rust Set UP
 . "$HOME/.cargo/env"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
- ######  Aliases  ######
+######  Aliases  ######
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
@@ -81,8 +81,8 @@ alias ff="fzf-lovely"
 alias fr="fzf-rg"
 
 ###### Plugins  ######
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -92,8 +92,8 @@ source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 bindkey -v
 # Yank to the system clipboard
 function vi-yank-xclip {
-    zle vi-yank
-   echo "$CUTBUFFER" | wl-copy
+	zle vi-yank
+	echo "$CUTBUFFER" | wl-copy
 }
 zle -N vi-yank-xclip
 bindkey -M vicmd 'y' vi-yank-xclip
@@ -109,7 +109,7 @@ bindkey -M menuselect '\t' menu-complete "$terminfo[kcbt]" reverse-menu-complete
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
-# zsh-autosuggestions 
+# zsh-autosuggestions
 bindkey 'Ñ' autosuggest-accept
 setopt histignorealldups sharehistory
 #Use modern completion system
@@ -139,9 +139,8 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --color=info:#90A959,prompt:#BAD7FF,pointer:#BAD7FF \
 --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
 
-
 ##### Functions  ########
-function mkt(){
+function mkt() {
 	mkdir {nmap,content,exploits,scripts}
 }
 
@@ -164,30 +163,31 @@ function mkt(){
 #}
 
 # Extract nmap information
-function extractPorts(){
+function extractPorts() {
 	ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
 	ip_address="$(cat $1 | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
-	echo -e "\n[*] Extracting information...\n" > extractPorts.tmp
-	echo -e "\t[*] IP Address: $ip_address"  >> extractPorts.tmp
-	echo -e "\t[*] Open ports: $ports\n"  >> extractPorts.tmp
+	echo -e "\n[*] Extracting information...\n" >extractPorts.tmp
+	echo -e "\t[*] IP Address: $ip_address" >>extractPorts.tmp
+	echo -e "\t[*] Open ports: $ports\n" >>extractPorts.tmp
 	echo $ports | tr -d '\n' | xclip -sel clip
-	echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
-	cat extractPorts.tmp; rm extractPorts.tmp
+	echo -e "[*] Ports copied to clipboard\n" >>extractPorts.tmp
+	cat extractPorts.tmp
+	rm extractPorts.tmp
 }
 # Set 'man' colors
 function man() {
-    env \
-    LESS_TERMCAP_mb=$'\e[01;31m' \
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    man "$@"
+	env \
+		LESS_TERMCAP_mb=$'\e[01;31m' \
+		LESS_TERMCAP_md=$'\e[01;31m' \
+		LESS_TERMCAP_me=$'\e[0m' \
+		LESS_TERMCAP_se=$'\e[0m' \
+		LESS_TERMCAP_so=$'\e[01;44;33m' \
+		LESS_TERMCAP_ue=$'\e[0m' \
+		LESS_TERMCAP_us=$'\e[01;32m' \
+		man "$@"
 }
 # fzf improvement
-function fzf-lovely(){
+function fzf-lovely() {
 	if [ "$1" = "h" ]; then
 		rg --files --hidden -g "!.git" | fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
  	                echo {} is a binary file ||
@@ -196,45 +196,45 @@ function fzf-lovely(){
 	                  coderay {} ||
 	                  rougify {} ||
 	                  cat {}) 2> /dev/null | head -500' | while read -r file; do
-                          nvim "$file"
-                    done
+			nvim "$file"
+		done
 
 	else
-	        rg --files --hidden -g "!.git" | fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
+		rg --files --hidden -g "!.git" | fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
                  echo {} is a binary file ||
                  (bat --style=numbers --color=always {} ||
                   highlight -O ansi -l {} ||
                   coderay {} ||
                   rougify {} ||
                   cat {}) 2> /dev/null | head -500' | while read -r file; do
-                    nvim "$file"
-               done
+			nvim "$file"
+		done
 	fi
 }
-function fzf-rg(){
-        rm -f /tmp/rg-fzf-{r,f}
-        RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
-        INITIAL_QUERY="${*:-}"
-        : | fzf --ansi --disabled --query "$INITIAL_QUERY" \
-            --bind "start:reload:$RG_PREFIX {q}" \
-            --bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
-            --bind 'ctrl-t:transform:[[ ! $FZF_PROMPT =~ ripgrep ]] &&
+function fzf-rg() {
+	rm -f /tmp/rg-fzf-{r,f}
+	RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
+	INITIAL_QUERY="${*:-}"
+	: | fzf --ansi --disabled --query "$INITIAL_QUERY" \
+		--bind "start:reload:$RG_PREFIX {q}" \
+		--bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
+		--bind 'ctrl-t:transform:[[ ! $FZF_PROMPT =~ ripgrep ]] &&
               echo "rebind(change)+change-prompt(1. ripgrep> )+disable-search+transform-query:echo \{q} > /tmp/rg-fzf-f; cat /tmp/rg-fzf-r" ||
               echo "unbind(change)+change-prompt(2. fzf> )+enable-search+transform-query:echo \{q} > /tmp/rg-fzf-r; cat /tmp/rg-fzf-f"' \
-            --color "hl:-1:underline,hl+:-1:underline:reverse" \
-            --prompt '1. ripgrep> ' \
-            --delimiter : \
-            --header 'CTRL-T: Switch between ripgrep/fzf' \
-            --preview 'bat --color=always {1} --highlight-line {2}' \
-            --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
-            --bind 'enter:become(nvim {1} +{2})'
+		--color "hl:-1:underline,hl+:-1:underline:reverse" \
+		--prompt '1. ripgrep> ' \
+		--delimiter : \
+		--header 'CTRL-T: Switch between ripgrep/fzf' \
+		--preview 'bat --color=always {1} --highlight-line {2}' \
+		--preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
+		--bind 'enter:become(nvim {1} +{2})'
 }
 function fcd() {
-  local selected_dir
-  selected_dir=$(find . -type d -print 2>/dev/null | fzf +m) && cd "$selected_dir"
+	local selected_dir
+	selected_dir=$(find . -type d -print 2>/dev/null | fzf +m) && cd "$selected_dir"
 }
 #Delete permanently
-function rmk(){
+function rmk() {
 	scrub -p dod $1
 	shred -zun 10 -v $1
 }
@@ -263,15 +263,15 @@ alias lvimIDE="NVIM_APPNAME=lvim nvim"
 alias lazy="NVIM_APPNAME=lazy nvim"
 
 function nvims() {
-  items=("default" "NvChad" "AstroNvim" "nvim2" "new" "NormalNvim" "lvim" "lazy")
-  config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim config >> " --height=~50% --layout=reverse --border --exit-0)
-  if [[ -z $config ]]; then
-    echo "Nothing selected"
-    return 0
-  elif [[ $config == "default" ]]; then
-    config=""
-  fi
-  NVIM_APPNAME=$config nvim $@
+	items=("default" "NvChad" "AstroNvim" "nvim2" "new" "NormalNvim" "lvim" "lazy")
+	config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim config >> " --height=~50% --layout=reverse --border --exit-0)
+	if [[ -z $config ]]; then
+		echo "Nothing selected"
+		return 0
+	elif [[ $config == "default" ]]; then
+		config=""
+	fi
+	NVIM_APPNAME=$config nvim $@
 }
 bindkey -s ^a "nvims\n"
 
@@ -290,10 +290,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 eval "$(zoxide init --no-cmd zsh)" #Uncomment this and comment (zoxide init zsh) to use cd. BTW uncomment the cd function bellow too
 
 function cd {
-  __zoxide_z "$@" && ls -F
+	__zoxide_z "$@" && ls -F
 }
 function cdi {
-  __zoxide_zi "$@" && ls -F
+	__zoxide_zi "$@" && ls -F
 }
 
 export BEMENU_OPTS="
