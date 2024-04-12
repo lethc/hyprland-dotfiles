@@ -146,6 +146,7 @@ const options = mkOptions(OPTIONS, {
         favorites: opt([
             [
                 "firefox",
+                "org.gnome.nautilus",
                 "naver-whale",
                 "org.kde.dolphin",
                 "obsidian",
