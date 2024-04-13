@@ -1,9 +1,41 @@
 #!/usr/bin/bash
 
-# grim -g "$(slurp)" - | wl-copy
-# grim -g "$(slurp)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
+screenshot() {
+	temp_screenshot="/tmp/screenshot.png"
 
-temp_screenshot="/tmp/screenshot.png"
-# /tmp/$(date +%Y-%m-%d_%H-%m-%s).png
+	grimblast --notify --freeze copysave area $temp_screenshot
 
-grimblast --notify --freeze copysave area $temp_screenshot && swappy -f $temp_screenshot 
+	# Open a swappy with the screenshot with swappy
+	# swappy -f $temp_screenshot &>/dev/null &
+
+	exit_status=$?
+
+	if [ $exit_status -eq 0 ]; then
+		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
+	else
+		break
+	fi
+}
+save_screenshot() {
+	save_temp_screenshot="${HOME}/Pictures/Screenshots/$(date +'%F-%T.png')"
+    
+	# save_temp_screenshot="${HOME}/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png" # This overide the screenshot saved
+
+	grimblast --notify --freeze copysave area $save_temp_screenshot
+
+	exit_status=$?
+
+	if [ $exit_status -eq 0 ]; then
+		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
+	else
+		break
+	fi
+
+}
+
+case "$1" in
+
+screenshot) screenshot ;;
+saveScreenshot) save_screenshot ;;
+
+esac
