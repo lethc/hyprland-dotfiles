@@ -20,6 +20,7 @@ save_screenshot() {
 	save_temp_screenshot="${HOME}/Pictures/Screenshots/$(date +'%F-%T.png')"
     
 	# save_temp_screenshot="${HOME}/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png" # This overide the screenshot saved
+    # grimblast --notify copysave screen /tmp/full-screenshot.png && swappy -f /tmp/full-screenshot.png 
 
 	grimblast --notify --freeze copysave area $save_temp_screenshot
 
