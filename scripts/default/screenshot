@@ -11,18 +11,30 @@ screenshot() {
 	exit_status=$?
 
 	if [ $exit_status -eq 0 ]; then
-		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
+		paplay ~/.config/hypr/assets/sounds/Grab.aif
 	else
 		break
 	fi
 }
 save_screenshot() {
 	save_temp_screenshot="${HOME}/Pictures/Screenshots/$(date +'%F-%T.png')"
-    
+
 	# save_temp_screenshot="${HOME}/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png" # This overide the screenshot saved
-    # grimblast --notify copysave screen /tmp/full-screenshot.png && swappy -f /tmp/full-screenshot.png 
+	# grimblast --notify copysave screen /tmp/full-screenshot.png && swappy -f /tmp/full-screenshot.png
 
 	grimblast --notify --freeze copysave area $save_temp_screenshot
+
+	exit_status=$?
+
+	if [ $exit_status -eq 0 ]; then
+		paplay ~/.config/hypr/assets/sounds/Grab.aif
+	else
+		break
+	fi
+
+}
+ocr_screenshot() {
+	grim -g "$(slurp)" "tmp.png" && tesseract "tmp.png" - | wl-copy && rm "tmp.png"
 
 	exit_status=$?
 
@@ -31,12 +43,22 @@ save_screenshot() {
 	else
 		break
 	fi
-
 }
+esocr_screenshot() {
+	grim -g "$(slurp)" "tmp.png" && tesseract -l spa "tmp.png" - | wl-copy && rm "tmp.png"
 
+	exit_status=$?
+
+	if [ $exit_status -eq 0 ]; then
+		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
+	else
+		break
+	fi
+}
 case "$1" in
 
 screenshot) screenshot ;;
 saveScreenshot) save_screenshot ;;
-
+ocrScreenshot) ocr_screenshot ;;
+esOcrScreenshot) esocr_screenshot ;;
 esac
