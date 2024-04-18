@@ -68,11 +68,11 @@ keybinds {
         bind "Alt b" { ToggleTab; }
         //bind "Alt d" "Alt l"{ MoveFocus "Right"; }
 
-        //bind "Alt e" {
-        //        LaunchOrFocusPlugin "zellij:strider" {
-        //            floating true
-        //        }
-        //}
+        bind "Alt v" {
+                LaunchOrFocusPlugin "zellij:strider" {
+                    floating true
+                }
+        }
         bind "Alt e" {
                 LaunchOrFocusPlugin "zellij:session-manager" {
                     floating true
