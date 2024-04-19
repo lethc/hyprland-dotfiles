@@ -39,6 +39,13 @@ bind rd open https://www.reddit.com/
 bind ym open https://music.youtube.com
 bind gb open https://bard.google.com/
 bind gi open https://github.com/
+bind ys clipboard yankshort
+" Replace the protocol with git. ... .git
+"bind cl composite js /.*?\/.*?\/.*?(?=\/)/.exec(document.location.href.replace(/https?:\/\//,"git@").replace(/$/, '/'))[0].replace("/",":").replace(/$/,".git") | clipboard yank
+" Copy the URL of current website
+"bind cl composite js `${document.URL}` | clipboard yank
+" Copy the URL without the protocol
+bind cl composite js `${document.location.href.replace(/^https?:\/\//, '')}` | clipboard yank
 
 " Isolate Facebook in its own container
 set auconcreatecontainer true
