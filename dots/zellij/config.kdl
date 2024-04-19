@@ -68,9 +68,9 @@ keybinds {
         bind "Alt b" { ToggleTab; }
         //bind "Alt d" "Alt l"{ MoveFocus "Right"; }
 
-        bind "Alt v" {
+        bind "Ctrl Space" {
                 LaunchOrFocusPlugin "zellij:strider" {
-                    floating true
+                     close_on_selection true
                 }
         }
         bind "Alt e" {
