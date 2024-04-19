@@ -123,6 +123,7 @@ keymap = [
 	{ on = [ "g", "t" ],       run = "cd /tmp",          desc = "Go to tmp" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Go to Anywhere" },
 	{ on = [ "g", "h" ],       run = "cd ~/Home",   desc = "Go to Sync" },
+	{ on = [ "g", "w" ],       run = "cd ~/Workspace/",   desc = "Go to Worspace" },
 	{ on = [ "g", "b" ],       run = "cd ~/Home/Books",   desc = "Go to the Book Directory" },
 
 	# Help
