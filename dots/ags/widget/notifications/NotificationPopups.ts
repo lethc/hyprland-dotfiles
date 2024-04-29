@@ -11,12 +11,14 @@ function Animated(id: number) {
     const widget = Notification(n)
 
     const inner = Widget.Revealer({
+        css: "border: 1px solid magenta;",
         transition: "slide_left",
         transition_duration: transition.value,
         child: widget,
     })
 
     const outer = Widget.Revealer({
+        css: "border: 1px solid yellow;",
         transition: "slide_down",
         transition_duration: transition.value,
         child: inner,

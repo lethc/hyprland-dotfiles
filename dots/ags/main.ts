@@ -1,28 +1,29 @@
 import "lib/session"
-import "style/style"
-import init from "lib/init"
+import "lib/init"
 import options from "options"
 import Bar from "widget/bar/Bar"
-import Launcher from "widget/launcher/Launcher"
-import NotificationPopups from "widget/notifications/NotificationPopups"
-import OSD from "widget/osd/OSD"
+import Applauncher from "widget/applauncher/Applauncher"
 import Overview from "widget/overview/Overview"
 import PowerMenu from "widget/powermenu/PowerMenu"
-import ScreenCorners from "widget/bar/ScreenCorners"
-import SettingsDialog from "widget/settings/SettingsDialog"
 import Verification from "widget/powermenu/Verification"
+import NotificationPopups from "widget/notifications/NotificationPopups"
+import ScreenCorners from "widget/bar/ScreenCorners"
+import OSD from "widget/osd/OSD"
+import SettingsDialog from "widget/settings/SettingsDialog"
 import { forMonitors } from "lib/utils"
 import { setupQuickSettings } from "widget/quicksettings/QuickSettings"
 import { setupDateMenu } from "widget/datemenu/DateMenu"
+import { init } from "lib/init"
 
 App.config({
+    icons: "./assets",
     onConfigParsed: () => {
         setupQuickSettings()
         setupDateMenu()
         init()
     },
     closeWindowDelay: {
-        "launcher": options.transition.value,
+        "applauncher": options.transition.value,
         "overview": options.transition.value,
         "quicksettings": options.transition.value,
         "datemenu": options.transition.value,
@@ -32,10 +33,10 @@ App.config({
         ...forMonitors(NotificationPopups),
         ...forMonitors(ScreenCorners),
         ...forMonitors(OSD),
-        Launcher(),
+        Applauncher(),
         Overview(),
         PowerMenu(),
-        SettingsDialog(),
         Verification(),
+        SettingsDialog(),
     ],
 })

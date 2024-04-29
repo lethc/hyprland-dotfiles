@@ -1,3 +1,4 @@
+import { type BarWidget } from "widget/bar/Bar"
 import { opt, mkOptions } from "lib/option"
 import { distro } from "lib/variables"
 import { icon } from "lib/utils"
@@ -6,10 +7,7 @@ import icons from "lib/icons"
 const options = mkOptions(OPTIONS, {
     autotheme: opt(false),
 
-    wallpaper: {
-        resolution: opt<import("service/wallpaper").Resolution>(1920),
-        market: opt<import("service/wallpaper").Market>("random"),
-    },
+    wallpaper: opt(`/home/${USER}/.config/background`, { persistent: true }),
 
     theme: {
         dark: {
@@ -67,16 +65,16 @@ const options = mkOptions(OPTIONS, {
         position: opt<"top" | "bottom">("top"),
         corners: opt(true),
         layout: {
-            start: opt<Array<import("widget/bar/Bar").BarWidget>>([
+            start: opt<BarWidget[]>([
                 "launcher",
                 // "taskbar",
                 "expander",
                 "media",
             ]),
-            center: opt<Array<import("widget/bar/Bar").BarWidget>>([
+            center: opt<BarWidget[]>([
                 "workspaces",
             ]),
-            end: opt<Array<import("widget/bar/Bar").BarWidget>>([
+            end: opt<BarWidget[]>([
                 "messages",
                 "expander",
                 "systray",
@@ -91,13 +89,13 @@ const options = mkOptions(OPTIONS, {
         launcher: {
             icon: {
                 colored: opt(true),
-                icon: opt(icon(distro.logo, icons.ui.search)),
+                icon: opt(icon(distro, icons.ui.search)),
             },
             label: {
                 colored: opt(false),
                 label: opt("  Applications"),
             },
-            action: opt(() => App.toggleWindow("launcher")),
+            action: opt(() => App.toggleWindow("applauncher")),
         },
         date: {
             format: opt("%a %d %b - %H:%M"),
@@ -132,7 +130,6 @@ const options = mkOptions(OPTIONS, {
             monochrome: opt(true),
             preferred: opt("spotify"),
             direction: opt<"left" | "right">("left"),
-            format: opt("{artists} - {title}"),
             length: opt(40),
         },
         powermenu: {
@@ -141,35 +138,26 @@ const options = mkOptions(OPTIONS, {
         },
     },
 
-    launcher: {
+    applauncher: {
+        iconSize: opt(55),
         width: opt(0),
         margin: opt(80),
-        nix: {
-            pkgs: opt("nixpkgs/nixos-unstable"),
-            max: opt(8),
-        },
-        sh: {
-            max: opt(16),
-        },
-        apps: {
-            iconSize: opt(55),
-            max: opt(5),
-            favorites: opt([
-                [
-                    "firefox",
-                    "org.gnome.nautilus",
-                    "naver-whale",
-                    "org.kde.dolphin",
-                    "obsidian",
-                    "com.github.xournalpp.xournalpp",
-                ],
-            ]),
-        },
+        maxItem: opt(5),
+        favorites: opt([
+            [
+                "firefox",
+                "org.gnome.nautilus",
+                "naver-whale",
+                "org.kde.dolphin",
+                "obsidian",
+                "com.github.xournalpp.xournalpp",
+            ],
+        ]),
     },
 
     overview: {
         scale: opt(7),
-        workspaces: opt(10),
+        workspaces: opt(7),
         monochromeIcon: opt(false),
     },
 
@@ -198,16 +186,6 @@ const options = mkOptions(OPTIONS, {
 
     datemenu: {
         position: opt<"left" | "center" | "right">("center"),
-        weather: {
-            interval: opt(60_000),
-            unit: opt<"metric" | "imperial" | "standard">("metric"),
-            key: opt<string>(
-                JSON.parse(Utils.readFile(`${App.configDir}/.weather`) || "{}")?.key || "",
-            ),
-            cities: opt<Array<number>>(
-                JSON.parse(Utils.readFile(`${App.configDir}/.weather`) || "{}")?.cities || [],
-            ),
-        },
     },
 
     osd: {
@@ -235,7 +213,6 @@ const options = mkOptions(OPTIONS, {
     hyprland: {
         gaps: opt(2.4),
         inactiveBorder: opt("333333ff"),
-        gapsWhenOnly: opt(true),
     },
 })
 

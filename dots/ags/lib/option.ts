@@ -1,4 +1,5 @@
 import { Variable } from "resource:///com/github/Aylur/ags/variable.js"
+import { wait } from "./utils"
 
 type OptProps = {
     persistent?: boolean
@@ -18,10 +19,6 @@ export class Opt<T = unknown> extends Variable<T> {
     persistent: boolean
     toString() { return `${this.value}` }
     toJSON() { return `opt:${this.value}` }
-
-    getValue = (): T => {
-        return super.getValue()
-    }
 
     init(cacheFile: string) {
         const cacheV = JSON.parse(Utils.readFile(cacheFile) || "{}")[this.id]
@@ -82,20 +79,16 @@ export function mkOptions<T extends object>(cacheFile: string, object: T) {
         }
     })
 
-    function sleep(ms = 0) {
-        return new Promise(r => setTimeout(r, ms))
-    }
-
     async function reset(
         [opt, ...list] = getOptions(object),
         id = opt?.reset(),
     ): Promise<Array<string>> {
         if (!opt)
-            return sleep().then(() => [])
+            return wait(0, () => [])
 
         return id
-            ? [id, ...(await sleep(50).then(() => reset(list)))]
-            : await sleep().then(() => reset(list))
+            ? [id, ...(await wait(50, () => reset(list)))]
+            : await wait(0, () => reset(list))
     }
 
     return Object.assign(object, {

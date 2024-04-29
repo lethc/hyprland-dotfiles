@@ -87,15 +87,14 @@ rules:
   max-len:
     - error
     - code: 100
+
   func-call-spacing:
     - error
   array-bracket-spacing:
     - error
   space-before-function-paren:
     - error
-    - anonymous: never
-      named: never
-      asyncArrow: ignore
+    - never
   space-before-blocks:
     - error
   key-spacing:
@@ -103,28 +102,3 @@ rules:
   object-curly-spacing:
     - error
     - always
-globals:
-  Widget: readonly
-  Utils: readonly
-  App: readonly
-  Variable: readonly
-  Service: readonly
-  pkg: readonly
-  ARGV: readonly
-  Debugger: readonly
-  GIRepositoryGType: readonly
-  globalThis: readonly
-  imports: readonly
-  Intl: readonly
-  log: readonly
-  logError: readonly
-  print: readonly
-  printerr: readonly
-  window: readonly
-  TextEncoder: readonly
-  TextDecoder: readonly
-  console: readonly
-  setTimeout: readonly
-  setInterval: readonly
-  clearTimeout: readonly
-  clearInterval: readonly
