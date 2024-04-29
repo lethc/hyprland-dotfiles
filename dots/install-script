@@ -157,6 +157,11 @@ echo "Installing FZF"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+#### Installing Future Cursor
+git clone https://github.com/yeyushengfan258/Future-cursors.git /tmp/Future-cursors
+cd /tmp/Future-cursors/
+./install.sh
+
 echo "######################################"
 echo "#####   Installation completed   #####"
 echo "######################################"
