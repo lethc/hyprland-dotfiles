@@ -79,6 +79,8 @@ alias gi="gitui"
 alias p="ping -c3 google.com"
 alias ff="fzf-lovely"
 alias fr="fzf-rg"
+alias rbwu='rbw get "$(rbw ls | fzf)" --field=Username | wl-copy'
+alias rbwg='rbw get "$(rbw ls | fzf)" | wl-copy'
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
