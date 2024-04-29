@@ -2,21 +2,20 @@
 import Row from "./Row"
 import Group from "./Group"
 import Page from "./Page"
-import Wallpaper from "./Wallpaper"
 import options from "options"
 import icons from "lib/icons"
 
 const {
+    wallpaper: wp,
     autotheme: at,
     font,
     theme,
     bar: b,
-    launcher: l,
+    applauncher: al,
     overview: ov,
     powermenu: pm,
     quicksettings: qs,
     osd,
-    hyprland: h,
 } = options
 
 const {
@@ -35,9 +34,10 @@ const {
 export default [
     Page("Theme", icons.ui.themes,
         Group("",
-            Wallpaper() as ReturnType<typeof Row>,
+            Row({ opt: wp, title: "Wallpaper", type: "img" }),
             Row({ opt: at, title: "Auto Generate Color Scheme" }),
             Row({ opt: scheme, title: "Color Scheme", type: "enum", enums: ["dark", "light"] }),
+            Row({ opt: blur, title: "Blur", note: "0 to disable", max: 70 }),
         ),
         Group("Dark Colors",
             Row({ opt: dark.bg, title: "Background", type: "color" }),
@@ -64,7 +64,6 @@ export default [
             Row({ opt: widget.opacity, title: "Widget Opacity", max: 100 }),
             Row({ opt: border.opacity, title: "Border Opacity", max: 100 }),
             Row({ opt: border.width, title: "Border Width" }),
-            Row({ opt: blur, title: "Blur", note: "0 to disable", max: 70 }),
         ),
         Group("UI",
             Row({ opt: padding, title: "Padding" }),
@@ -101,7 +100,6 @@ export default [
             Row({ opt: b.media.monochrome, title: "Monochrome" }),
             Row({ opt: b.media.preferred, title: "Preferred Player" }),
             Row({ opt: b.media.direction, title: "Slide Direction", type: "enum", enums: ["left", "right"] }),
-            Row({ opt: b.media.format, title: "Format of the Label" }),
             Row({ opt: b.media.length, title: "Max Length of Label" }),
         ),
         Group("Battery",
@@ -115,17 +113,14 @@ export default [
         ),
     ),
     Page("General", icons.ui.settings,
-        Group("Hyprland",
-            Row({ opt: h.gapsWhenOnly, title: "Gaps When Only" }),
-        ),
-        Group("Launcher",
-            Row({ opt: l.width, title: "Width" }),
-            Row({ opt: l.apps.iconSize, title: "Icon Size" }),
-            Row({ opt: l.apps.max, title: "Max Items" }),
+        Group("Applauncher",
+            Row({ opt: al.iconSize, title: "Icon Size" }),
+            Row({ opt: al.width, title: "Width" }),
+            Row({ opt: al.maxItem, title: "Max Items" }),
         ),
         Group("Overview",
             Row({ opt: ov.scale, title: "Scale", max: 100 }),
-            Row({ opt: ov.workspaces, title: "Workspaces", max: 11, note: "set this to 0 to make it dynamic" }),
+            Row({ opt: ov.workspaces, title: "workspaces", max: 11, note: "set this to 0 to make it dynamic" }),
             Row({ opt: ov.monochromeIcon, title: "Monochrome Icons" }),
         ),
         Group("Powermenu",

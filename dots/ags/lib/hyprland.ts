@@ -1,23 +1,17 @@
 import options from "options"
 const { messageAsync } = await Service.import("hyprland")
 
+const { hyprland } = options
 const {
-    hyprland,
-    theme: {
-        spacing,
-        radius,
-        border: { width },
-        blur,
-        shadows,
-        dark: {
-            primary: { bg: darkActive },
-        },
-        light: {
-            primary: { bg: lightActive },
-        },
-        scheme,
-    },
-} = options
+    spacing,
+    radius,
+    border: { width },
+    blur,
+    shadows,
+    dark: { primary: { bg: darkActive } },
+    light: { primary: { bg: lightActive } },
+    scheme,
+} = options.theme
 
 const deps = [
     "hyprland",
@@ -30,6 +24,11 @@ const deps = [
     lightActive.id,
     scheme.id,
 ]
+
+export default function init() {
+    options.handler(deps, setupHyprland)
+    setupHyprland()
+}
 
 function activeBorder() {
     const color = scheme.value === "dark"
@@ -52,15 +51,13 @@ async function setupHyprland() {
     const wm_gaps = Math.floor(hyprland.gaps.value * spacing.value)
 
     sendBatch([
-        `general:border_size ${width}`,
+        `general:border_size ${width.value}`,
         `general:gaps_out ${wm_gaps}`,
         `general:gaps_in ${Math.floor(wm_gaps / 2)}`,
         `general:col.active_border rgba(${activeBorder()}ff)`,
         `general:col.inactive_border rgba(${hyprland.inactiveBorder.value})`,
-        `decoration:rounding ${radius}`,
+        `decoration:rounding ${radius.value}`,
         `decoration:drop_shadow ${shadows.value ? "yes" : "no"}`,
-        `dwindle:no_gaps_when_only ${hyprland.gapsWhenOnly.value ? 0 : 1}`,
-        `master:no_gaps_when_only ${hyprland.gapsWhenOnly.value ? 0 : 1}`,
     ])
 
     await sendBatch(App.windows.map(({ name }) => `layerrule unset, ${name}`))
@@ -72,9 +69,4 @@ async function setupHyprland() {
             `layerrule ignorealpha ${/* based on shadow color */.29}, ${name}`,
         ]))
     }
-}
-
-export default function init() {
-    options.handler(deps, setupHyprland)
-    setupHyprland()
 }

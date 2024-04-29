@@ -1,28 +1,16 @@
 import AccountsService from "gi://AccountsService?version=1.0"
-import GLib from "gi://GLib?version=2.0"
 import icons from "lib/icons"
 
-const { iconFile, realName, userName } = AccountsService.UserManager
-    .get_default().list_users()[0]
+const { iconFile, realName, userName } = AccountsService.UserManager.get_default().list_users()[0]
 
 const loggingin = Variable(false)
 
-const CMD = GLib.getenv("ASZTAL_DM_CMD")
-    || "Hyprland"
-
-const ENV = GLib.getenv("ASZTAL_DM_ENV")
-    || "WLR_NO_HARDWARE_CURSORS=1 _JAVA_AWT_WM_NONREPARENTING=1"
-
-async function login(pw: string) {
-    loggingin.value = true
+async function login(password: string) {
     const greetd = await Service.import("greetd")
-    return greetd.login(userName, pw, CMD, ENV.split(/\s+/))
-        .catch(res => {
-            loggingin.value = false
-            response.label = res?.description || JSON.stringify(res)
-            password.text = ""
-            revealer.reveal_child = true
-        })
+    return greetd.login(userName, password, "Hyprland", [
+        "WLR_NO_HARDWARE_CURSORS=1",
+        "_JAVA_AWT_WM_NONREPARENTING=1",
+    ])
 }
 
 const avatar = Widget.Box({
@@ -35,7 +23,15 @@ const password = Widget.Entry({
     placeholder_text: "Password",
     hexpand: true,
     visibility: false,
-    on_accept: ({ text }) => { login(text || "") },
+    on_accept: ({ text }) => {
+        loggingin.value = true
+        login(text!).catch(res => {
+            loggingin.value = false
+            response.label = res?.description || JSON.stringify(res)
+            password.text = ""
+            revealer.reveal_child = true
+        })
+    },
 })
 
 const response = Widget.Label({

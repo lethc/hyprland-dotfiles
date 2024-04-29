@@ -56,7 +56,7 @@ window#datemenu .datemenu {
         }
 
         .notification-scrollable {
-            @include scrollable($top: true, $bottom: true);
+            @include scrollable;
         }
 
         .notification-list {

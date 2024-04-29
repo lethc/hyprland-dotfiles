@@ -91,13 +91,19 @@ async function resetCss() {
         const files = fd.split(/\s+/).map(f => `@import '${f}';`)
         const scss = [`@import '${vars}';`, ...files].join("\n")
         const css = await bash`echo "${scss}" | sass --stdin`
+        const file = `${TMP}/style.css`
 
-        App.applyCss(css, true)
+        await Utils.writeFile(css, file)
+
+        App.resetCss()
+        App.applyCss(file)
     } catch (error) {
         logError(error)
     }
 }
 
-Utils.monitorFile(App.configDir, resetCss)
-options.handler(deps, resetCss)
-await resetCss()
+export default function init() {
+    Utils.monitorFile(App.configDir, resetCss)
+    options.handler(deps, resetCss)
+    resetCss()
+}
