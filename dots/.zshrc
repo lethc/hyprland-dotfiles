@@ -319,4 +319,4 @@ export BEMENU_OPTS="
 "
 
 # source /home/Lummyn/.config/broot/launcher/bash/br
-eval "$(zellij setup --generate-auto-start zsh)"
+# eval "$(zellij setup --generate-auto-start zsh)"
