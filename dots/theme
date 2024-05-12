@@ -12,18 +12,18 @@ mkdir ~/env/.virtualenvs
 cd ~/env/.virtualenvs
 python -m venv debugpy
 debugpy/bin/python -m pip install debugpy
-# Rust, C and C++ debuger 
+# Rust, C and C++ debuger
 yay -S codelldb
 
 echo "###################################"
 echo "########  Create Symlinks  ########"
-echo "###################################" 
+echo "###################################"
 
 ln -sf "${HOME}/.config/hypr/dots/ags" "${HOME}/.config"
-echo "Ags linked" 
+echo "Ags linked"
 
 ln -sf "${HOME}/.config/hypr/dots/waybar" "${HOME}/.config"
-echo "Waybar linked" 
+echo "Waybar linked"
 
 ln -sf "${HOME}/.config/hypr/dots/foot" "${HOME}/.config"
 echo "foot linked"
@@ -140,7 +140,7 @@ echo "SDDM theme linked"
 sudo ln -sf "${HOME}/.config/hypr/dots/bookmenu/bookmenu" /usr/bin/
 echo "Bookmenu linked"
 
-sudo ln -sf "${HOME}/.config/hypr/dots/bookmenu/documentation/bookmenu.1" /usr/share/man/man1 
+sudo ln -sf "${HOME}/.config/hypr/dots/bookmenu/documentation/bookmenu.1" /usr/share/man/man1
 echo "Bookmenu manual linked"
 
 ln -sf "${HOME}/.config/hypr/dots/bookmenu/config/bookmenu/" "${HOME}/.config"
@@ -149,15 +149,18 @@ echo "Bookmenu configuration linked"
 ln -sf "${HOME}/.config/hypr/dots/.scripts/bemenu-theming" "${HOME}/.local/bin/"
 echo "Bemenu Theme linked"
 
+ln -sf "${HOME}/.config/hypr/dots/dots/xdg-desktop-portal" "${HOME}/.config"
+echo "xdg-desktop-portal config linked"
+
 # echo "ICONS" | sleep 2
 # cd /tmp/
-# git clone https://github.com/4e6anenk0/Rowaita-icon-theme.git     
+# git clone https://github.com/4e6anenk0/Rowaita-icon-theme.git
 # cd Rowaita-icon-theme
 # cp -r Rowaita-Ubuntu-Dark/ ~/.icons/
 
 echo "Changing papirus Icon Colour"
 
 yay -S papirus-folders-git
-papirus-folders -C orange --theme Papirus-Dark 
+papirus-folders -C orange --theme Papirus-Dark
 
 echo "theme completed"
