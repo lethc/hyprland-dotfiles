@@ -107,16 +107,32 @@ bindkey -M vicmd 'y' vi-yank-xclip
 # zstyle ':autocomplete:*' ignored-input '..##'
 # Wait with autocompletion until typing stops for a certain amount of seconds
 # zstyle ':autocomplete:*' delay 0.2  # seconds (float)
+
+# HISTORY COMMANDS
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
-# zsh-autosuggestions
+HISTDUP=erase # Delete any duplicates inside the history file
+
+# ZSH-AUTOSUGGESTIONS
 bindkey 'Ñ' autosuggest-accept
 setopt histignorealldups sharehistory
 #Use modern completion system
 autoload -Uz compinit
 compinit
+
+# ZSHELL OPTIONS
+bindkey '^k' history-search-backward
+bindkey '^j' history-search-forward
+
+setopt appendhistory     # Append any commands to the history file rather than overwriting it
+setopt sharehistory      # Share our command history across all Zshell sessions at the same time
+setopt hist_ignore_space # Prevent a command to being written to the history file by adding a space before it
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
