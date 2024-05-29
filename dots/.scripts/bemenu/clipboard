@@ -5,4 +5,4 @@
 
 prompt="-p Clipboard:"
 
-cliphist list | head -80 | sed 's/^[0-9]*\s//' | bemenu $prompt | wl-copy
+cliphist list | head -80 | sed 's/^[0-9]*\s//' | bemenu -i $prompt | wl-copy
