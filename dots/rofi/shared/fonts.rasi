@@ -3,5 +3,5 @@
 /* Text Font */
 
 * {
-    font: "SF Compact Display Regular 10";
+    font: "SF Pro Regular 10";
 }
