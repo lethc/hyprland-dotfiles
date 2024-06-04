@@ -98,7 +98,7 @@ const options = mkOptions(OPTIONS, {
             action: opt(() => App.toggleWindow("applauncher")),
         },
         date: {
-            format: opt("%a %d %b - %H:%M"),
+            format: opt("%a %d %b - %H:%M:%S"),
             action: opt(() => App.toggleWindow("datemenu")),
         },
         battery: {
