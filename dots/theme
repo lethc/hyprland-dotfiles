@@ -149,7 +149,7 @@ echo "Bookmenu configuration linked"
 ln -sf "${HOME}/.config/hypr/dots/.scripts/bemenu-theming" "${HOME}/.local/bin/"
 echo "Bemenu Theme linked"
 
-ln -sf "${HOME}/.config/hypr/dots/dots/xdg-desktop-portal" "${HOME}/.config"
+ln -sf "${HOME}/.config/hypr/dots/xdg-desktop-portal" "${HOME}/.config"
 echo "xdg-desktop-portal config linked"
 
 # echo "ICONS" | sleep 2
