@@ -82,7 +82,7 @@ keybinds {
         }
    }
    pane {
-        bind "Ctrl b" { SwitchToMode "tab"; }
+        bind "Ctrl p" { SwitchToMode "tab"; }
         bind "i" { SwitchToMode "normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
@@ -97,7 +97,7 @@ keybinds {
         //bind "a" { FocusPreviousPane; }
    }
    move {
-        bind "Ctrl b" { SwitchToMode "tab"; }
+        bind "Ctrl o" { SwitchToMode "tab"; }
         bind "Esc" { SwitchToMode "Pane"; }
         bind "n" "Tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
