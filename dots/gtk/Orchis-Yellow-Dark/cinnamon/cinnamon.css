@@ -2288,14 +2288,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .applet-cornerbar {
-  width: 8px;
+  width: 10px;
   background: transparent;
 }
 
 .applet-cornerbar-box {
   padding: 0;
-  background: transparent;
-  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  border: none;
+  box-shadow: inset 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .applet-cornerbar-box:hover > .applet-cornerbar {
@@ -2303,7 +2304,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .applet-cornerbar.vertical {
-  height: 8px;
+  height: 10px;
 }
 
 .user-icon {
