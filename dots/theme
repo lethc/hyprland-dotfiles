@@ -4,6 +4,7 @@ echo "#######   Clonning repos  ############"
 echo "######################################"
 
 mkdir ~/Home
+mkdir ~/Documents/Library
 git clone https://git.sr.ht/~heckyel/yt-local ~/env/yt-local
 # cp "${HOME}/.config/hypr/dots/.scripts/.megabot" ~/Sync/
 
@@ -22,9 +23,6 @@ echo "###################################"
 ln -sf "${HOME}/.config/hypr/dots/ags" "${HOME}/.config"
 echo "Ags linked"
 
-ln -sf "${HOME}/.config/hypr/dots/waybar" "${HOME}/.config"
-echo "Waybar linked"
-
 ln -sf "${HOME}/.config/hypr/dots/foot" "${HOME}/.config"
 echo "foot linked"
 
@@ -34,23 +32,13 @@ echo "kitty linked"
 ln -sf "${HOME}/.config/hypr/dots/gitui" "${HOME}/.config"
 echo "Gitui linked"
 
-ln -sf "${HOME}/.config/hypr/dots/dunst" "${HOME}/.config"
-echo "dunst linked"
-
-ln -sf "${HOME}/.config/hypr/dots/swaync" "${HOME}/.config"
-echo "swaync linked"
-
 ln -sf "${HOME}/.config/hypr/dots/mpv" "${HOME}/.config"
 echo "mpv linked"
 
 ln -sf "${HOME}/.config/hypr/dots/newsboat" "${HOME}/.config"
 echo "newsboat linked"
 
-rm -r ~/.config/ranger/
-ln -sf "${HOME}/.config/hypr/dots/ranger" "${HOME}/.config"
-echo "ranger linked"
-
-rm -r ~/.config/qutebrowser/
+# rm -r ~/.config/qutebrowser/
 ln -sf "${HOME}/.config/hypr/dots/qutebrowser" "${HOME}/.config"
 echo "qutebrowser linked"
 
@@ -60,26 +48,21 @@ echo "zathura linked"
 ln -sf "${HOME}/.config/hypr/dots/sioyek" "${HOME}/.config"
 echo "sioyek linked"
 
-ln -sf "${HOME}/.config/hypr/dots/wofi" "${HOME}/.config"
-echo "wofi linked"
-
-ln -sf "${HOME}/.config/hypr/dots/rofi" "${HOME}/.config"
-echo "rofi linked"
-
 ln -sf "${HOME}/.config/hypr/dots/zellij" "${HOME}/.config"
 echo "zellij linked"
 
 ln -sf "${HOME}/.config/hypr/dots/starship.toml" "${HOME}/.config"
 echo "starship linked"
 
-mkdir "${HOME}/.themes"
-cp -r "${HOME}/.config/hypr/dots/gtk/Everforest-Dark-BL" "${HOME}/.themes"
-cp -r "${HOME}/.config/hypr/dots/gtk/Orchis-Yellow-Dark" "${HOME}/.themes"
-echo "GTK3 theme copied"
-
-rm -r ~/.config/gtk-4.0/
+# rm -r ~/.config/gtk-4.0/
 ln -sf "${HOME}/.config/hypr/dots/gtk/gtk-4.0" "${HOME}/.config"
 echo "GTK4 theme linked"
+
+
+ln -sf "${HOME}/.config/hypr/dots/" "${HOME}/.config"
+kvantummanager --set Orchis-dark
+# Change the QT themes with an application like qt5ct or qt6ct
+echo "Kvantum theme linked"
 
 ln -sf "${HOME}/.config/hypr/dots/.zshrc" "${HOME}"
 echo ".zshrc linked"
@@ -120,9 +103,6 @@ mkdir -p "${HOME}/.icons/default"
 touch "${HOME}/.icons/default/index.theme"
 echo "qt cursor config created"
 
-ln -sf "${HOME}/.config/hypr/dots/md2anki" "${HOME}/.config"
-echo "md2anki linked"
-
 ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/fzj" "${HOME}/.local/bin/"
 echo "FZJ linked"
 
@@ -152,15 +132,42 @@ echo "Bemenu Theme linked"
 ln -sf "${HOME}/.config/hypr/dots/xdg-desktop-portal" "${HOME}/.config"
 echo "xdg-desktop-portal config linked"
 
-# echo "ICONS" | sleep 2
-# cd /tmp/
-# git clone https://github.com/4e6anenk0/Rowaita-icon-theme.git
-# cd Rowaita-icon-theme
-# cp -r Rowaita-Ubuntu-Dark/ ~/.icons/
-
 echo "Changing papirus Icon Colour"
 
 yay -S papirus-folders-git
 papirus-folders -C orange --theme Papirus-Dark
 
 echo "theme completed"
+
+mkdir "${HOME}/.themes"
+cp -r "${HOME}/.config/hypr/dots/gtk/Everforest-Dark-BL" "${HOME}/.themes"
+cp -r "${HOME}/.config/hypr/dots/gtk/Orchis-Yellow-Dark" "${HOME}/.themes"
+echo "GTK3 theme copied"
+
+#ln -sf "${HOME}/.config/hypr/dots/waybar" "${HOME}/.config"
+#echo "Waybar linked"
+
+#ln -sf "${HOME}/.config/hypr/dots/dunst" "${HOME}/.config"
+#echo "dunst linked"
+
+#ln -sf "${HOME}/.config/hypr/dots/swaync" "${HOME}/.config"
+#echo "swaync linked"
+
+#rm -r ~/.config/ranger/
+#ln -sf "${HOME}/.config/hypr/dots/ranger" "${HOME}/.config"
+#echo "ranger linked"
+
+#ln -sf "${HOME}/.config/hypr/dots/wofi" "${HOME}/.config"
+#echo "wofi linked"
+
+#ln -sf "${HOME}/.config/hypr/dots/rofi" "${HOME}/.config"
+#echo "rofi linked"
+
+# ln -sf "${HOME}/.config/hypr/dots/md2anki" "${HOME}/.config"
+# echo "md2anki linked"
+
+# echo "ICONS" | sleep 2
+# cd /tmp/
+# git clone https://github.com/4e6anenk0/Rowaita-icon-theme.git
+# cd Rowaita-icon-theme
+# cp -r Rowaita-Ubuntu-Dark/ ~/.icons/
