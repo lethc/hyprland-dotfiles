@@ -1,14 +1,14 @@
 #!/bin/bash
 
 export BEMENU_OPTS="
-  --tb '#F4BF75'\
+  --tb '#90A959'\
   --tf '#151515'\
   --fb '#151515'\
   --ff '#E1E1E1'\
   --nb '#1d1f21'\
   --nf '#E1E1E1'\
   --hb '#151515'\
-  --hf '#EE923A'\
+  --hf '#B7D960'\
   --nf '#E1E1E1'\
   --af '#E1E1E1'\
   --ab '#151515'\ 

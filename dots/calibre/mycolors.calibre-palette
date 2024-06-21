@@ -1,17 +1,17 @@
 {
   "dark": {
     "palette": {
-      "AlternateBase": "#f4b469",
-      "Base": "#f8d497",
+      "AlternateBase": "#90A959",
+      "Base": "#B7D960",
       "BrightText": "#ffffff",
       "BrightText-disabled": "#ffffff",
       "Button": "#232323",
       "ButtonText": "#dfdfdf",
       "ButtonText-disabled": "#696969",
-      "Highlight": "#ffa557",
+      "Highlight": "#B6C02D",
       "HighlightedText": "#ffffff",
       "HighlightedText-disabled": "#ffffff",
-      "Link": "#db7f3f",
+      "Link": "#45621C",
       "LinkVisited": "#e040fb",
       "PlaceholderText": "#212223",
       "PlaceholderText-disabled": "#dfdfdf",

@@ -12,7 +12,7 @@ const options = mkOptions(OPTIONS, {
     theme: {
         dark: {
             primary: {
-                bg: opt("#F4BF75"),
+                bg: opt("#90A959"),
                 fg: opt("#171717"),
             },
             error: {
@@ -103,7 +103,7 @@ const options = mkOptions(OPTIONS, {
         },
         battery: {
             bar: opt<"hidden" | "regular" | "whole">("hidden"),
-            charging: opt("#F4BF75"),
+            charging: opt("#B7D960"),
             percentage: opt(true),
             blocks: opt(7),
             width: opt(50),
