@@ -4,8 +4,8 @@ set auconcreatecontainer true
 set searchengine google
 set smoothscroll true
 
-bind j scrollline 2
-bind k scrollline -2
+bind j scrollline 4
+bind k scrollline -4
 
 bind a           current_url bmark
 bind A bmark
