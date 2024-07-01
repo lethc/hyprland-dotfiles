@@ -131,8 +131,6 @@ export default (notification: Notification) => {
         }),
     })
 
-    Utils.execAsync('notification-sound');
-
     return Widget.Box({
         class_name: `notification ${notification.urgency}`,
         child: eventbox,
