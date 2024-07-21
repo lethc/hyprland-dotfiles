@@ -146,3 +146,5 @@ x-scheme-handler/morgen=morgen.desktop
 x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 x-scheme-handler/terminal=st.desktop;
 x-scheme-handler/unknown=firefox.desktop
+x-scheme-handler/magnet=freedownloadmanager_magnet_up.desktop
+application/x-bittorrent=freedownloadmanager_torrent.desktop
