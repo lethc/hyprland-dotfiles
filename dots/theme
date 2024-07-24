@@ -132,6 +132,9 @@ echo "Bemenu Theme linked"
 ln -sf "${HOME}/.config/hypr/dots/xdg-desktop-portal" "${HOME}/.config"
 echo "xdg-desktop-portal config linked"
 
+ln -sf "${HOME}/.config/hypr/dots/rofi" "${HOME}/.config"
+echo "rofi linked"
+
 echo "Changing papirus Icon Colour"
 
 yay -S papirus-folders-git
@@ -159,9 +162,6 @@ echo "GTK3 theme copied"
 
 #ln -sf "${HOME}/.config/hypr/dots/wofi" "${HOME}/.config"
 #echo "wofi linked"
-
-#ln -sf "${HOME}/.config/hypr/dots/rofi" "${HOME}/.config"
-#echo "rofi linked"
 
 # ln -sf "${HOME}/.config/hypr/dots/md2anki" "${HOME}/.config"
 # echo "md2anki linked"
