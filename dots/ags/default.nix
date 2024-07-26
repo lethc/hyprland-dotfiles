@@ -1,26 +1,27 @@
-{ inputs
-, writeShellScript
-, system
-, stdenv
-, cage
-, swww
-, bun
-, dart-sass
-, fd
-, brightnessctl
-, accountsservice
-, slurp
-, wf-recorder
-, wl-clipboard
-, wayshot
-, swappy
-, hyprpicker
-, pavucontrol
-, networkmanager
-, gtk3
-, which
-}:
-let
+{
+  inputs,
+  writeShellScript,
+  system,
+  stdenv,
+  cage,
+  swww,
+  esbuild,
+  dart-sass,
+  fd,
+  fzf,
+  brightnessctl,
+  accountsservice,
+  slurp,
+  wf-recorder,
+  wl-clipboard,
+  wayshot,
+  swappy,
+  hyprpicker,
+  pavucontrol,
+  networkmanager,
+  gtk3,
+  which,
+}: let
   name = "asztal";
 
   ags = inputs.ags.packages.${system}.default.override {
@@ -31,10 +32,10 @@ let
     which
     dart-sass
     fd
+    fzf
     brightnessctl
     swww
     inputs.matugen.packages.${system}.default
-    inputs.hyprland.packages.${system}.default
     slurp
     wf-recorder
     wl-clipboard
@@ -63,15 +64,19 @@ let
     src = ./.;
 
     buildPhase = ''
-      ${bun}/bin/bun build ./main.ts \
-        --outfile main.js \
-        --external "resource://*" \
-        --external "gi://*"
+      ${esbuild}/bin/esbuild \
+        --bundle ./main.ts \
+        --outfile=main.js \
+        --format=esm \
+        --external:resource://\* \
+        --external:gi://\* \
 
-      ${bun}/bin/bun build ./greeter/greeter.ts \
-        --outfile greeter.js \
-        --external "resource://*" \
-        --external "gi://*"
+      ${esbuild}/bin/esbuild \
+        --bundle ./greeter/greeter.ts \
+        --outfile=greeter.js \
+        --format=esm \
+        --external:resource://\* \
+        --external:gi://\* \
     '';
 
     installPhase = ''
@@ -84,14 +89,15 @@ let
       cp -f greeter.js $out/greeter.js
     '';
   };
-in stdenv.mkDerivation {
-  inherit name;
-  src = config;
+in
+  stdenv.mkDerivation {
+    inherit name;
+    src = config;
 
-  installPhase = ''
-    mkdir -p $out/bin
-    cp -r . $out
-    cp ${desktop} $out/bin/${name}
-    cp ${greeter} $out/bin/greeter
-  '';
-}
+    installPhase = ''
+      mkdir -p $out/bin
+      cp -r . $out
+      cp ${desktop} $out/bin/${name}
+      cp ${greeter} $out/bin/greeter
+    '';
+  }

@@ -1,16 +1,33 @@
-import AccountsService from "gi://AccountsService?version=1.0"
+import GLib from "gi://GLib?version=2.0"
 import icons from "lib/icons"
+import { bash } from "lib/utils"
 
-const { iconFile, realName, userName } = AccountsService.UserManager.get_default().list_users()[0]
+const userName = await bash("find /home -maxdepth 1 -printf '%f\n' | tail -n 1")
+const iconFile = `/var/lib/AccountsService/icons/${userName}`
+
+// FIXME: AccountsService crashes?
+// import AccountsService from "gi://AccountsService?version=1.0"
+// const { iconFile, realName, userName } = AccountsService.UserManager
+//     .get_default().list_users()[0]
 
 const loggingin = Variable(false)
 
-async function login(password: string) {
+const CMD = GLib.getenv("ASZTAL_DM_CMD")
+    || "Hyprland"
+
+const ENV = GLib.getenv("ASZTAL_DM_ENV")
+    || "WLR_NO_HARDWARE_CURSORS=1 _JAVA_AWT_WM_NONREPARENTING=1"
+
+async function login(pw: string) {
+    loggingin.value = true
     const greetd = await Service.import("greetd")
-    return greetd.login(userName, password, "Hyprland", [
-        "WLR_NO_HARDWARE_CURSORS=1",
-        "_JAVA_AWT_WM_NONREPARENTING=1",
-    ])
+    return greetd.login(userName, pw, CMD, ENV.split(/\s+/))
+        .catch(res => {
+            loggingin.value = false
+            response.label = res?.description || JSON.stringify(res)
+            password.text = ""
+            revealer.reveal_child = true
+        })
 }
 
 const avatar = Widget.Box({
@@ -23,15 +40,7 @@ const password = Widget.Entry({
     placeholder_text: "Password",
     hexpand: true,
     visibility: false,
-    on_accept: ({ text }) => {
-        loggingin.value = true
-        login(text!).catch(res => {
-            loggingin.value = false
-            response.label = res?.description || JSON.stringify(res)
-            password.text = ""
-            revealer.reveal_child = true
-        })
-    },
+    on_accept: ({ text }) => { login(text || "") },
 })
 
 const response = Widget.Label({
@@ -78,7 +87,7 @@ export default Widget.Box({
                     hpack: "center",
                     children: [
                         Widget.Icon(icons.ui.avatar),
-                        Widget.Label(realName || userName),
+                        Widget.Label(userName),
                     ],
                 }),
                 Widget.Box(

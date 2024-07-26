@@ -5,6 +5,8 @@ import Gtk from "gi://Gtk?version=3.0"
 import Gdk from "gi://Gdk"
 import GLib from "gi://GLib?version=2.0"
 
+export type Binding<T> = import("types/service").Binding<any, any, T>
+
 /**
   * @returns substitute icon || name || fallback icon
   */
@@ -49,7 +51,7 @@ export async function sh(cmd: string | string[]) {
 
 export function forMonitors(widget: (monitor: number) => Gtk.Window) {
     const n = Gdk.Display.get_default()?.get_n_monitors() || 1
-    return range(n, 0).map(widget).flat(1)
+    return range(n, 0).flatMap(widget)
 }
 
 /**
@@ -60,24 +62,19 @@ export function range(length: number, start = 1) {
 }
 
 /**
- * promisified timeout
- */
-export function wait<T>(ms: number, callback: () => T): Promise<T> {
-    return new Promise(resolve => Utils.timeout(ms, () => {
-        resolve(callback())
-    }))
-}
-
-/**
  * @returns true if all of the `bins` are found
  */
 export function dependencies(...bins: string[]) {
-    const missing = bins.filter(bin => {
-        return !Utils.exec(`which ${bin}`)
-    })
+    const missing = bins.filter(bin => Utils.exec({
+        cmd: `which ${bin}`,
+        out: () => false,
+        err: () => true,
+    }))
 
-    if (missing.length > 0)
-        console.warn("missing dependencies:", missing.join(", "))
+    if (missing.length > 0) {
+        console.warn(Error(`missing dependencies: ${missing.join(", ")}`))
+        Utils.notify(`missing dependencies: ${missing.join(", ")}`)
+    }
 
     return missing.length === 0
 }

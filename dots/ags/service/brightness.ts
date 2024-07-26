@@ -18,7 +18,7 @@ class Brightness extends Service {
     #kbdMax = get(`--device ${kbd} max`)
     #kbd = get(`--device ${kbd} get`)
     #screenMax = get("max")
-    #screen = get("get") / get("max")
+    #screen = get("get") / (get("max") || 1)
 
     get kbd() { return this.#kbd }
     get screen() { return this.#screen }
@@ -66,4 +66,4 @@ class Brightness extends Service {
     }
 }
 
-export default new Brightness()
+export default new Brightness

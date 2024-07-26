@@ -11,7 +11,10 @@ class Asusctl extends Service {
         })
     }
 
-    available = !!Utils.exec("which asusctl")
+    get available() {
+        return Utils.exec("which asusctl", () => true, () => false)
+    }
+
     #profile: Profile = "Balanced"
     #mode: Mode = "Hybrid"
 
@@ -49,4 +52,4 @@ class Asusctl extends Service {
     get mode() { return this.#mode }
 }
 
-export default new Asusctl()
+export default new Asusctl
