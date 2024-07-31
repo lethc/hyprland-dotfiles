@@ -155,8 +155,8 @@ echo "[Theme]" > ~/Desktop/config
 echo "Current=corners" >> ~/Desktop/config
 sudo mv ~/Desktop/config /etc/sddm.conf.d/
 
-echo "setting theme"
-sudo sed -i 's/    passwordMaskDelay: 1000$/    passwordMaskDelay: 0/' /usr/share/sddm/themes/corners/components/PasswordPanel.qml
+# echo "setting theme"
+# sudo sed -i 's/    passwordMaskDelay: 1000$/    passwordMaskDelay: 0/' /usr/share/sddm/themes/corners/components/PasswordPanel.qml
 echo "theme setted correctly"
 
 echo "Installing FZF"

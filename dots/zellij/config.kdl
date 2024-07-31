@@ -220,16 +220,16 @@ themes {
         orange "#EFA554"
   }
   no_clown_freedom {
-      fg "#E1E1E1"
+      fg "#cac9dd"
       bg "#353535" //#171717
       black "#171717"
       red "#b46958"
-      green "#90A959"
+      green "#AFAFAF"
       yellow "#F4BF75"
       blue "#BAD7FF"
       magenta "#AA759F"
       cyan "#88afa2"
-      white "#E1E1E1"
+      white "#cac9dd"
       orange "#FFA557"
   }
 }

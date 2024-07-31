@@ -14,7 +14,7 @@ const options = mkOptions(OPTIONS, {
     theme: {
         dark: {
             primary: {
-                bg: opt('#90A959'),
+                bg: opt('#AFAFAF'),
                 fg: opt('#171717'),
             },
             error: {
@@ -22,9 +22,9 @@ const options = mkOptions(OPTIONS, {
                 fg: opt('#171717'),
             },
             bg: opt('#171717'),
-            fg: opt('#E1E1E1'),
-            widget: opt('#E1E1E1'),
-            border: opt('#E1E1E1'),
+            fg: opt('#cac9dd'),
+            widget: opt('#cac9dd'),
+            border: opt('#cac9dd'),
         },
         light: {
             primary: {
@@ -106,7 +106,7 @@ const options = mkOptions(OPTIONS, {
         },
         battery: {
             bar: opt<'hidden' | 'regular' | 'whole'>('hidden'),
-            charging: opt('#B7D960'),
+            charging: opt('#cac9dd'),
             percentage: opt(true),
             blocks: opt(7),
             width: opt(50),
@@ -134,7 +134,7 @@ const options = mkOptions(OPTIONS, {
             length: opt(40),
         },
         powermenu: {
-            monochrome: opt(false),
+            monochrome: opt(true),
             action: opt(() => App.toggleWindow('powermenu')),
         },
     },

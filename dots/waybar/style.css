@@ -65,41 +65,41 @@ window#waybar {
 #custom-button-float,
 #custom-button-full {
   font-size: 15px;
-  color: #E1E1E1;
+  color: #cac9dd;
   padding-right: 5px;
   background-color: #151515;
 }
 
 #cpu {
-  color: #E1E1E1;
+  color: #cac9dd;
   padding: 0px 10px 0px 12px;
   border-radius: 5px 0px 0px 5px;
 }
 
 #memory {
-  color: #E1E1E1;
+  color: #cac9dd;
   padding: 0px 10px 0px 0px;
 }
 
 #temperature {
-  color: #E1E1E1;
+  color: #cac9dd;
   padding: 0px 5px 0px 0px;
 }
 
 #disk {
-  color: #E1E1E1;
+  color: #cac9dd;
   padding: 0px 12px 0px 0px;
   border-radius: 0px 5px 5px 0px;
 }
 
 #custom-window-name {
-  color: #E1E1E1;
+  color: #cac9dd;
   margin-right: 10px;
   background-color: #151515;
 }
 
 #custom-pacman-update-icon {
-  background-color: #E1E1E1;
+  background-color: #cac9dd;
   color: #181926;
   padding-left: 5px;
   padding-right: 5px;
@@ -167,7 +167,7 @@ window#waybar {
   background-color: #151515;
 }
 #workspaces button:nth-child(10) label {
-  color: #E1E1E1;
+  color: #cac9dd;
   margin: 0px 8px;
   background-color: #151515;
 }
@@ -187,13 +187,13 @@ window#waybar {
 }
 
 #backlight {
-  color: #E1E1E1;
+  color: #cac9dd;
   padding: 0px 10px 0px 10px;
   border-radius: 5px 0px 0px 5px;
 }
 
 #pulseaudio {
-  color: #E1E1E1;
+  color: #cac9dd;
   padding: 0px 10px 0px 0px;
   border-radius: 0px 5px 5px 0px;
 }
@@ -204,12 +204,12 @@ window#waybar {
 }
 
 #custom-pacman {
-  color: #E1E1E1;
+  color: #cac9dd;
   background-color: #151515;
 }
 
 #network {
-  color: #E1E1E1;
+  color: #cac9dd;
   margin-right: 10px;
   background-color: #151515;
 }

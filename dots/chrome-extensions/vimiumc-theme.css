@@ -159,12 +159,12 @@ body:after {
   background: none;
   box-shadow: unset;
   font-size: 16px;
-  color: #e1e1e1;
+  color: #cac9dd;
   padding-left: 2rem;
 }
 
 .has-dark #input {
-  color: #e1e1e1;
+  color: #cac9dd;
 }
 
 #toolbar {
@@ -260,12 +260,12 @@ body:after {
 .item.s,
 .item:hover {
   background-color: unset;
-  border: 3px #e1e1e1 solid;
+  border: 3px #cac9dd solid;
 }
 
 .has-dark .item.s,
 .has-dark .item:hover {
-  border: 3px #e1e1e1 solid;;
+  border: 3px #cac9dd solid;;
 }
 
 .item.s::before {
@@ -307,13 +307,13 @@ body:after {
 }
 
 .item .top {
-  color: #e1e1e1;
+  color: #cac9dd;
   position: relative;
   height: 30px;
 }
 
 .has-dark .item .top {
-  color: #e1e1e1;
+  color: #cac9dd;
 }
 
 .item .top .title {
