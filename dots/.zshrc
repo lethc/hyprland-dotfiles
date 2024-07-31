@@ -12,6 +12,7 @@ export PATH="$HOME/.local/bin":$PATH
 export PATH=/home/lummyn/.local/bin:$PATH
 export PATH=/opt/android-sdk/platform-tools:$PATH
 export PATH=/opt/idea-IC-223.8214.52/bin/:$PATH
+export PATH="$HOME/.config/composer/vendor/bin":$PATH
 # export PATH=/opt/apache-maven-3.8.7/bin:$PATH
 export PATH_TO_FX=path/to/javafx-sdk-20/lib
 # export PATH=/home/lummyn/Modules/javafx-sdk-20/lib/:$PATH
