@@ -13,10 +13,26 @@ while true; do
         paplay /usr/share/sounds/ocean/stereo/battery-caution.oga
         brightnessctl -s set 15
 
+        # Loop until the AC adapter is online
+        while ! acpi -a 2>&1 | rg on-line -q; do
+            sleep 5  # Wait for 5 seconds before checking again
+        done
+        
+        # Execute the brightnessctl command once the AC adapter is online
+        brightnessctl -r
+
 	elif [[ $curr_bat -le 10 && $prev_bat -gt 10 ]]; then
 		notify-send --app-name="battery" -i battery-empty --urgency=CRITICAL "Battery Low" "Level: ${curr_bat}%"
         paplay /usr/share/sounds/ocean/stereo/battery-low.oga
         brightnessctl -s set 10
+
+        # Loop until the AC adapter is online
+        while ! acpi -a 2>&1 | rg on-line -q; do
+            sleep 5  # Wait for 5 seconds before checking again
+        done
+        
+        # Execute the brightnessctl command once the AC adapter is online
+        brightnessctl -r
 
 	fi
 	prev_bat=$curr_bat
