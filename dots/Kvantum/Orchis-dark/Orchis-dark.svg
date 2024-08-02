@@ -6017,33 +6017,33 @@
     <path
        d="m1-80c-3.324 0-6 2.676-6 6h6z"
        fill="#ffa557"
-       style="paint-order:markers stroke fill;fill:#cac9dd;fill-opacity:1"
+       style="paint-order:markers stroke fill;fill:#36383F;fill-opacity:1"
        id="path379" />
   </g>
   <g
      id="button-toggled-top"
      transform="matrix(.99999 0 0 .99999 154 116)"
-     style="fill:#cac9dd;fill-opacity:1">
+     style="fill:#36383F;fill-opacity:1">
     <rect
        x="1"
        y="-80"
        width="26"
        height="6"
        fill="#ffa557"
-       style="paint-order:markers stroke fill;fill:#cac9dd;fill-opacity:1"
+       style="paint-order:markers stroke fill;fill:#36383F;fill-opacity:1"
        id="rect380" />
   </g>
   <g
      id="button-toggled"
      transform="matrix(.99999 0 0 .99999 154 116)"
-     style="fill:#cac9dd;fill-opacity:1">
+     style="fill:#36383F;fill-opacity:1">
     <rect
        x="1"
        y="-74"
        width="26"
        height="26"
        fill="#ffa557"
-       style="display:inline;fill:#cac9dd;fill-opacity:1;paint-order:markers stroke fill"
+       style="display:inline;fill:#36383F;fill-opacity:1;paint-order:markers stroke fill"
        id="rect381"
        inkscape:label="rect381" />
   </g>
@@ -6053,7 +6053,7 @@
      width="100%"
      height="100%"
      xlink:href="#button-toggled-topleft"
-     style="fill:#cac9dd;fill-opacity:1" />
+     style="fill:#36383F;fill-opacity:1" />
   <use
      id="button-toggled-bottomright"
      transform="rotate(180 168 54.998)"
@@ -6087,7 +6087,7 @@
      width="100%"
      height="100%"
      xlink:href="#button-toggled-top"
-     style="fill:#cac9dd;fill-opacity:1" />
+     style="fill:#36383F;fill-opacity:1" />
   <g
      id="tbutton-normal-topleft"
      transform="matrix(5.0394 0 0 5.0394 -63.667 -132)"
