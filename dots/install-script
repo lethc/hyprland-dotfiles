@@ -75,7 +75,7 @@ yay -S  hyprlock-git hypridle-git hyprpicker-git
 yay -S  jq gojq-bin bc pamixer grim grimblast
 yay -S  papirus-icon-theme playerctl 
 yay -S  slurp socat swappy nm-connection-editor blueberry acpi 
-yay -S  nwg-look-bin
+yay -S  nwg-look
 
 # Adding plugins
 hyprpm update
