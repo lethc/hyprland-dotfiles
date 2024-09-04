@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export BEMENU_OPTS="
+  -b\
   --tb '#AFAFAF'\
   --tf '#151515'\
   --fb '#151515'\
