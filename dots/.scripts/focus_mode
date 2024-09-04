@@ -16,7 +16,7 @@ if grep -q "$line" "$file"; then
     hyprctl dispatch fullscreen 0
 elif [ $? -eq 1 ]; then
     # Line is present, comment it
-    sed -i "s|...forMonitors(Bar),|$line|" "$file"
+    # sed -i "s|...forMonitors(Bar),|$line|" "$file" # Uncomment this line if you want to disable ags Bar
     echo "Line commented."
     ags -q
     ags &> /dev/null &
@@ -28,6 +28,7 @@ elif [ $? -eq 1 ]; then
   hyprctl keyword general:gaps_in 1
   hyprctl keyword general:gaps_out 3
   hyprctl keyword decoration:rounding 0
+  hyprctl keyword decoration:drop_shadow 0 # Disable shadows on Hyprland
 else
     echo "An error occurred while running grep."
 fi
