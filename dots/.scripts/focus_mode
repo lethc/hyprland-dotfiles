@@ -14,6 +14,7 @@ if grep -q "$line" "$file"; then
     hyprctl dispatch fullscreen 0 #bcz Hyprland cannot update the size of the screen automatically
     # sleep 1
     hyprctl dispatch fullscreen 0
+    hyprctl keyword decoration:drop_shadow 1 # enable shadows on Hyprland
 elif [ $? -eq 1 ]; then
     # Line is present, comment it
     # sed -i "s|...forMonitors(Bar),|$line|" "$file" # Uncomment this line if you want to disable ags Bar
