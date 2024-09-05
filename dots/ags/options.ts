@@ -64,13 +64,13 @@ const options = mkOptions(OPTIONS, {
 
     bar: {
         flatButtons: opt(true),
-        position: opt<'top' | 'bottom'>('top'),
+        position: opt<'top' | 'bottom'>('bottom'),
         corners: opt(50),
-        transparent: opt(false),
+        transparent: opt(true),
         layout: {
             start: opt<Array<import('widget/bar/Bar').BarWidget>>([
                 'launcher',
-                // "taskbar",
+                 "taskbar",
                 'expander',
                 'media',
             ]),
@@ -117,7 +117,7 @@ const options = mkOptions(OPTIONS, {
         },
         taskbar: {
             iconSize: opt(0),
-            monochrome: opt(true),
+            monochrome: opt(false),
             exclusive: opt(false),
         },
         messages: {
@@ -160,6 +160,8 @@ const options = mkOptions(OPTIONS, {
                     'org.kde.dolphin',
                     'obsidian',
                     'com.github.xournalpp.xournalpp',
+                    'zen',
+                    'superProductivity',
                 ],
             ]),
         },
