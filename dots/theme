@@ -138,7 +138,7 @@ echo "rofi linked"
 echo "Changing papirus Icon Colour"
 
 yay -S papirus-folders-git
-papirus-folders -C theme --theme Papirus-Dark
+papirus-folders -C grey
 
 echo "theme completed"
 
