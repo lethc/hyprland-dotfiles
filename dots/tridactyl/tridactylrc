@@ -62,6 +62,7 @@ autocontain -s live\.com Work
 autocontain -s twitter\.com Work
 autocontain -s x\.com Work
 autocontain -s github\.(io|com) Work
+autocontain -s gitlab\.(io|com) Work
 autocontain -s leetcode\.com Work
 autocontain -s exercism\.org Work
 autocontain -s chat.openai\.com Work
