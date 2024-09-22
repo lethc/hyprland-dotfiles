@@ -30,9 +30,9 @@ elif [ $? -eq 1 ]; then
 
     sleep 2
   hyprctl keyword general:border_size 1
-  hyprctl keyword general:gaps_in 1
-  hyprctl keyword general:gaps_out 1
-  hyprctl keyword decoration:rounding 0
+  hyprctl keyword general:gaps_in 0
+  hyprctl keyword general:gaps_out 0
+  hyprctl keyword decoration:rounding 7
   # hyprctl keyword decoration:drop_shadow 0 # Disable shadows on Hyprland
 else
     echo "An error occurred while running grep."
