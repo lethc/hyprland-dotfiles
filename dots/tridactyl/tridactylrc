@@ -47,37 +47,38 @@ bind ys clipboard yankshort
 " Copy the URL without the protocol
 bind cl composite js `${document.location.href.replace(/^https?:\/\//, '')}` | clipboard yank
 
-" Isolate Facebook in its own container
-set auconcreatecontainer true
-autocontain -s facebook\.com Facebook
-autocontain -s youtube\.com Google
-autocontain -s google\.com Google
-autocontain -s coursera\.org Google
-autocontain -s microsoft\.com Work
-autocontain -s xbox\.com Work
-autocontain -s bing\.com Work
-autocontain -s office\.com Work
-autocontain -s microsoftonline\.com Work
-autocontain -s live\.com Work
-autocontain -s twitter\.com Work
-autocontain -s x\.com Work
-autocontain -s github\.(io|com) Work
-autocontain -s gitlab\.(io|com) Work
-autocontain -s leetcode\.com Work
-autocontain -s exercism\.org Work
-autocontain -s chat.openai\.com Work
-autocontain -s auth0.openai\.com Work
-autocontain -s labs.openai\.com Work
-autocontain -s openai\.com Work
-" autocontain -s google\.(co\.uk|com) Work
-autocontain -s skiff\.com Home
-autocontain -s proton\.me Home
-autocontain -s protonvpn\.com Home
-autocontain -s reddit\.com Home
-autocontain -s anilist\.co Home
-autocontain -s notion\.so Home
-autocontain -s mega\.io Home
-autocontain -s mega\.nz Home
+" SET TO TRUE AND UNCOMMENT THE autocontain TO USE THIS FEATURE 
+
+"set auconcreatecontainer false
+"autocontain -s facebook\.com Facebook
+"autocontain -s youtube\.com Google
+"autocontain -s google\.com Google
+"autocontain -s coursera\.org Google
+"autocontain -s microsoft\.com Work
+"autocontain -s xbox\.com Work
+"autocontain -s bing\.com Work
+"autocontain -s office\.com Work
+"autocontain -s microsoftonline\.com Work
+"autocontain -s live\.com Work
+"autocontain -s twitter\.com Work
+"autocontain -s x\.com Work
+"autocontain -s github\.(io|com) Work
+"autocontain -s gitlab\.(io|com) Work
+"autocontain -s leetcode\.com Work
+"autocontain -s exercism\.org Work
+"autocontain -s chat.openai\.com Work
+"autocontain -s auth0.openai\.com Work
+"autocontain -s labs.openai\.com Work
+"autocontain -s openai\.com Work
+"" autocontain -s google\.(co\.uk|com) Work
+"autocontain -s skiff\.com Home
+"autocontain -s proton\.me Home
+"autocontain -s protonvpn\.com Home
+"autocontain -s reddit\.com Home
+"autocontain -s anilist\.co Home
+"autocontain -s notion\.so Home
+"autocontain -s mega\.io Home
+"autocontain -s mega\.nz Home
 
 " Aliases
 "command os open https://www.youtube.com
