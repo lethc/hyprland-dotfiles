@@ -37,6 +37,7 @@ keybinds {
         unbind "Ctrl t"
         unbind "Ctrl b"
         unbind "Ctrl n"
+        unbind "Ctrl q"
         //unbind "Ctrl g"
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Ctrl p" { SwitchToMode "pane"; }
@@ -45,7 +46,7 @@ keybinds {
         bind "Ctrl x"  { SwitchToMode "session"; }
         bind "Ctrl s"  { SwitchToMode "scroll"; }
         bind "Ctrl a" { SwitchToMode "tab"; }
-        bind "Ctrl q" { Quit; }
+        //bind "Ctrl q" { Quit; }
         //bind "Ctrl w" { Detach; }
         bind "Alt n" { NewPane; }
         bind "Alt m" { NewPane "Down"; }
