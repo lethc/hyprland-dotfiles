@@ -1,4 +1,5 @@
 hyprland                :~/.config/hypr/hyprland.conf
+hyprland_exec           :~/.config/hypr/configs/execs.conf
 hyprland_keybinds       :~/.config/hypr/configs/keybinds.conf
 hyprland_window_rules   :~/.config/hypr/configs/window_rules.conf
 hyprland_theme          :~/.config/hypr/dots/theme
