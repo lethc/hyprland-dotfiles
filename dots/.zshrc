@@ -80,6 +80,7 @@ alias gi="gitui"
 alias p="ping -c3 google.com"
 alias ff="fzf-lovely"
 alias fr="fzf-rg"
+alias cl="clear"
 alias rbwu='rbw get "$(rbw ls | fzf)" --field=Username | wl-copy'
 alias rbwg='rbw get "$(rbw ls | fzf)" | wl-copy'
 
