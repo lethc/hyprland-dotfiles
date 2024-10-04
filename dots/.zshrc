@@ -129,6 +129,12 @@ compinit
 bindkey '^k' history-search-backward
 bindkey '^j' history-search-forward
 
+# cle () clear
+#
+# zle -N cle
+#
+# bindkey '^r' cle
+
 setopt appendhistory     # Append any commands to the history file rather than overwriting it
 setopt sharehistory      # Share our command history across all Zshell sessions at the same time
 setopt hist_ignore_space # Prevent a command to being written to the history file by adding a space before it
@@ -161,6 +167,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --color=fg+:#C4C4C4,hl+:#ff9e64 \
 --color=info:#90A959,prompt:#BAD7FF,pointer:#BAD7FF \
 --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
 
 ##### Functions  ########
 function mkt() {
