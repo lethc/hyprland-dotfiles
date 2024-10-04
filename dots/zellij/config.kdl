@@ -354,20 +354,20 @@ themes {
         white "#e7e7e7"
         orange "#EFA554"
   }
-  no_clown_freedom {
-      fg "#cac9dd"
-      bg "#353535" //#171717
-      black "#171717"
-      red "#b46958"
-      green "#BAD7FF" //#AFAFAF
-      yellow "#F4BF75"
-      blue "#75D7EC"
-      magenta "#AA759F"
-      cyan "#88afa2"
-      white "#cac9dd"
-      orange "#FFA557"
+  onedark {
+      fg "#abb2bf"
+      bg "#1b1f27" //#171717
+      black "#1e222a"
+      red "#e06c75"
+      green "#98c379" //#AFAFAF
+      yellow "#e7c787"
+      blue "#61afef"
+      magenta "#de98fd"
+      cyan "#a3b8ef"
+      white "#abb2bf"
+      orange "#fca2aa"
   }
 }
 
-theme "no_clown_freedom"
+theme "onedark"
 //theme "catppuccin-mocha"
