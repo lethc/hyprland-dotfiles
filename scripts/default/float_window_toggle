@@ -1,3 +1,5 @@
 #!/bin/bash
 
+WORKSPACE=$(hyprctl activeworkspace | grep "workspace ID" | awk '{print $3}')
+hyprctl notify 1 2000 0 "Toggled window floating on Workspace $WORKSPACE"
 hyprctl dispatch workspaceopt allfloat
