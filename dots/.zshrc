@@ -92,6 +92,8 @@ source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
 # source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 ##### Configurations  #######
+# disable Ctrl+D
+setopt ignore_eof 
 # Use VIM keybindings even if our EDITOR is set to EMACS
 bindkey -v
 # Yank to the system clipboard
