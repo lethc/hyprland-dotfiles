@@ -91,7 +91,8 @@ yay -S  lsix nodejs-readability-cli selectdefaultapplication-git
 #yay -S megacmd
 # yay -S ranger-git
 yay -S   apple-fonts 
-# yay -S   ttf-apple-emoji
+# yay -S ttf-apple-emoji
+# yay -S noto-fonts-emoji
 ###HERE
 yay -S   rofi-lbonn-wayland-git
 #yay -S   rofi-emoji

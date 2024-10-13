@@ -147,6 +147,10 @@ cp -r "${HOME}/.config/hypr/dots/gtk/Everforest-Dark-BL" "${HOME}/.themes"
 cp -r "${HOME}/.config/hypr/dots/gtk/Orchis-Yellow-Dark" "${HOME}/.themes"
 echo "GTK3 theme copied"
 
+# Make fonts work without google-noto-fonts
+# https://codeberg.org/dnkl/foot/wiki#user-content-how-do-i-get-colored-emojis
+ln -s /etc/fonts/conf.avail/75-joypixels.conf /etc/fonts/conf.d/
+
 #ln -sf "${HOME}/.config/hypr/dots/waybar" "${HOME}/.config"
 #echo "Waybar linked"
 
