@@ -26,6 +26,8 @@ unbind <C-e>
 unbind <A-j>
 unbind <A-k>
 unbind <C-f>
+unbind d
+unbind u
 
 " Binds
 bind K tabnext
