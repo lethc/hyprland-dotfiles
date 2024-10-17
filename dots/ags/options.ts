@@ -4,7 +4,7 @@ import { icon } from 'lib/utils'
 import icons from 'lib/icons'
 
 const options = mkOptions(OPTIONS, {
-    autotheme: opt(false),
+    autotheme: opt(true),
 
     wallpaper: {
         resolution: opt<import('service/wallpaper').Resolution>(1920),
@@ -52,21 +52,21 @@ const options = mkOptions(OPTIONS, {
         shadows: opt(true),
         padding: opt(7),
         spacing: opt(5),
-        radius: opt(11),
+        radius: opt(15),
     },
 
     transition: opt(200),
 
     font: {
         size: opt(12),
-        name: opt('SF Pro Display Regular'),
+        name: opt('Noto Sans Regular'),
     },
 
     bar: {
         flatButtons: opt(true),
         position: opt<'top' | 'bottom'>('bottom'),
         corners: opt(50),
-        transparent: opt(true),
+        transparent: opt(false),
         layout: {
             start: opt<Array<import('widget/bar/Bar').BarWidget>>([
                 'launcher',
