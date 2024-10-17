@@ -4,7 +4,7 @@ keymap = [
   # { on = [ "T" ], run = "plugin --sync max-preview" },
   # { on = [ "T" ], run = "plugin --sync hide-preview" },
 	{ on = [ "<Esc>" ], run = "escape",  desc = "Exit visual mode, clear selected, or cancel search" },
-	{ on = [ "q" ],     run = "quit",    desc = "Exit the process" },
+	# { on = [ "q" ],     run = "quit",    desc = "Exit the process" },
 	{ on = [ "<C-q>" ], run = "close",   desc = "Close the current tab, or quit if it is last tab" },
 	{ on = [ "<C-z>" ], run = "suspend", desc = "Suspend the process" },
 
@@ -108,6 +108,7 @@ keymap = [
 
 	{ on = [ "{" ], run = "tab_swap -1", desc = "Swap the current tab with the previous tab" },
 	{ on = [ "}" ], run = "tab_swap 1",  desc = "Swap the current tab with the next tab" },
+	{ on = [ "q" ], run = "tab_close",  desc = "Close Tab" },
 
 	# Tasks
 	{ on = [ "w" ], run = "tasks_show", desc = "Show the tasks manager" },
@@ -232,7 +233,7 @@ keymap = [
 
 keymap = [
 	{ on = [ "<Esc>" ], run = "escape", desc = "Clear the filter, or hide the help" },
-	{ on = [ "q" ],     run = "close",  desc = "Exit the process" },
+	# { on = [ "q" ],     run = "close",  desc = "Exit the process" },
 	{ on = [ "<C-q>" ], run = "close",  desc = "Hide the help" },
 
 	# Navigation
