@@ -171,7 +171,6 @@ keybinds clear-defaults=true {
        bind "Ctrl p" { SwitchToMode "pane"; }
        bind "Ctrl a" { SwitchToMode "tab"; }
        bind "Ctrl s"  { SwitchToMode "scroll"; }
-       bind "Ctrl o" { SwitchToMode "move"; }
        bind "Ctrl ." { SwitchToMode "resize"; }
 
    }
@@ -201,6 +200,7 @@ keybinds clear-defaults=true {
        bind "Ctrl f" { PageScrollDown; }
        bind "Ctrl b" { PageScrollUp; }
        bind "Ctrl x"  { SwitchToMode "session"; }
+       bind "Ctrl o" { SwitchToMode "move"; }
 
    }
    shared_except "normal" "locked" {
