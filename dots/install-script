@@ -86,6 +86,8 @@ echo "#####################################"
 echo "##  Installing Pacman Applications ##"
 echo "#####################################"
 
+# Installing fonts
+yay -S ttf-maple-beta ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd
 yay -S fzf wget vdhcoapp-bin github-cli
 yay -S  lsix nodejs-readability-cli selectdefaultapplication-git 
 #yay -S megacmd
