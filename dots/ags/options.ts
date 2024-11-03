@@ -14,15 +14,15 @@ const options = mkOptions(OPTIONS, {
     theme: {
         dark: {
             primary: {
-                bg: opt('#AFAFAF'),
-                fg: opt('#171717'),
+                bg: opt('#cdd6f4'),
+                fg: opt('#0F0F0F'),
             },
             error: {
-                bg: opt('#b46958'),
-                fg: opt('#171717'),
+                bg: opt('#f38ba8'),
+                fg: opt('#0F0F0F'),
             },
-            bg: opt('#171717'),
-            fg: opt('#cac9dd'),
+            bg: opt('#0F0F0F'),
+            fg: opt('#cdd6f4'),
             widget: opt('#cac9dd'),
             border: opt('#cac9dd'),
         },
@@ -239,7 +239,7 @@ const options = mkOptions(OPTIONS, {
 
     hyprland: {
         gaps: opt(2.4),
-        inactiveBorder: opt("333333ff"),
+        inactiveBorder: opt("151515FF"),
         gapsWhenOnly: opt(true),
     },
 })
