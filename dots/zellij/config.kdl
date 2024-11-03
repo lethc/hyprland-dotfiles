@@ -367,7 +367,20 @@ themes {
       white "#abb2bf"
       orange "#fca2aa"
   }
+  neodark {
+      fg "#cdd6f4"
+      bg "#0F0F0F"
+      black "#0F0F0F"
+      red "#f38ba8"
+      green "#a6e3a1"
+      yellow "#f9e2af"
+      blue "#89b4fa"
+      magenta "#f5c2e7"
+      cyan "#94e2d5"
+      white "#bac2de"
+      orange "#fca2aa"
+  }
 }
 
-theme "onedark"
+theme "neodark"
 //theme "catppuccin-mocha"
