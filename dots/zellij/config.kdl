@@ -170,7 +170,6 @@ keybinds clear-defaults=true {
        bind "Alt /" { SwitchToMode "EnterSearch"; SearchInput 0; }
        bind "Ctrl p" { SwitchToMode "pane"; }
        bind "Ctrl a" { SwitchToMode "tab"; }
-       bind "Ctrl s"  { SwitchToMode "scroll"; }
        bind "Ctrl ." { SwitchToMode "resize"; }
 
    }
@@ -201,6 +200,7 @@ keybinds clear-defaults=true {
        bind "Ctrl b" { PageScrollUp; }
        bind "Ctrl x"  { SwitchToMode "session"; }
        bind "Ctrl o" { SwitchToMode "move"; }
+       bind "Ctrl s"  { SwitchToMode "scroll"; }
 
    }
    shared_except "normal" "locked" {
