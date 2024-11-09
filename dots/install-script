@@ -96,7 +96,7 @@ yay -S   apple-fonts
 # yay -S ttf-apple-emoji
 # yay -S noto-fonts-emoji
 ###HERE
-yay -S   rofi-lbonn-wayland-git
+yay -S rofi-wayland
 #yay -S   rofi-emoji
 #issues with
 #yay -S  searxng-git 
