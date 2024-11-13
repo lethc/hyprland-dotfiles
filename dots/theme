@@ -51,9 +51,6 @@ echo "sioyek linked"
 ln -sf "${HOME}/.config/hypr/dots/zellij" "${HOME}/.config"
 echo "zellij linked"
 
-ln -sf "${HOME}/.config/hypr/dots/starship.toml" "${HOME}/.config"
-echo "starship linked"
-
 # rm -r ~/.config/gtk-4.0/
 ln -sf "${HOME}/.config/hypr/dots/gtk/gtk-4.0" "${HOME}/.config"
 echo "GTK4 theme linked"

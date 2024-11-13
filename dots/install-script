@@ -61,7 +61,7 @@ sudo usermod --shell /usr/bin/zsh root
 echo "Change shell user"
 sudo usermod --shell /usr/bin/zsh Lummyn
 
-yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions lsd bat starship zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git fzf-tab-git
+yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions lsd bat zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git fzf-tab-git
 
 echo "########################################"
 echo "##  Installing Hyprland dependencies  ##"
