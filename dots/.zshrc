@@ -1,3 +1,24 @@
+# Branch Variable
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%b '
+
+setopt PROMPT_SUBST
+
+git_prompt() {
+    local branch="$(git symbolic-ref HEAD 2> /dev/null | cut -d'/' -f3-)"
+    local branch_truncated="${branch:0:30}"
+    if (( ${#branch} > ${#branch_truncated} )); then
+        branch="${branch_truncated}..."
+    fi
+
+    [ -n "${branch}" ] && echo "  ${branch}"
+}
+
+# PROMPT='%F{1}%n%f@%f%m%f %F{1}%8~%f '
+# PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ %0(?.. %F{red} exit code: <%?> %f)'
+PROMPT='%B%F{green}󱗆%f%b  %B%F{#17D291}%n%f%b %B%F{red}%~%f%b%B%F{yellow}$(git_prompt)%f%b %(?.%B%F{green}✓.%F{red}✕)%f%b %B%F{green}%f%b '
+
 ###### Export Variables ######
 # Fix the Java Problem
 PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
@@ -27,6 +48,7 @@ export PATH="$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" #
 export BAT_THEME="TwoDark"
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git"'
 export FZF_CTRL_T_COMMAND='rg --files --hidden -g "!.git"'
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 #rust Set UP
 . "$HOME/.cargo/env"
@@ -306,8 +328,6 @@ function nvims() {
 	NVIM_APPNAME=$config nvim $@
 }
 bindkey -s ^a "nvims\n"
-
-eval "$(starship init zsh)"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
