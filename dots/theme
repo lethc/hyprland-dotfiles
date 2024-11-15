@@ -20,8 +20,8 @@ echo "###################################"
 echo "########  Create Symlinks  ########"
 echo "###################################"
 
-ln -sf "${HOME}/.config/hypr/dots/ags" "${HOME}/.config"
-echo "Ags linked"
+# ln -sf "${HOME}/.config/hypr/dots/ags" "${HOME}/.config"
+# echo "Ags linked"
 
 ln -sf "${HOME}/.config/hypr/dots/foot" "${HOME}/.config"
 echo "foot linked"
@@ -149,14 +149,14 @@ echo "GTK3 theme copied"
 ln -sf "${HOME}/.config/hypr/dots/conf.avail/" /etc/fonts/
 ln -sf /etc/fonts/conf.avail/75-joypixels.conf /etc/fonts/conf.d/
 
-#ln -sf "${HOME}/.config/hypr/dots/waybar" "${HOME}/.config"
-#echo "Waybar linked"
+ln -sf "${HOME}/.config/hypr/dots/waybar" "${HOME}/.config"
+echo "Waybar linked"
+
+ln -sf "${HOME}/.config/hypr/dots/swaync" "${HOME}/.config"
+echo "swaync linked"
 
 #ln -sf "${HOME}/.config/hypr/dots/dunst" "${HOME}/.config"
 #echo "dunst linked"
-
-#ln -sf "${HOME}/.config/hypr/dots/swaync" "${HOME}/.config"
-#echo "swaync linked"
 
 #rm -r ~/.config/ranger/
 #ln -sf "${HOME}/.config/hypr/dots/ranger" "${HOME}/.config"
