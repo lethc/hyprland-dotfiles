@@ -2,14 +2,14 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: SF Pro Rounded Regular;
+  font-family: Noto Sans Regular;
   font-weight: bold;
   font-size: 16px;
-  background-color: #151515; /* Reduced opacity background */ 
+  background-color: #0e0e0e; /* Reduced opacity background */ 
 }
 
 .modules-right {
-  /* background-color: #151515; */
+  /* background-color: #0e0e0e; */
   border-radius: 5px 0px 0px 5px;
 }
 
@@ -19,9 +19,9 @@ window#waybar {
 
 #custom-launcher {
   font-size: 20px;
-  color: #F4BF75;
+  color: #17D291;
   padding-right: 10px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 /* #cpu, */
@@ -56,7 +56,7 @@ window#waybar {
 #temperature {
   font-size: 15px;
   /* background: #2B2B2B; */
-  background: #151515;
+  background: #0e0e0e;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -67,7 +67,7 @@ window#waybar {
   font-size: 15px;
   color: #cac9dd;
   padding-right: 5px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #cpu {
@@ -95,7 +95,7 @@ window#waybar {
 #custom-window-name {
   color: #cac9dd;
   margin-right: 10px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #custom-pacman-update-icon {
@@ -114,62 +114,70 @@ window#waybar {
 }
 
 #workspaces button:nth-child(1) label {
-  color: #EE923A;
+  /*color: #EE923A;*/
   margin: 0px 8px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(2) label {
-  color: #F4B469;
+  /*color: #F4B469;*/
   margin: 0px 8px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(3) label {
-  color: #F4BF75;
+  /*color: #F4BF75;*/
   margin: 0px 8px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(4) label {
-  color: #F8D497; 
+  /*color: #F8D497; */
   margin: 0px 8px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(5) label {
-  color: #FADCAA;
+  /*color: #FADCAA;*/
   margin: 0px 8px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(6) label {
-  color: #FAE2B1;
+  /*color: #FAE2B1;*/
   margin: 0px 8px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(7) label {
-  color: #FBE7BF;
+  /*color: #FBE7BF;*/
   margin: 0px 8px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(8) label {
-  color: #FBEBC4;
+  /*color: #FBEBC4;*/
   margin: 0px 8px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(9) label {
-  color: #FCEFCF;
+  /*color: #FCEFCF;*/
   margin: 0px 8px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 #workspaces button:nth-child(10) label {
-  color: #cac9dd;
+  /*color: #cac9dd;*/
   margin: 0px 8px;
-  background-color: #151515;
+  background-color: #0e0e0e;
+}
+
+#workspaces button.empty {
+  color: #525252;
+}
+
+#workspaces button.active {
+  color: #17D291;
 }
 
 #battery {
@@ -181,7 +189,7 @@ window#waybar {
 #backlight {
   font-size: 15px;
   /* background-color: #2B2B2B; */
-  background-color: #151515;
+  background-color: #0e0e0e;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -200,23 +208,23 @@ window#waybar {
 
 #custom-right-arr {
   color: #BAD7FF;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #custom-pacman {
   color: #cac9dd;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #network {
   color: #cac9dd;
   margin-right: 10px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 #custom-notifications {
-  color: #F4BF75;
+  color: #17D291;
   margin-right: 10px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 #custom-arrow {
   font-size: 11px;
@@ -225,7 +233,7 @@ window#waybar {
 #custom-dot {
   color: #353535;
   padding-right: 10px;
-  background-color: #151515;
+  background-color: #0e0e0e;
 }
 
 #custom-dot-alt {
@@ -235,7 +243,7 @@ window#waybar {
 }
 
 #custom-clock-icon {
-  color: #cad3f5;
+  color: #cac9dd;
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 5px;
@@ -262,6 +270,7 @@ window#waybar {
 }
 
 #clock {
+  color: #cac9dd;
   padding-left: 10px;
 }
 

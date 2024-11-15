@@ -1,5 +1,6 @@
 { 
   "layer": "top",
+  "position": "bottom",
   "height": 32,
   "margin-top": 0,
   "margin-left": 0,
@@ -57,10 +58,10 @@
     "on-click" : "",
   },
   "hyprland/workspaces": {
-    //"persistent-workspaces": {
-    //    "*": 10,
-    //},
-    "all-outputs": true,
+    "persistent-workspaces": {
+        "*": 10,
+    },
+    "all-outputs": false,
     "active-only": false,
     "on-click": "activate",
     "format": "{icon}",
@@ -79,7 +80,7 @@
       "10": "",
       "urgent": "",
       "active": "",
-      "default": ""
+      "default": " "
     }
   },
   "tray": {
@@ -174,12 +175,12 @@
 
   "pulseaudio": {
     "format": "{icon} <b>{volume}</b>",
-    "format-bluetooth": " {volume}",
-    "format-bluetooth-muted": " ",
+    "format-bluetooth": "  {volume}",
+    "format-bluetooth-muted": "󰅙 ",
     "tooltip": false,
-    "format-muted": "󰝟 ",
+    "format-muted": "󰝟",
     "format-icons": {
-      "default": ["󰝟", "", "󰕾" , ""]
+      "default": ["󰝞", "󰕿", "󰖀" , "󰕾"]
     },
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-click-right": "pavucontrol"
