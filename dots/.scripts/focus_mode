@@ -1,39 +1,28 @@
 #!/bin/bash
 
-file=~/.config/ags/main.ts
-file2=~/.config/ags/options.ts
-line='// ...forMonitors(Bar),'
-greetings='Hello World Focus Mode'
-line2='spacing: opt(6),'
-
-if  grep -q "$greetings" "$file"; then
-# if grep -q "$line" "$file"; then
-    # Line is present, uncomment it
-    # sed -i "s|$line|...forMonitors(Bar),|" "$file"
-    sed -i "s|$greetings|Hello World|" "$file"
-    echo "Line uncommented."
-    ags -q
-    ags &> /dev/null &
-    hyprctl dispatch fullscreen 0 #bcz Hyprland cannot update the size of the screen automatically
-    # sleep 1
-    hyprctl dispatch fullscreen 0
-    hyprctl keyword decoration:drop_shadow 1 # enable shadows on Hyprland
-elif [ $? -eq 1 ]; then
-    # Line is present, comment it
-    # sed -i "s|...forMonitors(Bar),|$line|" "$file" # Uncomment this line if you want to disable ags Bar
-    sed -i "s|Hello World|$greetings|" "$file"
-    echo "Line commented."
-    ags -q
-    ags &> /dev/null &
+focus_mode() {
     hyprctl dispatch fullscreen 0
     hyprctl dispatch fullscreen 0
 
     sleep 2
-  hyprctl keyword general:border_size 1
-  hyprctl keyword general:gaps_in 0
-  hyprctl keyword general:gaps_out 0
-  hyprctl keyword decoration:rounding 7
-  # hyprctl keyword decoration:drop_shadow 0 # Disable shadows on Hyprland
-else
-    echo "An error occurred while running grep."
-fi
+    hyprctl keyword general:border_size 1
+    hyprctl keyword general:gaps_in 0
+    hyprctl keyword general:gaps_out 0
+    hyprctl keyword decoration:rounding 0
+}
+not_focus_mode() {
+    hyprctl dispatch fullscreen 0 #bcz Hyprland cannot update the size of the screen automatically
+    hyprctl dispatch fullscreen 0
+    # sleep 1
+
+    hyprctl keyword general:border_size 1
+    hyprctl keyword general:gaps_in 6
+    hyprctl keyword general:gaps_out 12
+    hyprctl keyword decoration:rounding 15
+    hyprctl keyword decoration:drop_shadow 1 # enable shadows on Hyprland
+}
+
+case "$1" in
+focus) focus_mode ;;
+notfocus) not_focus_mode ;;
+esac
