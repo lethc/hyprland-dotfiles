@@ -17,7 +17,7 @@ git_prompt() {
 
 # PROMPT='%F{1}%n%f@%f%m%f %F{1}%8~%f '
 # PROMPT='%F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ %0(?.. %F{red} exit code: <%?> %f)'
-PROMPT='%B%F{green}󱗆%f%b  %B%F{#17D291}%n%f%b %B%F{red}%~%f%b%B%F{yellow}$(git_prompt)%f%b %(?.%B%F{green}✓.%F{red}✕)%f%b %B%F{green}%f%b '
+PROMPT='%B%F{#17D291}󱗆%f%b %B%F{#17D291}%n%f%b %B%F{blue}%~%f%b%B%F{green}$(git_prompt)%f%b %(?.%B%F{green}✓.%F{red}✕)%f%b %B%F{green}%f%b '
 
 ###### Export Variables ######
 # Fix the Java Problem
