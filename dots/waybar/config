@@ -203,7 +203,8 @@
   },
   "custom/launcher": {
     "format": " 󱗆",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "rofi -show drun"
   },
   "custom/separator": {
     "tooltip": false,
