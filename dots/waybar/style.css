@@ -1,27 +1,26 @@
-
 * {
-  padding: 0;
-  margin: 0;
-  font-family: Noto Sans Regular;
-  font-weight: bold;
-  font-size: 16px;
-  background-color: #0e0e0e; /* Reduced opacity background */ 
+    padding: 0;
+    margin: 0;
+    font-family: Noto Sans Regular;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #0e0e0e; /* Reduced opacity background */
 }
 
 .modules-right {
-  /* background-color: #0e0e0e; */
-  border-radius: 5px 0px 0px 5px;
+    /* background-color: #0e0e0e; */
+    border-radius: 5px 0px 0px 5px;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #custom-launcher {
-  font-size: 20px;
-  color: #17D291;
-  padding-right: 10px;
-  background-color: #0e0e0e;
+    font-size: 20px;
+    color: #17d291;
+    padding-right: 10px;
+    background-color: #0e0e0e;
 }
 
 /* #cpu, */
@@ -54,225 +53,247 @@ window#waybar {
 #memory,
 #disk,
 #temperature {
-  font-size: 15px;
-  /* background: #2B2B2B; */
-  background: #0e0e0e;
-  margin-top: 5px;
-  margin-bottom: 5px;
+    font-size: 15px;
+    /* background: #2B2B2B; */
+    background: #0e0e0e;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 #custom-button-close,
-#custom-button-max,
-#custom-button-float,
+#custom-button-max {
+    background-color: #cac9dd;
+    color: #181926;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 #custom-button-full {
-  font-size: 15px;
-  color: #cac9dd;
-  padding-right: 5px;
-  background-color: #0e0e0e;
+    background-color: #cac9dd;
+    color: #181926;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 0px;
+}
+#custom-button-float {
+    background-color: #cac9dd;
+    color: #181926;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 #cpu {
-  color: #cac9dd;
-  padding: 0px 10px 0px 12px;
-  border-radius: 5px 0px 0px 5px;
+    color: #cac9dd;
+    padding: 0px 10px 0px 12px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 #memory {
-  color: #cac9dd;
-  padding: 0px 10px 0px 0px;
+    color: #cac9dd;
+    padding: 0px 10px 0px 0px;
 }
 
 #temperature {
-  color: #cac9dd;
-  padding: 0px 5px 0px 0px;
+    color: #cac9dd;
+    padding: 0px 5px 0px 0px;
 }
 
 #disk {
-  color: #cac9dd;
-  padding: 0px 12px 0px 0px;
-  border-radius: 0px 5px 5px 0px;
+    color: #cac9dd;
+    padding: 0px 12px 0px 0px;
+    border-radius: 0px 5px 5px 0px;
 }
 
 #custom-window-name {
-  color: #cac9dd;
-  margin-right: 10px;
-  background-color: #0e0e0e;
+    color: #cac9dd;
+    margin-right: 10px;
+    background-color: #0e0e0e;
 }
 
 #custom-pacman-update-icon {
-  background-color: #cac9dd;
-  color: #181926;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
+    background-color: #cac9dd;
+    color: #181926;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 #custom-pacman-update {
-  color: #8bd5ca;
-  margin: 5px 10px 5px 0px;
+    color: #8bd5ca;
+    margin: 5px 10px 5px 0px;
 }
 
 #workspaces button:nth-child(1) label {
-  /*color: #EE923A;*/
-  margin: 0px 8px;
-  background-color: #0e0e0e;
+    /*color: #EE923A;*/
+    margin: 0px 8px;
+    background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(2) label {
-  /*color: #F4B469;*/
-  margin: 0px 8px;
-  background-color: #0e0e0e;
+    /*color: #F4B469;*/
+    margin: 0px 8px;
+    background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(3) label {
-  /*color: #F4BF75;*/
-  margin: 0px 8px;
-  background-color: #0e0e0e;
+    /*color: #F4BF75;*/
+    margin: 0px 8px;
+    background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(4) label {
-  /*color: #F8D497; */
-  margin: 0px 8px;
-  background-color: #0e0e0e;
+    /*color: #F8D497; */
+    margin: 0px 8px;
+    background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(5) label {
-  /*color: #FADCAA;*/
-  margin: 0px 8px;
-  background-color: #0e0e0e;
+    /*color: #FADCAA;*/
+    margin: 0px 8px;
+    background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(6) label {
-  /*color: #FAE2B1;*/
-  margin: 0px 8px;
-  background-color: #0e0e0e;
+    /*color: #FAE2B1;*/
+    margin: 0px 8px;
+    background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(7) label {
-  /*color: #FBE7BF;*/
-  margin: 0px 8px;
-  background-color: #0e0e0e;
+    /*color: #FBE7BF;*/
+    margin: 0px 8px;
+    background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(8) label {
-  /*color: #FBEBC4;*/
-  margin: 0px 8px;
-  background-color: #0e0e0e;
+    /*color: #FBEBC4;*/
+    margin: 0px 8px;
+    background-color: #0e0e0e;
 }
 
 #workspaces button:nth-child(9) label {
-  /*color: #FCEFCF;*/
-  margin: 0px 8px;
-  background-color: #0e0e0e;
+    /*color: #FCEFCF;*/
+    margin: 0px 8px;
+    background-color: #0e0e0e;
 }
 #workspaces button:nth-child(10) label {
-  /*color: #cac9dd;*/
-  margin: 0px 8px;
-  background-color: #0e0e0e;
+    /*color: #cac9dd;*/
+    margin: 0px 8px;
+    background-color: #0e0e0e;
 }
 
 #workspaces button.empty {
-  color: #525252;
+    color: #525252;
 }
 
 #workspaces button.active {
-  color: #17D291;
+    color: #17d291;
 }
 
 #battery {
-  color: #88afa2;
-  /* margin: 0px 10px 0px 0px; */
+    color: #88afa2;
+    /* margin: 0px 10px 0px 0px; */
 }
 
 #pulseaudio,
 #backlight {
-  font-size: 15px;
-  /* background-color: #2B2B2B; */
-  background-color: #0e0e0e;
-  margin-top: 5px;
-  margin-bottom: 5px;
+    font-size: 15px;
+    /* background-color: #2B2B2B; */
+    background-color: #0e0e0e;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #backlight {
-  color: #cac9dd;
-  padding: 0px 10px 0px 10px;
-  border-radius: 5px 0px 0px 5px;
+    color: #cac9dd;
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 #pulseaudio {
-  color: #cac9dd;
-  padding: 0px 10px 0px 0px;
-  border-radius: 0px 5px 5px 0px;
+    color: #cac9dd;
+    padding: 0px 10px 0px 0px;
+    border-radius: 0px 5px 5px 0px;
 }
 
 #custom-right-arr {
-  color: #BAD7FF;
-  background-color: #0e0e0e;
+    color: #bad7ff;
+    background-color: #0e0e0e;
 }
 
 #custom-pacman {
-  color: #cac9dd;
-  background-color: #0e0e0e;
+    color: #cac9dd;
+    background-color: #0e0e0e;
 }
 
 #network {
-  color: #cac9dd;
-  margin-right: 10px;
-  background-color: #0e0e0e;
+    color: #cac9dd;
+    margin-right: 10px;
+    background-color: #0e0e0e;
 }
 #custom-notifications {
-  color: #17D291;
-  margin-right: 10px;
-  background-color: #0e0e0e;
+    color: #17d291;
+    margin-right: 10px;
+    background-color: #0e0e0e;
 }
 #custom-arrow {
-  font-size: 11px;
+    font-size: 11px;
 }
 
 #custom-dot {
-  color: #353535;
-  padding-right: 10px;
-  background-color: #0e0e0e;
+    color: #353535;
+    padding-right: 10px;
+    background-color: #0e0e0e;
 }
 
 #custom-dot-alt {
-  color: #a5adcb;
-  padding-left: 10px;
-  padding-right: 10px;
+    color: #a5adcb;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #custom-clock-icon {
-  color: #cac9dd;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
+    color: #cac9dd;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 #custom-filler {
-  color: #353535;
-  padding-left: 0px;
-  padding-right: 9px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
+    color: #353535;
+    padding-left: 0px;
+    padding-right: 9px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 #custom-filler2 {
-  color: #353535;
-  padding-left: 3px;
-  padding-right: 9px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
+    color: #353535;
+    padding-left: 3px;
+    padding-right: 9px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 #clock {
-  color: #cac9dd;
-  padding-left: 10px;
+    color: #cac9dd;
+    padding-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
-

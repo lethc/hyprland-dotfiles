@@ -20,14 +20,19 @@
     "custom/separator",
     "custom/separator",
     "custom/notifications",
-    "custom/arrow",
-    "tray"
+    "custom/separator",
+    //"custom/button-close",
+    "custom/button-max",
+    "custom/button-full",
+    "custom/button-float",
   ],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
-    //"custom/pacman-update",
-    //"custom/pacman-update-icon",
-    //"custom/filler",
+    "custom/pacman-update",
+    "custom/pacman-update-icon",
+    "custom/filler",
+    "tray",
+    "custom/arrow",
     "battery",
     "custom/dot",
     "backlight",
@@ -69,12 +74,12 @@
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "format-icons": {
       "1": "",
-      "2": "",
-      "3": "",
-      "4": "󰉋",
-      "5": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
       "6": "",
-      "7": "󰂺",
+      "7": "󰉋",
       "8": "",
       "9": "",
       "10": "",
@@ -97,13 +102,13 @@
   },
   "custom/arrow": {
     "tooltip": false,
-    "format": "  "
+    "format": "  "
   },
   "custom/clock-icon": {
     "format": ""
   },
   "custom/button-close": {
-    "format": "  ",
+    "format": " 󰖭 ",
     "tooltip": false,
     "format-alt": "<b>{:%a %d %b}</b>",
     "on-click": "hyprctl dispatch killactive 1"
@@ -125,9 +130,9 @@
   },
 
   "clock": {
-    //"format": "<b>{:%I:%M %p }</b>",
-    "format": "<b>{:%a %d %b  %H:%M  }</b>",
-    "format-alt": "<b>{:%a %d %b}</b>",
+    "format": "<b>{:%I:%M %p }</b>",
+    //"format": "<b>{:%a %d %b  %H:%M  }</b>",
+    "format-alt": "<b>{:%a %d %b  %H:%M }</b>",
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
@@ -224,13 +229,15 @@
     "format": ""
   },
   "custom/pacman-update-icon": {
-    "format": ""
+    "format": "  ",
+    "tooltip": false,
   },
   "custom/pacman-update": {
     "format": " {}",
     "interval": 3600,
     "exec": "checkupdates | wc -l",
-    "signal": 8
+    "signal": 8,
+    "tooltip": false,
   },
   "custom/window-icon": {},
 
