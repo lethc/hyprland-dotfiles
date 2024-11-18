@@ -29,7 +29,7 @@
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "custom/pacman-update",
-    "custom/pacman-update-icon",
+    //"custom/pacman-update-icon",
     "custom/filler",
     "tray",
     "custom/arrow",
@@ -102,7 +102,7 @@
   },
   "custom/arrow": {
     "tooltip": false,
-    "format": "  "
+    "format": "  "
   },
   "custom/clock-icon": {
     "format": ""
@@ -235,7 +235,7 @@
   "custom/pacman-update": {
     "format": " {}",
     "interval": 3600,
-    "exec": "checkupdates | wc -l",
+    "exec": "$HOME/.config/hypr/dots/.scripts/archlinux-updates.sh",
     "signal": 8,
     "tooltip": false,
   },
