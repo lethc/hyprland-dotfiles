@@ -369,7 +369,7 @@ themes {
   }
   neodark {
       fg "#cdd6f4"
-      bg "#0F0F0F"
+      bg "#282828"
       black "#0F0F0F"
       red "#f38ba8"
       green "#a6e3a1"
