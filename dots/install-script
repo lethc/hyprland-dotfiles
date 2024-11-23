@@ -43,6 +43,7 @@ git clone https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim
 #sudo npm install neovim
 # npm install neovim
 #sudo npm install -g npm@9.6.2
+yay -S  shell-color-scripts-git hub
 yay -S  python-black prettier prettierd stylua ripgrep 
 yay -S  fd gzip cliphist unzip deno 
 yay -S  composer python-pynvim shfmt
