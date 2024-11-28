@@ -165,6 +165,9 @@ cd "${HOME}/Git/WhiteSur-gtk-theme"
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1 ~/Git/WhiteSur-icon-theme
 cd "${HOME}/Git/WhiteSur-icon-theme"
 
+# For qt applications
+git clone https://github.com/vinceliuice/MacSequoia-kde ~/Git
+
 ./install.sh
 
 # Force electron applications to use Wayland with the following files
