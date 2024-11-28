@@ -155,6 +155,31 @@ echo "Waybar linked"
 ln -sf "${HOME}/.config/hypr/dots/swaync" "${HOME}/.config"
 echo "swaync linked"
 
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1 ~/Git/WhiteSur-gtk-theme
+cd "${HOME}/Git/WhiteSur-gtk-theme"
+
+./install.sh -o solid
+# For gtk4
+./install.sh -l -o solid
+
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1 ~/Git/WhiteSur-icon-theme
+cd "${HOME}/Git/WhiteSur-icon-theme"
+
+./install.sh
+
+# DISABLING right buttons in gtk-4 applications
+
+# Download 
+
+yay -S dconf-editor 
+
+# Go to  org > gnome > desktop > wm > preferences > button-layout 
+
+# AND  Under "custom value" remove everything except for "appmenu" -> 'icon:'
+
+
+# --------------------------------------------------------------------------------
+
 #ln -sf "${HOME}/.config/hypr/dots/dunst" "${HOME}/.config"
 #echo "dunst linked"
 

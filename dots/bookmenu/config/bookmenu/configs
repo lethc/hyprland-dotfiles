@@ -34,7 +34,7 @@ zellij                  :~/.config/zellij/config.kdl
 m2anki                  :~/.config/md2anki/md2anki.config.ini
 sioyek                  :~/.config/sioyek/prefs_user.config
 tridactyl               :~/.config/tridactyl/tridactylrc
-waybar_config           :~/.config/waybar/config
+waybar_config           :~/.config/waybar/config.jsonc
 waybar_style            :~/.config/waybar/style.css
 foot                    :~/.config/foot/foot.ini
 zathura                 :~/.config/zathura/zathurarc

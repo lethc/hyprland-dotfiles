@@ -1,0 +1,76 @@
+// vim: foldmethod=marker
+[
+    {
+        "output": "eDP-1",
+        "include": "~/.config/waybar/config-global.jsonc",
+        "position": "left",
+        "modules-left": [
+            "custom/launcher",
+            // "idle_inhibitor",
+            // "group/privacygroup",
+            "hyprland/scratchpad",
+            "hyprland/workspaces",
+        ],
+        "modules-center": [
+            "hyprland/window",
+            "sway/mode",
+        ],
+        "modules-right": [
+            "tray",
+            "backlight",
+            "pulseaudio",
+            "pulseaudio#source",
+            "network",
+            "bluetooth",
+            "cpu",
+            "memory",
+            "temperature",
+            "battery",
+            "clock"
+        ],
+        // {{{ PulseAudio
+        "pulseaudio": {
+            "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1% && $HOME/.scripts/progressbar.sh --volume 'eDP-1'",
+            "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1% && $HOME/.scripts/progressbar.sh --volume 'eDP-1'",
+        },
+        // }}}
+    },
+    {
+        "output": [
+            "HDMI-A-1",
+            "DP-1",
+            "HEADLESS-1"
+        ],
+        "include": "~/.config/waybar/config-global.jsonc",
+        "position": "right",
+        "modules-left": [
+            "idle_inhibitor",
+            "group/privacygroup",
+            "hyprland/scratchpad",
+            "hyprland/workspaces",
+        ],
+        // "modules-center": [
+        //     "hyprland/window",
+        //     "sway/mode",
+        // ],
+        "modules-right": [
+            "tray",
+            "pulseaudio",
+            "pulseaudio#source",
+            "network",
+            "bluetooth",
+            "cpu",
+            "memory",
+            "temperature",
+            "battery",
+            "battery#percentage",
+            "clock"
+        ],
+        // {{{ PulseAudio
+        "pulseaudio": {
+            "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1% && $HOME/.scripts/progressbar.sh --volume 'HDMI-A-1'",
+            "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1% && $HOME/.scripts/progressbar.sh --volume 'HDMI-A-1'",
+        },
+        // }}}
+    }
+]

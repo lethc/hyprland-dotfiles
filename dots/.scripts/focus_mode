@@ -16,9 +16,9 @@ not_focus_mode() {
     # sleep 1
 
     hyprctl keyword general:border_size 1
-    hyprctl keyword general:gaps_in 6
-    hyprctl keyword general:gaps_out 12
-    hyprctl keyword decoration:rounding 15
+    hyprctl keyword general:gaps_in 5
+    hyprctl keyword general:gaps_out 10
+    hyprctl keyword decoration:rounding 9
     hyprctl keyword decoration:drop_shadow 1 # enable shadows on Hyprland
 }
 

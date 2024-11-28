@@ -26,18 +26,15 @@
   magenta : #9a7ecc;
   cyan    : #4abaaf;
 
+  accent: @red;
+  urgent: @yellow;
+
   background-color : transparent;
   text-color       : @fg0;
 
   margin  : 0;
   padding : 0;
   spacing : 0;
-}
-
-configuration {
-    modi: "drun";
-    show-icons: true;
-    display-drun: "";
 }
 
 element-icon, element-text, scrollbar {
@@ -62,11 +59,6 @@ inputbar {
   children : [ icon-search, entry ];
 
   background-color: @bg0;
-}
-
-entry {
-    placeholder: "Search Apps";
-    text-color: @fg0;
 }
 
 icon-search, entry, element-icon, element-text {
@@ -98,35 +90,25 @@ element {
   spacing : 8px;
 }
 
-element normal.urgent {
-  text-color: @yellow;
+element normal urgent {
+  text-color: @urgent;
 }
 
-element normal.active {
-  text-color: @red;
+element normal active {
+  text-color: @accent;
 }
 
-element normal.normal {
-  background-color: @bg1;
-  text-color: @fg0;
+element alternate active {
+  text-color: @accent;
 }
 
-element alternate.active {
-  text-color: @red;
-}
-
-element alternate.normal {
-  background-color: @bg1;
-  text-color: @fg0;
-}
-
-element selected.normal {
+element selected {
   text-color       : @bg1;
-  background-color : @red;
+  background-color : @accent;
 }
 
-element selected.urgent {
-  background-color: @yellow;
+element selected urgent {
+  background-color: @urgent;
 }
 
 element-icon {
