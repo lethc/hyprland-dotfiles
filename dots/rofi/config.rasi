@@ -1,5 +1,5 @@
 * {
-  font:   "Iosevka Nerd Font Medium 11";
+  font:   "SF Pro Text Regular 10";
 
   //prompt
   //bg0     : #1a1b26;
@@ -10,7 +10,7 @@
   bg2     : #24283b;
   //borders
   //bg3     : #414868;
-  bg3     : #9F9AC3;
+  bg3     : rgb(255, 255, 255, 0.2);
   //apps text
   //fg0     : #c0caf5;
   fg0     : #DEDEDE;
@@ -37,6 +37,7 @@
 configuration {
     modi: "drun";
     show-icons: true;
+    icon-theme:  "WhiteSur-dark";
     display-drun: "";
 }
 
@@ -48,12 +49,12 @@ window {
   location : northwest;
   width    : 280px;
   x-offset : 4px;
-  y-offset : 26px;
+  y-offset : 10px;
 
   background-color: @bg1;
   border: 1px;
   border-color: @bg3;
-  border-radius: 6px;
+  border-radius: 9px;
 }
 
 inputbar {
@@ -130,7 +131,7 @@ element selected.urgent {
 }
 
 element-icon {
-  size: 0.8em;
+  size: 1.2em;
 }
 
 element-text {
