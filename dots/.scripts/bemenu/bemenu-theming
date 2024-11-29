@@ -14,7 +14,7 @@ export BEMENU_OPTS="
   --af '#cac9dd'\
   --ab '#151515'\ 
   -H 32\ 
-  -m 500\
+  -m 900\
   --fn 'SF Pro Rounded Regular 11'\
   --hp 8\
   --ch 16\

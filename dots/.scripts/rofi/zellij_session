@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Get the list of Zellij sessions
+session=$(zellij ls | \
+          cut -c 8- | \
+          cut -d " " -f1 | \
+          sed -r 's/\x1B\[[0-9;]*[mK]//' | \
+          rofi -dmenu -i -p "󱊄 Select a session:")
+
+# Check if a session was selected
+if [ -n "$session" ]; then
+    # Open a new terminal (foot) and attach to the selected session
+    foot --title=CodeSession -e zellij a "$session" &> /dev/null &
+    # Uncomment the following lines if fullscreen behavior is required:
+    # hyprctl dispatch fullscreen 0
+    # hyprctl dispatch fullscreen 0
+fi
+
+exit 0
+

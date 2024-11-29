@@ -1,36 +1,38 @@
 #!/usr/bin/env bash
 
-# search root
+# Search root
 root_path="$HOME"
 
-# scripts path
-scripts_path="$HOME/.local/bin"
+# Prompt text
+folder_prompt="Folder"
+file_prompt="File"
+no_files_prompt="No files here!"
 
-# bemenu theming
-. "$scripts_path/bemenu-theming"
-
-prompt="Folder"
-
+# Step 1: Select a folder
 file_path=$(find "$root_path" -maxdepth 5 -type d \( ! -regex '.*/\..*' \) | \
-            sed 's|^'$root_path/'||' | sort | \
-            bemenu -i --prompt="$prompt" "$@")
-if [[ -n $file_path ]]; then
+            sed 's|^'"$root_path"'/||' | sort | \
+            rofi -dmenu -i -p "$folder_prompt")
 
+if [[ -n $file_path ]]; then
+    # Determine the search path
     if [[ "$file_path" == "/" ]]; then
         search_path="$root_path"
     else
         search_path="$root_path/$file_path"
     fi
 
+    # Step 2: Check for files in the selected folder
     total=$(find "$search_path" -maxdepth 1 -type f | wc -l)
     
     if [[ $total -eq 0 ]]; then
-        bemenu --prompt="No files here!" --no-sort --no-lines --auto-select
+        echo "$no_files_prompt" | rofi -dmenu -i -p "$folder_prompt"
     else
+        # Step 3: Select a file
         file_name=$(find "$search_path" -maxdepth 1 -type f | \
                     awk -F'/' '{print $NF}' | \
-                    bemenu -i --prompt="File:" "$@")
+                    rofi -dmenu -i -p "$file_prompt")
         if [[ -n $file_name ]]; then
+            # Open the selected file
             xdg-open "$search_path/$file_name"
         fi
     fi

@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# bemenu theming
-. $HOME/.local/bin/bemenu-theming
-
-prompt="-p Run:"
-
-bemenu-run -i $prompt "$@"

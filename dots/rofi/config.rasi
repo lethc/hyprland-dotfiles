@@ -60,13 +60,19 @@ window {
 inputbar {
   spacing  : 8px;
   padding  : 4px 8px;
-  children : [ icon-search, entry ];
+  children : [ prompt, icon-search, entry ];
 
   background-color: @bg0;
 }
 
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  @fg0;
+}
+
 entry {
-    placeholder: "Search Apps";
+    placeholder: "Search";
     text-color: @fg0;
 }
 

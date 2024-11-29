@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+# Define search engines and their URLs
+declare -A search_engines=(
+    ["g"]="https://www.google.com/search?q="
+    ["bb"]="https://www.bing.com/search?q="
+    ["yx"]="https://yandex.com/search/?text="
+    ["dd"]="https://duckduckgo.com/?q="
+    ["sp"]="https://www.startpage.com/do/search?query="
+    ["we"]="https://en.wikipedia.org/wiki/"
+    ["ws"]="https://es.wikipedia.org/wiki/"
+    ["so"]="https://stackoverflow.com/search?q="
+    ["dl"]="https://www.deepl.com/translator#en/pt/"
+    ["gt"]="https://translate.google.com.br/?text="
+    ["rd"]="https://context.reverso.net/traducao/ingles-portugues/"
+    ["aw"]="https://wiki.archlinux.org/index.php?search="
+    ["gh"]="https://github.com/search?utf8=%E2%9C%93&q="
+    ["yt"]="https://www.youtube.com/results?search_query="
+)
+
+# Display search engine choices in rofi
+engine_choice=$(printf "g    Google Search\nbb   Bing\ndd   DuckDuckGo\nyx   Yandex\nsp   StartPage\nwe   Wikipedia (en)\nws   Wikipedia (es)\nso   Stack Overflow\ndl   DeepL Translator\ngt   Google Translate\nrd   Reverso Context Dictionary\naw   Arch Wiki\ngh   GitHub Search\nyt   YouTube" | rofi -dmenu -i -p "Choose engine:")
+
+# Extract the selected engine's key (first column)
+engine_key=$(echo "$engine_choice" | awk '{print $1}')
+
+# Exit if no engine was selected
+if [[ -z "$engine_key" || -z "${search_engines[$engine_key]}" ]]; then
+    exit 1
+fi
+
+# Prompt the user for the search query
+query=$(rofi -dmenu -i -p "Enter search query:")
+
+# Exit if the query is empty
+if [[ -z "$query" ]]; then
+    exit 1
+fi
+
+# Encode the query for use in a URL (replace spaces with '+')
+encoded_query=$(echo "$query" | sed 's/ /+/g')
+
+# Open the search in the default browser
+xdg-open "${search_engines[$engine_key]}${encoded_query}"
+
+exit 0
+
+

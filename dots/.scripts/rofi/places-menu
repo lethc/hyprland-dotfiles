@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+prompt="Path:"
+root_path="$HOME"
+
+places_terminal() {
+    # Use `find` to list directories, strip the base path, and display them with `rofi`
+    find_path="$(find "$root_path" -maxdepth 6 -type d |
+        sed 's|^'"$root_path"'/||' |
+        rofi -dmenu -i -p "$prompt")"
+
+    # If a path is selected, open `foot` terminal in that directory
+    if [[ ! -z "$find_path" ]]; then
+        foot -D "$find_path"
+    fi
+
+    exit 0
+}
+
+places_filemanager() {
+    # Use `find` to list directories, strip the base path, and display them with `rofi`
+    find_path="$(find "$root_path" -maxdepth 6 -type d |
+        sed 's|^'"$root_path"'/||' |
+        rofi -dmenu -i -p "$prompt")"
+
+    # If a path is selected, open the file manager in that directory
+    if [[ ! -z "$find_path" ]]; then
+        dolphin "$find_path"
+    fi
+
+    exit 0
+}
+
+case "$1" in
+open_with_terminal) places_terminal ;;
+open_with_filemager) places_filemanager ;;
+esac
+

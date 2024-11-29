@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# bemenu theming
-. $HOME/.local/bin/bemenu-theming
-
-prompt="-p Clipboard:"
-
-cliphist list | head -80 | sed 's/^[0-9]*\s//' | bemenu -i $prompt | wl-copy
