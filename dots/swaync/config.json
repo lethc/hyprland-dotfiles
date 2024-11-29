@@ -1,7 +1,7 @@
 {
   "$schema": "/etc/xdg/swaync/configSchema.json",
-  "positionX": "left",
-  "positionY": "bottom",
+  "positionX": "right",
+  "positionY": "top",
  "cssPriority": "user",
 
   "control-center-width": 380,
@@ -72,7 +72,7 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": " ",
+          "label": " ",
           "command": "amixer set Master toggle"
         },
         {
