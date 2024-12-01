@@ -19,7 +19,21 @@ declare -A search_engines=(
 )
 
 # Display search engine choices in rofi
-engine_choice=$(printf "g    Google Search\nbb   Bing\ndd   DuckDuckGo\nyx   Yandex\nsp   StartPage\nwe   Wikipedia (en)\nws   Wikipedia (es)\nso   Stack Overflow\ndl   DeepL Translator\ngt   Google Translate\nrd   Reverso Context Dictionary\naw   Arch Wiki\ngh   GitHub Search\nyt   YouTube" | rofi -dmenu -i -p "Choose engine:")
+engine_choice=$(printf "%s\n" \
+    "g    Google Search" \
+    "bb   Bing" \
+    "dd   DuckDuckGo" \
+    "yx   Yandex" \
+    "sp   StartPage" \
+    "we   Wikipedia (en)" \
+    "ws   Wikipedia (es)" \
+    "so   Stack Overflow" \
+    "dl   DeepL Translator" \
+    "gt   Google Translate" \
+    "rd   Reverso Context Dictionary" \
+    "aw   Arch Wiki" \
+    "gh   GitHub Search" \
+    "yt   YouTube" | rofi -dmenu -i -p "Choose engine:")
 
 # Extract the selected engine's key (first column)
 engine_key=$(echo "$engine_choice" | awk '{print $1}')
