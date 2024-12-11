@@ -196,13 +196,21 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd*' fzf-preview 'ls --color $realpath'
 
+export FZF_DEFAULT_OPTS='
+--color=bg+:#3B4252,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1
+--bind alt-j:down,alt-k:up
+'
+
 # FZF colourscheme
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
---color=fg:#C4C4C4,hl:#ff9e64 \
---color=fg+:#C4C4C4,hl+:#ff9e64 \
---color=info:#90A959,prompt:#BAD7FF,pointer:#BAD7FF \
---color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
-export FZF_DEFAULT_OPTS='--bind alt-j:down,alt-k:up'
+# export FZF_DEFAULT_OPTS=" \
+# --color=bg+:#3B4252,spinner:#81A1C1,hl:#616E88 \
+# --color=fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1 \
+# --color=marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1 \
+# --color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
+# --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+# --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+# --color=selected-bg:#45475a \
+# "
 
 ##### Functions  ########
 function mkt() {
@@ -358,26 +366,6 @@ function cd {
 function cdi {
 	__zoxide_zi "$@" && ls -F
 }
-
-export BEMENU_OPTS="
-  --tb '#F4BF75'\
-  --tf '#151515'\
-  --fb '#151515'\
-  --ff '#E1E1E1'\
-  --nb '#151515'\
-  --nf '#E1E1E1'\
-  --hb '#151515'\
-  --hf '#EE923A'\
-  --nf '#E1E1E1'\
-  --af '#E1E1E1'\
-  --ab '#151515'\ 
-  -H 32\ 
-  -m 500\
-  --fn 'SF Pro Rounded Regular 12'\
-  --hp 8\
-  --ch 16\
-  --cw 2|
-"
 
 # source /home/Lummyn/.config/broot/launcher/bash/br
 # eval "$(zellij setup --generate-auto-start zsh)"
