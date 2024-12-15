@@ -16,9 +16,9 @@
   "notification-body-image-height": 160,
   "notification-body-image-width": 200,
 
-  "timeout": 4,
-  "timeout-low": 2,
-  "timeout-critical": 6,
+  "timeout": 8,
+  "timeout-low": 6,
+  "timeout-critical": 8,
   
   "fit-to-screen": false,
   "keyboard-shortcuts": true,
