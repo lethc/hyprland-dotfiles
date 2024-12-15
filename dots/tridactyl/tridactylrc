@@ -1,7 +1,7 @@
 " General Settings
 set auconcreatecontainer true
 " set searchurls.searchx http://localhost:8888/search?q=
-set searchengine google
+set searchengine yandex
 set smoothscroll true
 
 bind j scrollline 4
@@ -26,6 +26,7 @@ unbind <C-e>
 unbind <A-j>
 unbind <A-k>
 unbind <C-f>
+unbind <C-o>
 unbind d
 unbind u
 
