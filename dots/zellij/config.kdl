@@ -136,8 +136,8 @@ keybinds clear-defaults=true {
        bind "Alt 7" { GoToTab 7; SwitchToMode "Normal"; }
        bind "Alt 8" { GoToTab 8; SwitchToMode "Normal"; }
        bind "Alt 9" { GoToTab 9; SwitchToMode "Normal"; }
-       bind "Alt h" "PageUp" { GoToPreviousTab; }
-       bind "Alt l" "PageDown" { GoToNextTab; }
+       //bind "Alt h" "PageUp" { GoToPreviousTab; }
+       //bind "Alt l" "PageDown" { GoToNextTab; }
 
        bind "Alt -" { Resize "Decrease"; }
        bind "Alt =" "Alt +" { Resize "Increase"; }
