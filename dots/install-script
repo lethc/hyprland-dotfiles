@@ -12,7 +12,7 @@ echo "#########   Installing KDE packages   #########"
 echo "###############################################"
 
 # Install these if open with in dolphin no longer detects any programs for opening
-yay -S kservice5 kdbusaddons5 kfilemetadata5 kconfig5 kcoreaddons5 kcrash5 kguiaddons5 ki18n5 kitemviews5 kwidgetsaddons5 kwindowsystem5
+#yay -S kservice5 kdbusaddons5 kfilemetadata5 kconfig5 kcoreaddons5 kcrash5 kguiaddons5 ki18n5 kitemviews5 kwidgetsaddons5 kwindowsystem5
 
 echo "###############################################"
 echo "#####   Installing Programming Languages  #####"
@@ -33,6 +33,9 @@ yay -S  nodejs npm
 ### PYTHON RELATED
 yay -S  python-pip python-pipx
 
+### LUA RELATED
+yay -S  lua51 luarocks
+
 echo "#############################################"
 echo "#####   Installation NVIM dependencies  #####"
 echo "#############################################"
@@ -49,7 +52,7 @@ yay -S  fd gzip cliphist unzip deno
 yay -S  composer python-pynvim shfmt
 yay -S  yarn 
 yay -S  rar 
-yay -S  xampp
+# yay -S  xampp
 # issues
 # yay -S   #python-rpcq
 
@@ -60,7 +63,7 @@ echo "##############################"
 echo "Change shell root"
 sudo usermod --shell /usr/bin/zsh root
 echo "Change shell user"
-sudo usermod --shell /usr/bin/zsh Lummyn
+sudo usermod --shell /usr/bin/zsh $user
 
 yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions lsd bat zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git fzf-tab-git
 
@@ -69,19 +72,20 @@ echo "##  Installing Hyprland dependencies  ##"
 echo "########################################" 
 
 yay -S  kitty 
-yay -S  hyprland-git 
-yay -S  xdg-desktop-portal-hyprland xdg-desktop-portal-gtk 
+yay -S  hyprland-git cpio
+yay -S  xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk 
 yay -S  hyprlock-git hypridle-git hyprpicker-git
 #yay -S  wofi dunst swayidle
 yay -S  jq gojq-bin bc pamixer grim grimblast
-yay -S  papirus-icon-theme playerctl 
+# yay -S  papirus-icon-theme 
+yay -S  playerctl 
 yay -S  slurp socat swappy nm-connection-editor blueberry acpi 
 yay -S  nwg-look
 
 # Adding plugins
 hyprpm update
-hyprpm add https://github.com/DreamMaoMao/hycov
-hyprpm enable hycov
+# hyprpm add https://github.com/DreamMaoMao/hycov
+# hyprpm enable hycov
 
 echo "#####################################"
 echo "##  Installing Pacman Applications ##"
@@ -90,8 +94,9 @@ echo "#####################################"
 # Installing fonts
 yay -S ttf-maple-beta ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd
 yay -S fzf wget vdhcoapp-bin github-cli
-yay -S  lsix nodejs-readability-cli selectdefaultapplication-git 
-#yay -S megacmd
+yay -S  lsix nodejs-readability-cli 
+# yay -S selectdefaultapplication-git 
+# yay -S megacmd
 # yay -S ranger-git
 yay -S   apple-fonts 
 # yay -S ttf-apple-emoji
@@ -104,23 +109,21 @@ yay -S rofi-wayland
 yay -S  firefox-tridactyl firefox-tridactyl-native-bin speech-dispatcher
 # yay -S  firefox-developer-edition 
 yay -S  ncdu dust duf baobab iftop yazi smile code-minimap
-yay -S  neovide-git
-#yay -S  whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git 
-yay -S  texlive-latex biber texlive-binextra texlive-langspanish texlive-latexextra
+# yay -S  neovide-git
+# yay -S  whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git 
+# yay -S  texlive-latex biber texlive-binextra texlive-langspanish texlive-latexextra
  
 # No eww anymore
-#yay -S   eww-wayland 
-yay -S  aylurs-gtk-shell
+# yay -S   eww-wayland 
+# yay -S  aylurs-gtk-shell
 yay -S  bun-bin
-yay -S  dart-sass
+# yay -S  dart-sass
 # yay -S  inotify-tools
-yay -S  waybar
 yay -S  swaync
-yay -S  swaylock-effects-git sway-audio-idle-inhibit-git 
+# yay -S  swaylock-effects-git sway-audio-idle-inhibit-git 
 yay -S  wf-recorder 
 yay -S  wl-clip-persist-git
 yay -S  wayshot
-yay -S  cliphist
 yay -S  swww
 yay -S  vimv
 yay -S  gcolor3
@@ -128,15 +131,32 @@ yay -S  gcolor3
 echo "######################################"
 echo "###### Installing frequent apps ######"
 echo "######################################"
-yay -S  foot-git foot-terminfo-git zoxide bemenu-wayland ueberzugpp xournalpp kdeconnect
-yay -S  gtt-bin youtube-tui-git 
+yay -S  foot-git foot-terminfo-git zoxide bemenu-wayland ueberzugpp xournalpp 
+# yay -S  kdeconnect
+# yay -S youtube-tui-git 
+yay -S  gtt-bin 
 yay -S  w3m lynx httrack 
-yay -S  vlc obsidian 
+# yay -S  vlc 
+yay -S  obsidian 
 yay -S  tori-bin python-pytube 
-yay -S  sioyek amberol anki-bin kooha
+yay -S  sioyek anki-bin kooha
+# yay -S  amberol
 yay -S  resources
-yay -S  morgen-bin
+# yay -S  morgen-bin
 pipx install wisdom-tree
+yay -S zen-browser
+yay -S pcloud-drive
+yay -S freetube-bin
+
+yay -S  waybar
+# WAYBAR modules
+yay -S aurutils-git
+yay -S pacman-contrib
+# yay -S wl-screenrec
+yay -S wttrbar
+yay -S hyprshade
+yay -S tgpt
+yay -S power-profile
 
 # Install nice clipboard manager
 # https://github.com/savedra1/clipse?tab=readme-ov-file#installation
@@ -168,9 +188,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 #### Installing Future Cursor
-git clone https://github.com/yeyushengfan258/Future-cursors.git /tmp/Future-cursors
-cd /tmp/Future-cursors/
-./install.sh
+# git clone https://github.com/yeyushengfan258/Future-cursors.git /tmp/Future-cursors
+# cd /tmp/Future-cursors/
+# ./install.sh
 
 echo "######################################"
 echo "#####   Installation completed   #####"
