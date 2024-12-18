@@ -55,12 +55,6 @@ echo "zellij linked"
 ln -sf "${HOME}/.config/hypr/dots/gtk/gtk-4.0" "${HOME}/.config"
 echo "GTK4 theme linked"
 
-
-ln -sf "${HOME}/.config/hypr/dots/" "${HOME}/.config"
-kvantummanager --set Orchis-dark
-# Change the QT themes with an application like qt5ct or qt6ct
-echo "Kvantum theme linked"
-
 ln -sf "${HOME}/.config/hypr/dots/.zshrc" "${HOME}"
 echo ".zshrc linked"
 
@@ -132,12 +126,12 @@ echo "xdg-desktop-portal config linked"
 ln -sf "${HOME}/.config/hypr/dots/rofi" "${HOME}/.config"
 echo "rofi linked"
 
-echo "Changing papirus Icon Colour"
-
-yay -S papirus-folders-git
-papirus-folders -C grey
-
-echo "theme completed"
+# echo "Changing papirus Icon Colour"
+#
+# yay -S papirus-folders-git
+# papirus-folders -C grey
+#
+# echo "theme completed"
 
 mkdir "${HOME}/.themes"
 cp -r "${HOME}/.config/hypr/dots/gtk/Everforest-Dark-BL" "${HOME}/.themes"
@@ -165,10 +159,16 @@ cd "${HOME}/Git/WhiteSur-gtk-theme"
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1 ~/Git/WhiteSur-icon-theme
 cd "${HOME}/Git/WhiteSur-icon-theme"
 
-# For qt applications
-git clone https://github.com/vinceliuice/MacSequoia-kde ~/Git
-
 ./install.sh
+
+# For qt applications
+ln -sf "${HOME}/.config/hypr/dots/Kvantum" "${HOME}/.config"
+
+# Change the QT themes with an application like qt5ct or qt6ct
+git clone https://github.com/vinceliuice/MacSequoia-kde.git ~/Git/MacSequoia-kde
+cd ~/Git/MacSequoia-kde/Kvantum/MacSequoia/ && cp -r * ~/.config/Kvantum/
+echo "Kvantum theme linked"
+kvantummanager --set MacSequoiaDark
 
 # Force electron applications to use Wayland with the following files
 
