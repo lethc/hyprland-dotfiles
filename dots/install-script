@@ -73,6 +73,7 @@ echo "########################################"
 
 yay -S  kitty 
 yay -S  hyprland-git cpio
+yay -S  hyprland-qtutils
 yay -S  xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk 
 yay -S  hyprlock-git hypridle-git hyprpicker-git
 #yay -S  wofi dunst swayidle
