@@ -7,7 +7,7 @@ hyprland_theme          :~/.config/hypr/dots/theme
 hyprland_install        :~/.config/hypr/dots/install-script
 ags                     :~/.config/ags/config.js
 bookmenu                :~/.config/bookmenu/config
-bookmenu_bookmarks      :~/.config/bookmenu/my_bookmarks
+bookmenu_bookmarks      :~/Home/Scripts/my_bookmarks
 bookmenu_configs        :~/.config/bookmenu/configs
 zshrc                   :~/.config/zsh/.zshrc
 zshenv                  :~/.zshenv
