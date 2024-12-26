@@ -1,5 +1,4 @@
 {
-    "output": "eDP-1",
     "layer": "top",
     "position": "left",
     // "margin": "5 2 5 0", //Floating bar
@@ -166,6 +165,7 @@
         "orientation": "inherit",
         "modules": [
             "group/audio",
+            "custom/monitor",
             "custom/notifications"
         ]
     },
@@ -218,6 +218,11 @@
         "min": 0,
         "max": 140,
         "orientation": "vertical"
+    },
+    "custom/monitor": {
+        "format": "󰍺 ",
+        "on-click": "$HOME/.config/hypr/dots/.scripts/monitors.sh",
+        "tooltip": "Toggle laptop/monitor"
     },
     "custom/notifications": {
         "format": "󰂞 ",
