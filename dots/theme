@@ -140,8 +140,8 @@ echo "GTK3 theme copied"
 
 # Make fonts work without google-noto-fonts
 # https://codeberg.org/dnkl/foot/wiki#user-content-how-do-i-get-colored-emojis
-ln -sf "${HOME}/.config/hypr/dots/conf.avail/" /etc/fonts/
-ln -sf /etc/fonts/conf.avail/75-joypixels.conf /etc/fonts/conf.d/
+sudo ln -sf "${HOME}/.config/hypr/dots/conf.avail/" /etc/fonts/
+sudo ln -sf /etc/fonts/conf.avail/75-joypixels.conf /etc/fonts/conf.d/
 
 ln -sf "${HOME}/.config/hypr/dots/waybar" "${HOME}/.config"
 echo "Waybar linked"
