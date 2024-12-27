@@ -158,6 +158,8 @@ yay -S wttrbar
 yay -S hyprshade
 yay -S tgpt
 yay -S power-profile
+# to watch anime
+yay -S curd 
 
 # Install nice clipboard manager
 # https://github.com/savedra1/clipse?tab=readme-ov-file#installation
