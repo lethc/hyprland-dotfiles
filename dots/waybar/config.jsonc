@@ -165,6 +165,7 @@
         "orientation": "inherit",
         "modules": [
             "group/audio",
+            "custom/anime",
             "custom/monitor",
             "custom/notifications"
         ]
@@ -223,6 +224,11 @@
         "format": "󰍺 ",
         "on-click": "$HOME/.config/hypr/dots/.scripts/monitors.sh",
         "tooltip": "Toggle laptop/monitor"
+    },
+    "custom/anime": {
+        "format": " ",
+        "on-click": "curd -rofi -image-preview",
+        "tooltip": "Open rofi to watch anime"
     },
     "custom/notifications": {
         "format": "󰂞 ",
