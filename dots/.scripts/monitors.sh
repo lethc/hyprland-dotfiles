@@ -37,7 +37,7 @@ NUM_MONITORS_ACTIVE=$(hyprctl monitors | grep --count Monitor)
 if [ "$NUM_MONITORS_ACTIVE" -ge 2 ] && hyprctl monitors | cut --delimiter ' ' --fields 2 | grep --quiet ^$INTERNAL_MONITOR; then
 
     hyprpm reload -n
-    sleep 3
+    sleep 5
 
     # Doing this I hopefully end up on workspace 1 on the external monitor rather than 2 at startup
     move_all_workspaces_to_monitor $EXTERNAL_MONITOR
