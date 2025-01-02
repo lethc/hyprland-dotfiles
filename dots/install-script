@@ -135,6 +135,7 @@ echo "######################################"
 yay -S  foot-git foot-terminfo-git zoxide bemenu-wayland ueberzugpp xournalpp 
 # yay -S  kdeconnect
 # yay -S youtube-tui-git 
+yay -S youtube-local
 yay -S  gtt-bin 
 yay -S  w3m lynx httrack 
 # yay -S  vlc 
