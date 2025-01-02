@@ -9,7 +9,7 @@ BackgroundColor="#1d1f21"
 SelectedBackgroundColor="#444"
 ForegroundColor="#d8dee9"
 SelectedForegroundColor="#268bd2"
-Seperator=":"
+Separator="::"
 BookmarksFile=${XDG_CONFIG_HOME:-"$HOME/.config"}/bookmenu/bookmarks
 ConfigFile=${XDG_CONFIG_HOME:-"$HOME/.config"}/bookmenu/config
 Command="xdg-open"
@@ -61,7 +61,7 @@ do
       -b) BookmarksFile=$Value ;;
       -c) ConfigFile=$Value ;;
       -co) Command=$Value ;;
-      -sp) Seperator=$Value ;;
+      -sp) Separator=$Value ;;
       -f) FuzzyFinder=$Value ;;
       -a) Add=$Value ;;
       -r) Remove=$Value ;;
@@ -86,7 +86,7 @@ if [ -e "$ConfigFile" ]; then
       SelectedBackgroundColor) [ -n "$Value" ] && SelectedBackgroundColor=$Value ;;
       ForegroundColor) [ -n "$Value" ] && ForegroundColor=$Value ;;
       SelectedForegroundColor) [ -n "$Value" ] && SelectedForegroundColor=$Value ;;
-      Seperator) [ -n "$Value" ] && Seperator=$Value ;;
+      Separator) [ -n "$Value" ] && Separator=$Value ;;
       BookmarksFile) [ -n "$Value" ] && BookmarksFile=$Value ;;
       Command) [ -n "$Value" ] && Command=$Value ;;
       PromptText) [ -n "$Value" ] && Prompt=$Value ;;
@@ -107,7 +107,7 @@ SelectFinder() {
 }
 
 SelectPath() {
-  xargs -I % grep "%$Seperator" "$BookmarksFile" | sed "s/.*$Seperator//;"
+  xargs -I % grep "%$Separator" "$BookmarksFile" | sed "s/.*$Separator//;"
 }
 
 FileSystem() {
@@ -120,7 +120,7 @@ Website() {
 }
 
 SelectBookmark() {
-  Bookmark=$(sort "$BookmarksFile" | sed "s/$Seperator.*//" | SelectFinder | SelectPath)
+  Bookmark=$(sort "$BookmarksFile" | sed "s/$Separator.*//" | SelectFinder | SelectPath)
   if [ -z "$Bookmark" ]; then
     Err 1 "No bookmark selected"
   fi
