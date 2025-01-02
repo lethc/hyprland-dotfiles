@@ -5,7 +5,7 @@ echo "######################################"
 
 mkdir ~/Home
 mkdir ~/Documents/Library
-git clone https://git.sr.ht/~heckyel/yt-local ~/env/yt-local
+# git clone https://git.sr.ht/~heckyel/yt-local ~/env/yt-local
 # cp "${HOME}/.config/hypr/dots/.scripts/.megabot" ~/Sync/
 
 # Python Debug in neovim
