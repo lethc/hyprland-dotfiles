@@ -88,7 +88,7 @@ bind cl composite js `${document.location.href.replace(/^https?:\/\//, '')}` | c
 alias rd open https://www.reddit.com/
 alias sk open https://app.skiff.com/
 alias Yt open https://www.youtube.com/
-alias yt open http://127.0.0.1:9010
+alias yt open http://localhost:8080/youtube.com/subscriptions
 alias ym open https://music.youtube.com/
 alias gb open https://bard.google.com/
 alias gi open https://github.com/
