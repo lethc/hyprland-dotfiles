@@ -9,7 +9,7 @@ ags                     ::~/.config/ags/config.js
 bookmenu                ::~/.config/bookmenu/config
 bookmenu_bookmarks      ::~/Home/Scripts/my_bookmarks
 bookmenu_configs        ::~/.config/bookmenu/configs
-zshrc                   ::~/.config/zsh/.zshrc
+zshrc                   ::~/.zshrc
 zshenv                  ::~/.zshenv
 zprofile                ::~/.config/zsh/.zprofile
 gitconf                 ::~/.gitconfig
@@ -40,3 +40,4 @@ foot                    ::~/.config/foot/foot.ini
 zathura                 ::~/.config/zathura/zathurarc
 gitui                   ::~/.config/gitui/key_bindings.ron
 mimeapps                ::~/.config/mimeapps.list
+ghostty                 ::~/.config/ghostty/config
