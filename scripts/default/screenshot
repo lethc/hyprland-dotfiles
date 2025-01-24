@@ -55,10 +55,22 @@ esocr_screenshot() {
 		break
 	fi
 }
+korocr_screenshot() {
+	grim -g "$(slurp)" "tmp.png" && tesseract -l kor "tmp.png" - | wl-copy && rm "tmp.png"
+
+	exit_status=$?
+
+	if [ $exit_status -eq 0 ]; then
+		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
+	else
+		break
+	fi
+}
 case "$1" in
 
 screenshot) screenshot ;;
 saveScreenshot) save_screenshot ;;
 ocrScreenshot) ocr_screenshot ;;
 esOcrScreenshot) esocr_screenshot ;;
+korOcrScreenshot) korocr_screenshot ;;
 esac
