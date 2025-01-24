@@ -55,8 +55,9 @@ fallback = [
 ]
 
 document = [
-	{ run = 'sioyek "$@"', desc = "Open with sioyek" },
 	{ run = 'zathura "$@"', desc = "Open with Zathura" },
+	{ run = 'foliate "$@"', desc = "Open with Foliate" },
+	{ run = 'xournalpp "$@"', desc = "Open with Xournalpp" },
 ]
 
 [open]
