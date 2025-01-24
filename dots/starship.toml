@@ -10,9 +10,9 @@
 # disabled = true# # ~/.config/starship.toml
 #
 format = """\
-[](fg:#0F0F0F)\
+[](fg:#151515)\
 $username\
-[](fg:#0F0F0F bg:#191919)\
+[](fg:#151515 bg:#191919)\
 $directory\
 [](fg:#191919 bg:#212121)\
 $git_branch\
@@ -35,8 +35,8 @@ disabled = true
 # You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
-style_user = "fg:#b6bdca bg:#0F0F0F"
-style_root = "fg:#f38ba8 bg:#0F0F0F"
+style_user = "fg:#b6bdca bg:#151515"
+style_root = "fg:#f38ba8 bg:#151515"
 format = '[󱗆 ]($style)' # $user
 
 [directory]
@@ -161,7 +161,7 @@ style = "fg:#89b4fa bg:#292929"
 format = '[ $symbol ($version )]($style)'
 
 [bun]
-symbol = "󱜙"
+symbol = ""
 style = "fg:#e5c07b bg:#292929"
 format = '[ $symbol ($version )]($style)'
 
