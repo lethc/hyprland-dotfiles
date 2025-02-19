@@ -3,6 +3,7 @@
     "position": "left",
     // "margin": "5 2 5 0", //Floating bar
     "margin-left": -2,
+    "width": 52,
     "reload_style_on_change": true,
     "modules-left": [
         "group/cnoti",
@@ -332,7 +333,7 @@
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-        "on-click": "rofi-bluetooth -config ~/.config/rofi/menu.d/network.rasi -i"
+        "on-click": "rofi-bluetooth"
     },
     // ----
     "group/together": {
@@ -351,7 +352,7 @@
         "modules": [
             "custom/mark",
             "custom/colorpicker",
-            "custom/hyprshade",
+            //"custom/hyprshade",
             "idle_inhibitor",
             "custom/hyprkill",
             "custom/weather"
@@ -446,8 +447,8 @@
             "transition-left-to-right": false
         },
         "modules": [
-            "battery",
-            "power-profiles-daemon"
+            "battery"
+            //"power-profiles-daemon"
         ]
     },
     "battery": {
