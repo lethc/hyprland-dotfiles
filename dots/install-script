@@ -110,6 +110,11 @@ yay -S rofi-wayland
 yay -S  firefox-tridactyl firefox-tridactyl-native-bin speech-dispatcher
 # yay -S  firefox-developer-edition 
 yay -S  ncdu dust duf baobab iftop yazi smile code-minimap
+
+# Install Yazi plugins
+
+ya pack -a yazi-rs/plugins:smart-enter
+
 # yay -S  neovide-git
 # yay -S  whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git 
 # yay -S  texlive-latex biber texlive-binextra texlive-langspanish texlive-latexextra
