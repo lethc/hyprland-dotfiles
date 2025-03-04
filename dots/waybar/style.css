@@ -66,6 +66,7 @@ tooltip label {
     color: lighter(@active);
 }
 
+#window_management,
 #gcpu,
 #custom-master,
 #memory,
@@ -98,8 +99,15 @@ tooltip label {
     font-size: 14px;
 }
 
+#custom-anime,
+#custom-bmax,
+#custom-bfullmax,
 #custom-hotspot {
     padding-right: 2px;
+}
+
+#custom-notifications {
+    padding-right: 6px;
 }
 
 #custom-vpn,
@@ -125,6 +133,19 @@ tooltip label {
 #cpu {
     font-size: 14px;
     font-weight: bold;
+}
+
+#custom-bfloat,
+#custom-bmax,
+#custom-bcentre,
+#custom-bfullmax,
+#custom-bfloatall,
+#custom-bclose {
+  padding-top: 6px;      
+}
+
+#custom-bfloatall {
+  padding-bottom: 6px;      
 }
 
 #custom-github {
@@ -160,6 +181,14 @@ tooltip label {
 #workspaces button.urgent {
     font-weight: bold;
     color: @foreground;
+}
+
+#workspaces button.empty {
+    /* padding: 4px 2px; */
+    padding-top: 2px;
+    padding-right: 4px;
+    color: lighter(@color7);
+    border-radius: 4px;
 }
 
 #workspaces button.active {

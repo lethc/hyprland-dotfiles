@@ -26,8 +26,18 @@
         "all-outputs": true,
         "format-icons": {
             "A:Web": "",
-            "B:Term": "󱓹",
-            "C:Editor": "󰞇",
+            "B:Editor": "󰞇",
+            "C:Term": "󱓹",
+            "D:Book": "",
+            "E:Multimedia": "",
+            "F:System": "󱉏",
+            "G:Office": "",
+            "H:Other": "󰨈"
+        },
+        "persistent-workspaces": {
+            "A:Web": "",
+            "B:Editor": "󰞇",
+            "C:Term": "󱓹",
             "D:Book": "",
             "E:Multimedia": "",
             "F:System": "󱉏",
@@ -48,6 +58,7 @@
         },
         "modules": [
             "custom/dmark",
+            "group/window_management",
             "group/gcpu",
             "memory",
             "disk"
@@ -56,6 +67,57 @@
     "custom/dmark": {
         "format": "",
         "tooltip": false
+    },
+    "group/window_management": {
+        "orientation": "inherit",
+        "modules": [
+            "group/buttons"
+        ]
+    },
+    "group/buttons": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/bfloat",
+            "custom/bcentre",
+            "custom/bfullmax",
+            "custom/bmax",
+            "custom/bclose",
+            "custom/bfloatall"
+        ]
+    },
+    "custom/bfloat": {
+        "format": "",
+        "on-click": "hyprctl dispatch togglefloating",
+        "tooltip-format": "Toggle floating"
+    },
+    "custom/bcentre": {
+        "format": "",
+        "on-click": "hyprctl dispatch resizeactive exact 1480 750; hyprctl dispatch centerwindow 1",
+        "tooltip-format": "Centre window"
+    },
+    "custom/bmax": {
+        "format": "",
+        "on-click": "hyprctl dispatch fullscreen 1",
+        "tooltip-format": "Toggle maximized"
+    },
+    "custom/bfullmax": {
+        "format": "",
+        "on-click": "hyprctl dispatch fullscreen 2",
+        "tooltip-format": "Toggle full-maximized"
+    },
+    "custom/bclose": {
+        "format": "",
+        "on-click": "hyprctl dispatch killactive",
+        "tooltip-format": "Close Window"
+    },
+    "custom/bfloatall": {
+        "format": "",
+        "on-click": "~/.config/hypr/scripts/default/float_window_toggle",
+        "tooltip-format": "Toggle all floating windows"
     },
     "group/gcpu": {
         "orientation": "inherit",
@@ -167,7 +229,7 @@
         "modules": [
             "group/audio",
             "custom/anime",
-            "custom/monitor",
+            //"custom/monitor",
             "custom/notifications"
         ]
     },
@@ -227,12 +289,12 @@
         "tooltip": "Toggle laptop/monitor"
     },
     "custom/anime": {
-        "format": " ",
+        "format": "󱜙",
         "on-click": "curd -rofi -image-preview",
-        "tooltip": "Open rofi to watch anime"
+        "tooltip-format": "Open rofi to watch anime"
     },
     "custom/notifications": {
-        "format": "󰂞 ",
+        "format": "󰂞",
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -t -sw",
         "tooltip": false
