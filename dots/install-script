@@ -81,7 +81,7 @@ yay -S  jq gojq-bin bc pamixer grim grimblast
 # yay -S  papirus-icon-theme 
 yay -S  playerctl 
 yay -S  slurp socat swappy nm-connection-editor blueberry acpi 
-yay -S  nwg-look
+yay -S  nwg-look nwg-displays
 
 # Adding plugins
 hyprpm update
