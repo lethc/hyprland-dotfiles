@@ -49,10 +49,10 @@ element-icon, element-text, scrollbar {
 }
 
 window {
-  location : northwest;
+  location : southwest;
   width    : 800px;
-  x-offset : 4px;
-  y-offset : 10px;
+  x-offset : 10px;
+  y-offset : -10px;
 
   background-color: @bg1;
   border: 1px;
