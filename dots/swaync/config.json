@@ -1,26 +1,19 @@
 {
   "$schema": "/etc/xdg/swaync/configSchema.json",
-  "positionX": "left",
+  "positionX": "right",
   "positionY": "top",
- "cssPriority": "user",
-
-  "control-center-width": 380,
-  "control-center-height": 960, 
-  "control-center-margin-top": 2,
+  "cssPriority": "user",
   "control-center-margin-bottom": 2,
   "control-center-margin-right": 1,
   "control-center-margin-left": 0,
-
   "notification-window-width": 400,
   "notification-icon-size": 48,
   "notification-body-image-height": 160,
   "notification-body-image-width": 200,
-
   "timeout": 8,
   "timeout-low": 6,
   "timeout-critical": 8,
-  
-  "fit-to-screen": false,
+  "fit-to-screen": true,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
   "transition-time": 200,
@@ -67,7 +60,7 @@
     },
     "volume": {
       "label": "󰕾",
-        "show-per-app": true
+      "show-per-app": true
     },
     "buttons-grid": {
       "actions": [
@@ -91,9 +84,7 @@
           "label": "󰏘",
           "command": "nwg-look"
         }
-        
       ]
     }
   }
 }
-
