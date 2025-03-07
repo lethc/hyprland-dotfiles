@@ -8,7 +8,6 @@ focus_mode() {
     hyprctl keyword general:border_size 1
     hyprctl keyword general:gaps_in 0
     hyprctl keyword general:gaps_out 0
-    hyprctl keyword decoration:rounding 0
 }
 not_focus_mode() {
     hyprctl dispatch fullscreen 0 #bcz Hyprland cannot update the size of the screen automatically
@@ -19,7 +18,6 @@ not_focus_mode() {
     hyprctl keyword general:gaps_in 5
     hyprctl keyword general:gaps_out 10
     hyprctl keyword decoration:rounding 9
-    hyprctl keyword decoration:drop_shadow 1 # enable shadows on Hyprland
 }
 without_waybar() {
     hyprctl dispatch fullscreen 0
@@ -29,7 +27,6 @@ without_waybar() {
     hyprctl keyword general:border_size 1
     hyprctl keyword general:gaps_in 0
     hyprctl keyword general:gaps_out 0
-    hyprctl keyword decoration:rounding 0
     pkill waybar &
 }
 
