@@ -17,12 +17,14 @@
     "custom/os_button": {
         "format": "󱗆",
         "on-click": "rofi -show drun",
+        "on-click-right": "pkill rofi",
         "tooltip": false
     },
     "hyprland/workspaces": {
         "icon-size": 32,
         "spacing": 16,
         "format": "{icon}",
+        "all-outputs": true,
         "format-icons": {
             "A:Web": "  Web",
             "B:Editor": "󰞇  Editor",
@@ -41,6 +43,7 @@
         "icon-size": 28,
         "spacing": 3,
         "on-click-middle": "close",
+        "on-click-right": "hyprctl dispatch setfloating && hyprctl dispatch resizeactive exact 1480 750; hyprctl dispatch centerwindow 1",
         "tooltip-format": "{title}",
         "ignore-list": [],
         "on-click": "activate"
@@ -73,24 +76,24 @@
             "transition-left-to-right": false
         },
         "modules": [
-            "custom/bfloat",
-            "custom/bfloatall",
-            "custom/bclose",
-            "custom/bfullmax",
+            // "custom/bfloat",
             "custom/bmax",
-            "custom/bcentre"
+            "custom/bclose",
+            "custom/bfloatall",
+            "custom/bfullmax"
+            // "custom/bcentre"
         ]
     },
-    "custom/bfloat": {
-        "format": "",
-        "on-click": "hyprctl dispatch togglefloating",
-        "tooltip-format": "Toggle floating"
-    },
-    "custom/bcentre": {
-        "format": "",
-        "on-click": "hyprctl dispatch resizeactive exact 1480 750; hyprctl dispatch centerwindow 1",
-        "tooltip-format": "Centre window"
-    },
+    // "custom/bfloat": {
+    //     "format": "",
+    //     "on-click": "hyprctl dispatch togglefloating && hyprctl dispatch resizeactive exact 1480 750; hyprctl dispatch centerwindow 1",
+    //     "tooltip-format": "Toggle floating"
+    // },
+    // "custom/bcentre": {
+    //     "format": "",
+    //     "on-click": "hyprctl dispatch resizeactive exact 1480 750; hyprctl dispatch centerwindow 1",
+    //     "tooltip-format": "Centre window"
+    // },
     "custom/bmax": {
         "format": "",
         "on-click": "hyprctl dispatch fullscreen 1",
