@@ -115,6 +115,7 @@ alias fr="fzf-rg"
 alias cl="clear"
 alias rbwu='rbw get "$(rbw ls | fzf)" --field=Username | wl-copy'
 alias rbwg='rbw get "$(rbw ls | fzf)" | wl-copy'
+alias fast='is-fast'
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
