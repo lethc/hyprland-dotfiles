@@ -9,7 +9,7 @@ mkdir ~/Documents/Library
 # cp "${HOME}/.config/hypr/dots/.scripts/.megabot" ~/Sync/
 
 # Python Debug in neovim
-mkdir ~/env/.virtualenvs
+mkdir -p ~/env/.virtualenvs
 cd ~/env/.virtualenvs
 python -m venv debugpy
 debugpy/bin/python -m pip install debugpy
@@ -22,6 +22,9 @@ echo "###################################"
 
 # ln -sf "${HOME}/.config/hypr/dots/ags" "${HOME}/.config"
 # echo "Ags linked"
+
+ln -sf "${HOME}/.config/hypr/dots/starship.toml" "${HOME}/.config"
+echo "starship linked"
 
 ln -sf "${HOME}/.config/hypr/dots/foot" "${HOME}/.config"
 echo "foot linked"
@@ -78,9 +81,6 @@ echo "tridactyl linked"
 
 ln -sf "${HOME}/.config/hypr/dots/imv" "${HOME}/.config"
 echo "imv linked"
-
-ln -sf "${HOME}/.config/hypr/dots/yazi" "${HOME}/.config"
-echo "yazi linked"
 
 mkdir ~/.local/bin
 ln -sf "${HOME}/.config/hypr/dots/.scripts/linkhandler" "${HOME}/.local/bin/"
@@ -149,15 +149,15 @@ echo "Waybar linked"
 ln -sf "${HOME}/.config/hypr/dots/swaync" "${HOME}/.config"
 echo "swaync linked"
 
-git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1 ~/Git/WhiteSur-gtk-theme
-cd "${HOME}/Git/WhiteSur-gtk-theme"
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1 ~/Downloads/Git/WhiteSur-gtk-theme
+cd "${HOME}/Downloads/Git/WhiteSur-gtk-theme"
 
 ./install.sh
 # For gtk4
 ./install.sh -l
 
-git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1 ~/Git/WhiteSur-icon-theme
-cd "${HOME}/Git/WhiteSur-icon-theme"
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1 ~/Downloads/Git/WhiteSur-icon-theme
+cd "${HOME}/Downloads/Git/WhiteSur-icon-theme"
 
 ./install.sh
 
@@ -165,8 +165,8 @@ cd "${HOME}/Git/WhiteSur-icon-theme"
 ln -sf "${HOME}/.config/hypr/dots/Kvantum" "${HOME}/.config"
 
 # Change the QT themes with an application like qt5ct or qt6ct
-git clone https://github.com/vinceliuice/MacSequoia-kde.git ~/Git/MacSequoia-kde
-cd ~/Git/MacSequoia-kde/Kvantum/MacSequoia/ && cp -r * ~/.config/Kvantum/
+git clone https://github.com/vinceliuice/MacSequoia-kde.git ~/Downloads/Git/MacSequoia-kde
+cd ~/Downloads/Git/MacSequoia-kde/Kvantum/MacSequoia/ && cp -r * ~/.config/Kvantum/
 echo "Kvantum theme linked"
 kvantummanager --set MacSequoiaDark
 

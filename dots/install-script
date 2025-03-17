@@ -72,10 +72,10 @@ echo "##  Installing Hyprland dependencies  ##"
 echo "########################################" 
 
 yay -S  kitty 
-yay -S  hyprland-git cpio
+yay -S  hyprland cpio meson cmake
 yay -S  hyprland-qtutils
-yay -S  xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk 
-yay -S  hyprlock-git hypridle-git hyprpicker-git
+yay -S  xdg-desktop-portal-hyprland xdg-desktop-portal-gtk 
+yay -S  hyprlock hypridle hyprpicker
 #yay -S  wofi dunst swayidle
 yay -S  jq gojq-bin bc pamixer grim grimblast
 # yay -S  papirus-icon-theme 
@@ -85,8 +85,10 @@ yay -S  nwg-look nwg-displays
 
 # Adding plugins
 hyprpm update
-# hyprpm add https://github.com/DreamMaoMao/hycov
-# hyprpm enable hycov
+hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm enable hyprbars
+hyprpm update
+hyprpm reload -n
 
 echo "#####################################"
 echo "##  Installing Pacman Applications ##"
@@ -94,7 +96,8 @@ echo "#####################################"
 
 # Installing fonts
 yay -S ttf-maple-beta ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd
-yay -S fzf wget vdhcoapp-bin github-cli
+yay -S vdhcoapp-bin
+yay -S fzf wget github-cli
 yay -S  lsix nodejs-readability-cli 
 # yay -S selectdefaultapplication-git 
 # yay -S megacmd
@@ -111,8 +114,10 @@ yay -S  firefox-tridactyl firefox-tridactyl-native-bin speech-dispatcher
 # yay -S  firefox-developer-edition 
 yay -S  ncdu dust duf baobab iftop yazi smile code-minimap
 
-# Install Yazi plugins
+ln -sf "${HOME}/.config/hypr/dots/yazi" "${HOME}/.config"
+echo "yazi linked"
 
+# Install Yazi plugins
 ya pack -a yazi-rs/plugins:smart-enter
 
 # yay -S  neovide-git
@@ -138,6 +143,7 @@ echo "######################################"
 echo "###### Installing frequent apps ######"
 echo "######################################"
 yay -S  foot-git foot-terminfo-git zoxide bemenu-wayland ueberzugpp xournalpp 
+yay -S starthip
 # yay -S  kdeconnect
 # yay -S youtube-tui-git 
 yay -S youtube-local
@@ -146,12 +152,13 @@ yay -S  w3m lynx httrack
 # yay -S  vlc 
 yay -S  obsidian 
 yay -S  tori-bin python-pytube 
-yay -S  sioyek anki-bin kooha
+yay -S  sioyek 
+yay -S  anki-bin kooha
 # yay -S  amberol
 yay -S  resources
 # yay -S  morgen-bin
 pipx install wisdom-tree
-yay -S zen-browser
+yay -S zen-browser-bin
 yay -S pcloud-drive
 yay -S freetube-bin
 
