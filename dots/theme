@@ -170,6 +170,8 @@ cd ~/Downloads/Git/MacSequoia-kde/Kvantum/MacSequoia/ && cp -r * ~/.config/Kvant
 echo "Kvantum theme linked"
 kvantummanager --set MacSequoiaDark
 
+git clone https://github.com/vinceliuice/WhiteSur-kde.git ~/Downloads/Git/WhiteSur-kde
+
 # Force electron applications to use Wayland with the following files
 
 ln -sf "${HOME}/.config/hypr/dots/electron-flags.conf" "${HOME}/.config"
