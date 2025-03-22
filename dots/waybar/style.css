@@ -8,6 +8,7 @@
 @define-color bg_hover rgba(200, 200, 200, 0.3);
 /*base background color of active elements */
 @define-color bg_active rgba(100, 100, 100, 0.5);
+@define-color bg_active_red rgba(160, 100, 100, 0.5);
 
 /*base border color*/
 @define-color border_main rgba(255, 255, 255, 0.2);
@@ -141,6 +142,11 @@ tooltip label {
     border-bottom: 3px solid white;
     background: @bg_hover;
     color: @content_main;
+}
+
+#taskbar button.maximized {
+    border-bottom: 3px solid red;
+    background: @bg_active_red;
 }
 
 #cpu,
