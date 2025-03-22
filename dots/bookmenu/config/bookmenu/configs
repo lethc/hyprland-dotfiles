@@ -5,6 +5,7 @@ hyprland_window_rules   ::~/.config/hypr/configs/window_rules.conf
 hyprland_env            ::~/.config/hypr/configs/env.conf
 hyprland_theme          ::~/.config/hypr/dots/theme
 hyprland_install        ::~/.config/hypr/dots/install-script
+hyprlock                ::~/.config/hypr/hyprlock.conf
 ags                     ::~/.config/ags/config.js
 bookmenu                ::~/.config/bookmenu/config
 bookmenu_bookmarks      ::~/Home/Scripts/my_bookmarks
