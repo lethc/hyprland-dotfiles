@@ -164,3 +164,4 @@ application/x-extension-shtml=zen.desktop
 application/x-extension-xhtml=zen.desktop
 application/x-extension-xht=zen.desktop
 x-scheme-handler/routine=Routine.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
