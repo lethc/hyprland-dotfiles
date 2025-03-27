@@ -61,8 +61,9 @@ export FZF_CTRL_T_COMMAND='rg --files --hidden -g "!.git"'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..|clear|cl)"
 
 #rust Set UP
-. "$HOME/.cargo/env"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# . "$HOME/.cargo/env"
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 ######  Aliases  ######
 alias ll='lsd -lh --group-dirs=first'
