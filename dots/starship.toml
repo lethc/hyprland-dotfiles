@@ -8,9 +8,9 @@
 # # No line-break between shell prompts
 # [line_break]
 # disabled = true# # ~/.config/starship.toml
-#
+# [](fg:#151515)\
 format = """\
-[](fg:#151515)\
+[  ](fg:#151515 bg:#151515)\
 $username\
 [](fg:#151515 bg:#191919)\
 $directory\
