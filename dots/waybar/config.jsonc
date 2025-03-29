@@ -34,9 +34,9 @@
             "F:System": "󱉏  System",
             "G:Office": "  Office",
             "H:Other": "󰨈  Other"
-        }
-        // "on-scroll-up": "hyprctl dispatch workspace r+1"
-        // "on-scroll-down": "hyprctl dispatch workspace r-1"
+        },
+        "on-scroll-up": "~/.config/hypr/dots/.scripts/moveworkspace.sh up",
+        "on-scroll-down": "~/.config/hypr/dots/.scripts/moveworkspace.sh down"
     },
     "wlr/taskbar": {
         "format": "{icon} {title:.17}",
