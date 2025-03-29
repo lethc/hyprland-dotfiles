@@ -166,18 +166,28 @@ keybinds clear-defaults=true {
         bind "Ctrl q" { CloseTab; }
         bind "Alt q" { CloseFocus; }
         bind "Alt r" { SwitchToMode "resize"; }
+        bind "Ctrl s" { SwitchToMode "scroll"; }
+        bind "Ctrl x" { SwitchToMode "session"; }
         // bind "Alt s" {
-        //     LaunchOrFocusPlugin "zellij:session-manager" {
-        //         move_to_focused_tab true
-        //     }
-        //     SwitchToMode "normal"
-        // }
-        bind "Alt s" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-choose-tree.wasm" {
-                floating true
-                move_to_focused_tab true
-                show_plugins false
-            }; SwitchToMode "Locked";
+        //       Run "ls" "-l" {
+        //           cwd "/home/LostOnTheSeas/"
+        //           direction "Down"
+        //       }
+        //   }
+        bind "Alt s" {
+            LaunchOrFocusPlugin "zellij:session-manager" {
+                move_to_focused_tab true;
+                floating false;
+            }
+            // ToggleFloatingPanes;
+            SwitchToMode "normal"
         }
+        // bind "Alt s" { LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-choose-tree.wasm" {
+        //         floating true
+        //         move_to_focused_tab true
+        //         show_plugins false
+        //     }; SwitchToMode "Locked";
+        // }
         bind "Alt t" { NewTab; }
         bind "Alt w" { ToggleFloatingPanes; }
     }
@@ -195,14 +205,13 @@ keybinds clear-defaults=true {
         bind "Ctrl j" { MoveFocus "down"; }
         bind "Ctrl k" { MoveFocus "up"; }
         bind "Ctrl l" { MoveFocus "right"; }
-        bind "Ctrl s" { SwitchToMode "scroll"; }
     }
     shared_except "locked" "move" {
         bind "Ctrl o" { SwitchToMode "move"; }
     }
-    shared_except "locked" "session" {
-        bind "Ctrl x" { SwitchToMode "session"; }
-    }
+    // shared_except "locked" "session" {
+    //     bind "Ctrl x" { SwitchToMode "session"; }
+    // }
     shared_except "normal" "locked" "entersearch" {
         bind "enter" { SwitchToMode "normal"; }
     }
@@ -580,6 +589,13 @@ themes {
     }
 }
 
+// Choose the theme that is specified in the themes section.
+// Default: default
+
+// bluish
+// theme "iceberg-dark"
+theme "iceberg-light"
+
 // Plugin aliases - can be used to change the implementation of Zellij
 // changing these requires a restart to take effect
 plugins {
@@ -626,14 +642,7 @@ ui {
 //   - false (Default)
 // 
 simplified_ui false
- 
-// Choose the theme that is specified in the themes section.
-// Default: default
-
-// bluish
-// theme "iceberg-dark"
-theme "vesper"
- 
+  
 // Choose the base input mode of zellij.
 // Default: normal
 // 
