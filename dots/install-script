@@ -3,6 +3,7 @@
 echo "######################################"
 echo "####  1.  Enable the AUR helper   ####"
 echo "######################################"
+# ASK
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -18,22 +19,29 @@ echo "###############################################"
 echo "#####   Installing Programming Languages  #####"
 echo "###############################################"
 
+# ASK
 yay -S dotnet-sdk jdk-lts jdk-lts-doc 
 # yay -S go ruby
 ###HERE
-yay -S  google-java-format-git
+# yay -S  google-java-format-git
+
+# ASKNormal
 yay -S  rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Install rustc compiler
+rustup install stable
 
 ### JAVASCRIPT RELATED
+# ASKN
 yay -S  nodejs npm 
 # yay -S  bun
 # curl -fsSL https://bun.sh/install | bash
 
 ### PYTHON RELATED
+# ASKN
 yay -S  python-pip python-pipx
 
 ### LUA RELATED
+# ASKN
 yay -S  lua51 luarocks
 
 echo "#############################################"
@@ -46,12 +54,13 @@ git clone https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim
 #sudo npm install neovim
 # npm install neovim
 #sudo npm install -g npm@9.6.2
-yay -S  shell-color-scripts-git hub
-yay -S  python-black prettier prettierd stylua ripgrep 
+# ASK
+yay -S  shell-color-scripts-git hub prettierd rar
+# ASKN
+yay -S  python-black prettier stylua ripgrep 
 yay -S  fd gzip cliphist unzip deno 
 yay -S  composer python-pynvim shfmt
 yay -S  yarn 
-yay -S  rar 
 # yay -S  xampp
 # issues
 # yay -S   #python-rpcq
@@ -65,23 +74,21 @@ sudo usermod --shell /usr/bin/zsh root
 echo "Change shell user"
 sudo usermod --shell /usr/bin/zsh $user
 
+# ASK
 yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions lsd bat zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git fzf-tab-git
 
 echo "########################################"
 echo "##  Installing Hyprland dependencies  ##"
 echo "########################################" 
 
-yay -S  kitty 
-yay -S  hyprland cpio meson cmake
-yay -S  hyprland-qtutils
-yay -S  xdg-desktop-portal-hyprland xdg-desktop-portal-gtk 
-yay -S  hyprlock hypridle hyprpicker
+# ASKN
+yay -S  kitty hyprland cpio meson cmake hyprland-qtutils xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprlock hypridle hyprpicker
+yay -S  jq bc pamixer grim playerctl slurp socat swappy nm-connection-editor blueberry acpi nwg-look nwg-displays
 #yay -S  wofi dunst swayidle
-yay -S  jq gojq-bin bc pamixer grim grimblast
-# yay -S  papirus-icon-theme 
-yay -S  playerctl 
-yay -S  slurp socat swappy nm-connection-editor blueberry acpi 
-yay -S  nwg-look nwg-displays
+
+# ASK
+yay -S gojq-bin grimblast
+# yay -S  papirus-icon-theme
 
 # Adding plugins
 hyprpm update
@@ -95,30 +102,32 @@ echo "##  Installing Pacman Applications ##"
 echo "#####################################"
 
 # Installing fonts
-yay -S ttf-maple-beta ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd
-yay -S vdhcoapp-bin
-yay -S fzf wget github-cli
-yay -S  lsix nodejs-readability-cli 
+# ASKN
+yay -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd
+yay -S fzf wget github-cli lsix rofi-wayland firefox-tridactyl speech-dispatcher ncdu dust duf baobab iftop yazi zoxide
+yay -S swaync wf-recorder wl-clip-persist swww gcolor3 nsxiv imv
+# ASK
+yay -S ttf-maple nodejs-readability-cli apple-fonts firefox-tridactyl-native-bin smile 
+yay -S bun-bin wayshot-bin vimv
+# OJO, issues
+yay -S code-minimap
+# AND YOU
+# yay -S vdhcoapp-bin
 # yay -S selectdefaultapplication-git 
 # yay -S megacmd
 # yay -S ranger-git
-yay -S   apple-fonts 
 # yay -S ttf-apple-emoji
 # yay -S noto-fonts-emoji
-###HERE
-yay -S rofi-wayland
-#yay -S   rofi-emoji
 #issues with
 #yay -S  searxng-git 
-yay -S  firefox-tridactyl firefox-tridactyl-native-bin speech-dispatcher
 # yay -S  firefox-developer-edition 
-yay -S  ncdu dust duf baobab iftop yazi smile code-minimap
 
 ln -sf "${HOME}/.config/hypr/dots/yazi" "${HOME}/.config"
 echo "yazi linked"
 
 # Install Yazi plugins
 ya pack -a yazi-rs/plugins:smart-enter
+ya pack -a josephschmitt/auto-layout
 
 # yay -S  neovide-git
 # yay -S  whitesur-icon-theme-git whitesur-kvantum-theme-git whitesur-cursor-theme-git 
@@ -127,63 +136,46 @@ ya pack -a yazi-rs/plugins:smart-enter
 # No eww anymore
 # yay -S   eww-wayland 
 # yay -S  aylurs-gtk-shell
-yay -S  bun-bin
 # yay -S  dart-sass
 # yay -S  inotify-tools
-yay -S  swaync
-# yay -S  swaylock-effects-git sway-audio-idle-inhibit-git 
-yay -S  wf-recorder 
-yay -S  wl-clip-persist-git
-yay -S  wayshot
-yay -S  swww
-yay -S  vimv
-yay -S  gcolor3
 
 echo "######################################"
 echo "###### Installing frequent apps ######"
 echo "######################################"
-yay -S  foot-git foot-terminfo-git zoxide bemenu-wayland ueberzugpp xournalpp 
-yay -S starthip
+# ASKN
+yay -S foot foot-terminfo ueberzugpp xournalpp starship
+yay -S w3m lynx httrack python-pytube obsidian kooha resources waybar tgpt
+# bemenu-wayland
 # yay -S  kdeconnect
 # yay -S youtube-tui-git 
-yay -S youtube-local
-yay -S  gtt-bin 
-yay -S  w3m lynx httrack 
-# yay -S  vlc 
-yay -S  obsidian 
-yay -S  tori-bin python-pytube 
-yay -S  sioyek 
-yay -S  anki-bin kooha
-# yay -S  amberol
-yay -S  resources
-# yay -S  morgen-bin
-pipx install wisdom-tree
-yay -S zen-browser-bin
-yay -S pcloud-drive
-yay -S freetube-bin
 
-yay -S  waybar
+# ASK
+yay -S  gtt-bin tori-bin anki-bin zen-browser-bin freetube-bin curd bluemail
+# yay -S youtube-local
+# yay -S  sioyek 
+# yay -S  amberol
+# yay -S  morgen-bin
+# yay -S pcloud-drive
+
 # WAYBAR modules
-yay -S aurutils-git
+# ASKN
 yay -S pacman-contrib
-# yay -S wl-screenrec
-yay -S wttrbar
-yay -S hyprshade
-yay -S tgpt
 yay -S power-profile
-# to watch anime
-yay -S curd 
+# ASK
+yay -S aurutils-git wttrbar hyprshade 
+# yay -S wl-screenrec
+
+pipx install wisdom-tree
 
 # Install nice clipboard manager
 # https://github.com/savedra1/clipse?tab=readme-ov-file#installation
 go install github.com/savedra1/clipse@v0.0.6 
 
-# cargo install bard-rs
-
 echo "########################################"
 echo "############ SDDM Theme  ###############"
 echo "########################################" 
-yay -S  sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2 nsxiv imv
+# ASKN
+yay -S  sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
 # yay -S  sddm-theme-corners-git
 
 echo "creating sddm.conf.d"
@@ -202,6 +194,10 @@ echo "theme setted correctly"
 echo "Installing FZF"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+echo "Enable bluetooth"
+sudo pacman -S bluez bluez-utils
+sudo systemctl enable bluetooth.service
 
 #### Installing Future Cursor
 # git clone https://github.com/yeyushengfan258/Future-cursors.git /tmp/Future-cursors
