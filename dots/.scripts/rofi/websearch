@@ -4,7 +4,9 @@
 declare -A search_engines=(
     ["g"]="https://www.google.com/search?q="
     ["b"]="https://www.bing.com/search?q="
+    ["br"]="https://search.brave.com/search?q="
     ["y"]="https://yandex.com/search/?text="
+    ["im"]="https://yandex.com/images/?text="
     ["d"]="https://duckduckgo.com/?q="
     ["rd"]="https://www.reddit.com/search?q="
     ["sp"]="https://www.startpage.com/do/search?query="
@@ -24,7 +26,9 @@ declare -A search_engines=(
 engine_choice=$(printf "%s\n" \
     "g    Google Search" \
     "b   Bing" \
+    "br  Brave" \
     "y   Yandex" \
+    "im  Yandex images" \
     "d   DuckDuckGo" \
     "rd   Reddit Search" \
     "sp   StartPage" \
