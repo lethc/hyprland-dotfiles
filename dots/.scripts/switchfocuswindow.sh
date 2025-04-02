@@ -10,14 +10,17 @@ else
         wspecialname=$(echo "$windowname" | awk -F':' '{print $2}')
         hyprctl dispatch togglespecialworkspace ${wspecialname}
         hyprctl dispatch workspace previous
+        hyprctl dispatch movecursortocorner 2
     else
         hyprctl dispatch focuscurrentorlast
+        hyprctl dispatch movecursortocorner 2
         windowname=$(hyprctl -j activewindow | jq -r '.workspace.name')
         # Hide scratchpad also if it was the last window before the current one
         if [[ "$windowname" == *"special"* ]]; then
             wspecialname=$(echo "$windowname" | awk -F':' '{print $2}')
             hyprctl dispatch togglespecialworkspace ${wspecialname}
             hyprctl dispatch workspace previous
+            hyprctl dispatch movecursortocorner 2
         else
             break
         fi
