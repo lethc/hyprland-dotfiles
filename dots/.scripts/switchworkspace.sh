@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# List of workspaces in order
+WORKSPACES=("A:Web" "B:Editor" "C:Term" "D:Book" "E:Multimedia" "F:System" "G:Office" "H:Other")
+
+# Get the current active workspace and monitor
+ACTIVE_WORKSPACE=$(hyprctl -j activeworkspace | jq -r '.name')
+ACTIVE_MONITOR=$(hyprctl -j activeworkspace | jq -r '.monitor')
+
+# Get list of workspaces with open windows on the same monitor
+ACTIVE_WORKSPACES=($(hyprctl -j workspaces | jq -r --arg MON "$ACTIVE_MONITOR" '.[] | select(.windows > 0 and .monitor == $MON) | .name'))
+
+# Find the index of the current workspace in the ordered list
+CURRENT_INDEX=-1
+for i in "${!WORKSPACES[@]}"; do
+    if [[ "${WORKSPACES[$i]}" == "$ACTIVE_WORKSPACE" ]]; then
+        CURRENT_INDEX=$i
+        break
+    fi
+done
+
+# Function to move up in alphabetical order
+move_up() {
+    for ((j = CURRENT_INDEX + 1; j < ${#WORKSPACES[@]}; j++)); do
+        if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${WORKSPACES[$j]} " ]]; then
+            hyprctl dispatch workspace name:"${WORKSPACES[$j]}"
+            exit 0
+        fi
+    done
+    for j in "${WORKSPACES[@]}"; do
+        if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${j} " ]]; then
+            hyprctl dispatch workspace name:"${j}"
+            exit 0
+        fi
+    done
+}
+
+# Function to move down in reverse alphabetical order
+move_down() {
+    for ((j = CURRENT_INDEX - 1; j >= 0; j--)); do
+        if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${WORKSPACES[$j]} " ]]; then
+            hyprctl dispatch workspace name:"${WORKSPACES[$j]}"
+            exit 0
+        fi
+    done
+    for ((j = ${#WORKSPACES[@]} - 1; j >= 0; j--)); do
+        if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${WORKSPACES[$j]} " ]]; then
+            hyprctl dispatch workspace name:"${WORKSPACES[$j]}"
+            exit 0
+        fi
+    done
+}
+
+# Handle command-line arguments
+case "$1" in
+    up) move_up ;;
+    down) move_down ;;
+    *) echo "Usage: $0 {up|down}" ; exit 1 ;;
+esac
