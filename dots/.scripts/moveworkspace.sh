@@ -1,44 +1,50 @@
 #!/usr/bin/env bash
 
+ACTIVEWORKSPACE=$(hyprctl -j activeworkspace | jq -r '.name')
+
+moveToWorkspace () {
+    local workspace_name=$1
+    hyprctl dispatch workspace name:$workspace_name
+}
+
 moveworkspace_up() {
-    if [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'A:Web' ]]; then
-        hyprctl dispatch workspace name:B:Editor
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'B:Editor' ]]; then
-        hyprctl dispatch workspace name:C:Term
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'C:Term' ]]; then
-        hyprctl dispatch workspace name:D:Book
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'D:Book' ]]; then
-        hyprctl dispatch workspace name:E:Multimedia
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'E:Multimedia' ]]; then
-        hyprctl dispatch workspace name:F:System
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'F:System' ]]; then
-        hyprctl dispatch workspace name:G:Office
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'G:Office' ]]; then
-        hyprctl dispatch workspace name:H:Other
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'H:Other' ]]; then
-        hyprctl dispatch workspace name:A:Web
+    if [[ $ACTIVEWORKSPACE == 'A:Web' ]]; then
+        moveToWorkspace B:Editor
+    elif [[ $ACTIVEWORKSPACE == 'B:Editor' ]]; then
+        moveToWorkspace C:Term
+    elif [[ $ACTIVEWORKSPACE == 'C:Term' ]]; then
+        moveToWorkspace D:Book
+    elif [[ $ACTIVEWORKSPACE == 'D:Book' ]]; then
+        moveToWorkspace E:Multimedia
+    elif [[ $ACTIVEWORKSPACE == 'E:Multimedia' ]]; then
+        moveToWorkspace F:System
+    elif [[ $ACTIVEWORKSPACE == 'F:System' ]]; then
+        moveToWorkspace G:Office
+    elif [[ $ACTIVEWORKSPACE == 'G:Office' ]]; then
+        moveToWorkspace H:Other
+    elif [[ $ACTIVEWORKSPACE == 'H:Other' ]]; then
+        moveToWorkspace A:Web
     fi
 }
 
 moveworkspace_down() {
-    if [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'A:Web' ]]; then
-        hyprctl dispatch workspace name:H:Other
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'H:Other' ]]; then
-        hyprctl dispatch workspace name:G:Office
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'G:Office' ]]; then
-        hyprctl dispatch workspace name:F:System
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'F:System' ]]; then
-        hyprctl dispatch workspace name:E:Multimedia
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'E:Multimedia' ]]; then
-        hyprctl dispatch workspace name:D:Book
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'D:Book' ]]; then
-        hyprctl dispatch workspace name:C:Term
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'C:Term' ]]; then
-        hyprctl dispatch workspace name:B:Editor
-    elif [[ $(hyprctl -j activeworkspace | jq -r '.name') == 'B:Editor' ]]; then
-        hyprctl dispatch workspace name:A:Web
+    if [[ $ACTIVEWORKSPACE == 'H:Other' ]]; then
+        moveToWorkspace G:Office
+    elif [[ $ACTIVEWORKSPACE == 'G:Office' ]]; then
+        moveToWorkspace F:System
+    elif [[ $ACTIVEWORKSPACE == 'F:System' ]]; then
+        moveToWorkspace E:Multimedia
+    elif [[ $ACTIVEWORKSPACE == 'E:Multimedia' ]]; then
+        moveToWorkspace D:Book
+    elif [[ $ACTIVEWORKSPACE == 'D:Book' ]]; then
+        moveToWorkspace C:Term
+    elif [[ $ACTIVEWORKSPACE == 'C:Term' ]]; then
+        moveToWorkspace B:Editor
+    elif [[ $ACTIVEWORKSPACE == 'B:Editor' ]]; then
+        moveToWorkspace A:Web
+    elif [[ $ACTIVEWORKSPACE == 'A:Web' ]]; then
+        moveToWorkspace H:Other
     fi
-
 }
 
 case "$1" in
