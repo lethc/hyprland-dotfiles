@@ -29,6 +29,8 @@ yay -S dotnet-sdk jdk-lts jdk-lts-doc
 yay -S  rustup
 # Install rustc compiler
 rustup install stable
+# Install rust-analyzer (nvim LSP)
+yay -S rust-analyzer
 
 ### JAVASCRIPT RELATED
 # ASKN
