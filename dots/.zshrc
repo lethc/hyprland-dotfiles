@@ -54,6 +54,7 @@ export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH=~/bin:$PATH
 export PATH=~/.luarocks/bin:$PATH
 export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" #Biber requires this PATH to execute
 export BAT_THEME="TwoDark"
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git"'
@@ -371,3 +372,4 @@ function cdi {
 # source /home/Lummyn/.config/broot/launcher/bash/br
 # eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(starship init zsh)"
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
