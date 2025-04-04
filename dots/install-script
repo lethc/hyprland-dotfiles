@@ -109,7 +109,7 @@ yay -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd
 yay -S fzf wget github-cli lsix rofi-wayland firefox-tridactyl speech-dispatcher ncdu dust duf baobab iftop yazi zoxide
 yay -S swaync wf-recorder wl-clip-persist swww gcolor3 nsxiv imv
 # ASK
-yay -S ttf-maple nodejs-readability-cli apple-fonts firefox-tridactyl-native-bin smile 
+yay -S ttf-maple nodejs-readability-cli firefox-tridactyl-native-bin smile ttf-misans apple-fonts
 yay -S bun-bin wayshot-bin vimv
 # OJO, issues
 yay -S code-minimap
