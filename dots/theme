@@ -97,6 +97,9 @@ echo "qt cursor config created"
 ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/fzj" "${HOME}/.local/bin/"
 echo "FZJ linked"
 
+ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/zs" "${HOME}/.local/bin/"
+echo "zs linked"
+
 ln -sf "${HOME}/.config/hypr/dots/bat" "${HOME}/.config"
 echo "bat theme"
 
@@ -117,8 +120,8 @@ echo "SDDM theme linked"
 ln -sf "${HOME}/.config/hypr/dots/bookmenu/config/bookmenu/" "${HOME}/.config"
 echo "Bookmenu configuration linked"
 
-ln -sf "${HOME}/.config/hypr/dots/.scripts/bemenu-theming" "${HOME}/.local/bin/"
-echo "Bemenu Theme linked"
+# ln -sf "${HOME}/.config/hypr/dots/.scripts/bemenu-theming" "${HOME}/.local/bin/"
+# echo "Bemenu Theme linked"
 
 ln -sf "${HOME}/.config/hypr/dots/xdg-desktop-portal" "${HOME}/.config"
 echo "xdg-desktop-portal config linked"
@@ -159,6 +162,10 @@ cd "${HOME}/Downloads/Git/WhiteSur-gtk-theme"
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1 ~/Downloads/Git/WhiteSur-icon-theme
 cd "${HOME}/Downloads/Git/WhiteSur-icon-theme"
 
+./install.sh
+
+git clone https://github.com/yeyushengfan258/Reversal-icon-theme.git ~/Downloads/Git/Reversal-icon-theme
+cd "${HOME}/Downloads/Git/Reversal-icon-theme"
 ./install.sh
 
 # For qt applications
