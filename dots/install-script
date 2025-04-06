@@ -78,8 +78,6 @@ ln -sf "${HOME}/.config/hypr/dots/newsboat" "${HOME}/.config"
 echo "Newsboat linked"
 ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/fzj" "${HOME}/.local/bin/"
 echo "FZJ linked"
-ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/zs" "${HOME}/.local/bin/"
-echo "zs linked"
 ln -sf "${HOME}/.config/hypr/dots/bat" "${HOME}/.config"
 echo "bat theme"
 ln -sf "${HOME}/.config/hypr/dots/bookmenu/config/bookmenu/" "${HOME}/.config"
@@ -98,6 +96,8 @@ echo "########################################"
 
 sudo cp -r "${HOME}/.config/hypr/dots/sddm-theme/corners" /usr/share/sddm/themes
 echo "SDDM theme linked"
+sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/zs" "/usr/bin/"
+echo "zs linked"
 
 # ASKN
 yay -S  sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
