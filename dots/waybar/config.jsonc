@@ -26,21 +26,21 @@
         "format": "{icon}",
         "all-outputs": false,
         "format-icons": {
-            "A:Web": "  Web",
-            "B:Editor": "󰞇  Editor",
-            "C:Term": "󱓹  Term",
-            "D:Book": "  Book",
-            "E:Multimedia": "  Multimedia",
-            "F:System": "󱉏  System",
-            "G:Office": "  Office",
-            "H:Other": "󰨈  Other"
+            "A:Web": "  Web ",
+            "B:Editor": " 󰞇 Editor ",
+            "C:Term": " 󱓹 Term ",
+            "D:Book": "  Book ",
+            "E:Multimedia": "  Multimedia ",
+            "F:System": " 󱉏 System ",
+            "G:Office": "  Office ",
+            "H:Other": " 󰨈 Other "
         },
-        "on-scroll-up": "~/.config/hypr/dots/.scripts/moveworkspace.sh up",
-        "on-scroll-down": "~/.config/hypr/dots/.scripts/moveworkspace.sh down"
+        "on-scroll-up": "~/.config/hypr/dots/.scripts/moveworkspace2.sh up",
+        "on-scroll-down": "~/.config/hypr/dots/.scripts/moveworkspace2.sh down"
     },
     "wlr/taskbar": {
         "format": "{icon} {title:.17}",
-        "active-first": true,
+        "active-first": false,
         "icon-size": 28,
         "spacing": 3,
         "on-click-middle": "close",
