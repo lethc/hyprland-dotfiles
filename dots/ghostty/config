@@ -1,0 +1,50 @@
+font-family = "VictorMono Nerd Font"
+font-family-bold = "Fira Code Nerd Font"
+font-family-italic = "VictorMono Nerd Font"
+font-family-bold-italic = "Maple Mono"
+font-style-bold = "Bold"
+font-style-italic = "Bold Italic"
+font-style-bold-italic = "Bold Italic"
+
+font-size = 12
+font-thicken = false
+
+grapheme-width-method = "unicode"
+
+adjust-cell-width = 0%
+adjust-cell-height = 30%
+
+palette = 0=#1e222a
+palette = 1=#e06c75
+palette = 2=#98c379
+palette = 3=#e5c07b
+palette = 4=#61afef
+palette = 5=#c678dd
+palette = 6=#56b6c2
+palette = 7=#dcdfe4
+palette = 8=#545862
+palette = 9=#e06c75
+palette = 10=#98c379
+palette = 11=#e5c07b
+palette = 12=#61afef
+palette = 13=#c678dd
+palette = 14=#56b6c2
+palette = 15=#ffffff
+background = 1e222a
+foreground = dcdfe4
+cursor-color = e5c07b
+selection-background = 405060
+selection-foreground = dcdfe4
+selection-invert-fg-bg = true
+
+cursor-style = "bar"
+cursor-style-blink = true
+scrollback-limit = 20000
+window-padding-x = 10
+window-padding-y = 5
+window-save-state = "always"
+
+# background-opacity = 0.8
+# background-blur-radius = 25
+
+keybind = global:alt+grave_accent=toggle_quick_terminal
