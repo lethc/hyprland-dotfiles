@@ -118,6 +118,7 @@ alias cl="clear"
 alias rbwu='rbw get "$(rbw ls | fzf)" --field=Username | wl-copy'
 alias rbwg='rbw get "$(rbw ls | fzf)" | wl-copy'
 alias fast='is-fast'
+alias cm='camb'
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -200,7 +201,7 @@ zstyle ':fzf-tab:complete:cd*' fzf-preview 'ls --color $realpath'
 
 export FZF_DEFAULT_OPTS='
 --color=bg+:#3B4252,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1
---bind alt-j:down,alt-k:up
+--bind alt-j:down,alt-k:up,ctrl-u:preview-up,ctrl-d:preview-down
 '
 
 # FZF colourscheme
