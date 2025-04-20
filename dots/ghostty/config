@@ -1,3 +1,4 @@
+command = /usr/bin/zsh
 font-family = "VictorMono Nerd Font"
 font-family-bold = "Fira Code Nerd Font"
 font-family-italic = "VictorMono Nerd Font"
