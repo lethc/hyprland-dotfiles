@@ -20,7 +20,7 @@ cd yay-bin
 makepkg -si
 
 yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git fzf-tab-git
-yay -S clipse-bin blueberry-wayland 
+yay -S clipse-bin clipse-gui blueberry-wayland
 # When choosing Color scheme: it gotta be Breeze Dark (KColorScheme) to work Properly
 yay -S qt6ct-kde
 #yay -S qt5ct-kde 
@@ -45,6 +45,8 @@ ln -sf "${HOME}/.config/hypr/dots/mpv" "${HOME}/.config"
 echo "mpv linked"
 ln -sf "${HOME}/.config/hypr/dots/foot" "${HOME}/.config"
 echo "foot linked"
+ln -sf "${HOME}/.config/hypr/dots/ghostty" "${HOME}/.config"
+echo "ghostty linked"
 ln -sf "${HOME}/.config/hypr/dots/kitty" "${HOME}/.config"
 echo "kitty linked"
 ln -sf "${HOME}/.config/hypr/dots/waybar" "${HOME}/.config"
