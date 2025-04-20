@@ -7,20 +7,23 @@ echo "######################################"
 mkdir ~/Home
 mkdir ~/Documents/Library
 mkdir ~/.local/bin
+mkdir ~/Download/Git
+cd ~/Download/Git
 
 # ASKN
-yay -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty starship waybar swaync fzf zoxide lsd bat
-yay -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
+sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty starship waybar swaync fzf zoxide lsd bat
+sudo pacman -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
 # ASK
 git clone https://aur.archlinux.org/yay-bin.git
-cd yay
+cd yay-bin
 makepkg -si
 
 yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git fzf-tab-git
 yay -S clipse-bin blueberry-wayland 
 # When choosing Color scheme: it gotta be Breeze Dark (KColorScheme) to work Properly
-yay -S qt5ct-kde qt6ct-kde
+yay -S qt6ct-kde
+#yay -S qt5ct-kde 
 
 # If Open with in Dolphin still doesn't work
 # ln -s /etc/xdg/menus/plasma-applications.menu /etc/xdg/menus/applications.menu
@@ -56,8 +59,8 @@ ln -sf "${HOME}/.config/hypr/dots/.gitconfig" "${HOME}"
 echo ".gitconfig linked"
 ln -sf "${HOME}/.config/hypr/dots/.inputrc" "${HOME}"
 echo ".inputrc linked"
-ln -sf "${HOME}/.config/hypr/dots/fcitx5" "${HOME}/.config"
-echo "fcitx5 linked"
+#ln -sf "${HOME}/.config/hypr/dots/fcitx5" "${HOME}/.config"
+#echo "fcitx5 linked"
 ln -sf "${HOME}/.config/hypr/dots/.zshrc" "${HOME}"
 echo ".zshrc linked"
 ln -sf "${HOME}/.config/hypr/dots/xdg-desktop-portal" "${HOME}/.config"
