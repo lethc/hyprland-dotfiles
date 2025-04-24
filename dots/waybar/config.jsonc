@@ -59,11 +59,20 @@
         //"pulseaudio",
         "group/audio",
         "custom/notifications",
+        "custom/sunset",
         "network",
         "battery",
         // "hyprland/language",
         "clock"
     ],
+    "custom/sunset": {
+        "format": "󰮔 ",
+        "on-click": "hyprctl hyprsunset temperature 3500", // Enable blue-light-filter
+        "on-click-right": "hyprctl hyprsunset identity", // Disable blue-light-filter
+        "on-scroll-up": "hyprctl hyprsunset gamma +10",
+        "on-scroll-down": "hyprctl hyprsunset gamma -10",
+        "tooltip": false
+    },
     "group/window_management": {
         "orientation": "inherit",
         "modules": [

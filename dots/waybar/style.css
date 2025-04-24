@@ -174,11 +174,13 @@ tooltip label {
     /* background: alpha(darker(@active), 0.3); */
 }
 
+#custom-sunset,
 #custom-notifications {
     padding-left: 4px;
     padding-right: 4px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+#custom-sunset:hover,
 #custom-notifications:hover {
     background: @bg_hover;
     border-radius: 4px;
