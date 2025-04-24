@@ -4,10 +4,12 @@ set window-title-home-tilde true
 set statusbar-home-tilde true
 set adjust-open "best-fit"
 set adjust-open width
-set recolor false
 set recolor-keephue true
 # set guioptions "v"
 set guioptions "s"
+
+# Transparency and blur
+set recolor true
 
 # Search
 set incremental-search true
@@ -61,3 +63,19 @@ set font "Fira Code Nerd Font 11"
 
 # Colors
 include colors
+
+# background colour
+# set default-bg "#162b30"
+
+# text colour
+set default-fg "#f8f8f2"
+
+# text highlight colour
+set highlight-color "#44475a"
+set highlight-active-color "#6272a4"
+
+# page background colour
+# set recolor-lightcolor "#162b30"
+
+# text colour
+set recolor-darkcolor "#f8f8f2"
