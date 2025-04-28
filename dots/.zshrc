@@ -113,6 +113,7 @@ alias zl="fzj"
 alias gi="gitui"
 alias p="ping -c3 google.com"
 alias ff="fzf-lovely"
+alias ffm="fzf-audio"
 alias fr="fzf-rg"
 alias cl="clear"
 alias rbwu='rbw get "$(rbw ls | fzf)" --field=Username | wl-copy'
@@ -286,6 +287,31 @@ function fzf-lovely() {
 			nvim "$file"
 		done
 	fi
+}
+
+function fzf-audio() {
+    # Define audio file extensions
+    local audio_exts=("*.mp3" "*.wav" "*.flac" "*.ogg" "*.m4a" "*.aac" "*.wma" "*.opus" "*.mp4" "*.mkv" "*.webm")
+
+    if [ "$1" = "h" ]; then
+        # Hidden mode (using nvim)
+        rg --files --hidden -g "!.git" "${audio_exts[@]/#/-g}" | \
+            fzf -m --reverse --preview-window down:20 --preview '
+                echo "Audio File: {}"
+                mediainfo {} 2>/dev/null || echo "No media info available"
+            ' | while read -r file; do
+            nvim "$file"
+        done
+    else
+        # Normal mode (using mpv)
+        rg --files --hidden -g "!.git" "${audio_exts[@]/#/-g}" | \
+            fzf -m --preview '
+                echo "Audio File: {}"
+                mediainfo {} 2>/dev/null || echo "No media info available"
+            ' | while read -r file; do
+            mpv "$file"
+        done
+    fi
 }
 function fzf-rg() {
 	rm -f /tmp/rg-fzf-{r,f}
