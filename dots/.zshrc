@@ -44,11 +44,14 @@ export PATH="$HOME/.local/bin":$PATH
 export PATH=/opt/android-sdk/platform-tools:$PATH
 export PATH=/opt/idea-IC-223.8214.52/bin/:$PATH
 export PATH="$HOME/.config/composer/vendor/bin":$PATH
+export JAVA_HOME=$(ls -d /lib/jvm/java-* | sort -V | tail -n 1)
+# export PATH="$JAVA_HOME/bin:$PATH" # Useful if a directory has spaces in its name
+export PATH="$JAVA_HOME/bin":$PATH
 # export PATH=/opt/apache-maven-3.8.7/bin:$PATH
 export PATH_TO_FX=path/to/javafx-sdk-20/lib
 # export PATH=/home/lummyn/Modules/javafx-sdk-20/lib/:$PATH
 # Add .NET Core SDK tools
-export PATH="$PATH:/home/lummyn/.dotnet/tools"
+export PATH="$PATH:$HOME/.dotnet/tools"
 # export PATH="$PATH:/opt/lampp/bin"
 export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH=~/bin:$PATH
@@ -133,6 +136,8 @@ source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
 setopt ignore_eof 
 # Use VIM keybindings even if our EDITOR is set to EMACS
 bindkey -v
+#bindkey -rM viins '^[h'  # ^[h = Alt+h
+#bindkey -rM viins '^[l'  # ^[l = Alt+l
 # Yank to the system clipboard
 function vi-yank-xclip {
 	zle vi-yank
