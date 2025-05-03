@@ -1,9 +1,7 @@
 #!/usr/bin/bash
 
 screenshot() {
-	temp_screenshot="/tmp/screenshot.png"
-
-	grimblast --notify --freeze copysave area $temp_screenshot
+    hyprshot -zm region --clipboard-only
 
 	# Open a swappy with the screenshot with swappy
 	# swappy -f $temp_screenshot &>/dev/null &
@@ -17,12 +15,9 @@ screenshot() {
 	fi
 }
 save_screenshot() {
-	save_temp_screenshot="${HOME}/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S.png')"
-
-	# save_temp_screenshot="${HOME}/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).png" # This overide the screenshot saved
-	# grimblast --notify copysave screen /tmp/full-screenshot.png && swappy -f /tmp/full-screenshot.png
-
-	grimblast --notify --freeze copysave area $save_temp_screenshot
+	# save_temp_screenshot="${HOME}/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S.png')"
+	save_temp_screenshot="$(date +'%Y-%m-%d_%H-%M-%S.png')"
+    hyprshot -zm region -f $save_temp_screenshot
 
 	exit_status=$?
 
@@ -31,7 +26,6 @@ save_screenshot() {
 	else
 		break
 	fi
-
 }
 ocr_screenshot() {
 	grim -g "$(slurp)" "tmp.png" && tesseract "tmp.png" - | wl-copy && rm "tmp.png"
