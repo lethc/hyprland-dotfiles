@@ -1,19 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 
-# 1st Start bluemail and wait for it to load so that you can kill the window
-# and continue using it in the background (I couldn't find a way to make this work like that
-# in its own)
-(bluemail &) && sleep 5 && hyprctl dispatch killactive && sleep 1
+# Will start bluemail and kill its window only once it's loaded (like a background process since it can't by itself)
+# Will also move the focus to the HDMI-A-1 monitor
 
+hyprctl dispatch focusmonitor HDMI-A-1
+(bluemail &) && sleep 5
+hyprctl dispatch movetoworkspace name:A:Web
+hyprctl dispatch movecursortocorner 2
+sleep 2 && hyprctl dispatch killactive && sleep 1
 if [ $? -eq 0 ]; then
-    # For some reason my mouse (the focus) starts on my second monitor, so I have to move it to the left
-    # hyprctl dispatch movefocus l
 
     # then Start dolphin in a predefined position and reposition the mouse cursor to the right top corner
     # (dolphin &) && sleep 3 && hyprctl dispatch movecursortocorner 2 && hyprctl dispatch movetoworkspace name:D:Book
-
     megasync &
+    sleep 3
+    hyprctl dispatch focusmonitor HDMI-A-1
 else
     notify-send "something went wrong"
-
 fi
