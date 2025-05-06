@@ -1,13 +1,11 @@
 hyprland                ::~/.config/hypr/hyprland.conf
-hyprland_exec           ::~/.config/hypr/configs/execs.conf
+hyprland_exec, autostart::~/.config/hypr/configs/autostart.conf
 hyprland_keybinds       ::~/.config/hypr/configs/keybinds.conf
-hyprland_window_rules   ::~/.config/hypr/configs/window_rules.conf
+hyprland_windowrules   ::~/.config/hypr/configs/windowrules.conf
 hyprland_env            ::~/.config/hypr/configs/env.conf
 hyprland_theme          ::~/.config/hypr/dots/theme
 hyprland_install        ::~/.config/hypr/dots/install-script
 hyprlock                ::~/.config/hypr/hyprlock.conf
-ags                     ::~/.config/ags/config.js
-bookmenu                ::~/.config/bookmenu/config
 bookmenu_bookmarks      ::~/Home/Scripts/my_bookmarks
 bookmenu_configs        ::~/.config/bookmenu/configs
 zshrc                   ::~/.zshrc
@@ -17,8 +15,6 @@ gitconf                 ::~/.gitconfig
 shprofile               ::~/.profile
 vimrc                   ::~/.config/vim/vimrc
 nvim                    ::~/.config/nvim/init.lua
-broot                   ::~/.config/broot/conf.toml
-dunst                   ::~/.config/dunst/dunstrc
 swaync                  ::~/.config/swaync/config.json
 gtk2rc                  ::~/.config/gtk-2.0/.gtkrc-2.0
 gtk3rc                  ::~/.config/gtk-3.0/gtk.css
