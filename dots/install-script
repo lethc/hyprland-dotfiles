@@ -67,8 +67,6 @@ ln -sf "${HOME}/.config/hypr/dots/.zshrc" "${HOME}"
 echo ".zshrc linked"
 ln -sf "${HOME}/.config/hypr/dots/xdg-desktop-portal" "${HOME}/.config"
 echo "xdg-desktop-portal config linked"
-ln -sf "${HOME}/.config/hypr/dots/rofi" "${HOME}/.config"
-echo "rofi linked"
 ln -sf "${HOME}/.config/hypr/dots/mimeapps.list" "${HOME}/.config"
 echo "mimeapps linked"
 
