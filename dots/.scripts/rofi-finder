@@ -1,8 +1,7 @@
 #!/bin/bash
 
-DIR="$HOME/.config/rofi/themes/"
-STYLE="easy"
-RASI="$DIR/${STYLE}/rofi/launcher.rasi"
+DIR="$HOME/.config/"
+RASI="$DIR/rofi/config.rasi"
 
 files=$(fd)
 history=$(cat ~/.files_history)
