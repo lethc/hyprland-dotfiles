@@ -85,7 +85,7 @@ ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/fzj" "${HOME}/.local/bin/"
 echo "FZJ linked"
 ln -sf "${HOME}/.config/hypr/dots/bat" "${HOME}/.config"
 echo "bat theme"
-ln -sf "${HOME}/.config/hypr/dots/bookmenu/config/bookmenu/" "${HOME}/.config"
+ln -sf "${HOME}/.config/hypr/dots/bookmenu/" "${HOME}/.config"
 echo "Bookmenu configuration linked"
 #echo "INSERT PASSWORD FOR LINK SCRIPTS"
 #sudo ln -sf "${HOME}/.config/hypr/dots/dunst/scripts/notification-sound" /usr/bin/
