@@ -5,7 +5,7 @@ session=$(zellij ls | \
           cut -c 8- | \
           cut -d " " -f1 | \
           sed -r 's/\x1B\[[0-9;]*[mK]//' | \
-          rofi -dmenu -i -p "󱊄 Select a session:")
+          rofi -dmenu -i -p "󱊄 Select a session:" -theme spotlight)
 
 # Check if a session was selected
 if [ -n "$session" ]; then

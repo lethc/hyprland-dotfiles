@@ -98,7 +98,7 @@ fi
 SelectFinder() {
   case "$FuzzyFinder" in
     rofi)
-      rofi -dmenu -i -p "$Prompt" -theme-str "window { width: 40%; }" \
+      rofi -dmenu -i -p "$Prompt" -theme spotlight -theme-str "window { width: 40%; }" \
         -theme-str "entry { font: '$Font'; }" ;;
     fzf)
       fzf ;;

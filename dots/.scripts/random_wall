@@ -9,7 +9,7 @@ LOCK_FILE="/tmp/hyprpaper_lock"
 
 # notify-send "The script is running"
 
-random_wallpaper_monitor() {
+random_wall_monitor() {
     # Function to acquire the lock
     acquire_lock() {
         (
@@ -44,9 +44,25 @@ random_wallpaper_monitor() {
 
 }
 
-random_wallpaper_all() {
+random_wall_all_start() {
     if [[ -d "$WALLPAPER_DIRECTORY" ]]; then
-        notify-send "Welcome aboard!"
+
+        sleep 2
+
+        hyprctl hyprpaper preload "$WALLPAPER"
+        hyprctl hyprpaper preload "$WALLPAPER2"
+        hyprctl hyprpaper wallpaper "eDP-1,$WALLPAPER"
+        hyprctl hyprpaper wallpaper "HDMI-A-1,$WALLPAPER2"
+
+        sleep 1
+
+        hyprctl hyprpaper unload unused
+    else
+        notify-send "Wallpaper directory not found"
+    fi
+}
+random_wall_all() {
+    if [[ -d "$WALLPAPER_DIRECTORY" ]]; then
 
         hyprctl hyprpaper preload "$WALLPAPER"
         hyprctl hyprpaper preload "$WALLPAPER2"
@@ -62,6 +78,7 @@ random_wallpaper_all() {
 }
 
 case "$1" in
-monitor) random_wallpaper_monitor ;;
-all) random_wallpaper_all ;;
+monitor) random_wall_monitor ;;
+start) random_wall_all_start ;;
+all) random_wall_all ;;
 esac
