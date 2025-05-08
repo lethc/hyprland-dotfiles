@@ -35,8 +35,8 @@
             "G:Office": "  Office ",
             "H:Other": " 󰨈 Other "
         },
-        "on-scroll-up": "~/.config/hypr/dots/.scripts/moveworkspace2.sh up",
-        "on-scroll-down": "~/.config/hypr/dots/.scripts/moveworkspace2.sh down"
+        "on-scroll-up": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace up",
+        "on-scroll-down": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace down"
     },
     "wlr/taskbar": {
         "format": "{icon} {title:.17}",
@@ -46,7 +46,9 @@
         "on-click-middle": "close",
         "on-click-right": "hyprctl dispatch setfloating && hyprctl dispatch resizeactive exact 1480 750; hyprctl dispatch centerwindow 1",
         "tooltip-format": "{title}",
-        "ignore-list": [],
+        "ignore-list": [
+            "foot"
+        ],
         "on-click": "activate"
     },
     "modules-center": [],
