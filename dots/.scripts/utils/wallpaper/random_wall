@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Variable of Wallpapers Directory
+source $HOME/.config/hypr/dots/.scripts/utils/wallpaper/variables/vars
+
+wallpaper_folder=$WALL_DIRECTORY
+
+# Go to Wallpaper Directory
+cd $wallpaper_folder
+
+# Create a variable to store the output.
+randomImage=""
+
+# Run the command.
+randomImage=$(shuf -n 1 -e *.jpg *.png *.jpeg)
+
+$wallpaper_scripts/variables/set_env background "$wallpaper_folder/$randomImage"
+
+# Change wallpaper
+swww img -t any --transition-bezier 0.0,0.0,1.0,1.0 --transition-duration .8 --transition-step 255 --transition-fps 60 $randomImage
+# swww img -t any --transition-bezier 0.0,0.0,1.0,1.0 --transition-duration .8 --transition-step 255 --transition-fps 60 $randomImage

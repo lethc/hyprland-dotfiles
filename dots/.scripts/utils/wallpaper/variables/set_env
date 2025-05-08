@@ -1,5 +1,6 @@
 #!/bin/bash
-save_location=~/.config/hypr/scripts/variables/temp
+
+source $HOME/.config/hypr/dots/.scripts/utils/wallpaper/variables/vars
 
 function setVar(){
     checkENVDir $2

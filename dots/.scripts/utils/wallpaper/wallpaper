@@ -1,7 +1,9 @@
 #!/bin/sh
 
+source $HOME/.config/hypr/dots/.scripts/utils/wallpaper/variables/vars
+
 # load $WALLPAPER_IMAGE environment variable
-source $HOME/.config/hypr/scripts/variables/load_envs
+source $LOAD_ENVS
 
 function load_wp(){
     swww img -t any --transition-bezier 0.0,0.0,1.0,1.0 --transition-duration .8 --transition-step 255 --transition-fps 60 $BACKGROUND_IMAGE

@@ -1,0 +1,16 @@
+#!/bin/bash
+# Directory variables
+hypr=$HOME/.config/hypr
+wallpaper_scripts=$hypr/dots/.scripts/utils/wallpaper
+my_wallpapers=$HOME/Pictures/Wallpapers
+
+# Set environment variables
+save_location=$wallpaper_scripts/variables/temp
+
+# Load environment variables
+temp_folder=$wallpaper_scripts/variables/temp
+load_envs=$wallpaper_scripts/variables/load_envs
+
+export WALL_DIRECTORY=$my_wallpapers
+export WALL_DIRECTORY_DEFAULT=$hypr/assets/Wallpapers_default
+export LOAD_ENVS=$load_envs
