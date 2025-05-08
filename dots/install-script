@@ -75,7 +75,7 @@ mkdir -p "${HOME}/.icons/default"
 touch "${HOME}/.icons/default/index.theme"
 echo "qt cursor config created"
 
-ln -sf "${HOME}/.config/hypr/dots/.scripts/linkhandler" "${HOME}/.local/bin/"
+ln -sf "${HOME}/.config/hypr/dots/.scripts/utils/linkhandler" "${HOME}/.local/bin/"
 echo "linkhandler mpv newsboat linked"
 ln -sf "${HOME}/.config/hypr/dots/newsboat" "${HOME}/.config"
 echo "Newsboat linked"
