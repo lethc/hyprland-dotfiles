@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if pgrep -x "waybar" > /dev/null; then
-    ~/.config/hypr/dots/.scripts/focus_mode focus && killall waybar && waybar &
-else
-    ~/.config/hypr/dots/.scripts/focus_mode focus && waybar & 
-fi

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [[ $(hyprctl -j activewindow | jq -r '.fullscreen') == true && $(hyprctl -j activewindow | jq -r '.fullscreenMode') == 1 ]]; then
-  hyprctl dispatch killactive; hyprctl dispatch fullscreen 1;
-elif [[ $(hyprctl -j activewindow | jq -r '.fullscreen') == true && $(hyprctl -j activewindow | jq -r '.fullscreenMode') == 0 ]]; then
-  hyprctl dispatch killactive; hyprctl dispatch fullscreen 0;
-else
-  hyprctl dispatch killactive;
-fi

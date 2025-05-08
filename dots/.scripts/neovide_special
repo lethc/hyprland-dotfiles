@@ -1,4 +1,0 @@
-#!/bin/bash
-
-neovide | sleep 1
-hyprctl dispatch movetoworkspacesilent special:editor
