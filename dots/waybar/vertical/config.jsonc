@@ -285,7 +285,7 @@
     },
     "custom/monitor": {
         "format": "󰍺 ",
-        "on-click": "$HOME/.config/hypr/dots/.scripts/monitors.sh",
+        "on-click": "$HOME/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
         "tooltip": "Toggle laptop/monitor"
     },
     "custom/anime": {
