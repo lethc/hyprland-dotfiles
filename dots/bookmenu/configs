@@ -38,3 +38,4 @@ zathura                 ::~/.config/zathura/zathurarc
 gitui                   ::~/.config/gitui/key_bindings.ron
 mimeapps                ::~/.config/mimeapps.list
 ghostty                 ::~/.config/ghostty/config
+rofi                    ::~/.config/rofi/config.rasi
