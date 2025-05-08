@@ -1,0 +1,18 @@
+#!/bin/bash
+
+batteryNotify() {
+    notify-send --app-name="battery" -i battery $(acpi | awk '{print $4, $4}')
+}
+
+DateNotify() {
+    notify-send --app-name="Time" -i view-calendar-time-spent "IT'S $(date +"%H:%M")" "$(date +"󰃰  %A %d %b")"
+}
+
+case "$1" in
+    battery)
+        batteryNotify
+        ;;
+    date)
+        DateNotify
+        ;;
+esac
