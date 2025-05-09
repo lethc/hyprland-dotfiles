@@ -1,5 +1,7 @@
 #!/bin/sh
 
+source $HOME/.config/hypr/dots/.scripts/variables
+
 ConfigFolder=${XDG_CONFIG_HOME:-"$HOME/.config"}/bookmenu
 
 VerticalLines=
@@ -98,7 +100,7 @@ fi
 SelectFinder() {
   case "$FuzzyFinder" in
     rofi)
-      rofi -dmenu -i -p "$Prompt" -theme spotlight -theme-str "window { width: 40%; }" \
+      rofi -dmenu -i -p "$Prompt" -theme $LAUNCHER_THEME -theme-str "window { width: 40%; }" \
         -theme-str "entry { font: '$Font'; }" ;;
     fzf)
       fzf ;;

@@ -1,7 +1,0 @@
-#!/bin/bash
-
-hypr=$HOME/.config/hypr
-my_wallpapers=$HOME/Pictures/Wallpapers
-
-export WALL_DIRECTORY=$my_wallpapers
-export WALL_DIRECTORY_DEFAULT=$hypr/assets/Wallpapers_default

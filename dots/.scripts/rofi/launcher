@@ -1,0 +1,16 @@
+#!/bin/bash
+
+source $HOME/.config/hypr/dots/.scripts/variables
+
+function main_launcher() {
+    rofi -show drun -theme $LAUNCHER_THEME
+}
+
+function window_launcher() {
+    rofi -theme-str "window { width: 50%; }" -theme $LAUNCHER_THEME -show window
+}
+
+case $1 in 
+    launcher) main_launcher ;;
+    window) window_launcher ;;
+esac

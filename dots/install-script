@@ -11,7 +11,7 @@ mkdir ~/Download/Git
 cd ~/Download/Git
 
 # ASKN
-sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty starship waybar swaync fzf zoxide lsd bat
+sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty starship waybar swaync fzf zoxide lsd bat swww
 sudo pacman -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
 # ASK
@@ -186,7 +186,6 @@ yay -S bun-bin vimv
 # yay -S pcloud-drive
 
 # AND YOU
-# yay -S swww
 # yay -S vdhcoapp-bin
 # yay -S selectdefaultapplication-git 
 # yay -S megacmd

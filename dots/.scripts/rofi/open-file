@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source $HOME/.config/hypr/dots/.scripts/variables
+
 # Search root
 root_path="$HOME"
 
@@ -11,7 +13,7 @@ no_files_prompt="No files here!"
 # Step 1: Select a folder
 file_path=$(find "$root_path" -maxdepth 5 -type d \( ! -regex '.*/\..*' \) | \
             sed 's|^'"$root_path"'/||' | sort | \
-            rofi -dmenu -i -p "$folder_prompt")
+            rofi -dmenu -i -p "$folder_prompt" -theme $LAUNCHER_THEME)
 
 if [[ -n $file_path ]]; then
     # Determine the search path
@@ -25,12 +27,12 @@ if [[ -n $file_path ]]; then
     total=$(find "$search_path" -maxdepth 1 -type f | wc -l)
     
     if [[ $total -eq 0 ]]; then
-        echo "$no_files_prompt" | rofi -dmenu -i -p "$folder_prompt"
+        echo "$no_files_prompt" | rofi -dmenu -i -p "$folder_prompt" -theme $LAUNCHER_THEME
     else
         # Step 3: Select a file
         file_name=$(find "$search_path" -maxdepth 1 -type f | \
                     awk -F'/' '{print $NF}' | \
-                    rofi -dmenu -i -p "$file_prompt")
+                    rofi -dmenu -i -p "$file_prompt" -theme $LAUNCHER_THEME)
         if [[ -n $file_name ]]; then
             # Open the selected file
             xdg-open "$search_path/$file_name"

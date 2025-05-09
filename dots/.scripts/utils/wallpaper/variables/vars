@@ -6,6 +6,7 @@ my_wallpapers=$HOME/Pictures/Wallpapers
 
 # Set environment variables
 save_location=$wallpaper_scripts/variables/temp
+set_env=$wallpaper_scripts/variables/set_env
 
 # Load environment variables
 temp_folder=$wallpaper_scripts/variables/temp

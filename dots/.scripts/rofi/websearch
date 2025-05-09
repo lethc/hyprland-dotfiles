@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source $HOME/.config/hypr/dots/.scripts/variables
+
 # Define search engines and their URLs
 declare -A search_engines=(
     ["g"]="https://www.google.com/search?q="
@@ -40,7 +42,7 @@ engine_choice=$(printf "%s\n" \
     "gteng Google Translate" \
     "aw   Arch Wiki" \
     "gh   GitHub Search" \
-    "yt   YouTube" | rofi -dmenu -i -p "Choose engine:")
+    "yt   YouTube" | rofi -dmenu -i -p "Choose engine:" -theme $LAUNCHER_THEME)
     # "rd   Reverso Context Dictionary" \
 
 # Extract the selected engine's key (first column)
@@ -52,7 +54,7 @@ if [[ -z "$engine_key" || -z "${search_engines[$engine_key]}" ]]; then
 fi
 
 # Prompt the user for the search query
-query=$(rofi -theme-str "window { width: 40%; }"  -dmenu -i -p "Enter search query:")
+query=$(rofi -theme-str "window { width: 40%; }"  -dmenu -i -p "Enter search query:" -theme $LAUNCHER_THEME)
 
 # Exit if the query is empty
 if [[ -z "$query" ]]; then

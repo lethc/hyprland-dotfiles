@@ -1,12 +1,13 @@
 #!/bin/sh
 
-source $HOME/.config/hypr/scripts/variables/wall_directory
+source $HOME/.config/hypr/dots/.scripts/utils/wallpaper/variables/vars
+source $HOME/.config/hypr/dots/.scripts/variables
 
 wallpaper_folder=$WALL_DIRECTORY
 
-wallpaper_location="$(ls $wallpaper_folder | rofi -dmenu -p "Select a wallpaper")"
+wallpaper_location="$(ls $wallpaper_folder | rofi -dmenu -p "Select a wallpaper" -theme $LAUNCHER_THEME)"
 
 
-$hypr/scripts/variables/set_env background "$wallpaper_folder/$wallpaper_location"
+$set_env background "$wallpaper_folder/$wallpaper_location"
 
-$hypr/scripts/wallpaper
+$wallpaper_scripts/wallpaper
