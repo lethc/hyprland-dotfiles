@@ -16,7 +16,7 @@
     ],
     "custom/os_button": {
         "format": "󱗆",
-        "on-click": "rofi -show drun",
+        "on-click": "rofi -show drun -theme spotlight-dark",
         "on-click-right": "pkill rofi",
         "tooltip": false
     },
