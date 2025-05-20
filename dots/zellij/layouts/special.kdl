@@ -3,7 +3,7 @@ layout {
         children
         pane size=1 borderless=true {
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-                format_left   "{mode} #[fg=blue,bold,italic]{session}"
+                format_left   "#[fg=blue]▌{mode} #[fg=#6C7086,bold,italic]{session}"
                 format_center "{tabs}"
                 format_right  "{command_git_branch} {datetime}"
                 format_space  ""
@@ -15,19 +15,19 @@ layout {
         
                 hide_frame_for_single_pane "false"
         
-                mode_normal        "#[fg=#6C7086,bold] {name} "
+                mode_normal        "#[fg=blue,bold] {name} "
                 mode_locked        "#[fg=red,bold] {name} "
-                mode_resize        "#[fg=blue,bold] {name} "
-                mode_pane          "#[fg=blue,bold] {name} "
-                mode_tab           "#[fg=blue,bold] {name} "
-                mode_scroll        "#[fg=blue,bold] {name} "
-                mode_enter_search  "#[fg=blue,bold] {name} "
-                mode_search        "#[fg=blue,bold] {name} "
-                mode_rename_tab    "#[fg=blue,bold] {name} "
-                mode_rename_pane   "#[fg=blue,bold] {name} "
-                mode_session       "#[fg=blue,bold] {name} "
-                mode_move          "#[fg=blue,bold] {name} "
-                mode_prompt        "#[fg=blue,bold] {name} "
+                mode_resize        "#[fg=white,bold] {name} "
+                mode_pane          "#[fg=white,bold] {name} "
+                mode_tab           "#[fg=white,bold] {name} "
+                mode_scroll        "#[fg=white,bold] {name} "
+                mode_enter_search  "#[fg=white,bold] {name} "
+                mode_search        "#[fg=white,bold] {name} "
+                mode_rename_tab    "#[fg=white,bold] {name} "
+                mode_rename_pane   "#[fg=white,bold] {name} "
+                mode_session       "#[fg=white,bold] {name} "
+                mode_move          "#[fg=white,bold] {name} "
+                mode_prompt        "#[fg=white,bold] {name} "
                 mode_tmux          "#[fg=yellow,bold] {name} "
         
                 tab_normal              "#[fg=#6C7086] {index} {name} "
