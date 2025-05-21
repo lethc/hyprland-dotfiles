@@ -37,13 +37,21 @@
     font-size: 13px;
 }
 
+#custom-monitor {
+    border-radius: 4px;
+    margin: 2px 2px 2px 2px;
+    padding: 2px 2px 2px 2px;
+}
 #window_management {
     border-radius: 4px;
-    margin: 4px 4px 4px 4px;
-    padding: 6px 6px 6px 6px;
+    margin: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    /* margin: 4px 4px 4px 4px; */
+    /* padding: 6px 6px 6px 6px; */
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+#custom-monitor:hover,
 #window_management:hover {
     background: @bg_hover;
     border-radius: 4px;

@@ -54,6 +54,7 @@
     "modules-center": [],
     "modules-right": [
         "group/window_management",
+        "custom/monitor",
         "tray",
         "cpu",
         "memory",
@@ -125,6 +126,11 @@
         "format": "",
         "on-click": "~/.config/hypr/scripts/default/float_window_toggle",
         "tooltip-format": "Toggle all floating windows"
+    },
+    "custom/monitor": {
+        "format": " 󰍺 ",
+        "on-click": "~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
+        "tooltip-format": "External Monitor"
     },
     "tray": {
         "icon-size": 18,
