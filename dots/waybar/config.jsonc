@@ -130,6 +130,7 @@
     "custom/monitor": {
         "format": " 󰍺 ",
         "on-click": "~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
+        "on-click-right": "hyprctl reload",
         "tooltip-format": "External Monitor"
     },
     "tray": {
