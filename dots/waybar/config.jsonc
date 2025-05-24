@@ -33,7 +33,8 @@
             "E:Multimedia": "  Multimedia ",
             "F:System": " 󱉏 System ",
             "G:Office": "  Office ",
-            "H:Other": " 󰨈 Other "
+            "H:Other": " 󰨈 Other ",
+            "I:Freedom": "Freedom"
         },
         "on-scroll-up": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace up",
         "on-scroll-down": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace down"
