@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 
 keymap = [
 	{ on = [ "<Esc>" ], run = "escape",  desc = "Exit visual mode, clear selected, or cancel search" },
@@ -129,12 +129,12 @@ keymap = [
 	{ on = [ "~" ], run = "help", desc = "Open help" },
 ]
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = [ "<C-c>" ]
 run = 'shell "$SHELL" --block --confirm'
 desc = "Open shell here"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "l"
 run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
