@@ -222,19 +222,27 @@ echo "#############################################"
 #cp -r "${HOME}/.config/hypr/dots/gtk/Orchis-Yellow-Dark" "${HOME}/.themes"
 #echo "GTK3 theme copied"
 
-# WHITESUR THEME
+## DOWNLOAD GTK THEMES
+# WhiteSur Theme
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1 ~/Downloads/Git/WhiteSur-gtk-theme
 cd "${HOME}/Downloads/Git/WhiteSur-gtk-theme"
 ./install.sh
 # For gtk4
 ./install.sh -l
 
-# WHITESUR ICON THEME
+# Orchis Theme
+git clone https://github.com/vinceliuice/Orchis-theme.git ~/Downloads/Git/Orchis-theme
+cd "${HOME}/Downloads/Git/Orchis-theme"
+./install.sh
+./install.sh -l
+
+## DOWNLOAD ICON THEMES
+# WhiteSur Icon Theme
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1 ~/Downloads/Git/WhiteSur-icon-theme
 cd "${HOME}/Downloads/Git/WhiteSur-icon-theme"
 ./install.sh
 
-# REVERSAL ICON THEME
+# Reversal Icon Theme
 git clone https://github.com/yeyushengfan258/Reversal-icon-theme.git ~/Downloads/Git/Reversal-icon-theme
 cd "${HOME}/Downloads/Git/Reversal-icon-theme"
 ./install.sh
@@ -242,10 +250,14 @@ cd "${HOME}/Downloads/Git/Reversal-icon-theme"
 # KVANTUM THEME FOR QT APPS
 ln -sf "${HOME}/.config/hypr/dots/Kvantum" "${HOME}/.config"
 
-# DOWNLOAD MACQUOIA THEME
+## DOWNLOAD KDE THEMES
+# Download Orchis Theme
+git clone https://github.com/vinceliuice/Orchis-kde.git
+
+# Download Macquoia Theme
 git clone https://github.com/vinceliuice/MacSequoia-kde.git ~/Downloads/Git/MacSequoia-kde
 
-# DOWNLOAD WHITESUR THEME
+# Download Whitesur Theme
 git clone https://github.com/vinceliuice/WhiteSur-kde.git ~/Downloads/Git/WhiteSur-kde
 
 # DISABLING RIGHT TOP BUTTONS IN GTK-4 APPS
