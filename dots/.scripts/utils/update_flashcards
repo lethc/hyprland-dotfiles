@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+# Get the name of the more recently updated flashcard file
+RECENT_FLASHCARD=$(find "${HOME}/Home" -type f -name "flashcards_*" -exec ls -lt {} + | head -1 | awk '{print $NF}' | xargs -I {} basename {})
+RECENT_CLOZE_FLASHCARD=$(find "${HOME}/Home" -type f -name "cloze_flashcards_*" -exec ls -lt {} + | head -1 | awk '{print $NF}' | xargs -I {} basename {})
+FLASHCARDS_PATH=${HOME}/Home/Templates/flashcards
+
+flashcards() {
+    # copy that file to the flashcards.md file
+    MYFILE=$(cat $FLASHCARDS_PATH/$RECENT_FLASHCARD)
+
+    echo $MYFILE >$FLASHCARDS_PATH/flashcards.md
+}
+
+flashcards_cloze() {
+
+    MYFILE=$(cat $FLASHCARDS_PATH/$RECENT_CLOZE_FLASHCARD)
+
+    echo $MYFILE >$FLASHCARDS_PATH/cloze_flashcards.md
+}
+
+case "$1" in
+cloze)
+    flashcards_cloze
+    ;;
+*)
+    flashcards
+    ;;
+esac
