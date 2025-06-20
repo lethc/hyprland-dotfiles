@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# Get JSON output from hyprctl
+clients_json=$(hyprctl -j clients)
+activeworkspace_json=$(hyprctl -j activeworkspace)
+
+# Extract active workspace ID
+active_workspace_id=$(echo "$activeworkspace_json" | jq '.id')
+
+# Filter clients that belong to the active workspace
+clients_to_toggle=$(echo "$clients_json" | jq "[.[] | select(.workspace.id == $active_workspace_id)]")
+
+# Count the number of clients to toggle
+num_clients=$(echo "$clients_to_toggle" | jq 'length')
+
+if [ "$num_clients" -eq 0 ]; then
+    echo "No window to toggle"
+    exit 0
+fi
+
+# Count how many are floating
+num_floating=$(echo "$clients_to_toggle" | jq '[.[] | select(.floating == true)] | length')
+
+# Determine target mode
+half_clients=$(echo "$num_clients / 2" | bc)
+if [ "$num_floating" -gt "$half_clients" ]; then
+    target_mode="settiled"
+else
+    target_mode="setfloating"
+fi
+
+# Apply target mode to each client
+echo "$clients_to_toggle" | jq -r '.[].address' | while read -r addr; do
+    hyprctl dispatch "$target_mode" "address:$addr"
+done
+

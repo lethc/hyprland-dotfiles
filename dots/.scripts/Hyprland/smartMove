@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Get active window info
+win_info=$(hyprctl -j activewindow)
+is_floating=$(echo "$win_info" | jq '.floating')
+
+direction="$1"  # Expected: left, right, up, down
+
+if [ "$is_floating" = "true" ]; then
+    # Floating window: call your snap script
+    ~/.config/hypr/dots/.scripts/Hyprland/snapWindow "$direction"
+else
+    # Tiling window: dispatch movewindow command
+    case "$direction" in
+        left)
+            hyprctl dispatch movewindow l
+            ;;
+        right)
+            hyprctl dispatch movewindow r
+            ;;
+        up)
+            hyprctl dispatch movewindow u
+            ;;
+        down)
+            hyprctl dispatch movewindow d
+            ;;
+        *)
+            echo "Invalid direction: $direction"
+            exit 1
+            ;;
+    esac
+fi
