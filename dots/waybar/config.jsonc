@@ -11,8 +11,9 @@
     "height": 41, // First Difference
     "modules-left": [
         "custom/os_button",
-        "hyprland/workspaces",
-        "wlr/taskbar"
+        // "hyprland/workspaces",
+        "hyprland/workspaces"
+        // "wlr/taskbar"
     ],
     "custom/os_button": {
         "format": "󱗆",
@@ -54,6 +55,7 @@
     },
     "modules-center": [],
     "modules-right": [
+        "custom/reminder",
         "group/window_management",
         "custom/monitor",
         "tray",
@@ -69,6 +71,13 @@
         // "hyprland/language",
         "clock"
     ],
+    "custom/reminder": {
+        "format": "{}",
+        "exec": "~/.config/waybar/bin/reminder",
+        "return-type": "json",
+        "interval": 10800,
+        "signal": 8
+    },
     "custom/sunset": {
         "format": "󰮔 ",
         "on-click": "hyprctl hyprsunset temperature 3500", // Enable blue-light-filter
