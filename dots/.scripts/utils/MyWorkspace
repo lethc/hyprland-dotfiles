@@ -1,0 +1,21 @@
+#!/bin/bash
+
+sleep 7
+
+zen-browser &
+
+sleep 3
+
+hyprctl dispatch workspace name:B:Editor
+
+foot --hold zellij a LostOnTheSeas &
+
+sleep 2
+
+hyprctl dispatch togglespecialworkspace notes
+
+firefox &
+
+sleep 2
+
+hyprctl dispatch togglespecialworkspace notes
