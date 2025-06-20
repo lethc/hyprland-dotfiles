@@ -3,7 +3,6 @@ hyprland_exec, autostart::~/.config/hypr/configs/autostart.conf
 hyprland_keybinds       ::~/.config/hypr/configs/keybinds.conf
 hyprland_windowrules   ::~/.config/hypr/configs/windowrules.conf
 hyprland_env            ::~/.config/hypr/configs/env.conf
-hyprland_theme          ::~/.config/hypr/dots/theme
 hyprland_install        ::~/.config/hypr/dots/install-script
 hyprlock                ::~/.config/hypr/hyprlock.conf
 bookmenu_bookmarks      ::~/Home/Scripts/my_bookmarks
