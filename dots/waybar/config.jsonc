@@ -134,7 +134,7 @@
     },
     "custom/bfloatall": {
         "format": "",
-        "on-click": "~/.config/hypr/scripts/default/float_window_toggle",
+        "on-click": "~/.config/hypr/dots/.scripts/Hyprland/allFloat",
         "tooltip-format": "Toggle all floating windows"
     },
     "custom/monitor": {
