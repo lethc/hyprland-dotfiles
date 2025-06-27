@@ -60,14 +60,44 @@
     margin-bottom: 6px;
 }
 
+#clock:hover,
+#workspaces button:hover,
+#custom-os_button:hover {
+    background: @bg_hover;
+    color: @content_main;
+    /* background: @bg_hover; */
+    /* border-radius: 4px; */
+    /* margin-top: 2px; */
+    /* margin-bottom: 2px; */
+}
+#taskbar button:hover {
+    border-bottom: 3px solid white;
+    background: @bg_hover;
+    color: @content_main;
+}
+#custom-sunset:hover,
+#custom-notifications:hover {
+    background: @bg_hover;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+#pulseaudio:hover {
+    background: @bg_hover;
+    border-radius: 0 4 4 0px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+#custom-reminder,
 #custom-bfloat,
 #custom-bmax,
 #custom-bcentre,
 #custom-bfullmax,
 #custom-bfloatall,
 #custom-bclose {
-  padding-right: 6px;      
-  padding-left: 6px;      
+    padding-right: 6px;
+    padding-left: 6px;
 }
 
 window#waybar {
@@ -78,8 +108,8 @@ window#waybar {
 
 menu,
 tooltip {
-    border-radius: 8px;
-    padding: 2px;
+    border-radius: 16px;
+    padding: 2px 3px;
     border: 1px solid lighter(@active);
     background: alpha(@background, 0.6);
 
@@ -98,10 +128,6 @@ tooltip label {
     padding-left: 12px;
     padding-right: 20px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-#custom-os_button:hover {
-    background: @bg_hover;
-    color: @content_main;
 }
 
 #workspaces {
@@ -126,10 +152,6 @@ tooltip label {
     border-bottom: 3px dashed @warning_color;
     color: @warning_color;
 }
-#workspaces button:hover {
-    background: @bg_hover;
-    color: @content_main;
-}
 
 #taskbar button {
     min-width: 130px;
@@ -145,12 +167,6 @@ tooltip label {
 #taskbar button.active {
     border-bottom: 3px solid white;
     background: @bg_active;
-}
-
-#taskbar button:hover {
-    border-bottom: 3px solid white;
-    background: @bg_hover;
-    color: @content_main;
 }
 
 #taskbar button.maximized {
@@ -189,24 +205,11 @@ tooltip label {
     padding-right: 4px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-#custom-sunset:hover,
-#custom-notifications:hover {
-    background: @bg_hover;
-    border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
 
 #pulseaudio {
     padding-left: 4px;
     padding-right: 4px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-#pulseaudio:hover {
-    background: @bg_hover;
-    border-radius: 0 4 4 0px;
-    margin-top: 6px;
-    margin-bottom: 6px;
 }
 
 #pulseaudio.mic {
@@ -250,9 +253,6 @@ tooltip label {
     padding-right: 5px;
     padding-left: 5px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-#clock:hover {
-    background: @bg_hover;
 }
 #battery {
     border-radius: 8px;
