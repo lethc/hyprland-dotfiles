@@ -3,14 +3,14 @@ layout {
         children
         pane size=1 borderless=true {
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-                format_left   "#[fg=blue]▌{mode} #[fg=#6C7086,bold,italic]{session}"
+                format_left   "#[fg=blue]▌{mode} #[fg=#6c706c,bold,italic]{session}"
                 format_center "{tabs}"
                 format_right  "{command_git_branch} {datetime}"
                 format_space  ""
 
                 border_enabled  "false"
                 border_char     "─"
-                border_format   "#[fg=#6C7086]{char}"
+                border_format   "#[fg=#6c706c]{char}"
                 border_position "top"
         
                 hide_frame_for_single_pane "false"
@@ -30,16 +30,16 @@ layout {
                 mode_prompt        "#[fg=white,bold] {name} "
                 mode_tmux          "#[fg=yellow,bold] {name} "
         
-                tab_normal              "#[fg=#6C7086] {index} {name} "
-                tab_normal_fullscreen   "#[fg=#6C7086] {index} {name} [] "
-                tab_normal_sync         "#[fg=#6C7086] {index} {name} <> "
+                tab_normal              "#[fg=#6c706c] {index} {name} "
+                tab_normal_fullscreen   "#[fg=#6c706c] {index} {name} [] "
+                tab_normal_sync         "#[fg=#6c706c] {index} {name} <> "
         
-                tab_active              "#[fg=#9399B2,bold,italic] {name} {floating_indicator}"
-                tab_active_fullscreen   "#[fg=#9399B2,bold,italic] {name} {fullscreen_indicator}"
-                tab_active_sync         "#[fg=#9399B2,bold,italic] {name} {sync_indicator}"
+                tab_active              "#[fg=#939993,bold,italic] {name} {floating_indicator}"
+                tab_active_fullscreen   "#[fg=#939993,bold,italic] {name} {fullscreen_indicator}"
+                tab_active_sync         "#[fg=#939993,bold,italic] {name} {sync_indicator}"
         
-                // tab_separator           "#[fg=#6C7086,bg=#181825] | "
-                tab_separator           "#[fg=#6C7086] | "
+                // tab_separator           "#[fg=#6c706c,bg=#181825] | "
+                tab_separator           "#[fg=#6c706c] | "
         
                 tab_sync_indicator       "<> "
                 tab_fullscreen_indicator "[] "
@@ -50,7 +50,7 @@ layout {
                 command_git_branch_interval    "10"
                 command_git_branch_rendermode  "static"
         
-                datetime        "#[fg=#6C7086,bold] {format} "
+                datetime        "#[fg=#6c706c,bold] {format} "
                 datetime_format "%A, %d %b %Y %H:%M"
                 datetime_timezone "America/Bogota"
         
