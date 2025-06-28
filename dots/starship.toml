@@ -12,9 +12,9 @@
 format = """\
 [  ](fg:#0e0e0e bg:#0e0e0e)\
 $username\
-[](fg:#0e0e0e bg:#181818)\
+[](fg:#0e0e0e bg:#141414)\
 $directory\
-[](fg:#181818 bg:#252525)\
+[](fg:#141414 bg:#252525)\
 $git_branch\
 $git_status\
 [](fg:#252525 bg:#2e2e2e)\
@@ -40,7 +40,7 @@ style_root = "fg:#ff7eb6 bg:#0e0e0e"
 format = '[󱗆 ]($style)' # $user
 
 [directory]
-style = "fg:#dde1e6 bg:#181818"
+style = "fg:#dde1e6 bg:#141414"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
