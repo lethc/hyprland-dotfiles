@@ -79,7 +79,7 @@
         "signal": 8
     },
     "custom/sunset": {
-        "format": "󰮔 ",
+        "format": "󰮔",
         "on-click": "hyprctl hyprsunset temperature 3500", // Enable blue-light-filter
         "on-click-right": "hyprctl hyprsunset identity", // Disable blue-light-filter
         "on-scroll-up": "hyprctl hyprsunset gamma +10",
@@ -160,7 +160,8 @@
         ]
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": " {icon} ",
+        // "format": "{icon} {volume}%",
         "format-bluetooth": "{icon}",
         "tooltip-format": "{volume}% {icon} | {desc}",
         "format-muted": "󰖁",
@@ -172,9 +173,9 @@
             "portable": "",
             "car": " ",
             "default": [
-                "󰕿",
-                "󰖀",
-                "󰕾"
+                "",
+                "",
+                ""
             ]
         },
         "on-click": "volume mute",
@@ -200,7 +201,7 @@
     "cpu": {
         "interval": 5,
         // "format": " {usage}%",
-        "format": "",
+        "format": "  ",
         "max-length": 10
     },
     "temperature": {
@@ -213,21 +214,21 @@
     },
     "memory": {
         "interval": 10,
-        "format": " ",
+        "format": "  ",
         "max-length": 10,
         "tooltip": true,
         "tooltip-format": "RAM - {used:0.1f}GiB used ( {percentage}%)"
     },
     "disk": {
         "interval": 30,
-        "format": " 󰋊",
+        "format": " 󰋊 ",
         "path": "/",
         "tooltip": true,
         "unit": "GB",
         "tooltip-format":  "Available {free} of {total} (󰋊 {percentage_used}%)"
     },
     "custom/notifications": {
-        "format": "󰂞 ",
+        "format": "󰂞",
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -t -sw",
         "tooltip": false

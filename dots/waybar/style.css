@@ -39,8 +39,8 @@
 
 #custom-monitor {
     border-radius: 4px;
-    margin: 2px 2px 2px 2px;
-    padding: 2px 2px 2px 2px;
+    margin: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
 }
 #custom-reminder,
 #window_management {
@@ -52,6 +52,14 @@
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+#custom-reminder:hover,
+#battery:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#custom-sunset:hover,      
+#custom-notifications:hover,
 #custom-monitor:hover,
 #window_management:hover {
     background: @bg_hover;
@@ -65,28 +73,54 @@
 #custom-os_button:hover {
     background: @bg_hover;
     color: @content_main;
-    /* background: @bg_hover; */
-    /* border-radius: 4px; */
-    /* margin-top: 2px; */
-    /* margin-bottom: 2px; */
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 #taskbar button:hover {
     border-bottom: 3px solid white;
     background: @bg_hover;
     color: @content_main;
 }
-#custom-sunset:hover,
-#custom-notifications:hover {
-    background: @bg_hover;
-    border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
 #pulseaudio:hover {
     background: @bg_hover;
     border-radius: 0 4 4 0px;
     margin-top: 6px;
     margin-bottom: 6px;
+}
+
+#pulseaudio,
+#custom-sunset,
+#custom-notifications {
+    padding-left: 4px;
+    padding-right: 4px;
+    /* transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1); */
+}
+
+#pulseaudio.mic {
+    border-radius: 4 0 0 4px;
+    color: @background;
+    background: alpha(darker(@foreground), 0.6);
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+#pulseaudio-slider slider {
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+#pulseaudio-slider trough {
+    min-width: 16px;
+    min-height: 6px;
+    border-radius: 8px;
+    background-color: alpha(@background, 0.6);
+}
+#pulseaudio-slider highlight {
+    border-radius: 8px;
+    background-color: lighter(@border_main);
 }
 
 #custom-reminder,
@@ -128,6 +162,9 @@ tooltip label {
     padding-left: 12px;
     padding-right: 20px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 #workspaces {
@@ -139,10 +176,15 @@ tooltip label {
     padding: 3px;
     color: @content_inactive;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 #workspaces button.active {
     color: @content_main;
     border-bottom: 3px solid white;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 #workspaces button.focused {
     color: @bg_active;
@@ -199,45 +241,6 @@ tooltip label {
     /* background: alpha(darker(@active), 0.3); */
 }
 
-#custom-sunset,
-#custom-notifications {
-    padding-left: 4px;
-    padding-right: 4px;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#pulseaudio {
-    padding-left: 4px;
-    padding-right: 4px;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#pulseaudio.mic {
-    border-radius: 4 0 0 4px;
-    color: @background;
-    background: alpha(darker(@foreground), 0.6);
-    padding-left: 6px;
-    padding-right: 6px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-#pulseaudio-slider slider {
-    background-color: transparent;
-    box-shadow: none;
-    padding-left: 6px;
-    padding-right: 6px;
-}
-#pulseaudio-slider trough {
-    min-width: 16px;
-    min-height: 6px;
-    border-radius: 8px;
-    background-color: alpha(@background, 0.6);
-}
-#pulseaudio-slider highlight {
-    border-radius: 8px;
-    background-color: lighter(@border_main);
-}
-
 #network {
     padding-left: 3px;
     padding-right: 3px;
@@ -252,6 +255,8 @@ tooltip label {
     font-weight: bold;
     padding-right: 5px;
     padding-left: 5px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #battery {
