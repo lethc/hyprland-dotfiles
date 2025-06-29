@@ -61,6 +61,7 @@
 #custom-sunset:hover,      
 #custom-notifications:hover,
 #custom-monitor:hover,
+/* #tray > .active:hover, */
 #window_management:hover {
     background: @bg_hover;
     border-radius: 4px;
@@ -73,9 +74,9 @@
 #custom-os_button:hover {
     background: @bg_hover;
     color: @content_main;
-    border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    /* border-radius: 4px; */
+    /* margin-top: 2px; */
+    /* margin-bottom: 2px; */
 }
 #taskbar button:hover {
     border-bottom: 3px solid white;
@@ -162,9 +163,6 @@ tooltip label {
     padding-left: 12px;
     padding-right: 20px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 6px;
 }
 
 #workspaces {
@@ -176,15 +174,10 @@ tooltip label {
     padding: 3px;
     color: @content_inactive;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-    margin-top: 6px;
-    margin-bottom: 6px;
 }
 #workspaces button.active {
     color: @content_main;
     border-bottom: 3px solid white;
-    border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 6px;
 }
 #workspaces button.focused {
     color: @bg_active;
@@ -255,8 +248,6 @@ tooltip label {
     font-weight: bold;
     padding-right: 5px;
     padding-left: 5px;
-    margin-top: 6px;
-    margin-bottom: 6px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 #battery {
