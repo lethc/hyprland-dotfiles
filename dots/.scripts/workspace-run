@@ -1,0 +1,21 @@
+#!/bin/bash
+
+hyprctl dispatch workspace name:B:Editor
+
+foot --hold zellij a LostOnTheSeas &
+sleep 2
+firefox https://laracasts.com/series/php-for-beginners-2023-edition &
+sleep 2
+~/.config/hypr/dots/.scripts/Hyprland/allFloat
+
+hyprctl dispatch resizeactive -450 0
+
+zen-browser &
+sleep 2
+hyprctl dispatch togglegroup
+hyprctl dispatch togglefloating
+
+sleep 2
+
+hyprctl dispatch movefocus l
+hyprctl dispatch moveintogroup r
