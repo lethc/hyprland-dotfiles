@@ -1,5 +1,5 @@
 * {
-  font:   "Noto Sans CJK HK 11";
+  font:   "Segoe UI Regular 11";
 
   //prompt
   //bg0     : #1a1b26;
@@ -38,7 +38,7 @@
 configuration {
     modi: "drun";
     show-icons: true;
-    icon-theme:  "Vimix-doder-dark";
+    icon-theme:  "Win11-dark";
     display-drun: "";
 }
 

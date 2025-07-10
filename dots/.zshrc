@@ -278,7 +278,7 @@ function fzf-lovely() {
 	                  coderay {} ||
 	                  rougify {} ||
 	                  cat {}) 2> /dev/null | head -500' | while read -r file; do
-			nvim "$file"
+			NVIM_APPNAME=nvim2 nvim "$file"
 		done
 
 	else
@@ -289,7 +289,7 @@ function fzf-lovely() {
                   coderay {} ||
                   rougify {} ||
                   cat {}) 2> /dev/null | head -500' | while read -r file; do
-			nvim "$file"
+			NVIM_APPNAME=nvim2 nvim "$file"
 		done
 	fi
 }
@@ -334,7 +334,7 @@ function fzf-rg() {
 		--header 'CTRL-T: Switch between ripgrep/fzf' \
 		--preview 'bat --color=always {1} --highlight-line {2}' \
 		--preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
-		--bind 'enter:become(nvim {1} +{2})'
+		--bind 'enter:become(NVIM_APPNAME=nvim2 nvim {1} +{2})'
 }
 function fcd() {
 	local selected_dir

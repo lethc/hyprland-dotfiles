@@ -2,14 +2,14 @@
 /* Author: Newman Sanchez (https://github.com/newmanls) */
 
 * {
-    font:   "Noto Sans CJK HK 12";
+    font:   "Segoe UI Regular 11";
 
     // bg0:    #242424E6;
     bg0     : #0F0F0FE6;
     bg1:    #7E7E7E80;
     // bg2:    #0860f2E6;
     // bg2:    #458AFFE6;
-    bg2:    #f0544cE6;
+    bg2:    #4BC8FFE6;
 
     fg0:    #DEDEDE;
     fg1:    #FFFFFF;

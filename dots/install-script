@@ -237,6 +237,12 @@ cd "${HOME}/Downloads/Git/Orchis-theme"
 ./install.sh
 ./install.sh -l
 
+# Win11 Theme
+git clone https://github.com/yeyushengfan258/Win11-gtk-theme.git ~/Downloads/Git/Win11-gtk-theme
+cd "${HOME}/Downloads/Git/Win11-gtk-theme"
+./install.sh
+./install.sh -l
+
 ## DOWNLOAD ICON THEMES
 # WhiteSur Icon Theme
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1 ~/Downloads/Git/WhiteSur-icon-theme
@@ -246,6 +252,11 @@ cd "${HOME}/Downloads/Git/WhiteSur-icon-theme"
 # Reversal Icon Theme
 git clone https://github.com/yeyushengfan258/Reversal-icon-theme.git ~/Downloads/Git/Reversal-icon-theme
 cd "${HOME}/Downloads/Git/Reversal-icon-theme"
+./install.sh
+
+# Win11 Icon Theme
+git clone https://github.com/yeyushengfan258/Win11-icon-theme.git ~/Downloads/Git/Win11-icon-theme
+cd "${HOME}/Downloads/Git/Win11-icon-theme"
 ./install.sh
 
 # KVANTUM THEME FOR QT APPS
@@ -260,6 +271,9 @@ git clone https://github.com/vinceliuice/MacSequoia-kde.git ~/Downloads/Git/MacS
 
 # Download Whitesur Theme
 git clone https://github.com/vinceliuice/WhiteSur-kde.git ~/Downloads/Git/WhiteSur-kde
+
+# Download Win11 Theme
+git clone https://github.com/yeyushengfan258/Win11OS-kde.git ~/Downloads/Git/Win11OS-kde
 
 # DISABLING RIGHT TOP BUTTONS IN GTK-4 APPS
 
