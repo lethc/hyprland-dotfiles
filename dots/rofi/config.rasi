@@ -38,7 +38,8 @@
 configuration {
     modi: "drun";
     show-icons: true;
-    icon-theme:  "Win11-dark";
+    // icon-theme:  "Win11-dark";
+    icon-theme:  "Eleven (Dark)";
     display-drun: "";
 }
 
