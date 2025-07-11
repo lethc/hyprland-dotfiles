@@ -152,7 +152,7 @@ yay -S  jq pamixer nm-connection-editor acpi nwg-look nwg-displays grim slurp
 yay -S grimblast
 
 # ARE YOU REQUIRED?
-yay -S gojq-bin bc playerctl socat swappy speech-dispatcher gcolor3 nsxiv imv  apple-fonts wayshot-bin wf-recorder  python-pytube 
+yay -S gojq-bin bc playerctl socat swappy speech-dispatcher gcolor3 nsxiv imv  apple-fonts hyprshot wf-recorder  python-pytube 
 
 echo "######################################"
 echo "###### Installing frequent apps ######"
