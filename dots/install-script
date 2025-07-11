@@ -7,16 +7,17 @@ echo "######################################"
 mkdir ~/Home
 mkdir ~/Documents/Library
 mkdir ~/.local/bin
-mkdir ~/Download/Git
-cd ~/Download/Git
+mkdir ~/Downloads/Git
+sleep 2
+cd ~/Downloads/Git
 
 # ASKN
 sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty starship waybar swaync fzf zoxide lsd bat swww
 sudo pacman -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
 # ASK
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
+git clone https://aur.archlinux.org/yay-bin.git ~/Downloads/Git
+cd  ~/Downloads/Git/yay-bin
 makepkg -si
 
 yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git fzf-tab-git
@@ -31,6 +32,8 @@ yay -S qt6ct-kde
 
 ln -sf "${HOME}/.config/hypr/dots/starship.toml" "${HOME}/.config"
 echo "starship linked"
+ln -sf "${HOME}/.config/hypr/dots/rofi" "${HOME}/.config"
+echo "rofi linked"
 ln -sf "${HOME}/.config/hypr/dots/tridactyl" "${HOME}/.config"
 echo "tridactyl linked"
 ln -sf "${HOME}/.config/hypr/dots/zellij" "${HOME}/.config"
@@ -173,10 +176,14 @@ yay -S wget github-cli lsix firefox-tridactyl ncdu dust duf baobab iftop yazi
 yay -S ueberzugpp xournalpp obsidian kooha resources tgpt
 
 # ASK
-yay -S nodejs-readability-cli firefox-tridactyl-native-bin smile ttf-misans ttf-joypixels
+yay -S nodejs-readability-cli firefox-tridactyl-native-bin smile ttf-misans ttf-joypixels 
+yay -S ttf-ms-win11-auto
 # ttf-maple Doesn't exist anymore
+yay -S ttf-maplemono
 yay -S  gtt-bin tori-bin anki-bin zen-browser-bin freetube-bin curd bluemail
 yay -S bun-bin vimv
+yay -S megasync-bin
+yay -S input-remapper-bin
 
 # pipx install wisdom-tree
 
@@ -240,8 +247,8 @@ cd "${HOME}/Downloads/Git/Orchis-theme"
 # Win11 Theme
 git clone https://github.com/yeyushengfan258/Win11-gtk-theme.git ~/Downloads/Git/Win11-gtk-theme
 cd "${HOME}/Downloads/Git/Win11-gtk-theme"
-./install.sh
-./install.sh -l
+./install.sh --tweaks round
+./install.sh --tweaks round -l
 
 ## DOWNLOAD ICON THEMES
 # WhiteSur Icon Theme
@@ -257,6 +264,10 @@ cd "${HOME}/Downloads/Git/Reversal-icon-theme"
 # Win11 Icon Theme
 git clone https://github.com/yeyushengfan258/Win11-icon-theme.git ~/Downloads/Git/Win11-icon-theme
 cd "${HOME}/Downloads/Git/Win11-icon-theme"
+./install.sh
+
+git clone https://github.com/mjkim0727/Eleven-icon-theme.git ~/Downloads/Git/Eleven-icon-theme
+cd "${HOME}/Downloads/Git/Eleven-icon-theme"
 ./install.sh
 
 # KVANTUM THEME FOR QT APPS
@@ -287,7 +298,7 @@ echo "#####   Installation NVIM dependencies  #####"
 echo "#############################################"
 
 # ASK
-yay -S dotnet-sdk jdk-lts jdk-lts-doc 
+yay -S dotnet-sdk jdk-lts jdk-lts-doc go
 # yay -S go ruby
 ###HERE
 # yay -S  google-java-format-git
