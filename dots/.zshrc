@@ -115,9 +115,11 @@ alias za="zellij a"
 alias zl="fzj"
 alias gi="gitui"
 alias p="ping -c3 google.com"
-alias ff="fzf-lovely"
 alias ffm="fzf-audio"
+alias ff="fzf-lovely"
 alias fr="fzf-rg"
+alias ff2="fzf-lovely2"
+alias fr2="fzf-rg2"
 alias cl="clear"
 alias rbwu='rbw get "$(rbw ls | fzf)" --field=Username | wl-copy'
 alias rbwg='rbw get "$(rbw ls | fzf)" | wl-copy'
@@ -278,6 +280,31 @@ function fzf-lovely() {
 	                  coderay {} ||
 	                  rougify {} ||
 	                  cat {}) 2> /dev/null | head -500' | while read -r file; do
+			nvim "$file"
+		done
+
+	else
+		rg --files --hidden -g "!.git" | fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
+                 echo {} is a binary file ||
+                 (bat --style=numbers --color=always {} ||
+                  highlight -O ansi -l {} ||
+                  coderay {} ||
+                  rougify {} ||
+                  cat {}) 2> /dev/null | head -500' | while read -r file; do
+			nvim "$file"
+		done
+	fi
+}
+
+function fzf-lovely2() {
+	if [ "$1" = "h" ]; then
+		rg --files --hidden -g "!.git" | fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
+ 	                echo {} is a binary file ||
+	                 (bat --style=numbers --color=always {} ||
+	                  highlight -O ansi -l {} ||
+	                  coderay {} ||
+	                  rougify {} ||
+	                  cat {}) 2> /dev/null | head -500' | while read -r file; do
 			NVIM_APPNAME=nvim2 nvim "$file"
 		done
 
@@ -319,6 +346,24 @@ function fzf-audio() {
     fi
 }
 function fzf-rg() {
+	rm -f /tmp/rg-fzf-{r,f}
+	RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
+	INITIAL_QUERY="${*:-}"
+	: | fzf -m --ansi --disabled --query "$INITIAL_QUERY" \
+		--bind "start:reload:$RG_PREFIX {q}" \
+		--bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
+		--bind 'ctrl-t:transform:[[ ! $FZF_PROMPT =~ ripgrep ]] &&
+              echo "rebind(change)+change-prompt(1. ripgrep> )+disable-search+transform-query:echo \{q} > /tmp/rg-fzf-f; cat /tmp/rg-fzf-r" ||
+              echo "unbind(change)+change-prompt(2. fzf> )+enable-search+transform-query:echo \{q} > /tmp/rg-fzf-r; cat /tmp/rg-fzf-f"' \
+		--color "hl:-1:underline,hl+:-1:underline:reverse" \
+		--prompt '1. ripgrep> ' \
+		--delimiter : \
+		--header 'CTRL-T: Switch between ripgrep/fzf' \
+		--preview 'bat --color=always {1} --highlight-line {2}' \
+		--preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
+		--bind 'enter:become(nvim {1} +{2})'
+}
+function fzf-rg2() {
 	rm -f /tmp/rg-fzf-{r,f}
 	RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
 	INITIAL_QUERY="${*:-}"
