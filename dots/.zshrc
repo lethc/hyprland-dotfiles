@@ -63,6 +63,9 @@ export BAT_THEME="TwoDark"
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git"'
 export FZF_CTRL_T_COMMAND='rg --files --hidden -g "!.git"'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..|clear|cl)"
+export STARSHIP_CONFIG=~/.config/starship/light/starship.toml
+# Dark Mode STARSHIP
+# export STARSHIP_CONFIG=~/.config/starship/dark/starship.toml
 
 #rust Set UP
 # . "$HOME/.cargo/env"
