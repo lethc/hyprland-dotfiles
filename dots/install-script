@@ -30,7 +30,7 @@ yay -S qt6ct-kde
 # ln -s /etc/xdg/menus/plasma-applications.menu /etc/xdg/menus/applications.menu
 # kbuildsycoca6 --noincremental
 
-ln -sf "${HOME}/.config/hypr/dots/starship.toml" "${HOME}/.config"
+ln -sf "${HOME}/.config/hypr/dots/starship/" "${HOME}/.config"
 echo "starship linked"
 ln -sf "${HOME}/.config/hypr/dots/rofi" "${HOME}/.config"
 echo "rofi linked"
