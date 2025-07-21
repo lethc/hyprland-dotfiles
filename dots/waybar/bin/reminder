@@ -2,7 +2,7 @@
 
 VARIABLE=$(cat ~/Home/reminder.txt )
 
-TEXT="<span color='#dcdfe4'><i><b>$VARIABLE</b></i></span>"  # Orange bold icon + count
+TEXT="<span color='#191919'><i><b>$VARIABLE</b></i></span>"  # Orange bold icon + count
 TOOLTIP="<b>Reminder</b>\n"
 TOOLTIP+="<i>Arch:</i> <span color='#89B4FA'>HI</span>\n"
 TOOLTIP+="<s>AUR:</s> <span color='#F38BA8'>0</span>"

@@ -13,7 +13,8 @@ switchLastWindow() {
             hyprctl dispatch workspace previous
             hyprctl dispatch movecursortocorner 2
         else
-            hyprctl dispatch focuscurrentorlast
+            # hyprctl dispatch focuscurrentorlast
+            hyprctl dispatch workspace previous
             hyprctl dispatch movecursortocorner 2
             windowname=$(hyprctl -j activewindow | jq -r '.workspace.name')
             # Hide scratchpad also if it was the last window before the current one
@@ -37,11 +38,25 @@ switchLastMonitor() {
     fi
 }
 
+switchLastWindowSameWorkspace() {
+    active_workspace="$(hyprctl activewindow -j | jq -r ".workspace.id")"
+    if [ "$active_workspace" = "null" ]; then exit; fi
+
+    previous_client="$(hyprctl clients -j | jq -r '[.[] | select(.workspace.id == '"$active_workspace"')] | sort_by(.focusHistoryID) | nth(1) | .address')"
+    if [ "$previous_client" = "null" ]; then exit; fi
+
+    # TODO: Replace `bringactivetotop` with `alterzorder top` after https://github.com/hyprwm/Hyprland/issues/5490 is fixed
+    hyprctl --batch "dispatch focuswindow address:$previous_client; dispatch bringactivetotop"
+}
+
 case "$1" in
 lastwindow)
     switchLastWindow
     ;;
 lastmonitor)
     switchLastMonitor
+    ;;
+lastwindowsameworkspace)
+    switchLastWindowSameWorkspace
     ;;
 esac

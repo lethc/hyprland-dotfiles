@@ -184,6 +184,7 @@ yay -S  gtt-bin tori-bin anki-bin zen-browser-bin freetube-bin curd bluemail
 yay -S bun-bin vimv
 yay -S megasync-bin
 yay -S input-remapper-bin
+yay -S hyprsunset
 
 # pipx install wisdom-tree
 

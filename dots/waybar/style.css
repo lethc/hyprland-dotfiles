@@ -1,22 +1,6 @@
-@import 'colors.css';
-@define-color active @color6;
-/*base background color*/
-@define-color bg_main rgba(15, 15, 15, 0.65);
-@define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
-
-/*base background color of selections */
-@define-color bg_hover rgba(200, 200, 200, 0.3);
-/*base background color of active elements */
-@define-color bg_active rgba(100, 100, 100, 0.5);
-@define-color bg_active_red rgba(160, 100, 100, 0.5);
-
-/*base border color*/
-@define-color border_main rgba(255, 255, 255, 0.2);
-
-/*text color for entries, views and content in general */
-@define-color content_main white;
-/*text color for entries that are unselected */
-@define-color content_inactive rgba(255, 255, 255, 0.25);
+/* @import 'colors.css'; */
+/* @import 'dark.css'; */
+@import 'light.css';
 
 * {
     text-shadow: none;
@@ -52,7 +36,17 @@
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+#custom-reminder2 {
+    border-radius: 4px;
+    margin: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 5px;
+    /* margin: 4px 4px 4px 4px; */
+    /* padding: 6px 6px 6px 6px; */
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 #custom-reminder:hover,
+#custom-reminder2:hover,
 #battery:hover,
 #network:hover,
 #cpu:hover,
@@ -79,7 +73,7 @@
     /* margin-bottom: 2px; */
 }
 #taskbar button:hover {
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid @white-color;
     background: @bg_hover;
     color: @content_main;
 }
@@ -177,30 +171,30 @@ tooltip label {
 }
 #workspaces button.active {
     color: @content_main;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid @white-color;
 }
 #workspaces button.focused {
     color: @bg_active;
 }
 #workspaces button.urgent {
-    background: rgba(255, 200, 0, 0.35);
+    background:  @warning-color;
     border-bottom: 3px dashed @warning_color;
     color: @warning_color;
 }
 
 #taskbar button {
     min-width: 130px;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 3px solid @border_main;
     margin-left: 2px;
     margin-right: 2px;
     padding-left: 8px;
     padding-right: 8px;
-    color: white;
+    color: @white-color;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 #taskbar button.active {
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid @white-color;
     background: @bg_active;
 }
 

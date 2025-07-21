@@ -1,0 +1,21 @@
+/* Light Mode */
+@define-color foreground #000207;
+@define-color background #e6e6e6;
+@define-color cursor #000207;
+
+@define-color color0 #efefed;
+@define-color color1 #bfc3b9;
+@define-color color2 #9b5056;
+@define-color color3 #304a52;
+@define-color color4 #192a34;
+@define-color color5 #526167;
+@define-color color6 rgba(0, 0, 0, 0.2);
+@define-color color7 #161d22; 
+@define-color color8 #d8d8d3; 
+@define-color color9 #002420; 
+@define-color color10 #8f0a15;
+@define-color color11 #002137;
+@define-color color12 #000b2a;
+@define-color color13 #0a3b4f;
+@define-color color14 #860000;
+@define-color color15 #000207;

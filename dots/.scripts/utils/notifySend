@@ -1,11 +1,11 @@
 #!/bin/bash
 
 batteryNotify() {
-    notify-send --app-name="battery" -i battery $(acpi | awk '{print $4, $4}')
+    notify-send --app-name="battery" -i ~/.local/share/icons/Eleven-Dark/48/devices/battery.svg $(acpi | awk '{print $4, $4}')
 }
 
 DateNotify() {
-    notify-send --app-name="Time" -i view-calendar-time-spent "IT'S $(date +"%H:%M")" "$(date +"󰃰  %A %d %b")"
+    notify-send --app-name="Time" -i ~/.local/share/icons/Eleven-Dark/48/apps/calendar.svg "IT'S $(date +"%H:%M")" "$(date +"󰃰  %A %d %b")"
 }
 
 case "$1" in

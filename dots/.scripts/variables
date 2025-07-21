@@ -1,7 +1,8 @@
 #!/bin/bash
 
 launcher="rofi"
-launcher_theme="spotlight-dark"
+# launcher_theme="spotlight-dark"
+launcher_theme="spotlight"
 
 export LAUNCHER=$launcher
 export LAUNCHER_THEME=$launcher_theme

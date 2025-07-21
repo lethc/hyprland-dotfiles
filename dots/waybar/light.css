@@ -1,0 +1,24 @@
+/* Light Mode */
+@define-color active rgba(0, 0, 0, 0.2);
+/*base background color*/
+@define-color bg_main rgba(240, 240, 240, 0.65);
+@define-color bg_main_tooltip rgba(255, 255, 255, 0.7);
+/*base background color of selections */
+/* @define-color bg_hover rgba(55, 55, 55, 0.3); */
+@define-color bg_hover rgba(120, 120, 120, 0.3);
+/*base background color of active elements */
+@define-color bg_active rgba(155, 155, 155, 0.5);
+@define-color bg_active_red rgba(95, 155, 155, 0.5);
+/*base border color*/
+@define-color border_main rgba(0, 0, 0, 0.2);
+/*text color for entries, views and content in general */
+@define-color content_main black;
+/*text color for entries that are unselected */
+@define-color content_inactive rgba(0, 0, 0, 0.25);
+
+@define-color warning-color rgba(255, 200, 0, 0.35);
+@define-color background #fffdf8;
+@define-color foreground #191919;
+
+@define-color white-color #000000;
+@define-color black-color #ffffff;

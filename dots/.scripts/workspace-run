@@ -1,21 +1,27 @@
 #!/bin/bash
 
-hyprctl dispatch workspace name:B:Editor
+# 1 open terminal and move it to workspace B:Editor
+foot --hold zellij a Home &
+sleep 1
+hyprctl dispatch movetoworkspace name:B:Editor
 
-foot --hold zellij a LostOnTheSeas &
-sleep 2
-firefox https://laracasts.com/series/php-for-beginners-2023-edition &
+# 2 Open Browser and initialise a group
+sleep 1
+foot --hold zellij a LaravelDev &
+hyprctl dispatch movecursortocorner 2
+sleep 1
+hyprctl dispatch togglegroup
+sleep 1
+firefox https://laracasts.com/series/php-for-beginners-2023-edition https://laracasts.com/series/30-days-to-learn-laravel-11 &
 sleep 2
 ~/.config/hypr/dots/.scripts/Hyprland/allFloat
 
+sleep 2
 hyprctl dispatch resizeactive -450 0
+hyprctl dispatch movefocus l
+# hyprctl dispatch moveintogroup r
 
 zen-browser &
-sleep 2
-hyprctl dispatch togglegroup
-hyprctl dispatch togglefloating
-
-sleep 2
-
-hyprctl dispatch movefocus l
-hyprctl dispatch moveintogroup r
+sleep 1
+hyprctl dispatch movetoworkspace special:notes
+hyprctl dispatch togglespecialworkspace notes

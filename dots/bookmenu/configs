@@ -38,3 +38,6 @@ gitui                   ::~/.config/gitui/key_bindings.ron
 mimeapps                ::~/.config/mimeapps.list
 ghostty                 ::~/.config/ghostty/config
 rofi                    ::~/.config/rofi/config.rasi
+hypridle                ::~/.config/hypr/hypridle.conf
+hyprlock                ::~/.config/hypr/hyprlock.conf
+plugins                 ::~/.config/hypr/configs/plugins.conf
