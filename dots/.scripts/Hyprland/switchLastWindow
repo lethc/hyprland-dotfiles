@@ -15,7 +15,7 @@ switchLastWindow() {
         else
             # hyprctl dispatch focuscurrentorlast
             hyprctl dispatch workspace previous
-            hyprctl dispatch movecursortocorner 2
+            # hyprctl dispatch movecursortocorner 2
             windowname=$(hyprctl -j activewindow | jq -r '.workspace.name')
             # Hide scratchpad also if it was the last window before the current one
             if [[ "$windowname" == *"special"* ]]; then
