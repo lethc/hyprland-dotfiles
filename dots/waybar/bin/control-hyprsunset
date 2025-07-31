@@ -1,0 +1,45 @@
+#!/bin/bash
+
+default_brightness() {
+    if pgrep -x "hyprsunset" >/dev/null; then
+        hyprctl hyprsunset temperature 3500 &
+    else
+        hyprsunset &
+        hyprctl hyprsunset temperature 3500 &
+    fi
+}
+
+disable_brightness() {
+    if pgrep -x "hyprsunset" >/dev/null; then
+        hyprctl hyprsunset identity &
+    else
+        hyprsunset &
+        hyprctl hyprsunset identity &
+    fi
+}
+
+increase_brightness() {
+    if pgrep -x "hyprsunset" >/dev/null; then
+        hyprctl hyprsunset gamma +10 &
+    else
+        hyprsunset &
+        hyprctl hyprsunset gamma +10 &
+    fi
+}
+
+decrease_brightness() {
+    if pgrep -x "hyprsunset" >/dev/null; then
+        hyprctl hyprsunset gamma -10 &
+    else
+        hyprsunset &
+        hyprctl hyprsunset gamma -10 &
+    fi
+
+}
+
+case "$1" in
+    enable) default_brightness ;;
+    disable) disable_brightness ;;
+    increase) increase_brightness ;;
+    decrease) decrease_brightness ;;
+esac
