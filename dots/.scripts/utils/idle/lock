@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+pidof swaylock || swaylock \
+--screenshots \
+--indicator \
+--clock \
+--inside-wrong-color b46958  \
+--ring-wrong-color 171717  \
+--inside-clear-color BAD7FF \
+--ring-clear-color 171717 \
+--inside-ver-color 90A959 \
+--ring-ver-color 171717 \
+--text-color  F4BF75 \
+--indicator-radius 80 \
+--indicator-thickness 5 \
+--effect-blur 10x7 \
+--effect-vignette 0.2:0.2 \
+--ring-color 171717 \
+--key-hl-color F4BF75 \
+--line-color 737373 \
+--inside-color 00171717 \
+--separator-color 00000000 \
+--fade-in 0.1 &
