@@ -180,7 +180,7 @@ yay -S nodejs-readability-cli firefox-tridactyl-native-bin smile ttf-misans ttf-
 yay -S ttf-ms-win11-auto
 # ttf-maple Doesn't exist anymore
 yay -S ttf-maplemono
-yay -S  gtt-bin tori-bin anki-bin zen-browser-bin freetube-bin curd bluemail
+yay -S  gtt-bin tori-bin anki-bin zen-browser-bin freetube-bin curd 
 yay -S bun-bin vimv
 yay -S megasync-bin
 yay -S input-remapper-bin
@@ -342,6 +342,7 @@ python -m venv debugpy
 debugpy/bin/python -m pip install debugpy
 # Rust, C and C++ debuger
 yay -S codelldb-bin
+yay -S thunderbird thunderbird-i18n-en-gb
 
  
 echo "######################################"
