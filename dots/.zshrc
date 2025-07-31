@@ -119,7 +119,8 @@ alias zl="fzj"
 alias gi="gitui"
 alias p="ping -c3 google.com"
 alias ffm="fzf-audio"
-alias ff="fzf-lovely"
+alias ff="fzf-note"
+alias ffh="fzf-note h"
 alias fr="fzf-rg"
 alias ff2="fzf-lovely2"
 alias fr2="fzf-rg2"
@@ -303,6 +304,77 @@ function fzf-lovely() {
 			nvim "$file"
 		done
 	fi
+}
+
+# FZF Note
+function fzf-note() {
+    local SEARCH_DIR="$PWD"
+    local FZF_OPTS=()
+
+    if [[ "$1" == "h" ]]; then
+        FZF_OPTS+=(--reverse --preview-window=down:20)
+    else
+        FZF_OPTS+=(--preview-window=right:60%:wrap)
+    fi
+
+    # Generate relative file list
+    local file_list
+    file_list=$(rg --files --hidden -g "!.git" "$SEARCH_DIR" | sort -u)
+
+    local selection
+    selection=$(echo "$file_list" | \
+        fzf --multi --border \
+            "${FZF_OPTS[@]}" \
+            --prompt="Select file (Ctrl-N to create new): " \
+            --preview '[[ $(file --mime {}) =~ binary ]] &&
+                echo {} is a binary file ||
+                (bat --style=numbers --color=always {} ||
+                 highlight -O ansi -l {} ||
+                 coderay {} ||
+                 rougify {} ||
+                 cat {}) 2> /dev/null | head -500' \
+            --bind "ctrl-n:abort" \
+            --expect=ctrl-n)
+
+    local key=$(head -1 <<< "$selection")
+    local selected_name=$(tail -n +2 <<< "$selection")
+
+    if [[ "$key" == "ctrl-n" ]]; then
+        print -n "New file name: "
+        read -r newname
+        [[ -z "$newname" ]] && return 1
+        [[ "$newname" != *.md ]] && newname="$newname.md"
+
+        local fullpath="$SEARCH_DIR/$newname"
+        mkdir -p "$(dirname "$fullpath")"
+        touch "$fullpath"
+        nvim "$fullpath"
+        return
+    fi
+
+    if [[ -z "$selected_name" ]]; then
+        return 1
+    fi
+
+    # Construct absolute path only if needed
+    local selected_file
+    if [[ "$selected_name" = /* ]]; then
+        selected_file="$selected_name"
+    else
+        selected_file="$SEARCH_DIR/$selected_name"
+    fi
+
+    if [[ ! -f "$selected_file" ]]; then
+        echo "File not found: $selected_file"
+        return 1
+    fi
+
+    if [[ $(file --mime "$selected_file") =~ binary ]]; then
+        echo "$selected_file is a binary file" >&2
+        return 1
+    fi
+
+    nvim "$selected_file"
 }
 
 function fzf-lovely2() {
