@@ -4,9 +4,9 @@
 # Will also move the focus to the HDMI-A-1 monitor
 
 hyprctl dispatch focusmonitor HDMI-A-1
-(bluemail &) && sleep 5
-hyprctl dispatch movetoworkspace name:A:Web
-hyprctl dispatch movecursortocorner 2
+# (bluemail &) && sleep 5
+# hyprctl dispatch movetoworkspace name:A:Web
+# hyprctl dispatch movecursortocorner 2
 sleep 2 && hyprctl dispatch killactive && sleep 1
 if [ $? -eq 0 ]; then
 
