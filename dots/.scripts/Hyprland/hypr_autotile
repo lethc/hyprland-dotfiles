@@ -1,0 +1,44 @@
+#!/bin/bash
+
+#   This script checks the current Hyprland workspace and converts all floating
+#   windows to tiled windows if:
+#     1. The workspace has at least one window, AND
+#     2. The currently focused window is floating
+#   If no windows are floating or workspace is empty, the script exits quietly.
+
+# Fetch window and workspace data with error handling
+# Gets whether active window is floating (true/false), defaults to "false" if undefined
+activefloating_json=$(hyprctl -j activewindow | jq -r '.floating // "false"')
+
+# Gets the number of windows in the active workspace
+activeworkspace_json=$(hyprctl -j activeworkspace | jq '.windows | length')
+
+# tileFloating:
+#   Finds all floating windows in the active workspace and converts them to tiled
+#   windows using Hyprland's 'settiled' dispatch command.
+function tileFloating() {
+    # Get the ID of the active workspace
+    active_workspace_id=$(hyprctl -j activeworkspace | jq '.id')
+    
+    # Extract addresses of all floating windows in the active workspace
+    floating_windows=$(hyprctl -j clients | jq -r ".[] | select(.workspace.id == $active_workspace_id and .floating == true) | .address")
+
+    # If no floating windows found, print message
+    if [ -z "$floating_windows" ]; then
+        echo "No floating windows to tile"
+    else
+        # Convert each floating window to tiled
+        echo "$floating_windows" | while read -r addr; do
+            hyprctl dispatch settiled "address:$addr"
+        done
+    fi
+}
+
+# Main Logic: Conditions for tiling floating windows:
+#   1. Workspace must have at least one window (activeworkspace_json > 0)
+#   2. Currently focused window must be floating (activefloating_json == "true")
+if [[ "$activeworkspace_json" -gt 0 && "$activefloating_json" == "true" ]]; then
+    tileFloating
+else
+    exit 0
+fi
