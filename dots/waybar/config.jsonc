@@ -12,13 +12,13 @@
     "modules-left": [
         "custom/os_button",
         // "hyprland/workspaces",
-        "hyprland/workspaces",
+        "hyprland/workspaces"
         // "wlr/taskbar"
-        "custom/reminder2"
+        // "custom/reminder2"
     ],
     "custom/os_button": {
         "format": "󱗆",
-        "on-click": "rofi -show drun -theme spotlight-dark",
+        "on-click": "rofi -show drun -theme spotlight",
         "on-click-right": "pkill rofi",
         "tooltip": false
     },
@@ -54,11 +54,15 @@
         ],
         "on-click": "activate"
     },
-    "modules-center": [],
+    "modules-center": [
+        "custom/reminder2",
+        "custom/separator",
+        "custom/reminder"
+    ],
     "modules-right": [
-        "custom/reminder",
         "group/window_management",
         "custom/monitor",
+        "custom/sunset",
         "tray",
         "cpu",
         "memory",
@@ -66,12 +70,15 @@
         //"pulseaudio",
         "group/audio",
         "custom/notifications",
-        "custom/sunset",
         "network",
         "battery",
         // "hyprland/language",
         "clock"
     ],
+    "custom/separator": {
+        "format": " ",
+        "tooltip": false
+    },
     "custom/reminder": {
         "format": "{}",
         "exec": "~/.config/waybar/bin/reminder",
@@ -87,12 +94,13 @@
         "signal": 8
     },
     "custom/sunset": {
-        "format": "󰮔",
-        "on-click": "sleep 1 && hyprctl hyprsunset temperature 3500", // Enable blue-light-filter
-        "on-click-right": "sleep 1 && hyprctl hyprsunset identity", // Disable blue-light-filter
-        "on-scroll-up": "sleep 1 && hyprctl hyprsunset gamma +10",
-        "on-scroll-down": "sleep 1 && hyprctl hyprsunset gamma -10",
-        "tooltip": false
+        "format": "",
+        "on-click": "~/.config/waybar/bin/control-hyprsunset enable", // Enable blue-light-filter
+        "on-click-right": "~/.config/waybar/bin/control-hyprsunset disable", // Disable blue-light-filter
+        "on-scroll-up": "~/.config/waybar/bin/control-hyprsunset increase",
+        "on-scroll-down": "~/.config/waybar/bin/control-hyprsunset decrease",
+        // "tooltip": false
+        "tooltip-format": "Control the Brightness of the Screen"
     },
     "group/window_management": {
         "orientation": "inherit",

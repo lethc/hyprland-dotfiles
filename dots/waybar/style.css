@@ -36,9 +36,10 @@
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+#custom-reminder,
 #custom-reminder2 {
     border-radius: 4px;
-    margin: 1px 1px 1px 1px;
+    margin: 1px 5px 1px 5px;
     padding: 1px 1px 1px 5px;
     /* margin: 4px 4px 4px 4px; */
     /* padding: 6px 6px 6px 6px; */
