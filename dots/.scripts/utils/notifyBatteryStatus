@@ -1,15 +1,16 @@
 #!/bin/bash
 
 prev_bat=$(acpi -b | grep -P -o '[0-9]+(?=%)')
+icons_dir=$HOME/.config/hypr/dots/.scripts/utils/battery_icons/
 
 while true; do
 	curr_bat=$(acpi -b | grep -P -o '[0-9]+(?=%)')
 	if [[ $curr_bat -eq 100 && $prev_bat -lt 100 ]]; then
-		notify-send --app-name="battery" -i battery-full "Fully charged" "Level: ${curr_bat}%"
+		notify-send --app-name="battery" -i $icons_dir/full_battery.png "Fully charged" "Level: ${curr_bat}%"
         paplay /usr/share/sounds/ocean/stereo/battery-full.oga
 
 	elif [[ $curr_bat -le 20 && $prev_bat -gt 20 ]]; then
-		notify-send --app-name="battery" -i battery-low --urgency=CRITICAL "Battery Low" "Level: ${curr_bat}%"
+		notify-send --app-name="battery" -i $icons_dir/nearly_empty_battery.png "Battery Low" "Level: ${curr_bat}%"
         paplay /usr/share/sounds/ocean/stereo/battery-caution.oga
         brightnessctl -s set 15
 
@@ -22,7 +23,7 @@ while true; do
         brightnessctl -r
 
 	elif [[ $curr_bat -le 10 && $prev_bat -gt 10 ]]; then
-		notify-send --app-name="battery" -i battery-empty --urgency=CRITICAL "Battery Low" "Level: ${curr_bat}%"
+		notify-send --app-name="battery" -i $icons_dir/warning_battery.png "Battery Low" "Level: ${curr_bat}%"
         paplay /usr/share/sounds/ocean/stereo/battery-low.oga
         brightnessctl -s set 10
 
