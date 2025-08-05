@@ -94,7 +94,7 @@ echo "Bookmenu configuration linked"
 # Force electron applications to use Wayland with the following files
 ln -sf "${HOME}/.config/hypr/dots/electron-flags.conf" "${HOME}/.config"
 ln -sf "${HOME}/.config/hypr/dots/code-flags.conf" "${HOME}/.config"
-ln -sf "${HOME}/.config/hypr/dots/freetube.desktop" "${HOME}/.local/share/applications"
+ln -sf "${HOME}/.config/hypr/dots/freetube.desktop" "${HOME}/.local/share/applications/"
 
 
 echo "########################################"
