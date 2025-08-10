@@ -342,7 +342,7 @@ python -m venv debugpy
 debugpy/bin/python -m pip install debugpy
 # Rust, C and C++ debuger
 yay -S codelldb-bin
-yay -S thunderbird thunderbird-i18n-en-gb
+yay -S thunderbird thunderbird-i18n-en-gb todoist-appimage
 
  
 echo "######################################"
