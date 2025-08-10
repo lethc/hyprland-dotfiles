@@ -18,6 +18,7 @@ if [ $? -eq 0 ]; then
     megasync &
     sleep 3
     hyprctl dispatch focusmonitor HDMI-A-1
+    sleep 3
     hyprctl dispatch togglespecialworkspace files
 else
     notify-send "something went wrong"
