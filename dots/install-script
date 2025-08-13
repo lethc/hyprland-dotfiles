@@ -16,7 +16,7 @@ sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpape
 sudo pacman -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
 # ASK
-git clone https://aur.archlinux.org/yay-bin.git ~/Downloads/Git
+git clone https://aur.archlinux.org/yay-bin.git ~/Downloads/Git/yay-bin/
 cd  ~/Downloads/Git/yay-bin
 makepkg -si
 
