@@ -1,7 +1,9 @@
 #!/bin/bash
 
 if pgrep -x "waybar" > /dev/null; then
-    ~/.config/hypr/dots/.scripts/Hyprland/toggleFocusMode focus && killall waybar && waybar &
+    # ~/.config/hypr/dots/.scripts/Hyprland/toggleFocusMode focus && killall waybar && waybar &
+    ~/.config/hypr/dots/.scripts/Hyprland/toggleFocusMode focus && pkill -USR2 waybar & # -USR2 is a custom signal that will trigger waybar to reload its config
+    # -USR1 will hide the bar
 else
     ~/.config/hypr/dots/.scripts/Hyprland/toggleFocusMode focus && waybar & 
 fi
