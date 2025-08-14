@@ -141,7 +141,8 @@ tooltip {
     border-radius: 16px;
     padding: 2px 3px;
     border: 1px solid lighter(@active);
-    background: alpha(@background, 0.6);
+    /* background: alpha(@background, 0.6); */
+    background: #000000;
 
     color: lighter(@active);
 }
@@ -149,7 +150,8 @@ tooltip {
 menu label,
 tooltip label {
     font-size: 14px;
-    color: lighter(@foreground);
+    /* color: lighter(@foreground); */
+    color: white;
 }
 
 #custom-os_button {
