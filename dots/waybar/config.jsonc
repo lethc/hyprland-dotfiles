@@ -81,14 +81,14 @@
     },
     "custom/reminder": {
         "format": "{}",
-        "exec": "~/.config/waybar/bin/reminder",
+        "exec": "~/Home/Scripts/Rofi/reminder",
         "return-type": "json",
         "interval": 10800,
         "signal": 8
     },
     "custom/reminder2": {
         "format": "{}",
-        "exec": "~/.config/waybar/bin/reminder2",
+        "exec": "~/Home/Scripts/Rofi/reminder2",
         "return-type": "json",
         "interval": 10800,
         "signal": 8
