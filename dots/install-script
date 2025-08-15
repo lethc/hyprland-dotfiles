@@ -102,7 +102,8 @@ echo "############ SDDM Theme  ###############"
 echo "########################################" 
 
 sudo cp -r "${HOME}/.config/hypr/dots/sddm-theme/corners" /usr/share/sddm/themes
-echo "SDDM theme linked"
+sudo cp -r "${HOME}/.config/hypr/dots/sddm-theme/silent" /usr/share/sddm/themes
+echo "SDDM themes linked"
 sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/zs" "/usr/bin/"
 echo "zs linked"
 
@@ -114,8 +115,14 @@ sudo mkdir /etc/sddm.conf.d/
 
 echo "creating sddm.conf.d/config"
 touch config ~/Desktop/config
-echo "[Theme]" > ~/Desktop/config 
-echo "Current=corners" >> ~/Desktop/config
+# Set corner theme as default
+# echo "[Theme]" > ~/Desktop/config 
+# echo "Current=corners" >> ~/Desktop/config
+# Set silent theme as default
+echo "[General]" > ~/Desktop/config 
+echo "GreeterEnvironment=QML2_IMPORT_PATH=/usr/share/sddm/themes/silent/components/,QT_IM_MODULE=qtvirtualkeyboard" >> ~/Desktop/config
+echo "[Theme]" >> ~/Desktop/config 
+echo "Current=silent" >> ~/Desktop/config
 sudo mv ~/Desktop/config /etc/sddm.conf.d/
 
 echo "theme setted correctly"
