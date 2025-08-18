@@ -1,9 +1,10 @@
 * {
     font-family: 'Segoe UI Regular,Symbols Nerd Font';
-    font-size: 16px;
+    font-size: 14px;
     min-height: 0;
     border-radius: 1rem;
-    padding: 0.1rem;
+    /* padding: 0.1rem; */
+    padding: 1px;
 }
 
 window#waybar {
