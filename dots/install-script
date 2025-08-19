@@ -183,7 +183,8 @@ yay -S wget github-cli lsix firefox-tridactyl ncdu dust duf baobab iftop yazi
 yay -S ueberzugpp xournalpp obsidian kooha resources tgpt
 
 # ASK
-yay -S nodejs-readability-cli firefox-tridactyl-native-bin smile ttf-misans ttf-joypixels 
+yay -S nodejs-readability-cli firefox-tridactyl-native-bin smile  ttf-joypixels 
+#ttf-misans
 yay -S ttf-ms-win11-auto
 # ttf-maple Doesn't exist anymore
 yay -S ttf-maplemono
