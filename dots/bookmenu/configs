@@ -25,7 +25,8 @@ mpvconf                 ::~/.config/mpv/mpv.conf
 neofetch                ::~/.config/neofetch/config.conf
 newsboat_urls           ::~/.config/newsboat/urls
 newsboat_conf           ::~/.config/newsboat/config
-starship                ::~/.config/starship.toml
+starship dark           ::~/.config/starship/dark/starship.toml
+starship light          ::~/.config/starship/light/starship.toml
 zellij                  ::~/.config/zellij/config.kdl
 m2anki                  ::~/.config/md2anki/md2anki.config.ini
 sioyek                  ::~/.config/sioyek/prefs_user.config
