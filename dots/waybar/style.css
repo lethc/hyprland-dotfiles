@@ -1,6 +1,8 @@
-/* @import 'colors.css'; */
-/* @import 'dark.css'; */
-@import 'light.css';
+/* Light theme */
+/* @import 'light.css'; */
+
+/* Dark theme */
+@import 'dark.css';
 
 * {
     text-shadow: none;

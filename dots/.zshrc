@@ -63,9 +63,12 @@ export BAT_THEME="TwoDark"
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git"'
 export FZF_CTRL_T_COMMAND='rg --files --hidden -g "!.git"'
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..|clear|cl)"
-export STARSHIP_CONFIG=~/.config/starship/light/starship.toml
-# Dark Mode STARSHIP
-# export STARSHIP_CONFIG=~/.config/starship/dark/starship.toml
+
+# Light theme STARSHIP
+# export STARSHIP_CONFIG=~/.config/starship/light/starship.toml
+
+# Dark theme STARSHIP
+export STARSHIP_CONFIG=~/.config/starship/dark/starship.toml
 
 #rust Set UP
 # . "$HOME/.cargo/env"
@@ -211,27 +214,22 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd*' fzf-preview 'ls --color $realpath'
 
-export FZF_DEFAULT_OPTS='
---color=bg+:#E6EBF5,spinner:#3E5E7E,hl:#9EA7B8,fg:#272933,header:#9EA7B8,info:#3E5E7E,pointer:#3E5E7E,marker:#3E5E7E,fg+:#272933,prompt:#3E5E7E,hl+:#3E5E7E
---bind alt-j:down,alt-k:up,ctrl-u:preview-up,ctrl-d:preview-down
-'
+# Light theme FZF
+# export FZF_DEFAULT_OPTS='
+# --color=bg+:#E6EBF5,spinner:#3E5E7E,hl:#9EA7B8,fg:#272933,header:#9EA7B8,info:#3E5E7E,pointer:#3E5E7E,marker:#3E5E7E,fg+:#272933,prompt:#3E5E7E,hl+:#3E5E7E
+# --bind alt-j:down,alt-k:up,ctrl-u:preview-up,ctrl-d:preview-down
+# '
 
-# Blue FZF theme (Dark Mode)
-# --color=bg+:#3B4252,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1
-
-# Brown FZF theme
-# --color=bg+:#C4BDAD,spinner:#7E5E3E,hl:#9E9177,fg:#272116,header:#9E9177,info:#7E5E3E,pointer:#7E5E3E,marker:#7E5E3E,fg+:#272116,prompt:#7E5E3E,hl+:#7E5E3E
-
-# FZF colourscheme
-# export FZF_DEFAULT_OPTS=" \
-# --color=bg+:#3B4252,spinner:#81A1C1,hl:#616E88 \
-# --color=fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1 \
-# --color=marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1 \
-# --color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
-# --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-# --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
-# --color=selected-bg:#45475a \
-# "
+# Dark theme FZF
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#3B4252,spinner:#81A1C1,hl:#616E88 \
+--color=fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1 \
+--color=marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1 \
+--color=bg+:#313244,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+"
 
 ##### Functions  ########
 function mkt() {
