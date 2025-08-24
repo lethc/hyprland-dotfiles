@@ -7,3 +7,5 @@
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[diff]
+	tool = vimdiff ; run git difftool
