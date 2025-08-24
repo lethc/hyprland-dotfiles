@@ -12,7 +12,7 @@ sleep 2
 cd ~/Downloads/Git
 
 # ASKN
-sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty starship waybar swaync fzf zoxide lsd bat swww
+sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar swaync zoxide lsd bat swww
 sudo pacman -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
 # ASK
@@ -20,7 +20,7 @@ git clone https://aur.archlinux.org/yay-bin.git ~/Downloads/Git/yay-bin/
 cd  ~/Downloads/Git/yay-bin
 makepkg -si
 
-yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git fzf-tab-git
+yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git
 yay -S clipse-bin clipse-gui blueberry-wayland
 # When choosing Color scheme: it gotta be Breeze Dark (KColorScheme) to work Properly
 yay -S qt6ct-kde
@@ -30,8 +30,8 @@ yay -S qt6ct-kde
 # ln -s /etc/xdg/menus/plasma-applications.menu /etc/xdg/menus/applications.menu
 # kbuildsycoca6 --noincremental
 
-ln -sf "${HOME}/.config/hypr/dots/starship/" "${HOME}/.config"
-echo "starship linked"
+ln -sf "${HOME}/.config/hypr/dots/.p10k.zsh" "${HOME}/"
+echo "p10k linked"
 ln -sf "${HOME}/.config/hypr/dots/rofi" "${HOME}/.config"
 echo "rofi linked"
 ln -sf "${HOME}/.config/hypr/dots/tridactyl" "${HOME}/.config"
@@ -82,7 +82,7 @@ ln -sf "${HOME}/.config/hypr/dots/.scripts/utils/linkhandler" "${HOME}/.local/bi
 echo "linkhandler mpv newsboat linked"
 ln -sf "${HOME}/.config/hypr/dots/newsboat" "${HOME}/.config"
 echo "Newsboat linked"
-ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/fzj" "${HOME}/.local/bin/"
+ln -sf "${HOME}/.config/hypr/dots/.scripts/zellijs/fzj" "${HOME}/.local/bin/"
 echo "FZJ linked"
 ln -sf "${HOME}/.config/hypr/dots/bat" "${HOME}/.config"
 echo "bat theme"
@@ -104,7 +104,7 @@ echo "########################################"
 sudo cp -r "${HOME}/.config/hypr/dots/sddm-theme/corners" /usr/share/sddm/themes
 sudo cp -r "${HOME}/.config/hypr/dots/sddm-theme/silent" /usr/share/sddm/themes
 echo "SDDM themes linked"
-sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/fzf-zellij/zs" "/usr/bin/"
+sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/zellijs/zs" "/usr/bin/"
 echo "zs linked"
 
 # ASKN

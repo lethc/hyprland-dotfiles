@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# rofi-file-opener.sh
+# A rofi-based file opener for ~/Home that launches files with xdg-open
+
+source $HOME/.config/hypr/dots/.scripts/variables
+
+SEARCH_DIR="$HOME/Home/Books"
+
+# Build a list of files relative to SEARCH_DIR
+file_list=$(find "$SEARCH_DIR" -type f | sed "s|$SEARCH_DIR/||" | sort)
+
+# Use rofi to select a file
+selected=$(echo "$file_list" | rofi -dmenu -i -p "Open file:" -theme $LAUNCHER_THEME)
+
+# If nothing selected, exit
+[ -z "$selected" ] && exit 0
+
+# Build the absolute path
+fullpath="$SEARCH_DIR/$selected"
+
+# Safety check
+if [ ! -f "$fullpath" ]; then
+    notify-send "File not found" "$fullpath"
+    exit 1
+fi
+
+# Open with default app (disowned so it doesn't block rofi)
+xdg-open "$fullpath" >/dev/null 2>&1 & disown

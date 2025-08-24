@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Called before prompt(?)
 function precmd {
     # Set window title
@@ -73,7 +80,7 @@ export STARSHIP_CONFIG=~/.config/starship/dark/starship.toml
 #rust Set UP
 # . "$HOME/.cargo/env"
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source <(fzf --zsh)
+# source <(fzf --zsh)
 
 ######  Aliases  ######
 alias ll='lsd -lh --group-dirs=first'
@@ -121,15 +128,12 @@ alias za="zellij a"
 alias zl="fzj"
 alias gi="gitui"
 alias p="ping -c3 google.com"
-alias ffm="fzf-audio"
-alias ff="fzf-note"
-alias ffh="fzf-note h"
-alias fr="fzf-rg"
-alias ff2="fzf-lovely2"
-alias fr2="fzf-rg2"
+alias ffm="tv audio"
+alias ff="tv notes"
+alias ff2="tv notes --layout portrait"
+alias fr="tv rg --exact"
+alias fr2="tv rg --layout portrait --exact"
 alias cl="clear"
-alias rbwu='rbw get "$(rbw ls | fzf)" --field=Username | wl-copy'
-alias rbwg='rbw get "$(rbw ls | fzf)" | wl-copy'
 alias fast='is-fast'
 alias cm='camb'
 
@@ -137,7 +141,7 @@ alias cm='camb'
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
-source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
+# source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
 # source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 ##### Configurations  #######
@@ -179,8 +183,21 @@ autoload -Uz compinit
 compinit
 
 # ZSHELL OPTIONS
-bindkey '^k' history-search-backward
+bindkey '^k' history-search-backward # Ctrl + k
 bindkey '^j' history-search-forward
+
+# Shell History
+function tv-history-widget() {
+  local cmd
+  cmd=$(tv zsh-history)
+  if [[ -n "$cmd" ]]; then
+    # Place selection into Zsh line editor buffer
+    LBUFFER="$cmd"
+  fi
+  zle redisplay
+}
+zle -N tv-history-widget
+bindkey '^r' tv-history-widget   # Ctrl-r to trigger
 
 # cle () clear
 #
@@ -212,7 +229,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # zstyle ':completion:*' menu select=long
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd*' fzf-preview 'ls --color $realpath'
+# zstyle ':fzf-tab:complete:cd*' fzf-preview 'ls --color $realpath'
 
 # Light theme FZF
 # export FZF_DEFAULT_OPTS='
@@ -236,11 +253,6 @@ export FZF_DEFAULT_OPTS=" \
 function mkt() {
 	mkdir {nmap,content,exploits,scripts}
 }
-
-# function zl(){
-#  fzf_session=$(zellij list-sessions | grep -v "HOME" | fzf --prompt="Select Zellij session: ")
-#   zellij attach $fzf_session
-# }
 
 ## cd with ls and lsix to display images in terminal
 # function cd {
@@ -280,191 +292,149 @@ function man() {
 		man "$@"
 }
 # fzf improvement
-function fzf-lovely() {
-	if [ "$1" = "h" ]; then
-		rg --files --hidden -g "!.git" | fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
- 	                echo {} is a binary file ||
-	                 (bat --style=numbers --color=always {} ||
-	                  highlight -O ansi -l {} ||
-	                  coderay {} ||
-	                  rougify {} ||
-	                  cat {}) 2> /dev/null | head -500' | while read -r file; do
-			nvim "$file"
-		done
-
-	else
-		rg --files --hidden -g "!.git" | fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
-                 echo {} is a binary file ||
-                 (bat --style=numbers --color=always {} ||
-                  highlight -O ansi -l {} ||
-                  coderay {} ||
-                  rougify {} ||
-                  cat {}) 2> /dev/null | head -500' | while read -r file; do
-			nvim "$file"
-		done
-	fi
-}
+# function fzf-lovely() {
+# 	if [ "$1" = "h" ]; then
+# 		rg --files --hidden -g "!.git" | fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
+#  	                echo {} is a binary file ||
+# 	                 (bat --style=numbers --color=always {} ||
+# 	                  highlight -O ansi -l {} ||
+# 	                  coderay {} ||
+# 	                  rougify {} ||
+# 	                  cat {}) 2> /dev/null | head -500' | while read -r file; do
+# 			nvim "$file"
+# 		done
+#
+# 	else
+# 		rg --files --hidden -g "!.git" | fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
+#                  echo {} is a binary file ||
+#                  (bat --style=numbers --color=always {} ||
+#                   highlight -O ansi -l {} ||
+#                   coderay {} ||
+#                   rougify {} ||
+#                   cat {}) 2> /dev/null | head -500' | while read -r file; do
+# 			nvim "$file"
+# 		done
+# 	fi
+# }
 
 # FZF Note
-function fzf-note() {
-    local SEARCH_DIR="$PWD"
-    local FZF_OPTS=()
+# function fzf-note() {
+#     local SEARCH_DIR="$PWD"
+#     local FZF_OPTS=()
+#
+#     if [[ "$1" == "h" ]]; then
+#         FZF_OPTS+=(--reverse --preview-window=down:20)
+#     else
+#         FZF_OPTS+=(--preview-window=right:60%:wrap)
+#     fi
+#
+#     # Generate relative file list
+#     local file_list
+#     file_list=$(rg --files --hidden -g "!.git" "$SEARCH_DIR" | sort -u)
+#
+#     local selection
+#     selection=$(echo "$file_list" | \
+#         fzf --multi --border \
+#             "${FZF_OPTS[@]}" \
+#             --prompt="Select file (Ctrl-N to create new): " \
+#             --preview '[[ $(file --mime {}) =~ binary ]] &&
+#                 echo {} is a binary file ||
+#                 (bat --style=numbers --color=always {} ||
+#                  highlight -O ansi -l {} ||
+#                  coderay {} ||
+#                  rougify {} ||
+#                  cat {}) 2> /dev/null | head -500' \
+#             --bind "ctrl-n:abort" \
+#             --expect=ctrl-n)
+#
+#     local key=$(head -1 <<< "$selection")
+#     local selected_name=$(tail -n +2 <<< "$selection")
+#
+#     if [[ "$key" == "ctrl-n" ]]; then
+#         print -n "New file name: "
+#         read -r newname
+#         [[ -z "$newname" ]] && return 1
+#         [[ "$newname" != *.md ]] && newname="$newname.md"
+#
+#         local fullpath="$SEARCH_DIR/$newname"
+#         mkdir -p "$(dirname "$fullpath")"
+#         touch "$fullpath"
+#         nvim "$fullpath"
+#         return
+#     fi
+#
+#     if [[ -z "$selected_name" ]]; then
+#         return 1
+#     fi
+#
+#     # Construct absolute path only if needed
+#     local selected_file
+#     if [[ "$selected_name" = /* ]]; then
+#         selected_file="$selected_name"
+#     else
+#         selected_file="$SEARCH_DIR/$selected_name"
+#     fi
+#
+#     if [[ ! -f "$selected_file" ]]; then
+#         echo "File not found: $selected_file"
+#         return 1
+#     fi
+#
+#     if [[ $(file --mime "$selected_file") =~ binary ]]; then
+#         echo "$selected_file is a binary file" >&2
+#         return 1
+#     fi
+#
+#     nvim "$selected_file"
+# }
 
-    if [[ "$1" == "h" ]]; then
-        FZF_OPTS+=(--reverse --preview-window=down:20)
-    else
-        FZF_OPTS+=(--preview-window=right:60%:wrap)
-    fi
 
-    # Generate relative file list
-    local file_list
-    file_list=$(rg --files --hidden -g "!.git" "$SEARCH_DIR" | sort -u)
-
-    local selection
-    selection=$(echo "$file_list" | \
-        fzf --multi --border \
-            "${FZF_OPTS[@]}" \
-            --prompt="Select file (Ctrl-N to create new): " \
-            --preview '[[ $(file --mime {}) =~ binary ]] &&
-                echo {} is a binary file ||
-                (bat --style=numbers --color=always {} ||
-                 highlight -O ansi -l {} ||
-                 coderay {} ||
-                 rougify {} ||
-                 cat {}) 2> /dev/null | head -500' \
-            --bind "ctrl-n:abort" \
-            --expect=ctrl-n)
-
-    local key=$(head -1 <<< "$selection")
-    local selected_name=$(tail -n +2 <<< "$selection")
-
-    if [[ "$key" == "ctrl-n" ]]; then
-        print -n "New file name: "
-        read -r newname
-        [[ -z "$newname" ]] && return 1
-        [[ "$newname" != *.md ]] && newname="$newname.md"
-
-        local fullpath="$SEARCH_DIR/$newname"
-        mkdir -p "$(dirname "$fullpath")"
-        touch "$fullpath"
-        nvim "$fullpath"
-        return
-    fi
-
-    if [[ -z "$selected_name" ]]; then
-        return 1
-    fi
-
-    # Construct absolute path only if needed
-    local selected_file
-    if [[ "$selected_name" = /* ]]; then
-        selected_file="$selected_name"
-    else
-        selected_file="$SEARCH_DIR/$selected_name"
-    fi
-
-    if [[ ! -f "$selected_file" ]]; then
-        echo "File not found: $selected_file"
-        return 1
-    fi
-
-    if [[ $(file --mime "$selected_file") =~ binary ]]; then
-        echo "$selected_file is a binary file" >&2
-        return 1
-    fi
-
-    nvim "$selected_file"
-}
-
-function fzf-lovely2() {
-	if [ "$1" = "h" ]; then
-		rg --files --hidden -g "!.git" | fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
- 	                echo {} is a binary file ||
-	                 (bat --style=numbers --color=always {} ||
-	                  highlight -O ansi -l {} ||
-	                  coderay {} ||
-	                  rougify {} ||
-	                  cat {}) 2> /dev/null | head -500' | while read -r file; do
-			NVIM_APPNAME=nvim2 nvim "$file"
-		done
-
-	else
-		rg --files --hidden -g "!.git" | fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
-                 echo {} is a binary file ||
-                 (bat --style=numbers --color=always {} ||
-                  highlight -O ansi -l {} ||
-                  coderay {} ||
-                  rougify {} ||
-                  cat {}) 2> /dev/null | head -500' | while read -r file; do
-			NVIM_APPNAME=nvim2 nvim "$file"
-		done
-	fi
-}
-
-function fzf-audio() {
-    # Define audio file extensions
-    local audio_exts=("*.mp3" "*.wav" "*.flac" "*.ogg" "*.m4a" "*.aac" "*.wma" "*.opus" "*.mp4" "*.mkv" "*.webm")
-
-    if [ "$1" = "h" ]; then
-        # Hidden mode (using nvim)
-        rg --files --hidden -g "!.git" "${audio_exts[@]/#/-g}" | \
-            fzf -m --reverse --preview-window down:20 --preview '
-                echo "Audio File: {}"
-                mediainfo {} 2>/dev/null || echo "No media info available"
-            ' | while read -r file; do
-            nvim "$file"
-        done
-    else
-        # Normal mode (using mpv)
-        rg --files --hidden -g "!.git" "${audio_exts[@]/#/-g}" | \
-            fzf -m --preview '
-                echo "Audio File: {}"
-                mediainfo {} 2>/dev/null || echo "No media info available"
-            ' | while read -r file; do
-            mpv "$file"
-        done
-    fi
-}
-function fzf-rg() {
-	rm -f /tmp/rg-fzf-{r,f}
-	RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
-	INITIAL_QUERY="${*:-}"
-	: | fzf -m --ansi --disabled --query "$INITIAL_QUERY" \
-		--bind "start:reload:$RG_PREFIX {q}" \
-		--bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
-		--bind 'ctrl-t:transform:[[ ! $FZF_PROMPT =~ ripgrep ]] &&
-              echo "rebind(change)+change-prompt(1. ripgrep> )+disable-search+transform-query:echo \{q} > /tmp/rg-fzf-f; cat /tmp/rg-fzf-r" ||
-              echo "unbind(change)+change-prompt(2. fzf> )+enable-search+transform-query:echo \{q} > /tmp/rg-fzf-r; cat /tmp/rg-fzf-f"' \
-		--color "hl:-1:underline,hl+:-1:underline:reverse" \
-		--prompt '1. ripgrep> ' \
-		--delimiter : \
-		--header 'CTRL-T: Switch between ripgrep/fzf' \
-		--preview 'bat --color=always {1} --highlight-line {2}' \
-		--preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
-		--bind 'enter:become(nvim {1} +{2})'
-}
-function fzf-rg2() {
-	rm -f /tmp/rg-fzf-{r,f}
-	RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
-	INITIAL_QUERY="${*:-}"
-	: | fzf -m --ansi --disabled --query "$INITIAL_QUERY" \
-		--bind "start:reload:$RG_PREFIX {q}" \
-		--bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
-		--bind 'ctrl-t:transform:[[ ! $FZF_PROMPT =~ ripgrep ]] &&
-              echo "rebind(change)+change-prompt(1. ripgrep> )+disable-search+transform-query:echo \{q} > /tmp/rg-fzf-f; cat /tmp/rg-fzf-r" ||
-              echo "unbind(change)+change-prompt(2. fzf> )+enable-search+transform-query:echo \{q} > /tmp/rg-fzf-r; cat /tmp/rg-fzf-f"' \
-		--color "hl:-1:underline,hl+:-1:underline:reverse" \
-		--prompt '1. ripgrep> ' \
-		--delimiter : \
-		--header 'CTRL-T: Switch between ripgrep/fzf' \
-		--preview 'bat --color=always {1} --highlight-line {2}' \
-		--preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
-		--bind 'enter:become(NVIM_APPNAME=nvim2 nvim {1} +{2})'
-}
-function fcd() {
-	local selected_dir
-	selected_dir=$(find . -type d -print 2>/dev/null | fzf +m) && cd "$selected_dir"
-}
+# function fzf-audio() {
+#     # Define audio file extensions
+#     local audio_exts=("*.mp3" "*.wav" "*.flac" "*.ogg" "*.m4a" "*.aac" "*.wma" "*.opus" "*.mp4" "*.mkv" "*.webm")
+#
+#     if [ "$1" = "h" ]; then
+#         # Hidden mode (using nvim)
+#         rg --files --hidden -g "!.git" "${audio_exts[@]/#/-g}" | \
+#             fzf -m --reverse --preview-window down:20 --preview '
+#                 echo "Audio File: {}"
+#                 mediainfo {} 2>/dev/null || echo "No media info available"
+#             ' | while read -r file; do
+#             nvim "$file"
+#         done
+#     else
+#         # Normal mode (using mpv)
+#         rg --files --hidden -g "!.git" "${audio_exts[@]/#/-g}" | \
+#             fzf -m --preview '
+#                 echo "Audio File: {}"
+#                 mediainfo {} 2>/dev/null || echo "No media info available"
+#             ' | while read -r file; do
+#             mpv "$file"
+#         done
+#     fi
+# }
+# function fzf-rg() {
+# 	rm -f /tmp/rg-fzf-{r,f}
+# 	RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
+# 	INITIAL_QUERY="${*:-}"
+# 	: | fzf -m --ansi --disabled --query "$INITIAL_QUERY" \
+# 		--bind "start:reload:$RG_PREFIX {q}" \
+# 		--bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
+# 		--bind 'ctrl-t:transform:[[ ! $FZF_PROMPT =~ ripgrep ]] &&
+#               echo "rebind(change)+change-prompt(1. ripgrep> )+disable-search+transform-query:echo \{q} > /tmp/rg-fzf-f; cat /tmp/rg-fzf-r" ||
+#               echo "unbind(change)+change-prompt(2. fzf> )+enable-search+transform-query:echo \{q} > /tmp/rg-fzf-r; cat /tmp/rg-fzf-f"' \
+# 		--color "hl:-1:underline,hl+:-1:underline:reverse" \
+# 		--prompt '1. ripgrep> ' \
+# 		--delimiter : \
+# 		--header 'CTRL-T: Switch between ripgrep/fzf' \
+# 		--preview 'bat --color=always {1} --highlight-line {2}' \
+# 		--preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
+# 		--bind 'enter:become(nvim {1} +{2})'
+# }
+# function fcd() {
+# 	local selected_dir
+# 	selected_dir=$(find . -type d -print 2>/dev/null | fzf +m) && cd "$selected_dir"
+# }
 #Delete permanently
 function rmk() {
 	scrub -p dod $1
@@ -496,7 +466,7 @@ alias lazy="NVIM_APPNAME=lazy nvim"
 
 function nvims() {
 	items=("default" "NvChad" "AstroNvim" "nvim2" "new" "NormalNvim" "lvim" "lazy")
-	config=$(printf "%s\n" "${items[@]}" | fzf --prompt="Neovim config >> " --height=~50% --layout=reverse --border --exit-0)
+	config=$(printf "%s\n" "${items[@]}" | tv --inline --input-prompt "󰥨 Neovim config: " --input-header "NVIMS" --no-status-bar)
 	if [[ -z $config ]]; then
 		echo "Nothing selected"
 		return 0
@@ -528,5 +498,8 @@ function cdi {
 
 # source /home/Lummyn/.config/broot/launcher/bash/br
 # eval "$(zellij setup --generate-auto-start zsh)"
-eval "$(starship init zsh)"
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

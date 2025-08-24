@@ -2,5 +2,5 @@
 
 if ! [ -x $HOME/.local/bin/fzj ]; then
   mkdir -p $HOME/.local/bin/
-  ln -s $HOME/execs/fzf-zellij/fzj_tab.kdl $HOME/.local/bin/fzj
+  ln -s $HOME/execs/zellijs/fzj_tab.kdl $HOME/.local/bin/fzj
 fi

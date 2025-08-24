@@ -10,11 +10,6 @@
 # The main feature `zs` provides - which zellij currently lacks - is that you
 # can switch to the last used session. A feature, also known from tmux.
 #
-# It also uses `fzf` to fuzzy find active sessions, dead sessions, zoxide
-# locations and paths in the home directory. I like `fzf` way more than the
-# builtin zellij session manager, as it provides vim keybindings (like `ctrl+n`
-# `ctrl+p` for next and previous entry).
-#
 # Currently, `zs` lacks the feature to create a new session, as it is currently
 # possible with the builtin session manager.
 #
@@ -136,15 +131,10 @@ cmd_run_session_manager() {
 
     header=" ^a active ^s sessions ^x zoxide ^f find"
     prompt="$prompt_all_sessions"
+    header2="Switch Between Sessions"
 
     result=$(
-        ($command_zellij_session_list) | fzf \
-            --bind "$active_sessions_bind" \
-            --bind "$all_sessions_bind" \
-            --bind "$zoxide_bind" \
-            --bind "$find_bind" \
-            --header "$header" \
-            --prompt "$prompt"
+        ($command_zellij_session_list) | tv --input-prompt "$prompt" --input-header "$header2" --no-status-bar
     )
 
     # Check if an already existing zellij session was selected.
