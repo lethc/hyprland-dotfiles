@@ -1,0 +1,41 @@
+# Save this as ~/.config/television/cable/audio.toml
+
+[metadata]
+name = "audio"
+description = "Browse audio files | Enter: play | Ctrl-E: edit"
+requirements = ["rg", "mpv", "mediainfo"]
+
+[source]
+command = """
+rg --files --hidden -g '!.git' -g '*.mp3' -g '*.wav' -g '*.flac' -g '*.ogg' -g '*.m4a' -g '*.aac' -g '*.wma' -g '*.opus' -g '*.mp4' -g '*.mkv' -g '*.webm' | sort -u
+"""
+
+[preview]
+command = """
+echo "🎵 Audio File: {}"
+echo "===================="
+if command -v mediainfo >/dev/null 2>&1; then
+    mediainfo '{}' 2>/dev/null || echo "No media info available"
+else
+    echo "Install 'mediainfo' for detailed audio information"
+    file '{}'
+fi
+"""
+
+[ui]
+preview_panel = { size = 60, scrollbar = true }
+
+[keybindings]
+shortcut = "f5"
+enter = "actions:play"
+"ctrl-e" = "actions:edit"
+
+[actions.play]
+description = "Play audio file with mpv"
+command = "mpv {}"
+mode = "execute"
+
+[actions.edit]
+description = "Edit audio file metadata/tags with nvim"
+command = "nvim {}"
+mode = "execute"

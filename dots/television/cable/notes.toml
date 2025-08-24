@@ -1,0 +1,51 @@
+# Save this as ~/.config/television/cable/notes.toml
+
+[metadata]
+name = "notes"
+description = "Browse files | Enter: edit | Ctrl-N: new file"
+requirements = ["rg", "bat"]
+
+[source]
+command = "rg --files --hidden -g '!.git' | sort -u"
+
+[preview]
+command = """
+if file --mime-type '{}' | grep -q 'charset=binary'; then
+    echo '{} is a binary file'
+else
+    bat --style=numbers --color=always '{}' 2>/dev/null || \
+    highlight -O ansi -l '{}' 2>/dev/null || \
+    coderay '{}' 2>/dev/null || \
+    rougify '{}' 2>/dev/null || \
+    cat '{}'
+fi | head -500
+"""
+
+[ui]
+preview_panel = { size = 60, scrollbar = true }
+
+[keybindings]
+shortcut = "f4"
+"ctrl-n" = "actions:create_new"
+enter = "actions:edit"
+
+[actions.edit]
+description = "Open selected file(s) in Neovim"
+command = "nvim {}"
+mode = "execute"
+
+[actions.create_new]
+description = "Create and edit a new file"
+command = """
+read -p "New file name: " newname
+if [ -z "$newname" ]; then
+    exit 1
+fi
+if [[ "$newname" != *.* ]]; then
+    newname="$newname.md"
+fi
+mkdir -p "$(dirname "$newname")" 2>/dev/null
+touch "$newname"
+nvim "$newname"
+"""
+mode = "execute"
