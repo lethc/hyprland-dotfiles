@@ -609,13 +609,13 @@ themes {
             bg "#161616"
             black "#262626"
             red "#ee5396"
-            green "#42be65"
+            green "#33b1ff"
             yellow "#ffe97b"
-            blue "#33b1ff"
+            blue "#42be65"
             magenta "#ff7eb6"
-            cyan "#3ddbd9"
+            cyan "#ff9e64"
             white "#dde1e6"
-            orange "#ff9e64"
+            orange "#3ddbd9"
     }
 }
 
