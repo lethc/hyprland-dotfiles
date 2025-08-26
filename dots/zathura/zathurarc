@@ -8,8 +8,8 @@ set recolor-keephue true
 # set guioptions "v"
 set guioptions "s"
 
-# Transparency and blur
-set recolor true
+# Transparency and blur (default reader)
+set recolor false
 
 # Search
 set incremental-search true
