@@ -261,6 +261,11 @@ cd "${HOME}/Downloads/Git/Win11-gtk-theme"
 ./install.sh --tweaks round
 ./install.sh --tweaks round -l
 
+# Download Material-GTK-Themes
+git clone https://github.com/Fausto-Korpsvart/Material-GTK-Themes.git ~/Downloads/Git/Material-GTK-Themes
+cd "${HOME}/Downloads/Git/Material-GTK-Themes/themes"
+./install.sh -t red -l 
+
 ## DOWNLOAD ICON THEMES
 # WhiteSur Icon Theme
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git --depth=1 ~/Downloads/Git/WhiteSur-icon-theme
@@ -273,13 +278,16 @@ cd "${HOME}/Downloads/Git/Reversal-icon-theme"
 ./install.sh
 
 # Win11 Icon Theme
-git clone https://github.com/yeyushengfan258/Win11-icon-theme.git ~/Downloads/Git/Win11-icon-theme
-cd "${HOME}/Downloads/Git/Win11-icon-theme"
-./install.sh
+# git clone https://github.com/yeyushengfan258/Win11-icon-theme.git ~/Downloads/Git/Win11-icon-theme
+# cd "${HOME}/Downloads/Git/Win11-icon-theme"
+# ./install.sh
 
 git clone https://github.com/mjkim0727/Eleven-icon-theme.git ~/Downloads/Git/Eleven-icon-theme
 cd "${HOME}/Downloads/Git/Eleven-icon-theme"
 ./install.sh
+
+# Zephyr Icon Theme
+git clone https://github.com/Rudraksh88/zephyr-icons.git ~/.local/share/icons/Zephyr
 
 # KVANTUM THEME FOR QT APPS
 ln -sf "${HOME}/.config/hypr/dots/Kvantum" "${HOME}/.config"
@@ -288,11 +296,14 @@ ln -sf "${HOME}/.config/hypr/dots/Kvantum" "${HOME}/.config"
 # Download Orchis Theme
 git clone https://github.com/vinceliuice/Orchis-kde.git
 
+# Download Zephyr Kvantum Theme
+git clone https://github.com/Rudraksh88/zephyr-kvantum.git ~/Downloads/Git/Zephyr
+
 # Download Macquoia Theme
-git clone https://github.com/vinceliuice/MacSequoia-kde.git ~/Downloads/Git/MacSequoia-kde
+# git clone https://github.com/vinceliuice/MacSequoia-kde.git ~/Downloads/Git/MacSequoia-kde
 
 # Download Whitesur Theme
-git clone https://github.com/vinceliuice/WhiteSur-kde.git ~/Downloads/Git/WhiteSur-kde
+# git clone https://github.com/vinceliuice/WhiteSur-kde.git ~/Downloads/Git/WhiteSur-kde
 
 # Download Win11 Theme
 git clone https://github.com/yeyushengfan258/Win11OS-kde.git ~/Downloads/Git/Win11OS-kde

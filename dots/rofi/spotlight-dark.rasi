@@ -5,11 +5,11 @@
     font:   "Segoe UI Regular 11";
 
     // bg0:    #242424E6;
-    bg0     : #0F0F0FE6;
+    bg0     : #090B10E6;
     bg1:    #7E7E7E80;
     // bg2:    #0860f2E6;
     // bg2:    #458AFFE6;
-    bg2:    #4BC8FFE6;
+    bg2:    #F07178E6;
 
     fg0:    #DEDEDE;
     fg1:    #FFFFFF;
