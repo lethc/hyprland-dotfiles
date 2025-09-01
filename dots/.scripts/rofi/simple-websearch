@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+source $HOME/.config/hypr/dots/.scripts/variables
+
+# Ask the user for a query
+query=$(rofi -dmenu -i -p "Google Search:" -theme $LAUNCHER_THEME)
+
+# Exit if no query was entered
+[[ -z "$query" ]] && exit 1
+
+# Encode spaces as '+'
+encoded_query=$(echo "$query" | sed 's/ /+/g')
+
+# Open in default browser
+xdg-open "https://www.google.com/search?q=$encoded_query"
