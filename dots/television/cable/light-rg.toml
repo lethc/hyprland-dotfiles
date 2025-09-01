@@ -1,0 +1,31 @@
+[metadata]
+name = "light-rg"
+description = "Find text in files | Enter: edit at line | Ctrl-O: edit at start"
+requirements = ["rg", "bat"]
+
+[source]
+command = "rg . --no-heading --line-number --colors 'match:fg:white' --colors 'path:fg:blue' --color=always"
+ansi = true
+output = "{strip_ansi|split:\\::..2}"
+
+[preview]
+command = "bat -n --color=always '{strip_ansi|split:\\::0}'"
+env = { BAT_THEME = "ansi" }
+offset = '{strip_ansi|split:\::1}'
+
+[ui]
+preview_panel = { header = '{strip_ansi|split:\::..2}' }
+
+[keybindings]
+enter = "actions:edit_at_line"
+"ctrl-o" = "actions:edit_file"
+
+[actions.edit_at_line]
+description = "Open file in nvim at the matching line"
+command = "NVIM_APPNAME=nvim2 nvim '{strip_ansi|split:\\::0}' +{strip_ansi|split:\\::1}"
+mode = "execute"
+
+[actions.edit_file]
+description = "Open file in nvim at the beginning"
+command = "NVIM_APPNAME=nvim2 nvim '{strip_ansi|split:\\::0}'"
+mode = "execute"
