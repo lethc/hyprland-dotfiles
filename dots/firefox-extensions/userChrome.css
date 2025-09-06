@@ -1,0 +1,16 @@
+#TabsToolbar {
+    visibility: collapse;
+}
+#sidebar-header {
+    display: none;
+}
+/* #sidebar-splitter { */
+/*     display: none; */
+/* } */
+splitter#sidebar-splitter {
+    opacity: 0 !important;
+}
+splitter#sidebar-splitter {
+    border: none !important;
+    background-color: transparent !important;
+}
