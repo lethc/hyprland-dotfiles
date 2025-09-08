@@ -1,0 +1,12 @@
+Type=X-GNOME-Metatheme
+[Desktop Entry]
+Name=Material-Red-Dark
+Comment=An Flat Gtk+ theme based on Elegant Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Material-Red-Dark
+MetacityTheme=Material-Red-Dark
+IconTheme=Tela-circle-Dark
+CursorTheme=Material-cursors
+ButtonLayout=close,minimize,maximize:menu
