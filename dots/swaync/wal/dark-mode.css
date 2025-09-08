@@ -1,6 +1,7 @@
 /* Dark Mode */
 @define-color foreground #fffdf8;
-@define-color background #191919;
+/* @define-color background #191919; */
+@define-color background #11080D;
 @define-color cursor #fffdf8;
 
 @define-color color0 #101012;
