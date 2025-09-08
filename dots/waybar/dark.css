@@ -13,7 +13,7 @@
 /*base border color*/
 @define-color border_main rgba(255, 255, 255, 0.2);
 /*text color for entries, views and content in general */
-@define-color content_main white;
+@define-color content_main #d0cdc8;
 /*text color for entries that are unselected */
 @define-color content_inactive rgba(255, 255, 255, 0.25);
 

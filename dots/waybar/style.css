@@ -75,7 +75,7 @@ tooltip {
 menu label,
 tooltip label {
     font-size: 14px;
-    color: white;
+    color: @content_main;
 }
 
 #custom-launcher {
