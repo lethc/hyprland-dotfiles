@@ -34,9 +34,8 @@ sep_inner = { open = "", close = "" }
 [status]
 # separator_open  = ""
 # separator_close = ""
-separator_open  = ""
-separator_close = ""
-separator_style = { fg = "#232323", bg = "#232323" }
+sep_left = { open  = "", close = "" }
+sep_right = { open  = "", close = "" }
 
 # Progress
 progress_label  = { fg = "#FFFFFF", bold = true }
