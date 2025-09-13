@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Space to reserve for the bar (at the top)
-bar_height=30
+# Space to reserve for the bar (at the bottom)
+bar_height=40
 
 # Get active window info
 win_info=$(hyprctl -j activewindow)
@@ -15,13 +15,12 @@ monitor_y=$(echo "$monitor_info" | jq '.y')
 monitor_width=$(echo "$monitor_info" | jq '.width')
 monitor_height=$(echo "$monitor_info" | jq '.height')
 
-# Adjust usable area (bar on top)
-usable_y=$((monitor_y + bar_height))
+# Calculate usable height (leaving space for the bar)
 usable_height=$((monitor_height - bar_height))
 
 snap_left() {
     target_x=$monitor_x
-    target_y=$usable_y
+    target_y=$monitor_y
     new_width=$((monitor_width / 2))
     new_height=$usable_height
 
@@ -31,7 +30,7 @@ snap_left() {
 
 snap_right() {
     target_x=$((monitor_x + monitor_width / 2))
-    target_y=$usable_y
+    target_y=$monitor_y
     new_width=$((monitor_width / 2))
     new_height=$usable_height
 
@@ -41,7 +40,7 @@ snap_right() {
 
 snap_top() {
     target_x=$monitor_x
-    target_y=$usable_y
+    target_y=$monitor_y
     new_width=$monitor_width
     new_height=$((usable_height / 2))
 
@@ -51,7 +50,7 @@ snap_top() {
 
 snap_bottom() {
     target_x=$monitor_x
-    target_y=$((usable_y + usable_height / 2))
+    target_y=$((monitor_y + usable_height / 2))
     new_width=$monitor_width
     new_height=$((usable_height / 2))
 
