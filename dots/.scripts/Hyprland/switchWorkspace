@@ -46,18 +46,18 @@ moveworkspace_up() {
                         break
                     else
                         moveToWorkspace $WORKSPACE1
-                        moveToWorkspace $WORKSPACE8
-                        if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
+                        moveToWorkspace $WORKSPACE6
+                        if [[ "$(workspacemonitor $WORKSPACE6)" == $ACTIVEMONITOR ]]; then
                             break
                         else
                             moveToWorkspace $WORKSPACE1
-                            moveToWorkspace $WORKSPACE9
-                            if [[ "$(workspacemonitor $WORKSPACE9)" == $ACTIVEMONITOR ]]; then
+                            moveToWorkspace $WORKSPACE7
+                            if [[ "$(workspacemonitor $WORKSPACE7)" == $ACTIVEMONITOR ]]; then
                                 break
                             else
                                 moveToWorkspace $WORKSPACE1
-                                moveToWorkspace $WORKSPACE0
-                                if [[ "$(workspacemonitor $WORKSPACE0)" == $ACTIVEMONITOR ]]; then
+                                moveToWorkspace $WORKSPACE8
+                                if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
                                     break
                                 else
                                     moveToWorkspace $WORKSPACE1
@@ -84,18 +84,18 @@ moveworkspace_up() {
                     break
                 else
                     moveToWorkspace $WORKSPACE2
-                    moveToWorkspace $WORKSPACE8
-                    if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
+                    moveToWorkspace $WORKSPACE6
+                    if [[ "$(workspacemonitor $WORKSPACE6)" == $ACTIVEMONITOR ]]; then
                         break
                     else
                         moveToWorkspace $WORKSPACE2
-                        moveToWorkspace $WORKSPACE9
-                        if [[ "$(workspacemonitor $WORKSPACE9)" == $ACTIVEMONITOR ]]; then
+                        moveToWorkspace $WORKSPACE7
+                        if [[ "$(workspacemonitor $WORKSPACE7)" == $ACTIVEMONITOR ]]; then
                             break
                         else
                             moveToWorkspace $WORKSPACE2
-                            moveToWorkspace $WORKSPACE0
-                            if [[ "$(workspacemonitor $WORKSPACE0)" == $ACTIVEMONITOR ]]; then
+                            moveToWorkspace $WORKSPACE8
+                            if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
                                 break
                             else
                                 moveToWorkspace $WORKSPACE2
@@ -122,18 +122,18 @@ moveworkspace_up() {
                 break
             else
                 moveToWorkspace $WORKSPACE3
-                moveToWorkspace $WORKSPACE8
-                if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
+                moveToWorkspace $WORKSPACE6
+                if [[ "$(workspacemonitor $WORKSPACE6)" == $ACTIVEMONITOR ]]; then
                     break
                 else
                     moveToWorkspace $WORKSPACE3
-                    moveToWorkspace $WORKSPACE9
-                    if [[ "$(workspacemonitor $WORKSPACE9)" == $ACTIVEMONITOR ]]; then
+                    moveToWorkspace $WORKSPACE7
+                    if [[ "$(workspacemonitor $WORKSPACE7)" == $ACTIVEMONITOR ]]; then
                         break
                     else
                         moveToWorkspace $WORKSPACE3
-                        moveToWorkspace $WORKSPACE0
-                        if [[ "$(workspacemonitor $WORKSPACE0)" == $ACTIVEMONITOR ]]; then
+                        moveToWorkspace $WORKSPACE8
+                        if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
                             break
                         else
                             moveToWorkspace $WORKSPACE3
@@ -160,18 +160,18 @@ moveworkspace_up() {
             break
         else
             moveToWorkspace $WORKSPACE4
-            moveToWorkspace $WORKSPACE8
-            if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
+            moveToWorkspace $WORKSPACE6
+            if [[ "$(workspacemonitor $WORKSPACE6)" == $ACTIVEMONITOR ]]; then
                 break
             else
                 moveToWorkspace $WORKSPACE4
-                moveToWorkspace $WORKSPACE9
-                if [[ "$(workspacemonitor $WORKSPACE9)" == $ACTIVEMONITOR ]]; then
+                moveToWorkspace $WORKSPACE7
+                if [[ "$(workspacemonitor $WORKSPACE7)" == $ACTIVEMONITOR ]]; then
                     break
                 else
                     moveToWorkspace $WORKSPACE4
-                    moveToWorkspace $WORKSPACE0
-                    if [[ "$(workspacemonitor $WORKSPACE0)" == $ACTIVEMONITOR ]]; then
+                    moveToWorkspace $WORKSPACE8
+                    if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
                         break
                     else
                         moveToWorkspace $WORKSPACE4
@@ -198,18 +198,18 @@ moveworkspace_up() {
             fi
         fi
     elif [[ $ACTIVEWORKSPACE == $WORKSPACE5 ]]; then
-        moveToWorkspace $WORKSPACE8
-        if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
+        moveToWorkspace $WORKSPACE6
+        if [[ "$(workspacemonitor $WORKSPACE6)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace $WORKSPACE5
-            moveToWorkspace $WORKSPACE9
-            if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+            moveToWorkspace $WORKSPACE7
+            if [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace $WORKSPACE5
-                moveToWorkspace $WORKSPACE0
-                if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
+                moveToWorkspace $WORKSPACE8
+                if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace $WORKSPACE5
@@ -241,42 +241,42 @@ moveworkspace_up() {
             fi
         fi
 
-    elif [[ $ACTIVEWORKSPACE == $WORKSPACE8 ]]; then
-        moveToWorkspace $WORKSPACE9
-        if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE6 ]]; then
+        moveToWorkspace $WORKSPACE7
+        if [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
             break
-        elif [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+        elif [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
+            moveToWorkspace $WORKSPACE6
             moveToWorkspace $WORKSPACE8
-            moveToWorkspace $WORKSPACE0
-            if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
-                moveToWorkspace $WORKSPACE8
+                moveToWorkspace $WORKSPACE6
                 moveToWorkspace $WORKSPACE1
                 if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
-                    moveToWorkspace $WORKSPACE8
+                    moveToWorkspace $WORKSPACE6
                     moveToWorkspace $WORKSPACE2
                     if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
-                        moveToWorkspace $WORKSPACE8
+                        moveToWorkspace $WORKSPACE6
                         moveToWorkspace $WORKSPACE3
                         if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
-                            moveToWorkspace $WORKSPACE8
+                            moveToWorkspace $WORKSPACE6
                             moveToWorkspace $WORKSPACE4
                             if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
-                                moveToWorkspace $WORKSPACE8
+                                moveToWorkspace $WORKSPACE6
                                 moveToWorkspace $WORKSPACE5
                                 if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
-                                    moveToWorkspace $WORKSPACE8
+                                    moveToWorkspace $WORKSPACE6
                                 fi
                             fi
                         fi
@@ -284,42 +284,42 @@ moveworkspace_up() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == $WORKSPACE9 ]]; then
-        moveToWorkspace $WORKSPACE0
-        if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE7 ]]; then
+        moveToWorkspace $WORKSPACE8
+        if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
             break
         else
-            moveToWorkspace $WORKSPACE9
+            moveToWorkspace $WORKSPACE7
             moveToWorkspace $WORKSPACE1
             if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
-                moveToWorkspace $WORKSPACE9
+                moveToWorkspace $WORKSPACE7
                 moveToWorkspace $WORKSPACE2
                 if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
-                    moveToWorkspace $WORKSPACE9
+                    moveToWorkspace $WORKSPACE7
                     moveToWorkspace $WORKSPACE3
                     if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
-                        moveToWorkspace $WORKSPACE9
+                        moveToWorkspace $WORKSPACE7
                         moveToWorkspace $WORKSPACE4
                         if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
-                            moveToWorkspace $WORKSPACE9
+                            moveToWorkspace $WORKSPACE7
                             moveToWorkspace $WORKSPACE5
                             if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
-                                moveToWorkspace $WORKSPACE9
-                                moveToWorkspace $WORKSPACE8
-                                if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
+                                moveToWorkspace $WORKSPACE7
+                                moveToWorkspace $WORKSPACE6
+                                if [[ "$(workspacemonitor $WORKSPACE6)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
-                                    moveToWorkspace $WORKSPACE9
+                                    moveToWorkspace $WORKSPACE7
                                 fi
                             fi
                         fi
@@ -327,42 +327,42 @@ moveworkspace_up() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == $WORKSPACE0 ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE8 ]]; then
         moveToWorkspace $WORKSPACE1
         if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
             break
         else
-            moveToWorkspace $WORKSPACE0
+            moveToWorkspace $WORKSPACE8
             moveToWorkspace $WORKSPACE2
             if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
-                moveToWorkspace $WORKSPACE0
+                moveToWorkspace $WORKSPACE8
                 moveToWorkspace $WORKSPACE3
                 if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
-                    moveToWorkspace $WORKSPACE0
+                    moveToWorkspace $WORKSPACE8
                     moveToWorkspace $WORKSPACE4
                     if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
-                        moveToWorkspace $WORKSPACE0
+                        moveToWorkspace $WORKSPACE8
                         moveToWorkspace $WORKSPACE5
                         if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
-                            moveToWorkspace $WORKSPACE0
                             moveToWorkspace $WORKSPACE8
-                            if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
+                            moveToWorkspace $WORKSPACE6
+                            if [[ "$(workspacemonitor $WORKSPACE6)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
-                                moveToWorkspace $WORKSPACE0
-                                moveToWorkspace $WORKSPACE9
-                                if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+                                moveToWorkspace $WORKSPACE8
+                                moveToWorkspace $WORKSPACE7
+                                if [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
-                                    moveToWorkspace $WORKSPACE0
+                                    moveToWorkspace $WORKSPACE8
                                 fi
                             fi
                         fi
@@ -374,42 +374,42 @@ moveworkspace_up() {
 }
 
 moveworkspace_down() {
-    if [[ $ACTIVEWORKSPACE == $WORKSPACE0 ]]; then
-        moveToWorkspace $WORKSPACE9
-        if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+    if [[ $ACTIVEWORKSPACE == $WORKSPACE8 ]]; then
+        moveToWorkspace $WORKSPACE7
+        if [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
             break
         else
-            moveToWorkspace $WORKSPACE0
             moveToWorkspace $WORKSPACE8
-            if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
+            moveToWorkspace $WORKSPACE6
+            if [[ "$(workspacemonitor $WORKSPACE6)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
-                moveToWorkspace $WORKSPACE0
+                moveToWorkspace $WORKSPACE8
                 moveToWorkspace $WORKSPACE5
                 if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
-                    moveToWorkspace $WORKSPACE0
+                    moveToWorkspace $WORKSPACE8
                     moveToWorkspace $WORKSPACE4
                     if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
-                        moveToWorkspace $WORKSPACE0
+                        moveToWorkspace $WORKSPACE8
                         moveToWorkspace $WORKSPACE3
                         if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
-                            moveToWorkspace $WORKSPACE0
+                            moveToWorkspace $WORKSPACE8
                             moveToWorkspace $WORKSPACE2
                             if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
-                                moveToWorkspace $WORKSPACE0
+                                moveToWorkspace $WORKSPACE8
                                 moveToWorkspace $WORKSPACE1
                                 if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
-                                    moveToWorkspace $WORKSPACE0
+                                    moveToWorkspace $WORKSPACE8
                                 fi
                             fi
                         fi
@@ -417,42 +417,42 @@ moveworkspace_down() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == $WORKSPACE9 ]]; then
-        moveToWorkspace $WORKSPACE8
-        if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE7 ]]; then
+        moveToWorkspace $WORKSPACE6
+        if [[ "$(workspacemonitor $WORKSPACE6)" == "$ACTIVEMONITOR" ]]; then
             break
         else
-            moveToWorkspace $WORKSPACE9
+            moveToWorkspace $WORKSPACE7
             moveToWorkspace $WORKSPACE5
             if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
-                moveToWorkspace $WORKSPACE9
+                moveToWorkspace $WORKSPACE7
                 moveToWorkspace $WORKSPACE4
                 if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
-                    moveToWorkspace $WORKSPACE9
+                    moveToWorkspace $WORKSPACE7
                     moveToWorkspace $WORKSPACE3
                     if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
-                        moveToWorkspace $WORKSPACE9
+                        moveToWorkspace $WORKSPACE7
                         moveToWorkspace $WORKSPACE2
                         if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
-                            moveToWorkspace $WORKSPACE9
+                            moveToWorkspace $WORKSPACE7
                             moveToWorkspace $WORKSPACE1
                             if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
-                                moveToWorkspace $WORKSPACE9
-                                moveToWorkspace $WORKSPACE0
-                                if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
+                                moveToWorkspace $WORKSPACE7
+                                moveToWorkspace $WORKSPACE8
+                                if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
-                                    moveToWorkspace $WORKSPACE9
+                                    moveToWorkspace $WORKSPACE7
                                 fi
                             fi
                         fi
@@ -460,42 +460,42 @@ moveworkspace_down() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == $WORKSPACE8 ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE6 ]]; then
         moveToWorkspace $WORKSPACE5
         if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
             break
         else
-            moveToWorkspace $WORKSPACE8
+            moveToWorkspace $WORKSPACE6
             moveToWorkspace $WORKSPACE4
             if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
-                moveToWorkspace $WORKSPACE8
+                moveToWorkspace $WORKSPACE6
                 moveToWorkspace $WORKSPACE3
                 if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
-                    moveToWorkspace $WORKSPACE8
+                    moveToWorkspace $WORKSPACE6
                     moveToWorkspace $WORKSPACE2
                     if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
-                        moveToWorkspace $WORKSPACE8
+                        moveToWorkspace $WORKSPACE6
                         moveToWorkspace $WORKSPACE1
                         if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
+                            moveToWorkspace $WORKSPACE6
                             moveToWorkspace $WORKSPACE8
-                            moveToWorkspace $WORKSPACE0
-                            if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
-                                moveToWorkspace $WORKSPACE8
-                                moveToWorkspace $WORKSPACE9
-                                if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+                                moveToWorkspace $WORKSPACE6
+                                moveToWorkspace $WORKSPACE7
+                                if [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
-                                    moveToWorkspace $WORKSPACE8
+                                    moveToWorkspace $WORKSPACE6
                                 fi
                             fi
                         fi
@@ -524,18 +524,18 @@ moveworkspace_down() {
                         break
                     else
                         moveToWorkspace $WORKSPACE5
-                        moveToWorkspace $WORKSPACE0
-                        if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
+                        moveToWorkspace $WORKSPACE8
+                        if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace $WORKSPACE5
-                            moveToWorkspace $WORKSPACE9
-                            if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+                            moveToWorkspace $WORKSPACE7
+                            if [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace $WORKSPACE5
-                                moveToWorkspace $WORKSPACE8
-                                if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
+                                moveToWorkspace $WORKSPACE6
+                                if [[ "$(workspacemonitor $WORKSPACE6)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace $WORKSPACE5
@@ -562,18 +562,18 @@ moveworkspace_down() {
                     break
                 else
                     moveToWorkspace $WORKSPACE4
-                    moveToWorkspace $WORKSPACE0
-                    if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
+                    moveToWorkspace $WORKSPACE8
+                    if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace $WORKSPACE4
-                        moveToWorkspace $WORKSPACE9
-                        if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+                        moveToWorkspace $WORKSPACE7
+                        if [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace $WORKSPACE4
-                            moveToWorkspace $WORKSPACE8
-                            if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
+                            moveToWorkspace $WORKSPACE6
+                            if [[ "$(workspacemonitor $WORKSPACE6)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace $WORKSPACE4
@@ -600,18 +600,18 @@ moveworkspace_down() {
                 break
             else
                 moveToWorkspace $WORKSPACE3
-                moveToWorkspace $WORKSPACE0
-                if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
+                moveToWorkspace $WORKSPACE8
+                if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace $WORKSPACE3
-                    moveToWorkspace $WORKSPACE9
-                    if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+                    moveToWorkspace $WORKSPACE7
+                    if [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace $WORKSPACE3
-                        moveToWorkspace $WORKSPACE8
-                        if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
+                        moveToWorkspace $WORKSPACE6
+                        if [[ "$(workspacemonitor $WORKSPACE6)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace $WORKSPACE3
@@ -638,18 +638,18 @@ moveworkspace_down() {
             break
         else
             moveToWorkspace $WORKSPACE2
-            moveToWorkspace $WORKSPACE0
-            if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
+            moveToWorkspace $WORKSPACE8
+            if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace $WORKSPACE2
-                moveToWorkspace $WORKSPACE9
-                if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+                moveToWorkspace $WORKSPACE7
+                if [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace $WORKSPACE2
-                    moveToWorkspace $WORKSPACE8
-                    if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
+                    moveToWorkspace $WORKSPACE6
+                    if [[ "$(workspacemonitor $WORKSPACE6)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace $WORKSPACE2
@@ -676,18 +676,18 @@ moveworkspace_down() {
             fi
         fi
     elif [[ $ACTIVEWORKSPACE == $WORKSPACE1 ]]; then
-        moveToWorkspace $WORKSPACE0
-        if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
+        moveToWorkspace $WORKSPACE8
+        if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace $WORKSPACE1
-            moveToWorkspace $WORKSPACE9
-            if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
+            moveToWorkspace $WORKSPACE7
+            if [[ "$(workspacemonitor $WORKSPACE7)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace $WORKSPACE1
-                moveToWorkspace $WORKSPACE8
-                if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
+                moveToWorkspace $WORKSPACE6
+                if [[ "$(workspacemonitor $WORKSPACE6)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace $WORKSPACE1
