@@ -2,6 +2,14 @@
 
 ACTIVEWORKSPACE=$(hyprctl -j activeworkspace | jq -r '.name')
 ACTIVEMONITOR=$(hyprctl -j activeworkspace | jq -r '.monitor')
+WORKSPACE1='A:Web'
+WORKSPACE2='B:Editor'
+WORKSPACE3='C:Term'
+WORKSPACE4='D:Book'
+WORKSPACE5='E:Multimedia'
+WORKSPACE8='F:System'
+WORKSPACE9='G:Office'
+WORKSPACE0='H:Other'
 
 moveToWorkspace() {
     local workspace_name=$1
@@ -13,39 +21,39 @@ workspacemonitor() {
 }
 
 moveworkspace_up() {
-    if [[ $ACTIVEWORKSPACE == 'A:Web' ]]; then
+    if [[ $ACTIVEWORKSPACE == $WORKSPACE1 ]]; then
         moveToWorkspace B:Editor
-        if [[ "$(workspacemonitor 'B:Editor')" == $ACTIVEMONITOR ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE2)" == $ACTIVEMONITOR ]]; then
             break
         else
             moveToWorkspace A:Web
             moveToWorkspace C:Term
-            if [[ "$(workspacemonitor 'C:Term')" == $ACTIVEMONITOR ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE3)" == $ACTIVEMONITOR ]]; then
                 break
             else
                 moveToWorkspace A:Web
                 moveToWorkspace D:Book
-                if [[ "$(workspacemonitor 'D:Book')" == $ACTIVEMONITOR ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE4)" == $ACTIVEMONITOR ]]; then
                     break
                 else
                     moveToWorkspace A:Web
                     moveToWorkspace E:Multimedia
-                    if [[ "$(workspacemonitor 'E:Multimedia')" == $ACTIVEMONITOR ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE5)" == $ACTIVEMONITOR ]]; then
                         break
                     else
                         moveToWorkspace A:Web
                         moveToWorkspace F:System
-                        if [[ "$(workspacemonitor 'F:System')" == $ACTIVEMONITOR ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
                             break
                         else
                             moveToWorkspace A:Web
                             moveToWorkspace G:Office
-                            if [[ "$(workspacemonitor 'G:Office')" == $ACTIVEMONITOR ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE9)" == $ACTIVEMONITOR ]]; then
                                 break
                             else
                                 moveToWorkspace A:Web
                                 moveToWorkspace H:Other
-                                if [[ "$(workspacemonitor 'H:Other')" == $ACTIVEMONITOR ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE0)" == $ACTIVEMONITOR ]]; then
                                     break
                                 else
                                     moveToWorkspace A:Web
@@ -56,39 +64,39 @@ moveworkspace_up() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'B:Editor' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE2 ]]; then
         moveToWorkspace C:Term
-        if [[ "$(workspacemonitor 'C:Term')" == $ACTIVEMONITOR ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE3)" == $ACTIVEMONITOR ]]; then
             break
         else
             moveToWorkspace B:Editor
             moveToWorkspace D:Book
-            if [[ "$(workspacemonitor 'D:Book')" == $ACTIVEMONITOR ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE4)" == $ACTIVEMONITOR ]]; then
                 break
             else
                 moveToWorkspace B:Editor
                 moveToWorkspace E:Multimedia
-                if [[ "$(workspacemonitor 'E:Multimedia')" == $ACTIVEMONITOR ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE5)" == $ACTIVEMONITOR ]]; then
                     break
                 else
                     moveToWorkspace B:Editor
                     moveToWorkspace F:System
-                    if [[ "$(workspacemonitor 'F:System')" == $ACTIVEMONITOR ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
                         break
                     else
                         moveToWorkspace B:Editor
                         moveToWorkspace G:Office
-                        if [[ "$(workspacemonitor 'G:Office')" == $ACTIVEMONITOR ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE9)" == $ACTIVEMONITOR ]]; then
                             break
                         else
                             moveToWorkspace B:Editor
                             moveToWorkspace H:Other
-                            if [[ "$(workspacemonitor 'H:Other')" == $ACTIVEMONITOR ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE0)" == $ACTIVEMONITOR ]]; then
                                 break
                             else
                                 moveToWorkspace B:Editor
                                 moveToWorkspace A:Web
-                                if [[ "$(workspacemonitor 'A:Web')" == $ACTIVEMONITOR ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE1)" == $ACTIVEMONITOR ]]; then
                                     break
                                 else
                                     moveToWorkspace B:Editor
@@ -99,39 +107,39 @@ moveworkspace_up() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'C:Term' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE3 ]]; then
         moveToWorkspace D:Book
-        if [[ "$(workspacemonitor 'D:Book')" == $ACTIVEMONITOR ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE4)" == $ACTIVEMONITOR ]]; then
             break
         else
             moveToWorkspace C:Term
             moveToWorkspace E:Multimedia
-            if [[ "$(workspacemonitor 'E:Multimedia')" == $ACTIVEMONITOR ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE5)" == $ACTIVEMONITOR ]]; then
                 break
             else
                 moveToWorkspace C:Term
                 moveToWorkspace F:System
-                if [[ "$(workspacemonitor 'F:System')" == $ACTIVEMONITOR ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
                     break
                 else
                     moveToWorkspace C:Term
                     moveToWorkspace G:Office
-                    if [[ "$(workspacemonitor 'G:Office')" == $ACTIVEMONITOR ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE9)" == $ACTIVEMONITOR ]]; then
                         break
                     else
                         moveToWorkspace C:Term
                         moveToWorkspace H:Other
-                        if [[ "$(workspacemonitor 'H:Other')" == $ACTIVEMONITOR ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE0)" == $ACTIVEMONITOR ]]; then
                             break
                         else
                             moveToWorkspace C:Term
                             moveToWorkspace A:Web
-                            if [[ "$(workspacemonitor 'A:Web')" == $ACTIVEMONITOR ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE1)" == $ACTIVEMONITOR ]]; then
                                 break
                             else
                                 moveToWorkspace C:Term
                                 moveToWorkspace B:Editor
-                                if [[ "$(workspacemonitor 'B:Editor')" == $ACTIVEMONITOR ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE2)" == $ACTIVEMONITOR ]]; then
                                     break
                                 else
                                     moveToWorkspace C:Term
@@ -142,39 +150,39 @@ moveworkspace_up() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'D:Book' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE4 ]]; then
         moveToWorkspace E:Multimedia
-        if [[ "$(workspacemonitor 'E:Multimedia')" == $ACTIVEMONITOR ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE5)" == $ACTIVEMONITOR ]]; then
             break
         else
             moveToWorkspace D:Book
             moveToWorkspace F:System
-            if [[ "$(workspacemonitor 'F:System')" == $ACTIVEMONITOR ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE8)" == $ACTIVEMONITOR ]]; then
                 break
             else
                 moveToWorkspace D:Book
                 moveToWorkspace G:Office
-                if [[ "$(workspacemonitor 'G:Office')" == $ACTIVEMONITOR ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE9)" == $ACTIVEMONITOR ]]; then
                     break
                 else
                     moveToWorkspace D:Book
                     moveToWorkspace H:Other
-                    if [[ "$(workspacemonitor 'H:Other')" == $ACTIVEMONITOR ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE0)" == $ACTIVEMONITOR ]]; then
                         break
                     else
                         moveToWorkspace D:Book
                         moveToWorkspace A:Web
-                        if [[ "$(workspacemonitor 'A:Web')" == $ACTIVEMONITOR ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE1)" == $ACTIVEMONITOR ]]; then
                             break
                         else
                             moveToWorkspace D:Book
                             moveToWorkspace B:Editor
-                            if [[ "$(workspacemonitor 'B:Editor')" == $ACTIVEMONITOR ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE2)" == $ACTIVEMONITOR ]]; then
                                 break
                             else
                                 moveToWorkspace D:Book
                                 moveToWorkspace C:Term
-                                if [[ "$(workspacemonitor 'C:Term')" == $ACTIVEMONITOR ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE3)" == $ACTIVEMONITOR ]]; then
                                     break
                                 else
                                     moveToWorkspace D:Book
@@ -185,39 +193,39 @@ moveworkspace_up() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'E:Multimedia' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE5 ]]; then
         moveToWorkspace F:System
-        if [[ "$(workspacemonitor 'F:System')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace E:Multimedia
             moveToWorkspace G:Office
-            if [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace E:Multimedia
                 moveToWorkspace H:Other
-                if [[ "$(workspacemonitor 'H:Other')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace E:Multimedia
                     moveToWorkspace A:Web
-                    if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace E:Multimedia
                         moveToWorkspace B:Editor
-                        if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace E:Multimedia
                             moveToWorkspace C:Term
-                            if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace E:Multimedia
                                 moveToWorkspace D:Book
-                                if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace E:Multimedia
@@ -229,39 +237,39 @@ moveworkspace_up() {
             fi
         fi
 
-    elif [[ $ACTIVEWORKSPACE == 'F:System' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE8 ]]; then
         moveToWorkspace G:Office
-        if [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
             break
-        elif [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+        elif [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
             moveToWorkspace F:System
             moveToWorkspace H:Other
-            if [[ "$(workspacemonitor 'H:Other')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace F:System
                 moveToWorkspace A:Web
-                if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace F:System
                     moveToWorkspace B:Editor
-                    if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace F:System
                         moveToWorkspace C:Term
-                        if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace F:System
                             moveToWorkspace D:Book
-                            if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace F:System
                                 moveToWorkspace E:Multimedia
-                                if [[ "$(workspacemonitor 'E:Multimedia')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace F:System
@@ -272,39 +280,39 @@ moveworkspace_up() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'G:Office' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE9 ]]; then
         moveToWorkspace H:Other
-        if [[ "$(workspacemonitor 'H:Other')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace G:Office
             moveToWorkspace A:Web
-            if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace G:Office
                 moveToWorkspace B:Editor
-                if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace G:Office
                     moveToWorkspace C:Term
-                    if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace G:Office
                         moveToWorkspace D:Book
-                        if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace G:Office
                             moveToWorkspace E:Multimedia
-                            if [[ "$(workspacemonitor 'E:Multimedia')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace G:Office
                                 moveToWorkspace F:System
-                                if [[ "$(workspacemonitor 'F:System')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace G:Office
@@ -315,39 +323,39 @@ moveworkspace_up() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'H:Other' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE0 ]]; then
         moveToWorkspace A:Web
-        if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace H:Other
             moveToWorkspace B:Editor
-            if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace H:Other
                 moveToWorkspace C:Term
-                if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace H:Other
                     moveToWorkspace D:Book
-                    if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace H:Other
                         moveToWorkspace E:Multimedia
-                        if [[ "$(workspacemonitor 'E:Multimedia')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace H:Other
                             moveToWorkspace F:System
-                            if [[ "$(workspacemonitor 'F:System')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace H:Other
                                 moveToWorkspace G:Office
-                                if [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace H:Other
@@ -362,39 +370,39 @@ moveworkspace_up() {
 }
 
 moveworkspace_down() {
-    if [[ $ACTIVEWORKSPACE == 'H:Other' ]]; then
+    if [[ $ACTIVEWORKSPACE == $WORKSPACE0 ]]; then
         moveToWorkspace G:Office
-        if [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace H:Other
             moveToWorkspace F:System
-            if [[ "$(workspacemonitor 'F:System')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace H:Other
                 moveToWorkspace E:Multimedia
-                if [[ "$(workspacemonitor 'E:Multimedia')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace H:Other
                     moveToWorkspace D:Book
-                    if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace H:Other
                         moveToWorkspace C:Term
-                        if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace H:Other
                             moveToWorkspace B:Editor
-                            if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace H:Other
                                 moveToWorkspace A:Web
-                                if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace H:Other
@@ -405,39 +413,39 @@ moveworkspace_down() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'G:Office' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE9 ]]; then
         moveToWorkspace F:System
-        if [[ "$(workspacemonitor 'F:System')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace G:Office
             moveToWorkspace E:Multimedia
-            if [[ "$(workspacemonitor 'E:Multimedia')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace G:Office
                 moveToWorkspace D:Book
-                if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace G:Office
                     moveToWorkspace C:Term
-                    if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace G:Office
                         moveToWorkspace B:Editor
-                        if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace G:Office
                             moveToWorkspace A:Web
-                            if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace G:Office
                                 moveToWorkspace H:Other
-                                if [[ "$(workspacemonitor 'H:Other')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace G:Office
@@ -448,39 +456,39 @@ moveworkspace_down() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'F:System' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE8 ]]; then
         moveToWorkspace E:Multimedia
-        if [[ "$(workspacemonitor 'E:Multimedia')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace F:System
             moveToWorkspace D:Book
-            if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace F:System
                 moveToWorkspace C:Term
-                if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace F:System
                     moveToWorkspace B:Editor
-                    if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace F:System
                         moveToWorkspace A:Web
-                        if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace F:System
                             moveToWorkspace H:Other
-                            if [[ "$(workspacemonitor 'H:Other')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace F:System
                                 moveToWorkspace G:Office
-                                if [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace F:System
@@ -491,39 +499,39 @@ moveworkspace_down() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'E:Multimedia' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE5 ]]; then
         moveToWorkspace D:Book
-        if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace E:Multimedia
             moveToWorkspace C:Term
-            if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace E:Multimedia
                 moveToWorkspace B:Editor
-                if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace E:Multimedia
                     moveToWorkspace A:Web
-                    if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace E:Multimedia
                         moveToWorkspace H:Other
-                        if [[ "$(workspacemonitor 'H:Other')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace E:Multimedia
                             moveToWorkspace G:Office
-                            if [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace E:Multimedia
                                 moveToWorkspace F:System
-                                if [[ "$(workspacemonitor 'F:System')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace E:Multimedia
@@ -534,39 +542,39 @@ moveworkspace_down() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'D:Book' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE4 ]]; then
         moveToWorkspace C:Term
-        if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace D:Book
             moveToWorkspace B:Editor
-            if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace D:Book
                 moveToWorkspace A:Web
-                if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace D:Book
                     moveToWorkspace H:Other
-                    if [[ "$(workspacemonitor 'H:Other')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace D:Book
                         moveToWorkspace G:Office
-                        if [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace D:Book
                             moveToWorkspace F:System
-                            if [[ "$(workspacemonitor 'F:System')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace D:Book
                                 moveToWorkspace E:Multimedia
-                                if [[ "$(workspacemonitor 'E:Multimedia')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace D:Book
@@ -577,39 +585,39 @@ moveworkspace_down() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'C:Term' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE3 ]]; then
         moveToWorkspace B:Editor
-        if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace C:Term
             moveToWorkspace A:Web
-            if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace C:Term
                 moveToWorkspace H:Other
-                if [[ "$(workspacemonitor 'H:Other')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace C:Term
                     moveToWorkspace G:Office
-                    if [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace C:Term
                         moveToWorkspace F:System
-                        if [[ "$(workspacemonitor 'F:System')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace C:Term
                             moveToWorkspace E:Multimedia
-                            if [[ "$(workspacemonitor 'E:Multimedia')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace C:Term
                                 moveToWorkspace D:Book
-                                if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace C:Term
@@ -620,39 +628,39 @@ moveworkspace_down() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'B:Editor' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE2 ]]; then
         moveToWorkspace A:Web
-        if [[ "$(workspacemonitor 'A:Web')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE1)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace B:Editor
             moveToWorkspace H:Other
-            if [[ "$(workspacemonitor 'H:Other')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace B:Editor
                 moveToWorkspace G:Office
-                if [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace B:Editor
                     moveToWorkspace F:System
-                    if [[ "$(workspacemonitor 'F:System')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace B:Editor
                         moveToWorkspace E:Multimedia
-                        if [[ "$(workspacemonitor 'E:Multimedia')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace B:Editor
                             moveToWorkspace D:Book
-                            if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace B:Editor
                                 moveToWorkspace C:Term
-                                if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace B:Editor
@@ -663,39 +671,39 @@ moveworkspace_down() {
                 fi
             fi
         fi
-    elif [[ $ACTIVEWORKSPACE == 'A:Web' ]]; then
+    elif [[ $ACTIVEWORKSPACE == $WORKSPACE1 ]]; then
         moveToWorkspace H:Other
-        if [[ "$(workspacemonitor 'H:Other')" == "$ACTIVEMONITOR" ]]; then
+        if [[ "$(workspacemonitor $WORKSPACE0)" == "$ACTIVEMONITOR" ]]; then
             break
         else
             moveToWorkspace A:Web
             moveToWorkspace G:Office
-            if [[ "$(workspacemonitor 'G:Office')" == "$ACTIVEMONITOR" ]]; then
+            if [[ "$(workspacemonitor $WORKSPACE9)" == "$ACTIVEMONITOR" ]]; then
                 break
             else
                 moveToWorkspace A:Web
                 moveToWorkspace F:System
-                if [[ "$(workspacemonitor 'F:System')" == "$ACTIVEMONITOR" ]]; then
+                if [[ "$(workspacemonitor $WORKSPACE8)" == "$ACTIVEMONITOR" ]]; then
                     break
                 else
                     moveToWorkspace A:Web
                     moveToWorkspace E:Multimedia
-                    if [[ "$(workspacemonitor 'E:Multimedia')" == "$ACTIVEMONITOR" ]]; then
+                    if [[ "$(workspacemonitor $WORKSPACE5)" == "$ACTIVEMONITOR" ]]; then
                         break
                     else
                         moveToWorkspace A:Web
                         moveToWorkspace D:Book
-                        if [[ "$(workspacemonitor 'D:Book')" == "$ACTIVEMONITOR" ]]; then
+                        if [[ "$(workspacemonitor $WORKSPACE4)" == "$ACTIVEMONITOR" ]]; then
                             break
                         else
                             moveToWorkspace A:Web
                             moveToWorkspace C:Term
-                            if [[ "$(workspacemonitor 'C:Term')" == "$ACTIVEMONITOR" ]]; then
+                            if [[ "$(workspacemonitor $WORKSPACE3)" == "$ACTIVEMONITOR" ]]; then
                                 break
                             else
                                 moveToWorkspace A:Web
                                 moveToWorkspace  B:Editor
-                                if [[ "$(workspacemonitor 'B:Editor')" == "$ACTIVEMONITOR" ]]; then
+                                if [[ "$(workspacemonitor $WORKSPACE2)" == "$ACTIVEMONITOR" ]]; then
                                     break
                                 else
                                     moveToWorkspace  A:Web
