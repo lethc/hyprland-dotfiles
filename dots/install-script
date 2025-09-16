@@ -201,7 +201,6 @@ yay -S hyprsunset
 # yay -S youtube-local
 # yay -S  sioyek 
 # yay -S  amberol
-# yay -S  morgen-bin
 # yay -S pcloud-drive
 
 # AND YOU
@@ -363,7 +362,7 @@ python -m venv debugpy
 debugpy/bin/python -m pip install debugpy
 # Rust, C and C++ debuger
 yay -S codelldb-bin
-yay -S thunderbird thunderbird-i18n-en-gb todoist-appimage morgen-bin
+yay -S thunderbird thunderbird-i18n-en-gb todoist-appimage
 
  
 echo "######################################"
