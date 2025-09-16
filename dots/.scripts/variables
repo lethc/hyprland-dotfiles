@@ -4,6 +4,17 @@ launcher="rofi"
 # Dark theme
 launcher_theme="spotlight-dark"
 
+WORKSPACE1="A:Cyþan"
+WORKSPACE2="B:Līþan"
+WORKSPACE3="C:Wǣpn"
+WORKSPACE4="D:Wæl"
+WORKSPACE5="E:Ġemynd"
+WORKSPACE6="F:Ġesiht"
+WORKSPACE7="G:Hām"
+WORKSPACE8="H:Sċēawere"
+WORKSPACE9="I:Mēce"
+WORKSPACE0="J:Frēoþ"
+
 # Light theme
 # launcher_theme="spotlight"
 
