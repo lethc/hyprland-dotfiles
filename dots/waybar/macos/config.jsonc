@@ -60,15 +60,16 @@
             "format": "{icon}",
             "all-outputs": false,
             "format-icons": {
-                "A:Web": "  Web ",
-                "B:Editor": " 󰞇 Editor ",
-                "C:Term": " 󱓹 Term ",
-                "D:Book": "  Book ",
-                "E:Multimedia": "  Multimedia ",
-                "F:System": " 󱉏 System ",
-                "G:Office": "  Office ",
-                "H:Other": " 󰨈 Other ",
-                "I:Freedom": "Freedom"
+                "A:Cyþan": "  Cyþan ",
+                "B:Līþan": " 󰠳 Līþan ",
+                "C:Wǣpn": " 󰄻 Wǣpn ",
+                "D:Wæl": " 󰧼 Wæl ",
+                "E:Ġemynd": "  Ġemynd ",
+                "F:Ġesiht": " 󰡮 Ġesiht ",
+                "G:Hām": "  Hām ",
+                "H:Sċēawere": "  Sċēawere",
+                "I:Mēce": " 󰞇 Mēce ",
+                "J:Frēoþ": "  Frēoþ"
             },
             "on-scroll-up": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace up",
             "on-scroll-down": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace down"

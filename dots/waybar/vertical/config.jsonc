@@ -25,24 +25,28 @@
         "on-click": "activate",
         "all-outputs": true,
         "format-icons": {
-            "A:Web": "",
-            "B:Editor": "󰞇",
-            "C:Term": "󱓹",
-            "D:Book": "",
-            "E:Multimedia": "",
-            "F:System": "󱉏",
-            "G:Office": "",
-            "H:Other": "󰨈"
+            "A:Cyþan": "  Cyþan ",
+            "B:Līþan": " 󰠳 Līþan ",
+            "C:Wǣpn": " 󰄻 Wǣpn ",
+            "D:Wæl": " 󰧼 Wæl ",
+            "E:Ġemynd": "  Ġemynd ",
+            "F:Ġesiht": " 󰡮 Ġesiht ",
+            "G:Hām": "  Hām ",
+            "H:Sċēawere": "  Sċēawere",
+            "I:Mēce": " 󰞇 Mēce ",
+            "J:Frēoþ": "  Frēoþ"
         },
         "persistent-workspaces": {
-            "A:Web": "",
-            "B:Editor": "󰞇",
-            "C:Term": "󱓹",
-            "D:Book": "",
-            "E:Multimedia": "",
-            "F:System": "󱉏",
-            "G:Office": "",
-            "H:Other": "󰨈"
+            "A:Cyþan": "  Cyþan ",
+            "B:Līþan": " 󰠳 Līþan ",
+            "C:Wǣpn": " 󰄻 Wǣpn ",
+            "D:Wæl": " 󰧼 Wæl ",
+            "E:Ġemynd": "  Ġemynd ",
+            "F:Ġesiht": " 󰡮 Ġesiht ",
+            "G:Hām": "  Hām ",
+            "H:Sċēawere": "  Sċēawere",
+            "I:Mēce": " 󰞇 Mēce ",
+            "J:Frēoþ": "  Frēoþ"
         }
     },
     "hyprland/submap": {
