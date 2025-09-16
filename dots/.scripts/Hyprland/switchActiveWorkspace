@@ -1,7 +1,9 @@
 #!/bin/bash
 
+source $HOME/.config/hypr/dots/.scripts/variables
+
 # List of workspaces in order
-WORKSPACES=("A:Web" "B:Editor" "C:Term" "D:Book" "E:Multimedia" "F:System" "G:Office" "H:Other")
+WORKSPACES=($WORKSPACE1 $WORKSPACE2 $WORKSPACE3 $WORKSPACE4 $WORKSPACE5 $WORKSPACE6 $WORKSPACE7 $WORKSPACE8 $WORKSPACE9 $WORKSPACE0)
 
 # Get the current active workspace and monitor
 ACTIVE_WORKSPACE=$(hyprctl -j activeworkspace | jq -r '.name')

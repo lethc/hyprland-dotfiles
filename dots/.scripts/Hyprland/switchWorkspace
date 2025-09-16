@@ -1,19 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+source $HOME/.config/hypr/dots/.scripts/variables
 
 ACTIVEWORKSPACE=$(hyprctl -j activeworkspace | jq -r '.name')
 ACTIVEMONITOR=$(hyprctl -j activeworkspace | jq -r '.monitor')
-WORKSPACE1='A:Web'
-WORKSPACE2='B:Editor'
-WORKSPACE3='C:Term'
-WORKSPACE4='D:Book'
-WORKSPACE5='E:Multimedia'
-
-WORKSPACE6='1'
-WORKSPACE7='2'
-
-WORKSPACE8='F:System'
-WORKSPACE9='G:Office'
-WORKSPACE0='H:Other'
 
 moveToWorkspace() {
     local workspace_name=$1

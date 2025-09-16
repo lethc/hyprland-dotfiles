@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source $HOME/.config/hypr/dots/.scripts/variables
+
 # A hyprland script for a laptop-external-monitor setup, toggling between which is in use
 
 # Launch at startup to make hyprland disable the internal monitor if an external monitor is detected and enabled
@@ -44,7 +46,7 @@ if [ "$NUM_MONITORS_ACTIVE" -ge 2 ] && hyprctl monitors | cut --delimiter ' ' --
     hyprctl keyword monitor "$INTERNAL_MONITOR, disable"
 
     # Alternate fix to ensure I start on workspace 1
-    hyprctl dispatch workspace name:A:Web
+    hyprctl dispatch workspace $WORKSPACE1
     exit
 fi
 
@@ -56,14 +58,14 @@ if [ "$NUM_MONITORS" -gt 1 ]; then # Handling multiple monitors
     hyprctl keyword monitor "$EXTERNAL_MONITOR, disable"
 
     # Alternate fix to ensure I start on workspace 1
-    hyprctl dispatch workspace name:A:Web
+    hyprctl dispatch workspace $WORKSPACE1
   else
     hyprctl keyword monitor $EXTERNAL_MONITOR,preferred,0x0,1
     move_all_workspaces_to_monitor $EXTERNAL_MONITOR
     hyprctl keyword monitor "$INTERNAL_MONITOR, disable"
 
     # Alternate fix to ensure I start on workspace 1
-    hyprctl dispatch workspace name:A:Web
+    hyprctl dispatch workspace $WORKSPACE1
   fi
 else  # If the external monitor is disconnected without running this script first, it might become the case that no monitor is on - therefore turn on the laptop monitor!
     hyprctl keyword monitor $INTERNAL_MONITOR,preferred,0x0,1

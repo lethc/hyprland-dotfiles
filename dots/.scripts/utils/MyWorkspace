@@ -1,12 +1,14 @@
 #!/bin/bash
 
+source $HOME/.config/hypr/dots/.scripts/variables
+
 sleep 7
 
 zen-browser &
 
 sleep 3
 
-hyprctl dispatch workspace name:B:Editor
+hyprctl dispatch workspace name:$WORKSPACE2
 
 foot --hold zellij a LostOnTheSeas &
 
