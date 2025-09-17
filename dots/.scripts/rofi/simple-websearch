@@ -2,14 +2,56 @@
 
 source $HOME/.config/hypr/dots/.scripts/variables
 
-# Ask the user for a query
-query=$(rofi -dmenu -i -p "Google Search:" -theme $LAUNCHER_THEME)
+GOOGLE="https://www.google.com/search?q="
+YANDEX="https://yandex.com/search/?text="
+BRAVE="https://search.brave.com/search?q="
+BING="https://www.bing.com/search?q="
 
-# Exit if no query was entered
-[[ -z "$query" ]] && exit 1
+google_search() {
+    # Ask the user for a query
+    query=$(rofi -dmenu -i -theme $LAUNCH1 -p "Google:" )
 
-# Encode spaces as '+'
-encoded_query=$(echo "$query" | sed 's/ /+/g')
+    # Exit if no query was entered
+    [[ -z "$query" ]] && exit 1
 
-# Open in default browser
-xdg-open "https://www.google.com/search?q=$encoded_query"
+    # Encode spaces as '+'
+    encoded_query=$(echo "$query" | sed 's/ /+/g')
+
+    # Open in default browser
+    xdg-open "$GOOGLE$encoded_query"
+}
+yandex_search() {
+    query=$(rofi -dmenu -i -p "Yandex:" -theme $LAUNCH2 )
+
+    [[ -z "$query" ]] && exit 1
+
+    encoded_query=$(echo "$query" | sed 's/ /+/g')
+
+    xdg-open "$YANDEX$encoded_query"
+}
+
+brave_search() {
+    query=$(rofi -dmenu -i -p "Brave:" -theme $LAUNCH3 )
+
+    [[ -z "$query" ]] && exit 1
+
+    encoded_query=$(echo "$query" | sed 's/ /+/g')
+
+    xdg-open "$BRAVE$encoded_query"
+}
+bing_search() {
+    query=$(rofi -dmenu -i -p "Bing:" -theme $LAUNCH4 )
+
+    [[ -z "$query" ]] && exit 1
+
+    encoded_query=$(echo "$query" | sed 's/ /+/g')
+
+    xdg-open "$BING$encoded_query"
+}
+
+case "$1" in
+google) google_search ;;
+yandex) yandex_search ;;
+brave) brave_search ;;
+bing) bing_search ;;
+esac
