@@ -3,6 +3,11 @@
 launcher="rofi"
 # Dark theme
 launcher_theme="spotlight-dark"
+ROFI_THEMES="$HOME/.config/rofi/themes"
+LAUNCH1="${ROFI_THEMES}/Go.rasi"
+LAUNCH2="${ROFI_THEMES}/Ya.rasi"
+LAUNCH3="${ROFI_THEMES}/Bi.rasi"
+LAUNCH4="${ROFI_THEMES}/Br.rasi"
 
 WORKSPACE1="A:Cyþan"
 WORKSPACE2="B:Līþan"
