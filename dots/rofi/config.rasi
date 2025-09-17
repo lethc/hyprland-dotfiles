@@ -1,24 +1,13 @@
 * {
   font:   "Segoe UI Regular 11";
 
-  //prompt
-  //bg0     : #1a1b26;
   bg0     : #363636;
-  //background
-  //bg1     : #1f2335;
   bg1     : #242424;
   bg2     : #24283b;
-  //borders
-  //bg3     : #414868;
   bg3     : rgb(255, 255, 255, 0.2);
-  //apps text
-  //fg0     : #c0caf5;
   fg0     : #DEDEDE;
   fg1     : #a9b1d6;
-  //Scrollbar
-  //fg2     : #737aa2;
   fg2     : #5B5B5B;
-  //red     : #f7768e;
   red     : #315BEF;
   green   : #9ece6a;
   yellow  : #e0af68;
