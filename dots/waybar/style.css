@@ -132,23 +132,27 @@ tooltip label {
 
 #clock {
     font-size: 14px;
-    padding: 0 10px;
+    padding: 0 5px;
     font-weight: bold;
 }
 #battery {
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
-#custom-launcher #clock,
-#battery,
 #cpu,
 #memory,
 #disk,
-#temperature,
+#custom-monitor,
+#battery,
+#custom-sunset {
+    padding: 0 4px;
+    color: @content_main;
+}
+
+#custom-launcher,
+#clock,
 #backlight,
 #custom-notifications,
-#custom-sunset,
-#custom-monitor,
 #network,
 #pulseaudio,
 #custom-media,
@@ -214,10 +218,6 @@ label:focus {
 
 #network.disconnected {
     background-color: #f53c3c;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
 }
 
 #idle_inhibitor.activated {
