@@ -13,17 +13,18 @@
             "custom/launcher",
             // "custom/os_button",
             // "hyprland/window",
-            "hyprland/workspaces",
+            "hyprland/workspaces"
             // "wlr/taskbar"
             // "custom/texttwo",
             // "custom/textthree",
             // "custom/textfour",
             // "custom/textfive"
+        ],
+        "modules-center": [
             "custom/reminder2",
             "custom/separator",
             "custom/reminder"
         ],
-        "modules-center": [],
         "modules-right": [
             // "mpd",
             // "temperature",
@@ -39,7 +40,6 @@
             // "backlight",
             // "keyboard-state",
             "battery",
-            "battery#bat2",
             "clock"
         ],
         "hyprland/window": {
@@ -243,9 +243,6 @@
                 "",
                 ""
             ]
-        },
-        "battery#bat2": {
-            "bat": "BAT2"
         },
         "tray": {
             "icon-size": 14,
