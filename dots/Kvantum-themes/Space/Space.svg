@@ -2091,7 +2091,7 @@
     <path
        id="header-focused"
        d="m 30,450 v -5 h -5 v 5 z"
-       style="fill:#32363e;fill-opacity:1;fill-rule:evenodd;opacity:1"
+       style="fill:#BF616A;fill-opacity:1;fill-rule:evenodd;opacity:1"
        inkscape:connector-curvature="0" />
     <path
        id="header-pressed-left"
@@ -2136,7 +2136,7 @@
     <path
        id="header-pressed"
        d="m 50,445 h -5 v 5 h 5 z"
-       style="fill:#32363e;fill-opacity:1;fill-rule:evenodd"
+       style="fill:#BF616A;fill-opacity:1;fill-rule:evenodd"
        inkscape:connector-curvature="0" />
     <path
        id="header-toggled-left"
@@ -2181,7 +2181,7 @@
     <path
        id="header-toggled"
        d="m 70,450 v -5 h -5 v 5 z"
-       style="fill:#32363e;fill-opacity:1;fill-rule:evenodd"
+       style="fill:#BF616A;fill-opacity:1;fill-rule:evenodd"
        inkscape:connector-curvature="0" />
     <path
        id="header-separator"
