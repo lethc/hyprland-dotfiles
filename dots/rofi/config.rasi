@@ -1,5 +1,5 @@
 * {
-  font:   "Segoe UI Regular 11";
+  font:   "Lexend Deca Regular 11";
 
   bg0     : #363636;
   bg1     : #242424;
@@ -28,7 +28,7 @@ configuration {
     modi: "drun";
     show-icons: true;
     // icon-theme:  "Win11-dark";
-    icon-theme:  "Zephyr";
+    icon-theme:  "Sevi-red-dark";
     display-drun: "";
 }
 
