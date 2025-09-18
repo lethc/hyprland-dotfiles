@@ -187,8 +187,9 @@ yay -S ueberzugpp xournalpp obsidian kooha resources tgpt
 # ASK
 yay -S nodejs-readability-cli firefox-tridactyl-native-bin smile  ttf-joypixels 
 #ttf-misans
-yay -S ttf-ms-win11-auto
+# yay -S ttf-ms-win11-auto
 # ttf-maple Doesn't exist anymore
+yay -S lexend-fonts-git ttf-illinois-mono-git 
 yay -S ttf-maplemono
 yay -S  gtt-bin tori-bin anki-bin zen-browser-bin freetube-bin curd vivaldi google-chrome
 yay -S bun-bin vimv
@@ -275,6 +276,11 @@ cd "${HOME}/Downloads/Git/WhiteSur-icon-theme"
 git clone https://github.com/yeyushengfan258/Reversal-icon-theme.git ~/Downloads/Git/Reversal-icon-theme
 cd "${HOME}/Downloads/Git/Reversal-icon-theme"
 ./install.sh
+
+# Sevi
+git clone https://github.com/TaylanTatli/Sevi.git ~/Downloads/Git/Sevi
+cd "${HOME}/Downloads/Git/Sevi"
+./install.sh -a
 
 # Win11 Icon Theme
 # git clone https://github.com/yeyushengfan258/Win11-icon-theme.git ~/Downloads/Git/Win11-icon-theme
