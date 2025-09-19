@@ -24,7 +24,7 @@ switchLastWindow() {
                 hyprctl dispatch workspace previous
                 hyprctl dispatch movecursortocorner 2
             else
-                break
+                exit
             fi
         fi
     fi
