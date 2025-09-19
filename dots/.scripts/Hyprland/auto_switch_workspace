@@ -1,0 +1,55 @@
+#!/bin/bash
+
+source $HOME/.config/hypr/dots/.scripts/variables
+
+DOTS="$HOME/.config/hypr/dots"
+SCRIPTS="${DOTS}/.scripts"
+HYPRSCRIPTS="${SCRIPTS}/Hyprland"
+HYPRCTL="hyprctl dispatch"
+
+moveToWorkspace() {
+    local workspace_name=$1
+    $HYPRCTL workspace name:$workspace_name
+}
+
+moveToWorkspace1() {
+    local workspace_called=$1
+    if current_workspace=$(hyprctl -j activeworkspace | jq -r '.name') && [[ "$current_workspace" == "$workspace_called" ]]; then
+        $HYPRSCRIPTS/switchLastWindow lastwindow
+    else
+        moveToWorkspace $workspace_called
+    fi
+}
+
+case "$1" in
+one)
+    moveToWorkspace1 $WORKSPACE1
+    ;;
+two)
+    moveToWorkspace1 $WORKSPACE2
+    ;;
+three)
+    moveToWorkspace1 $WORKSPACE3
+    ;;
+four)
+    moveToWorkspace1 $WORKSPACE4
+    ;;
+five)
+    moveToWorkspace1 $WORKSPACE5
+    ;;
+six)
+    moveToWorkspace1 $WORKSPACE6
+    ;;
+seven)
+    moveToWorkspace1 $WORKSPACE7
+    ;;
+eight)
+    moveToWorkspace1 $WORKSPACE8
+    ;;
+nine)
+    moveToWorkspace1 $WORKSPACE9
+    ;;
+ten)
+    moveToWorkspace1 $WORKSPACE0
+    ;;
+esac
