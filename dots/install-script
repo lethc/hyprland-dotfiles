@@ -348,6 +348,11 @@ yay -S  lua51 luarocks
 #git clone https://github.com/lethc/hyprland-dotfiles.git ~/.config/hypr
 git clone https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim
 
+# Download second branch of nvim-dotfiles
+git clone -b light https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim2
+ln -sf "${HOME}/.local/share/nvim/lazy/" "${HOME}/.local/share/nvim2"
+ln -sf "${HOME}/.local/share/nvim/mason/" "${HOME}/.local/share/nvim2"
+
 #sudo npm install neovim
 # npm install neovim
 #sudo npm install -g npm@9.6.2

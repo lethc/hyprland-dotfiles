@@ -1,45 +1,45 @@
 layout {
     default_tab_template {
-        children
         pane size=1 borderless=true {
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-                format_left   "#[fg=blue]▌{mode} #[fg=#6c706c,bold,italic]{session}"
-                format_center "{tabs}"
-                format_right  "{command_git_branch} {datetime}"
+                format_left   "#[fg=#BC6C97]▌{mode}#[fg=#A68295,bold,italic,bg=#341828]{session} {tabs}"
+                // format_center "{tabs}"
+                // format_right  "{command_git_branch} {datetime}"
                 format_space  ""
 
                 border_enabled  "false"
                 border_char     "─"
-                border_format   "#[fg=#6c706c]{char}"
+                border_format   "#[fg=#A68295]{char}"
                 border_position "top"
         
                 hide_frame_for_single_pane "false"
         
-                mode_normal        "#[fg=blue,bold] {name} "
-                mode_locked        "#[fg=red,bold] {name} "
-                mode_resize        "#[fg=white,bold] {name} "
-                mode_pane          "#[fg=white,bold] {name} "
-                mode_tab           "#[fg=white,bold] {name} "
-                mode_scroll        "#[fg=white,bold] {name} "
-                mode_enter_search  "#[fg=white,bold] {name} "
-                mode_search        "#[fg=white,bold] {name} "
-                mode_rename_tab    "#[fg=white,bold] {name} "
-                mode_rename_pane   "#[fg=white,bold] {name} "
-                mode_session       "#[fg=white,bold] {name} "
-                mode_move          "#[fg=white,bold] {name} "
-                mode_prompt        "#[fg=white,bold] {name} "
-                mode_tmux          "#[fg=yellow,bold] {name} "
+                mode_normal        "#[fg=#794b64,bold,bg=#341828] {name} "
+                mode_locked        "#[fg=#856397,bold,bg=#341828] {name} "
+                mode_resize        "#[fg=#6C95BC,bold,bg=#341828] {name} "
+                mode_pane          "#[fg=#784545,bold,bg=#341828] {name} "
+                mode_tab           "#[fg=#784545,bold,bg=#341828] {name} "
+                mode_scroll        "#[fg=#BC956C,bold,bg=#341828] {name} "
+                mode_enter_search  "#[fg=#BC956C,bold,bg=#341828] {name} "
+                mode_search        "#[fg=#BC956C,bold,bg=#341828] {name} "
+                mode_rename_tab    "#[fg=#784545,bold,bg=#341828] {name} "
+                mode_rename_pane   "#[fg=#784545,bold,bg=#341828] {name} "
+                mode_session       "#[fg=#95A682,bold,bg=#341828] {name} "
+                mode_move          "#[fg=#6C95BC,bold,bg=#341828] {name} "
+                mode_prompt        "#[fg=#856397,bold,bg=#341828] {name} "
+                mode_tmux          "#[fg=#BC956C,bold,bg=#341828] {name} "
         
-                tab_normal              "#[fg=#6c706c] {index} {name} "
-                tab_normal_fullscreen   "#[fg=#6c706c] {index} {name} [] "
-                tab_normal_sync         "#[fg=#6c706c] {index} {name} <> "
+                // tab_normal              "#[fg=#534E46] {index} {name} "
+                tab_normal              "#[fg=#534E46,bg=] {name} "
+                tab_normal_fullscreen   "#[fg=#534E46,bg=] {name} [] "
+                tab_normal_sync         "#[fg=#534E46,bg=] {name} <> "
         
-                tab_active              "#[fg=#939993,bold,italic] {name} {floating_indicator}"
-                tab_active_fullscreen   "#[fg=#939993,bold,italic] {name} {fullscreen_indicator}"
-                tab_active_sync         "#[fg=#939993,bold,italic] {name} {sync_indicator}"
+                tab_active              "#[fg=#AD677C,bold,bg=#11080D] ✩ {name} {floating_indicator}"
+                tab_active_fullscreen   "#[fg=#AD677C,bold,bg=#11080D] ✩ {name} {fullscreen_indicator}"
+                tab_active_sync         "#[fg=#AD677C,bold,bg=#11080D] ✩ {name} {sync_indicator}"
         
-                // tab_separator           "#[fg=#6c706c,bg=#181825] | "
-                tab_separator           "#[fg=#6c706c] | "
+                // tab_separator           "#[fg=#534E46,bg=#181825] | "
+                // tab_separator           "#[fg=#534E46,bg=]|"
         
                 tab_sync_indicator       "<> "
                 tab_fullscreen_indicator "[] "
@@ -50,7 +50,7 @@ layout {
                 command_git_branch_interval    "10"
                 command_git_branch_rendermode  "static"
         
-                datetime        "#[fg=#6c706c,bold] {format} "
+                datetime        "#[fg=#A68295,bold] {format} "
                 datetime_format "%A, %d %b %Y %H:%M"
                 datetime_timezone "America/Bogota"
         
@@ -59,5 +59,6 @@ layout {
                 notification_show_interval           "10"
             }
         }
+        children
     }
 }

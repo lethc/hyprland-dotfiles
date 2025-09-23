@@ -605,16 +605,16 @@ themes {
         }
     }
     onedarkpro {
-            fg "#d0cdc8"
+            fg "#D0CDC8"
             bg "#11080d"
             black "#262a2f"
-            red "#da9188"
-            green "#8194a6"
-            yellow "#a69481"
-            blue "#94a681"
-            magenta "#a68295"
+            red "#AD677C"
+            green "#BC6C97"
+            yellow "#BC956C"
+            blue "#95A682"
+            magenta "#DA9086"
             cyan "#d16757"
-            white "#ebedf1"
+            white "#D0CDC8"
             orange "#a8b0b8"
     }
 }
