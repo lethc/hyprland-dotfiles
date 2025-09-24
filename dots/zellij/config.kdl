@@ -606,7 +606,7 @@ themes {
     }
     onedarkpro {
             fg "#D0CDC8"
-            bg "#11080d"
+            bg "#572942" // BG Text Selection depends on it
             black "#262a2f"
             red "#AD677C"
             green "#BC6C97"
