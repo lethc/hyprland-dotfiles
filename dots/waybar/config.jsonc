@@ -31,11 +31,11 @@
             "tray",
             "custom/monitor",
             "custom/sunset",
+            "custom/notifications",
             "cpu",
             "memory",
             "disk",
             "network",
-            "custom/notifications",
             "pulseaudio",
             // "backlight",
             // "keyboard-state",
@@ -136,7 +136,7 @@
         //     "max-length": 50
         // },
         "custom/sunset": {
-            "format": "󰃞 Ξ",
+            "format": "󰃞 ",
             "on-click": "~/.config/waybar/bin/control-hyprsunset enable", // Enable blue-light-filter
             "on-click-right": "~/.config/waybar/bin/control-hyprsunset disable", // Disable blue-light-filter
             "on-scroll-up": "~/.config/waybar/bin/control-hyprsunset increase",
@@ -146,7 +146,7 @@
         },
         "custom/monitor": {
             // "format": " 󰨚 monitor",
-            "format": "󰍺 Μ",
+            "format": "󰍹 ",
             "on-click": "~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
             "on-click-right": "hyprctl reload",
             "tooltip-format": "External Monitor"
