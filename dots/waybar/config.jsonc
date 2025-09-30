@@ -30,13 +30,13 @@
             // "temperature",
             "tray",
             "custom/monitor",
+            "custom/sunset",
             "cpu",
             "memory",
             "disk",
-            "custom/notifications",
             "network",
+            "custom/notifications",
             "pulseaudio",
-            "custom/sunset",
             // "backlight",
             // "keyboard-state",
             "battery",
@@ -59,7 +59,8 @@
             "format": "󰂞",
             "on-click": "swaync-client -t -sw",
             "on-click-right": "swaync-client -t -sw",
-            "tooltip": false
+            "tooltip": true,
+            "tooltip-format": "Notifications"
         },
         "hyprland/workspaces": {
             "all-outputs": false,
@@ -135,7 +136,7 @@
         //     "max-length": 50
         // },
         "custom/sunset": {
-            "format": "󰃞 sunset ",
+            "format": "󰃞 Ξ",
             "on-click": "~/.config/waybar/bin/control-hyprsunset enable", // Enable blue-light-filter
             "on-click-right": "~/.config/waybar/bin/control-hyprsunset disable", // Disable blue-light-filter
             "on-scroll-up": "~/.config/waybar/bin/control-hyprsunset increase",
@@ -145,49 +146,50 @@
         },
         "custom/monitor": {
             // "format": " 󰨚 monitor",
-            "format": " 󰍺 monitor ",
+            "format": "󰍺 Μ",
             "on-click": "~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
             "on-click-right": "hyprctl reload",
             "tooltip-format": "External Monitor"
         },
         "cpu": {
             "interval": 5,
-            "format": " {usage}%"
+            "format": " {usage}"
             // "max-length": 10
         },
         "memory": {
             // "interval": 10,
-            "format": " {}%",
+            "format": " {}",
             // "max-length": 10,
             "tooltip": true,
             "tooltip-format": "RAM - {used:0.1f}GiB used ( {percentage}%)"
         },
         "disk": {
             "interval": 30,
-            "format": "󰋊 {}%",
+            "format": "󰋊 {}",
             "path": "/",
             "tooltip": true,
             "unit": "GB",
             "tooltip-format": "Available {free} of {total} (󰋊 {percentage_used}%)"
         },
         "network": {
-            "format-wifi": "{essid} ({signalStrength}%) ",
+            "format-wifi": " ({signalStrength})",
             "format-ethernet": "󰈀 {ifname}",
             "format-linked": "󰈁 {ifname} (No IP)",
             "format-disconnected": "Disconnected 󰖪 {ifname}",
             // "format-alt": " {ifname}: {ipaddr}/{cidr}",
-            "tooltip-format": "󰊗 {ifname} via {gwaddr}",
+            "tooltip-format": "{essid} ({signalStrength}%) | 󰊗 {ifname} via {gwaddr}",
             // "on-click-middle": "nm-connection-editor"
             "on-click": "nm-connection-editor"
         },
         "pulseaudio": {
             "scroll-step": 5,
-            "format": "{icon}  {volume}%   {format_source}",
+            "format": "{icon}  {volume}",
             "format-bluetooth": " {icon} {volume}% {format_source}",
             "format-bluetooth-muted": "  {icon} {format_source}",
             "format-muted": "  {format_source}",
             "format-source": " {volume}%",
             "format-source-muted": "",
+            "tooltip-format": "Microphone: {format_source}",
             "format-icons": {
                 "default": [
                     "",
@@ -231,10 +233,10 @@
                 "warning": 30,
                 "critical": 15
             },
-            "format": "{icon} {capacity}%",
-            "format-charging": " {capacity}%",
+            "format": "{icon} {capacity}",
+            "format-charging": " {capacity}",
             // "format-full": "<span color='#82A55F'><b>{icon}</b></span>",
-            "format-plugged": " {capacity}%",
+            "format-plugged": " {capacity}",
             "format-alt": "{icon} {time}",
             "format-icons": [
                 "",
