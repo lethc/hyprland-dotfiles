@@ -13,7 +13,7 @@ if [ $? -eq 0 ]; then
     # then Start dolphin in a predefined position and reposition the mouse cursor to the right top corner
     # (dolphin &) && sleep 3 && hyprctl dispatch movecursortocorner 2 && hyprctl dispatch movetoworkspace ...
     # todoist --enable-features=UseOzonePlatform --ozone-platform=wayland &
-    morgen --enable-features=UseOzonePlatform --ozone-platform=wayland &
+    /opt/WeekToDo/weektodo --enable-features=UseOzonePlatform --ozone-platform=wayland %U
     # hyprctl killactive
     sleep 3
     megasync &
