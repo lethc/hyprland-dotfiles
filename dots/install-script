@@ -196,6 +196,7 @@ yay -S bun-bin vimv
 yay -S megasync-bin
 yay -S input-remapper-bin
 yay -S hyprsunset
+yay -S deepin-editor # Use its Icon for tv-lovely && tv-rg
 
 # pipx install wisdom-tree
 
