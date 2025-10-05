@@ -1,5 +1,6 @@
 [
     {
+        // "output": "HDMI-A-1",
         "layer": "top",
         "position": "top",
         "mod": "dock",
@@ -81,7 +82,10 @@
                 "G:Hām": "  Hām ",
                 "H:Sċēawere": "  Sċēawere",
                 "I:Mēce": " 󰞇 Mēce ",
-                "J:Frēoþ": "  Frēoþ"
+                "J:Frēoþ": "  Frēoþ",
+                "K:extra": " Ⅰ Extra ",
+                "L:extraOne": " Ⅱ Extra ",
+                "M:extraTwo": " Ⅲ Extra "
             },
             "workspace-taskbar": {
                 "enable": true,
@@ -287,78 +291,4 @@
             "on-click": "activate"
         }
     }
-    // {
-    //   "layer": "top",
-    //   "position": "bottom",
-    //   "height": 41,
-    //   "width": 2,
-    //   "modules-left": [
-    //     "custom/os_button"
-    //   ],
-    //   "modules-center": [
-    //     "sway/mode",
-    //     "wlr/taskbar"
-    //   ],
-    //   "margin": "4",
-    //   "spacing": "5",
-    //   "sway/window": {
-    //     "max-length": 50
-    //   },
-    //   "custom/os_button": {
-    //     "format": "🔍",
-    //     "on-click": "rofi --show drun",
-    //     "tooltip": false
-    //   },
-    //   "wlr/taskbar": {
-    //     "format": "{icon}",
-    //     "icon-size": 36,
-    //     "spacing": 3,
-    //     "on-click-middle": "close",
-    //     "tooltip-format": "{title}",
-    //     "ignore-list": [],
-    //     "on-click": "activate"
-    //   }
-    // "sway/mode": {
-    //     "format": "<span style=\"italic\">{}</span>"
-    // },
-    // "sway/scratchpad": {
-    //     "format": "{icon} {count}",
-    //     "show-empty": false,
-    //     "format-icons": [
-    //         "",
-    //         ""
-    //     ],
-    //     "tooltip": true,
-    //     "tooltip-format": "{app}: {title}"
-    // },
-    // "mpd": {
-    //     "format": "  {title} - {artist} {stateIcon} [{elapsedTime:%M:%S}/{totalTime:%M:%S}] {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}[{songPosition}/{queueLength}] [{volume}%]",
-    //     "format-disconnected": " Disconnected",
-    //     "format-stopped": " {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
-    //     "unknown-tag": "N/A",
-    //     "interval": 2,
-    //     "consume-icons": {
-    //         "on": " "
-    //     },
-    //     "random-icons": {
-    //         "on": " "
-    //     },
-    //     "repeat-icons": {
-    //         "on": " "
-    //     },
-    //     "single-icons": {
-    //         "on": "1 "
-    //     },
-    //     "state-icons": {
-    //         "paused": "",
-    //         "playing": ""
-    //     },
-    //     "tooltip-format": "MPD (connected)",
-    //     "tooltip-format-disconnected": "MPD (disconnected)",
-    //     "on-click": "mpc toggle",
-    //     "on-click-right": "foot -a ncmpcpp ncmpcpp",
-    //     "on-scroll-up": "mpc volume +2",
-    //     "on-scroll-down": "mpc volume -2"
-    // },
-    // }
 ]
