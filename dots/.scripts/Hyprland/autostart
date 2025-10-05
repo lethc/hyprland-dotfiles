@@ -3,22 +3,27 @@
 # Will start bluemail and kill its window only once it's loaded (like a background process since it can't by itself)
 # Will also move the focus to the HDMI-A-1 monitor
 
+blanket &
+sleep 3
+
 hyprctl dispatch focusmonitor HDMI-A-1
 # (bluemail &) && sleep 5
-# hyprctl dispatch movecursortocorner 2
 sleep 2 && hyprctl dispatch killactive && sleep 1
 if [ $? -eq 0 ]; then
 
     hyprctl dispatch focusmonitor HDMI-A-1
     # then Start dolphin in a predefined position and reposition the mouse cursor to the right top corner
     # (dolphin &) && sleep 3 && hyprctl dispatch movecursortocorner 2 && hyprctl dispatch movetoworkspace ...
-    # todoist --enable-features=UseOzonePlatform --ozone-platform=wayland &
-    /opt/WeekToDo/weektodo --enable-features=UseOzonePlatform --ozone-platform=wayland %U
+    /opt/WeekToDo/weektodo --enable-features=UseOzonePlatform --ozone-platform=waylan &
     # hyprctl killactive
-    sleep 3
+    sleep 1
     megasync &
-    sleep 3
     hyprctl dispatch focusmonitor HDMI-A-1
+    sleep 1
+    foot &
+    sleep 2
+    hyprctl dispatch movecursortocorner 2
+    pkill foot
     # hyprctl dispatch togglespecialworkspace files
 else
     notify-send "something went wrong"
