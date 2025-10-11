@@ -1,20 +1,10 @@
+@import "font.rasi"
+@import "dark-colors.rasi"
+@import "default-config.rasi"
+
+// Fallback Configuration
+
 * {
-  font:   "Lexend Deca Regular 12";
-
-  bg0     : #363636;
-  bg1     : #242424;
-  bg2     : #24283b;
-  bg3     : rgb(255, 255, 255, 0.2);
-  fg0     : #DEDEDE;
-  fg1     : #a9b1d6;
-  fg2     : #5B5B5B;
-  red     : #315BEF;
-  green   : #9ece6a;
-  yellow  : #e0af68;
-  blue    : #7aa2f7;
-  magenta : #9a7ecc;
-  cyan    : #4abaaf;
-
   background-color : transparent;
   text-color       : @fg0;
 
