@@ -99,7 +99,8 @@ ln -sf "${HOME}/.config/hypr/dots/code-flags.conf" "${HOME}/.config"
 ln -sf "${HOME}/.config/hypr/dots/freetube.desktop" "${HOME}/.local/share/applications/"
 ln -sf "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark" "${HOME}/.themes"
 rm -r "${HOME}/.config/gtk-4.0"
-cp -r "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark/gtk-4.0" "${HOME}/.config"
+# cp -r "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark/gtk-4.0" "${HOME}/.config"
+ln -sf "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark/gtk-4.0" "${HOME}/.config"
 echo "Material-Red-Dark linked"
 
 
