@@ -1,16 +1,14 @@
-/* MACOS SPOTLIGHT LIKE DARK THEME FOR ROFI  */
-/* Author: Newman Sanchez (https://github.com/newmanls) */
-
 * {
-    font:   "Montserrat 12";
+    font:   "Lexend Deca Regular 12";
 
-    bg0:    #242424E6;
+    bg0     : #11080dE6;
     bg1:    #7E7E7E80;
-    bg2:    #0860f2E6;
+    bg2:    #F07178E6;
 
-    fg0:    #DEDEDE;
+    fg0:    #D0CDC8;
     fg1:    #FFFFFF;
     fg2:    #DEDEDE80;
+    transparent: rgba(0, 0, 0, 0.1);
 
     background-color:   transparent;
     text-color:         @fg0;
@@ -25,7 +23,14 @@ window {
 
     location:       center;
     width:          640;
-    border-radius:  8;
+    border:          1;
+    border-radius:  12;
+    border-color:   @bg1;
+    // doesn't work
+    shadow: true;
+    shadow-radius: 10;
+    shadow-opacity: 0.75;
+    corner-radius: 12;
 }
 
 inputbar {
@@ -37,7 +42,7 @@ inputbar {
 
 icon-search {
     expand:     false;
-    filename:   "search";
+    filename:   "search-symbolic";
     size: 28px;
 }
 
