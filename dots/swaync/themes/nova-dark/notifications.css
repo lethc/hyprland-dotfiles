@@ -12,7 +12,7 @@
     /*text-selected:         @background; */
 
     all: unset;
-    font-size: 14px;
+    font-size: 1rem;
     font-family: 'Lexend Deca';
     transition: 200ms;
     color: @text;
@@ -106,11 +106,11 @@
 
 .summary {
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .body {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .floating-notifications.background
