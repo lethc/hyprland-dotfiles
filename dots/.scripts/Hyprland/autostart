@@ -14,7 +14,7 @@ if [ $? -eq 0 ]; then
     hyprctl dispatch focusmonitor HDMI-A-1
     # then Start dolphin in a predefined position and reposition the mouse cursor to the right top corner
     # (dolphin &) && sleep 3 && hyprctl dispatch movecursortocorner 2 && hyprctl dispatch movetoworkspace ...
-    /opt/WeekToDo/weektodo --enable-features=UseOzonePlatform --ozone-platform=waylan &
+    weektodo --enable-features=UseOzonePlatform --ozone-platform=wayland &
     # hyprctl killactive
     sleep 1
     megasync &
