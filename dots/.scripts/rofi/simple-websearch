@@ -31,7 +31,7 @@ yandex_search() {
 }
 
 brave_search() {
-    query=$(rofi -dmenu -i -p "Brave:" -theme $LAUNCH3 )
+    query=$(rofi -dmenu -i -p "Brave:" -theme $LAUNCH4 )
 
     [[ -z "$query" ]] && exit 1
 
@@ -40,7 +40,7 @@ brave_search() {
     xdg-open "$BRAVE$encoded_query"
 }
 bing_search() {
-    query=$(rofi -dmenu -i -p "Bing:" -theme $LAUNCH4 )
+    query=$(rofi -dmenu -i -p "Bing:" -theme $LAUNCH3 )
 
     [[ -z "$query" ]] && exit 1
 
