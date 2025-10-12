@@ -14,7 +14,8 @@
             "custom/launcher",
             // "custom/os_button",
             // "hyprland/window",
-            "hyprland/workspaces"
+            "hyprland/workspaces",
+            "hyprland/workspaces#special"
             // "wlr/taskbar"
             // "custom/texttwo",
             // "custom/textthree",
@@ -66,6 +67,7 @@
         "hyprland/workspaces": {
             "all-outputs": false,
             "warp-on-scroll": false,
+            "show-special": false,
             "format": "{icon}{windows}",
             // "icon-size": 32,
             // "spacing": 16,
@@ -94,6 +96,36 @@
                 "icon-size": 18,
                 "on-click-window": "~/.config/waybar/bin/focus-window.sh {address} {button}"
             }
+        },
+        "hyprland/workspaces#special": {
+            "all-outputs": false,
+            "warp-on-scroll": false,
+            "show-special": true,
+            "format": "{icon}{windows}",
+            "format-window-separator": "",
+            "format-icons": {
+                "notes": " notes",
+                "files": " files"
+            },
+            // "persistent-workspaces": {
+            //     "special": "*"
+            // },
+            "ignore-workspaces": [
+                "[0-9]*",
+                "A:Cyþan",
+                "B:Līþan",
+                "C:Wǣpn",
+                "D:Wæl",
+                "E:Ġemynd",
+                "F:Ġesiht",
+                "G:Hām",
+                "H:Sċēawere",
+                "I:Mēce",
+                "J:Frēoþ",
+                "K:extra",
+                "L:extraOne",
+                "M:extraTwo"
+            ] // Remove normal workspaces
         },
         "custom/texttwo": {
             "exec": "echo 'File'",

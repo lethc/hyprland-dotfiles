@@ -109,6 +109,12 @@ tooltip label {
     color: @warning_color;
 }
 
+#workspaces.special button.urgent {
+    background: @warning-color;
+    border-bottom: 3px dashed @warning_color;
+    color: @warning_color;
+}
+
 #taskbar button {
     min-width: 50px;
     /* border-bottom: 3px solid @border_main; */
