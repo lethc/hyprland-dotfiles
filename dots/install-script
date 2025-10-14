@@ -150,7 +150,11 @@ echo "########################################"
 # Adding plugins
 hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins
+hyprpm add https://github.com/SsubezZ/hyprtoplr
+hyprpm add https://github.com/0xFMD/hyprmodoro
 hyprpm enable hyprbars
+hyprpm enable hyprtoplr
+hyprpm enable hyprmodoro
 hyprpm update
 hyprpm reload -n
 
