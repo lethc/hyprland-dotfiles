@@ -2,9 +2,9 @@
 
 source $HOME/.config/hypr/dots/.scripts/utils/wallpaper/variables/vars
 
-function setVar(){
+function setVar() {
     checkENVDir $2
-    echo $1 > "$save_location/$2"
+    echo $1 >"$save_location/$2"
 }
 
 function checkENVDir() {
@@ -25,9 +25,18 @@ doc() {
         background  Sets the image location of the active wallpaper"
 }
 
-case $1 in          #function #file param #file name
-    primary)		setVar $2 primary_screen	;;
-    background)		setVar $2 background        ;;
-    help)           doc                         ;;
-    *)              doc                         ;;            
+case $1 in #function #file param #file name
+primary)
+    setVar "$2" primary_screen
+    ;;
+background)
+    shift
+    setVar "$*" background
+    ;;
+help)
+    doc
+    ;;
+*)
+    doc
+    ;;
 esac

@@ -12,7 +12,9 @@ cd $wallpaper_folder
 randomImage=""
 
 # Run the command.
-randomImage=$(shuf -n 1 -e *.jpg *.png *.jpeg)
+# randomImage=$(shuf -n 1 -e *.jpg *.png *.jpeg)
+# Searches wallpaper recursively
+randomImage=$(find "$wallpaper_folder" -type f \( -iname '*.jpg' -o -iname '*.png' -o -iname '*.jpeg' \) | shuf -n 1)
 
 $wallpaper_scripts/variables/set_env background "$wallpaper_folder/$randomImage"
 

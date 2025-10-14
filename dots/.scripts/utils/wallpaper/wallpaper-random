@@ -1,0 +1,124 @@
+#!/usr/bin/env bash
+# hyprland-swww-random-wallpaper.sh
+# Random wallpaper changer for Hyprland using swww (recursive version)
+# Usage: ./hyprland-swww-random-wallpaper.sh [-i INTERVAL] [-d "dir1:dir2:..."] [-n]
+#  -i INTERVAL   seconds between changes (default: 600)
+#  -d DIRS       colon-separated list of directories to search for images
+#  -n            run once and exit (no loop)
+#
+# The script attempts to call `swww set <file>` first, and falls back to `swww img <file>`
+# so it should work with several swww versions.
+
+# Variable of Wallpapers Directory
+source $HOME/.config/hypr/dots/.scripts/utils/wallpaper/variables/vars
+set -euo pipefail
+IFS=$'\n\t'
+
+INTERVAL=600
+# WALL_DIRECTORY=("$HOME/Pictures/Wallpapers")
+RUN_ONCE=false
+EXT_PATTERN='\.(jpg|jpeg|png|webp|bmp|heic)$'
+
+while getopts ":i:d:n" opt; do
+    case $opt in
+    i) INTERVAL=$OPTARG ;;
+    d)
+        IFS=":" read -r -a DIRS <<<"$OPTARG"
+        ;;
+    n) RUN_ONCE=true ;;
+    *)
+        echo "Usage: $0 [-i seconds] [-d dir1:dir2:...] [-n run-once]" >&2
+        exit 2
+        ;;
+    esac
+done
+
+# find images recursively in given directories
+find_images() {
+    local dirs=("${WALL_DIRECTORY[@]}")
+    local list=()
+    for d in "${dirs[@]}"; do
+        if [[ -d "$d" ]]; then
+            while IFS= read -r -d $'\0' f; do
+                list+=("$f")
+            done < <(find "$d" -type f -regextype posix-extended -iregex ".*${EXT_PATTERN}" -print0 2>/dev/null)
+        fi
+    done
+    printf "%s\n" "${list[@]}"
+}
+
+choose_random() {
+    local arr=()
+    while IFS= read -r line; do
+        [[ -n "$line" ]] && arr+=("$line")
+    done <<<"$1"
+
+    if ((${#arr[@]} == 0)); then
+        return 1
+    fi
+
+    # choose random index
+    local idx=$((RANDOM % ${#arr[@]}))
+    printf "%s" "${arr[$idx]}"
+}
+
+set_wallpaper() {
+    local file="$1"
+    if command -v swww >/dev/null 2>&1; then
+        # Try swww set then fallback to swww img for older/newer versions
+        if swww set "$file" >/dev/null 2>&1; then
+            return 0
+        fi
+        if swww img -t any --transition-bezier 0.0,0.0,1.0,1.0 --transition-duration .8 --transition-step 255 --transition-fps 60 "$file" >/dev/null 2>&1; then
+            return 0
+        fi
+        swww set "$file" || swww img -t any --transition-bezier 0.0,0.0,1.0,1.0 --transition-duration .8 --transition-step 255 --transition-fps 60 "$file"
+    else
+        echo "swww not found in PATH" >&2
+        return 2
+    fi
+}
+
+LAST_WALLPAPER_FILE=""
+
+iteration() {
+    local imgs
+    imgs=$(find_images || true)
+    if [[ -z "$imgs" ]]; then
+        echo "No images found in: ${WALL_DIRECTORY[*]}" >&2
+        return 1
+    fi
+
+    local choice
+    for i in {1..10}; do
+        choice=$(choose_random "$imgs") || break
+        [[ "$choice" != "$LAST_WALLPAPER_FILE" ]] && break
+    done
+
+    if [[ -z "$choice" ]]; then
+        choice=$LAST_WALLPAPER_FILE
+    fi
+
+    if set_wallpaper "$choice"; then
+        LAST_WALLPAPER_FILE="$choice"
+        echo "Set wallpaper: $choice"
+
+        # Save wallpaper path using your set_env system
+        "$set_env" background "$choice"
+
+        return 0
+    else
+        echo "Failed to set wallpaper: $choice" >&2
+        return 2
+    fi
+}
+
+if $RUN_ONCE; then
+    iteration
+    exit $?
+fi
+
+while true; do
+    iteration || true
+    sleep "$INTERVAL"
+done
