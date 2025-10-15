@@ -156,14 +156,14 @@
         },
         "custom/reminder": {
             "format": "{}",
-            "exec": "~/Home/Scripts/Rofi/reminder",
+            "exec": "~/Home/Scripts/Rofi/reminder goal",
             "return-type": "json",
             "interval": 10800,
             "signal": 8
         },
         "custom/reminder2": {
             "format": "{}",
-            "exec": "~/Home/Scripts/Rofi/reminder2",
+            "exec": "~/Home/Scripts/Rofi/reminder now",
             "return-type": "json",
             "interval": 10800,
             "signal": 8
