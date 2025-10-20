@@ -152,9 +152,11 @@ hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm add https://github.com/SsubezZ/hyprtoplr
 hyprpm add https://github.com/0xFMD/hyprmodoro
+hyprpm add https://github.com/daxisunder/hyprfocus
 hyprpm enable hyprbars
 hyprpm enable hyprtoplr
 hyprpm enable hyprmodoro
+hyprpm enable hyprfocus
 hyprpm update
 hyprpm reload -n
 
