@@ -33,7 +33,7 @@ function exportBackground(){
     # load the background variables
     background_image=$(head -1 $temp_folder/background)
 
-    [ -z $background_image ] && background_image="$wallpaper_default/Dream-world.jpg"
+    [ -z $background_image ] && background_image="$wallpaper_default/chess.png"
 
 
     export BACKGROUND_IMAGE=$background_image
