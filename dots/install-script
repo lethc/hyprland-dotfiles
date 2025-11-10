@@ -8,11 +8,12 @@ mkdir ~/Home
 mkdir ~/Documents/Library
 mkdir ~/.local/bin
 mkdir ~/Downloads/Git
+mkdir "${HOME}/.themes"
 sleep 2
 cd ~/Downloads/Git
 
 # ASKN
-sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar swaync zoxide lsd bat swww television
+sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar swaync zoxide lsd bat swww television figlet keyd
 sudo pacman -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
 # ASK
@@ -100,7 +101,7 @@ ln -sf "${HOME}/.config/hypr/dots/freetube.desktop" "${HOME}/.local/share/applic
 ln -sf "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark" "${HOME}/.themes"
 rm -r "${HOME}/.config/gtk-4.0"
 # cp -r "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark/gtk-4.0" "${HOME}/.config"
-ln -sf "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark/gtk-4.0" "${HOME}/.config"
+ln -sf "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark/gtk-4.0" "${HOME}/.config" # Make sure nwg-look is not modifying gtk-4 Configs
 echo "Material-Red-Dark linked"
 
 
@@ -205,7 +206,13 @@ yay -S ttf-maplemono
 yay -S  gtt-bin tori-bin anki-bin zen-browser-bin freetube-bin curd vivaldi google-chrome
 yay -S bun-bin vimv
 yay -S megasync-bin
-yay -S input-remapper-bin
+# yay -S input-remapper-bin # Replaced by keyd
+echo "ENABLING KEYD"
+# Enable input-remapper (keyd)
+sudo systemctl enable --now keyd
+sudo ln -sf "${HOME}/.config/hypr/dots/keyd/default.conf" "/etc/keyd/default.conf"
+sudo keyd reload
+
 yay -S hyprsunset
 yay -S deepin-editor # Use its Icon for tv-lovely && tv-rg
 
@@ -274,9 +281,9 @@ cd "${HOME}/Downloads/Git/Win11-gtk-theme"
 ./install.sh --tweaks round -l
 
 # Download Material-GTK-Themes
-git clone https://github.com/Fausto-Korpsvart/Material-GTK-Themes.git ~/Downloads/Git/Material-GTK-Themes
-cd "${HOME}/Downloads/Git/Material-GTK-Themes/themes"
-./install.sh -t red -l 
+# git clone https://github.com/Fausto-Korpsvart/Material-GTK-Themes.git ~/Downloads/Git/Material-GTK-Themes
+# cd "${HOME}/Downloads/Git/Material-GTK-Themes/themes"
+# ./install.sh -t red -l 
 
 ## DOWNLOAD ICON THEMES
 # WhiteSur Icon Theme
@@ -293,6 +300,9 @@ cd "${HOME}/Downloads/Git/Reversal-icon-theme"
 git clone https://github.com/TaylanTatli/Sevi.git ~/Downloads/Git/Sevi
 cd "${HOME}/Downloads/Git/Sevi"
 ./install.sh -a
+
+# echo "Patch yellow dolphin icon to Red"
+sudo cp  "${HOME}/.config/hypr/dots/icons/file-manager.svg" "${HOME}/.local/share/icons/Sevi-red-dark/apps/scalable/"
 
 # Win11 Icon Theme
 # git clone https://github.com/yeyushengfan258/Win11-icon-theme.git ~/Downloads/Git/Win11-icon-theme
@@ -385,7 +395,7 @@ python -m venv debugpy
 debugpy/bin/python -m pip install debugpy
 # Rust, C and C++ debuger
 yay -S codelldb-bin
-yay -S thunderbird thunderbird-i18n-en-gb todoist-appimage
+yay -S thunderbird thunderbird-i18n-en-gb todoist-appimage minder
 
  
 echo "######################################"
