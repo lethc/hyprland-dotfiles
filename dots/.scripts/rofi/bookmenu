@@ -1,5 +1,6 @@
 #!/bin/sh
 
+LAUNCHER_THEME="spotlight-dark"
 source $HOME/.config/hypr/dots/.scripts/variables
 
 ConfigFolder=${XDG_CONFIG_HOME:-"$HOME/.config"}/bookmenu
@@ -100,8 +101,9 @@ fi
 SelectFinder() {
   case "$FuzzyFinder" in
     rofi)
-      rofi -dmenu -i -p "$Prompt" -theme $LAUNCHER_THEME -theme-str "window { width: 40%; }" \
-        -theme-str "entry { font: '$Font'; }" ;;
+      rofi -dmenu -i -p "$Prompt" -theme-str "window { width: 40%; }" -theme $LAUNCHER_THEME;;
+      # rofi -dmenu -i -p "$Prompt" -theme $LAUNCHER_THEME -theme-str "window { width: 40%; }" \
+      #   -theme-str "entry { font: '$Font'; }" ;;
     fzf)
       fzf ;;
     *) Err 1 "$FuzzyFinder is not a supported fuzzy finder" ;;
