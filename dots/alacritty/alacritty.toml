@@ -1,0 +1,199 @@
+# ============================================================
+# Alacritty configuration converted from your Kitty config
+# ============================================================
+
+[window]
+padding = { x = 4, y = 4 }
+dynamic_padding = false
+decorations = "full"
+startup_mode = "Maximized"
+
+# ============================================================
+# COLORS (from kitty-theme.conf)
+# ============================================================
+
+[colors.primary]
+foreground = "#dcdfe4"
+background = "#1e222a"
+
+[colors.cursor]
+text = "#292929"
+cursor = "#404040"
+
+[colors.selection]
+text = "#dcdfe4"
+background = "#405060"
+
+[colors.normal]
+black   = "#1e222a"
+red     = "#e06c75"
+green   = "#98c379"
+yellow  = "#e5c07b"
+blue    = "#61afef"
+magenta = "#c678dd"
+cyan    = "#56b6c2"
+white   = "#dcdfe4"
+
+[colors.bright]
+black   = "#545862"
+red     = "#e06c75"
+green   = "#98c379"
+yellow  = "#e5c07b"
+blue    = "#61afef"
+magenta = "#c678dd"
+cyan    = "#56b6c2"
+white   = "#ffffff"
+
+[colors.hints]
+start = { foreground = "#1e222a", background = "#9ece6a" }
+end = { foreground = "#1e222a", background = "#9ece6a" }
+
+# Tab bar colors (Alacritty has no tab bar)
+# Included only for reference:
+# active_tab_background = "#16161e"
+# inactive_tab_background = "#16161e"
+
+
+# ============================================================
+# FONTS
+# ============================================================
+
+# [font]
+# size = 11
+# builtin_box_drawing = true
+
+# [font.normal]
+# family = "Illinois Mono"
+# style = "Regular"
+#
+# [font.bold]
+# family = "Illinois Mono"
+# style = "Bold"
+#
+# [font.italic]
+# family = "Illinois Mono"
+# style = "Bold Italic"
+#
+# [font.bold_italic]
+# family = "Illinois Mono"
+# style = "Bold Italic"
+
+# Kitty: adjust_line_height 5 + line_spacing 2
+# Equivalent in Alacritty:
+[font]
+offset = { x = 0, y = 5 }
+glyph_offset = { x = 0, y = 2 }
+
+# ============================================================
+# CURSOR
+# ============================================================
+
+[cursor]
+style = { shape = "Beam", blinking = "Off" }
+thickness = 0.3
+
+# ============================================================
+# MOUSE
+# ============================================================
+
+[mouse]
+hide_when_typing = true
+
+# ============================================================
+# HYPERLINKS
+# ============================================================
+
+# Kitty curl underline = Not supported directly
+# But Alacritty uses normal + URL detection by default.
+
+# [mouse]
+# url = { launcher = "xdg-open", modifiers = "None" }
+
+# ============================================================
+# PERFORMANCE
+# ============================================================
+
+# [window]
+# Equivalent to sync_to_monitor yes
+# dynamic_title = true
+
+# [general]
+# Equivalent to repaint_delay/input_delay
+# live_config_reload = true
+
+# ============================================================
+# KEYBINDINGS (as close as possible)
+# ============================================================
+
+[[keyboard.bindings]]
+key = "H"
+mods = "Control|Alt"
+action = "None"  # No window navigation API in Alacritty
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Control|Alt"
+action = "None"
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Control|Alt"
+action = "None"
+
+[[keyboard.bindings]]
+key = "J"
+mods = "Control|Alt"
+action = "None"
+
+# Buffers A/B – Alacritty has a clipboard only → mapped to Clipboard
+
+[[keyboard.bindings]]
+key = "F1"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "F2"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "F3"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "F4"
+action = "Paste"
+
+# URL hints → Alacritty alternative: Vi mode hints
+
+[[keyboard.bindings]]
+key = "E"
+mods = "Control|Shift"
+action = "SearchForward"
+
+[[keyboard.bindings]]
+key = "M"
+mods = "Control"
+action = "SearchForward"
+
+# Kitty toggle layout stack – NO equivalent
+
+# New window/tab with cwd (Alacritty supports new instance only)
+
+[[keyboard.bindings]]
+key = "Enter"
+mods = "Control|Shift"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key = "T"
+mods = "Control|Shift"
+action = "SpawnNewInstance"
+
+# Set tab title – not supported in Alacritty
+
+# ============================================================
+# SHELL
+# ============================================================
+
+[shell]
+program = "/bin/zsh"
