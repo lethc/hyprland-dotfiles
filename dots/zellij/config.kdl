@@ -690,7 +690,7 @@ default_shell "zsh"
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-default_layout "special"
+// default_layout "special"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)
@@ -750,11 +750,11 @@ scroll_buffer_size 10000
 // that will be used by default if this option is not set.
 // Examples:
 //
-// copy_command "xclip -selection clipboard" // x11
+copy_command "xclip -selection clipboard" // x11
 // copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 // 
-copy_command "wl-copy"
+// copy_command "wl-copy"
  
 // Choose the destination for copied text
 // Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
