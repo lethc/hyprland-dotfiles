@@ -18,7 +18,7 @@ background = "#1e222a"
 
 [colors.cursor]
 text = "#292929"
-cursor = "#404040"
+# cursor = "#404040"
 
 [colors.selection]
 text = "#dcdfe4"
@@ -88,9 +88,9 @@ glyph_offset = { x = 0, y = 2 }
 # CURSOR
 # ============================================================
 
-[cursor]
-style = { shape = "Beam", blinking = "Off" }
-thickness = 0.3
+# [cursor]
+# style = { shape = "Beam", blinking = "Off" }
+# thickness = 0.3
 
 # ============================================================
 # MOUSE
@@ -190,6 +190,9 @@ mods = "Control|Shift"
 action = "SpawnNewInstance"
 
 # Set tab title – not supported in Alacritty
+
+[selection] # Text selection
+save_to_clipboard = true  # Automatically copy selection
 
 # ============================================================
 # SHELL
