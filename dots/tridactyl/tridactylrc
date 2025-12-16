@@ -36,7 +36,6 @@ bind J tabprev
 bind gC tabduplicate
 bind <C-m> composite hint -Jpipe a href | shellescape | !s mpv --really-quiet
 bind go open https://www.google.com
-bind yt open http://127.0.0.1:9010 
 bind Yt open https://www.youtube.com/
 bind rd open https://www.reddit.com/
 bind ym open https://music.youtube.com
