@@ -4,6 +4,10 @@ echo "######################################"
 echo "####  1.  Important Packags       ####"
 echo "######################################"
 
+# If directories like ~/Downloads were not created
+xdg-user-dirs-update
+# If .config/hypr is in root group
+sudo chown -R LostOnTheSeas:LostOnTheSeas /home/LostOnTheSeas/.config/
 mkdir ~/Home
 mkdir ~/Documents/Library
 mkdir ~/.local/bin
@@ -13,7 +17,7 @@ sleep 2
 cd ~/Downloads/Git
 
 # ASKN
-sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar swaync zoxide lsd bat swww television figlet keyd
+sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar swaync zoxide lsd bat swww television figlet keyd tree-sitter-cli
 sudo pacman -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
 # ASK
@@ -21,7 +25,8 @@ git clone https://aur.archlinux.org/yay-bin.git ~/Downloads/Git/yay-bin/
 cd  ~/Downloads/Git/yay-bin
 makepkg -si
 
-yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-autocomplete-git zsh-sudo-git zsh-vi-mode-git
+yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-sudo-git zsh-theme-powerlevel10k-bin
+# yay -S  zsh-autocomplete-git zsh-vi-mode-git
 yay -S clipse-bin clipse-gui blueberry-wayland
 # When choosing Color scheme: it gotta be Breeze Dark (KColorScheme) to work Properly
 yay -S qt6ct-kde
@@ -151,12 +156,12 @@ echo "########################################"
 # Adding plugins
 hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins
-hyprpm add https://github.com/SsubezZ/hyprtoplr
-hyprpm add https://github.com/0xFMD/hyprmodoro
+#hyprpm add https://github.com/SsubezZ/hyprtoplr
+#hyprpm add https://github.com/0xFMD/hyprmodoro
 hyprpm add https://github.com/daxisunder/hyprfocus
 hyprpm enable hyprbars
-hyprpm enable hyprtoplr
-hyprpm enable hyprmodoro
+#hyprpm enable hyprtoplr
+#hyprpm enable hyprmodoro
 hyprpm enable hyprfocus
 hyprpm update
 hyprpm reload -n
@@ -202,9 +207,11 @@ yay -S nodejs-readability-cli firefox-tridactyl-native-bin smile  ttf-joypixels
 # yay -S ttf-ms-win11-auto
 # ttf-maple Doesn't exist anymore
 yay -S lexend-fonts-git ttf-illinois-mono-git 
-yay -S ttf-maplemono
-yay -S  gtt-bin tori-bin anki-bin zen-browser-bin freetube-bin curd vivaldi google-chrome
-yay -S bun-bin vimv
+# yay -S ttf-maplemono # aur cn repos
+yay -S  gtt-bin anki-bin zen-browser-bin freetube-bin curd vivaldi 
+# yay -S google-chrome
+# yay -S tori-bin
+# yay -S bun-bin vimv
 yay -S megasync-bin
 # yay -S input-remapper-bin # Replaced by keyd
 echo "ENABLING KEYD"
@@ -337,7 +344,7 @@ git clone https://github.com/yeyushengfan258/Win11OS-kde.git ~/Downloads/Git/Win
 
 # DISABLING RIGHT TOP BUTTONS IN GTK-4 APPS
 
-yay -S dconf-editor
+sudo pacman -S dconf-editor
 
 # Go to  org > gnome > desktop > wm > preferences > button-layout
 # AND  Under "custom value" remove everything except for "appmenu" -> 'icon:'
@@ -354,17 +361,17 @@ yay -S dotnet-sdk jdk-lts jdk-lts-doc go
 
 ### JAVASCRIPT RELATED
 # ASKN
-yay -S  nodejs npm 
+sudo pacman -S  nodejs npm 
 # yay -S  bun
 # curl -fsSL https://bun.sh/install | bash
 
 ### PYTHON RELATED
 # ASKN
-yay -S  python-pip python-pipx
+sudo pacman -S  python-pip python-pipx
 
 ### LUA RELATED
 # ASKN
-yay -S  lua51 luarocks
+sudo pacman -S  lua51 luarocks
 
 # Download hypr in ~/.config/hypr before enter here
 #git clone https://github.com/lethc/hyprland-dotfiles.git ~/.config/hypr
@@ -372,20 +379,27 @@ git clone https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim
 
 # Download second branch of nvim-dotfiles
 git clone -b light https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim2
-ln -sf "${HOME}/.local/share/nvim/lazy/" "${HOME}/.local/share/nvim2"
-ln -sf "${HOME}/.local/share/nvim/mason/" "${HOME}/.local/share/nvim2"
+# Run nvim first
+mkdir -p "${HOME}/.local/share/nvim2/"
+# ln -sf "${HOME}/.local/share/nvim/lazy/" "${HOME}/.local/share/nvim2/"
+# ln -sf "${HOME}/.local/share/nvim/mason/" "${HOME}/.local/share/nvim2/"
+
+# To avoid install nvim-java from installing new stuff that takes some space and time to download
+ln -s "${HOME}/.local/share/nvim" "${HOME}/.local/share/nvim2"
 
 #sudo npm install neovim
 # npm install neovim
 #sudo npm install -g npm@9.6.2
 # ASK
-yay -S  shell-color-scripts-git hub prettierd rar
+# yay -S shell-color-scripts-git hub 
+yay -S prettierd rar
 yay -S code-minimap-bin
 # ASKN
-yay -S  python-black prettier stylua ripgrep 
-yay -S  fd gzip unzip deno 
-yay -S  composer python-pynvim shfmt
-yay -S  yarn 
+sudo pacman -S  python-black prettier stylua ripgrep 
+sudo pacman -S  fd gzip unzip deno 
+sudo pacman -S  composer python-pynvim shfmt
+sudo pacman -S  yarn 
+sudo pacman -S minder
 # yay -S   #python-rpcq
 
 # Python Debug in neovim
@@ -395,7 +409,10 @@ python -m venv debugpy
 debugpy/bin/python -m pip install debugpy
 # Rust, C and C++ debuger
 yay -S codelldb-bin
-yay -S thunderbird thunderbird-i18n-en-gb todoist-appimage minder
+# Doesn't even open once you've added your account in Wayland. IDK 24/12/25
+# yay -S mailspring-bin # If Password Management Error edit /usr/share/applications/mailspring.desktop
+# Exec=mailspring --password-store="gnome-libsecret" %U
+# yay -S thunderbird thunderbird-i18n-en-gb todoist-appimage 
 
  
 echo "######################################"
