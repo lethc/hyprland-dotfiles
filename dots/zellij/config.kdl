@@ -750,8 +750,8 @@ scroll_buffer_size 10000
 // that will be used by default if this option is not set.
 // Examples:
 //
-copy_command "xclip -selection clipboard" // x11
-// copy_command "wl-copy"                    // wayland
+// copy_command "xclip -selection clipboard" // x11
+copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 // 
 // copy_command "wl-copy"
