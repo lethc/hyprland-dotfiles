@@ -2,7 +2,7 @@
 # Directory variables
 hypr=$HOME/.config/hypr
 wallpaper_scripts=$hypr/dots/.scripts/utils/wallpaper
-my_wallpapers=$HOME/Pictures/Wallpapers
+my_wallpapers=$HOME/Wallpapers
 
 # Set environment variables
 save_location=$wallpaper_scripts/variables/temp
