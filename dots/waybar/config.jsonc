@@ -272,7 +272,7 @@
                 "critical": 15
             },
             "format": "{icon} {capacity}",
-            "format-charging": " {capacity}",
+            "format-charging": "󰃨 {capacity}",
             // "format-full": "<span color='#82A55F'><b>{icon}</b></span>",
             "format-plugged": " {capacity}",
             "format-alt": "{icon} {time}",
