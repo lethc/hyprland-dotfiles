@@ -1,5 +1,6 @@
 #!/bin/bash
 
+TERM="foot -c /home/LostOnTheSeas/.config/foot/themes/dark-red.ini"
 launcher="rofi"
 # Dark theme
 launcher_theme="spotlight-dark"
@@ -19,9 +20,6 @@ WORKSPACE7="G:Hām"
 WORKSPACE8="H:Sċēawere"
 WORKSPACE9="I:Mēce"
 WORKSPACE0="J:Frēoþ"
-
-# Light theme
-# launcher_theme="spotlight"
 
 export LAUNCHER=$launcher
 export LAUNCHER_THEME=$launcher_theme
