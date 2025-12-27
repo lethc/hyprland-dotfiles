@@ -12,7 +12,7 @@ session=$(zellij ls | \
 # Check if a session was selected
 if [ -n "$session" ]; then
     # Open a new terminal (foot) and attach to the selected session
-    foot --title=CodeSession -e zellij a "$session" &> /dev/null &
+    $TERM --title=CodeSession -e zellij a "$session" &> /dev/null &
     # Uncomment the following lines if fullscreen behavior is required:
     # hyprctl dispatch fullscreen 0
     # hyprctl dispatch fullscreen 0
