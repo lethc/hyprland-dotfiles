@@ -72,7 +72,7 @@ tooltip {
 menu label,
 tooltip label {
     font-size: 14px;
-    color: @content_main;
+    color: @tooltip_fg;
 }
 
 #custom-launcher {
@@ -91,7 +91,7 @@ tooltip label {
 }
 
 #workspaces button.active {
-    color: @content_main;
+    color: @btn_active;
     background: @bg_active_red;
     /* border: 3px solid @white-color; */
 }

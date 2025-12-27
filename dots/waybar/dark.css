@@ -1,7 +1,6 @@
 /* Dark Mode */
 @define-color active rgba(255, 255, 255, 0.2);
 /*base background color*/
-/* #0f0f0fa6 */
 /* @define-color bg_main rgba(15, 15, 15, 0.65);  */
 @define-color bg_main rgba(17, 8, 13, 0.65);
 @define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
@@ -14,6 +13,8 @@
 @define-color border_main rgba(255, 255, 255, 0.2);
 /*text color for entries, views and content in general */
 @define-color content_main #d0cdc8;
+@define-color btn_active #d0cdc8;
+@define-color tooltip_fg #d0cdc8;
 /*text color for entries that are unselected */
 @define-color content_inactive rgba(255, 255, 255, 0.25);
 
