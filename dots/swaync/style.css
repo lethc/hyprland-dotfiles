@@ -1,9 +1,4 @@
-/* Light theme */
-/* @import 'wal/light-mode.css'; */
-
-/* Dark theme */
-@import 'wal/dark-mode.css';
-
+@import 'wal/theme-color.css';
 @import 'themes/nova-dark/notifications.css';
 @import 'themes/nova-dark/central_control.css';
 
