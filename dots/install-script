@@ -281,11 +281,11 @@ cd "${HOME}/Downloads/Git/Orchis-theme"
 ./install.sh
 ./install.sh -l
 
-# Win11 Theme
+# Win11 Theme, USED TO LIGHT THEME
 git clone https://github.com/yeyushengfan258/Win11-gtk-theme.git ~/Downloads/Git/Win11-gtk-theme
 cd "${HOME}/Downloads/Git/Win11-gtk-theme"
 ./install.sh --tweaks round
-./install.sh --tweaks round -l
+# ./install.sh --tweaks round -l # I don't like its gtk-4 theme so Not needed
 
 # Download Material-GTK-Themes
 # git clone https://github.com/Fausto-Korpsvart/Material-GTK-Themes.git ~/Downloads/Git/Material-GTK-Themes
@@ -339,7 +339,7 @@ git clone https://github.com/Rudraksh88/zephyr-kvantum.git ~/Downloads/Git/Zephy
 # Download Whitesur Theme
 # git clone https://github.com/vinceliuice/WhiteSur-kde.git ~/Downloads/Git/WhiteSur-kde
 
-# Download Win11 Theme
+# Download Win11 Theme # NEEDED to switch to a light theme in qt (kvantum) apps
 git clone https://github.com/yeyushengfan258/Win11OS-kde.git ~/Downloads/Git/Win11OS-kde
 
 # DISABLING RIGHT TOP BUTTONS IN GTK-4 APPS
