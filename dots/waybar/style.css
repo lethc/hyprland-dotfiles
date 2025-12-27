@@ -1,8 +1,5 @@
-/* Light theme */
-/* @import 'light.css'; */
-
-/* Dark theme */
-@import 'dark.css';
+/* theme */
+@import "dark.css";
 
 * {
     min-height: 0;
