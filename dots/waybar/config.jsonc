@@ -32,6 +32,8 @@
             // "temperature",
             "tray",
             "custom/monitor",
+            "custom/darktheme",
+            // "custom/updates",
             "custom/sunset",
             "custom/notifications",
             "cpu",
@@ -188,6 +190,22 @@
             "on-click": "~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
             "on-click-right": "hyprctl reload",
             "tooltip-format": "External Monitor"
+        },
+        // "custom/updates": {
+        //     "format": "{}",
+        //     "interval": 10800,
+        //     "exec": "~/.config/waybar/bin/updatecheck",
+        //     "return-type": "json",
+        //     "exec-if": "exit 0",
+        //     "signal": 8
+        // },
+        "custom/darktheme": {
+            "format": "{}",
+            "exec": "bash ~/.config/waybar/bin/theme-state.sh" ,
+            "return-type": "json",
+            "on-click": "bash ~/.config/waybar/bin/theme-state.sh toggle;  bash ~/Home/Scripts/automation/theme-switcher.sh",
+            "signal": 12,
+            "interval": "once"
         },
         "cpu": {
             "interval": 5,

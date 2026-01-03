@@ -25,6 +25,7 @@
 }
 
 #custom-monitor:hover,
+#custom-darktheme:hover,
 #custom-sunset:hover,
 #custom-notifications:hover,
 #backlight:hover,
@@ -145,13 +146,13 @@ tooltip label {
 #cpu,
 #memory,
 #disk,
-#custom-monitor,
-#battery,
-#custom-sunset {
+#battery {
     padding: 0 4px;
     color: @content_main;
 }
-
+#custom-sunset,
+#custom-monitor,
+#custom-darktheme,
 #custom-launcher,
 #clock,
 #backlight,
