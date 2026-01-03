@@ -17,7 +17,7 @@ sleep 2
 cd ~/Downloads/Git
 
 # ASKN
-sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar swaync zoxide lsd bat swww television figlet keyd tree-sitter-cli
+sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar swaync zoxide lsd bat swww television figlet keyd tree-sitter-cli sof-firmware
 sudo pacman -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
 # ASK
