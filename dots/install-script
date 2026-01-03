@@ -27,7 +27,7 @@ makepkg -si
 
 yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-sudo-git zsh-theme-powerlevel10k-bin
 # yay -S  zsh-autocomplete-git zsh-vi-mode-git
-yay -S clipse-bin clipse-gui blueberry-wayland
+yay -S clipse-bin clipse-gui blueberry-wayland pw-volume
 # When choosing Color scheme: it gotta be Breeze Dark (KColorScheme) to work Properly
 yay -S qt6ct-kde
 #yay -S qt5ct-kde 
