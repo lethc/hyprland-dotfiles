@@ -25,6 +25,7 @@
 }
 
 #custom-monitor:hover,
+#custom-pipewire:hover,
 #custom-darktheme:hover,
 #custom-sunset:hover,
 #custom-notifications:hover,
@@ -152,6 +153,7 @@ tooltip label {
 }
 #custom-sunset,
 #custom-monitor,
+#custom-pipewire,
 #custom-darktheme,
 #custom-launcher,
 #clock,

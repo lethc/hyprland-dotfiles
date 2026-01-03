@@ -40,7 +40,8 @@
             "memory",
             "disk",
             "network",
-            "pulseaudio",
+            // "pulseaudio",
+            "custom/pipewire",
             // "backlight",
             // "keyboard-state",
             "battery",
@@ -176,7 +177,7 @@
         //     "max-length": 50
         // },
         "custom/sunset": {
-            "format": "󰃞 ",
+            "format": "󰃞",
             "on-click": "~/.config/waybar/bin/control-hyprsunset enable", // Enable blue-light-filter
             "on-click-right": "~/.config/waybar/bin/control-hyprsunset disable", // Disable blue-light-filter
             "on-scroll-up": "~/.config/waybar/bin/control-hyprsunset increase",
@@ -186,7 +187,7 @@
         },
         "custom/monitor": {
             // "format": " 󰨚 monitor",
-            "format": "󰍹 ",
+            "format": "󰍹",
             "on-click": "~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
             "on-click-right": "hyprctl reload",
             "tooltip-format": "External Monitor"
@@ -201,7 +202,7 @@
         // },
         "custom/darktheme": {
             "format": "{}",
-            "exec": "bash ~/.config/waybar/bin/theme-state.sh" ,
+            "exec": "bash ~/.config/waybar/bin/theme-state.sh",
             "return-type": "json",
             "on-click": "bash ~/.config/waybar/bin/theme-state.sh toggle;  bash ~/Home/Scripts/automation/theme-switcher.sh",
             "signal": 12,
@@ -237,28 +238,56 @@
             // "on-click-middle": "nm-connection-editor"
             "on-click": "nm-connection-editor"
         },
-        "pulseaudio": {
+        // "pulseaudio": {
+        //     "scroll-step": 5,
+        //     "format": "{icon}  {volume}",
+        //     "format-bluetooth": " {icon} {volume}% {format_source}",
+        //     "format-bluetooth-muted": "  {icon} {format_source}",
+        //     "format-muted": "  {format_source}",
+        //     "format-source": " {volume}%",
+        //     "format-source-muted": "",
+        //     "tooltip-format": "Microphone: {format_source}",
+        //     "format-icons": {
+        //         "default": [
+        //             "",
+        //             "",
+        //             ""
+        //         ]
+        //     },
+        //     "on-click": "pavucontrol",
+        //     // "on-click-right": "volume mute",
+        //     "on-click-right": "foot -a pw-top pw-top",
+        //     // "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        //     // "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        //     "smooth-scrolling-threshold": 1
+        // },
+        "custom/pipewire": {
+            "format": "{icon} {percentage}",
+            "exec": "pw-volume status",
+            "return-type": "json",
+            "interval": "once",
+            "signal": 8,
+            "rotate": 0,
+            "on-click-right": "pw-volume mute toggle; pkill -15 waybar; waybar",
+            "con-click": "pavucontrol",
+            "on-scroll-up": "pw-volume change +5%",
+            "on-scroll-down": "pw-volume change -5%",
+            "tooltip-format": "{percentage} %",
             "scroll-step": 5,
-            "format": "{icon}  {volume}",
-            "format-bluetooth": " {icon} {volume}% {format_source}",
-            "format-bluetooth-muted": "  {icon} {format_source}",
-            "format-muted": "  {format_source}",
-            "format-source": " {volume}%",
-            "format-source-muted": "",
-            "tooltip-format": "Microphone: {format_source}",
             "format-icons": {
+                "mute": " ",
+                "headphone": " ",
+                "hands-free": " ",
+                "headset": " c",
+                "phone": " ",
+                "portable": " ",
+                "car": " c",
                 "default": [
                     "",
                     "",
                     ""
                 ]
-            },
-            "on-click": "pavucontrol",
-            // "on-click-right": "volume mute",
-            "on-click-right": "foot -a pw-top pw-top",
-            // "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-            // "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-            "smooth-scrolling-threshold": 1
+            }
         },
         "backlight": {
             "format": "{icon} {percent}%",
