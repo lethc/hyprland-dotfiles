@@ -772,7 +772,7 @@ copy_command "wl-copy"                    // wayland
  
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
-scrollback_editor "/usr/local/bin/nvim"
+// scrollback_editor "/usr/local/bin/nvim" // Used by Favourite OS
  
 // A fixed name to always give the Zellij session.
 // Consider also setting `attach_to_session true,`
