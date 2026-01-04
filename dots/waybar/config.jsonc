@@ -204,7 +204,7 @@
             "format": "{}",
             "exec": "bash ~/.config/waybar/bin/theme-state.sh",
             "return-type": "json",
-            "on-click": "bash ~/.config/waybar/bin/theme-state.sh toggle;  bash ~/Home/Scripts/automation/theme-switcher.sh",
+            "on-click": "~/.config/waybar/bin/theme-state.sh toggle && ~/Home/Scripts/automation/theme-switcher.sh",
             "signal": 12,
             "interval": "once"
         },
