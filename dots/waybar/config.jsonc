@@ -167,8 +167,7 @@
         "custom/reminder2": {
             "format": "{}",
             "exec": "~/Home/Scripts/Rofi/reminder now",
-            "on-click": "~/Home/Scripts/automation/work.sh",
-            "on-click-right": "~/Home/Scripts/automation/workspace-run",
+            "on-click": "~/Home/Scripts/automation/learning",
             "return-type": "json",
             "interval": 10800,
             "signal": 8
