@@ -131,7 +131,7 @@ keybinds clear-defaults=true {
             }
             SwitchToMode "normal"
         }
-        bind "Ctrl <" { SwitchToMode "normal"; }
+        bind "Alt z" { SwitchToMode "normal"; }
     }
     shared {
         bind "Alt left" { PreviousSwapLayout; }
@@ -167,7 +167,7 @@ keybinds clear-defaults=true {
         bind "Alt q" { CloseFocus; }
         bind "Alt r" { SwitchToMode "resize"; }
         bind "Ctrl s" { SwitchToMode "scroll"; }
-        bind "Ctrl <" { SwitchToMode "session"; }
+        bind "Alt z" { SwitchToMode "session"; }
         // Session manager
         bind "Alt s" {
             Run "zs" {
