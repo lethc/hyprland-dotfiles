@@ -1,0 +1,62 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+                format_left   "#[fg=#8B3A62]▌{mode}#[fg=#6E4A5D,bold,italic,bg=#F4E9EE]{session} {tabs}"
+                format_space  ""
+
+                border_enabled  "false"
+                border_char     "─"
+                border_format   "#[fg=#C9B3BF]{char}"
+                border_position "top"
+        
+                hide_frame_for_single_pane "false"
+        
+                mode_normal        "#[fg=#5E2A3F,bold,bg=#F4E9EE] {name} "
+                mode_locked        "#[fg=#6A4B7C,bold,bg=#F4E9EE] {name} "
+                mode_resize        "#[fg=#3A5E8B,bold,bg=#F4E9EE] {name} "
+                mode_pane          "#[fg=#6B3C3C,bold,bg=#F4E9EE] {name} "
+                mode_tab           "#[fg=#6B3C3C,bold,bg=#F4E9EE] {name} "
+                mode_scroll        "#[fg=#8B6A3A,bold,bg=#F4E9EE] {name} "
+                mode_enter_search  "#[fg=#8B6A3A,bold,bg=#F4E9EE] {name} "
+                mode_search        "#[fg=#8B6A3A,bold,bg=#F4E9EE] {name} "
+                mode_rename_tab    "#[fg=#6B3C3C,bold,bg=#F4E9EE] {name} "
+                mode_rename_pane   "#[fg=#6B3C3C,bold,bg=#F4E9EE] {name} "
+                mode_session       "#[fg=#4E6B3C,bold,bg=#F4E9EE] {name} "
+                mode_move          "#[fg=#3A5E8B,bold,bg=#F4E9EE] {name} "
+                mode_prompt        "#[fg=#6A4B7C,bold,bg=#F4E9EE] {name} "
+                mode_tmux          "#[fg=#8B6A3A,bold,bg=#F4E9EE] {name} "
+        
+                // ─── Tabs ────────────────────────────────────────────────
+                tab_normal              "#[fg=#6A625B,bg=] {name} "
+                tab_normal_fullscreen   "#[fg=#6A625B,bg=] {name} [] "
+                tab_normal_sync         "#[fg=#6A625B,bg=] {name} <> "
+        
+                tab_active              "#[fg=#8B3A55,bold,bg=#FFFFFF] ✩ {name} {floating_indicator}"
+                tab_active_fullscreen   "#[fg=#8B3A55,bold,bg=#FFFFFF] ✩ {name} {fullscreen_indicator}"
+                tab_active_sync         "#[fg=#8B3A55,bold,bg=#FFFFFF] ✩ {name} {sync_indicator}"
+        
+                tab_sync_indicator       "<> "
+                tab_fullscreen_indicator "[] "
+                tab_floating_indicator   "⬚ "
+        
+                // ─── Git ────────────────────────────────────────────────
+                command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
+                command_git_branch_format      "#[fg=#2F5E9E] {stdout} "
+                command_git_branch_interval    "10"
+                command_git_branch_rendermode  "static"
+        
+                // ─── Date / Time ────────────────────────────────────────
+                datetime        "#[fg=#6E4A5D,bold] {format} "
+                datetime_format "%A, %d %b %Y %H:%M"
+                datetime_timezone "America/Bogota"
+
+                // ─── Notifications ──────────────────────────────────────
+                notification_format_unread           "#[fg=#2F5E9E,bg=#E9F0FA,blink]  #[fg=#2F5E9E,bg=#E9F0FA] {message} "
+                notification_format_no_notifications "#[fg=#2F5E9E,bg=#E9F0FA,dim]   "
+                notification_show_interval           "10"
+            }
+        }
+        children
+    }
+}
