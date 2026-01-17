@@ -136,6 +136,7 @@ alias fr="tv light-rg --layout portrait --exact"
 alias cl="clear"
 alias fast='is-fast'
 alias cm='camb'
+alias myprompt='cat ~/prompt'
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
