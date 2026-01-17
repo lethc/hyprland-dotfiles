@@ -32,7 +32,7 @@
             // "temperature",
             "tray",
             "custom/monitor",
-            "custom/darktheme",
+            "custom/light_theme",
             // "custom/updates",
             "custom/sunset",
             "custom/notifications",
@@ -176,20 +176,28 @@
         //     "max-length": 50
         // },
         "custom/sunset": {
-            "format": "󰃞",
-            "on-click": "~/.config/waybar/bin/control-hyprsunset enable", // Enable blue-light-filter
-            "on-click-right": "~/.config/waybar/bin/control-hyprsunset disable", // Disable blue-light-filter
+            "format": "{}",
+            "exec": "bash ~/.config/waybar/bin/sunset-state.sh",
+            // "on-click": "~/.config/waybar/bin/control-hyprsunset enable", // Enable blue-light-filter
+            "on-click": "bash ~/.config/waybar/bin/sunset-state.sh toggle && ~/.config/waybar/bin/control-hyprsunset", // blue-light-filter
             "on-scroll-up": "~/.config/waybar/bin/control-hyprsunset increase",
             "on-scroll-down": "~/.config/waybar/bin/control-hyprsunset decrease",
             // "tooltip": false
-            "tooltip-format": "Control the Brightness of the Screen"
+            "return-type": "json",
+            "signal": 12,
+            "interval": "once"
         },
         "custom/monitor": {
-            // "format": " 󰨚 monitor",
-            "format": "󰍹",
-            "on-click": "~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
+            // "format": "󰍹",
+            "format": "{}",
+            "exec": "bash ~/.config/waybar/bin/monitor-state.sh",
+            // "on-click": "~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
+            "on-click": "bash ~/.config/waybar/bin/monitor-state.sh toggle && ~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
             "on-click-right": "hyprctl reload",
-            "tooltip-format": "External Monitor"
+            // "tooltip-format": "External Monitor"
+            "return-type": "json",
+            "signal": 12,
+            "interval": "once"
         },
         // "custom/updates": {
         //     "format": "{}",
@@ -199,7 +207,7 @@
         //     "exec-if": "exit 0",
         //     "signal": 8
         // },
-        "custom/darktheme": {
+        "custom/light_theme": {
             "format": "{}",
             "exec": "bash ~/.config/waybar/bin/theme-state.sh",
             "return-type": "json",
