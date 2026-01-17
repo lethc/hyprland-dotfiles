@@ -20,6 +20,11 @@ configuration {
     // icon-theme:  "Win11-dark";
     icon-theme:  "Sevi-red-dark";
     display-drun: "";
+    // Open apps width a single click: MousePrimary does the click down action, then !MousePrimary does the click up 
+    me-select-entry: "";
+    me-accept-entry: "!MousePrimary"; 
+    kb-cancel: "MousePrimary";
+    hover-select: true;
 }
 
 element-icon, element-text, scrollbar {
