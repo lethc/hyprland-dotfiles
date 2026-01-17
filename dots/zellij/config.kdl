@@ -153,8 +153,8 @@ keybinds clear-defaults=true {
         bind "Alt 8" { GoToTab 8; SwitchToMode "normal"; }
         bind "Alt 9" { GoToTab 9; SwitchToMode "normal"; }
         bind "Alt =" { Resize "Increase"; }
-        bind "Alt [" { MoveTab "left"; }
-        bind "Alt ]" { MoveTab "right"; }
+        bind "Alt left" { MoveTab "left"; }
+        bind "Alt right" { MoveTab "right"; }
         bind "Alt b" { ToggleTab; }
         // bind "Alt d" { Detach; }
         bind "Alt e" { EditScrollback; }
