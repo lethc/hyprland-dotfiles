@@ -108,6 +108,7 @@
             "format-window-separator": "",
             "format-icons": {
                 "notes": " notes",
+                "todos": " todos",
                 "files": " files"
             },
             // "persistent-workspaces": {
