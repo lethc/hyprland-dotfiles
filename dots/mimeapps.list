@@ -168,3 +168,4 @@ x-scheme-handler/routine=Routine.desktop
 x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
 x-scheme-handler/fleet=jetbrains-fleet.desktop
 x-scheme-handler/me.blueone.linux=bluemail.desktop
+x-scheme-handler/postman=Postman.desktop
