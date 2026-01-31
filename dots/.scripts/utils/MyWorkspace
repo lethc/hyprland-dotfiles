@@ -8,7 +8,7 @@ zen-browser &
 
 sleep 3
 
-hyprctl dispatch workspace name:$WORKSPACE2
+hyprctl dispatch $TYPEOFWORKSPACE $WORKSPACE2
 
 foot --hold zellij a LostOnTheSeas &
 

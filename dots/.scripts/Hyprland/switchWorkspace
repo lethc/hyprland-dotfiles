@@ -7,7 +7,7 @@ ACTIVEMONITOR=$(hyprctl -j activeworkspace | jq -r '.monitor')
 
 moveToWorkspace() {
     local workspace_name=$1
-    hyprctl dispatch workspace name:$workspace_name
+    hyprctl dispatch $TYPEOFWORKSPACE $workspace_name
 }
 workspacemonitor() {
     local wn=$1

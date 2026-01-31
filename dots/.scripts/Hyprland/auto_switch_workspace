@@ -9,7 +9,7 @@ HYPRCTL="hyprctl dispatch"
 
 moveToWorkspace() {
     local workspace_name=$1
-    $HYPRCTL workspace name:$workspace_name
+    $HYPRCTL $TYPEOFWORKSPACE $workspace_name
 }
 
 moveToWorkspace1() {

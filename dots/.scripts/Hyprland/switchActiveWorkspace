@@ -25,13 +25,13 @@ done
 move_up() {
     for ((j = CURRENT_INDEX + 1; j < ${#WORKSPACES[@]}; j++)); do
         if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${WORKSPACES[$j]} " ]]; then
-            hyprctl dispatch workspace name:"${WORKSPACES[$j]}"
+            hyprctl dispatch $TYPEOFWORKSPACE "${WORKSPACES[$j]}"
             exit 0
         fi
     done
     for j in "${WORKSPACES[@]}"; do
         if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${j} " ]]; then
-            hyprctl dispatch workspace name:"${j}"
+            hyprctl dispatch $TYPEOFWORKSPACE "${j}"
             exit 0
         fi
     done
@@ -41,13 +41,13 @@ move_up() {
 move_down() {
     for ((j = CURRENT_INDEX - 1; j >= 0; j--)); do
         if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${WORKSPACES[$j]} " ]]; then
-            hyprctl dispatch workspace name:"${WORKSPACES[$j]}"
+            hyprctl dispatch $TYPEOFWORKSPACE "${WORKSPACES[$j]}"
             exit 0
         fi
     done
     for ((j = ${#WORKSPACES[@]} - 1; j >= 0; j--)); do
         if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${WORKSPACES[$j]} " ]]; then
-            hyprctl dispatch workspace name:"${WORKSPACES[$j]}"
+            hyprctl dispatch $TYPEOFWORKSPACE "${WORKSPACES[$j]}"
             exit 0
         fi
     done
