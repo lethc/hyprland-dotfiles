@@ -22,11 +22,11 @@
             // "custom/textfour",
             // "custom/textfive"
         ],
-        "modules-center": [
-            "custom/reminder2",
-            "custom/separator",
-            "custom/reminder"
-        ],
+        // "modules-center": [
+        //     "custom/reminder2",
+        //     "custom/separator",
+        //     "custom/reminder"
+        // ],
         "modules-right": [
             // "mpd",
             // "temperature",
@@ -78,16 +78,16 @@
             "on-scroll-up": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace up",
             "on-scroll-down": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace down",
             "format-icons": {
-                "A:Cyþan": "  Cyþan ",
-                "B:Līþan": " 󰠳 Līþan ",
-                "C:Wǣpn": " 󰄻 Wǣpn ",
-                "D:Wæl": " 󰧼 Wæl ",
-                "E:Ġemynd": "  Ġemynd ",
-                "F:Ġesiht": " 󰡮 Ġesiht ",
-                "G:Hām": "  Hām ",
-                "H:Sċēawere": "  Sċēawere",
-                "I:Mēce": " 󰞇 Mēce ",
-                "J:Frēoþ": "  Frēoþ",
+                "1": "  Cyþan ",
+                "2": " 󰠳 Līþan ",
+                "3": " 󰄻 Wǣpn ",
+                "4": " 󰧼 Wæl ",
+                "5": "  Ġemynd ",
+                "6": " 󰡮 Ġesiht ",
+                "7": "  Hām ",
+                "8": "  Sċēawere",
+                "9": " 󰞇 Mēce ",
+                // "J:Frēoþ": "  Frēoþ",
                 "K:extra": " Ⅰ Extra ",
                 "L:extraOne": " Ⅱ Extra ",
                 "M:extraTwo": " Ⅲ Extra "
