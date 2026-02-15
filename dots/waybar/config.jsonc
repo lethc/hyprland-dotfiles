@@ -31,6 +31,7 @@
             // "mpd",
             // "temperature",
             "tray",
+            "custom/separator2",
             "custom/monitor",
             "custom/light_theme",
             // "custom/updates",
@@ -55,7 +56,9 @@
             }
         },
         "custom/launcher": {
-            "format": "󱗆",
+            "format": "✪ ",
+            // "format": "✪",
+            // "format": "󰓏",
             "on-click": "rofi -show drun -theme spotlight-dark",
             "on-click-right": "pkill rofi",
             "tooltip": false
@@ -96,7 +99,7 @@
                 "enable": true,
                 "update-active-window": true,
                 "format": "{icon}",
-                "icon-size": 18,
+                "icon-size": 15,
                 "on-click-window": "~/.config/waybar/bin/focus-window.sh {address} {button}"
             }
         },
@@ -340,8 +343,12 @@
             ]
         },
         "tray": {
-            "icon-size": 14,
+            "icon-size": 13,
             "spacing": 6
+        },
+        "custom/separator2": {
+            "format": "│",
+            "tooltip": false
         },
         "clock": {
             "format": "{:%a %d %b %H:%M }",

@@ -78,7 +78,7 @@ tooltip label {
 }
 
 #custom-launcher {
-    font-size: 24px;
+    font-size: 20px;
     padding-left: 8px;
     padding-right: 10px;
     transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
