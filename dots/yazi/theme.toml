@@ -58,6 +58,13 @@ select_alt = { fg = "#A3BE8C", bg = "#1E1E2E", bold = true }
 unset_main  = { fg = "#1E1E2E", bg = "#F2CDCD", bold = true }
 unset_alt = { fg = "#F2CDCD", bg = "#1E1E2E", bold = true }
 
+
+[indicator]
+# parent = { reversed = true, fg = "#BF616A" }
+# current = { reversed = true, fg = "#BF616A" }
+# preview = { underline = true, fg = "#BF616A" }
+padding = { open = "█", close = "█" }
+
 [input]
 border   = { fg = "#BF616A" }
 title    = {}
