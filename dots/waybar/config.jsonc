@@ -56,7 +56,7 @@
             }
         },
         "custom/launcher": {
-            "format": "✪ ",
+            "format": "✪",
             // "format": "✪",
             // "format": "󰓏",
             "on-click": "rofi -show drun -theme spotlight-dark",
