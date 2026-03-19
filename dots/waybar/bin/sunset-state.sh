@@ -17,7 +17,7 @@ fi
 
 # Default behavior: just show status
 if [ -f "$STATE_FILE" ] && [ $(cat "$STATE_FILE") = "on" ]; then
-    echo '{"text": "󰈈", "tooltip": "Toggle blue-light-filter", "class": "on"}'
+    echo '{"text": "", "tooltip": "Toggle blue-light-filter", "class": "on"}'
 else
-    echo '{"text": "", "tooltip": "Toggle blue-light-filter", "class": "off"}'
+    echo '{"text": "", "tooltip": "Toggle blue-light-filter", "class": "off"}'
 fi

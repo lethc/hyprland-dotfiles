@@ -17,7 +17,7 @@ fi
 
 # Default behavior: just show status
 if [ -f "$STATE_FILE" ] && [ $(cat "$STATE_FILE") = "on" ]; then
-    echo '{"text": "", "tooltip": "Disable light theme", "class": "on"}'
+    echo '{"text": "", "tooltip": "Toggle Theme", "class": "on"}'
 else
-    echo '{"text": "", "tooltip": "Enable light theme", "class": "off"}'
+    echo '{"text": "", "tooltip": "Toggle Theme", "class": "off"}'
 fi
