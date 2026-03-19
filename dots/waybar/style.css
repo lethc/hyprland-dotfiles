@@ -1,184 +1,109 @@
-/* theme */
 @import "dark.css";
 
 * {
+    border: none;
+    border-radius: 0;
+    font-family:
+        'Lexend Deca,Symbols Nerd Font', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
     min-height: 0;
-    border-radius: 1rem;
-    /* padding: 0.1rem; */
-    padding: 1px;
-    font-family: 'Lexend Deca,Symbols Nerd Font';
-    font-size: 1rem;
-}
-
-#custom-os_button:hover {
-    background: @bg_hover;
-    color: @content_main;
-}
-
-#custom-reminder:hover,
-#custom-reminder2:hover,
-#workspaces button:hover,
-#custom-launcher:hover,
-#clock:hover {
-    background: @bg_hover;
-    color: @content_main;
-}
-
-#custom-monitor:hover,
-#custom-pipewire:hover,
-#custom-light_theme:hover,
-#custom-sunset:hover,
-#custom-notifications:hover,
-#backlight:hover,
-#network:hover,
-#pulseaudio:hover,
-#cpu:hover,
-#memory:hover,
-#disk:hover,
-#battery:hover {
-    /* background: @bg_hover; */
-    color: @bg_active_red;
-}
-
-/* Selection Tray menu color */
-#tray menu menuitem:hover {
-    background: @bg_active;
-    /* color: #000000; */
 }
 
 window#waybar {
-    background: @bg_main;
-    color: @content_main;
-    border-bottom: 1px solid @border_main;
-    border-radius: 0;
+    background: @background;
+    color: @foreground;
 }
 
-#custom-reminder,
-#custom-reminder2 {
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#custom-reminder2 {
-    margin: 1px 1px 1px 1px;
-    padding: 1px 1px 1px 10px;
-}
-
-menu,
 tooltip {
-    border-radius: 16px;
-    padding: 2px 3px;
-    border: 1px solid lighter(@active);
-    background: #000000;
-    color: lighter(@active);
-}
-menu label,
-tooltip label {
-    font-size: 14px;
-    color: @tooltip_fg;
+    border-radius: 10px;
+    background-color: @surface-alt;
+    border: 1px solid @accent-strong;
 }
 
-#custom-launcher {
-    font-size: 20px;
-    padding-left: 8px;
-    padding-right: 10px;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#workspaces button {
-    padding: 0 5px;
-    /* background: transparent; */
-    color: @content_inactive;
-    border-bottom: 3px solid transparent;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#workspaces button.active {
-    color: @btn_active;
-    background: @bg_active_red;
-    /* border: 3px solid @white-color; */
-}
-
-#workspaces button.focused {
-    color: @bg_active;
-}
-
-#workspaces button.urgent {
-    background: @warning-color;
-    border-bottom: 3px dashed @warning_color;
-    color: @warning_color;
-}
-
-#workspaces.special button.urgent {
-    background: @warning-color;
-    border-bottom: 3px dashed @warning_color;
-    color: @warning_color;
-}
-
-#taskbar button {
-    min-width: 50px;
-    /* border-bottom: 3px solid @border_main; */
-    /* margin-left: 2px; */
-    /* margin-right: 2px; */
-    /* padding-left: 8px; */
-    /* padding-right: 8px; */
-    color: @white-color;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#taskbar button.active {
-    /* border-bottom: 3px solid @white-color; */
-    background: @bg_active_red;
-}
-
-#taskbar button.maximized {
-    /* border-bottom: 3px solid red; */
-    background: @bg_active_red;
-}
-
-#clock {
-    font-size: 14px;
-    padding: 0 5px;
-    font-weight: bold;
-}
-#battery {
-    padding: 0 5px;
-}
-
-#cpu,
-#memory,
-#disk,
-#battery {
-    padding: 0 4px;
-    color: @content_main;
-}
-#custom-sunset,
-#custom-monitor,
-#custom-pipewire,
-#custom-light_theme,
-#custom-launcher,
+/* Modules: Base Style */
 #clock,
+#custom-todo,
+#custom-countdown,
 #backlight,
-#custom-notifications,
-#network,
 #pulseaudio,
-#custom-media,
+#custom-pipewire,
+#custom-notifications,
+#custom-theme_switcher,
+#custom-monitor,
+#battery,
+#memory,
+#custom-snip,
+#custom-clip,
+#custom-taskmanager,
+#custom-qalculator,
 #tray,
 #idle_inhibitor,
-#scratchpad,
-#mpd {
-    margin: 2px;
-    padding-left: 4px;
-    padding-right: 4px;
-    color: @content_main;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+#custom-sunset,
+#custom-power,
+#custom-reboot,
+#custom-quit,
+#custom-lock,
+#custom-launcher {
+    background: @surface;
+    padding: 2px 12px;
+    margin: 4px;
+    color: @foreground;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease-out;
 }
 
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+/* Modules: App Launcher Strip */
+#custom-browser,
+#custom-terminal,
+#custom-code,
+#custom-tasks,
+#custom-filemanager {
+    background: @surface;
+    padding: 2px 12px;
+    margin-top: 4px;
+    margin-right: 2px;
+    margin-bottom: 4px;
+    color: @foreground;
+    border: 3px solid transparent;
+    border-radius: 0;
+    transition: all 0.3s ease-out;
 }
 
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+#custom-browser {
+    margin-left: 2px;
+    border-radius: 8px 0 0 8px;
+}
+
+#custom-filemanager {
+    margin-right: 4px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Modules: Hover Effects */
+#backlight:hover,
+#custom-todo:hover,
+#pulseaudio:hover,
+#custom-pipewire:hover,
+#custom-notifications:hover,
+#custom-theme_switcher:hover,
+#custom-monitor:hover,
+#battery:hover,
+#memory:hover,
+#custom-snip:hover,
+#custom-browser:hover,
+#custom-terminal:hover,
+#custom-code:hover,
+#custom-taskmanager:hover,
+#custom-qalculator:hover,
+#custom-tasks:hover,
+#custom-filemanager:hover,
+#idle_inhibitor:hover,
+#custom-sunset:hover,
+#custom-clip:hover {
+    color: @background;
+    background: @accent;
+    border-color: @accent;
 }
 
 #battery icon {
@@ -188,59 +113,230 @@ tooltip label {
 #battery.charging,
 #battery.plugged {
     color: @black-color;
-    background-color: #26a65b;
+    background-color: @success;
 }
 
-@keyframes blink {
-    to {
-        background-color: @black-color;
-        color: #000000;
-    }
+#custom-launcher:hover {
+    border-color: @accent-strong;
 }
 
-#battery.warning:not(.charging) {
-    background-color: #f53c3c;
-    color: @black-color;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+#custom-power:hover {
+    border-color: @accent-strong;
 }
 
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: @black-color;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+#custom-reboot:hover,
+#custom-quit:hover,
+#custom-lock:hover {
+    background: @warning;
+    border-color: @warning;
 }
 
-label:focus {
-    background-color: @content_main;
+/* Modules: Specific Styles */
+#custom-launcher {
+    font-size: 18px;
+    background: @accent-strong;
+    color: @background;
 }
 
-#network.disconnected {
-    background-color: #f53c3c;
+#custom-countdown,
+#clock {
+    background: @accent-soft;
+    color: @background;
 }
 
-#idle_inhibitor.activated {
-    background-color: @background;
-    color: #2d3436;
+#pulseaudio.muted {
+    background: @warning;
+    color: @background;
 }
 
-#tray > .passive {
-    -gtk-icon-effect: dim;
+#custom-power {
+    padding: 0px 12px 0px 9px;
 }
 
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+#keyboard-state {
+    background: transparent;
 }
 
-#custom-os_button {
-    font-size: 32px;
-    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+#keyboard-state label.locked {
+    background: @accent-soft;
+    color: @background;
+    padding: 0px 12px;
+    margin: 4px 0px;
+    border-radius: 8px;
+}
+
+/* Active workspace */
+#workspaces button {
+    background: @surface;
+    padding: 2px 12px;
+    margin-top: 4px;
+    margin-right: 3px;
+    margin-bottom: 4px;
+    color: @foreground;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease-out;
+}
+
+#workspaces button.focused {
+    color: @foreground;
+}
+
+#workspaces button.urgent {
+    background: @urgent;
+    border-bottom: 3px dashed @urgent;
+    color: @urgent;
+}
+
+#workspaces.special button.urgent {
+    background: @urgent;
+    border-bottom: 3px dashed @urgent;
+    color: @urgent;
+}
+
+#workspaces.special button {
+    background: @surface-active;
+    padding: 2px 12px;
+    margin-top: 4px;
+    margin-right: 3px;
+    margin-bottom: 4px;
+    color: @foreground;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease-out;
+}
+
+#workspaces.special button.active {
+    color: @background;
+    background: @special-accent;
+    border-color: @special-accent;
+}
+
+#workspaces.special button:hover {
+    color: @background;
+    background: @accent;
+    border-color: @accent;
+}
+
+#workspaces button:hover {
+    color: @background;
+    background: @accent;
+    border-color: @accent;
+}
+
+#workspaces button.active {
+    color: @background;
+    background: @accent;
+    border-color: @accent;
+}
+
+/* Active workspaces like left bottom section */
+/* #workspaces button.focused { */
+/*     color: @foreground; */
+/* } */
+/**/
+/* #workspaces button.urgent { */
+/*     background: @urgent; */
+/*     border-bottom: 3px dashed @urgent; */
+/*     color: @urgent; */
+/* } */
+/**/
+/* #workspaces button:nth-child(1), */
+/* #workspaces button:nth-child(2), */
+/* #workspaces button:nth-child(3), */
+/* #workspaces button:nth-child(4), */
+/* #workspaces button:nth-child(5), */
+/* #workspaces button:nth-child(6), */
+/* #workspaces button:nth-child(7), */
+/* #workspaces button:nth-child(8), */
+/* #workspaces button:nth-child(9){ */
+/*     background: @surface; */
+/*     padding: 2px 12px; */
+/*     margin-top: 4px; */
+/*     margin-right: 2px; */
+/*     margin-bottom: 4px; */
+/*     color: @foreground; */
+/*     border: 3px solid transparent; */
+/*     border-radius: 0; */
+/*     transition: all 0.3s ease-out; */
+/* } */
+/**/
+/* #workspaces button:nth-child(1) { */
+/*     margin-left: 2px; */
+/*     border-radius: 8px 0 0 8px; */
+/* } */
+/**/
+/* #workspaces button:nth-child(9) { */
+/*     margin-right: 4px; */
+/*     border-radius: 0 8px 8px 0; */
+/* } */
+/**/
+/* #workspaces button:nth-child(1):hover, */
+/* #workspaces button:nth-child(2):hover, */
+/* #workspaces button:nth-child(3):hover, */
+/* #workspaces button:nth-child(4):hover, */
+/* #workspaces button:nth-child(5):hover, */
+/* #workspaces button:nth-child(6):hover, */
+/* #workspaces button:nth-child(7):hover, */
+/* #workspaces button:nth-child(8):hover, */
+/* #workspaces button:nth-child(9):hover{ */
+/*     color: @background; */
+/*     background: @accent; */
+/*     border-color: @accent; */
+/* } */
+/**/
+/* #workspaces button.active { */
+/*     color: @background; */
+/*     background: @accent; */
+/*     border-color: @accent; */
+/* } */
+/**/
+/* #workspaces.special button.urgent { */
+/*     background: @urgent; */
+/*     border-bottom: 3px dashed @urgent; */
+/*     color: @urgent; */
+/* } */
+/**/
+/* #workspaces.special button { */
+/*     background: @surface; */
+/*     padding: 2px 12px; */
+/*     margin: 4px; */
+/*     color: @foreground; */
+/*     border-radius: 8px; */
+/*     border: 3px solid transparent; */
+/*     transition: all 0.3s ease-out; */
+/* } */
+/**/
+/* #workspaces.special button:hover { */
+/*     color: @background; */
+/*     background: @accent; */
+/*     border-color: @accent; */
+/* } */
+/**/
+
+/* Taskbar */
+#taskbar {
+    background: @surface;
+    padding: 0 5px;
+    margin: 4px;
+    border: transparent;
+    border-radius: 8px;
+}
+
+#taskbar button {
+    background: transparent;
+    padding: 0 8px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease-out;
+    border-radius: 4px;
+}
+
+#taskbar button:hover {
+    background: @surface-active;
+    border-bottom-color: @accent;
+}
+
+#taskbar button.active {
+    background: @surface-active;
+    border-bottom-color: @accent-strong;
 }

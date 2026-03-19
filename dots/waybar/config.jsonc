@@ -1,390 +1,465 @@
-[
-    {
-        // "output": "HDMI-A-1",
-        "layer": "top",
-        "position": "top",
-        "mod": "dock",
-        "exclusive": true,
-        "gtk-layer-shell": true,
-        "margin-bottom": -1,
-        "passthrough": false,
-        "height": 24,
-        // "spacing": 1,
-        "modules-left": [
-            "custom/launcher",
-            // "custom/os_button",
-            // "hyprland/window",
-            "hyprland/workspaces",
-            "hyprland/workspaces#special"
-            // "wlr/taskbar"
-            // "custom/texttwo",
-            // "custom/textthree",
-            // "custom/textfour",
-            // "custom/textfive"
-        ],
-        // "modules-center": [
-        //     "custom/reminder2",
-        //     "custom/separator",
-        //     "custom/reminder"
-        // ],
-        "modules-right": [
-            // "mpd",
-            // "temperature",
-            "tray",
-            "custom/separator2",
-            "custom/monitor",
-            "custom/light_theme",
-            // "custom/updates",
-            "custom/sunset",
-            "custom/notifications",
-            "cpu",
-            "memory",
-            "disk",
-            "network",
-            // "pulseaudio",
-            "custom/pipewire",
-            // "backlight",
-            // "keyboard-state",
-            "battery",
-            "clock"
-        ],
-        "hyprland/window": {
-            "format": "{class}",
-            "max-length": 20,
-            "rewrite": {
-                "^(?!.*\\S).*": "Finder"
-            }
-        },
-        "custom/launcher": {
-            "format": "✪",
-            // "format": "✪",
-            // "format": "󰓏",
-            "on-click": "rofi -show drun -theme spotlight-dark",
-            "on-click-right": "pkill rofi",
-            "tooltip": false
-        },
-        "custom/notifications": {
-            "format": "󰂞",
-            "on-click": "swaync-client -t -sw",
-            "on-click-right": "swaync-client -t -sw",
-            "tooltip": true,
-            "tooltip-format": "Notifications"
-        },
-        "hyprland/workspaces": {
-            "all-outputs": false,
-            "warp-on-scroll": false,
-            "show-special": false,
-            "format": "{icon}{windows}",
-            // "icon-size": 32,
-            // "spacing": 16,
-            // "disable-scroll": true,
-            "on-scroll-up": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace up",
-            "on-scroll-down": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace down",
-            "format-icons": {
-                "1": "  Cyþan ",
-                "2": " 󰠳 Līþan ",
-                "3": " 󰄻 Wǣpn ",
-                "4": " 󰧼 Wæl ",
-                "5": "  Ġemynd ",
-                "6": " 󰡮 Ġesiht ",
-                "7": "  Hām ",
-                "8": "  Sċēawere",
-                "9": " 󰞇 Mēce ",
-                // "J:Frēoþ": "  Frēoþ",
-                "K:extra": " Ⅰ Extra ",
-                "L:extraOne": " Ⅱ Extra ",
-                "M:extraTwo": " Ⅲ Extra "
-            },
-            "workspace-taskbar": {
-                "enable": true,
-                "update-active-window": true,
-                "format": "{icon}",
-                "icon-size": 15,
-                "on-click-window": "~/.config/waybar/bin/focus-window.sh {address} {button}"
-            }
-        },
-        "hyprland/workspaces#special": {
-            "all-outputs": false,
-            "warp-on-scroll": false,
-            "show-special": true,
-            "format": "{icon}{windows}",
-            "format-window-separator": "",
-            "format-icons": {
-                "notes": " notes",
-                "todos": " todos",
-                "files": " files"
-            },
-            // "persistent-workspaces": {
-            //     "special": "*"
-            // },
-            "ignore-workspaces": [
-                "[0-9]*",
-                "A:Cyþan",
-                "B:Līþan",
-                "C:Wǣpn",
-                "D:Wæl",
-                "E:Ġemynd",
-                "F:Ġesiht",
-                "G:Hām",
-                "H:Sċēawere",
-                "I:Mēce",
-                "J:Frēoþ",
-                "K:extra",
-                "L:extraOne",
-                "M:extraTwo"
-            ] // Remove normal workspaces
-        },
-        "custom/texttwo": {
-            "exec": "echo 'File'",
-            "interval": 60,
-            "return-type": "plain",
-            "on-click": "nautilus"
-        },
-        "custom/textthree": {
-            "exec": "echo 'Edit'",
-            "interval": 60,
-            "return-type": "plain",
-            "on-click": "gimp"
-        },
-        "custom/textfour": {
-            "exec": "echo 'View'",
-            "interval": 60,
-            "return-type": "plain"
-        },
-        "custom/textfive": {
-            "exec": "echo 'Help'",
-            "interval": 60,
-            "return-type": "plain",
-            "on-click": "gio open https://github.com/kamlendras/waybar/issues/new"
-        },
-        "custom/separator": {
-            "format": " → ",
-            "tooltip": false
-        },
-        "custom/reminder": {
-            "format": "{}",
-            "exec": "~/Home/Scripts/Rofi/reminder goal",
-            "return-type": "json",
-            "interval": 10800,
-            "signal": 8
-        },
-        "custom/reminder2": {
-            "format": "{}",
-            "exec": "~/Home/Scripts/Rofi/reminder now",
-            "on-click": "~/Home/Scripts/automation/learning",
-            "return-type": "json",
-            "interval": 10800,
-            "signal": 8
-        },
-        // "sway/window": {
-        //     "max-length": 50
+/////////////////////////////////
+//                             //
+//  // Waybar configuration//  //
+//                             //
+/////////////////////////////////
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 38,
+    "spacing": 2,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "reload_style_on_change": true,
+    /////////////////////////////////////////////
+    //                                         //
+    //  // Choose the order of the modules //  //
+    //                                         //
+    /////////////////////////////////////////////
+    "modules-left": [
+        "custom/launcher",
+        // "custom/browser",
+        // "custom/terminal",
+        // "custom/code",
+        // "custom/tasks",
+        // "custom/filemanager",
+        "hyprland/workspaces",
+        "hyprland/workspaces#special"
+        // "custom/todo"
+    ],
+    // "modules-center": [
+    //     // "hyprland/workspaces"
+    //     // "wlr/taskbar"
+    // ],
+    "modules-right": [
+        // "keyboard-state",
+        // "custom/countdown",
+        "group/group-tools",
+        "custom/pipewire",
+        "memory",
+        "battery",
+        "tray",
+        "custom/notifications",
+        "clock",
+        "group/group-power"
+    ],
+    ///////////////////////////////////
+    //                               //
+    //  // Modules configuration//   //
+    //                               //
+    ///////////////////////////////////
+    "hyprland/workspaces": {
+        "all-outputs": false,
+        "warp-on-scroll": false,
+        "show-special": false,
+        "format": "{icon}{windows}",
+        // "icon-size": 32,
+        // "spacing": 16,
+        // "disable-scroll": true,
+        // "persistent-workspaces": {
+        //     "1": " ",
+        //     "2": "󰠳 ",
+        //     "3": "󰄻 ",
+        //     "4": "󰧼 ",
+        //     "5": " ",
+        //     "6": "󰡮 ",
+        //     "7": " ",
+        //     "8": " ",
+        //     "9": "󰞇 "
         // },
-        "custom/sunset": {
-            "format": "{}",
-            "exec": "bash ~/.config/waybar/bin/sunset-state.sh",
-            // "on-click": "~/.config/waybar/bin/control-hyprsunset enable", // Enable blue-light-filter
-            "on-click": "bash ~/.config/waybar/bin/sunset-state.sh toggle && ~/.config/waybar/bin/control-hyprsunset", // blue-light-filter
-            "on-scroll-up": "~/.config/waybar/bin/control-hyprsunset increase",
-            "on-scroll-down": "~/.config/waybar/bin/control-hyprsunset decrease",
-            // "tooltip": false
-            "return-type": "json",
-            "signal": 12,
-            "interval": "once"
+        "on-scroll-up": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace up",
+        "on-scroll-down": "~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace down",
+        "format-icons": {
+            "1": " Cyþan ",
+            "2": "󰠳 Līþan ",
+            "3": "󰄻 Wǣpn ",
+            "4": "󰧼 Wæl ",
+            "5": " Ġemynd ",
+            "6": "󰡮 Ġesiht ",
+            "7": " Hām ",
+            "8": " Sċēawere ",
+            "9": "󰞇 Mēce ",
+            // "1": "  ",
+            // "2": "󰠳  ",
+            // "3": "󰄻  ",
+            // "4": "󰧼  ",
+            // "5": "  ",
+            // "6": "󰡮  ",
+            // "7": "  ",
+            // "8": "  ",
+            // "9": "󰞇  ",
+            // "J:Frēoþ": "  Frēoþ",
+            "K:extra": " Ⅰ Extra ",
+            "L:extraOne": " Ⅱ Extra ",
+            "M:extraTwo": " Ⅲ Extra "
         },
-        "custom/monitor": {
-            // "format": "󰍹",
-            "format": "{}",
-            "exec": "bash ~/.config/waybar/bin/monitor-state.sh",
-            // "on-click": "~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
-            "on-click": "bash ~/.config/waybar/bin/monitor-state.sh toggle && ~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
-            "on-click-right": "hyprctl reload",
-            // "tooltip-format": "External Monitor"
-            "return-type": "json",
-            "signal": 12,
-            "interval": "once"
-        },
-        // "custom/updates": {
-        //     "format": "{}",
-        //     "interval": 10800,
-        //     "exec": "~/.config/waybar/bin/updatecheck",
-        //     "return-type": "json",
-        //     "exec-if": "exit 0",
-        //     "signal": 8
-        // },
-        "custom/light_theme": {
-            "format": "{}",
-            "exec": "bash ~/.config/waybar/bin/theme-state.sh",
-            "return-type": "json",
-            "on-click": "~/.config/waybar/bin/theme-state.sh toggle && ~/Home/Scripts/automation/theme-switcher.sh",
-            "signal": 12,
-            "interval": "once"
-        },
-        "cpu": {
-            "interval": 5,
-            "format": "{usage}  "
-            // "max-length": 10
-        },
-        "memory": {
-            // "interval": 10,
-            "format": "{}  ",
-            // "max-length": 10,
-            "tooltip": true,
-            "tooltip-format": "RAM - {used:0.1f}GiB used ( {percentage}%)"
-        },
-        "disk": {
-            "interval": 30,
-            "format": "{} 󰋊 ",
-            "path": "/",
-            "tooltip": true,
-            "unit": "GB",
-            "tooltip-format": "Available {free} of {total} (󰋊 {percentage_used}%)"
-        },
-        "network": {
-            "format-wifi": " ({signalStrength})",
-            "format-ethernet": "󰈀 {ifname}",
-            "format-linked": "󰈁 {ifname} (No IP)",
-            "format-disconnected": "Disconnected 󰖪 {ifname}",
-            // "format-alt": " {ifname}: {ipaddr}/{cidr}",
-            "tooltip-format": "{essid} ({signalStrength}%) | 󰊗 {ifname} via {gwaddr}",
-            // "on-click-middle": "nm-connection-editor"
-            "on-click": "nm-connection-editor"
-        },
-        // "pulseaudio": {
-        //     "scroll-step": 5,
-        //     "format": "{icon}  {volume}",
-        //     "format-bluetooth": " {icon} {volume}% {format_source}",
-        //     "format-bluetooth-muted": "  {icon} {format_source}",
-        //     "format-muted": "  {format_source}",
-        //     "format-source": " {volume}%",
-        //     "format-source-muted": "",
-        //     "tooltip-format": "Microphone: {format_source}",
-        //     "format-icons": {
-        //         "default": [
-        //             "",
-        //             "",
-        //             ""
-        //         ]
-        //     },
-        //     "on-click": "pavucontrol",
-        //     // "on-click-right": "volume mute",
-        //     "on-click-right": "foot -a pw-top pw-top",
-        //     // "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-        //     // "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-        //     "smooth-scrolling-threshold": 1
-        // },
-        "custom/pipewire": {
-            "format": "{icon} {percentage}",
-            "exec": "pw-volume status",
-            "return-type": "json",
-            "interval": "once",
-            "signal": 8,
-            "rotate": 0,
-            "on-click-right": "pw-volume mute toggle; pkill -15 waybar; waybar",
-            "con-click": "pavucontrol",
-            "on-scroll-up": "pw-volume change +5%",
-            "on-scroll-down": "pw-volume change -5%",
-            "tooltip-format": "{percentage} %",
-            "scroll-step": 5,
-            "format-icons": {
-                "mute": " ",
-                "headphone": " ",
-                "hands-free": " ",
-                "headset": " c",
-                "phone": " ",
-                "portable": " ",
-                "car": " c",
-                "default": [
-                    "",
-                    "",
-                    ""
-                ]
-            }
-        },
-        "backlight": {
-            "format": "{icon} {percent}%",
-            "format-icons": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        // "keyboard-state": {
-        //     "numlock": true,
-        //     "capslock": true,
-        //     "format": "{name} {icon}",
-        //     "format-icons": {
-        //         "locked": "",
-        //         "unlocked": ""
-        //     }
-        // },
-        "battery": {
-            "states": {
-                "good": 95,
-                "warning": 30,
-                "critical": 15
-            },
-            "format": "{icon} {capacity}",
-            "format-charging": "󰃨 {capacity}",
-            // "format-full": "<span color='#82A55F'><b>{icon}</b></span>",
-            "format-plugged": " {capacity}",
-            "format-alt": "{icon} {time}",
-            "format-icons": [
-                "",
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        "tray": {
-            "icon-size": 13,
-            "spacing": 6
-        },
-        "custom/separator2": {
-            "format": "│",
-            "tooltip": false
-        },
-        "clock": {
-            "format": "{:%a %d %b %H:%M }",
-            "tooltip-format": "<tt><small>{calendar}</small></tt>",
-            "calendar": {
-                "mode": "year",
-                "mode-mon-col": 3,
-                "weeks-pos": "right",
-                "on-scroll": 1,
-                "on-click-right": "mode",
-                "format": {
-                    "months": "<span color='#a998de'><b>{}</b></span>",
-                    "days": "<span color='#e2dbf4'>{}</span>",
-                    "weeks": "<span color='#7f2858'><b>W{}</b></span>",
-                    "weekdays": "<span color='#61afef'><b>{}</b></span>",
-                    "today": "<span color='#c85163'><b><u>{}</u></b></span>"
-                }
-            },
-            "actions": {
-                "on-click-right": "mode",
-                "on-click-forward": "tz_up",
-                "on-click-backward": "tz_down",
-                "on-scroll-up": "shift_up",
-                "on-scroll-down": "shift_down"
-            }
-        },
-        "wlr/taskbar": {
-            // "format": "{icon}",
-            "all-outputs": false,
-            "format": "{icon} {title:.15}",
-            "icon-size": 20,
-            // "spacing": 3,
-            "on-click-middle": "close",
-            "tooltip-format": "{title}",
-            "ignore-list": [],
-            "on-click": "activate"
+        "workspace-taskbar": {
+            "enable": true,
+            "update-active-window": true,
+            "format": "{icon}",
+            // "icon-size": 15,
+            "icon-size": 18,
+            "on-click-window": "~/.config/waybar/bin/focus-window.sh {address} {button}"
         }
+    },
+    "hyprland/workspaces#special": {
+        "all-outputs": false,
+        "warp-on-scroll": false,
+        "show-special": true,
+        "format": "{icon}{windows}",
+        "format-window-separator": "",
+        "format-icons": {
+            "notes": "",
+            "todos": "",
+            "files": ""
+        },
+        // "persistent-workspaces": {
+        //     "special": "*"
+        // },
+        "ignore-workspaces": [
+            "[0-9]*",
+            "A:Cyþan",
+            "B:Līþan",
+            "C:Wǣpn",
+            "D:Wæl",
+            "E:Ġemynd",
+            "F:Ġesiht",
+            "G:Hām",
+            "H:Sċēawere",
+            "I:Mēce",
+            "J:Frēoþ",
+            "K:extra",
+            "L:extraOne",
+            "M:extraTwo"
+        ] // Remove normal workspaces
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 20,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title:.50}",
+        "on-click": "minimize-raise",
+        "on-click-middle": "close",
+        "on-click-right": "fullscreen"
+    },
+    "ext/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        },
+        "sort-by-number": true,
+        "on-click": "activate"
+    },
+    "keyboard-state": {
+        "capslock": true,
+        "format": "{icon}",
+        "format-icons": {
+            "locked": " Caps ",
+            "unlocked": ""
+        }
+    },
+    "custom/sunset": {
+        "format": "{}",
+        "exec": "bash ~/.config/waybar/bin/sunset-state.sh",
+        // "on-click": "~/.config/waybar/bin/control-hyprsunset enable", // Enable blue-light-filter
+        "on-click": "bash ~/.config/waybar/bin/sunset-state.sh toggle && ~/.config/waybar/bin/control-hyprsunset", // blue-light-filter
+        "on-scroll-up": "~/.config/waybar/bin/control-hyprsunset increase",
+        "on-scroll-down": "~/.config/waybar/bin/control-hyprsunset decrease",
+        // "tooltip": false
+        "return-type": "json",
+        "signal": 12,
+        "interval": "once"
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "{:%a %d %b %H:%M }",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#a998de'><b>{}</b></span>",
+                "days": "<span color='#e2dbf4'>{}</span>",
+                "weeks": "<span color='#7f2858'><b>W{}</b></span>",
+                "weekdays": "<span color='#61afef'><b>{}</b></span>",
+                "today": "<span color='#c85163'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "backlight": {
+        "device": "acpi_video0", // Assuming acpi_video0, adjust if needed
+        "tooltip": false,
+        "format": "{percent}  {icon}",
+        "format-icons": [
+            "",
+            ""
+        ],
+        "on-scroll-up": "brightnessctl s +5%",
+        "on-scroll-down": "brightnessctl s 5%-"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}",
+        "format-charging": "󰃨 {capacity}",
+        // "format-full": "<span color='#82A55F'><b>{icon}</b></span>",
+        "format-plugged": " {capacity}",
+        "format-alt": "{icon} {time}",
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ]
+    },
+    "memory": {
+        // "interval": 10,
+        "format": "{} ",
+        // "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "RAM - {used:0.1f}GiB used ( {percentage}%)"
+    },
+    "custom/pipewire": {
+        "format": "{icon} {percentage}",
+        "exec": "pw-volume status",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "rotate": 0,
+        "on-click-right": "pw-volume mute toggle; pkill -15 waybar; waybar",
+        "con-click": "pavucontrol",
+        "on-scroll-up": "pw-volume change +5%",
+        "on-scroll-down": "pw-volume change -5%",
+        "tooltip-format": "{percentage} %",
+        "scroll-step": 5,
+        "format-icons": {
+            "mute": " ",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " c",
+            "phone": " ",
+            "portable": " ",
+            "car": " c",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    ///////////////////////////
+    //                       //
+    //  // Custom module //  //
+    //                       //
+    ///////////////////////////  
+    "custom/countdown": {
+        "exec": "~/.config/waybar/scripts/countdown/countdown.sh",
+        "return-type": "json",
+        "format": "{}",
+        "interval": 3600,
+        "on-click-right": "foot --title 'countdown' bash ~/.config/waybar/scripts/countdown/countdown.sh interactive",
+        "on-scroll-up": "~/.config/waybar/scripts/countdown/countdown.sh scroll-up",
+        "on-scroll-down": "~/.config/waybar/scripts/countdown/countdown.sh scroll-down"
+    },
+    "custom/notifications": {
+        "format": "󰂞",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -t -sw",
+        "tooltip": true,
+        "tooltip-format": "Notifications"
+    },
+    "group/group-tools": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "other-apps",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/sunset",
+            "backlight",
+            "custom/snip",
+            "custom/clip",
+            "custom/qalculator",
+            "custom/taskmanager",
+            "custom/monitor",
+            "custom/theme_switcher"
+        ]
+    },
+    "custom/monitor": {
+        // "format": "󰍹",
+        "format": "{}",
+        "exec": "bash ~/.config/waybar/bin/monitor-state.sh",
+        // "on-click": "~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
+        "on-click": "bash ~/.config/waybar/bin/monitor-state.sh toggle && ~/.config/hypr/dots/.scripts/Hyprland/externalMonitor",
+        "on-click-right": "hyprctl reload",
+        // "tooltip-format": "External Monitor"
+        "return-type": "json",
+        "signal": 12,
+        "interval": "once"
+    },
+    "custom/theme_switcher": {
+        "format": "{}",
+        "exec": "bash ~/.config/waybar/bin/theme-state.sh",
+        "return-type": "json",
+        "on-click": "~/.config/waybar/bin/theme-state.sh toggle && ~/Home/Scripts/automation/theme-switcher.sh && sleep 3 && pkill -f theme-time-daemon.sh",
+        "signal": 12,
+        "interval": "once"
+    },
+    "custom/todo": {
+        "format": "\u00a0{}",
+        "exec": "~/.config/waybar/scripts/todo/todo.sh",
+        "on-double-click": "~/.config/waybar/scripts/todo/todo.sh mark_done",
+        "on-click-right": "~/.config/waybar/scripts/todo/todo.sh open_tui",
+        "on-click-middle": "~/.config/waybar/scripts/todo/todo.sh middle_click",
+        "return-type": "json",
+        "interval": 5,
+        "tooltip": true
+    },
+    ///////////////////////////
+    //                       //
+    //  // Apps section //   //
+    //                       //
+    ///////////////////////////
+    "group/group-apps": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "other-apps",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/browser",
+            "custom/terminal",
+            "custom/tasks",
+            "custom/filemanager"
+        ]
+    },
+    "custom/launcher": {
+        "format": "󱗆",
+        "tooltip": false,
+        "tooltip-format": "Menu\nRight click to change theme",
+        "on-click": "rofi -show drun -theme spotlight-dark",
+        // "on-click-right": "bash ~/.config/waybar/scripts/theme.sh"
+    },
+    "custom/browser": {
+        "format": "󰈹",
+        "tooltip": true,
+        "tooltip-format": "Browser",
+        "on-click": "zen-browser",
+        "on-click-right": "vivaldi-stable",
+        "on-click-middle": "google-chrome-stable"
+    },
+    "custom/terminal": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Terminal",
+        "on-click": "foot",
+        "on-click-right": "foot"
+    },
+    "custom/code": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Code Editor",
+        "on-click": "/usr/bin/code"
+    },
+    "custom/taskmanager": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Task Manager",
+        "on-click": "resources"
+    },
+    "custom/qalculator": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Qalculator",
+        "on-click": "qalculate-gtk"
+    },
+    "custom/tasks": {
+        "format": "󰸞",
+        "tooltip": true,
+        "tooltip-format": "Tasks",
+        "on-click": "ticktick"
+        // "on-click-right": "g4tasks"
+    },
+    "custom/filemanager": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "File Manager",
+        "on-click": "dolphin"
+    },
+    "custom/snip": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Screenshot",
+        "on-click": "grim -g \"$(slurp)\" ~/Pictures/$(date +%s).png"
+    },
+    "custom/clip": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Clipboard",
+        "on-click": "clipse-gui"
+    },
+    ///////////////////////////
+    //                       //
+    //  // Power section //  //
+    //                       //
+    ///////////////////////////
+    "group/group-power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/power",
+            "custom/quit",
+            "custom/lock",
+            "custom/reboot"
+        ]
+    },
+    "custom/quit": {
+        "format": "󰗼",
+        "tooltip": true,
+        "tooltip-format": "Logout",
+        "on-click": "bash ~/.config/waybar/scripts/power.sh --logout"
+    },
+    "custom/lock": {
+        "format": "󰍁",
+        "tooltip": true,
+        "tooltip-format": "Lock",
+        "on-click": "bash ~/.config/waybar/scripts/lock.sh"
+    },
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": true,
+        "tooltip-format": "Reboot",
+        "on-click": "bash ~/.config/waybar/scripts/power.sh --reboot"
+    },
+    "custom/power": {
+        "format": "󰤆",
+        "tooltip": true,
+        "tooltip-format": "Shutdown",
+        "on-click": "bash ~/.config/waybar/scripts/power.sh --shutdown"
     }
-]
+}

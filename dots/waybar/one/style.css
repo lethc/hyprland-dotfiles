@@ -1,0 +1,246 @@
+/* theme */
+@import "dark.css";
+
+* {
+    min-height: 0;
+    border-radius: 1rem;
+    /* padding: 0.1rem; */
+    padding: 1px;
+    font-family: 'Lexend Deca,Symbols Nerd Font';
+    font-size: 1rem;
+}
+
+#custom-os_button:hover {
+    background: @bg_hover;
+    color: @content_main;
+}
+
+#custom-reminder:hover,
+#custom-reminder2:hover,
+#workspaces button:hover,
+#custom-launcher:hover,
+#clock:hover {
+    background: @bg_hover;
+    color: @content_main;
+}
+
+#custom-monitor:hover,
+#custom-pipewire:hover,
+#custom-light_theme:hover,
+#custom-sunset:hover,
+#custom-notifications:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#battery:hover {
+    /* background: @bg_hover; */
+    color: @bg_active_red;
+}
+
+/* Selection Tray menu color */
+#tray menu menuitem:hover {
+    background: @bg_active;
+    /* color: #000000; */
+}
+
+window#waybar {
+    background: @bg_main;
+    color: @content_main;
+    border-bottom: 1px solid @border_main;
+    border-radius: 0;
+}
+
+#custom-reminder,
+#custom-reminder2 {
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#custom-reminder2 {
+    margin: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 10px;
+}
+
+menu,
+tooltip {
+    border-radius: 16px;
+    padding: 2px 3px;
+    border: 1px solid lighter(@active);
+    background: #000000;
+    color: lighter(@active);
+}
+menu label,
+tooltip label {
+    font-size: 14px;
+    color: @tooltip_fg;
+}
+
+#custom-launcher {
+    font-size: 20px;
+    padding-left: 8px;
+    padding-right: 10px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#workspaces button {
+    padding: 0 5px;
+    /* background: transparent; */
+    color: @content_inactive;
+    border-bottom: 3px solid transparent;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#workspaces button.active {
+    color: @btn_active;
+    background: @bg_active_red;
+    /* border: 3px solid @white-color; */
+}
+
+#workspaces button.focused {
+    color: @bg_active;
+}
+
+#workspaces button.urgent {
+    background: @warning-color;
+    border-bottom: 3px dashed @warning_color;
+    color: @warning_color;
+}
+
+#workspaces.special button.urgent {
+    background: @warning-color;
+    border-bottom: 3px dashed @warning_color;
+    color: @warning_color;
+}
+
+#taskbar button {
+    min-width: 50px;
+    /* border-bottom: 3px solid @border_main; */
+    /* margin-left: 2px; */
+    /* margin-right: 2px; */
+    /* padding-left: 8px; */
+    /* padding-right: 8px; */
+    color: @white-color;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#taskbar button.active {
+    /* border-bottom: 3px solid @white-color; */
+    background: @bg_active_red;
+}
+
+#taskbar button.maximized {
+    /* border-bottom: 3px solid red; */
+    background: @bg_active_red;
+}
+
+#clock {
+    font-size: 14px;
+    padding: 0 5px;
+    font-weight: bold;
+}
+#battery {
+    padding: 0 5px;
+}
+
+#cpu,
+#memory,
+#disk,
+#battery {
+    padding: 0 4px;
+    color: @content_main;
+}
+#custom-sunset,
+#custom-monitor,
+#custom-pipewire,
+#custom-light_theme,
+#custom-launcher,
+#clock,
+#backlight,
+#custom-notifications,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    margin: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: @content_main;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#battery icon {
+    color: red;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @black-color;
+    background-color: #26a65b;
+}
+
+@keyframes blink {
+    to {
+        background-color: @black-color;
+        color: #000000;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background-color: #f53c3c;
+    color: @black-color;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: @black-color;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: @content_main;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+}
+
+#idle_inhibitor.activated {
+    background-color: @background;
+    color: #2d3436;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#custom-os_button {
+    font-size: 32px;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}

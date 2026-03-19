@@ -1,27 +1,23 @@
 /* Dark Mode */
-@define-color active rgba(255, 255, 255, 0.2);
-/*base background color*/
-/* @define-color bg_main rgba(15, 15, 15, 0.65);  */
-/* @define-color bg_main rgba(17, 8, 13, 0.65); */
-@define-color bg_main rgba(17, 8, 13, 0.85);
-@define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
-/*base background color of selections */
-@define-color bg_hover rgba(200, 200, 200, 0.3);
-/*base background color of active elements */
-@define-color bg_active rgba(100, 100, 100, 0.5);
-@define-color bg_active_red rgba(160, 100, 100, 0.5);
-/*base border color*/
-@define-color border_main rgba(255, 255, 255, 0.2);
-/*text color for entries, views and content in general */
-@define-color content_main #d0cdc8;
-@define-color btn_active #d0cdc8;
-@define-color tooltip_fg #d0cdc8;
-/*text color for entries that are unselected */
-@define-color content_inactive rgba(255, 255, 255, 0.25);
-
-@define-color warning-color rgba(255, 200, 0, 0.35);
-@define-color foreground #fffdf8;
-@define-color background #191919;
+@define-color foreground #f2d5d8;
+@define-color background rgba(27,15,18,0.85);
 
 @define-color white-color #ffffff;
 @define-color black-color #000000;
+
+/* surfaces */
+/* @define-color surface #2a161a; */
+@define-color surface #301c20;
+@define-color surface-alt #241317;
+@define-color surface-active #3a1f24;
+
+/* accents */
+@define-color accent #d65a6f;
+@define-color accent-strong #e06c75;
+@define-color accent-soft #f07178;
+@define-color special-accent #B84160;
+
+/* semantic */
+@define-color warning #ff9e64;
+@define-color success #26a65b;
+@define-color urgent rgba(255, 200, 0, 0.35);
