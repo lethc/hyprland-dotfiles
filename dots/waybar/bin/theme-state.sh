@@ -17,7 +17,7 @@ fi
 
 # Default behavior: just show status
 if [ -f "$STATE_FILE" ] && [ $(cat "$STATE_FILE") = "on" ]; then
-    echo '{"text": "", "tooltip": "Toggle Theme", "class": "on"}'
+    echo '{"text": "", "tooltip": "<b>Toggle Theme</b>\n - Click to switch between Themes\n - Right Click to Start <i>theme-time-daemon</i> again", "class": "on"}'
 else
-    echo '{"text": "", "tooltip": "Toggle Theme", "class": "off"}'
+    echo '{"text": "", "tooltip": "<b>Toggle Theme</b>\n - Click to switch between Themes\n - Right Click to Start <i>theme-time-daemon</i> again", "class": "off"}'
 fi
