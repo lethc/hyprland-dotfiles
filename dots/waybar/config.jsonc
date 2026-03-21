@@ -322,6 +322,7 @@
         "exec": "bash ~/.config/waybar/bin/theme-state.sh",
         "return-type": "json",
         "on-click": "~/.config/waybar/bin/theme-state.sh toggle && ~/Home/Scripts/automation/theme-switcher.sh && sleep 3 && pkill -f theme-time-daemon.sh",
+        "on-click-right": "if ! pgrep -f 'theme-time-daemon.sh' > /dev/null; then ~/.scripts/Hyprland/theme-time-daemon.sh & fi",
         "signal": 12,
         "interval": "once"
     },
