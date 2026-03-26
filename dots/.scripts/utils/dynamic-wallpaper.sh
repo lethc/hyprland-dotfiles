@@ -60,19 +60,19 @@ set_wallpaper() {
         return 1
     fi
 
-    swww img "$wallpaper" \
+    awww img "$wallpaper" \
         --transition-type fade \
         --transition-duration 2 \
         --transition-fps 60
 }
 
-if ! swww query &>/dev/null; then
-    echo "[$(date '+%H:%M:%S')] swww-daemon not running, starting..."
-    swww-daemon &
+if ! awww query &>/dev/null; then
+    echo "[$(date '+%H:%M:%S')] awww-daemon not running, starting..."
+    awww-daemon &
     sleep 2
-    echo "[$(date '+%H:%M:%S')] swww-daemon started"
+    echo "[$(date '+%H:%M:%S')] awww-daemon started"
 else
-    echo "[$(date '+%H:%M:%S')] swww-daemon already running"
+    echo "[$(date '+%H:%M:%S')] awww-daemon already running"
 fi
 
 if [ ! -d "$WALLPAPER_DIR" ]; then
