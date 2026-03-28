@@ -320,9 +320,9 @@ sudo cp  "${HOME}/.config/hypr/dots/icons/file-manager.svg" "${HOME}/.local/shar
 # cd "${HOME}/Downloads/Git/Win11-icon-theme"
 # ./install.sh
 
-git clone https://github.com/mjkim0727/Eleven-icon-theme.git ~/Downloads/Git/Eleven-icon-theme
-cd "${HOME}/Downloads/Git/Eleven-icon-theme"
-./install.sh
+# git clone https://github.com/mjkim0727/Eleven-icon-theme.git ~/Downloads/Git/Eleven-icon-theme
+# cd "${HOME}/Downloads/Git/Eleven-icon-theme"
+# ./install.sh
 
 # Zephyr Icon Theme
 git clone https://github.com/Rudraksh88/zephyr-icons.git ~/.local/share/icons/Zephyr
