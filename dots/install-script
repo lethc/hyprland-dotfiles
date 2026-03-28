@@ -17,7 +17,9 @@ sleep 2
 cd ~/Downloads/Git
 
 # ASKN
-sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar zenity bc swaync zoxide lsd bat swww television figlet keyd tree-sitter-cli sof-firmware hyprshot
+sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar zenity bc swaync zoxide lsd bat swww television figlet keyd tree-sitter-cli sof-firmware hyprshot tmux 
+# important to run the swtch-theme script
+sudo pacman -S yq
 # required by waybar scripts: zenity, bc
 sudo pacman -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
@@ -26,9 +28,9 @@ git clone https://aur.archlinux.org/yay-bin.git ~/Downloads/Git/yay-bin/
 cd  ~/Downloads/Git/yay-bin
 makepkg -si
 
-yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-sudo-git zsh-theme-powerlevel10k-bin
+yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-sudo-git zsh-theme-powerlevel10k-git
 # yay -S  zsh-autocomplete-git zsh-vi-mode-git
-yay -S clipse-bin clipse-gui blueberry-wayland pw-volume
+yay -S clipse clipse-gui blueberry-wayland pw-volume quickshell-git
 yay -S scooter-bin # search and replace in project
 # When choosing Color scheme: it gotta be Breeze Dark (KColorScheme) to work Properly
 yay -S qt6ct-kde
@@ -162,11 +164,11 @@ hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 #hyprpm add https://github.com/SsubezZ/hyprtoplr
 #hyprpm add https://github.com/0xFMD/hyprmodoro
-hyprpm add https://github.com/daxisunder/hyprfocus
+# hyprpm add https://github.com/daxisunder/hyprfocus
 hyprpm enable hyprbars
 #hyprpm enable hyprtoplr
 #hyprpm enable hyprmodoro
-hyprpm enable hyprfocus
+# hyprpm enable hyprfocus
 hyprpm update
 hyprpm reload -n
 
@@ -212,7 +214,7 @@ yay -S nodejs-readability-cli firefox-tridactyl-native-bin smile  ttf-joypixels
 # ttf-maple Doesn't exist anymore
 yay -S lexend-fonts-git ttf-illinois-mono-git 
 # yay -S ttf-maplemono # aur cn repos
-yay -S  gtt-bin anki-bin zen-browser-bin freetube-bin curd vivaldi 
+yay -S  gtt-bin anki zen-browser-bin freetube-bin curd vivaldi 
 # yay -S google-chrome
 # yay -S tori-bin
 # yay -S bun-bin vimv
@@ -256,8 +258,8 @@ ln -sf "${HOME}/.config/hypr/dots/yazi" "${HOME}/.config"
 echo "yazi linked"
 
 # Install Yazi plugins
-ya pack -a yazi-rs/plugins:smart-enter
-ya pack -a josephschmitt/auto-layout
+ya pkg add yazi-rs/plugins:smart-enter
+ya pkg add josephschmitt/auto-layout
 
 # LaTeX packages
 # yay -S  texlive-latex biber texlive-binextra texlive-langspanish texlive-latexextra
@@ -358,7 +360,7 @@ echo "#####   Installation NVIM dependencies  #####"
 echo "#############################################"
 
 # ASK
-yay -S dotnet-sdk jdk-lts jdk-lts-doc go
+yay -S dotnet-sdk jdk-lts jdk-lts-doc go maven
 # yay -S go ruby
 ###HERE
 # yay -S  google-java-format-git
