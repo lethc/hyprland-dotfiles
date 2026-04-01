@@ -218,7 +218,9 @@ yay -S  gtt-bin anki zen-browser-bin freetube-bin curd vivaldi
 # yay -S google-chrome
 # yay -S tori-bin
 # yay -S bun-bin vimv
-yay -S megasync-bin
+# yay -S megasync-bin
+# mega quota exceeded
+yay -S megacmd
 # yay -S input-remapper-bin # Replaced by keyd
 echo "ENABLING KEYD"
 # Enable input-remapper (keyd)
