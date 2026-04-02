@@ -5,9 +5,9 @@ echo "####  1.  Important Packags       ####"
 echo "######################################"
 
 # If directories like ~/Downloads were not created
-xdg-user-dirs-update
+# xdg-user-dirs-update
 # If .config/hypr is in root group
-sudo chown -R LostOnTheSeas:LostOnTheSeas /home/LostOnTheSeas/.config/
+# sudo chown -R LostOnTheSeas:LostOnTheSeas /home/LostOnTheSeas/.config/
 mkdir ~/Home
 mkdir ~/Documents/Library
 mkdir ~/.local/bin
@@ -388,7 +388,7 @@ git clone https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim
 # Download second branch of nvim-dotfiles
 git clone -b light https://github.com/lethc/nvim-dotfiles.git ~/.config/nvim2
 # Run nvim first
-mkdir -p "${HOME}/.local/share/nvim2/"
+# mkdir -p "${HOME}/.local/share/nvim2/"
 # ln -sf "${HOME}/.local/share/nvim/lazy/" "${HOME}/.local/share/nvim2/"
 # ln -sf "${HOME}/.local/share/nvim/mason/" "${HOME}/.local/share/nvim2/"
 
