@@ -17,24 +17,24 @@ sleep 2
 cd ~/Downloads/Git
 
 # ASKN
-sudo pacman -S foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar zenity bc swaync zoxide lsd bat swww television figlet keyd tree-sitter-cli sof-firmware hyprshot tmux 
+sudo pacman -S --noconfirm foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar zenity bc swaync zoxide lsd bat swww television figlet keyd tree-sitter-cli sof-firmware hyprshot tmux 
 # important to run the swtch-theme script
-sudo pacman -S yq
+sudo pacman -S --noconfirm yq
 # required by waybar scripts: zenity, bc
-sudo pacman -S ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
+sudo pacman -S --noconfirm ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
 # ASK
 git clone https://aur.archlinux.org/yay-bin.git ~/Downloads/Git/yay-bin/
 cd  ~/Downloads/Git/yay-bin
-makepkg -si
+makepkg -si --noconfirm
 
-yay -S  zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-sudo-git zsh-theme-powerlevel10k-git
-# yay -S  zsh-autocomplete-git zsh-vi-mode-git
-yay -S clipse clipse-gui blueberry-wayland pw-volume quickshell-git
-yay -S scooter-bin # search and replace in project
+yay -S --noconfirm --answerclean All --answerdiff None zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-sudo-git zsh-theme-powerlevel10k-git
+# yay -S --noconfirm --answerclean All --answerdiff None zsh-autocomplete-git zsh-vi-mode-git
+yay -S --noconfirm --answerclean All --answerdiff None clipse clipse-gui blueberry-wayland pw-volume quickshell-git
+yay -S --noconfirm --answerclean All --answerdiff None scooter-bin # search and replace in project
 # When choosing Color scheme: it gotta be Breeze Dark (KColorScheme) to work Properly
-yay -S qt6ct-kde
-#yay -S qt5ct-kde 
+yay -S --noconfirm --answerclean All --answerdiff None qt6ct-kde
+#yay -S --noconfirm --answerclean All --answerdiff None qt5ct-kde 
 
 # If Open with in Dolphin still doesn't work
 # ln -s /etc/xdg/menus/plasma-applications.menu /etc/xdg/menus/applications.menu
@@ -127,7 +127,7 @@ sudo ln -sf "${HOME}/.config/hypr/dots/.scripts/zellijs/zs" "/usr/bin/"
 echo "zs linked"
 
 # ASKN
-yay -S  sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
+yay -S --noconfirm --answerclean All --answerdiff None sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
 
 echo "creating sddm.conf.d"
 sudo mkdir /etc/sddm.conf.d/
@@ -174,17 +174,17 @@ hyprpm reload -n
 
 # ASKN
 # INSTALLED IN ARCHLINUX-INSTALLER
-# yay -S  hyprland cpio meson cmake hyprland-qtutils xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprlock hypridle hyprpicker
+# yay -S --noconfirm --answerclean All --answerdiff None hyprland cpio meson cmake hyprland-qtutils xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprlock hypridle hyprpicker
 
 # JQ is really important for my scripts
-yay -S  jq pamixer nm-connection-editor acpi nwg-look nwg-displays grim slurp
+yay -S --noconfirm --answerclean All --answerdiff None jq pamixer nm-connection-editor acpi nwg-look nwg-displays grim slurp
 
 # SCREENSHOT script: grim slurp
 # ASK
-yay -S grimblast
+yay -S --noconfirm --answerclean All --answerdiff None grimblast
 
 # ARE YOU REQUIRED?
-yay -S gojq-bin bc playerctl socat swappy speech-dispatcher gcolor3 nsxiv imv hyprshot wf-recorder  python-pytube 
+yay -S --noconfirm --answerclean All --answerdiff None gojq-bin bc playerctl socat swappy speech-dispatcher gcolor3 nsxiv imv hyprshot wf-recorder python-pytube 
 
 echo "######################################"
 echo "###### Installing frequent apps ######"
@@ -192,11 +192,11 @@ echo "######################################"
 
 # INSTALLING RUST
 # ASKN
-yay -S  rustup
+yay -S --noconfirm --answerclean All --answerdiff None rustup
 # Install rustc compiler
 rustup install stable
 # Install rust-analyzer (nvim LSP)
-yay -S rust-analyzer
+yay -S --noconfirm --answerclean All --answerdiff None rust-analyzer
 
 
 # Installing fonts
@@ -204,57 +204,57 @@ sudo ln -sf "${HOME}/.config/hypr/dots/conf.avail/" /etc/fonts/
 sudo ln -sf /etc/fonts/conf.avail/75-joypixels.conf /etc/fonts/conf.d/
 
 # ASKN
-yay -S wget github-cli lsix firefox-tridactyl ncdu dust duf baobab iftop yazi
-yay -S ueberzugpp xournalpp obsidian kooha resources tgpt
+yay -S --noconfirm --answerclean All --answerdiff None wget github-cli lsix firefox-tridactyl ncdu dust duf baobab iftop yazi
+yay -S --noconfirm --answerclean All --answerdiff None ueberzugpp xournalpp obsidian kooha resources tgpt
 
 # ASK
-yay -S nodejs-readability-cli firefox-tridactyl-native-bin smile  ttf-joypixels 
+yay -S --noconfirm --answerclean All --answerdiff None nodejs-readability-cli firefox-tridactyl-native-bin smile ttf-joypixels 
 #ttf-misans
-# yay -S ttf-ms-win11-auto
+# yay -S --noconfirm --answerclean All --answerdiff None ttf-ms-win11-auto
 # ttf-maple Doesn't exist anymore
-yay -S lexend-fonts-git ttf-illinois-mono-git 
-# yay -S ttf-maplemono # aur cn repos
-yay -S  gtt-bin anki zen-browser-bin freetube-bin curd vivaldi 
-# yay -S google-chrome
-# yay -S tori-bin
-# yay -S bun-bin vimv
-# yay -S megasync-bin
+yay -S --noconfirm --answerclean All --answerdiff None lexend-fonts-git ttf-illinois-mono-git 
+# yay -S --noconfirm --answerclean All --answerdiff None ttf-maplemono # aur cn repos
+yay -S --noconfirm --answerclean All --answerdiff None gtt-bin anki zen-browser-bin freetube-bin curd vivaldi 
+# yay -S --noconfirm --answerclean All --answerdiff None google-chrome
+# yay -S --noconfirm --answerclean All --answerdiff None tori-bin
+# yay -S --noconfirm --answerclean All --answerdiff None bun-bin vimv
+# yay -S --noconfirm --answerclean All --answerdiff None megasync-bin
 # mega quota exceeded
-yay -S megacmd
-# yay -S input-remapper-bin # Replaced by keyd
+yay -S --noconfirm --answerclean All --answerdiff None megacmd
+# yay -S --noconfirm --answerclean All --answerdiff None input-remapper-bin # Replaced by keyd
 echo "ENABLING KEYD"
 # Enable input-remapper (keyd)
 sudo systemctl enable --now keyd
 sudo ln -sf "${HOME}/.config/hypr/dots/keyd/default.conf" "/etc/keyd/default.conf"
 sudo keyd reload
 
-yay -S hyprsunset
-yay -S deepin-editor # Use its Icon for tv-lovely && tv-rg
+yay -S --noconfirm --answerclean All --answerdiff None hyprsunset
+yay -S --noconfirm --answerclean All --answerdiff None deepin-editor # Use its Icon for tv-lovely && tv-rg
 
 # pipx install wisdom-tree
 
-# yay -S youtube-local
-# yay -S  sioyek 
-# yay -S  amberol
-# yay -S pcloud-drive
+# yay -S --noconfirm --answerclean All --answerdiff None youtube-local
+# yay -S --noconfirm --answerclean All --answerdiff None sioyek 
+# yay -S --noconfirm --answerclean All --answerdiff None amberol
+# yay -S --noconfirm --answerclean All --answerdiff None pcloud-drive
 
 # AND YOU
-# yay -S vdhcoapp-bin
-# yay -S selectdefaultapplication-git 
-# yay -S megacmd
+# yay -S --noconfirm --answerclean All --answerdiff None vdhcoapp-bin
+# yay -S --noconfirm --answerclean All --answerdiff None selectdefaultapplication-git 
+# yay -S --noconfirm --answerclean All --answerdiff None megacmd
 
 #issues with
-#yay -S  searxng-git 
-# yay -S  firefox-developer-edition 
+#yay -S --noconfirm --answerclean All --answerdiff None searxng-git 
+# yay -S --noconfirm --answerclean All --answerdiff None firefox-developer-edition 
 
 
 # WAYBAR Vertical modules
 # ASKN
-#yay -S pacman-contrib
-#yay -S power-profile
+#yay -S --noconfirm --answerclean All --answerdiff None pacman-contrib
+#yay -S --noconfirm --answerclean All --answerdiff None power-profile
 # ASK
-#yay -S aurutils-git wttrbar hyprshade 
-# yay -S wl-screenrec
+#yay -S --noconfirm --answerclean All --answerdiff None aurutils-git wttrbar hyprshade 
+# yay -S --noconfirm --answerclean All --answerdiff None wl-screenrec
 
 ln -sf "${HOME}/.config/hypr/dots/yazi" "${HOME}/.config"
 echo "yazi linked"
@@ -264,7 +264,7 @@ ya pkg add yazi-rs/plugins:smart-enter
 ya pkg add josephschmitt/auto-layout
 
 # LaTeX packages
-# yay -S  texlive-latex biber texlive-binextra texlive-langspanish texlive-latexextra
+# yay -S --noconfirm --answerclean All --answerdiff None texlive-latex biber texlive-binextra texlive-langspanish texlive-latexextra
 
 echo "#############################################"
 echo "#####   Installation  THEMES            #####"
@@ -352,7 +352,7 @@ git clone https://github.com/yeyushengfan258/Win11OS-kde.git ~/Downloads/Git/Win
 
 # DISABLING RIGHT TOP BUTTONS IN GTK-4 APPS
 
-sudo pacman -S dconf-editor
+sudo pacman -S --noconfirm dconf-editor
 
 # Go to  org > gnome > desktop > wm > preferences > button-layout
 # AND  Under "custom value" remove everything except for "appmenu" -> 'icon:'
@@ -362,24 +362,24 @@ echo "#####   Installation NVIM dependencies  #####"
 echo "#############################################"
 
 # ASK
-yay -S dotnet-sdk jdk-lts jdk-lts-doc go maven
-# yay -S go ruby
+yay -S --noconfirm --answerclean All --answerdiff None dotnet-sdk jdk-lts jdk-lts-doc go maven
+# yay -S --noconfirm --answerclean All --answerdiff None go ruby
 ###HERE
-# yay -S  google-java-format-git
+# yay -S --noconfirm --answerclean All --answerdiff None google-java-format-git
 
 ### JAVASCRIPT RELATED
 # ASKN
-sudo pacman -S  nodejs npm 
-# yay -S  bun
+sudo pacman -S --noconfirm nodejs npm 
+# yay -S --noconfirm --answerclean All --answerdiff None bun
 # curl -fsSL https://bun.sh/install | bash
 
 ### PYTHON RELATED
 # ASKN
-sudo pacman -S  python-pip python-pipx
+sudo pacman -S --noconfirm python-pip python-pipx
 
 ### LUA RELATED
 # ASKN
-sudo pacman -S  lua51 luarocks
+sudo pacman -S --noconfirm lua51 luarocks
 
 # Download hypr in ~/.config/hypr before enter here
 #git clone https://github.com/lethc/hyprland-dotfiles.git ~/.config/hypr
@@ -399,16 +399,16 @@ ln -s "${HOME}/.local/share/nvim" "${HOME}/.local/share/nvim2"
 # npm install neovim
 #sudo npm install -g npm@9.6.2
 # ASK
-# yay -S shell-color-scripts-git hub 
-yay -S prettierd rar
-yay -S code-minimap-bin
+# yay -S --noconfirm --answerclean All --answerdiff None shell-color-scripts-git hub 
+yay -S --noconfirm --answerclean All --answerdiff None prettierd rar
+yay -S --noconfirm --answerclean All --answerdiff None code-minimap-bin
 # ASKN
-sudo pacman -S  python-black prettier stylua ripgrep python-isort
-sudo pacman -S  fd gzip unzip deno 
-sudo pacman -S  composer python-pynvim shfmt
-sudo pacman -S  yarn 
-sudo pacman -S minder
-# yay -S   #python-rpcq
+sudo pacman -S --noconfirm python-black prettier stylua ripgrep python-isort
+sudo pacman -S --noconfirm fd gzip unzip deno 
+sudo pacman -S --noconfirm composer python-pynvim shfmt
+sudo pacman -S --noconfirm yarn 
+sudo pacman -S --noconfirm minder
+# yay -S --noconfirm --answerclean All --answerdiff None   #python-rpcq
 
 # Python Debug in neovim
 mkdir -p ~/env/.virtualenvs
@@ -416,11 +416,11 @@ cd ~/env/.virtualenvs
 python -m venv debugpy
 debugpy/bin/python -m pip install debugpy
 # Rust, C and C++ debuger
-yay -S codelldb-bin
+yay -S --noconfirm --answerclean All --answerdiff None codelldb-bin
 # Doesn't even open once you've added your account in Wayland. IDK 24/12/25
-# yay -S mailspring-bin # If Password Management Error edit /usr/share/applications/mailspring.desktop
+# yay -S --noconfirm --answerclean All --answerdiff None mailspring-bin # If Password Management Error edit /usr/share/applications/mailspring.desktop
 # Exec=mailspring --password-store="gnome-libsecret" %U
-# yay -S thunderbird thunderbird-i18n-en-gb todoist-appimage 
+# yay -S --noconfirm --answerclean All --answerdiff None thunderbird thunderbird-i18n-en-gb todoist-appimage 
 
  
 echo "######################################"
