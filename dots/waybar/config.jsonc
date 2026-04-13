@@ -6,7 +6,7 @@
 {
     "layer": "top",
     "position": "bottom",
-    "height": 38,
+    "height": 40,
     "spacing": 2,
     "margin-top": 0,
     "margin-bottom": 0,
@@ -98,7 +98,7 @@
             "update-active-window": true,
             "format": "{icon}",
             // "icon-size": 15,
-            "icon-size": 18,
+            "icon-size": 25,
             "on-click-window": "~/.config/waybar/bin/focus-window.sh {address} {button}"
         }
     },

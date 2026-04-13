@@ -44,11 +44,13 @@ tooltip {
 #custom-quit,
 #custom-lock,
 #custom-launcher {
-    background: @surface;
-    padding: 2px 12px;
-    margin: 4px;
+    /* background: @surface; */
+    /* padding: 2px 12px; */
+    padding: 2px 08px;
+    /* margin: 4px; */
+    margin: 0px;
     color: @foreground;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     border: 3px solid transparent;
     transition: all 0.3s ease-out;
 }
@@ -134,14 +136,14 @@ tooltip {
 /* Modules: Specific Styles */
 #custom-launcher {
     font-size: 18px;
-    background: @accent-strong;
-    color: @background;
+    /* background: @accent-strong; */
+    /* color: @background; */
 }
 
 #custom-countdown,
 #clock {
-    background: @accent-soft;
-    color: @background;
+    /* background: @accent-soft; */
+    /* color: @background; */
 }
 
 #pulseaudio.muted {
@@ -173,7 +175,7 @@ tooltip {
     margin-right: 3px;
     margin-bottom: 4px;
     color: @foreground;
-    border-radius: 8px;
+    border-radius: 3px;
     border: 3px solid transparent;
     transition: all 0.3s ease-out;
 }
@@ -201,7 +203,7 @@ tooltip {
     margin-right: 3px;
     margin-bottom: 4px;
     color: @foreground;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     border: 3px solid transparent;
     transition: all 0.3s ease-out;
 }
