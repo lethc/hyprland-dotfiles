@@ -9,6 +9,7 @@ echo "######################################"
 # If .config/hypr is in root group
 # sudo chown -R LostOnTheSeas:LostOnTheSeas /home/LostOnTheSeas/.config/
 mkdir ~/Home
+mkdir ~/Workspace
 mkdir ~/Documents/Library
 mkdir ~/.local/bin
 mkdir ~/Downloads/Git
@@ -375,7 +376,7 @@ sudo pacman -S --noconfirm nodejs npm
 
 ### PYTHON RELATED
 # ASKN
-sudo pacman -S --noconfirm python-pip python-pipx
+sudo pacman -S --noconfirm python-pip python-pipx python-lsp-server ruff python-lsp-ruff spyder 
 
 ### LUA RELATED
 # ASKN
