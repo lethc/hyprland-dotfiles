@@ -1,31 +1,38 @@
 #!/usr/bin/bash
 
 screenshot() {
-    hyprshot -zm region --clipboard-only
-
-	# Open a swappy with the screenshot with swappy
-	# swappy -f $temp_screenshot &>/dev/null &
-
-	exit_status=$?
-
-	if [ $exit_status -eq 0 ]; then
-		paplay ~/.config/hypr/assets/sounds/Grab.aif
-	else
-		break
-	fi
+    region=$(slurp 2>/dev/null)
+    
+    if [ -z "$region" ]; then
+        return 1
+    fi
+    
+    grim -g "$region" - | wl-copy
+    notify-send "Screenshot" "Imagen copiada al clipboard"
+    paplay ~/.config/hypr/assets/sounds/Grab.aif
 }
 save_screenshot() {
-	# save_temp_screenshot="${HOME}/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S.png')"
-	save_temp_screenshot="$(date +'%Y-%m-%d_%H-%M-%S.png')"
-    hyprshot -zm region -f $save_temp_screenshot
-
-	exit_status=$?
-
-	if [ $exit_status -eq 0 ]; then
-		paplay ~/.config/hypr/assets/sounds/Grab.aif
-	else
-		break
-	fi
+    local save_dir="${HOME}/Pictures/Screenshots"
+    local temp_file="/tmp/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png"
+    local final_file="${save_dir}/$(date +'%Y-%m-%d_%H-%M-%S').png"
+    # Create directory if it does not exist
+    mkdir -p "$save_dir"
+    # Select region
+    region=$(slurp 2>/dev/null)
+    if [ -z "$region" ]; then
+        return 1
+    fi
+    # Capture screenshot to temporary file
+    grim -g "$region" "$temp_file"
+    # Open in swappy to edit and save to final destination
+    swappy -f "$temp_file" -o "$final_file"
+    # Only play sound if swappy saved the file (did not close without saving)
+    if [ -f "$final_file" ]; then
+        paplay ~/.config/hypr/assets/sounds/Grab.aif
+        notify-send "Screenshot guardada" "$final_file"
+    fi
+    # Clean temporary file
+    rm -f "$temp_file"
 }
 ocr_screenshot() {
 	grim -g "$(slurp)" "tmp.png" && tesseract "tmp.png" - | wl-copy && rm "tmp.png"
@@ -33,9 +40,10 @@ ocr_screenshot() {
 	exit_status=$?
 
 	if [ $exit_status -eq 0 ]; then
+        notify-send "Extracted English Text" "Open your clipboard to see it."
 		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
 	else
-		break
+		return 1
 	fi
 }
 esocr_screenshot() {
@@ -44,12 +52,14 @@ esocr_screenshot() {
 	exit_status=$?
 
 	if [ $exit_status -eq 0 ]; then
+        notify-send "Extracted Spanish Text" "Open your clipboard to see it."
 		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
 	else
-		break
+		return 1
 	fi
 }
 korocr_screenshot() {
+    notify-send "Extracted Korean Text" "Open your clipboard to see it."
 	grim -g "$(slurp)" "tmp.png" && tesseract -l kor "tmp.png" - | wl-copy && rm "tmp.png"
 
 	exit_status=$?
@@ -57,7 +67,7 @@ korocr_screenshot() {
 	if [ $exit_status -eq 0 ]; then
 		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
 	else
-		break
+		return 1
 	fi
 }
 case "$1" in
