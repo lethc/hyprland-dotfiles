@@ -6,7 +6,7 @@
 {
     "layer": "top",
     "position": "bottom",
-    "height": 40,
+    "height": 48,
     "spacing": 2,
     "margin-top": 0,
     "margin-bottom": 0,
@@ -96,9 +96,10 @@
         "workspace-taskbar": {
             "enable": true,
             "update-active-window": true,
-            "format": "{icon}",
+            // "format": " {icon}{title:.30}",
+            "format": " {icon}",
             // "icon-size": 15,
-            "icon-size": 25,
+            "icon-size": 26,
             "on-click-window": "~/.config/waybar/bin/focus-window.sh {address} {button}"
         }
     },
@@ -177,7 +178,9 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%a %d %b %H:%M }",
+        // "format": "{:%a %d %b %H:%M }",
+        "format": "{:%a %H:%M \n%d/%m/%Y}",
+        // "format": "      {:%R \n %d/%m/%Y}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
