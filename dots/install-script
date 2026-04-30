@@ -313,12 +313,13 @@ cd "${HOME}/Downloads/Git/Reversal-icon-theme"
 ./install.sh
 
 # Sevi
-git clone https://github.com/TaylanTatli/Sevi.git ~/Downloads/Git/Sevi
-cd "${HOME}/Downloads/Git/Sevi"
-./install.sh -a
+git clone https://github.com/lethc/SeviDDE.git ~/Downloads/Git/SeviDDE/
+cd "${HOME}/Downloads/Git/SeviDDE"
+./install.sh -red
 
 # echo "Patch yellow dolphin icon to Red"
-sudo cp  "${HOME}/.config/hypr/dots/icons/file-manager.svg" "${HOME}/.local/share/icons/Sevi-red-dark/apps/scalable/"
+# Replace yellow icon from file-manager with a red one
+# sudo cp  "${HOME}/.config/hypr/dots/icons/file-manager.svg" "${HOME}/.local/share/icons/Sevi-red-dark/apps/scalable/"
 
 # Win11 Icon Theme
 # git clone https://github.com/yeyushengfan258/Win11-icon-theme.git ~/Downloads/Git/Win11-icon-theme
