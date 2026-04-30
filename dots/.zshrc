@@ -64,6 +64,7 @@ export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH=~/bin:$PATH
 export PATH=~/.luarocks/bin:$PATH
 export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl" #Biber requires this PATH to execute
 export BAT_THEME="base16"
