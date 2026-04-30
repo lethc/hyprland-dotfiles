@@ -9,7 +9,7 @@ check_and_switch() {
     HOUR=$(date +%H)
     
     # Determine desired theme based on time
-    if [ "$HOUR" -ge 18 ] || [ "$HOUR" -lt 6 ]; then
+    if [ "$HOUR" -ge 17 ] || [ "$HOUR" -lt 7 ]; then
         DESIRED="dark"
     else
         DESIRED="light"
