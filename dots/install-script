@@ -111,9 +111,9 @@ ln -sf "${HOME}/.config/hypr/dots/electron-flags.conf" "${HOME}/.config"
 ln -sf "${HOME}/.config/hypr/dots/code-flags.conf" "${HOME}/.config"
 ln -sf "${HOME}/.config/hypr/dots/freetube.desktop" "${HOME}/.local/share/applications/"
 ln -sf "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark" "${HOME}/.themes"
-rm -r "${HOME}/.config/gtk-4.0"
+# rm -r "${HOME}/.config/gtk-4.0"
 # cp -r "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark/gtk-4.0" "${HOME}/.config"
-ln -sf "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark/gtk-4.0" "${HOME}/.config" # Make sure nwg-look is not modifying gtk-4 Configs
+# ln -sf "${HOME}/.config/hypr/dots/gtk/Material-Red-Dark/gtk-4.0" "${HOME}/.config" # Make sure nwg-look is not modifying gtk-4 Configs
 echo "Material-Red-Dark linked"
 
 
