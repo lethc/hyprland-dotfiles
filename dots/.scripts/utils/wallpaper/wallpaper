@@ -7,13 +7,13 @@ source $LOAD_ENVS
 
 function load_wp(){
     # swww img -t any --transition-bezier 0.0,0.0,1.0,1.0 --transition-duration .8 --transition-step 255 --transition-fps 60 $BACKGROUND_IMAGE
-    swww img -t any --transition-duration .7 --transition-step 255 --transition-fps 60 $BACKGROUND_IMAGE
+    awww img -t any --transition-duration .7 --transition-step 255 --transition-fps 60 $BACKGROUND_IMAGE
     # swww img -t any $BACKGROUND_IMAGE
 }
 
 #perform cleanup and exit
 if ! swww query; then
-    swww-daemon --format xrgb &
+    awww-daemon --format xrgb &
 fi
 
 load_wp
