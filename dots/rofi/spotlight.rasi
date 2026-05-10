@@ -4,13 +4,22 @@
 * {
     font:   "SF Pro Text Regular 12";
 
-    bg0:     #F5F5F5BF;
+    /* red light */
+    /* bg0:     #F5F5F5BF;
     bg1:     #7E7E7E80;
     bg2:     #b4586a;
 
     fg0:     #242424;
     fg1:     #FFFFFF;
-    fg2:     #24242480;
+    fg2:     #24242480; */
+
+    bg0:    #FFFFFFE6;
+    bg1:    #3C3C4380;
+    bg2:    #0A84FFE6;
+
+    fg0:    #000000;
+    fg1:    #1C1C1E;
+    fg2:    #3C3C4399;
 
     transparent: rgba(0, 0, 0, 0.1);
     background-color:   transparent;

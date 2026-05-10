@@ -24,8 +24,8 @@
         // "custom/tasks",
         // "custom/filemanager",
         "hyprland/workspaces",
-        "hyprland/workspaces#special"
-        // "custom/todo"
+        "hyprland/workspaces#special",
+        "custom/todo"
     ],
     // "modules-center": [
     //     // "hyprland/workspaces"
@@ -33,7 +33,7 @@
     // ],
     "modules-right": [
         // "keyboard-state",
-        // "custom/countdown",
+        "custom/countdown",
         "group/group-tools",
         "custom/pipewire",
         "memory",

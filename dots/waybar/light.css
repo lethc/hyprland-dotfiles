@@ -1,22 +1,22 @@
 /* Light Mode */
-@define-color foreground #3b1c20;
-@define-color background rgba(255, 245, 246, 0.85);
+@define-color foreground #000000;
+@define-color background rgba(255,255,255,0.85);
 
 @define-color white-color #ffffff;
 @define-color black-color #000000;
 
 /* surfaces */
-@define-color surface #ffe9eb;
-@define-color surface-alt #241317;
-@define-color surface-active #f8ccd2;
+@define-color surface #F2F2F7;
+@define-color surface-alt #FFFFFF;
+@define-color surface-active #E5E5EA;
 
-/* accents */
-@define-color accent #d65a6f;
-@define-color accent-strong #c64c61;
-@define-color accent-soft #e97b84;
-@define-color special-accent #B84160;
+/* accents (Ventura system colors) */
+@define-color accent #0860F2;
+@define-color accent-strong #0066CC;
+@define-color accent-soft #5AC8FA;
+@define-color special-accent #BF5AF2;
 
 /* semantic */
-@define-color warning #ff9e64;
-@define-color success #26a65b;
-@define-color urgent rgba(200, 120, 0, 0.35);
+@define-color warning #FF9F0A;
+@define-color success #30D158;
+@define-color urgent rgba(255, 159, 10, 0.35);

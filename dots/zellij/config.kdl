@@ -250,98 +250,192 @@ keybinds clear-defaults=true {
     }
 }
 themes {
-    code-dark-plus {
-        fg "#cccccc"
-        bg "#1e1e1e"
-        black "#000000"
-        red "#f14c4c"
-        green "#23d18b"
-        yellow "#f5f543"
-        blue "#3b8eea"
-        magenta "#d670d6"
-        cyan "#29b8db"
-        white "#e5e5e5"
+    onedark {
+        fg "#abb2bf"
+        bg "#282c34"
+        black "#1e2127"
+        red "#e06c75"
+        green "#98c379"
+        yellow "#e5c07b"
+        blue "#61afef"
+        magenta "#c678dd"
+        cyan "#56b6c2"
+        white "#dcdfe4"
         orange "#d19a66"
 
         text_unselected {
-            base "#cccccc"
-            background "#1e1e1e"
-            emphasis_0 "#e5e5e5"
-            emphasis_1 "#23d18b"
-            emphasis_2 "#f5f543"
-            emphasis_3 "#f14c4c"
+            base "#abb2bf"
+            background "#282c34"
+            emphasis_0 "#dcdfe4"
+            emphasis_1 "#98c379"
+            emphasis_2 "#e5c07b"
+            emphasis_3 "#e06c75"
         }
 
         text_selected {
-            base "#1e1e1e"
-            background "#3b8eea"
-            emphasis_0 "#e5e5e5"
-            emphasis_1 "#23d18b"
-            emphasis_2 "#f5f543"
-            emphasis_3 "#f14c4c"
+            base "#282c34"
+            background "#61afef"
+            emphasis_0 "#dcdfe4"
+            emphasis_1 "#98c379"
+            emphasis_2 "#e5c07b"
+            emphasis_3 "#e06c75"
         }
 
         ribbon_selected {
-            base "#1e1e1e"
-            background "#3b8eea"
-            emphasis_0 "#e5e5e5"
-            emphasis_1 "#23d18b"
-            emphasis_2 "#f5f543"
-            emphasis_3 "#f14c4c"
+            base "#282c34"
+            background "#61afef"
+            emphasis_0 "#dcdfe4"
+            emphasis_1 "#98c379"
+            emphasis_2 "#e5c07b"
+            emphasis_3 "#e06c75"
         }
 
         ribbon_unselected {
-            base "#cccccc"
-            background "#1e1e1e"
-            emphasis_0 "#1e1e1e"
-            emphasis_1 "#1e1e1e"
-            emphasis_2 "#1e1e1e"
-            emphasis_3 "#1e1e1e"
+            base "#abb2bf"
+            background "#282c34"
+            emphasis_0 "#282c34"
+            emphasis_1 "#282c34"
+            emphasis_2 "#282c34"
+            emphasis_3 "#282c34"
         }
 
         frame_selected {
-            base "#3b8eea"
-            background "#1e1e1e"
-            emphasis_0 "#e5e5e5"
-            emphasis_1 "#23d18b"
-            emphasis_2 "#f5f543"
-            emphasis_3 "#f14c4c"
+            base "#61afef"
+            background "#282c34"
+            emphasis_0 "#dcdfe4"
+            emphasis_1 "#98c379"
+            emphasis_2 "#e5c07b"
+            emphasis_3 "#e06c75"
         }
 
         frame_unselected {
-            base "#cccccc"
-            background "#1e1e1e"
-            emphasis_0 "#e5e5e5"
-            emphasis_1 "#23d18b"
-            emphasis_2 "#f5f543"
-            emphasis_3 "#f14c4c"
+            base "#abb2bf"
+            background "#282c34"
+            emphasis_0 "#dcdfe4"
+            emphasis_1 "#98c379"
+            emphasis_2 "#e5c07b"
+            emphasis_3 "#e06c75"
         }
 
         table_title {
-            base "#cccccc"
-            background "#1e1e1e"
-            emphasis_0 "#e5e5e5"
-            emphasis_1 "#23d18b"
-            emphasis_2 "#f5f543"
-            emphasis_3 "#f14c4c"
+            base "#abb2bf"
+            background "#282c34"
+            emphasis_0 "#dcdfe4"
+            emphasis_1 "#98c379"
+            emphasis_2 "#e5c07b"
+            emphasis_3 "#e06c75"
         }
 
         table_cell_selected {
-            base "#1e1e1e"
-            background "#3b8eea"
-            emphasis_0 "#e5e5e5"
-            emphasis_1 "#23d18b"
-            emphasis_2 "#f5f543"
-            emphasis_3 "#f14c4c"
+            base "#282c34"
+            background "#61afef"
+            emphasis_0 "#dcdfe4"
+            emphasis_1 "#98c379"
+            emphasis_2 "#e5c07b"
+            emphasis_3 "#e06c75"
         }
 
         multiplayer_user_colors {
-            base "#1e1e1e"
-            background "#f14c4c"
-            emphasis_0 "#23d18b"
-            emphasis_1 "#d670d6"
-            emphasis_2 "#f5f543"
-            emphasis_3 "#29b8db"
+            base "#282c34"
+            background "#e06c75"
+            emphasis_0 "#98c379"
+            emphasis_1 "#c678dd"
+            emphasis_2 "#e5c07b"
+            emphasis_3 "#56b6c2"
+        }
+    }
+    onedark-light {
+        fg "#383a42"
+        bg "#fafafa"
+        black "#383a42"
+        red "#e45649"
+        green "#50a14f"
+        yellow "#c18401"
+        blue "#4078f2"
+        magenta "#a626a4"
+        cyan "#0184bc"
+        white "#ffffff"
+        orange "#d19a66"
+
+        text_unselected {
+            base "#383a42"
+            background "#fafafa"
+            emphasis_0 "#202227"
+            emphasis_1 "#50a14f"
+            emphasis_2 "#c18401"
+            emphasis_3 "#e45649"
+        }
+
+        text_selected {
+            base "#fafafa"
+            background "#4078f2"
+            emphasis_0 "#ffffff"
+            emphasis_1 "#50a14f"
+            emphasis_2 "#c18401"
+            emphasis_3 "#e45649"
+        }
+
+        ribbon_selected {
+            base "#fafafa"
+            background "#4078f2"
+            emphasis_0 "#ffffff"
+            emphasis_1 "#50a14f"
+            emphasis_2 "#c18401"
+            emphasis_3 "#e45649"
+        }
+
+        ribbon_unselected {
+            base "#383a42"
+            background "#fafafa"
+            emphasis_0 "#fafafa"
+            emphasis_1 "#fafafa"
+            emphasis_2 "#fafafa"
+            emphasis_3 "#fafafa"
+        }
+
+        frame_selected {
+            base "#4078f2"
+            background "#fafafa"
+            emphasis_0 "#202227"
+            emphasis_1 "#50a14f"
+            emphasis_2 "#c18401"
+            emphasis_3 "#e45649"
+        }
+
+        frame_unselected {
+            base "#383a42"
+            background "#fafafa"
+            emphasis_0 "#202227"
+            emphasis_1 "#50a14f"
+            emphasis_2 "#c18401"
+            emphasis_3 "#e45649"
+        }
+
+        table_title {
+            base "#383a42"
+            background "#fafafa"
+            emphasis_0 "#202227"
+            emphasis_1 "#50a14f"
+            emphasis_2 "#c18401"
+            emphasis_3 "#e45649"
+        }
+
+        table_cell_selected {
+            base "#fafafa"
+            background "#4078f2"
+            emphasis_0 "#ffffff"
+            emphasis_1 "#50a14f"
+            emphasis_2 "#c18401"
+            emphasis_3 "#e45649"
+        }
+
+        multiplayer_user_colors {
+            base "#fafafa"
+            background "#e45649"
+            emphasis_0 "#50a14f"
+            emphasis_1 "#a626a4"
+            emphasis_2 "#c18401"
+            emphasis_3 "#0184bc"
         }
     }
     code-light-sky {
@@ -534,7 +628,7 @@ themes {
     }
 }
 
-theme "code-dark-rosewood"
+theme "onedark"
 
 // Plugin aliases - can be used to change the implementation of Zellij
 // changing these requires a restart to take effect

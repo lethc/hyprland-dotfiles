@@ -1,21 +1,69 @@
+# Shell
 command = /usr/bin/zsh
-font-family = "VictorMono Nerd Font"
-font-family-bold = "Fira Code Nerd Font"
-font-family-italic = "VictorMono Nerd Font"
-font-family-bold-italic = "Maple Mono"
-font-style = "Medium"
-font-style-bold = "Bold"
-font-style-italic = "Bold Italic"
-font-style-bold-italic = "Bold Italic"
+keybind = ctrl+shift+.=reload_config
+
+# Terminal type
+term = xterm-256color
+
+# font-family = "VictorMono Nerd Font"
+# font-family-bold = "Fira Code Nerd Font"
+# font-family-italic = "VictorMono Nerd Font"
+# font-family-bold-italic = "Maple Mono"
+# font-style = "Medium"
+# font-style-bold = "Bold"
+# font-style-italic = "Bold Italic"
+# font-style-bold-italic = "Bold Italic"
+
+font-family = Illinois Mono
+# Nerd font fallback
+font-family = Symbols Nerd Font
 
 font-size = 11.8
-font-thicken = true
+# font-thicken = true
 
-grapheme-width-method = "unicode"
+# Window padding
+grapheme-width-method = unicode
+window-padding-x = 5
+window-padding-y = 0
 
 adjust-cell-width = 0%
 adjust-cell-height = 30%
+# adjust-cell-height = 0.15
 
+# Cursor
+cursor-style = bar
+cursor-style-blink = true
+
+# Opacity
+background-opacity = 0.9
+
+# Window
+# window-width = 700
+# window-height = 500
+
+# Start maximized
+# maximize = true
+
+# Clipboard
+copy-on-select = clipboard
+
+# Title
+# window-title = terminal
+
+# Mouse
+mouse-hide-while-typing = true
+
+# Scrollback
+scrollback-limit = 10000
+
+# Selection colors
+selection-background = 405060
+selection-foreground = dcdfe4
+
+# URL color
+link-url = true
+
+# onedark
 palette = 0=#1e222a
 palette = 1=#e06c75
 palette = 2=#98c379
@@ -24,6 +72,7 @@ palette = 4=#61afef
 palette = 5=#c678dd
 palette = 6=#56b6c2
 palette = 7=#dcdfe4
+
 palette = 8=#545862
 palette = 9=#e06c75
 palette = 10=#98c379
@@ -32,21 +81,25 @@ palette = 12=#61afef
 palette = 13=#c678dd
 palette = 14=#56b6c2
 palette = 15=#ffffff
-background = 1e222a
+
 foreground = dcdfe4
-cursor-color = e5c07b
-selection-background = 405060
-selection-foreground = dcdfe4
-selection-invert-fg-bg = true
+background = 1e222a
 
-cursor-style = "bar"
-cursor-style-blink = true
-scrollback-limit = 20000
-window-padding-x = 10
-window-padding-y = 1
-window-save-state = "always"
+# Keybinds
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
 
-# background-opacity = 0.8
-# background-blur-radius = 25
+keybind = ctrl+plus=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+0=reset_font_size
 
-keybind = global:alt+grave_accent=toggle_quick_terminal
+keybind = ctrl+shift+f=start_search
+
+# URL launcher
+keybind = ctrl+m=copy_url_to_clipboard
+
+# Scrolling
+keybind = ctrl+shift+k=scroll_page_lines:-1
+keybind = ctrl+shift+j=scroll_page_lines:1
+keybind = ctrl+shift+l=scroll_page_up
+keybind = ctrl+shift+h=scroll_page_down

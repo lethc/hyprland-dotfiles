@@ -63,7 +63,7 @@ document = [
 
 [open]
 rules = [
-	{ name = "*/", use = "folder" },
+	# { name = "*/", use = "folder" },
 
 	{ mime = "text/*", use = "text" },
 	{ mime = "image/*", use = "image" },
