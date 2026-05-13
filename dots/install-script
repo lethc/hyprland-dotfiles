@@ -4,6 +4,11 @@ echo "######################################"
 echo "####  1.  Important Packags       ####"
 echo "######################################"
 
+# nmcli dev status
+# nmcli radio wifi on
+# nmcli dev wifi list
+# nmcli dev wifi connect SSID --ask
+
 # If directories like ~/Downloads were not created
 # xdg-user-dirs-update
 # If .config/hypr is in root group
@@ -354,8 +359,8 @@ ln -sf "${HOME}/.config/hypr/dots/Kvantum" "${HOME}/.config"
 
 # Download Win11 Theme # NEEDED to switch to a light theme in qt (kvantum) apps
 git clone https://github.com/yeyushengfan258/Win11OS-kde.git ~/Downloads/Git/Win11OS-kde
-git clone https://github.com/vinceliuice/MacVentura-kde.git
-git clone https://github.com/vinceliuice/MacTahoe-kde.git
+git clone https://github.com/vinceliuice/MacVentura-kde.git ~/Downloads/Git/MacVentura-kde
+git clone https://github.com/vinceliuice/MacTahoe-kde.git ~/Downloads/Git/MacTahoe-kde
 
 # DISABLING RIGHT TOP BUTTONS IN GTK-4 APPS
 
