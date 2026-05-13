@@ -220,13 +220,14 @@ yay -S --noconfirm --answerclean All --answerdiff None nodejs-readability-cli fi
 # ttf-maple Doesn't exist anymore
 yay -S --noconfirm --answerclean All --answerdiff None lexend-fonts-git ttf-illinois-mono-git 
 # yay -S --noconfirm --answerclean All --answerdiff None ttf-maplemono # aur cn repos
-yay -S --noconfirm --answerclean All --answerdiff None gtt-bin anki zen-browser-bin freetube-bin curd vivaldi 
+yay -S --noconfirm --answerclean All --answerdiff None gtt-bin anki freetube-bin curd vivaldi 
+yay -S --noconfirm --answerclean All --answerdiff None zen-browser-bin
 # yay -S --noconfirm --answerclean All --answerdiff None google-chrome
 # yay -S --noconfirm --answerclean All --answerdiff None tori-bin
 # yay -S --noconfirm --answerclean All --answerdiff None bun-bin vimv
-# yay -S --noconfirm --answerclean All --answerdiff None megasync-bin
 # mega quota exceeded
-yay -S --noconfirm --answerclean All --answerdiff None megacmd
+# yay -S --noconfirm --answerclean All --answerdiff None megacmd
+yay -S --noconfirm --answerclean All --answerdiff None megasync-bin # At the end it's just the same. megacmd = megasyn-bin
 # yay -S --noconfirm --answerclean All --answerdiff None input-remapper-bin # Replaced by keyd
 echo "ENABLING KEYD"
 # Enable input-remapper (keyd)
