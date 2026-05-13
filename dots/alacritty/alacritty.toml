@@ -63,20 +63,32 @@ end = { foreground = "#1e222a", background = "#9ece6a" }
 # builtin_box_drawing = true
 
 [font.normal]
-family = "Illinois Mono"
+family = "Maple Mono NF CN"
 style = "Regular"
 
 [font.bold]
-family = "Illinois Mono"
+family = "Maple Mono NF CN"
 style = "Bold"
 
 [font.italic]
-family = "Illinois Mono"
-style = "Bold Italic"
+family = "Maple Mono NF CN"
+style = "Italic"
 
-[font.bold_italic]
-family = "Illinois Mono"
-style = "Bold Italic"
+# [font.normal]
+# family = "Illinois Mono"
+# style = "Regular"
+#
+# [font.bold]
+# family = "Illinois Mono"
+# style = "Bold"
+#
+# [font.italic]
+# family = "Illinois Mono"
+# style = "Bold Italic"
+#
+# [font.bold_italic]
+# family = "Illinois Mono"
+# style = "Bold Italic"
 
 # Kitty: adjust_line_height 5 + line_spacing 2
 # Equivalent in Alacritty:
