@@ -12,7 +12,7 @@ function load_wp(){
 }
 
 #perform cleanup and exit
-if ! swww query; then
+if ! awww query; then
     awww-daemon --format xrgb &
 fi
 
