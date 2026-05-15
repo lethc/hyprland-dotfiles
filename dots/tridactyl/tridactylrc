@@ -3,6 +3,7 @@ set auconcreatecontainer true
 " set searchurls.searchx http://localhost:8888/search?q=
 set searchengine yandex
 set smoothscroll true
+set editorcmd kitty --title=Float -e nvim
 
 bind j scrollline 4
 bind k scrollline -4
