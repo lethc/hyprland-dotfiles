@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TERMINAL="foot"
+TERMINAL="kitty"
 LAUNCHER="rofi"
 # Dark theme
 LAUNCHER_THEME="spotlight-dark"
