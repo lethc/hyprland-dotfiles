@@ -8,14 +8,14 @@
 /* surfaces */
 @define-color surface #2C2C2E;
 @define-color surface-alt #1C1C1E;
-@define-color surface-active #3A3A3C;
+@define-color surface-active #323234;
 
 /* accents (Ventura system colors) */
 @define-color accent #cccccc;
 /* @define-color accent #0A84FF; */
 @define-color accent-strong #409CFF;
 @define-color accent-soft #6EB8FF;
-@define-color special-accent #BF5AF2;
+@define-color special-accent #0A84FF;
 
 /* semantic */
 @define-color warning #FF9F0A;

@@ -5,11 +5,12 @@ source $HOME/.config/hypr/dots/.scripts/variables
 DOTS="$HOME/.config/hypr/dots"
 SCRIPTS="${DOTS}/.scripts"
 HYPRSCRIPTS="${SCRIPTS}/Hyprland"
-HYPRCTL="hyprctl dispatch"
+HYPRCTL="hyprctl dispatch "
 
 moveToWorkspace() {
     local workspace_name=$1
-    $HYPRCTL $TYPEOFWORKSPACE $workspace_name
+    # $HYPRCTL $TYPEOFWORKSPACE $workspace_name
+    hyprctl dispatch "hl.dsp.focus({workspace='$workspace_name', on_current_monitor = true})"
 }
 
 moveToWorkspace1() {

@@ -1,28 +1,42 @@
 #!/usr/bin/env bash
 
+# hyprctl dispatch 'hl.dsp.window.swap({ direction = "left" })'
+# hyprctl dispatch 'hl.dsp.focus({ workspace = "name:K:extra" })'
+# hyprctl dispatch 'hl.dsp.workspace.toggle_special("notes")'
+# hyprctl dispatch 'hl.dsp.cursor.move_to_corner({ corner = 2 })'
+# hyprctl dispatch 'hl.dsp.focus({ monitor = "HDMI-A-1" })'
+# hyprctl dispatch 'hl.dsp.focus({ workspace = "1" })'
+
 switchLastWindow() {
     # Show the active window always on top if they are floating
     if [[ $(hyprctl -j activewindow | jq -r '.floating') == true ]]; then
-        hyprctl dispatch focuscurrentorlast
-        hyprctl dispatch alterzorder top
+        # hyprctl dispatch focuscurrentorlast
+        hyprctl dispatch 'hl.dsp.focus({workspace = "previous"})'
+        # hyprctl dispatch alterzorder top
+        hyprctl dispatch 'hl.dsp.window.alter_zorder({mode = "top"})'
     else
         # Hide scratchpad and switch between workspaces windows only
         if windowname=$(hyprctl -j activewindow | jq -r '.workspace.name') && [[ "$windowname" == *"special"* ]]; then
             wspecialname=$(echo "$windowname" | awk -F':' '{print $2}')
-            hyprctl dispatch togglespecialworkspace ${wspecialname}
-            hyprctl dispatch workspace previous
-            hyprctl dispatch movecursortocorner 2
-        else
-            # hyprctl dispatch focuscurrentorlast
-            hyprctl dispatch workspace previous
+            # hyprctl dispatch togglespecialworkspace ${wspecialname}
+            hyprctl dispatch "hl.dsp.workspace.toggle_special('$wspecialname')"
+            # hyprctl dispatch workspace previous
+            hyprctl dispatch 'hl.dsp.focus({workspace = "previous"})'
             # hyprctl dispatch movecursortocorner 2
+            hyprctl dispatch 'hl.dsp.cursor.move_to_corner({ corner = 2 })'
+        else
+            # hyprctl dispatch workspace previous
+            hyprctl dispatch 'hl.dsp.focus({workspace = "previous"})'
             windowname=$(hyprctl -j activewindow | jq -r '.workspace.name')
             # Hide scratchpad also if it was the last window before the current one
             if [[ "$windowname" == *"special"* ]]; then
                 wspecialname=$(echo "$windowname" | awk -F':' '{print $2}')
-                hyprctl dispatch togglespecialworkspace ${wspecialname}
-                hyprctl dispatch workspace previous
-                hyprctl dispatch movecursortocorner 2
+                # hyprctl dispatch togglespecialworkspace ${wspecialname}
+                hyprctl dispatch "hl.dsp.workspace.toggle_special('$wspecialname')"
+                # hyprctl dispatch workspace previous
+                hyprctl dispatch 'hl.dsp.focus({workspace = "previous"})'
+                # hyprctl dispatch movecursortocorner 2
+                hyprctl dispatch 'hl.dsp.cursor.move_to_corner({ corner = 2 })'
             else
                 exit
             fi
@@ -32,9 +46,13 @@ switchLastWindow() {
 
 switchLastMonitor() {
     if monitorname=$(hyprctl -j activeworkspace | jq -r '.monitor') && [[ "$monitorname" == *"HDMI-A-1" ]]; then
-        hyprctl dispatch focusmonitor eDP-1
+        # hyprctl dispatch focusmonitor eDP-1
+        hyprctl dispatch 'hl.dsp.focus({ monitor = "eDP-1" })'
+        hyprctl dispatch 'hl.dsp.cursor.move_to_corner({ corner = 2 })'
     else
-        hyprctl dispatch focusmonitor HDMI-A-1
+        # hyprctl dispatch focusmonitor HDMI-A-1
+        hyprctl dispatch 'hl.dsp.focus({ monitor = "HDMI-A-1" })'
+        hyprctl dispatch 'hl.dsp.cursor.move_to_corner({ corner = 2 })'
     fi
 }
 
@@ -46,7 +64,8 @@ switchLastWindowSameWorkspace() {
     if [ "$previous_client" = "null" ]; then exit; fi
 
     # TODO: Replace `bringactivetotop` with `alterzorder top` after https://github.com/hyprwm/Hyprland/issues/5490 is fixed
-    hyprctl --batch "dispatch focuswindow address:$previous_client; dispatch bringactivetotop"
+    # hyprctl --batch "dispatch focuswindow address:$previous_client; dispatch bringactivetotop"
+    hyprctl dispatch "hl.dsp.focus({window = '$previous_client'})"; hyprctl dispatch "hl.dsp.window.alter_zorder({mode = 'top'})"
 }
 
 case "$1" in

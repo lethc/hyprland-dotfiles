@@ -32,6 +32,7 @@ text = [
 	{ run = 'vim "$@"', block = true },
 	{ run = 'code "$@"', block = true },
 	{ run = 'sh "$@"', block = true },
+	{ run = '$BROWSER "$@"', block = true },
 ]
 image = [
 	{ run = 'loupe "$@"', desc = "Open with Loupe" },
