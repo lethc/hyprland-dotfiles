@@ -9,6 +9,7 @@ hl.workspace_rule({
 hl.workspace_rule({
 	workspace = "name:K:extra",
 	monitor = config.laptop_monitor,
+    layout = "dwindle",
 	default = true,
 })
 hl.workspace_rule({
@@ -19,7 +20,12 @@ hl.workspace_rule({
 hl.workspace_rule({
 	workspace = "name:M:extraTwo",
 	monitor = config.laptop_monitor,
-	default = true,
+})
+
+hl.workspace_rule({
+	workspace = "4",
+	monitor = config.external_monitor,
+    layout = "dwindle",
 })
 
 hl.workspace_rule({
