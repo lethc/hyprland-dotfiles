@@ -25,13 +25,15 @@ done
 move_up() {
     for ((j = CURRENT_INDEX + 1; j < ${#WORKSPACES[@]}; j++)); do
         if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${WORKSPACES[$j]} " ]]; then
-            hyprctl dispatch $TYPEOFWORKSPACE "${WORKSPACES[$j]}"
+            # hyprctl dispatch $TYPEOFWORKSPACE "${WORKSPACES[$j]}"
+            hyprctl dispatch "hl.dsp.focus" "{workspace=\"${WORKSPACES[$j]}\", on_current_monitor = true}"
             exit 0
         fi
     done
     for j in "${WORKSPACES[@]}"; do
         if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${j} " ]]; then
-            hyprctl dispatch $TYPEOFWORKSPACE "${j}"
+            # hyprctl dispatch $TYPEOFWORKSPACE "${j}"
+            hyprctl dispatch "hl.dsp.focus" "{workspace=\"${j}\", on_current_monitor = true}"
             exit 0
         fi
     done
@@ -41,13 +43,15 @@ move_up() {
 move_down() {
     for ((j = CURRENT_INDEX - 1; j >= 0; j--)); do
         if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${WORKSPACES[$j]} " ]]; then
-            hyprctl dispatch $TYPEOFWORKSPACE "${WORKSPACES[$j]}"
+            # hyprctl dispatch $TYPEOFWORKSPACE "${WORKSPACES[$j]}"
+            hyprctl dispatch "hl.dsp.focus" "{workspace=\"${WORKSPACES[$j]}\", on_current_monitor = true}"
             exit 0
         fi
     done
     for ((j = ${#WORKSPACES[@]} - 1; j >= 0; j--)); do
         if [[ " ${ACTIVE_WORKSPACES[@]} " =~ " ${WORKSPACES[$j]} " ]]; then
-            hyprctl dispatch $TYPEOFWORKSPACE "${WORKSPACES[$j]}"
+            # hyprctl dispatch $TYPEOFWORKSPACE "${WORKSPACES[$j]}"
+            hyprctl dispatch "hl.dsp.focus" "{workspace=\"${WORKSPACES[$j]}\", on_current_monitor = true}"
             exit 0
         fi
     done

@@ -7,7 +7,7 @@ ACTIVEMONITOR=$(hyprctl -j activeworkspace | jq -r '.monitor')
 
 moveToWorkspace() {
     local workspace_name=$1
-    hyprctl dispatch $TYPEOFWORKSPACE $workspace_name
+    hyprctl dispatch "hl.dsp.focus" "{workspace=\"${workspace_name}\", on_current_monitor = true}"
 }
 workspacemonitor() {
     local wn=$1
