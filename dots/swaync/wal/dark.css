@@ -1,23 +1,63 @@
 /* Dark Mode */
-@define-color foreground #FFFFFF;
-@define-color background #1C1C1E;
-@define-color cursor #FFFFFF;
 
-/* base palette */
-@define-color color0 #2C2C2E;
-@define-color color1 #3A3A3C;
-@define-color color2 #409CFF;
-@define-color color3 #6EB8FF;
-@define-color color4 #8ED0FF;
-@define-color color5 #0066CC;
-@define-color color6 #3A3A3C;
-@define-color color7 #F2F2F7;
+/* Luxury Dark Mode - Based on #0a0a0a palette */
+@define-color foreground #e8e6e3;
+@define-color background #0a0a0a;
+@define-color cursor #c9a84c;
 
-@define-color color8 #3A3A3C;
-@define-color color9 #5AC8FA;
-@define-color color10 #64D2FF;
-@define-color color11 #70D7FF;
-@define-color color12 #8ED0FF;
-@define-color color13 #BF5AF2;
-@define-color color14 #30D158;
-@define-color color15 #FFFFFF;
+/* Base palette - Luxury gold theme */
+@define-color color0 #0a0a0a;        /* Main background */
+@define-color color1 #161616;        /* Surface */
+@define-color color2 #242424;        /* Surface active */
+@define-color color3 #2d2d2d;        /* Surface bright */
+@define-color color4 #3d3d3d;        /* Border color */
+@define-color color5 #555555;        /* Muted text */
+@define-color color6 #777777;        /* Subtle text */
+@define-color color7 #e8e6e3;        /* Foreground */
+
+/* Bright/Light versions */
+@define-color color8 #121212;         /* Surface alt */
+@define-color color9 #d4b87a;         /* Gold accent */
+@define-color color10 #c9a84c;        /* Strong gold */
+@define-color color11 #e8d5a8;        /* Soft gold */
+@define-color color12 #f5f2ef;        /* White */
+@define-color color13 #7a9bb5;        /* Steel blue accent */
+@define-color color14 #8aa87d;        /* Sage green accent */
+@define-color color15 #ffffff;        /* Pure white */
+
+/* Additional semantic colors for SwayNC */
+@define-color urgent #d4b87a;          /* Urgent notifications */
+@define-color low #8aa87d;             /* Low priority */
+@define-color normal #7a9bb5;          /* Normal priority */
+@define-color critical #c97a7a;        /* Critical priority */
+@define-color success #8aa87d;         /* Success */
+@define-color warning #d4b87a;         /* Warning */
+@define-color error #c97a7a;           /* Error */
+
+/* Notification styling */
+@define-color notif-bg #161616;
+@define-color notif-border #242424;
+@define-color notif-fg #e8e6e3;
+
+/* Control Center */
+@define-color control-bg #0a0a0a;
+@define-color control-border #242424;
+@define-color control-fg #e8e6e3;
+@define-color control-hover #161616;
+
+/* Buttons */
+@define-color button-bg #161616;
+@define-color button-hover #242424;
+@define-color button-active #c9a84c;
+@define-color button-text #e8e6e3;
+@define-color button-text-hover #0a0a0a;
+
+/* Sliders */
+@define-color slider-bg #2d2d2d;
+@define-color slider-fill #c9a84c;
+@define-color slider-thumb #d4b87a;
+
+/* Toggles */
+@define-color toggle-on #c9a84c;
+@define-color toggle-off #2d2d2d;
+@define-color toggle-thumb #e8e6e3;
