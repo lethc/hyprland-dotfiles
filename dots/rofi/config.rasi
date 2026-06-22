@@ -18,7 +18,8 @@ configuration {
     modi: "drun";
     show-icons: true;
     // icon-theme:  "Win11-dark";
-    icon-theme:  "SeviDDE-red-dark";
+    // icon-theme:  "SeviDDE-red-dark";
+    icon-theme:  "Zephyr";
     display-drun: "";
     // Open apps width a single click: MousePrimary does the click down action, then !MousePrimary does the click up 
     // me-select-entry: "";

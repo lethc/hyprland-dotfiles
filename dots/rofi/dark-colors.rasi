@@ -1,19 +1,15 @@
 * {
-    /* red  */
-    /* bg0:    #11080dE6;
-    bg1:    #7E7E7E80;
-    bg2:    #F07178E6;
-
-    fg0:    #D0CDC8;
-    fg1:    #FFFFFF;
-    fg2:    #DEDEDE80; */
-
-    bg0:    #242424E6;
-    bg1:    #7E7E7E80;
-    bg2:    #0860f2E6;
-
-    fg0:    #DEDEDE;
-    fg1:    #FFFFFF;
-    fg2:    #DEDEDE80;
-    transparent: rgba(0, 0, 0, 0.1);
+    /* Luxury Gold Theme - Based on #0a0a0a palette */
+    
+    /* Backgrounds - Deep luxury layers */
+    bg0:    #0a0a0aE6;        /* Main background with slight opacity */
+    bg1:    #16161680;        /* Surface layer with transparency */
+    bg2:    #c9a84cE6;        /* Gold accent with opacity */
+    
+    /* Foregrounds - Warm luxury text */
+    fg0:    #e8e6e3;          /* Primary text (warm off-white) */
+    fg1:    #f5f2ef;          /* Brightest text (ivory) */
+    fg2:    #e8e6e380;        /* Primary text with transparency */
+    
+    transparent: rgba(10, 10, 10, 0.1);  /* Transparent background layer */
 }
