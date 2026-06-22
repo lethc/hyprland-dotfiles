@@ -151,6 +151,17 @@ for i, keys in pairs(workspace_keys2) do
 	)
 end
 
+-- Switch between Active Workspaces
+hl.bind(config.main_mod .. " + mouse_down", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace up"))
+hl.bind(config.main_mod .. " + mouse_up", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace down"))
+
+hl.bind(config.main_ctrl_mod .. " + K", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace up"))
+hl.bind(config.main_ctrl_mod .. " + J", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace down"))
+
+-- Switch between all workspaces
+hl.bind(config.ctrl_alt_mod .. " + K", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace up"))
+hl.bind(config.ctrl_alt_mod .. " + J", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchWorkspace down"))
+
 -- hyprctl dispatch 'hl.dsp.focus({ workspace = "name:K:extra" })'
 hl.bind(config.main_mod .. " + 3", hl.dsp.focus({ workspace = "name:K:extra" }))
 hl.bind(config.main_shift_mod .. " + 3", hl.dsp.window.move({ workspace = "name:K:extra" }))
