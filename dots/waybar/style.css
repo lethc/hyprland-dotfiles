@@ -3,8 +3,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family:
-        'Lexend Deca,Symbols Nerd Font', Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Lexend Deca', 'Symbols Nerd Font', Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
     min-height: 0;
 }
@@ -12,12 +11,16 @@
 window#waybar {
     background: @background;
     color: @foreground;
+    border-radius: 0px;
+    margin: 6px 12px;
+    border: 1px solid rgba(201, 168, 76, 0.08);
 }
 
 tooltip {
-    border-radius: 10px;
-    background-color: @surface-alt;
+    border-radius: 12px;
+    background-color: @surface;
     border: 1px solid @accent-strong;
+    padding: 8px 12px;
 }
 
 /* Modules: Base Style */
@@ -44,15 +47,24 @@ tooltip {
 #custom-quit,
 #custom-lock,
 #custom-launcher {
-    /* background: @surface; */
-    /* padding: 2px 12px; */
-    padding: 2px 08px;
-    /* margin: 4px; */
-    margin: 0px;
+    padding: 2px 10px;
+    margin: 4px 2px;
     color: @foreground;
-    /* border-radius: 8px; */
-    border: 3px solid transparent;
-    transition: all 0.3s ease-out;
+    background: transparent;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.25s ease-out;
+}
+
+/* Modules with background */
+#clock,
+#pulseaudio,
+#battery,
+#memory,
+#custom-todo,
+#custom-notifications {
+    background: @surface;
+    border-color: rgba(201, 168, 76, 0.05);
 }
 
 /* Modules: App Launcher Strip */
@@ -63,23 +75,83 @@ tooltip {
 #custom-filemanager {
     background: @surface;
     padding: 2px 12px;
-    margin-top: 4px;
-    margin-right: 2px;
-    margin-bottom: 4px;
+    margin: 4px 1px;
     color: @foreground;
-    border: 3px solid transparent;
-    border-radius: 0;
-    transition: all 0.3s ease-out;
+    border: 1px solid transparent;
+    transition: all 0.25s ease-out;
 }
 
 #custom-browser {
-    margin-left: 2px;
+    margin-left: 4px;
     border-radius: 8px 0 0 8px;
 }
 
 #custom-filemanager {
     margin-right: 4px;
     border-radius: 0 8px 8px 0;
+}
+
+/* Workspaces - Main section */
+#workspaces {
+    margin: 0 4px;
+    background: transparent;
+}
+
+#workspaces button {
+    background: @surface-alt;
+    padding: 2px 10px;
+    margin: 4px 2px;
+    color: @muted;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.25s ease-out;
+    min-width: 24px;
+}
+
+#workspaces button:hover {
+    color: @accent-soft;
+    background: @surface-active;
+    border-color: rgba(201, 168, 76, 0.2);
+    border-radius: 6px;
+}
+
+#workspaces button.active {
+    color: @accent-strong;
+    background: @surface-active;
+    border-color: @accent-strong;
+    border-radius: 6px;
+}
+
+#workspaces button.urgent {
+    background: @urgent;
+    border-color: @warning;
+    color: @accent-strong;
+    border-radius: 6px;
+}
+
+/* Special workspaces */
+#workspaces.special button {
+    background: @surface-alt;
+    padding: 2px 10px;
+    margin: 4px 2px;
+    color: @subtle;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.25s ease-out;
+}
+
+#workspaces.special button.active {
+    color: @background;
+    background: @special-accent;
+    border-color: @special-accent;
+    border-radius: 6px;
+}
+
+#workspaces.special button:hover {
+    color: @background;
+    background: @accent;
+    border-color: @accent;
+    border-radius: 6px;
 }
 
 /* Modules: Hover Effects */
@@ -106,24 +178,69 @@ tooltip {
     color: @background;
     background: @accent;
     border-color: @accent;
+    border-radius: 8px;
 }
 
-#battery icon {
-    color: red;
+/* Battery states */
+#battery {
+    color: @success;
 }
 
 #battery.charging,
 #battery.plugged {
-    color: @black-color;
+    color: @background;
     background-color: @success;
+    border-color: @success;
+}
+
+#battery.warning {
+    color: @warning;
+}
+
+#battery.critical {
+    color: @error;
+}
+
+#battery icon {
+    color: inherit;
+}
+
+/* PulseAudio states */
+#pulseaudio.muted {
+    color: @background;
+    background: @warning;
+    border-color: @warning;
+}
+
+#pulseaudio:hover {
+    border-radius: 8px;
+}
+
+/* Custom modules */
+#custom-launcher {
+    font-size: 18px;
+    color: @accent-strong;
+    padding: 2px 14px;
+    margin: 4px 6px 4px 12px;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 8px;
 }
 
 #custom-launcher:hover {
+    background: @surface-active;
     border-color: @accent-strong;
 }
 
+#custom-power {
+    padding: 2px 12px;
+    margin: 4px 12px 4px 2px;
+    color: @error;
+    border-radius: 8px;
+}
+
 #custom-power:hover {
-    border-color: @accent-strong;
+    border-color: @error;
+    background: rgba(201, 122, 122, 0.1);
 }
 
 #custom-reboot:hover,
@@ -131,30 +248,47 @@ tooltip {
 #custom-lock:hover {
     background: @warning;
     border-color: @warning;
-}
-
-/* Modules: Specific Styles */
-#custom-launcher {
-    font-size: 18px;
-    /* background: @accent-strong; */
-    /* color: @background; */
-}
-
-#custom-countdown,
-#clock {
-    /* background: @accent-soft; */
-    /* color: @background; */
-}
-
-#pulseaudio.muted {
-    background: @warning;
     color: @background;
+    border-radius: 8px;
 }
 
-#custom-power {
-    padding: 0px 12px 0px 9px;
+/* Clock */
+#clock {
+    padding: 2px 16px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    background: @surface-alt;
+    border-radius: 8px;
+    border: 1px solid rgba(201, 168, 76, 0.05);
 }
 
+#clock.date {
+    color: @subtle;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* Tray */
+#tray {
+    padding: 2px 8px;
+    margin: 4px 2px;
+    background: @surface-alt;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: @highlight;
+    border-radius: 4px;
+}
+
+/* Keyboard state */
 #keyboard-state {
     background: transparent;
 }
@@ -162,183 +296,113 @@ tooltip {
 #keyboard-state label.locked {
     background: @accent-soft;
     color: @background;
-    padding: 0px 12px;
-    margin: 4px 0px;
+    padding: 2px 12px;
+    margin: 4px 2px;
     border-radius: 8px;
 }
-
-/* Active workspace */
-#workspaces button {
-    background: @surface;
-    padding: 2px 12px;
-    margin-top: 4px;
-    margin-right: 3px;
-    margin-bottom: 4px;
-    color: @foreground;
-    border-radius: 3px;
-    border: 3px solid transparent;
-    transition: all 0.3s ease-out;
-}
-
-#workspaces button.focused {
-    color: @foreground;
-}
-
-#workspaces button.urgent {
-    background: @urgent;
-    border-bottom: 3px dashed @urgent;
-    color: @urgent;
-}
-
-#workspaces.special button.urgent {
-    background: @urgent;
-    border-bottom: 3px dashed @urgent;
-    color: @urgent;
-}
-
-#workspaces.special button {
-    background: @surface-active;
-    padding: 2px 12px;
-    margin-top: 4px;
-    margin-right: 3px;
-    margin-bottom: 4px;
-    color: @foreground;
-    /* border-radius: 8px; */
-    border: 3px solid transparent;
-    transition: all 0.3s ease-out;
-}
-
-#workspaces.special button.active {
-    color: @background;
-    background: @special-accent;
-    border-color: @special-accent;
-}
-
-#workspaces.special button:hover {
-    color: @background;
-    background: @accent;
-    border-color: @accent;
-}
-
-#workspaces button:hover {
-    color: @background;
-    background: @accent;
-    border-color: @accent;
-}
-
-#workspaces button.active {
-    color: @background;
-    background: @accent;
-    border-color: @accent;
-}
-
-/* Active workspaces like left bottom section */
-/* #workspaces button.focused { */
-/*     color: @foreground; */
-/* } */
-/**/
-/* #workspaces button.urgent { */
-/*     background: @urgent; */
-/*     border-bottom: 3px dashed @urgent; */
-/*     color: @urgent; */
-/* } */
-/**/
-/* #workspaces button:nth-child(1), */
-/* #workspaces button:nth-child(2), */
-/* #workspaces button:nth-child(3), */
-/* #workspaces button:nth-child(4), */
-/* #workspaces button:nth-child(5), */
-/* #workspaces button:nth-child(6), */
-/* #workspaces button:nth-child(7), */
-/* #workspaces button:nth-child(8), */
-/* #workspaces button:nth-child(9){ */
-/*     background: @surface; */
-/*     padding: 2px 12px; */
-/*     margin-top: 4px; */
-/*     margin-right: 2px; */
-/*     margin-bottom: 4px; */
-/*     color: @foreground; */
-/*     border: 3px solid transparent; */
-/*     border-radius: 0; */
-/*     transition: all 0.3s ease-out; */
-/* } */
-/**/
-/* #workspaces button:nth-child(1) { */
-/*     margin-left: 2px; */
-/*     border-radius: 8px 0 0 8px; */
-/* } */
-/**/
-/* #workspaces button:nth-child(9) { */
-/*     margin-right: 4px; */
-/*     border-radius: 0 8px 8px 0; */
-/* } */
-/**/
-/* #workspaces button:nth-child(1):hover, */
-/* #workspaces button:nth-child(2):hover, */
-/* #workspaces button:nth-child(3):hover, */
-/* #workspaces button:nth-child(4):hover, */
-/* #workspaces button:nth-child(5):hover, */
-/* #workspaces button:nth-child(6):hover, */
-/* #workspaces button:nth-child(7):hover, */
-/* #workspaces button:nth-child(8):hover, */
-/* #workspaces button:nth-child(9):hover{ */
-/*     color: @background; */
-/*     background: @accent; */
-/*     border-color: @accent; */
-/* } */
-/**/
-/* #workspaces button.active { */
-/*     color: @background; */
-/*     background: @accent; */
-/*     border-color: @accent; */
-/* } */
-/**/
-/* #workspaces.special button.urgent { */
-/*     background: @urgent; */
-/*     border-bottom: 3px dashed @urgent; */
-/*     color: @urgent; */
-/* } */
-/**/
-/* #workspaces.special button { */
-/*     background: @surface; */
-/*     padding: 2px 12px; */
-/*     margin: 4px; */
-/*     color: @foreground; */
-/*     border-radius: 8px; */
-/*     border: 3px solid transparent; */
-/*     transition: all 0.3s ease-out; */
-/* } */
-/**/
-/* #workspaces.special button:hover { */
-/*     color: @background; */
-/*     background: @accent; */
-/*     border-color: @accent; */
-/* } */
-/**/
 
 /* Taskbar */
 #taskbar {
     background: @surface;
-    padding: 0 5px;
-    margin: 4px;
-    border: transparent;
+    padding: 2px 6px;
+    margin: 4px 2px;
     border-radius: 8px;
+    border: 1px solid rgba(201, 168, 76, 0.05);
 }
 
 #taskbar button {
     background: transparent;
-    padding: 0 8px;
-    border-bottom: 3px solid transparent;
-    transition: all 0.3s ease-out;
-    border-radius: 4px;
+    padding: 2px 10px;
+    border-radius: 6px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s ease-out;
+    margin: 0 1px;
 }
 
 #taskbar button:hover {
     background: @surface-active;
     border-bottom-color: @accent;
+    border-radius: 6px;
 }
 
 #taskbar button.active {
     background: @surface-active;
     border-bottom-color: @accent-strong;
+    border-radius: 6px;
+}
+
+/* Custom countdown & clock highlights */
+#custom-countdown {
+    color: @accent-soft;
+}
+
+/* Memory states */
+#memory.warning {
+    color: @warning;
+}
+
+#memory.critical {
+    color: @error;
+}
+
+/* Custom notifications */
+#custom-notifications.has-notifications {
+    color: @accent-strong;
+}
+
+#custom-notifications.dnd {
+    color: @muted;
+}
+
+/* Idle inhibitor */
+#idle_inhibitor.activated {
+    color: @accent-strong;
+}
+
+/* Sunset indicator */
+#custom-sunset.active {
+    color: @warning;
+}
+
+/* Separators between modules */
+#custom-separator {
+    color: @subtle;
+    padding: 0 2px;
+    margin: 0;
+    background: transparent;
+    font-size: 12px;
+}
+
+/* Window title */
+#window {
+    padding: 2px 12px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    background: @surface;
+    border: 1px solid rgba(201, 168, 76, 0.05);
+}
+
+/* Scrollbar for tooltips */
+tooltip scrollbar {
+    background: @surface-alt;
+    border-radius: 4px;
+}
+
+tooltip scrollbar slider {
+    background: @accent;
+    border-radius: 4px;
+}
+
+/* Smooth module transitions */
+#pulseaudio,
+#battery,
+#memory,
+#clock {
+    transition: all 0.3s ease-out;
+}
+
+/* Gold accent for selected text in tooltips */
+tooltip selection {
+    background: @accent;
+    color: @background;
 }

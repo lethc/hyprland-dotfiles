@@ -4,6 +4,7 @@
 //                             //
 /////////////////////////////////
 {
+    "output": "HDMI-A-1",
     "layer": "top",
     "position": "bottom",
     "height": 48,
@@ -24,16 +25,21 @@
         // "custom/tasks",
         // "custom/filemanager",
         "hyprland/workspaces",
-        "hyprland/workspaces#special",
-        "custom/todo"
+        "hyprland/workspaces#special"
+        // "custom/todo"
     ],
     // "modules-center": [
     //     // "hyprland/workspaces"
     //     // "wlr/taskbar"
     // ],
+    "modules-center": [
+        "custom/reminder2",
+        "custom/separator",
+        "custom/reminder"
+    ],
     "modules-right": [
         // "keyboard-state",
-        "custom/countdown",
+        // "custom/countdown",
         "group/group-tools",
         "custom/pipewire",
         "memory",
@@ -309,6 +315,24 @@
             "custom/theme_switcher"
         ]
     },
+    // "custom/reminder": {
+    //     "format": "{}",
+    //     "exec": "~/Home/Scripts/Rofi/reminder goal",
+    //     "return-type": "json",
+    //     "interval": 10800,
+    //     "signal": 8
+    // },
+    // "custom/separator": {
+    //     "format": " ",
+    //     "tooltip": false
+    // },
+    // "custom/reminder2": {
+    //     "format": "{}",
+    //     "exec": "~/Home/Scripts/Rofi/reminder now",
+    //     "return-type": "json",
+    //     "interval": 10800,
+    //     "signal": 8
+    // },
     "custom/monitor": {
         // "format": "󰍹",
         "format": "{}",

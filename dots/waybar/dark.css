@@ -1,23 +1,46 @@
-/* Dark Mode */
-@define-color foreground #FFFFFF;
-@define-color background rgba(28,28,30,0.85);
+/* Luxury Dark Mode - Based on #0a0a0a palette */
 
-@define-color white-color #ffffff;
+/* Main colors */
+@define-color foreground #e8e6e3;
+@define-color background rgba(10, 10, 10, 0.92);
+
+@define-color white-color #f5f2ef;
 @define-color black-color #000000;
 
-/* surfaces */
-@define-color surface #2C2C2E;
-@define-color surface-alt #1C1C1E;
-@define-color surface-active #323234;
+/* Surfaces - Elegant gradations from #0a0a0a */
+@define-color surface #161616;
+@define-color surface-alt #121212;
+@define-color surface-active #242424;
+@define-color surface-hover #1c1c1c;
+@define-color surface-bright #2d2d2d;
 
-/* accents (Ventura system colors) */
-@define-color accent #cccccc;
-/* @define-color accent #0A84FF; */
-@define-color accent-strong #409CFF;
-@define-color accent-soft #6EB8FF;
-@define-color special-accent #0A84FF;
+/* Accents - Luxury palette */
+@define-color accent #d4b87a;          /* Gold */
+@define-color accent-strong #c9a84c;    /* Brighter gold */
+@define-color accent-soft #e8d5a8;      /* Soft gold */
+@define-color special-accent #7a9bb5;   /* Steel blue */
 
-/* semantic */
-@define-color warning #FF9F0A;
-@define-color success #30D158;
-@define-color urgent rgba(255, 214, 10, 0.35);
+/* Alternative accent variations (comment/uncomment as desired) */
+/* @define-color accent #7a9bb5; */        /* Steel blue */
+/* @define-color accent-strong #409CFF; */  /* Bright blue */
+/* @define-color accent-soft #6EB8FF; */    /* Soft blue */
+
+/* Semantic colors - Luxury adjusted */
+@define-color warning #d4b87a;           /* Gold warning */
+@define-color success #8aa87d;           /* Sage green */
+@define-color urgent rgba(212, 184, 122, 0.35); /* Gold with opacity */
+@define-color error #c97a7a;             /* Muted rose */
+@define-color info #7a9bb5;              /* Steel blue */
+
+/* Additional luxury semantic colors */
+@define-color muted #777777;
+@define-color subtle #555555;
+@define-color highlight rgba(212, 184, 122, 0.15);
+@define-color active-border #7a9bb5;
+
+/* Optional: Window borders */
+@define-color border-color #242424;
+@define-color border-active #7a9bb5;
+
+/* Optional: Shadow colors */
+@define-color shadow rgba(0, 0, 0, 0.5);
