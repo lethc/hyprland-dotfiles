@@ -24,12 +24,12 @@ hl.window_rule({
 	rounding = 20,
 })
 -- Float all windows in workspace 4
-hl.window_rule({
-	match = {
-        workspace = "4",
-	},
-    float = true,
-})
+-- hl.window_rule({
+-- 	match = {
+--         workspace = "4",
+-- 	},
+--     float = true,
+-- })
 
 -- Prevent idle state in fullscreen windows like video players (Youtube, etc)
 hl.window_rule({
@@ -238,4 +238,10 @@ hl.window_rule({
 		class = "^(Mailspring)$",
 	},
 	workspace = config.workspace8,
+})
+hl.window_rule({
+	match = {
+		class = "^(org.telegram.desktop)$",
+	},
+	workspace = config.workspace9,
 })
