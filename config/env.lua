@@ -9,7 +9,7 @@ hl.env("WLR_NO_HARDWARE_CURSORS", "1")
 hl.env("WINE_VK_VULKAN_ONLY", "1")
 hl.env("EDITOR", "nvim")
 
-hl.env("GKT_THEME", "MacTahoe-Dark")
+hl.env("GKT_THEME", "Material-Dark-Darker")
 hl.env("XCURSOR_THEME", "breeze_cursors")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_THEME", "breeze_cursors")
