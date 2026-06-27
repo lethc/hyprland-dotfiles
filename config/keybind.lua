@@ -179,6 +179,8 @@ hl.bind(
 	config.alt_mod .. " + TAB",
 	hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchLastWindow lastwindow")
 )
+
+hl.bind(config.main_shift_mod .. "+ T", hl.dsp.workspace.swap_monitors({  monitor1 = "current", monitor2 = "-1" }))
 -- hl.bind(config.alt_mod .. " + TAB", hl.dsp.focus({ workspace = "previous" }))
 -- hl.bind(config.main_mod .. " + TAB", function()
 -- 	-- hl.dispatch(hl.dsp.focus({ workspace = i, on_current_monitor = true }))
