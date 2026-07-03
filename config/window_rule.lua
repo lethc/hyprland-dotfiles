@@ -111,9 +111,17 @@ hl.window_rule({
 })
 hl.window_rule({
 	match = {
-		title = "^(Meeting Chat|fzf)$",
+		title = "^(Meeting Chat|fzf|ZenNotes Quick Capture)$",
 	},
 	float = true,
+})
+
+hl.window_rule({
+	match = {
+		title = "^(64Gram)$",
+	},
+	float = true,
+	pin = true,
 })
 hl.window_rule({
 	match = {
