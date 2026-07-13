@@ -52,8 +52,9 @@ hl.bind(config.main_mod .. " + M", hl.dsp.exec_cmd(config.scripts .. "rofi/simpl
 hl.bind(config.main_mod .. " + Y", hl.dsp.exec_cmd(config.scripts .. "rofi/simple-websearch yandex"))
 hl.bind(config.main_mod .. " + U", hl.dsp.exec_cmd(config.scripts .. "rofi/simple-websearch bing"))
 hl.bind(config.main_shift_mod .. " + U", hl.dsp.exec_cmd(config.scripts .. "rofi/simple-websearch brave"))
--- tmux session
-hl.bind(config.main_mod .. " + I", hl.dsp.exec_cmd(config.scripts .. "rofi/tmux_session"))
+-- Sessions
+-- hl.bind(config.main_mod .. " + I", hl.dsp.exec_cmd(config.scripts .. "rofi/tmux_session"))
+hl.bind(config.main_mod .. " + I", hl.dsp.exec_cmd(config.scripts .. "rofi/herdr_session"))
 -- Open directory from...
 hl.bind(config.main_shift_mod .. " + P", hl.dsp.exec_cmd(config.scripts .. "rofi/placesmenu open_with_filemager"))
 -- hl.bind(config.main_shift_mod .. " + P", hl.dsp.exec_cmd(config.scripts .. "rofi/placesmenu open_with_terminal"))
@@ -154,6 +155,8 @@ end
 -- Switch between Active Workspaces
 hl.bind(config.main_mod .. " + mouse_down", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace up"))
 hl.bind(config.main_mod .. " + mouse_up", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace down"))
+hl.bind(config.alt_mod .. " + mouse_down", hl.dsp.layout("move +col"))
+hl.bind(config.alt_mod .. " + mouse_up", hl.dsp.layout("move -col"))
 
 hl.bind(config.main_ctrl_mod .. " + K", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace up"))
 hl.bind(config.main_ctrl_mod .. " + J", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace down"))
