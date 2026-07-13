@@ -1,0 +1,15 @@
+#!/bin/bash
+source $HOME/.config/hypr/dots/.scripts/variables
+
+# Get the list of Herdr sessions and extract just the names
+session=$(herdr session list | \
+          awk 'NR>1 {print $1}' | \
+          rofi -dmenu -i -p "󱊄 Select a Herdr session:" -theme $LAUNCHER_THEME)
+
+# Check if a session was selected
+if [ -n "$session" ]; then
+    # Open a new terminal and attach to the selected session
+    $TERMINAL --title=CodeSession -e herdr session attach "$session" &> /dev/null &
+fi
+
+exit 0
