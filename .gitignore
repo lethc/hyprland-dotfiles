@@ -23,3 +23,6 @@ hyprlock.conf
 dots/yazi/package.toml
 dots/Kvantum/
 dots/tmux/plugins/
+dots/herdr/*.log
+dots/herdr/*.json
+dots/herdr/sessions
