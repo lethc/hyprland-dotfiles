@@ -1,0 +1,85 @@
+onboarding = false
+# [theme]
+# name = "one-dark"
+
+auto_switch = false
+[terminal]
+default_shell="zsh"
+
+# [theme.custom]
+# panel_bg = "#06080f"
+# # Match Pi's Gentle theme, with a muted cyan for Herdr chrome.
+# accent = "#6FA0AF"
+# green = "#B7CC85"
+# blue = "#6FA0AF"
+# red = "#CB7C94"
+# yellow = "#DEBA87"
+#
+# [ui]
+# accent = "#6FA0AF"
+
+show_agent_labels_on_pane_borders = true
+[keys]
+
+prefix = "ctrl+a"
+# PANES
+split_vertical = "alt+n"
+split_horizontal = "alt+m"
+zoom = "alt+f"
+close_pane = "alt+q"
+# Focus Pane
+focus_pane_right = "ctrl+l"
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+
+# TABS
+new_tab = "alt+t"
+rename_tab = "prefix+t"
+switch_tab = "alt+1..9"
+previous_tab = ""
+last_pane = "prefix+p"
+close_tab = "prefix+x"
+
+# WORKSPACES
+# switch_workspace = "prefix+shift+1..9"
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+close_workspace = "prefix+shift+x"
+
+# open_worktree = "prefix+shift+o"
+# next_workspace = "prefix+shift+right"
+
+# Move between agents in the sidebar.
+# Avoid Herdr's built-in prefix+shift+j/k pane-swap bindings.
+previous_agent = "prefix+alt+k"
+next_agent = "prefix+alt+j"
+
+# Jump straight to agent N (1..9) as listed in the sidebar.
+# Use Ctrl after the prefix: Alt+number is owned by skhd/yabai spaces,
+# and Shift+number did not reach Herdr reliably in the current terminal setup.
+focus_agent = "prefix+ctrl+1..9"
+
+[[keys.command]]
+key = "prefix+alt+g"
+type = "pane"
+command = "gitui"
+description = "run gitui"
+
+[[keys.command]]
+key = "prefix+alt+e"
+type = "pane"
+command = "~/.config/herdr/scripts/yazi-workspace.sh"
+description = "open project with yazi"
+
+[ui.toast]
+delivery = "herdr"
+
+[ui.toast.herdr]
+position = "top-right"
+
+[experimental]
+pane_history = false
+
+[ui.sound]
+enabled = true
