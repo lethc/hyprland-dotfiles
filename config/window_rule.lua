@@ -225,6 +225,12 @@ hl.window_rule({
 })
 hl.window_rule({
 	match = {
+		class = "^(ticktick)$",
+	},
+	workspace = "K:extra",
+})
+hl.window_rule({
+	match = {
 		class = "^(sioyek|calibre-gui)$",
 	},
 	workspace = config.workspace5,
