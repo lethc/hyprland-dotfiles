@@ -3,10 +3,12 @@ local config = {}
 config.color1 = "5F5F5F"
 config.color2 = "151515"
 config.color3 = "ff0E15"
+config.shadow_color = "000000"
 
 -- Hyprbar Colors
-config.hyprbar_color = "242424"
-config.focused_hyprbar_color = "1E1A1A"
+config.hyprbar_color = "181616"
+config.focused_hyprbar_color = "141411"
+config.hyprbar_color0 = "ffffff"
 config.hyprbar_color1 = "b54752"
 config.hyprbar_color2 = "c4a368"
 config.hyprbar_color3 = "6bc76b"

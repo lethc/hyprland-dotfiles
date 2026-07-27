@@ -14,6 +14,6 @@ hl.monitor({
 	-- next to external monitor
 	-- position = "1920x312",
 	mode = "preferred",
-	position = "4860x1080",
+	position = "1920x515",
 	scale = 1,
 })

@@ -7,7 +7,7 @@
     "output": "HDMI-A-1",
     "layer": "top",
     "position": "bottom",
-    "height": 48,
+    "height": 28,
     "spacing": 2,
     "margin-top": 0,
     "margin-bottom": 0,
@@ -35,16 +35,17 @@
     "modules-center": [
         "custom/reminder2",
         "custom/separator",
-        "custom/reminder"
+        "custom/reminder",
+        "wlr/taskbar"
     ],
     "modules-right": [
         // "keyboard-state",
         // "custom/countdown",
         "group/group-tools",
+        "tray",
         "custom/pipewire",
         "memory",
         "battery",
-        "tray",
         "custom/notifications",
         "clock",
         "group/group-power"
@@ -99,15 +100,15 @@
             "L:extraOne": " Ⅱ Extra ",
             "M:extraTwo": " Ⅲ Extra "
         },
-        "workspace-taskbar": {
-            "enable": true,
-            "update-active-window": true,
-            // "format": " {icon}{title:.30}",
-            "format": " {icon}",
-            // "icon-size": 15,
-            "icon-size": 26,
-            "on-click-window": "~/.config/waybar/bin/focus-window.sh {address} {button}"
-        }
+        // "workspace-taskbar": {
+        //     "enable": true,
+        //     "update-active-window": true,
+        //     // "format": " {icon}{title:.30}",
+        //     "format": " {icon}",
+        //     // "icon-size": 15,
+        //     "icon-size": 26,
+        //     "on-click-window": "~/.config/waybar/bin/focus-window.sh {address} {button}"
+        // }
     },
     "hyprland/workspaces#special": {
         "all-outputs": false,
@@ -142,7 +143,7 @@
     },
     "wlr/taskbar": {
         "format": "{icon}",
-        "icon-size": 20,
+        "icon-size": 26,
         "icon-theme": "Numix-Circle",
         "tooltip-format": "{title:.50}",
         "on-click": "minimize-raise",
@@ -234,11 +235,11 @@
         "format-plugged": " {capacity}",
         "format-alt": "{icon} {time}",
         "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            "󰂎 ",
+            "󰁻 ",
+            "󰁾 ",
+            "󰂀 ",
+            "󰁹 "
         ]
     },
     "memory": {

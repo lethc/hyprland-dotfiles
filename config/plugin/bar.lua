@@ -22,7 +22,7 @@ hl.config({
 
 	plugin = {
 		hyprbars = {
-			bar_height = 31,
+			bar_height = 40,
 			bar_text_size = 0,
 			bar_text_font = "Maple Mono NF CN",
 			bar_button_padding = 12,
@@ -36,34 +36,36 @@ hl.config({
 			col = {
 				text = "rgb(d0cdc8)",
 			},
-			icon_on_hover = true,
+			icon_on_hover = false,
 		},
 	},
 })
 
-hl.plugin.hyprbars.add_button({
-	bg_color = "rgb(" .. config.hyprbar_color1 .. ")",
-	fg_color = "rgb(" .. config.hyprbar_color1 .. ")",
-	size = 13,
-	icon = "",
-	action = "hyprctl dispatch 'hl.dsp.window.close()'",
-})
+if hl.plugin and hl.plugin.hyprbars then
+	hl.plugin.hyprbars.add_button({
+		bg_color = "rgb(" .. config.focused_hyprbar_color .. ")",
+		fg_color = "rgb(" .. config.hyprbar_color1 .. ")",
+		size = 28,
+		icon = "󱎘",
+		action = "hyprctl dispatch 'hl.dsp.window.close()'",
+	})
 
-hl.plugin.hyprbars.add_button({
-	bg_color = "rgb(" .. config.hyprbar_color2 .. ")",
-	fg_color = "rgb(" .. config.hyprbar_color2 .. ")",
-	size = 13,
-	icon = "",
-	action = "hyprctl dispatch 'hl.dsp.window.float({ action = \"toggle\" })'",
-})
+	hl.plugin.hyprbars.add_button({
+		bg_color = "rgb(" .. config.focused_hyprbar_color .. ")",
+		fg_color = "rgb(" .. config.hyprbar_color2 .. ")",
+		size = 28,
+		icon = "󰹟",
+		action = "hyprctl dispatch 'hl.dsp.window.float({ action = \"toggle\" })'",
+	})
 
-hl.plugin.hyprbars.add_button({
-	bg_color = "rgb(" .. config.hyprbar_color3 .. ")",
-	fg_color = "rgb(" .. config.hyprbar_color3 .. ")",
-	size = 13,
-	icon = "",
-	action = 'hyprctl dispatch \'hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })\'',
-})
+	hl.plugin.hyprbars.add_button({
+		bg_color = "rgb(" .. config.focused_hyprbar_color .. ")",
+		fg_color = "rgb(" .. config.hyprbar_color3 .. ")",
+		size = 28,
+		icon = "─",
+		action = 'hyprctl dispatch \'hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })\'',
+	})
+end
 
 -- Disable bar on Tiled
 hl.window_rule({

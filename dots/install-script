@@ -55,8 +55,10 @@ ln -sf "${HOME}/.config/hypr/dots/television" "${HOME}/.config"
 echo "television linked"
 ln -sf "${HOME}/.config/hypr/dots/tridactyl" "${HOME}/.config"
 echo "tridactyl linked"
-ln -sf "${HOME}/.config/hypr/dots/zellij" "${HOME}/.config"
-echo "zellij linked"
+# ln -sf "${HOME}/.config/hypr/dots/zellij" "${HOME}/.config"
+# echo "zellij linked"
+ln -sf "${HOME}/.config/hypr/dots/herdr" "${HOME}/.config"
+echo "Herdr linked"
 ln -sf "${HOME}/.config/hypr/dots/tmux" "${HOME}/.config"
 echo "Tmux linked"
 ln -sf "${HOME}/.config/hypr/dots/gitui" "${HOME}/.config"
@@ -136,20 +138,30 @@ echo "zs linked"
 # ASKN
 yay -S --noconfirm --answerclean All --answerdiff None sddm qt5-graphicaleffects qt5-svg qt5-quickcontrols2
 
-echo "creating sddm.conf.d"
-sudo mkdir /etc/sddm.conf.d/
+# echo "creating sddm.conf.d"
+# sudo mkdir /etc/sddm.conf.d/
 
-echo "creating sddm.conf.d/config"
-touch config ~/Desktop/config
+# echo "creating sddm.conf.d/config"
+# touch config ~/Desktop/config
 # Set corner theme as default
 # echo "[Theme]" > ~/Desktop/config 
 # echo "Current=corners" >> ~/Desktop/config
 # Set silent theme as default
-echo "[General]" > ~/Desktop/config 
-echo "GreeterEnvironment=QML2_IMPORT_PATH=/usr/share/sddm/themes/silent/components/,QT_IM_MODULE=qtvirtualkeyboard" >> ~/Desktop/config
-echo "[Theme]" >> ~/Desktop/config 
-echo "Current=silent" >> ~/Desktop/config
-sudo mv ~/Desktop/config /etc/sddm.conf.d/
+# echo "[General]" > ~/Desktop/config 
+# echo "GreeterEnvironment=QML2_IMPORT_PATH=/usr/share/sddm/themes/silent/components/,QT_IM_MODULE=qtvirtualkeyboard" >> ~/Desktop/config
+# echo "[Theme]" >> ~/Desktop/config 
+# echo "Current=silent" >> ~/Desktop/config
+# sudo mv ~/Desktop/config /etc/sddm.conf.d/
+
+git clone https://github.com/lethc/ascii-cybersigilist-sddm.git ~/Downloads/Git/ascii-cybersigilist-sddm
+sudo cp -r ~/Downloads/Git/ascii-cybersigilist-sddm/terminal-red/ /usr/share/sddm/themes/
+cd "${HOME}/Downloads/Git/ascii-cybersigilist-sddm"
+
+sudo mkdir -p /etc/sddm.conf.d
+sudo tee /etc/sddm.conf.d/theme.conf > /dev/null <<'EOF'
+[Theme]
+Current=terminal-red
+EOF
 
 echo "theme setted correctly"
 
@@ -207,15 +219,16 @@ yay -S --noconfirm --answerclean All --answerdiff None rust-analyzer
 
 
 # Installing fonts
-sudo ln -sf "${HOME}/.config/hypr/dots/conf.avail/" /etc/fonts/
-sudo ln -sf /etc/fonts/conf.avail/75-joypixels.conf /etc/fonts/conf.d/
+# sudo ln -sf "${HOME}/.config/hypr/dots/conf.avail/" /etc/fonts/
+# sudo ln -sf /etc/fonts/conf.avail/75-joypixels.conf /etc/fonts/conf.d/
+# yay -S ttf-joypixels 
 
 # ASKN
 yay -S --noconfirm --answerclean All --answerdiff None wget github-cli lsix firefox-tridactyl ncdu dust duf baobab iftop yazi
 yay -S --noconfirm --answerclean All --answerdiff None ueberzugpp xournalpp obsidian kooha resources tgpt
 
 # ASK
-yay -S --noconfirm --answerclean All --answerdiff None nodejs-readability-cli firefox-tridactyl-native-bin smile ttf-joypixels 
+yay -S --noconfirm --answerclean All --answerdiff None nodejs-readability-cli firefox-tridactyl-native-bin smile
 #ttf-misans
 # yay -S --noconfirm --answerclean All --answerdiff None ttf-ms-win11-auto
 # ttf-maple Doesn't exist anymore

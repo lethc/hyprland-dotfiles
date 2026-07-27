@@ -25,9 +25,9 @@ hl.on("hyprland.start", function()
 	-- GTK Theme
 	hl.exec_cmd([[gsettings set org.gnome.desktop.interface cursor-theme "breeze_cursors"]])
 	hl.exec_cmd([[gsettings set org.gnome.desktop.interface cursor-size "24"]])
-	hl.exec_cmd([[gsettings set org.gnome.desktop.interface font-name 'Lexend Deca Regular 11']])
+	hl.exec_cmd([[gsettings set org.gnome.desktop.interface font-name 'Source Han Sans Normal 11']])
 
-	hl.exec_cmd([[gsettings set org.gnome.desktop.interface gtk-theme "Material-Dark-Darker"]])
+	hl.exec_cmd([[gsettings set org.gnome.desktop.interface gtk-theme "Kanagawa-Yellow-Dark-Dragon"]])
 	-- hl.exec_cmd([[gsettings set org.gnome.desktop.interface icon-theme "SeviDDE-blue-dark"]])
 	hl.exec_cmd([[gsettings set org.gnome.desktop.interface icon-theme "Zephyr"]])
 	hl.exec_cmd([[(waybar &) && sleep 1 && pkill waybar && waybar &]])

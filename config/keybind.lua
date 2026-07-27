@@ -3,17 +3,18 @@ local config = require("config.variable")
 -- Directories
 -- Aplications
 hl.bind(config.main_mod .. " + RETURN", hl.dsp.exec_cmd(config.terminal))
-hl.bind(config.main_shift_mod .. " + RETURN", hl.dsp.exec_cmd(config.terminal .. " --title=Float"))
+hl.bind(config.alt_mod .. " + RETURN", hl.dsp.exec_cmd(config.terminal .. " --title=Float"))
+hl.bind(config.main_shift_mod .. " + RETURN", hl.dsp.exec_cmd(config.terminal .. " --title=Float -e gtt"))
 -- hl.bind(config.main_mod .. " + N", hl.dsp.exec_cmd("hyprlauncher"))
 hl.bind(config.main_mod .. " + N", hl.dsp.exec_cmd("rofi -show drun -theme " .. config.launcher_theme))
 -- hl.bind( config.main_mod .. " + N", hl.dsp.exec_cmd("vicinae toggle"))
 hl.bind(config.main_mod .. " + code:61", hl.dsp.exec_cmd(config.emoji_picker))
-hl.bind(config.alt_mod .. " + RETURN", hl.dsp.exec_cmd(config.terminal .. " --title=Float -e gtt"))
 -- hl.bind(config.alt_mod .. " + RETURN", hl.dsp.exec_cmd(config.terminal .. " --title=Float -e --hold gtt"))
 hl.bind(config.main_shift_mod .. " + I", hl.dsp.exec_cmd(config.terminal .. " --title=Float -e btop"))
 hl.bind(config.main_shift_mod .. " + Y", hl.dsp.exec_cmd(config.terminal .. " --title=Float -e yazi"))
 hl.bind(config.main_mod .. " + V", hl.dsp.exec_cmd("clipse-gui"))
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("qalculate-gtk"))
+hl.bind(config.main_mod .. " + Comma", hl.dsp.exec_cmd("hyprlock"))
 
 -- scripts
 hl.bind(
@@ -153,10 +154,10 @@ for i, keys in pairs(workspace_keys2) do
 end
 
 -- Switch between Active Workspaces
-hl.bind(config.main_mod .. " + mouse_down", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace up"))
-hl.bind(config.main_mod .. " + mouse_up", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace down"))
-hl.bind(config.alt_mod .. " + mouse_down", hl.dsp.layout("move +col"))
-hl.bind(config.alt_mod .. " + mouse_up", hl.dsp.layout("move -col"))
+hl.bind(config.main_mod .. " + mouse_down", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace down"))
+hl.bind(config.main_mod .. " + mouse_up", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace up"))
+hl.bind(config.alt_mod .. " + mouse_down", hl.dsp.layout("move -col"))
+hl.bind(config.alt_mod .. " + mouse_up", hl.dsp.layout("move +col"))
 
 hl.bind(config.main_ctrl_mod .. " + K", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace up"))
 hl.bind(config.main_ctrl_mod .. " + J", hl.dsp.exec_cmd("~/.config/hypr/dots/.scripts/Hyprland/switchActiveWorkspace down"))
