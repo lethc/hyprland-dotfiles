@@ -26,3 +26,7 @@ dots/tmux/plugins/
 dots/herdr/*.log
 dots/herdr/*.json
 dots/herdr/sessions
+dots/herdr/.plugins.lock
+dots/herdr/plugins/
+monitors.conf
+workspaces.conf
