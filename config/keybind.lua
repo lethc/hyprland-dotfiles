@@ -8,10 +8,10 @@ hl.bind(config.main_shift_mod .. " + RETURN", hl.dsp.exec_cmd(config.terminal ..
 -- hl.bind(config.main_mod .. " + N", hl.dsp.exec_cmd("hyprlauncher"))
 hl.bind(config.main_mod .. " + N", hl.dsp.exec_cmd("rofi -show drun -theme " .. config.launcher_theme))
 -- hl.bind( config.main_mod .. " + N", hl.dsp.exec_cmd("vicinae toggle"))
-hl.bind(config.main_mod .. " + code:61", hl.dsp.exec_cmd(config.emoji_picker))
+hl.bind(config.main_mod .. " + code:60", hl.dsp.exec_cmd(config.emoji_picker))
 -- hl.bind(config.alt_mod .. " + RETURN", hl.dsp.exec_cmd(config.terminal .. " --title=Float -e --hold gtt"))
 hl.bind(config.main_shift_mod .. " + I", hl.dsp.exec_cmd(config.terminal .. " --title=Float -e btop"))
-hl.bind(config.main_shift_mod .. " + Y", hl.dsp.exec_cmd(config.terminal .. " --title=Float -e yazi"))
+hl.bind(config.main_shift_mod .. " + Y", hl.dsp.exec_cmd(config.terminal .. " -e yazi"))
 hl.bind(config.main_mod .. " + V", hl.dsp.exec_cmd("clipse-gui"))
 hl.bind("XF86Calculator", hl.dsp.exec_cmd("qalculate-gtk"))
 hl.bind(config.main_mod .. " + Comma", hl.dsp.exec_cmd("hyprlock"))
@@ -46,7 +46,9 @@ hl.bind(
 )
 -- Notes
 hl.bind(config.main_mod .. " + C", hl.dsp.exec_cmd(config.personal_files .. "Rofi/tv-lovely"))
-hl.bind(config.main_shift_mod .. " + C", hl.dsp.exec_cmd(config.personal_files .. "Rofi/tv-g"))
+hl.bind(config.main_shift_mod .. " + C", hl.dsp.exec_cmd(config.personal_files .. "Rofi/tv-rg"))
+hl.bind(config.main_mod .. " + code:61", hl.dsp.exec_cmd(config.personal_files .. "Rofi/zen_tabs.sh")) -- Search Zen Tabs
+hl.bind(config.main_shift_mod .. " + code:61", hl.dsp.exec_cmd(config.personal_files .. "Rofi/tabs_prompt_automation.sh")) -- Prompt Tab
 -- Websearch
 hl.bind(config.main_shift_mod .. " + M", hl.dsp.exec_cmd(config.scripts .. "rofi/websearch"))
 hl.bind(config.main_mod .. " + M", hl.dsp.exec_cmd(config.scripts .. "rofi/simple-websearch google"))
