@@ -169,6 +169,22 @@ hl.window_rule({
 	size = { "(monitor_w*0.3)", "(monitor_h*0.6)" },
 	move = { "(monitor_w*0.35)", "(monitor_h*0.18)" },
 })
+-- sticky notes
+hl.window_rule({
+	match = {
+		class = "^(com.vixalien.sticky)$"
+	},
+	float = true,
+	no_dim = true,
+	animation = "popin",
+	pin = true,
+    no_initial_focus = true,
+	size = { "(monitor_w*0.2)", "(monitor_h*0.2)" },
+	move = { "(monitor_w*0.75)", "(monitor_h*0.10)" },
+	workspace = "K:extra",
+})
+-- hl.window_rule({ match = { class = "com.vixalien.sticky", title = "Notas adhesivas|Sticky Notes" },  float = false })
+hl.window_rule({ match = { class = "com.vixalien.sticky", title = "Notas adhesivas" },  float = false })
 hl.window_rule({
 	match = {
 		class = "^(org.pulseaudio.pavucontrol|pavucontrol-qt|nvim-wl-anywhere|deepin-editor|editor)$",
@@ -228,6 +244,13 @@ hl.window_rule({
 		class = "^(ticktick)$",
 	},
 	workspace = "K:extra",
+    no_initial_focus = true,
+})
+hl.window_rule({
+	match = {
+		class = "^(mpv)$",
+	},
+	workspace = config.workspace2,
 })
 hl.window_rule({
 	match = {
