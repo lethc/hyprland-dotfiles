@@ -44,7 +44,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=nvim
 export BROWSER=zen-browser
 export BROWSER2=qutebrowser
-export TERMINAL=foot
+export TERMINAL=kitty
 export LANG="en_GB.UTF-8"
 export PATH=$PATH:$XDG_CONFIG_HOME
 export PATH="$HOME/.local/bin":$PATH
@@ -141,10 +141,19 @@ alias myprompt='cat ~/prompt'
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
 # source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
 # source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+# https://github.com/Giammarco-Ferranti/deja
+# Better than zsh-autosuggestions
+# Use Tab to accept the suggestion (and free Tab from cycling):
+export DEJA_CYCLE_KEY='^N'
+# bindkey 'Ñ' autosuggest-accept
+export DEJA_ACCEPT_KEY='Ñ'
+
+eval "$(deja init zsh)"
 
 ##### Configurations  #######
 # disable Ctrl+D
@@ -178,7 +187,7 @@ HISTFILE=~/.zsh_history
 HISTDUP=erase # Delete any duplicates inside the history file
 
 # ZSH-AUTOSUGGESTIONS
-bindkey 'Ñ' autosuggest-accept
+# bindkey 'Ñ' autosuggest-accept
 setopt histignorealldups sharehistory
 #Use modern completion system
 autoload -Uz compinit
