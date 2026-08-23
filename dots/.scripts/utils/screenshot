@@ -1,13 +1,12 @@
 #!/usr/bin/bash
 
 screenshot() {
-    region=$(slurp 2>/dev/null)
-    
-    if [ -z "$region" ]; then
+    hyprshot -zm region --clipboard-only --silent
+
+    if [ $? -ne 0 ]; then
         return 1
     fi
-    
-    grim -g "$region" - | wl-copy
+
     notify-send "Screenshot" "Imagen copiada al clipboard"
     paplay ~/.config/hypr/assets/sounds/Grab.aif
 }
@@ -35,40 +34,40 @@ save_screenshot() {
     rm -f "$temp_file"
 }
 ocr_screenshot() {
-	grim -g "$(slurp)" "tmp.png" && tesseract "tmp.png" - | wl-copy && rm "tmp.png"
+    grim -g "$(slurp)" "tmp.png" && tesseract "tmp.png" - | wl-copy && rm "tmp.png"
 
-	exit_status=$?
+    exit_status=$?
 
-	if [ $exit_status -eq 0 ]; then
+    if [ $exit_status -eq 0 ]; then
         notify-send "Extracted English Text" "Open your clipboard to see it."
-		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
-	else
-		return 1
-	fi
+        paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
+    else
+        return 1
+    fi
 }
 esocr_screenshot() {
-	grim -g "$(slurp)" "tmp.png" && tesseract -l spa "tmp.png" - | wl-copy && rm "tmp.png"
+    grim -g "$(slurp)" "tmp.png" && tesseract -l spa "tmp.png" - | wl-copy && rm "tmp.png"
 
-	exit_status=$?
+    exit_status=$?
 
-	if [ $exit_status -eq 0 ]; then
+    if [ $exit_status -eq 0 ]; then
         notify-send "Extracted Spanish Text" "Open your clipboard to see it."
-		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
-	else
-		return 1
-	fi
+        paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
+    else
+        return 1
+    fi
 }
 korocr_screenshot() {
     notify-send "Extracted Korean Text" "Open your clipboard to see it."
-	grim -g "$(slurp)" "tmp.png" && tesseract -l kor "tmp.png" - | wl-copy && rm "tmp.png"
+    grim -g "$(slurp)" "tmp.png" && tesseract -l kor "tmp.png" - | wl-copy && rm "tmp.png"
 
-	exit_status=$?
+    exit_status=$?
 
-	if [ $exit_status -eq 0 ]; then
-		paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
-	else
-		return 1
-	fi
+    if [ $exit_status -eq 0 ]; then
+        paplay ~/.config/hypr/assets/sounds/Screen_Capture.aif
+    else
+        return 1
+    fi
 }
 case "$1" in
 
