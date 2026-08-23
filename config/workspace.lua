@@ -4,6 +4,7 @@ local config = require("config.variable")
 hl.workspace_rule({
 	workspace = "1",
 	monitor = config.external_monitor,
+    layout = "dwindle",
 	default = true,
 })
 hl.workspace_rule({
@@ -34,6 +35,8 @@ hl.workspace_rule({
 	decorate = true,
 	gaps_in = 50,
 	gaps_out = 50,
+	-- gaps_in = 2,
+	-- gaps_out = 2,
 	no_border = false,
 	persistent = true,
 })
