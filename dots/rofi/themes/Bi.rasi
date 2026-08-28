@@ -4,6 +4,6 @@
 
 entry {
     font:   inherit;
-    placeholder         : "Search in Bing";
+    placeholder         : "Buscar en Bing";
     placeholder-color   : @fg2;
 }

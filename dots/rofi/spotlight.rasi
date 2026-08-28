@@ -64,7 +64,7 @@ icon-search, entry, element-icon, element-text {
 entry {
     font:   inherit;
 
-    placeholder         : "Search";
+    placeholder         : "Buscar";
     placeholder-color   : @fg2;
 }
 

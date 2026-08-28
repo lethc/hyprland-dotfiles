@@ -7,7 +7,8 @@ batteryNotify() {
 
 DateNotify() {
     # notify-send --app-name="Time" -i ~/.local/share/icons/Eleven-Dark/48/apps/calendar.svg "IT'S $(date +"%H:%M")" "$(date +"󰃰  %A %d %b")"
-    notify-send --app-name="Time" -i view-calendar-time-spent "IT'S $(date +"%H:%M")" "$(date +"󰃰  %A %d %b")"
+    # notify-send --app-name="Time" -i view-calendar-time-spent "IT'S $(date +"%H:%M")" "$(date +"󰃰  %A %d %b")"
+    notify-send --app-name="Time" -i view-calendar-time-spent "Son las $(date +"%I:%M %p")" "$(date +"󰃰  %A %d %b")"
 }
 
 case "$1" in

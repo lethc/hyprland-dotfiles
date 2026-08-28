@@ -59,7 +59,7 @@ prompt {
 }
 
 entry {
-    placeholder: "Search";
+    placeholder: "Buscar";
     text-color: @fg0;
 }
 

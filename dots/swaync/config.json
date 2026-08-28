@@ -43,12 +43,12 @@
   ],
   "widget-config": {
     "title": {
-      "text": "Notifications",
+      "text": "Notificaciones",
       "clear-all-button": true,
       "button-text": " 󰎟 "
     },
     "dnd": {
-      "text": "Do not disturb"
+      "text": "No molestar"
     },
     "label": {
       "max-lines": 1,

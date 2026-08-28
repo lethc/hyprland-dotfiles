@@ -7,7 +7,7 @@
 * {
     all: unset;
     font-size: 1rem;
-    font-family: 'Lexend Deca';
+    font-family: 'Google Sans Flex';
     transition: 200ms;
     color: @text;
 }
