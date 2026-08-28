@@ -1,8 +1,8 @@
-hyprland                ::~/.config/hypr/hyprland.conf
-hyprland_exec, autostart::~/.config/hypr/configs/autostart.conf
-hyprland_keybinds       ::~/.config/hypr/configs/keybinds.conf
-hyprland_windowrules   ::~/.config/hypr/configs/windowrules.conf
-hyprland_env            ::~/.config/hypr/configs/env.conf
+hyprland                ::~/.config/hypr/hyprland.lua
+hyprland_exec, autostart::~/.config/hypr/config/autostart.lua
+hyprland_keybinds       ::~/.config/hypr/config/keybinds.lua
+hyprland_windowrules   ::~/.config/hypr/config/window_rule.lua
+hyprland_env            ::~/.config/hypr/config/env.lua
 hyprland_install        ::~/.config/hypr/dots/install-script
 hyprlock                ::~/.config/hypr/hyprlock.conf
 bookmenu_bookmarks      ::~/Home/Scripts/my_bookmarks
@@ -41,4 +41,4 @@ ghostty                 ::~/.config/ghostty/config
 rofi                    ::~/.config/rofi/config.rasi
 hypridle                ::~/.config/hypr/hypridle.conf
 hyprlock                ::~/.config/hypr/hyprlock.conf
-plugins                 ::~/.config/hypr/configs/plugins.conf
+plugins                 ::~/.config/hypr/config/plugin/bar.lua
