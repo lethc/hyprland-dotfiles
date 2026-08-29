@@ -141,7 +141,7 @@ alias myprompt='cat ~/prompt'
 
 ###### Plugins  ######
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
 # source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.zsh
 # source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -149,11 +149,11 @@ source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
 # https://github.com/Giammarco-Ferranti/deja
 # Better than zsh-autosuggestions
 # Use Tab to accept the suggestion (and free Tab from cycling):
-export DEJA_CYCLE_KEY='^N'
+# export DEJA_CYCLE_KEY='^N'
 # bindkey 'Ñ' autosuggest-accept
-export DEJA_ACCEPT_KEY='Ñ'
+# export DEJA_ACCEPT_KEY='Ñ'
 
-eval "$(deja init zsh)"
+# eval "$(deja init zsh)"
 
 ##### Configurations  #######
 # disable Ctrl+D
@@ -187,7 +187,7 @@ HISTFILE=~/.zsh_history
 HISTDUP=erase # Delete any duplicates inside the history file
 
 # ZSH-AUTOSUGGESTIONS
-# bindkey 'Ñ' autosuggest-accept
+bindkey 'Ñ' autosuggest-accept
 setopt histignorealldups sharehistory
 #Use modern completion system
 autoload -Uz compinit
@@ -514,3 +514,6 @@ ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_V
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# atuin
+eval "$(atuin init zsh)"

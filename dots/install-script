@@ -26,7 +26,7 @@ cd ~/Downloads/Git
 sudo pacman -S --noconfirm foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar zenity bc swaync zoxide lsd bat swww television figlet keyd tree-sitter-cli sof-firmware hyprshot tmux dgop
 # yay -S 64gram-desktop-bin
 # important to run the swtch-theme script
-sudo pacman -S --noconfirm yq
+sudo pacman -S --noconfirm yq atuin
 # required by waybar scripts: zenity, bc
 sudo pacman -S --noconfirm ttf-firacode-nerd ttf-nerd-fonts-symbols ttf-victor-mono-nerd 
 
