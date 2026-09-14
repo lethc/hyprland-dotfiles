@@ -9,7 +9,7 @@ hl.env("WLR_NO_HARDWARE_CURSORS", "1")
 hl.env("WINE_VK_VULKAN_ONLY", "1")
 hl.env("EDITOR", "nvim")
 
-hl.env("GKT_THEME", "Material-Dark-Darker")
+hl.env("GKT_THEME", "Kanagawa-Yellow-Dark-Dragon")
 hl.env("XCURSOR_THEME", "breeze_cursors")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_THEME", "breeze_cursors")
@@ -20,7 +20,7 @@ hl.env("EDITOR", "nvim")
 
 -- To use dolphin file-picker in most apps by default
 hl.env("GTK_USE_PORTAL", "1")
-hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+hl.env("QT_QPA_PLATFORMTHEME", "kde")
 hl.env("FZF_DEFAULT_OPTS", "--bind alt-j:down,alt-k:up,ctrl-u:preview-up,ctrl-d:preview-down")
 hl.env("HYPRSHOT_DIR", "~/Pictures/Screenshots/")
 hl.env("_JAVA_OPTIONS", "'-Dawt.useSystemAAFontSettings=gasp'")
