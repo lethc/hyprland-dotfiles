@@ -1,6 +1,20 @@
 local config = require("config.variable")
 
 -- GENERAL
+hl.window_rule({
+	match = {
+		class = "^(.*)$",
+	},
+	float = true,
+})
+
+hl.window_rule({
+	match = {
+		workspace = "L:extraOne",
+	},
+    float = false,
+	rounding = 20,
+})
 -- Change the border color of semi-fullscreen windows
 hl.window_rule({
 	match = {
