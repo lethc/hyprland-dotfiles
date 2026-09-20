@@ -63,7 +63,9 @@ if hl.plugin and hl.plugin.hyprbars then
 		fg_color = "rgb(" .. config.hyprbar_color3 .. ")",
 		size = 28,
 		icon = "─",
-		action = 'hyprctl dispatch \'hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })\'',
+		-- action = 'hyprctl dispatch \'hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })\'',
+		action = 'hyprctl dispatch \'hl.dsp.window.pin()\'',
+
 	})
 end
 
@@ -85,4 +87,48 @@ hl.window_rule({
 		class = "^(org.kde.dolphin)$",
 	},
 	["hyprbars:no_bar"] = false,
+})
+
+hl.window_rule({
+	match = {
+		title = [[^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$]],
+	},
+	["hyprbars:no_bar"] = true,
+})
+
+-- Disable hypr in GTK apps
+
+hl.window_rule({
+	match = {
+		class = "^(com.vixalien.sticky)$",
+	},
+	["hyprbars:no_bar"] = true,
+})
+
+hl.window_rule({
+	match = {
+		class = "^(com.vixalien.sticky|net.nokyan.Resources|ca.desrt.dconf-editor|io.github.seadve.Kooha|com.github.phase1geo.minder)$",
+	},
+	["hyprbars:no_bar"] = true,
+})
+
+hl.window_rule({
+	match = {
+		class = "^(org.gnome.*)$",
+	},
+	["hyprbars:no_bar"] = true,
+})
+
+hl.window_rule({
+	match = {
+		class = "^(ticktick|jetbrains-studio|discord|dev.zed.Zed|blueberry.py|mpv|md.obsidian.Obsidian|zennotes|Xmind|code|it.mijorus.smile|zen)$",
+	},
+	["hyprbars:no_bar"] = true,
+})
+
+hl.window_rule({
+	match = {
+		class = "^(Opera GX|vivaldi-stable|google-chrome|brave-origin)$",
+	},
+	["hyprbars:no_bar"] = true,
 })
