@@ -16,6 +16,7 @@ hl.workspace_rule({
 hl.workspace_rule({
 	workspace = "name:L:extraOne",
 	monitor = config.laptop_monitor,
+    layout = "dwindle",
 	default = true,
 })
 hl.workspace_rule({
