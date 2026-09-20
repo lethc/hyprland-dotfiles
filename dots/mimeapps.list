@@ -26,7 +26,7 @@ x-scheme-handler/https=zen.desktop;
 application/wps-office.docx=wps-office-prometheus.desktop;
 x-scheme-handler/chrome=zen.desktop;
 text/html=zen.desktop;
-x-scheme-handler/tg=org.telegram.desktop.desktop;
+x-scheme-handler/tg=org.telegram.desktop.desktop;io.github.tdesktop_x64.TDesktop.desktop;
 
 [Default Applications]
 application/epub+zip=org.pwmt.zathura.desktop;
@@ -169,3 +169,4 @@ x-scheme-handler/tonsite=org.telegram.desktop.desktop
 x-scheme-handler/unknown=vivaldi-stable.desktop
 x-scheme-handler/freetube=freetube.desktop
 x-scheme-handler/tg=org.telegram.desktop.desktop
+x-scheme-handler/codex=chatgpt.desktop
