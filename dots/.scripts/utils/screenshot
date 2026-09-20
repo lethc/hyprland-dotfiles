@@ -1,13 +1,21 @@
 #!/usr/bin/bash
 
 screenshot() {
-    hyprshot -zm region --clipboard-only --silent
+    # --clipboard-only saves nothing to disk, so save a timestamped copy to
+    # /tmp for the notification preview (clipboard copy is unaffected).
+    local preview_file="/tmp/screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png"
+    hyprshot -zm region -o /tmp -f "$(basename "$preview_file")" --silent
 
     if [ $? -ne 0 ]; then
+        rm -f "$preview_file"
         return 1
     fi
 
-    notify-send "Screenshot" "Imagen copiada al clipboard"
+    if [ -f "$preview_file" ]; then
+        notify-send -i "$preview_file" "Screenshot" "Imagen copiada al clipboard"
+    else
+        notify-send "Screenshot" "Imagen copiada al clipboard"
+    fi
     paplay ~/.config/hypr/assets/sounds/Grab.aif
 }
 save_screenshot() {
@@ -28,7 +36,7 @@ save_screenshot() {
     # Only play sound if swappy saved the file (did not close without saving)
     if [ -f "$final_file" ]; then
         paplay ~/.config/hypr/assets/sounds/Grab.aif
-        notify-send "Screenshot guardada" "$final_file"
+        notify-send -i "$final_file" "Screenshot guardada" "$final_file"
     fi
     # Clean temporary file
     rm -f "$temp_file"
