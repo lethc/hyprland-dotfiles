@@ -99,7 +99,7 @@
             "K:extra": " Ⅰ Extra ",
             "L:extraOne": " Ⅱ Extra ",
             "M:extraTwo": " Ⅲ Extra "
-        },
+        }
         // "workspace-taskbar": {
         //     "enable": true,
         //     "update-active-window": true,
@@ -144,11 +144,11 @@
     "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 26,
-        "icon-theme": "Numix-Circle",
+        "icon-theme": "SeviDDE-dark",
         "tooltip-format": "{title:.50}",
-        "on-click": "minimize-raise",
+        "on-click": "activate",
         "on-click-middle": "close",
-        "on-click-right": "fullscreen"
+        "on-click-right": "hyprctl dispatch 'hl.dsp.window.float({ action = \"toggle\"})'"
     },
     "ext/workspaces": {
         "format": "{icon}",
