@@ -39,6 +39,14 @@ hl.layer_rule({
 	ignore_alpha = 0.2,
 })
 
+hl.layer_rule({
+    match = { namespace = "quickshell" },
+    blur = true,
+    blur_popups = true,
+    ignore_alpha = 0.2,
+    no_anim = true,
+})
+
 -- noctalia shell
 hl.layer_rule({
 	name = "noctalia",
