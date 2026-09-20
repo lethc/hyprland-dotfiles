@@ -24,6 +24,14 @@ cd ~/Downloads/Git
 
 # ASKN
 sudo pacman -S --noconfirm foot foot-terminfo cliphist wl-clip-persist rofi-wayland hyprpaper kitty waybar zenity bc swaync zoxide lsd bat swww television figlet keyd tree-sitter-cli sof-firmware hyprshot tmux dgop
+
+# ==== To install Hyprland git version ====
+# yay -Rsc hyprpaper
+# yay -Rsc hyprland-guiutils
+# yay -S hyprcursor-git hyprgraphics-git hypridle-git hyprland-git hyprland-guiutils-git hyprland-protocols-git hyprlang-git hyprlock-git hyprpaper-git hyprpicker-git hyprshot-git hyprsunset-git hyprtoolkit-git hyprutils-git hyprwayland-scanner-git hyprwire-git
+# yay -S hyprcursor hyprgraphics hypridle hyprland hyprland-guiutils hyprland-protocols hyprlang hyprlock hyprpaper hyprpicker hyprshot hyprsunset hyprtoolkit hyprutils hyprwayland-scanner hyprwire
+# =========================================
+
 # yay -S 64gram-desktop-bin
 # important to run the swtch-theme script
 sudo pacman -S --noconfirm yq atuin
@@ -35,7 +43,7 @@ git clone https://aur.archlinux.org/yay-bin.git ~/Downloads/Git/yay-bin/
 cd  ~/Downloads/Git/yay-bin
 makepkg -si --noconfirm
 
-yay -S --noconfirm --answerclean All --answerdiff None zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-sudo-git zsh-theme-powerlevel10k-git
+yay -S --noconfirm --answerclean All --answerdiff None zsh-syntax-highlighting zsh-autosuggestions zsh-completions zsh-sudo-git zsh-theme-powerlevel10k-git darkly-bin
 # yay -S --noconfirm --answerclean All --answerdiff None zsh-autocomplete-git zsh-vi-mode-git
 yay -S --noconfirm --answerclean All --answerdiff None clipse clipse-gui blueberry-wayland pw-volume quickshell-git
 yay -S --noconfirm --answerclean All --answerdiff None scooter-bin # search and replace in project
@@ -191,6 +199,12 @@ hyprpm enable hyprbars
 hyprpm update
 hyprpm reload -n
 
+# if Version mismatch problem
+# hyprpm purge-cache
+# hyprpm update
+# hyprpm add ...
+# hyprpm enable ...
+
 # ASKN
 # INSTALLED IN ARCHLINUX-INSTALLER
 # yay -S --noconfirm --answerclean All --answerdiff None hyprland cpio meson cmake hyprland-qtutils xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprlock hypridle hyprpicker
@@ -203,7 +217,7 @@ yay -S --noconfirm --answerclean All --answerdiff None jq pamixer nm-connection-
 yay -S --noconfirm --answerclean All --answerdiff None grimblast
 
 # ARE YOU REQUIRED?
-yay -S --noconfirm --answerclean All --answerdiff None gojq-bin bc playerctl socat swappy speech-dispatcher gcolor3 nsxiv imv hyprshot wf-recorder python-pytube 
+yay -S --noconfirm --answerclean All --answerdiff None gojq-bin bc playerctl socat swappy speech-dispatcher gcolor3 nsxiv imv wf-recorder python-pytube 
 
 echo "######################################"
 echo "###### Installing frequent apps ######"
@@ -341,8 +355,8 @@ cd "${HOME}/Downloads/Git/Reversal-icon-theme"
 # Sevi
 git clone https://github.com/lethc/SeviDDE.git ~/Downloads/Git/SeviDDE/
 cd "${HOME}/Downloads/Git/SeviDDE"
-# ./install.sh -red
-./install.sh -blue
+# ./install.sh -blue
+./install.sh
 
 # echo "Patch yellow dolphin icon to Red"
 # Replace yellow icon from file-manager with a red one
@@ -381,6 +395,12 @@ git clone https://github.com/Rudraksh88/zephyr-kvantum.git ~/.config/Kvantum/Zep
 git clone https://github.com/yeyushengfan258/Win11OS-kde.git ~/Downloads/Git/Win11OS-kde
 git clone https://github.com/vinceliuice/MacVentura-kde.git ~/Downloads/Git/MacVentura-kde
 git clone https://github.com/vinceliuice/MacTahoe-kde.git ~/Downloads/Git/MacTahoe-kde
+
+# THEMES TO DARKLY
+# git clone https://github.com/EClaesson/plasma_kanagawa.git ~/Downloads/Git/plasma_kanagawa/
+# cd ~/Downloads/Git/plasma_kanagawa/
+# sudo mv *.colors /usr/share/color-schemes
+sudo ln -s "~/.config/hypr/dots/Kvantum-themes/darkly-themes/KanagawaDragon.colors" "/usr/share/color-schemes/KanagawaDragon.colors"
 
 # DISABLING RIGHT TOP BUTTONS IN GTK-4 APPS
 
