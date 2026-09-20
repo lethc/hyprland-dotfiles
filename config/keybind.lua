@@ -64,8 +64,8 @@ hl.bind(config.main_shift_mod .. " + P", hl.dsp.exec_cmd(config.scripts .. "rofi
 -- Change Wallpaper
 hl.bind(config.main_ctrl_mod .. " + P", hl.dsp.exec_cmd(config.scripts .. "rofi/wallpaper_picker"))
 hl.bind(config.main_mod .. " + Z", hl.dsp.exec_cmd(config.scripts .. "utils/wallpaper/random_wall all"))
--- Restart Waybar
-hl.bind(config.main_shift_mod .. " + B", hl.dsp.exec_cmd(config.hypr_scripts .. "restartWaybar"))
+-- Restart bar (quickshell or waybar)
+hl.bind(config.main_shift_mod .. " + B", hl.dsp.exec_cmd(config.hypr_scripts .. "restartBar quickshell"))
 -- Color Picker
 hl.bind(config.main_shift_mod .. " + X", hl.dsp.exec_cmd(config.scripts .. "utils/colorpicker"))
 -- Display time and battery status in notification pop-up
@@ -219,3 +219,11 @@ hl.bind(config.main_mod .. "+ G", hl.dsp.group.toggle())
 hl.bind(config.main_mod .. "+ SPACE", hl.dsp.group.next())
 hl.bind(config.main_shift_mod .. "+ SPACE", hl.dsp.group.prev())
 hl.bind(config.main_mod .. "+ T", hl.dsp.group.lock_active())
+
+-- -- DOES THIS WORK?
+-- -- Trigger when the switch is toggled.
+-- hl.bind("switch:[switch name]", hl.dsp.exec_cmd("swaylock"), { locked = true })
+-- -- Trigger when the switch is turning on.
+-- hl.bind("switch:on:[switch name]", hl.dsp.exec_cmd("notify-send 'yooo'"), { locked = true })
+-- -- Trigger when the switch is turning off.
+-- hl.bind("switch:off:[switch name]", hl.dsp.exec_cmd("notify-send 'among us'"), { locked = true })
