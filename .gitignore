@@ -28,5 +28,6 @@ dots/herdr/*.json
 dots/herdr/sessions
 dots/herdr/.plugins.lock
 dots/herdr/plugins/
+dots/herdr/session-snapshots/
 monitors.conf
 workspaces.conf
